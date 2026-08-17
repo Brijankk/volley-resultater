@@ -46,6 +46,14 @@ select {
   padding: 8px 0 18px;
 }
 
+.topbar-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .eyebrow {
   margin: 0 0 4px;
   color: var(--accent);
@@ -77,6 +85,21 @@ h2 {
   color: var(--muted);
   padding: 9px 12px;
   white-space: nowrap;
+}
+
+.install-button {
+  min-height: 40px;
+  border: 1px solid rgba(11, 107, 120, 0.28);
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  padding: 0 14px;
+  cursor: pointer;
+}
+
+.install-button:hover,
+.install-button:focus-visible {
+  background: #085560;
 }
 
 .selector-band,
@@ -434,6 +457,11 @@ canvas {
   .topbar {
     align-items: start;
     flex-direction: column;
+  }
+
+  .topbar-actions {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .selector-band,

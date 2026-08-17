@@ -1,17 +1,19 @@
-const APP_CACHE = "volley-app-v1";
+const APP_CACHE = "volley-app-v2";
 const DATA_CACHE = "volley-data-v1";
+const FRONTEND_ROOT = new URL("./", self.location.href).pathname;
+const DATA_ROOT = new URL("../data/json/", self.location.href).pathname;
 
 const APP_SHELL = [
-  "/frontend/",
-  "/frontend/index.html",
-  "/frontend/styles.css",
-  "/frontend/app.js",
-  "/frontend/manifest.webmanifest",
-  "/frontend/icons/icon-192.png",
-  "/frontend/icons/icon-512.png",
-  "/frontend/icons/icon-maskable-192.png",
-  "/frontend/icons/icon-maskable-512.png",
-  "/frontend/icons/apple-touch-icon.png",
+  "./",
+  "./index.html",
+  "./styles.css",
+  "./app.js",
+  "./manifest.webmanifest",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/icon-maskable-192.png",
+  "./icons/icon-maskable-512.png",
+  "./icons/apple-touch-icon.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -41,12 +43,12 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
 
   const url = new URL(request.url);
-  if (url.pathname.startsWith("/data/json/")) {
+  if (url.pathname.startsWith(DATA_ROOT)) {
     event.respondWith(networkFirst(request));
     return;
   }
 
-  if (url.pathname.startsWith("/frontend/")) {
+  if (url.pathname.startsWith(FRONTEND_ROOT)) {
     event.respondWith(cacheFirst(request));
   }
 });

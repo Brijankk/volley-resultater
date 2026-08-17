@@ -10,6 +10,7 @@ const state = {
   selectedPoolId: "",
   chartMode: "game",
   selectedPair: null,
+  installPrompt: null,
 };
 
 const colors = [
@@ -40,6 +41,7 @@ const els = {
   legend: document.querySelector("#chartLegend"),
   matrixWrap: document.querySelector("#matrixWrap"),
   matchDetailContent: document.querySelector("#matchDetailContent"),
+  installButton: document.querySelector("#installButton"),
 };
 
 async function init() {
@@ -119,6 +121,26 @@ function bindEvents() {
   window.addEventListener("online", renderDataMeta);
   window.addEventListener("offline", renderDataMeta);
   window.addEventListener("resize", debounce(renderChart, 120));
+
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    state.installPrompt = event;
+    els.installButton.classList.remove("hidden");
+  });
+
+  window.addEventListener("appinstalled", () => {
+    state.installPrompt = null;
+    els.installButton.classList.add("hidden");
+  });
+
+  els.installButton.addEventListener("click", async () => {
+    if (!state.installPrompt) return;
+    const promptEvent = state.installPrompt;
+    state.installPrompt = null;
+    els.installButton.classList.add("hidden");
+    promptEvent.prompt();
+    await promptEvent.userChoice;
+  });
 }
 
 function renderGenderButtons(genders) {
