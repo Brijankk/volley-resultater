@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Volleyball Danmark Resultater</title>
+    <meta
+      name="description"
+      content="Se stillinger, sæsonudvikling og resultater for danske volleyballrækker."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Volleyball Danmark</p>
+          <h1>Resultater</h1>
+        </div>
+        <div class="status-pill" id="status">Indlæser data</div>
+      </header>
+
+      <section class="selector-band" aria-label="Valg af række">
+        <label class="field">
+          <span>Sæson</span>
+          <select id="seasonSelect"></select>
+        </label>
+
+        <fieldset class="segmented" id="genderControl">
+          <legend>Køn</legend>
+        </fieldset>
+
+        <label class="field">
+          <span>Række</span>
+          <select id="leagueSelect"></select>
+        </label>
+
+        <label class="field pool-field" id="poolField">
+          <span>Pulje</span>
+          <select id="poolSelect"></select>
+        </label>
+      </section>
+
+      <section class="data-meta" id="dataMeta" aria-label="Dataoplysninger"></section>
+
+      <section class="content-grid">
+        <section class="panel standings-panel">
+          <div class="section-heading">
+            <h2>Stilling</h2>
+            <span id="ruleLabel"></span>
+          </div>
+          <div class="table-scroll">
+            <table class="standings-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Team</th>
+                  <th>K</th>
+                  <th>V</th>
+                  <th>T</th>
+                  <th>Sets</th>
+                  <th>Balls</th>
+                  <th>P</th>
+                </tr>
+              </thead>
+              <tbody id="standingsBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel chart-panel">
+          <div class="section-heading chart-heading">
+            <h2>Sæsonudvikling</h2>
+            <div class="segmented small" id="chartModeControl" aria-label="Diagramvisning">
+              <button type="button" data-mode="game" class="active">Kampe</button>
+              <button type="button" data-mode="date">Datoer</button>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="pointsChart" width="900" height="520"></canvas>
+          </div>
+          <div class="legend" id="chartLegend"></div>
+        </section>
+      </section>
+
+      <section class="panel matrix-panel">
+        <div class="section-heading">
+          <h2>Hjemme / ude</h2>
+          <span>Rækker er hjemmehold</span>
+        </div>
+        <div class="matrix-scroll" id="matrixWrap"></div>
+      </section>
+
+      <section class="panel detail-panel" id="matchDetailPanel">
+        <div class="section-heading">
+          <h2>Kampdetaljer</h2>
+          <span>Eksperiment</span>
+        </div>
+        <div id="matchDetailContent" class="match-detail-empty">
+          Vælg en kamp i matrixen.
+        </div>
+      </section>
+
+    </main>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

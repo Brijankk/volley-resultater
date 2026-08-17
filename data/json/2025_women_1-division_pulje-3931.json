@@ -1,0 +1,5287 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "exported_at": "2026-08-06T12:24:12+02:00",
+    "scraper_version": "0.1.0",
+    "validation": {
+      "mismatch_count": 11,
+      "affected_teams": 3,
+      "affected_fields": [
+        "balls_lost",
+        "balls_won",
+        "games_lost",
+        "games_played",
+        "games_won",
+        "points",
+        "rank",
+        "sets_lost",
+        "sets_won"
+      ]
+    }
+  },
+  "pool": {
+    "id": "2025:women:1-division:pulje-3931",
+    "league_id": "2025:women:1-division",
+    "name": "Vest",
+    "pulje_id": 3931,
+    "division": "1. Division"
+  },
+  "source_standings": [
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rank": 1,
+      "team_name": "Volleyball Esbjerg",
+      "games_played": 16,
+      "games_won": 14,
+      "games_lost": 2,
+      "sets_won": 46,
+      "sets_lost": 16,
+      "balls_won": 1423,
+      "balls_lost": 1120,
+      "points": 44
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rank": 2,
+      "team_name": "ASV Aarhus.2",
+      "games_played": 16,
+      "games_won": 13,
+      "games_lost": 3,
+      "sets_won": 43,
+      "sets_lost": 19,
+      "balls_won": 1439,
+      "balls_lost": 1150,
+      "points": 40
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rank": 3,
+      "team_name": "Ikast KFUM.2",
+      "games_played": 16,
+      "games_won": 12,
+      "games_lost": 4,
+      "sets_won": 41,
+      "sets_lost": 27,
+      "balls_won": 1484,
+      "balls_lost": 1365,
+      "points": 38
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rank": 4,
+      "team_name": "DHV Odense.2",
+      "games_played": 16,
+      "games_won": 11,
+      "games_lost": 5,
+      "sets_won": 38,
+      "sets_lost": 24,
+      "balls_won": 1364,
+      "balls_lost": 1309,
+      "points": 34
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rank": 5,
+      "team_name": "IF Lyseng",
+      "games_played": 16,
+      "games_won": 7,
+      "games_lost": 9,
+      "sets_won": 30,
+      "sets_lost": 33,
+      "balls_won": 1315,
+      "balls_lost": 1353,
+      "points": 24
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rank": 6,
+      "team_name": "SIK Viborg",
+      "games_played": 16,
+      "games_won": 6,
+      "games_lost": 10,
+      "sets_won": 22,
+      "sets_lost": 35,
+      "balls_won": 1143,
+      "balls_lost": 1282,
+      "points": 19
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rank": 7,
+      "team_name": "Bedsted KFUM",
+      "games_played": 16,
+      "games_won": 4,
+      "games_lost": 12,
+      "sets_won": 22,
+      "sets_lost": 39,
+      "balls_won": 1102,
+      "balls_lost": 1353,
+      "points": 16
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rank": 8,
+      "team_name": "Odense Volleyball",
+      "games_played": 16,
+      "games_won": 3,
+      "games_lost": 13,
+      "sets_won": 26,
+      "sets_lost": 42,
+      "balls_won": 1373,
+      "balls_lost": 1472,
+      "points": 15
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rank": 9,
+      "team_name": "Skovbakken",
+      "games_played": 16,
+      "games_won": 2,
+      "games_lost": 14,
+      "sets_won": 12,
+      "sets_lost": 45,
+      "balls_won": 1131,
+      "balls_lost": 1370,
+      "points": 6
+    }
+  ],
+  "computed_standings": [
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rule_profile": "dt_2025_division",
+      "rank": 1,
+      "team_name": "Volleyball Esbjerg",
+      "games_played": 16,
+      "games_won": 14,
+      "games_lost": 2,
+      "sets_won": 46,
+      "sets_lost": 16,
+      "balls_won": 1423,
+      "balls_lost": 1120,
+      "points": 44
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rule_profile": "dt_2025_division",
+      "rank": 2,
+      "team_name": "Ikast KFUM.2",
+      "games_played": 16,
+      "games_won": 12,
+      "games_lost": 4,
+      "sets_won": 41,
+      "sets_lost": 27,
+      "balls_won": 1484,
+      "balls_lost": 1365,
+      "points": 38
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rule_profile": "dt_2025_division",
+      "rank": 3,
+      "team_name": "ASV Aarhus.2",
+      "games_played": 15,
+      "games_won": 12,
+      "games_lost": 3,
+      "sets_won": 40,
+      "sets_lost": 19,
+      "balls_won": 1364,
+      "balls_lost": 1150,
+      "points": 37
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rule_profile": "dt_2025_division",
+      "rank": 4,
+      "team_name": "DHV Odense.2",
+      "games_played": 16,
+      "games_won": 11,
+      "games_lost": 5,
+      "sets_won": 38,
+      "sets_lost": 24,
+      "balls_won": 1364,
+      "balls_lost": 1309,
+      "points": 34
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rule_profile": "dt_2025_division",
+      "rank": 5,
+      "team_name": "IF Lyseng",
+      "games_played": 16,
+      "games_won": 7,
+      "games_lost": 9,
+      "sets_won": 30,
+      "sets_lost": 33,
+      "balls_won": 1315,
+      "balls_lost": 1353,
+      "points": 24
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rule_profile": "dt_2025_division",
+      "rank": 6,
+      "team_name": "SIK Viborg",
+      "games_played": 16,
+      "games_won": 6,
+      "games_lost": 10,
+      "sets_won": 22,
+      "sets_lost": 35,
+      "balls_won": 1143,
+      "balls_lost": 1282,
+      "points": 19
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rule_profile": "dt_2025_division",
+      "rank": 7,
+      "team_name": "Bedsted KFUM",
+      "games_played": 15,
+      "games_won": 4,
+      "games_lost": 11,
+      "sets_won": 22,
+      "sets_lost": 36,
+      "balls_won": 1102,
+      "balls_lost": 1278,
+      "points": 16
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rule_profile": "dt_2025_division",
+      "rank": 8,
+      "team_name": "Odense Volleyball",
+      "games_played": 16,
+      "games_won": 3,
+      "games_lost": 13,
+      "sets_won": 26,
+      "sets_lost": 42,
+      "balls_won": 1373,
+      "balls_lost": 1472,
+      "points": 15
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "rule_profile": "dt_2025_division",
+      "rank": 9,
+      "team_name": "Skovbakken",
+      "games_played": 16,
+      "games_won": 2,
+      "games_lost": 14,
+      "sets_won": 12,
+      "sets_lost": 45,
+      "balls_won": 1131,
+      "balls_lost": 1370,
+      "points": 6
+    }
+  ],
+  "matches": [
+    {
+      "kamp_id": 71908,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145310,
+      "starts_at": "2025-09-27T12:00:00",
+      "home_team": "Odense Volleyball",
+      "away_team": "Skovbakken",
+      "venue": "Klostermarkshallen",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71910,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145312,
+      "starts_at": "2025-09-27T13:00:00",
+      "home_team": "Bedsted KFUM",
+      "away_team": "ASV Aarhus.2",
+      "venue": "Bedstedhallen",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71911,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145313,
+      "starts_at": "2025-09-27T17:00:00",
+      "home_team": "IF Lyseng",
+      "away_team": "Volleyball Esbjerg",
+      "venue": "Rundhøjhallen",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71912,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145314,
+      "starts_at": "2025-09-28T12:00:00",
+      "home_team": "SIK Viborg",
+      "away_team": "DHV Odense.2",
+      "venue": "Finderuphøj Hallen",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71916,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145318,
+      "starts_at": "2025-10-04T12:00:00",
+      "home_team": "ASV Aarhus.2",
+      "away_team": "SIK Viborg",
+      "venue": "Århus Gl. Stadionhal",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71915,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145317,
+      "starts_at": "2025-10-05T15:00:00",
+      "home_team": "Bedsted KFUM",
+      "away_team": "IF Lyseng",
+      "venue": "Bedstedhallen",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71914,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145316,
+      "starts_at": "2025-10-05T16:00:00",
+      "home_team": "DHV Odense.2",
+      "away_team": "Odense Volleyball",
+      "venue": "Dalumhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71921,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145323,
+      "starts_at": "2025-10-18T12:00:00",
+      "home_team": "Odense Volleyball",
+      "away_team": "ASV Aarhus.2",
+      "venue": "Klostermarkshallen",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71919,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145321,
+      "starts_at": "2025-10-18T15:00:00",
+      "home_team": "Volleyball Esbjerg",
+      "away_team": "Bedsted KFUM",
+      "venue": "Ådalskolen - Bohr",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71920,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145322,
+      "starts_at": "2025-10-18T15:00:00",
+      "home_team": "DHV Odense.2",
+      "away_team": "IF Lyseng",
+      "venue": "Dalumhallen 2",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71922,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145324,
+      "starts_at": "2025-10-19T13:00:00",
+      "home_team": "Ikast KFUM.2",
+      "away_team": "SIK Viborg",
+      "venue": "Hyldgårdsskolens Hal B",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71923,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145325,
+      "starts_at": "2025-10-25T13:00:00",
+      "home_team": "IF Lyseng",
+      "away_team": "Odense Volleyball",
+      "venue": "Rundhøjhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71924,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145326,
+      "starts_at": "2025-10-26T11:30:00",
+      "home_team": "DHV Odense.2",
+      "away_team": "Volleyball Esbjerg",
+      "venue": "Dalumhallen",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71925,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145327,
+      "starts_at": "2025-10-26T12:00:00",
+      "home_team": "ASV Aarhus.2",
+      "away_team": "Skovbakken",
+      "venue": "Århus Gl. Stadionhal",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71926,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145328,
+      "starts_at": "2025-10-26T13:00:00",
+      "home_team": "Bedsted KFUM",
+      "away_team": "Ikast KFUM.2",
+      "venue": "Bedstedhallen",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71913,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145315,
+      "starts_at": "2025-11-02T16:00:00",
+      "home_team": "Skovbakken",
+      "away_team": "Ikast KFUM.2",
+      "venue": "Vejlby Risskov Hallen hal 4",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71929,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145331,
+      "starts_at": "2025-11-08T13:00:00",
+      "home_team": "Volleyball Esbjerg",
+      "away_team": "Odense Volleyball",
+      "venue": "Ådalskolen - Bohr",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71928,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145330,
+      "starts_at": "2025-11-08T16:00:00",
+      "home_team": "Ikast KFUM.2",
+      "away_team": "ASV Aarhus.2",
+      "venue": "Hyldgårdsskolens Hal B",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71931,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145333,
+      "starts_at": "2025-11-09T15:00:00",
+      "home_team": "IF Lyseng",
+      "away_team": "SIK Viborg",
+      "venue": "Rundhøjhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71933,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145335,
+      "starts_at": "2025-11-22T15:00:00",
+      "home_team": "Volleyball Esbjerg",
+      "away_team": "Skovbakken",
+      "venue": "Ådalskolen - Bohr",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71935,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145337,
+      "starts_at": "2025-11-23T10:00:00",
+      "home_team": "SIK Viborg",
+      "away_team": "Bedsted KFUM",
+      "venue": "Finderuphøj Hallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71937,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145339,
+      "starts_at": "2025-11-23T15:30:00",
+      "home_team": "Odense Volleyball",
+      "away_team": "Ikast KFUM.2",
+      "venue": "Klostermarkshallen",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71936,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145338,
+      "starts_at": "2025-11-23T16:00:00",
+      "home_team": "ASV Aarhus.2",
+      "away_team": "DHV Odense.2",
+      "venue": "Århus Gl. Stadionhal",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71938,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145340,
+      "starts_at": "2025-11-29T15:00:00",
+      "home_team": "DHV Odense.2",
+      "away_team": "Ikast KFUM.2",
+      "venue": "Dalumhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71939,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145341,
+      "starts_at": "2025-11-30T11:00:00",
+      "home_team": "IF Lyseng",
+      "away_team": "Skovbakken",
+      "venue": "Rundhøjhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71941,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145343,
+      "starts_at": "2025-11-30T11:00:00",
+      "home_team": "SIK Viborg",
+      "away_team": "Volleyball Esbjerg",
+      "venue": "Finderuphøj Hallen",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71940,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145342,
+      "starts_at": "2025-11-30T13:00:00",
+      "home_team": "Bedsted KFUM",
+      "away_team": "Odense Volleyball",
+      "venue": "Bedstedhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71930,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145332,
+      "starts_at": "2025-12-07T18:00:00",
+      "home_team": "DHV Odense.2",
+      "away_team": "Skovbakken",
+      "venue": "Dalumhallen 2",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71991,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145393,
+      "starts_at": "2025-12-13T13:00:00",
+      "home_team": "Bedsted KFUM",
+      "away_team": "DHV Odense.2",
+      "venue": "Bedstedhallen",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71944,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145346,
+      "starts_at": "2025-12-13T18:00:00",
+      "home_team": "IF Lyseng",
+      "away_team": "ASV Aarhus.2",
+      "venue": "Rundhøjhallen",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71947,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145349,
+      "starts_at": "2025-12-14T10:00:00",
+      "home_team": "SIK Viborg",
+      "away_team": "Skovbakken",
+      "venue": "Finderuphøj Hallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71943,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145345,
+      "starts_at": "2025-12-14T12:30:00",
+      "home_team": "Ikast KFUM.2",
+      "away_team": "Volleyball Esbjerg",
+      "venue": "Sportscenter Ikast Hal A",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71950,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145352,
+      "starts_at": "2026-01-10T12:00:00",
+      "home_team": "Odense Volleyball",
+      "away_team": "DHV Odense.2",
+      "venue": "Klostermarkshallen",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71949,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145351,
+      "starts_at": "2026-01-11T10:00:00",
+      "home_team": "ASV Aarhus.2",
+      "away_team": "Ikast KFUM.2",
+      "venue": "Århus Gl. Stadionhal",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71952,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145354,
+      "starts_at": "2026-01-11T13:00:00",
+      "home_team": "Skovbakken",
+      "away_team": "IF Lyseng",
+      "venue": "Vejlby Risskov Hallen hal 4",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71953,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145355,
+      "starts_at": "2026-01-18T11:00:00",
+      "home_team": "IF Lyseng",
+      "away_team": "Ikast KFUM.2",
+      "venue": "Rundhøjhallen",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71955,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145357,
+      "starts_at": "2026-01-18T12:00:00",
+      "home_team": "SIK Viborg",
+      "away_team": "Odense Volleyball",
+      "venue": "Finderuphøj Hallen",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71954,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145356,
+      "starts_at": "2026-01-18T14:00:00",
+      "home_team": "ASV Aarhus.2",
+      "away_team": "Volleyball Esbjerg",
+      "venue": "Århus Gl. Stadionhal",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71956,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145358,
+      "starts_at": "2026-01-18T15:00:00",
+      "home_team": "Bedsted KFUM",
+      "away_team": "Skovbakken",
+      "venue": "Bedstedhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71962,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145364,
+      "starts_at": "2026-01-24T12:00:00",
+      "home_team": "Odense Volleyball",
+      "away_team": "Bedsted KFUM",
+      "venue": "Klostermarkshallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71958,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145360,
+      "starts_at": "2026-01-24T15:00:00",
+      "home_team": "Volleyball Esbjerg",
+      "away_team": "IF Lyseng",
+      "venue": "UC-Syd",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71961,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145363,
+      "starts_at": "2026-01-24T16:00:00",
+      "home_team": "Ikast KFUM.2",
+      "away_team": "DHV Odense.2",
+      "venue": "Hyldgårdsskolens Hal B",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71960,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145362,
+      "starts_at": "2026-01-25T16:00:00",
+      "home_team": "Skovbakken",
+      "away_team": "SIK Viborg",
+      "venue": "Vejlby Risskov Hallen hal 3",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71963,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145365,
+      "starts_at": "2026-02-07T12:00:00",
+      "home_team": "Bedsted KFUM",
+      "away_team": "Volleyball Esbjerg",
+      "venue": "Bedstedhallen",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71967,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145369,
+      "starts_at": "2026-02-08T10:00:00",
+      "home_team": "SIK Viborg",
+      "away_team": "IF Lyseng",
+      "venue": "Finderuphøj Hallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71965,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145367,
+      "starts_at": "2026-02-15T17:00:00",
+      "home_team": "Ikast KFUM.2",
+      "away_team": "Odense Volleyball",
+      "venue": "Hyldgårdsskolens Hal B",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71969,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145371,
+      "starts_at": "2026-02-21T13:00:00",
+      "home_team": "Volleyball Esbjerg",
+      "away_team": "Ikast KFUM.2",
+      "venue": "UC-Syd",
+      "court": "1",
+      "result_home_sets": 2,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71968,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145370,
+      "starts_at": "2026-02-22T11:00:00",
+      "home_team": "Skovbakken",
+      "away_team": "Odense Volleyball",
+      "venue": "Vejlby Risskov Hallen hal 4",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71972,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145374,
+      "starts_at": "2026-02-22T15:00:00",
+      "home_team": "IF Lyseng",
+      "away_team": "DHV Odense.2",
+      "venue": "Rundhøjhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71974,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145376,
+      "starts_at": "2026-02-28T12:00:00",
+      "home_team": "Odense Volleyball",
+      "away_team": "Volleyball Esbjerg",
+      "venue": "Klostermarkshallen",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71976,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145378,
+      "starts_at": "2026-02-28T13:00:00",
+      "home_team": "Skovbakken",
+      "away_team": "ASV Aarhus.2",
+      "venue": "Vejlby Risskov Hallen hal 4",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71977,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145379,
+      "starts_at": "2026-03-01T12:30:00",
+      "home_team": "DHV Odense.2",
+      "away_team": "SIK Viborg",
+      "venue": "Dalumhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71975,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145377,
+      "starts_at": "2026-03-02T20:30:00",
+      "home_team": "Ikast KFUM.2",
+      "away_team": "Bedsted KFUM",
+      "venue": "Hyldgårdsskolens Hal B",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71948,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145350,
+      "starts_at": "2026-03-05T20:30:00",
+      "home_team": "Volleyball Esbjerg",
+      "away_team": "SIK Viborg",
+      "venue": "UC-Syd",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71980,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145382,
+      "starts_at": "2026-03-13T18:30:00",
+      "home_team": "Ikast KFUM.2",
+      "away_team": "Skovbakken",
+      "venue": "Hyldgårdsskolens Hal B",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71979,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145381,
+      "starts_at": "2026-03-14T10:00:00",
+      "home_team": "ASV Aarhus.2",
+      "away_team": "IF Lyseng",
+      "venue": "Århus Gl. Stadionhal",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71981,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145383,
+      "starts_at": "2026-03-14T15:00:00",
+      "home_team": "Volleyball Esbjerg",
+      "away_team": "DHV Odense.2",
+      "venue": "UC-Syd",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71982,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145384,
+      "starts_at": "2026-03-14T15:00:00",
+      "home_team": "Bedsted KFUM",
+      "away_team": "SIK Viborg",
+      "venue": "Bedstedhallen",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71964,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145366,
+      "starts_at": "2026-03-22T19:00:00",
+      "home_team": "DHV Odense.2",
+      "away_team": "ASV Aarhus.2",
+      "venue": "Dalumhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71993,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145395,
+      "starts_at": "2026-03-22T19:00:00",
+      "home_team": "Ikast KFUM.2",
+      "away_team": "IF Lyseng",
+      "venue": "Hyldgårdsskolens Hal B",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71986,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145388,
+      "starts_at": "2026-03-28T15:00:00",
+      "home_team": "IF Lyseng",
+      "away_team": "Bedsted KFUM",
+      "venue": "Rundhøjhallen",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71987,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145389,
+      "starts_at": "2026-03-28T16:00:00",
+      "home_team": "DHV Odense.2",
+      "away_team": "Skovbakken",
+      "venue": "Hjallesehallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71984,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145386,
+      "starts_at": "2026-03-29T10:00:00",
+      "home_team": "ASV Aarhus.2",
+      "away_team": "Odense Volleyball",
+      "venue": "Århus Gl. Stadionhal",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 2
+    },
+    {
+      "kamp_id": 71985,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145387,
+      "starts_at": "2026-03-29T10:00:00",
+      "home_team": "SIK Viborg",
+      "away_team": "Ikast KFUM.2",
+      "venue": "Finderuphøj Hallen",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71946,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145348,
+      "starts_at": "2026-04-11T13:00:00",
+      "home_team": "DHV Odense.2",
+      "away_team": "Bedsted KFUM",
+      "venue": "Dalumhallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 0
+    },
+    {
+      "kamp_id": 71990,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145392,
+      "starts_at": "2026-04-12T10:00:00",
+      "home_team": "SIK Viborg",
+      "away_team": "ASV Aarhus.2",
+      "venue": "Finderuphøj Hallen",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71989,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145391,
+      "starts_at": "2026-04-12T14:00:00",
+      "home_team": "Odense Volleyball",
+      "away_team": "IF Lyseng",
+      "venue": "Klostermarkshallen",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    },
+    {
+      "kamp_id": 71992,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145394,
+      "starts_at": "2026-04-12T15:00:00",
+      "home_team": "Skovbakken",
+      "away_team": "Volleyball Esbjerg",
+      "venue": "Vejlby Risskov Hallen hal 4",
+      "court": "1",
+      "result_home_sets": 0,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71971,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145373,
+      "starts_at": "2026-04-15T20:00:00",
+      "home_team": "ASV Aarhus.2",
+      "away_team": "Bedsted KFUM",
+      "venue": "Århus Gl. Stadionhal",
+      "court": "1",
+      "result_home_sets": null,
+      "result_away_sets": null
+    },
+    {
+      "kamp_id": 71995,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145397,
+      "starts_at": "2026-04-18T11:30:00",
+      "home_team": "Skovbakken",
+      "away_team": "Bedsted KFUM",
+      "venue": "Vejlby Risskov Hallen hal 4",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71994,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145396,
+      "starts_at": "2026-04-18T12:00:00",
+      "home_team": "Odense Volleyball",
+      "away_team": "SIK Viborg",
+      "venue": "Klostermarkshallen",
+      "court": "1",
+      "result_home_sets": 1,
+      "result_away_sets": 3
+    },
+    {
+      "kamp_id": 71997,
+      "pool_id": "2025:women:1-division:pulje-3931",
+      "match_number": 145399,
+      "starts_at": "2026-04-18T13:00:00",
+      "home_team": "Volleyball Esbjerg",
+      "away_team": "ASV Aarhus.2",
+      "venue": "UC-Syd",
+      "court": "1",
+      "result_home_sets": 3,
+      "result_away_sets": 1
+    }
+  ],
+  "set_results": [
+    {
+      "kamp_id": 71908,
+      "set_number": 1,
+      "home_points": 16,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71908,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71908,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71908,
+      "set_number": 4,
+      "home_points": 17,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71908,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71910,
+      "set_number": 1,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71910,
+      "set_number": 2,
+      "home_points": 14,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71910,
+      "set_number": 3,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71910,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71910,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71911,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71911,
+      "set_number": 2,
+      "home_points": 17,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71911,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71911,
+      "set_number": 4,
+      "home_points": 24,
+      "away_points": 26,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71911,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 17,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71912,
+      "set_number": 1,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71912,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71912,
+      "set_number": 3,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71912,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71912,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71913,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71913,
+      "set_number": 2,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71913,
+      "set_number": 3,
+      "home_points": 17,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71913,
+      "set_number": 4,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71913,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71914,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71914,
+      "set_number": 2,
+      "home_points": 24,
+      "away_points": 26,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71914,
+      "set_number": 3,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71914,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71914,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 8,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71915,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71915,
+      "set_number": 2,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71915,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 10,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71915,
+      "set_number": 4,
+      "home_points": 11,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71915,
+      "set_number": 5,
+      "home_points": 7,
+      "away_points": 15,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71916,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 8,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71916,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 6,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71916,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71916,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71916,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71919,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 14,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71919,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 11,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71919,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 13,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71919,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71919,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71920,
+      "set_number": 1,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71920,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71920,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 27,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71920,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71920,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71921,
+      "set_number": 1,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71921,
+      "set_number": 2,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71921,
+      "set_number": 3,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71921,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71921,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71922,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71922,
+      "set_number": 2,
+      "home_points": 17,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71922,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71922,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 14,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71922,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71923,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 13,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71923,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71923,
+      "set_number": 3,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71923,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71923,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71924,
+      "set_number": 1,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71924,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71924,
+      "set_number": 3,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71924,
+      "set_number": 4,
+      "home_points": 11,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71924,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71925,
+      "set_number": 1,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71925,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 14,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71925,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71925,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 10,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71925,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71926,
+      "set_number": 1,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71926,
+      "set_number": 2,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71926,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71926,
+      "set_number": 4,
+      "home_points": 11,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71926,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71928,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71928,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71928,
+      "set_number": 3,
+      "home_points": 26,
+      "away_points": 28,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71928,
+      "set_number": 4,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71928,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 13,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71929,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71929,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71929,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71929,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 13,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71929,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71930,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71930,
+      "set_number": 2,
+      "home_points": 28,
+      "away_points": 26,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71930,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71930,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71930,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71931,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 14,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71931,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 13,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71931,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71931,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71931,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71933,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 13,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71933,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71933,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71933,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71933,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71935,
+      "set_number": 1,
+      "home_points": 24,
+      "away_points": 26,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71935,
+      "set_number": 2,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71935,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71935,
+      "set_number": 4,
+      "home_points": 28,
+      "away_points": 26,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71935,
+      "set_number": 5,
+      "home_points": 16,
+      "away_points": 14,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71936,
+      "set_number": 1,
+      "home_points": 17,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71936,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71936,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71936,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71936,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71937,
+      "set_number": 1,
+      "home_points": 24,
+      "away_points": 26,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71937,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71937,
+      "set_number": 3,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71937,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71937,
+      "set_number": 5,
+      "home_points": 14,
+      "away_points": 16,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71938,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71938,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71938,
+      "set_number": 3,
+      "home_points": 26,
+      "away_points": 24,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71938,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71938,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71939,
+      "set_number": 1,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71939,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71939,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71939,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71939,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71940,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71940,
+      "set_number": 2,
+      "home_points": 11,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71940,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71940,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71940,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71941,
+      "set_number": 1,
+      "home_points": 10,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71941,
+      "set_number": 2,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71941,
+      "set_number": 3,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71941,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71941,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71943,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71943,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71943,
+      "set_number": 3,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71943,
+      "set_number": 4,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71943,
+      "set_number": 5,
+      "home_points": 12,
+      "away_points": 15,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71944,
+      "set_number": 1,
+      "home_points": 12,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71944,
+      "set_number": 2,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71944,
+      "set_number": 3,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71944,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71944,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71946,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71946,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 13,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71946,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71946,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71946,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71947,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71947,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 10,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71947,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71947,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71947,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71948,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71948,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71948,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 11,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71948,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71948,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71949,
+      "set_number": 1,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71949,
+      "set_number": 2,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71949,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71949,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71949,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 11,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71950,
+      "set_number": 1,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71950,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71950,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71950,
+      "set_number": 4,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71950,
+      "set_number": 5,
+      "home_points": 12,
+      "away_points": 15,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71952,
+      "set_number": 1,
+      "home_points": 12,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71952,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71952,
+      "set_number": 3,
+      "home_points": 16,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71952,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71952,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71953,
+      "set_number": 1,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71953,
+      "set_number": 2,
+      "home_points": 26,
+      "away_points": 24,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71953,
+      "set_number": 3,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71953,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71953,
+      "set_number": 5,
+      "home_points": 11,
+      "away_points": 15,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71954,
+      "set_number": 1,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71954,
+      "set_number": 2,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71954,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71954,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71954,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 8,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71955,
+      "set_number": 1,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71955,
+      "set_number": 2,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71955,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71955,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 12,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71955,
+      "set_number": 5,
+      "home_points": 13,
+      "away_points": 15,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71956,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71956,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71956,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71956,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71956,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71958,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71958,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71958,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71958,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71958,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71960,
+      "set_number": 1,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71960,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71960,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71960,
+      "set_number": 4,
+      "home_points": 17,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71960,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71961,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71961,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71961,
+      "set_number": 3,
+      "home_points": 12,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71961,
+      "set_number": 4,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71961,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71962,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71962,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 11,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71962,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 12,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71962,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71962,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71963,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71963,
+      "set_number": 2,
+      "home_points": 17,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71963,
+      "set_number": 3,
+      "home_points": 5,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71963,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71963,
+      "set_number": 5,
+      "home_points": 7,
+      "away_points": 15,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71964,
+      "set_number": 1,
+      "home_points": 26,
+      "away_points": 24,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71964,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71964,
+      "set_number": 3,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71964,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71964,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71965,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71965,
+      "set_number": 2,
+      "home_points": 10,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71965,
+      "set_number": 3,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71965,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71965,
+      "set_number": 5,
+      "home_points": 16,
+      "away_points": 14,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71967,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71967,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71967,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71967,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71967,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71968,
+      "set_number": 1,
+      "home_points": 14,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71968,
+      "set_number": 2,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71968,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71968,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71968,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 10,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71969,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71969,
+      "set_number": 2,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71969,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71969,
+      "set_number": 4,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71969,
+      "set_number": 5,
+      "home_points": 14,
+      "away_points": 16,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71972,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71972,
+      "set_number": 2,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71972,
+      "set_number": 3,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71972,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71972,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 9,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71974,
+      "set_number": 1,
+      "home_points": 10,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71974,
+      "set_number": 2,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71974,
+      "set_number": 3,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71974,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71974,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71975,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71975,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71975,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 10,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71975,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71975,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71976,
+      "set_number": 1,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71976,
+      "set_number": 2,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71976,
+      "set_number": 3,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71976,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71976,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71977,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71977,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71977,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71977,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71977,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71979,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71979,
+      "set_number": 2,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71979,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71979,
+      "set_number": 4,
+      "home_points": 27,
+      "away_points": 25,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71979,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71980,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71980,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71980,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71980,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71980,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71981,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 9,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71981,
+      "set_number": 2,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71981,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71981,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71981,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71982,
+      "set_number": 1,
+      "home_points": 14,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71982,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71982,
+      "set_number": 3,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71982,
+      "set_number": 4,
+      "home_points": 16,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71982,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71984,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 12,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71984,
+      "set_number": 2,
+      "home_points": 24,
+      "away_points": 26,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71984,
+      "set_number": 3,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71984,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 9,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71984,
+      "set_number": 5,
+      "home_points": 17,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71985,
+      "set_number": 1,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71985,
+      "set_number": 2,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71985,
+      "set_number": 3,
+      "home_points": 13,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71985,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71985,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71986,
+      "set_number": 1,
+      "home_points": 16,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71986,
+      "set_number": 2,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71986,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71986,
+      "set_number": 4,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71986,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71987,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 12,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71987,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71987,
+      "set_number": 3,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71987,
+      "set_number": 4,
+      "home_points": 26,
+      "away_points": 24,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71987,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71989,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71989,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71989,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 13,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71989,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71989,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71990,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71990,
+      "set_number": 2,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71990,
+      "set_number": 3,
+      "home_points": 12,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71990,
+      "set_number": 4,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71990,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71991,
+      "set_number": 1,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71991,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71991,
+      "set_number": 3,
+      "home_points": 26,
+      "away_points": 24,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71991,
+      "set_number": 4,
+      "home_points": 7,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71991,
+      "set_number": 5,
+      "home_points": 16,
+      "away_points": 18,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71992,
+      "set_number": 1,
+      "home_points": 17,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71992,
+      "set_number": 2,
+      "home_points": 12,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71992,
+      "set_number": 3,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71992,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71992,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71993,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 8,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71993,
+      "set_number": 2,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71993,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71993,
+      "set_number": 4,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71993,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 11,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71994,
+      "set_number": 1,
+      "home_points": 24,
+      "away_points": 26,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71994,
+      "set_number": 2,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71994,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71994,
+      "set_number": 4,
+      "home_points": 21,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71994,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71995,
+      "set_number": 1,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71995,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71995,
+      "set_number": 3,
+      "home_points": 27,
+      "away_points": 25,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71995,
+      "set_number": 4,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71995,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 71997,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71997,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71997,
+      "set_number": 3,
+      "home_points": 24,
+      "away_points": 26,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 71997,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 71997,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    }
+  ],
+  "rule_profile": "dt_2025_division",
+  "cumulative_points": [
+    {
+      "team": "ASV Aarhus.2",
+      "date": null,
+      "game_number": 0,
+      "points": 0,
+      "cumulative_points": 0
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": null,
+      "game_number": 0,
+      "points": 0,
+      "cumulative_points": 0
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": null,
+      "game_number": 0,
+      "points": 0,
+      "cumulative_points": 0
+    },
+    {
+      "team": "IF Lyseng",
+      "date": null,
+      "game_number": 0,
+      "points": 0,
+      "cumulative_points": 0
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": null,
+      "game_number": 0,
+      "points": 0,
+      "cumulative_points": 0
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": null,
+      "game_number": 0,
+      "points": 0,
+      "cumulative_points": 0
+    },
+    {
+      "team": "SIK Viborg",
+      "date": null,
+      "game_number": 0,
+      "points": 0,
+      "cumulative_points": 0
+    },
+    {
+      "team": "Skovbakken",
+      "date": null,
+      "game_number": 0,
+      "points": 0,
+      "cumulative_points": 0
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": null,
+      "game_number": 0,
+      "points": 0,
+      "cumulative_points": 0
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2025-09-27T12:00:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 71908
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2025-09-27T12:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 71908
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2025-09-27T13:00:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 71910
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2025-09-27T13:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 71910
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2025-09-27T17:00:00",
+      "game_number": 1,
+      "points": 1,
+      "cumulative_points": 1,
+      "kamp_id": 71911
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2025-09-27T17:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 71911
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2025-09-28T12:00:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 71912
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2025-09-28T12:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 71912
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2025-10-04T12:00:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 71916
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2025-10-04T12:00:00",
+      "game_number": 2,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 71916
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2025-10-05T15:00:00",
+      "game_number": 2,
+      "points": 1,
+      "cumulative_points": 1,
+      "kamp_id": 71915
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2025-10-05T15:00:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 4,
+      "kamp_id": 71915
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2025-10-05T16:00:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 71914
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2025-10-05T16:00:00",
+      "game_number": 2,
+      "points": 1,
+      "cumulative_points": 1,
+      "kamp_id": 71914
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2025-10-18T12:00:00",
+      "game_number": 3,
+      "points": 0,
+      "cumulative_points": 1,
+      "kamp_id": 71921
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2025-10-18T12:00:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 9,
+      "kamp_id": 71921
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2025-10-18T15:00:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 71919
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2025-10-18T15:00:00",
+      "game_number": 3,
+      "points": 0,
+      "cumulative_points": 1,
+      "kamp_id": 71919
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2025-10-18T15:00:00",
+      "game_number": 3,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 71920
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2025-10-18T15:00:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 7,
+      "kamp_id": 71920
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2025-10-19T13:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 71922
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2025-10-19T13:00:00",
+      "game_number": 3,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 71922
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2025-10-25T13:00:00",
+      "game_number": 4,
+      "points": 3,
+      "cumulative_points": 10,
+      "kamp_id": 71923
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2025-10-25T13:00:00",
+      "game_number": 4,
+      "points": 0,
+      "cumulative_points": 1,
+      "kamp_id": 71923
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2025-10-26T11:30:00",
+      "game_number": 4,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 71924
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2025-10-26T11:30:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 9,
+      "kamp_id": 71924
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2025-10-26T12:00:00",
+      "game_number": 4,
+      "points": 3,
+      "cumulative_points": 12,
+      "kamp_id": 71925
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2025-10-26T12:00:00",
+      "game_number": 2,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71925
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2025-10-26T13:00:00",
+      "game_number": 4,
+      "points": 0,
+      "cumulative_points": 1,
+      "kamp_id": 71926
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2025-10-26T13:00:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 71926
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2025-11-02T16:00:00",
+      "game_number": 3,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71913
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2025-11-02T16:00:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 9,
+      "kamp_id": 71913
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2025-11-08T13:00:00",
+      "game_number": 4,
+      "points": 3,
+      "cumulative_points": 12,
+      "kamp_id": 71929
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2025-11-08T13:00:00",
+      "game_number": 5,
+      "points": 0,
+      "cumulative_points": 1,
+      "kamp_id": 71929
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2025-11-08T16:00:00",
+      "game_number": 4,
+      "points": 3,
+      "cumulative_points": 12,
+      "kamp_id": 71928
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2025-11-08T16:00:00",
+      "game_number": 5,
+      "points": 1,
+      "cumulative_points": 13,
+      "kamp_id": 71928
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2025-11-09T15:00:00",
+      "game_number": 5,
+      "points": 3,
+      "cumulative_points": 13,
+      "kamp_id": 71931
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2025-11-09T15:00:00",
+      "game_number": 4,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 71931
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2025-11-22T15:00:00",
+      "game_number": 5,
+      "points": 3,
+      "cumulative_points": 15,
+      "kamp_id": 71933
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2025-11-22T15:00:00",
+      "game_number": 4,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71933
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2025-11-23T10:00:00",
+      "game_number": 5,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 71935
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2025-11-23T10:00:00",
+      "game_number": 5,
+      "points": 1,
+      "cumulative_points": 2,
+      "kamp_id": 71935
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2025-11-23T15:30:00",
+      "game_number": 6,
+      "points": 1,
+      "cumulative_points": 2,
+      "kamp_id": 71937
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2025-11-23T15:30:00",
+      "game_number": 5,
+      "points": 3,
+      "cumulative_points": 15,
+      "kamp_id": 71937
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2025-11-23T16:00:00",
+      "game_number": 6,
+      "points": 3,
+      "cumulative_points": 16,
+      "kamp_id": 71936
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2025-11-23T16:00:00",
+      "game_number": 5,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 71936
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2025-11-29T15:00:00",
+      "game_number": 6,
+      "points": 3,
+      "cumulative_points": 9,
+      "kamp_id": 71938
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2025-11-29T15:00:00",
+      "game_number": 6,
+      "points": 0,
+      "cumulative_points": 15,
+      "kamp_id": 71938
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2025-11-30T11:00:00",
+      "game_number": 6,
+      "points": 3,
+      "cumulative_points": 16,
+      "kamp_id": 71939
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2025-11-30T11:00:00",
+      "game_number": 5,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71939
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2025-11-30T11:00:00",
+      "game_number": 6,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71941
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2025-11-30T11:00:00",
+      "game_number": 6,
+      "points": 3,
+      "cumulative_points": 18,
+      "kamp_id": 71941
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2025-11-30T13:00:00",
+      "game_number": 6,
+      "points": 3,
+      "cumulative_points": 5,
+      "kamp_id": 71940
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2025-11-30T13:00:00",
+      "game_number": 7,
+      "points": 0,
+      "cumulative_points": 2,
+      "kamp_id": 71940
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2025-12-07T18:00:00",
+      "game_number": 7,
+      "points": 3,
+      "cumulative_points": 12,
+      "kamp_id": 71930
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2025-12-07T18:00:00",
+      "game_number": 6,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71930
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2025-12-13T13:00:00",
+      "game_number": 7,
+      "points": 1,
+      "cumulative_points": 6,
+      "kamp_id": 71991
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2025-12-13T13:00:00",
+      "game_number": 8,
+      "points": 3,
+      "cumulative_points": 15,
+      "kamp_id": 71991
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2025-12-13T18:00:00",
+      "game_number": 7,
+      "points": 0,
+      "cumulative_points": 16,
+      "kamp_id": 71944
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2025-12-13T18:00:00",
+      "game_number": 7,
+      "points": 3,
+      "cumulative_points": 19,
+      "kamp_id": 71944
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2025-12-14T10:00:00",
+      "game_number": 7,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 71947
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2025-12-14T10:00:00",
+      "game_number": 7,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71947
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2025-12-14T12:30:00",
+      "game_number": 7,
+      "points": 1,
+      "cumulative_points": 16,
+      "kamp_id": 71943
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2025-12-14T12:30:00",
+      "game_number": 7,
+      "points": 3,
+      "cumulative_points": 21,
+      "kamp_id": 71943
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-01-10T12:00:00",
+      "game_number": 8,
+      "points": 1,
+      "cumulative_points": 3,
+      "kamp_id": 71950
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2026-01-10T12:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 18,
+      "kamp_id": 71950
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-01-11T10:00:00",
+      "game_number": 8,
+      "points": 3,
+      "cumulative_points": 22,
+      "kamp_id": 71949
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2026-01-11T10:00:00",
+      "game_number": 8,
+      "points": 1,
+      "cumulative_points": 17,
+      "kamp_id": 71949
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2026-01-11T13:00:00",
+      "game_number": 8,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71952
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2026-01-11T13:00:00",
+      "game_number": 8,
+      "points": 3,
+      "cumulative_points": 19,
+      "kamp_id": 71952
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2026-01-18T11:00:00",
+      "game_number": 9,
+      "points": 1,
+      "cumulative_points": 20,
+      "kamp_id": 71953
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2026-01-18T11:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 20,
+      "kamp_id": 71953
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-01-18T12:00:00",
+      "game_number": 8,
+      "points": 1,
+      "cumulative_points": 7,
+      "kamp_id": 71955
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-01-18T12:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 71955
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-01-18T14:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 25,
+      "kamp_id": 71954
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-01-18T14:00:00",
+      "game_number": 8,
+      "points": 1,
+      "cumulative_points": 22,
+      "kamp_id": 71954
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2026-01-18T15:00:00",
+      "game_number": 8,
+      "points": 3,
+      "cumulative_points": 9,
+      "kamp_id": 71956
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2026-01-18T15:00:00",
+      "game_number": 9,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71956
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-01-24T12:00:00",
+      "game_number": 10,
+      "points": 3,
+      "cumulative_points": 9,
+      "kamp_id": 71962
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2026-01-24T12:00:00",
+      "game_number": 9,
+      "points": 0,
+      "cumulative_points": 9,
+      "kamp_id": 71962
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-01-24T15:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 25,
+      "kamp_id": 71958
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2026-01-24T15:00:00",
+      "game_number": 10,
+      "points": 0,
+      "cumulative_points": 20,
+      "kamp_id": 71958
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2026-01-24T16:00:00",
+      "game_number": 10,
+      "points": 0,
+      "cumulative_points": 20,
+      "kamp_id": 71961
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2026-01-24T16:00:00",
+      "game_number": 10,
+      "points": 3,
+      "cumulative_points": 21,
+      "kamp_id": 71961
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2026-01-25T16:00:00",
+      "game_number": 10,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 71960
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-01-25T16:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 10,
+      "kamp_id": 71960
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2026-02-07T12:00:00",
+      "game_number": 10,
+      "points": 1,
+      "cumulative_points": 10,
+      "kamp_id": 71963
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-02-07T12:00:00",
+      "game_number": 10,
+      "points": 3,
+      "cumulative_points": 28,
+      "kamp_id": 71963
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-02-08T10:00:00",
+      "game_number": 10,
+      "points": 3,
+      "cumulative_points": 13,
+      "kamp_id": 71967
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2026-02-08T10:00:00",
+      "game_number": 11,
+      "points": 0,
+      "cumulative_points": 20,
+      "kamp_id": 71967
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2026-02-15T17:00:00",
+      "game_number": 11,
+      "points": 3,
+      "cumulative_points": 23,
+      "kamp_id": 71965
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-02-15T17:00:00",
+      "game_number": 11,
+      "points": 1,
+      "cumulative_points": 10,
+      "kamp_id": 71965
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-02-21T13:00:00",
+      "game_number": 11,
+      "points": 1,
+      "cumulative_points": 29,
+      "kamp_id": 71969
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2026-02-21T13:00:00",
+      "game_number": 12,
+      "points": 3,
+      "cumulative_points": 26,
+      "kamp_id": 71969
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2026-02-22T11:00:00",
+      "game_number": 11,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 71968
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-02-22T11:00:00",
+      "game_number": 12,
+      "points": 1,
+      "cumulative_points": 11,
+      "kamp_id": 71968
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2026-02-22T15:00:00",
+      "game_number": 12,
+      "points": 3,
+      "cumulative_points": 23,
+      "kamp_id": 71972
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2026-02-22T15:00:00",
+      "game_number": 11,
+      "points": 1,
+      "cumulative_points": 22,
+      "kamp_id": 71972
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-02-28T12:00:00",
+      "game_number": 13,
+      "points": 0,
+      "cumulative_points": 11,
+      "kamp_id": 71974
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-02-28T12:00:00",
+      "game_number": 12,
+      "points": 3,
+      "cumulative_points": 32,
+      "kamp_id": 71974
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2026-02-28T13:00:00",
+      "game_number": 12,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 71976
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-02-28T13:00:00",
+      "game_number": 10,
+      "points": 3,
+      "cumulative_points": 28,
+      "kamp_id": 71976
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2026-03-01T12:30:00",
+      "game_number": 12,
+      "points": 3,
+      "cumulative_points": 25,
+      "kamp_id": 71977
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-03-01T12:30:00",
+      "game_number": 11,
+      "points": 0,
+      "cumulative_points": 13,
+      "kamp_id": 71977
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2026-03-02T20:30:00",
+      "game_number": 13,
+      "points": 3,
+      "cumulative_points": 29,
+      "kamp_id": 71975
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2026-03-02T20:30:00",
+      "game_number": 11,
+      "points": 0,
+      "cumulative_points": 10,
+      "kamp_id": 71975
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-03-05T20:30:00",
+      "game_number": 13,
+      "points": 3,
+      "cumulative_points": 35,
+      "kamp_id": 71948
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-03-05T20:30:00",
+      "game_number": 12,
+      "points": 0,
+      "cumulative_points": 13,
+      "kamp_id": 71948
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2026-03-13T18:30:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 32,
+      "kamp_id": 71980
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2026-03-13T18:30:00",
+      "game_number": 13,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 71980
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-03-14T10:00:00",
+      "game_number": 11,
+      "points": 3,
+      "cumulative_points": 31,
+      "kamp_id": 71979
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2026-03-14T10:00:00",
+      "game_number": 13,
+      "points": 0,
+      "cumulative_points": 23,
+      "kamp_id": 71979
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-03-14T15:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 38,
+      "kamp_id": 71981
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2026-03-14T15:00:00",
+      "game_number": 13,
+      "points": 0,
+      "cumulative_points": 25,
+      "kamp_id": 71981
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2026-03-14T15:00:00",
+      "game_number": 12,
+      "points": 0,
+      "cumulative_points": 10,
+      "kamp_id": 71982
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-03-14T15:00:00",
+      "game_number": 13,
+      "points": 3,
+      "cumulative_points": 16,
+      "kamp_id": 71982
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2026-03-22T19:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 28,
+      "kamp_id": 71964
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-03-22T19:00:00",
+      "game_number": 12,
+      "points": 0,
+      "cumulative_points": 31,
+      "kamp_id": 71964
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2026-03-22T19:00:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 35,
+      "kamp_id": 71993
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2026-03-22T19:00:00",
+      "game_number": 14,
+      "points": 1,
+      "cumulative_points": 24,
+      "kamp_id": 71993
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2026-03-28T15:00:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 24,
+      "kamp_id": 71986
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2026-03-28T15:00:00",
+      "game_number": 13,
+      "points": 3,
+      "cumulative_points": 13,
+      "kamp_id": 71986
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2026-03-28T16:00:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 31,
+      "kamp_id": 71987
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2026-03-28T16:00:00",
+      "game_number": 14,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 71987
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-03-29T10:00:00",
+      "game_number": 13,
+      "points": 3,
+      "cumulative_points": 34,
+      "kamp_id": 71984
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-03-29T10:00:00",
+      "game_number": 14,
+      "points": 1,
+      "cumulative_points": 12,
+      "kamp_id": 71984
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-03-29T10:00:00",
+      "game_number": 14,
+      "points": 0,
+      "cumulative_points": 16,
+      "kamp_id": 71985
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2026-03-29T10:00:00",
+      "game_number": 16,
+      "points": 3,
+      "cumulative_points": 38,
+      "kamp_id": 71985
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2026-04-11T13:00:00",
+      "game_number": 16,
+      "points": 3,
+      "cumulative_points": 34,
+      "kamp_id": 71946
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2026-04-11T13:00:00",
+      "game_number": 14,
+      "points": 0,
+      "cumulative_points": 13,
+      "kamp_id": 71946
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-04-12T10:00:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 16,
+      "kamp_id": 71990
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-04-12T10:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 37,
+      "kamp_id": 71990
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-04-12T14:00:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 15,
+      "kamp_id": 71989
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2026-04-12T14:00:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 24,
+      "kamp_id": 71989
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2026-04-12T15:00:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 71992
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-04-12T15:00:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 41,
+      "kamp_id": 71992
+    },
+    {
+      "team": "Skovbakken",
+      "date": "2026-04-18T11:30:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 71995
+    },
+    {
+      "team": "Bedsted KFUM",
+      "date": "2026-04-18T11:30:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 16,
+      "kamp_id": 71995
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-04-18T12:00:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 15,
+      "kamp_id": 71994
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-04-18T12:00:00",
+      "game_number": 16,
+      "points": 3,
+      "cumulative_points": 19,
+      "kamp_id": 71994
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-04-18T13:00:00",
+      "game_number": 16,
+      "points": 3,
+      "cumulative_points": 44,
+      "kamp_id": 71997
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-04-18T13:00:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 37,
+      "kamp_id": 71997
+    }
+  ],
+  "result_matrix": {
+    "ASV Aarhus.2": {
+      "ASV Aarhus.2": "",
+      "Bedsted KFUM": null,
+      "DHV Odense.2": "3-1",
+      "IF Lyseng": "3-1",
+      "Ikast KFUM.2": "3-2",
+      "Odense Volleyball": "3-2",
+      "SIK Viborg": "3-0",
+      "Skovbakken": "3-1",
+      "Volleyball Esbjerg": "3-2"
+    },
+    "Bedsted KFUM": {
+      "ASV Aarhus.2": "0-3",
+      "Bedsted KFUM": "",
+      "DHV Odense.2": "2-3",
+      "IF Lyseng": "2-3",
+      "Ikast KFUM.2": "1-3",
+      "Odense Volleyball": "3-1",
+      "SIK Viborg": "1-3",
+      "Skovbakken": "3-0",
+      "Volleyball Esbjerg": "2-3"
+    },
+    "DHV Odense.2": {
+      "ASV Aarhus.2": "3-1",
+      "Bedsted KFUM": "3-0",
+      "DHV Odense.2": "",
+      "IF Lyseng": "0-3",
+      "Ikast KFUM.2": "3-0",
+      "Odense Volleyball": "3-2",
+      "SIK Viborg": "3-0",
+      "Skovbakken": "3-0, 3-1",
+      "Volleyball Esbjerg": "1-3"
+    },
+    "IF Lyseng": {
+      "ASV Aarhus.2": "0-3",
+      "Bedsted KFUM": "1-3",
+      "DHV Odense.2": "3-2",
+      "IF Lyseng": "",
+      "Ikast KFUM.2": "2-3",
+      "Odense Volleyball": "3-1",
+      "SIK Viborg": "3-0",
+      "Skovbakken": "3-1",
+      "Volleyball Esbjerg": "2-3"
+    },
+    "Ikast KFUM.2": {
+      "ASV Aarhus.2": "3-2",
+      "Bedsted KFUM": "3-0",
+      "DHV Odense.2": "1-3",
+      "IF Lyseng": "3-2",
+      "Ikast KFUM.2": "",
+      "Odense Volleyball": "3-2",
+      "SIK Viborg": "3-1",
+      "Skovbakken": "3-0",
+      "Volleyball Esbjerg": "2-3"
+    },
+    "Odense Volleyball": {
+      "ASV Aarhus.2": "0-3",
+      "Bedsted KFUM": "3-0",
+      "DHV Odense.2": "2-3",
+      "IF Lyseng": "3-1",
+      "Ikast KFUM.2": "2-3",
+      "Odense Volleyball": "",
+      "SIK Viborg": "1-3",
+      "Skovbakken": "1-3",
+      "Volleyball Esbjerg": "0-3"
+    },
+    "SIK Viborg": {
+      "ASV Aarhus.2": "1-3",
+      "Bedsted KFUM": "3-2",
+      "DHV Odense.2": "0-3",
+      "IF Lyseng": "3-0",
+      "Ikast KFUM.2": "0-3",
+      "Odense Volleyball": "2-3",
+      "SIK Viborg": "",
+      "Skovbakken": "3-0",
+      "Volleyball Esbjerg": "0-3"
+    },
+    "Skovbakken": {
+      "ASV Aarhus.2": "0-3",
+      "Bedsted KFUM": "1-3",
+      "DHV Odense.2": null,
+      "IF Lyseng": "0-3",
+      "Ikast KFUM.2": "1-3",
+      "Odense Volleyball": "3-2",
+      "SIK Viborg": "1-3",
+      "Skovbakken": "",
+      "Volleyball Esbjerg": "0-3"
+    },
+    "Volleyball Esbjerg": {
+      "ASV Aarhus.2": "3-1",
+      "Bedsted KFUM": "3-0",
+      "DHV Odense.2": "3-1",
+      "IF Lyseng": "3-0",
+      "Ikast KFUM.2": "2-3",
+      "Odense Volleyball": "3-1",
+      "SIK Viborg": "3-0",
+      "Skovbakken": "3-0",
+      "Volleyball Esbjerg": ""
+    }
+  }
+}
