@@ -1,4 +1,4 @@
-const APP_CACHE = "volley-app-v6";
+const APP_CACHE = "volley-app-v9";
 const DATA_CACHE = "volley-data-v1";
 const FRONTEND_ROOT = new URL("./", self.location.href).pathname;
 const DATA_ROOT = new URL("../data/json/", self.location.href).pathname;

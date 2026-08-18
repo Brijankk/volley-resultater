@@ -415,9 +415,22 @@ function renderMatchDetailItem(match) {
         <span>${escapeHtml(match.venue || "")}${match.court ? `, bane ${escapeHtml(match.court)}` : ""}</span>
       </div>
       <div class="match-detail-score">${match.result_home_sets}-${match.result_away_sets}</div>
-      <div class="set-list">
-        ${sets.map((set) => `<span>${set.set_number}. sæt: ${set.home_points}-${set.away_points}</span>`).join("")}
-      </div>
+      <table class="set-table">
+        <tbody>
+          <tr>
+            <th>Sæt</th>
+            ${sets.map((set) => `<td>${set.set_number}</td>`).join("")}
+          </tr>
+          <tr>
+            <th>Hjemme</th>
+            ${sets.map((set) => `<td>${set.home_points}</td>`).join("")}
+          </tr>
+          <tr>
+            <th>Ude</th>
+            ${sets.map((set) => `<td>${set.away_points}</td>`).join("")}
+          </tr>
+        </tbody>
+      </table>
     </article>
   `;
 }
