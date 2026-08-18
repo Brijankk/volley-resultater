@@ -265,7 +265,7 @@ function renderChart() {
   const chartData = buildChartData(state.poolData.cumulative_points, state.chartMode);
   const dataByTeam = chartData.byTeam;
   const teams = state.poolData.source_standings.map((row) => row.team_name);
-  const maxY = Math.max(1, ...Object.values(dataByTeam).flat().map((point) => point.y));
+  const maxY = yAxisMax(Math.max(1, ...Object.values(dataByTeam).flat().map((point) => point.y)));
   const minX = chartData.minX;
   const maxX = chartData.maxX;
   const pad = { left: 42, right: 14, top: 18, bottom: 34 };
@@ -347,9 +347,8 @@ function drawGrid(ctx, width, height, pad, maxY, chartData) {
     ctx.restore();
   }
 
-  for (let i = 0; i <= 4; i += 1) {
-    const y = pad.top + (plotH / 4) * i;
-    const value = Math.round(maxY - (maxY / 4) * i);
+  for (const value of yTicks(maxY)) {
+    const y = pad.top + plotH - (value / maxY) * plotH;
     ctx.beginPath();
     ctx.moveTo(pad.left, y);
     ctx.lineTo(pad.left + plotW, y);
@@ -556,6 +555,18 @@ function monthTicks(minX, maxX) {
   while (date.getTime() <= maxX) {
     ticks.push({ value: date.getTime(), label: formatter.format(date) });
     date.setMonth(date.getMonth() + 1);
+  }
+  return ticks;
+}
+
+function yAxisMax(maxY) {
+  return Math.max(3, Math.ceil(maxY / 3) * 3);
+}
+
+function yTicks(maxY) {
+  const ticks = [];
+  for (let value = 0; value <= maxY; value += 3) {
+    ticks.push(value);
   }
   return ticks;
 }
