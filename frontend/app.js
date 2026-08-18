@@ -26,6 +26,46 @@ const colors = [
   "#a13e7a",
 ];
 
+const teamAbbreviations = [
+  ["Aalborg Volleyball", "AAV"],
+  ["Aarhus 1900", "1900"],
+  ["ASV Aarhus", "ASV"],
+  ["ASV Elite", "ASV"],
+  ["DHV Odense", "DHV"],
+  ["DSIO Odense", "DSIO"],
+  ["Fortuna Odense Volley", "Fortuna"],
+  ["Frederiksberg", "Fr.berg"],
+  ["Lyngby-Gladsaxe Volley", "LGV"],
+  ["Lynge Uggeløse IF", "LUIF"],
+  ["Marienlyst-Fortuna", "Marienlyst"],
+  ["Nordenskov UIF", "NUIF"],
+  ["Nordenskov Ungdoms-og IF", "NUIF"],
+  ["UVS-Nordenskov", "Nordenskov"],
+  ["Vendsyssel", "Vends."],
+  ["Vestsjælland", "Vestsj."],
+  ["Wildcard", "WC"],
+  [" Volleyball", ""],
+  [" Volley", ""],
+  [" KFUM", ""],
+  [" VK", ""],
+  [" IF", ""],
+  [" FIF", ""],
+  [" FVK", ""],
+  [" G&I", ""],
+  [" G & I", ""],
+  [" I&G", ""],
+  [" GF", ""],
+  [" EV", ""],
+  [" VBC", ""],
+  ["Volleyball ", ""],
+  ["IF ", ""],
+  ["VK ", ""],
+  ["SGF ", ""],
+  ["SIK ", ""],
+  ["RS ", ""],
+  ["Team ", ""],
+];
+
 const els = {
   status: document.querySelector("#status"),
   seasonSelect: document.querySelector("#seasonSelect"),
@@ -316,9 +356,9 @@ function renderChart() {
   els.legend.innerHTML = teams
     .map(
       (team, index) => `
-        <span class="legend-item">
+        <span class="legend-item" title="${escapeHtml(team)}">
           <span class="swatch" style="background:${colors[index % colors.length]}"></span>
-          ${escapeHtml(team)}
+          ${escapeHtml(shortTeam(team))}
         </span>
       `,
     )
@@ -366,7 +406,7 @@ function drawGrid(ctx, width, height, pad, maxY, chartData) {
 function renderMatrix() {
   const matrix = state.poolData.result_matrix;
   const teams = state.poolData.source_standings.map((row) => row.team_name);
-  const header = `<tr><th>Hjemme</th>${teams.map((team) => `<th>${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
+  const header = `<tr><th>Hjemme</th>${teams.map((team) => `<th title="${escapeHtml(team)}">${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
   const body = teams
     .map((home) => {
       const cells = teams
@@ -379,7 +419,7 @@ function renderMatrix() {
           return `<td class="${className}${selected}"${attrs}>${escapeHtml(value || "")}</td>`;
         })
         .join("");
-      return `<tr><td><strong>${escapeHtml(shortTeam(home))}</strong></td>${cells}</tr>`;
+      return `<tr><td title="${escapeHtml(home)}"><strong>${escapeHtml(shortTeam(home))}</strong></td>${cells}</tr>`;
     })
     .join("");
   els.matrixWrap.innerHTML = `<table class="matrix-table">${header}${body}</table>`;
@@ -593,19 +633,7 @@ function safeFilename(value) {
 }
 
 function shortTeam(team) {
-  return team
-    .replace("Aabyhøj IF", "Aabyhøj")
-    .replace("Aarhus 1900", "1900")
-    .replace("Aalborg Volleyball", "Aalborg")
-    .replace("Odense Volleyball", "Odense")
-    .replace("Amager Volley", "Amager")
-    .replace("Middelfart VK", "Middelfart")
-    .replace("VK Vestsjælland", "Vestsj.")
-    .replace("VK Vendsyssel", "Vendsyssel")
-    .replace("ASV Aarhus", "ASV")
-    .replace("Gentofte Volley", "Gentofte")
-    .replace("Nordenskov UIF", "Nordenskov")
-    .replace("Volleyball", "Volley");
+  return teamAbbreviations.reduce((name, [from, to]) => name.replace(from, to), team).trim();
 }
 
 function matrixClass(value) {
