@@ -25,6 +25,8 @@
         <div class="topbar-actions">
           <button class="install-button hidden" id="installButton" type="button">Installer</button>
           <div class="status-pill" id="status">Indlæser data</div>
+          <div class="status-pill hidden" id="connectionStatus"></div>
+          <div class="status-pill hidden" id="updatedStatus"></div>
         </div>
       </header>
 
@@ -49,13 +51,10 @@
         </label>
       </section>
 
-      <section class="data-meta" id="dataMeta" aria-label="Dataoplysninger"></section>
-
       <section class="content-grid">
         <section class="panel standings-panel">
           <div class="section-heading">
             <h2>Stilling</h2>
-            <span id="ruleLabel"></span>
           </div>
           <div class="table-scroll">
             <table class="standings-table">
@@ -66,8 +65,8 @@
                   <th>K</th>
                   <th>V</th>
                   <th>T</th>
-                  <th>Sets</th>
-                  <th>Balls</th>
+                  <th>Sæt</th>
+                  <th>Bolde</th>
                   <th>P</th>
                 </tr>
               </thead>
@@ -75,6 +74,8 @@
             </table>
           </div>
         </section>
+
+        <section class="validation-meta hidden" id="validationMeta" aria-label="Validering af stilling"></section>
 
         <section class="panel chart-panel">
           <div class="section-heading chart-heading">
@@ -94,7 +95,6 @@
       <section class="panel matrix-panel">
         <div class="section-heading">
           <h2>Hjemme / ude</h2>
-          <span>Rækker er hjemmehold</span>
         </div>
         <div class="matrix-scroll" id="matrixWrap"></div>
       </section>
@@ -102,7 +102,6 @@
       <section class="panel detail-panel" id="matchDetailPanel">
         <div class="section-heading">
           <h2>Kampdetaljer</h2>
-          <span>Eksperiment</span>
         </div>
         <div id="matchDetailContent" class="match-detail-empty">
           Vælg en kamp i matrixen.
