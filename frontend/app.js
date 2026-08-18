@@ -406,7 +406,7 @@ function drawGrid(ctx, width, height, pad, maxY, chartData) {
 function renderMatrix() {
   const matrix = state.poolData.result_matrix;
   const teams = state.poolData.source_standings.map((row) => row.team_name);
-  const header = `<tr><th>Hjemme</th>${teams.map((team) => `<th title="${escapeHtml(team)}">${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
+  const header = `<tr><th></th>${teams.map((team) => `<th title="${escapeHtml(team)}">${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
   const body = teams
     .map((home) => {
       const cells = teams
