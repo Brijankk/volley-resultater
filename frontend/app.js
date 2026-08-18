@@ -26,6 +26,46 @@ const colors = [
   "#a13e7a",
 ];
 
+const teamAbbreviations = [
+  ["Aalborg Volleyball", "AAV"],
+  ["Aarhus 1900", "1900"],
+  ["ASV Aarhus", "ASV"],
+  ["ASV Elite", "ASV"],
+  ["DHV Odense", "DHV"],
+  ["DSIO Odense", "DSIO"],
+  ["Fortuna Odense Volley", "Fortuna"],
+  ["Frederiksberg", "Fr.berg"],
+  ["Lyngby-Gladsaxe Volley", "LGV"],
+  ["Lynge Uggeløse IF", "LUIF"],
+  ["Marienlyst-Fortuna", "Marienlyst"],
+  ["Nordenskov UIF", "NUIF"],
+  ["Nordenskov Ungdoms-og IF", "NUIF"],
+  ["UVS-Nordenskov", "Nordenskov"],
+  ["Vendsyssel", "Vends."],
+  ["Vestsjælland", "Vestsj."],
+  ["Wildcard", "WC"],
+  [" Volleyball", ""],
+  [" Volley", ""],
+  [" KFUM", ""],
+  [" VK", ""],
+  [" IF", ""],
+  [" FIF", ""],
+  [" FVK", ""],
+  [" G&I", ""],
+  [" G & I", ""],
+  [" I&G", ""],
+  [" GF", ""],
+  [" EV", ""],
+  [" VBC", ""],
+  ["Volleyball ", ""],
+  ["IF ", ""],
+  ["VK ", ""],
+  ["SGF ", ""],
+  ["SIK ", ""],
+  ["RS ", ""],
+  ["Team ", ""],
+];
+
 const els = {
   status: document.querySelector("#status"),
   seasonSelect: document.querySelector("#seasonSelect"),
@@ -265,7 +305,7 @@ function renderChart() {
   const chartData = buildChartData(state.poolData.cumulative_points, state.chartMode);
   const dataByTeam = chartData.byTeam;
   const teams = state.poolData.source_standings.map((row) => row.team_name);
-  const maxY = Math.max(1, ...Object.values(dataByTeam).flat().map((point) => point.y));
+  const maxY = yAxisMax(Math.max(1, ...Object.values(dataByTeam).flat().map((point) => point.y)));
   const minX = chartData.minX;
   const maxX = chartData.maxX;
   const pad = { left: 42, right: 14, top: 18, bottom: 34 };
@@ -316,9 +356,9 @@ function renderChart() {
   els.legend.innerHTML = teams
     .map(
       (team, index) => `
-        <span class="legend-item">
+        <span class="legend-item" title="${escapeHtml(team)}">
           <span class="swatch" style="background:${colors[index % colors.length]}"></span>
-          ${escapeHtml(team)}
+          ${escapeHtml(shortTeam(team))}
         </span>
       `,
     )
@@ -347,9 +387,8 @@ function drawGrid(ctx, width, height, pad, maxY, chartData) {
     ctx.restore();
   }
 
-  for (let i = 0; i <= 4; i += 1) {
-    const y = pad.top + (plotH / 4) * i;
-    const value = Math.round(maxY - (maxY / 4) * i);
+  for (const value of yTicks(maxY)) {
+    const y = pad.top + plotH - (value / maxY) * plotH;
     ctx.beginPath();
     ctx.moveTo(pad.left, y);
     ctx.lineTo(pad.left + plotW, y);
@@ -367,7 +406,7 @@ function drawGrid(ctx, width, height, pad, maxY, chartData) {
 function renderMatrix() {
   const matrix = state.poolData.result_matrix;
   const teams = state.poolData.source_standings.map((row) => row.team_name);
-  const header = `<tr><th>Hjemme</th>${teams.map((team) => `<th>${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
+  const header = `<tr><th></th>${teams.map((team) => `<th title="${escapeHtml(team)}">${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
   const body = teams
     .map((home) => {
       const cells = teams
@@ -380,7 +419,7 @@ function renderMatrix() {
           return `<td class="${className}${selected}"${attrs}>${escapeHtml(value || "")}</td>`;
         })
         .join("");
-      return `<tr><td><strong>${escapeHtml(shortTeam(home))}</strong></td>${cells}</tr>`;
+      return `<tr><td title="${escapeHtml(home)}"><strong>${escapeHtml(shortTeam(home))}</strong></td>${cells}</tr>`;
     })
     .join("");
   els.matrixWrap.innerHTML = `<table class="matrix-table">${header}${body}</table>`;
@@ -415,9 +454,22 @@ function renderMatchDetailItem(match) {
         <span>${escapeHtml(match.venue || "")}${match.court ? `, bane ${escapeHtml(match.court)}` : ""}</span>
       </div>
       <div class="match-detail-score">${match.result_home_sets}-${match.result_away_sets}</div>
-      <div class="set-list">
-        ${sets.map((set) => `<span>${set.set_number}. sæt: ${set.home_points}-${set.away_points}</span>`).join("")}
-      </div>
+      <table class="set-table">
+        <tbody>
+          <tr>
+            <th>Sæt</th>
+            ${sets.map((set) => `<td>${set.set_number}</td>`).join("")}
+          </tr>
+          <tr>
+            <th>Hjemme</th>
+            ${sets.map((set) => `<td>${set.home_points}</td>`).join("")}
+          </tr>
+          <tr>
+            <th>Ude</th>
+            ${sets.map((set) => `<td>${set.away_points}</td>`).join("")}
+          </tr>
+        </tbody>
+      </table>
     </article>
   `;
 }
@@ -547,6 +599,18 @@ function monthTicks(minX, maxX) {
   return ticks;
 }
 
+function yAxisMax(maxY) {
+  return Math.max(3, Math.ceil(maxY / 3) * 3);
+}
+
+function yTicks(maxY) {
+  const ticks = [];
+  for (let value = 0; value <= maxY; value += 3) {
+    ticks.push(value);
+  }
+  return ticks;
+}
+
 function firstDayOfMonth(value) {
   const date = new Date(value);
   date.setDate(1);
@@ -569,19 +633,7 @@ function safeFilename(value) {
 }
 
 function shortTeam(team) {
-  return team
-    .replace("Aabyhøj IF", "Aabyhøj")
-    .replace("Aarhus 1900", "1900")
-    .replace("Aalborg Volleyball", "Aalborg")
-    .replace("Odense Volleyball", "Odense")
-    .replace("Amager Volley", "Amager")
-    .replace("Middelfart VK", "Middelfart")
-    .replace("VK Vestsjælland", "Vestsj.")
-    .replace("VK Vendsyssel", "Vendsyssel")
-    .replace("ASV Aarhus", "ASV")
-    .replace("Gentofte Volley", "Gentofte")
-    .replace("Nordenskov UIF", "Nordenskov")
-    .replace("Volleyball", "Volley");
+  return teamAbbreviations.reduce((name, [from, to]) => name.replace(from, to), team).trim();
 }
 
 function matrixClass(value) {
