@@ -33,8 +33,9 @@ const els = {
   leagueSelect: document.querySelector("#leagueSelect"),
   poolField: document.querySelector("#poolField"),
   poolSelect: document.querySelector("#poolSelect"),
-  dataMeta: document.querySelector("#dataMeta"),
-  ruleLabel: document.querySelector("#ruleLabel"),
+  connectionStatus: document.querySelector("#connectionStatus"),
+  updatedStatus: document.querySelector("#updatedStatus"),
+  validationMeta: document.querySelector("#validationMeta"),
   standingsBody: document.querySelector("#standingsBody"),
   chartModeControl: document.querySelector("#chartModeControl"),
   chart: document.querySelector("#pointsChart"),
@@ -215,25 +216,21 @@ function renderDataMeta() {
   const metadata = state.metadata.metadata || {};
   const validation = state.poolData.metadata?.validation || poolValidationFor(state.selectedPoolId);
   const exported = metadata.exported_at ? formatDateTime(metadata.exported_at) : "Ukendt";
-  const seasons = metadata.seasons?.length || unique(state.metadata.leagues.map((league) => league.season_id)).length;
-  const connection = navigator.onLine
-    ? `<span class="data-online">Online</span>`
-    : `<span class="data-offline">Offline - viser gemte data</span>`;
-  const warnings =
-    validation.mismatch_count > 0
-      ? `<span class="data-warning">Officiel stilling og beregnet udvikling afviger i ${validation.mismatch_count} felter.</span>`
-      : `<span>Officiel stilling og beregnet udvikling stemmer overens.</span>`;
-  els.dataMeta.innerHTML = `
-    ${connection}
-    <span>Senest opdateret: ${escapeHtml(exported)}</span>
-    <span>${seasons} sæsoner</span>
-    ${warnings}
-  `;
+
+  els.connectionStatus.textContent = navigator.onLine ? "Online" : "Offline - viser gemte data";
+  els.connectionStatus.className = `status-pill ${navigator.onLine ? "data-online" : "data-offline"}`;
+  els.updatedStatus.textContent = `Senest opdateret: ${exported}`;
+  els.updatedStatus.className = "status-pill";
+
+  const hasWarning = validation.mismatch_count > 0;
+  els.validationMeta.className = `validation-meta ${hasWarning ? "data-warning" : "data-ok"}`;
+  els.validationMeta.textContent = hasWarning
+    ? `Officiel stilling og beregnet udvikling afviger i ${validation.mismatch_count} felter.`
+    : "Officiel stilling og beregnet udvikling stemmer overens.";
 }
 
 function renderStandings() {
   const rows = state.poolData.source_standings;
-  els.ruleLabel.textContent = ruleLabel(state.poolData.rule_profile);
   els.standingsBody.innerHTML = rows
     .map(
       (row) => `
@@ -569,12 +566,6 @@ function poolWeight(pool) {
 
 function safeFilename(value) {
   return value.replace(/[^a-zA-Z0-9_-]/g, "_");
-}
-
-function ruleLabel(rule) {
-  if (rule === "dt_2025_volleyligaen") return "3-2 giver 2/1";
-  if (rule === "dt_2025_division") return "3-2 giver 3/1";
-  return rule || "";
 }
 
 function shortTeam(team) {
