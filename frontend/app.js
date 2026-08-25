@@ -187,10 +187,11 @@ function bindEvents() {
 function renderGenderButtons(genders) {
   const row = document.createElement("div");
   row.className = "segment-row";
-  for (const gender of genders) {
+  const sortedGenders = [...genders].sort((a, b) => genderLabel(a).localeCompare(genderLabel(b), "da"));
+  for (const gender of sortedGenders) {
     const button = document.createElement("button");
     button.type = "button";
-    button.textContent = gender === "Mand" ? "Herrer" : gender === "Kvinde" ? "Kvinder" : gender;
+    button.textContent = genderLabel(gender);
     button.classList.toggle("active", gender === state.selectedGender);
     button.addEventListener("click", async () => {
       state.selectedGender = gender;
@@ -277,12 +278,12 @@ function renderStandings() {
         <tr>
           <td>${row.rank}</td>
           <td>${escapeHtml(row.team_name)}</td>
+          <td>${row.points}</td>
           <td>${row.games_played}</td>
           <td>${row.games_won}</td>
           <td>${row.games_lost}</td>
           <td>${row.sets_won}-${row.sets_lost}</td>
           <td>${row.balls_won}-${row.balls_lost}</td>
-          <td><strong>${row.points}</strong></td>
         </tr>
       `,
     )
@@ -634,6 +635,10 @@ function safeFilename(value) {
 
 function shortTeam(team) {
   return teamAbbreviations.reduce((name, [from, to]) => name.replace(from, to), team).trim();
+}
+
+function genderLabel(gender) {
+  return gender === "Mand" ? "Herrer" : gender === "Kvinde" ? "Kvinder" : gender;
 }
 
 function matrixClass(value) {

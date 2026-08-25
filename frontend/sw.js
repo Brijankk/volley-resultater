@@ -1,4 +1,4 @@
-const APP_CACHE = "volley-app-v12";
+const APP_CACHE = "volley-app-v14";
 const DATA_CACHE = "volley-data-v1";
 const FRONTEND_ROOT = new URL("./", self.location.href).pathname;
 const DATA_ROOT = new URL("../data/json/", self.location.href).pathname;
@@ -49,18 +49,23 @@ self.addEventListener("fetch", (event) => {
   }
 
   if (url.pathname.startsWith(FRONTEND_ROOT)) {
-    event.respondWith(cacheFirst(request));
+    event.respondWith(appShellNetworkFirst(request));
   }
 });
 
-async function cacheFirst(request) {
-  const cached = await caches.match(request);
-  if (cached) return cached;
-
-  const response = await fetch(request);
+async function appShellNetworkFirst(request) {
   const cache = await caches.open(APP_CACHE);
-  cache.put(request, response.clone());
-  return response;
+  try {
+    const response = await fetch(request);
+    if (response.ok) {
+      cache.put(request, response.clone());
+    }
+    return response;
+  } catch (error) {
+    const cached = await cache.match(request);
+    if (cached) return cached;
+    throw error;
+  }
 }
 
 async function networkFirst(request) {

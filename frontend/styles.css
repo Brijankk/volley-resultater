@@ -54,6 +54,18 @@ select {
   justify-content: flex-end;
 }
 
+.title-block {
+  flex: 1;
+  min-width: 0;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .eyebrow {
   margin: 0 0 4px;
   color: var(--accent);
@@ -98,6 +110,15 @@ h2 {
   border-color: rgba(182, 52, 70, 0.35);
   background: rgba(182, 52, 70, 0.1);
   color: var(--accent-2);
+}
+
+.app-version {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 750;
+  line-height: 1;
+  margin-bottom: 4px;
+  white-space: nowrap;
 }
 
 .install-button {
@@ -472,6 +493,10 @@ canvas {
   .topbar-actions {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .title-block {
+    width: 100%;
   }
 
   .selector-band,

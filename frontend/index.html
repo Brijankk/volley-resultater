@@ -11,15 +11,18 @@
       name="description"
       content="Se stillinger, sæsonudvikling og resultater for danske volleyballrækker."
     />
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css?v=1.0.1" />
+    <link rel="manifest" href="./manifest.webmanifest?v=1.0.1" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
   </head>
   <body>
     <main class="app-shell">
       <header class="topbar">
-        <div>
-          <p class="eyebrow">Volleyball Danmark</p>
+        <div class="title-block">
+          <div class="meta-row">
+            <p class="eyebrow">Volleyball Danmark</p>
+            <div class="app-version" aria-label="Version">v1.0.1</div>
+          </div>
           <h1>Resultater</h1>
         </div>
         <div class="topbar-actions">
@@ -62,12 +65,12 @@
                 <tr>
                   <th>#</th>
                   <th>Hold</th>
+                  <th>P</th>
                   <th>K</th>
                   <th>V</th>
                   <th>T</th>
                   <th>Sæt</th>
                   <th>Bolde</th>
-                  <th>P</th>
                 </tr>
               </thead>
               <tbody id="standingsBody"></tbody>
@@ -110,6 +113,6 @@
 
     </main>
 
-    <script src="./app.js" type="module"></script>
+    <script src="./app.js?v=1.0.1" type="module"></script>
   </body>
 </html>
