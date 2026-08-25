@@ -43,13 +43,16 @@ def validate_rankings(connection: sqlite3.Connection) -> list[RankingMismatch]:
     pools = connection.execute(
         """
         SELECT p.id AS pool_id, p.name AS pool_name, l.name AS league_name, l.division
+             , l.id AS league_id, l.season_id, l.gender, l.raekke_id, p.pulje_id
+             , s.value AS season_value, s.start_year AS season_start_year
         FROM pools p
         JOIN leagues l ON l.id = p.league_id
+        JOIN seasons s ON s.id = l.season_id
         ORDER BY l.season_id, l.gender, l.division, p.name
         """
     ).fetchall()
     for pool in pools:
-        rule_profile = rule_profile_for_division(pool["division"])
+        rule_profile = rule_profile_for_pool(pool)
         official = rows_by_team(
             connection,
             "source_standings",
@@ -134,7 +137,20 @@ def mismatch(
     )
 
 
-def rule_profile_for_division(division: str) -> str:
-    from .rules import rules_for_division
+def rule_profile_for_pool(pool: sqlite3.Row) -> str:
+    from .rules import RuleContext, rules_for_context
 
-    return rules_for_division(division).id
+    return rules_for_context(
+        RuleContext(
+            season_id=pool["season_id"],
+            season_value=pool["season_value"],
+            start_year=pool["season_start_year"],
+            gender=pool["gender"],
+            division=pool["division"],
+            league_id=pool["league_id"],
+            raekke_id=pool["raekke_id"],
+            pool_id=pool["pool_id"],
+            pool_name=pool["pool_name"],
+            pulje_id=pool["pulje_id"],
+        )
+    ).id

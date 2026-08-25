@@ -42,11 +42,16 @@ Use `--all-seasons` to scrape every season discovered from the search page. That
 
 Official standings from the website are stored as source truth.
 
-Derived standings and running-point charts use the 2025 Danmarksturneringen rule profiles from §13:
+Derived standings and running-point charts use rule profiles selected from
+`src/volleyball_resultater/rule_assignments.json`. Rule assignment can vary by
+season, division, league, or pool. If a future season has no exact assignment,
+the selector falls back to the latest previous matching season.
 
 - ranking: match points, set difference, ball difference, then head-to-head
-- Volleyligaen: 3-0 and 3-1 give 3/0 points; 3-2 gives 2/1 points
-- 1. and 2. division: 3-0 and 3-1 give 3/0 points; 3-2 gives 3/1 points
+- `five_set_2_1`: 3-0 and 3-1 give 3/0 points; 3-2 gives 2/1 points
+- `five_set_3_1`: 3-0 and 3-1 give 3/0 points; 3-2 gives 3/1 points
 
 Head-to-head is represented as the final unresolved tie-breaker; official source standings remain stored as source truth.
-Historical rule profiles are represented in code so older seasons can be handled later without changing the database shape.
+Historical rule profiles are represented in code so older seasons can be handled without changing the database shape.
+
+Open investigation: season 2021 still has rank-only validation differences in four tied pairs. The point totals, sets, and balls now match, so the remaining issue is likely that 2021 used different ranking criteria or tie-breakers than the current ordering.

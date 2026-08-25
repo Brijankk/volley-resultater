@@ -1,21 +1,13 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
-      "mismatch_count": 18,
-      "affected_teams": 4,
-      "affected_fields": [
-        "balls_lost",
-        "balls_won",
-        "games_lost",
-        "games_played",
-        "games_won",
-        "points",
-        "sets_lost",
-        "sets_won"
-      ]
+      "mismatch_count": 0,
+      "affected_teams": 0,
+      "affected_fields": []
     }
   },
   "pool": {
@@ -23,7 +15,13 @@
     "league_id": "2025:men:2-division",
     "name": "Øst",
     "pulje_id": 3927,
-    "division": "2. Division"
+    "season_id": "2025",
+    "gender": "Mand",
+    "division": "2. Division",
+    "league_name": "2. Division Herrer",
+    "raekke_id": 2251,
+    "season_value": "2025",
+    "season_start_year": 2025
   },
   "source_standings": [
     {
@@ -160,35 +158,35 @@
   "computed_standings": [
     {
       "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "KSV",
-      "games_played": 17,
-      "games_won": 14,
+      "games_played": 18,
+      "games_won": 15,
       "games_lost": 3,
-      "sets_won": 46,
+      "sets_won": 49,
       "sets_lost": 27,
-      "balls_won": 1638,
+      "balls_won": 1713,
       "balls_lost": 1534,
+      "points": 47
+    },
+    {
+      "pool_id": "2025:men:2-division:pulje-3927",
+      "rule_profile": "five_set_3_1",
+      "rank": 2,
+      "team_name": "RS Rødovre",
+      "games_played": 18,
+      "games_won": 14,
+      "games_lost": 4,
+      "sets_won": 47,
+      "sets_lost": 28,
+      "balls_won": 1682,
+      "balls_lost": 1525,
       "points": 44
     },
     {
       "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
-      "rank": 2,
-      "team_name": "RS Rødovre",
-      "games_played": 17,
-      "games_won": 13,
-      "games_lost": 4,
-      "sets_won": 44,
-      "sets_lost": 28,
-      "balls_won": 1607,
-      "balls_lost": 1525,
-      "points": 41
-    },
-    {
-      "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "VK Vestsjælland.2",
       "games_played": 18,
@@ -202,21 +200,21 @@
     },
     {
       "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "Himmelev VK",
-      "games_played": 17,
+      "games_played": 18,
       "games_won": 9,
-      "games_lost": 8,
+      "games_lost": 9,
       "sets_won": 39,
-      "sets_lost": 34,
+      "sets_lost": 37,
       "balls_won": 1572,
-      "balls_lost": 1545,
+      "balls_lost": 1620,
       "points": 32
     },
     {
       "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "VK Holbæk",
       "games_played": 18,
@@ -230,7 +228,7 @@
     },
     {
       "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "KV 61",
       "games_played": 18,
@@ -244,7 +242,7 @@
     },
     {
       "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "Gentofte Volley Wildcard",
       "games_played": 18,
@@ -258,7 +256,7 @@
     },
     {
       "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "VLI.2",
       "games_played": 18,
@@ -272,7 +270,7 @@
     },
     {
       "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "Hvidovre VK.3",
       "games_played": 18,
@@ -286,16 +284,16 @@
     },
     {
       "pool_id": "2025:men:2-division:pulje-3927",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 10,
       "team_name": "Amager Volley.3",
-      "games_played": 17,
+      "games_played": 18,
       "games_won": 5,
-      "games_lost": 12,
+      "games_lost": 13,
       "sets_won": 28,
-      "sets_lost": 40,
+      "sets_lost": 43,
       "balls_won": 1465,
-      "balls_lost": 1526,
+      "balls_lost": 1601,
       "points": 18
     }
   ],
@@ -310,7 +308,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72269,
@@ -322,7 +321,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72271,
@@ -334,7 +334,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72268,
@@ -346,7 +347,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72273,
@@ -358,7 +360,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72275,
@@ -370,7 +373,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72274,
@@ -382,7 +386,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72277,
@@ -394,7 +399,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72276,
@@ -406,7 +412,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72272,
@@ -418,7 +425,8 @@
       "venue": "Rødovrehallen 1 - Hal 1 (LB)",
       "court": "",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72278,
@@ -430,7 +438,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72282,
@@ -442,7 +451,8 @@
       "venue": "Himmelev Gym.",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72279,
@@ -454,7 +464,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72280,
@@ -466,7 +477,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72285,
@@ -478,7 +490,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72283,
@@ -490,7 +503,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72284,
@@ -502,7 +516,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72287,
@@ -514,7 +529,8 @@
       "venue": "Rødovrehallen 1 - Hal 1 (LB)",
       "court": "",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72281,
@@ -526,7 +542,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72286,
@@ -538,7 +555,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72290,
@@ -550,7 +568,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72292,
@@ -562,7 +581,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72288,
@@ -574,7 +594,8 @@
       "venue": "Himmelev Gym.",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72289,
@@ -586,7 +607,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72293,
@@ -598,7 +620,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72297,
@@ -610,7 +633,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72295,
@@ -622,7 +646,8 @@
       "venue": "Rødovrehallen 1 - Hal 1 (LB)",
       "court": "",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72294,
@@ -634,7 +659,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72296,
@@ -646,7 +672,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72300,
@@ -658,7 +685,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72302,
@@ -670,7 +698,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72301,
@@ -682,7 +711,8 @@
       "venue": "Rødovrehallen 1 - Hal 1 (LB)",
       "court": "",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72299,
@@ -694,7 +724,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72298,
@@ -706,7 +737,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72324,
@@ -718,7 +750,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72307,
@@ -730,7 +763,8 @@
       "venue": "Rødovrehallen 4 - Hal 2 (LB)",
       "court": "",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72291,
@@ -742,7 +776,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72306,
@@ -754,7 +789,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72304,
@@ -766,7 +802,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72303,
@@ -778,7 +815,8 @@
       "venue": "Himmelev Gym.",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72305,
@@ -790,7 +828,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72312,
@@ -802,7 +841,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72311,
@@ -814,7 +854,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72308,
@@ -826,7 +867,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72309,
@@ -838,7 +880,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72314,
@@ -850,7 +893,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72316,
@@ -862,7 +906,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72313,
@@ -874,7 +919,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72317,
@@ -886,7 +932,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72319,
@@ -898,7 +945,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72318,
@@ -910,7 +958,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72321,
@@ -922,7 +971,8 @@
       "venue": "Himmelev Gym.",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72322,
@@ -934,7 +984,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72323,
@@ -946,7 +997,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72327,
@@ -958,7 +1010,8 @@
       "venue": "Rødovrehallen 1 - Hal 1 (LB)",
       "court": "",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72325,
@@ -970,7 +1023,8 @@
       "venue": "Roskilde Gym.",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72315,
@@ -982,7 +1036,8 @@
       "venue": "Rødovrehallen 1 - Hal 1 (LB)",
       "court": "",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72331,
@@ -994,7 +1049,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72328,
@@ -1006,7 +1062,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72330,
@@ -1018,7 +1075,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72332,
@@ -1030,7 +1088,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72329,
@@ -1042,7 +1101,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72326,
@@ -1054,7 +1114,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72336,
@@ -1066,7 +1127,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72333,
@@ -1078,7 +1140,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72337,
@@ -1090,7 +1153,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72334,
@@ -1102,7 +1166,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72335,
@@ -1114,7 +1179,8 @@
       "venue": "Himmelev Gym.",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72342,
@@ -1126,7 +1192,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72338,
@@ -1137,8 +1204,9 @@
       "away_team": "Amager Volley.3",
       "venue": "Idrætshuset",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "result_note": "UHT"
     },
     {
       "kamp_id": 72341,
@@ -1150,7 +1218,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72340,
@@ -1162,7 +1231,8 @@
       "venue": "Himmelev Gym.",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72339,
@@ -1174,7 +1244,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72310,
@@ -1186,7 +1257,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72320,
@@ -1198,7 +1270,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72344,
@@ -1210,7 +1283,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72345,
@@ -1221,8 +1295,9 @@
       "away_team": "Himmelev VK",
       "venue": "Rødovrehallen 1 - Hal 1 (LB)",
       "court": "",
-      "result_home_sets": null,
-      "result_away_sets": null
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "result_note": "UHT"
     },
     {
       "kamp_id": 72347,
@@ -1234,7 +1309,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72346,
@@ -1246,7 +1322,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72343,
@@ -1258,7 +1335,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72350,
@@ -1270,7 +1348,8 @@
       "venue": "Rødovrehallen 4 - Hal 2 (LB)",
       "court": "",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 72352,
@@ -1282,7 +1361,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72351,
@@ -1294,7 +1374,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72349,
@@ -1306,7 +1387,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72348,
@@ -1318,7 +1400,8 @@
       "venue": "Himmelev Gym.",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72355,
@@ -1330,7 +1413,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72356,
@@ -1342,7 +1426,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 72353,
@@ -1354,7 +1439,8 @@
       "venue": "Himmelev Gym.",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 72354,
@@ -1366,7 +1452,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 72357,
@@ -1378,7 +1465,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4183,6 +4271,46 @@
       "away_set_won": 1
     },
     {
+      "kamp_id": 72338,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 0,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 72338,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 0,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 72338,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 0,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 72338,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 72338,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
       "kamp_id": 72339,
       "set_number": 1,
       "home_points": 22,
@@ -4416,6 +4544,46 @@
     },
     {
       "kamp_id": 72344,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 72345,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 0,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 72345,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 0,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 72345,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 0,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 72345,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 72345,
       "set_number": 5,
       "home_points": null,
       "away_points": null,
@@ -4903,7 +5071,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "Amager Volley.3",
@@ -6080,6 +6248,22 @@
       "kamp_id": 72342
     },
     {
+      "team": "KSV",
+      "date": "2026-03-15T10:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 37,
+      "kamp_id": 72338
+    },
+    {
+      "team": "Amager Volley.3",
+      "date": "2026-03-15T10:00:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 14,
+      "kamp_id": 72338
+    },
+    {
       "team": "VK Vestsjælland.2",
       "date": "2026-03-15T12:00:00",
       "game_number": 15,
@@ -6130,9 +6314,9 @@
     {
       "team": "KSV",
       "date": "2026-03-22T14:00:00",
-      "game_number": 14,
+      "game_number": 15,
       "points": 3,
-      "cumulative_points": 37,
+      "cumulative_points": 40,
       "kamp_id": 72310
     },
     {
@@ -6170,10 +6354,26 @@
     {
       "team": "KSV",
       "date": "2026-03-29T10:00:00",
-      "game_number": 15,
+      "game_number": 16,
+      "points": 3,
+      "cumulative_points": 43,
+      "kamp_id": 72344
+    },
+    {
+      "team": "RS Rødovre",
+      "date": "2026-03-29T13:00:00",
+      "game_number": 16,
       "points": 3,
       "cumulative_points": 40,
-      "kamp_id": 72344
+      "kamp_id": 72345
+    },
+    {
+      "team": "Himmelev VK",
+      "date": "2026-03-29T13:00:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 28,
+      "kamp_id": 72345
     },
     {
       "team": "VLI.2",
@@ -6210,7 +6410,7 @@
     {
       "team": "Amager Volley.3",
       "date": "2026-03-29T16:00:00",
-      "game_number": 15,
+      "game_number": 16,
       "points": 0,
       "cumulative_points": 14,
       "kamp_id": 72343
@@ -6226,9 +6426,9 @@
     {
       "team": "RS Rødovre",
       "date": "2026-04-08T20:00:00",
-      "game_number": 16,
+      "game_number": 17,
       "points": 3,
-      "cumulative_points": 40,
+      "cumulative_points": 43,
       "kamp_id": 72350
     },
     {
@@ -6274,9 +6474,9 @@
     {
       "team": "KSV",
       "date": "2026-04-12T10:00:00",
-      "game_number": 16,
+      "game_number": 17,
       "points": 1,
-      "cumulative_points": 41,
+      "cumulative_points": 44,
       "kamp_id": 72349
     },
     {
@@ -6290,7 +6490,7 @@
     {
       "team": "Himmelev VK",
       "date": "2026-04-12T14:00:00",
-      "game_number": 16,
+      "game_number": 17,
       "points": 1,
       "cumulative_points": 29,
       "kamp_id": 72348
@@ -6298,7 +6498,7 @@
     {
       "team": "Amager Volley.3",
       "date": "2026-04-12T14:00:00",
-      "game_number": 16,
+      "game_number": 17,
       "points": 3,
       "cumulative_points": 17,
       "kamp_id": 72348
@@ -6322,7 +6522,7 @@
     {
       "team": "Amager Volley.3",
       "date": "2026-04-19T10:00:00",
-      "game_number": 17,
+      "game_number": 18,
       "points": 1,
       "cumulative_points": 18,
       "kamp_id": 72356
@@ -6338,7 +6538,7 @@
     {
       "team": "Himmelev VK",
       "date": "2026-04-19T14:00:00",
-      "game_number": 17,
+      "game_number": 18,
       "points": 3,
       "cumulative_points": 32,
       "kamp_id": 72353
@@ -6354,17 +6554,17 @@
     {
       "team": "KSV",
       "date": "2026-04-19T14:00:00",
-      "game_number": 17,
+      "game_number": 18,
       "points": 3,
-      "cumulative_points": 44,
+      "cumulative_points": 47,
       "kamp_id": 72354
     },
     {
       "team": "RS Rødovre",
       "date": "2026-04-19T14:00:00",
-      "game_number": 17,
+      "game_number": 18,
       "points": 1,
-      "cumulative_points": 41,
+      "cumulative_points": 44,
       "kamp_id": 72354
     },
     {
@@ -6434,7 +6634,7 @@
       "VLI.2": "3-1"
     },
     "KSV": {
-      "Amager Volley.3": null,
+      "Amager Volley.3": "3-0",
       "Gentofte Volley Wildcard": "3-1",
       "Himmelev VK": "2-3",
       "Hvidovre VK.3": "3-1",
@@ -6460,7 +6660,7 @@
     "RS Rødovre": {
       "Amager Volley.3": "3-1",
       "Gentofte Volley Wildcard": "3-1",
-      "Himmelev VK": null,
+      "Himmelev VK": "3-0",
       "Hvidovre VK.3": "3-2",
       "KSV": "1-3",
       "KV 61": "3-0",

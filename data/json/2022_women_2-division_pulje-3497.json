@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2022:women:2-division",
     "name": "Pulje 2",
     "pulje_id": 3497,
-    "division": "2. Division"
+    "season_id": "2022",
+    "gender": "Kvinde",
+    "division": "2. Division",
+    "league_name": "2. Division Kvinder",
+    "raekke_id": 1862,
+    "season_value": "2022",
+    "season_start_year": 2022
   },
   "source_standings": [
     {
@@ -112,7 +119,7 @@
   "computed_standings": [
     {
       "pool_id": "2022:women:2-division:pulje-3497",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "Holstebro KFUM",
       "games_played": 18,
@@ -126,7 +133,7 @@
     },
     {
       "pool_id": "2022:women:2-division:pulje-3497",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "VK Raptus",
       "games_played": 18,
@@ -140,7 +147,7 @@
     },
     {
       "pool_id": "2022:women:2-division:pulje-3497",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "Hjerm FIF",
       "games_played": 18,
@@ -154,7 +161,7 @@
     },
     {
       "pool_id": "2022:women:2-division:pulje-3497",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "ASV Aarhus.3",
       "games_played": 18,
@@ -168,7 +175,7 @@
     },
     {
       "pool_id": "2022:women:2-division:pulje-3497",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Aalborg Volleyball.2",
       "games_played": 18,
@@ -182,7 +189,7 @@
     },
     {
       "pool_id": "2022:women:2-division:pulje-3497",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "Randers VK",
       "games_played": 18,
@@ -196,7 +203,7 @@
     },
     {
       "pool_id": "2022:women:2-division:pulje-3497",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "VK Shima",
       "games_played": 18,
@@ -220,7 +227,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57366,
@@ -232,7 +240,8 @@
       "venue": "Skansen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57368,
@@ -244,7 +253,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "2",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57373,
@@ -256,7 +266,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57370,
@@ -268,7 +279,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57371,
@@ -280,7 +292,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57377,
@@ -292,7 +305,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57376,
@@ -304,7 +318,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57379,
@@ -316,7 +331,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57374,
@@ -328,7 +344,8 @@
       "venue": "Skansen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57380,
@@ -340,7 +357,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57381,
@@ -352,7 +370,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57382,
@@ -364,7 +383,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57383,
@@ -376,7 +396,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57387,
@@ -388,7 +409,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57388,
@@ -400,7 +422,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57386,
@@ -412,7 +435,8 @@
       "venue": "Skansen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57390,
@@ -424,7 +448,8 @@
       "venue": "Ceres Park hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57391,
@@ -436,7 +461,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57392,
@@ -448,7 +474,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57399,
@@ -460,7 +487,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57396,
@@ -472,7 +500,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57395,
@@ -484,7 +513,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57394,
@@ -496,7 +526,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57401,
@@ -508,7 +539,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57398,
@@ -520,7 +552,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57402,
@@ -532,7 +565,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57404,
@@ -544,7 +578,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57405,
@@ -556,7 +591,8 @@
       "venue": "Randers Real",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57407,
@@ -568,7 +604,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57408,
@@ -580,7 +617,8 @@
       "venue": "Skansen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57409,
@@ -592,7 +630,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57411,
@@ -604,7 +643,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57412,
@@ -616,7 +656,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57410,
@@ -628,7 +669,8 @@
       "venue": "Skansen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57415,
@@ -640,7 +682,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57414,
@@ -652,7 +695,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57416,
@@ -664,7 +708,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57419,
@@ -676,7 +721,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57418,
@@ -688,7 +734,8 @@
       "venue": "Skansen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57422,
@@ -700,7 +747,8 @@
       "venue": "Skansen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57423,
@@ -712,7 +760,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57424,
@@ -724,7 +773,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57429,
@@ -736,7 +786,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57426,
@@ -748,7 +799,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57427,
@@ -760,7 +812,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57447,
@@ -772,7 +825,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57384,
@@ -784,7 +838,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57432,
@@ -796,7 +851,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "2",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57433,
@@ -808,7 +864,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57430,
@@ -820,7 +877,8 @@
       "venue": "Skansen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57420,
@@ -832,7 +890,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57436,
@@ -844,7 +903,8 @@
       "venue": "Randers Real",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57435,
@@ -856,7 +916,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57437,
@@ -868,7 +929,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57438,
@@ -880,7 +942,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57439,
@@ -892,7 +955,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "2",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57440,
@@ -904,7 +968,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57443,
@@ -916,7 +981,8 @@
       "venue": "Ceres Park hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57444,
@@ -928,7 +994,8 @@
       "venue": "Randers Real",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57442,
@@ -940,7 +1007,8 @@
       "venue": "Skansen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57446,
@@ -952,7 +1020,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57448,
@@ -964,7 +1033,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -3489,7 +3559,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "ASV Aarhus.3",

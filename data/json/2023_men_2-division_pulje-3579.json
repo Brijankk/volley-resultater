@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2023:men:2-division",
     "name": "Vest",
     "pulje_id": 3579,
-    "division": "2. Division"
+    "season_id": "2023",
+    "gender": "Mand",
+    "division": "2. Division",
+    "league_name": "2. Division Herrer",
+    "raekke_id": 1926,
+    "season_value": "2023",
+    "season_start_year": 2023
   },
   "source_standings": [
     {
@@ -151,7 +158,7 @@
   "computed_standings": [
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "Hornsyld IF",
       "games_played": 18,
@@ -165,7 +172,7 @@
     },
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "Aabenraa I&G",
       "games_played": 18,
@@ -179,7 +186,7 @@
     },
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "DHV Odense.2",
       "games_played": 18,
@@ -193,7 +200,7 @@
     },
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "SGF Vejle",
       "games_played": 18,
@@ -207,7 +214,7 @@
     },
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "IF Lyseng 2",
       "games_played": 18,
@@ -221,7 +228,7 @@
     },
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "VK Vendsyssel",
       "games_played": 18,
@@ -235,7 +242,7 @@
     },
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "Midtfyns VK",
       "games_played": 18,
@@ -249,7 +256,7 @@
     },
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "ASV Aarhus.3",
       "games_played": 18,
@@ -263,7 +270,7 @@
     },
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "Aalborg Volleyball.3",
       "games_played": 18,
@@ -277,7 +284,7 @@
     },
     {
       "pool_id": "2023:men:2-division:pulje-3579",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 10,
       "team_name": "Nordenskov UIF.2",
       "games_played": 18,
@@ -301,7 +308,8 @@
       "venue": "Marselisborg Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61195,
@@ -313,7 +321,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61196,
@@ -325,7 +334,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61194,
@@ -337,7 +347,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61192,
@@ -349,7 +360,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61199,
@@ -361,7 +373,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61197,
@@ -373,7 +386,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61201,
@@ -385,7 +399,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61198,
@@ -397,7 +412,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61200,
@@ -409,7 +425,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61203,
@@ -421,7 +438,8 @@
       "venue": "Ceres Park hal 3",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61204,
@@ -433,7 +451,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61202,
@@ -445,7 +464,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61205,
@@ -457,7 +477,8 @@
       "venue": "Gigantium Idrætshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61206,
@@ -469,7 +490,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61209,
@@ -481,7 +503,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61210,
@@ -493,7 +516,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61211,
@@ -505,7 +529,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61208,
@@ -517,7 +542,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61207,
@@ -529,7 +555,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61212,
@@ -541,7 +568,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61214,
@@ -553,7 +581,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61216,
@@ -565,7 +594,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61215,
@@ -577,7 +607,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61213,
@@ -589,7 +620,8 @@
       "venue": "Hjallesehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61221,
@@ -601,7 +633,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61219,
@@ -613,7 +646,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61218,
@@ -625,7 +659,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61220,
@@ -637,7 +672,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61217,
@@ -649,7 +685,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61224,
@@ -661,7 +698,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61226,
@@ -673,7 +711,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61222,
@@ -685,7 +724,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61223,
@@ -697,7 +737,8 @@
       "venue": "Gigantium Idrætshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61225,
@@ -709,7 +750,8 @@
       "venue": "Hjallesehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61228,
@@ -721,7 +763,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61230,
@@ -733,7 +776,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61227,
@@ -745,7 +789,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61231,
@@ -757,7 +802,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61229,
@@ -769,7 +815,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61233,
@@ -781,7 +828,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61234,
@@ -793,7 +841,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61236,
@@ -805,7 +854,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61232,
@@ -817,7 +867,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61235,
@@ -829,7 +880,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61253,
@@ -841,7 +893,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61238,
@@ -853,7 +906,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61239,
@@ -865,7 +919,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61240,
@@ -877,7 +932,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61241,
@@ -889,7 +945,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61237,
@@ -901,7 +958,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61245,
@@ -913,7 +971,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61246,
@@ -925,7 +984,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61243,
@@ -937,7 +997,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61244,
@@ -949,7 +1010,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61242,
@@ -961,7 +1023,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61250,
@@ -973,7 +1036,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61249,
@@ -985,7 +1049,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61251,
@@ -997,7 +1062,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61248,
@@ -1009,7 +1075,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61252,
@@ -1021,7 +1088,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61254,
@@ -1033,7 +1101,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61255,
@@ -1045,7 +1114,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61256,
@@ -1057,7 +1127,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61258,
@@ -1069,7 +1140,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61260,
@@ -1081,7 +1153,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "2",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61259,
@@ -1093,7 +1166,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61261,
@@ -1105,7 +1179,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61257,
@@ -1117,7 +1192,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61266,
@@ -1129,7 +1205,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61265,
@@ -1141,7 +1218,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "2",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61263,
@@ -1153,7 +1231,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61262,
@@ -1165,7 +1244,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61271,
@@ -1177,7 +1257,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61268,
@@ -1189,7 +1270,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61269,
@@ -1201,7 +1283,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61270,
@@ -1213,7 +1296,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61267,
@@ -1225,7 +1309,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61272,
@@ -1237,7 +1322,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61274,
@@ -1249,7 +1335,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61275,
@@ -1261,7 +1348,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61276,
@@ -1273,7 +1361,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61264,
@@ -1285,7 +1374,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61247,
@@ -1297,7 +1387,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61273,
@@ -1309,7 +1400,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61279,
@@ -1321,7 +1413,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61280,
@@ -1333,7 +1426,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61278,
@@ -1345,7 +1439,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61277,
@@ -1357,7 +1452,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61281,
@@ -1369,7 +1465,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4974,7 +5071,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "ASV Aarhus.3",

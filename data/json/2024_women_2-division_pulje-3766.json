@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2024:women:2-division",
     "name": "Vest A",
     "pulje_id": 3766,
-    "division": "2. Division"
+    "season_id": "2024",
+    "gender": "Kvinde",
+    "division": "2. Division",
+    "league_name": "2. Division Kvinder",
+    "raekke_id": 2083,
+    "season_value": "2024",
+    "season_start_year": 2024
   },
   "source_standings": [
     {
@@ -138,7 +145,7 @@
   "computed_standings": [
     {
       "pool_id": "2024:women:2-division:pulje-3766",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "DHV Odense.2",
       "games_played": 16,
@@ -152,7 +159,7 @@
     },
     {
       "pool_id": "2024:women:2-division:pulje-3766",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "DHV Odense Wildcard",
       "games_played": 16,
@@ -166,7 +173,7 @@
     },
     {
       "pool_id": "2024:women:2-division:pulje-3766",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "Kolding VK",
       "games_played": 16,
@@ -180,7 +187,7 @@
     },
     {
       "pool_id": "2024:women:2-division:pulje-3766",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "DSIO Odense",
       "games_played": 16,
@@ -194,7 +201,7 @@
     },
     {
       "pool_id": "2024:women:2-division:pulje-3766",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Hornsyld IF",
       "games_played": 16,
@@ -208,7 +215,7 @@
     },
     {
       "pool_id": "2024:women:2-division:pulje-3766",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "Odense Volleyball 2",
       "games_played": 16,
@@ -222,7 +229,7 @@
     },
     {
       "pool_id": "2024:women:2-division:pulje-3766",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "Middelfart VK",
       "games_played": 16,
@@ -236,7 +243,7 @@
     },
     {
       "pool_id": "2024:women:2-division:pulje-3766",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "Sønderborg VK",
       "games_played": 16,
@@ -250,7 +257,7 @@
     },
     {
       "pool_id": "2024:women:2-division:pulje-3766",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "UVS-Nordenskov",
       "games_played": 16,
@@ -274,7 +281,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66175,
@@ -286,7 +294,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66176,
@@ -298,7 +307,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66177,
@@ -310,7 +320,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66178,
@@ -322,7 +333,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66179,
@@ -334,7 +346,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66181,
@@ -346,7 +359,8 @@
       "venue": "Alssund Gymnasiet, Sønderborg",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66185,
@@ -358,7 +372,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66184,
@@ -370,7 +385,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66183,
@@ -382,7 +398,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66182,
@@ -394,7 +411,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66190,
@@ -406,7 +424,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66188,
@@ -418,7 +437,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66187,
@@ -430,7 +450,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66189,
@@ -442,7 +463,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66173,
@@ -454,7 +476,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66201,
@@ -466,7 +489,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66200,
@@ -478,7 +502,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66197,
@@ -490,7 +515,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66198,
@@ -502,7 +528,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66206,
@@ -514,7 +541,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66204,
@@ -526,7 +554,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66203,
@@ -538,7 +567,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66202,
@@ -550,7 +580,8 @@
       "venue": "Alssund Gymnasiet, Sønderborg",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66209,
@@ -562,7 +593,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66208,
@@ -574,7 +606,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66207,
@@ -586,7 +619,8 @@
       "venue": "Hjallesehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66210,
@@ -598,7 +632,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66215,
@@ -610,7 +645,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66212,
@@ -622,7 +658,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66213,
@@ -634,7 +671,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66214,
@@ -646,7 +684,8 @@
       "venue": "Alssund Gymnasiet, Sønderborg",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66219,
@@ -658,7 +697,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66218,
@@ -670,7 +710,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66220,
@@ -682,7 +723,8 @@
       "venue": "Alssund Gymnasiet, Sønderborg",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66221,
@@ -694,7 +736,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66228,
@@ -706,7 +749,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66227,
@@ -718,7 +762,8 @@
       "venue": "Helle Hallen Hal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66230,
@@ -730,7 +775,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66233,
@@ -742,7 +788,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66235,
@@ -754,7 +801,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66234,
@@ -766,7 +814,8 @@
       "venue": "Alssund Gymnasiet, Sønderborg",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66229,
@@ -778,7 +827,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66249,
@@ -790,7 +840,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66247,
@@ -802,7 +853,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66251,
@@ -814,7 +866,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66248,
@@ -826,7 +879,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66232,
@@ -838,7 +892,8 @@
       "venue": "Dalumhallen 2",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66194,
@@ -850,7 +905,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66192,
@@ -862,7 +918,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66196,
@@ -874,7 +931,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66223,
@@ -886,7 +944,8 @@
       "venue": "Dalumhallen",
       "court": "2",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66222,
@@ -898,7 +957,8 @@
       "venue": "Dalumhallen",
       "court": "2",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66195,
@@ -910,7 +970,8 @@
       "venue": "Alssund Gymnasiet, Sønderborg",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66224,
@@ -922,7 +983,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66226,
@@ -934,7 +996,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66245,
@@ -946,7 +1009,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66242,
@@ -958,7 +1022,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66246,
@@ -970,7 +1035,8 @@
       "venue": "Alssund Gymnasiet, Sønderborg",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66243,
@@ -982,7 +1048,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66259,
@@ -994,7 +1061,8 @@
       "venue": "Strib Fritids & Aktivitetscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66258,
@@ -1006,7 +1074,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66257,
@@ -1018,7 +1087,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66260,
@@ -1030,7 +1100,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66252,
@@ -1042,7 +1113,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66255,
@@ -1054,7 +1126,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66254,
@@ -1066,7 +1139,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66253,
@@ -1078,7 +1152,8 @@
       "venue": "Alssund Gymnasiet, Sønderborg",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66241,
@@ -1090,7 +1165,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66240,
@@ -1102,7 +1178,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66237,
@@ -1114,7 +1191,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66239,
@@ -1126,7 +1204,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4011,7 +4090,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "DHV Odense Wildcard",

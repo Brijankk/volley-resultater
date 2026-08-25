@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_2_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2025:men:volleyligaen",
     "name": "Række 1",
     "pulje_id": 3923,
-    "division": "Volleyligaen"
+    "season_id": "2025",
+    "gender": "Mand",
+    "division": "Volleyligaen",
+    "league_name": "Volleyligaen Herrer",
+    "raekke_id": 2248,
+    "season_value": "2025",
+    "season_start_year": 2025
   },
   "source_standings": [
     {
@@ -138,7 +145,7 @@
   "computed_standings": [
     {
       "pool_id": "2025:men:volleyligaen:pulje-3923",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 1,
       "team_name": "Middelfart VK",
       "games_played": 16,
@@ -152,7 +159,7 @@
     },
     {
       "pool_id": "2025:men:volleyligaen:pulje-3923",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 2,
       "team_name": "ASV Elite",
       "games_played": 16,
@@ -166,7 +173,7 @@
     },
     {
       "pool_id": "2025:men:volleyligaen:pulje-3923",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 3,
       "team_name": "Odense Volleyball",
       "games_played": 16,
@@ -180,7 +187,7 @@
     },
     {
       "pool_id": "2025:men:volleyligaen:pulje-3923",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 4,
       "team_name": "Gentofte Volley",
       "games_played": 16,
@@ -194,7 +201,7 @@
     },
     {
       "pool_id": "2025:men:volleyligaen:pulje-3923",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 5,
       "team_name": "Nordenskov UIF",
       "games_played": 16,
@@ -208,7 +215,7 @@
     },
     {
       "pool_id": "2025:men:volleyligaen:pulje-3923",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 6,
       "team_name": "VK Vestsjælland",
       "games_played": 16,
@@ -222,7 +229,7 @@
     },
     {
       "pool_id": "2025:men:volleyligaen:pulje-3923",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 7,
       "team_name": "Ikast KFUM",
       "games_played": 16,
@@ -236,7 +243,7 @@
     },
     {
       "pool_id": "2025:men:volleyligaen:pulje-3923",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 8,
       "team_name": "Amager Volley",
       "games_played": 16,
@@ -250,7 +257,7 @@
     },
     {
       "pool_id": "2025:men:volleyligaen:pulje-3923",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 9,
       "team_name": "Hvidovre VK",
       "games_played": 16,
@@ -274,7 +281,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70724,
@@ -286,7 +294,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70722,
@@ -298,7 +307,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70725,
@@ -310,7 +320,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70727,
@@ -322,7 +333,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70730,
@@ -334,7 +346,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 70729,
@@ -346,7 +359,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 70733,
@@ -358,7 +372,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70735,
@@ -370,7 +385,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 70732,
@@ -382,7 +398,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70739,
@@ -394,7 +411,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70737,
@@ -406,7 +424,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70742,
@@ -418,7 +437,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70759,
@@ -430,7 +450,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70743,
@@ -442,7 +463,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70746,
@@ -454,7 +476,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70745,
@@ -466,7 +489,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70748,
@@ -478,7 +502,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70787,
@@ -490,7 +515,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70751,
@@ -502,7 +528,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70790,
@@ -514,7 +541,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70754,
@@ -526,7 +554,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70755,
@@ -538,7 +567,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70753,
@@ -550,7 +580,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70756,
@@ -562,7 +593,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70749,
@@ -574,7 +606,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70758,
@@ -586,7 +619,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70757,
@@ -598,7 +632,8 @@
       "venue": "Sportscenter Ikast Hal A",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70760,
@@ -610,7 +645,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70741,
@@ -622,7 +658,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70766,
@@ -634,7 +671,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70763,
@@ -646,7 +684,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70762,
@@ -658,7 +697,8 @@
       "venue": "Sportscenter Ikast Hal A",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70764,
@@ -670,7 +710,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70728,
@@ -682,7 +723,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70767,
@@ -694,7 +736,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70770,
@@ -706,7 +749,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70771,
@@ -718,7 +762,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70768,
@@ -730,7 +775,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70773,
@@ -742,7 +788,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70774,
@@ -754,7 +801,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70776,
@@ -766,7 +814,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70772,
@@ -778,7 +827,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70778,
@@ -790,7 +840,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70779,
@@ -802,7 +853,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70777,
@@ -814,7 +866,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70780,
@@ -826,7 +879,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70736,
@@ -838,7 +892,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70782,
@@ -850,7 +905,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70785,
@@ -862,7 +918,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70783,
@@ -874,7 +931,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 70784,
@@ -886,7 +944,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 70789,
@@ -898,7 +957,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70788,
@@ -910,7 +970,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70740,
@@ -922,7 +983,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70747,
@@ -934,7 +996,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70796,
@@ -946,7 +1009,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70794,
@@ -958,7 +1022,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70792,
@@ -970,7 +1035,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70800,
@@ -982,7 +1048,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70801,
@@ -994,7 +1061,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70798,
@@ -1006,7 +1074,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70799,
@@ -1018,7 +1087,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70795,
@@ -1030,7 +1100,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70804,
@@ -1042,7 +1113,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 70805,
@@ -1054,7 +1126,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70802,
@@ -1066,7 +1139,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 70806,
@@ -1078,7 +1152,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 70807,
@@ -1090,7 +1165,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70808,
@@ -1102,7 +1178,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70809,
@@ -1114,7 +1191,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 70810,
@@ -1126,7 +1204,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4011,7 +4090,7 @@
       "away_set_won": 1
     }
   ],
-  "rule_profile": "dt_2025_volleyligaen",
+  "rule_profile": "five_set_2_1",
   "cumulative_points": [
     {
       "team": "ASV Elite",

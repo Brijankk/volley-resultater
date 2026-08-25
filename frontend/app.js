@@ -1,5 +1,6 @@
 const DATA_ROOT = "../data/json";
-const DATA_CACHE = "volley-data-v1";
+const DATA_VERSION = "2026-08-25T120000";
+const DATA_CACHE = "volley-data-v5";
 
 const state = {
   metadata: null,
@@ -87,7 +88,7 @@ const els = {
 
 async function init() {
   try {
-    state.metadata = await fetchJson(`${DATA_ROOT}/leagues.json`);
+    state.metadata = await fetchJson(dataUrl(`${DATA_ROOT}/leagues.json`));
     initializeSelection();
     bindEvents();
     await loadSelectedPool();
@@ -239,7 +240,7 @@ async function loadSelectedPool() {
   if (!state.selectedPoolId) return;
   els.status.textContent = "Indlæser række";
   state.selectedPair = null;
-  state.poolData = await fetchJson(`${DATA_ROOT}/${safeFilename(state.selectedPoolId)}.json`);
+  state.poolData = await fetchJson(dataUrl(`${DATA_ROOT}/${safeFilename(state.selectedPoolId)}.json`));
   renderAll();
   els.status.textContent = "Ready";
 }
@@ -539,7 +540,7 @@ async function fetchJson(path) {
 
 async function prefetchAllPoolData() {
   if (!("caches" in window) || !state.metadata?.pools) return;
-  const paths = state.metadata.pools.map((pool) => `${DATA_ROOT}/${safeFilename(pool.id)}.json`);
+  const paths = state.metadata.pools.map((pool) => dataUrl(`${DATA_ROOT}/${safeFilename(pool.id)}.json`));
   for (const path of paths) {
     fetch(path)
       .then((response) => {
@@ -631,6 +632,10 @@ function poolWeight(pool) {
 
 function safeFilename(value) {
   return value.replace(/[^a-zA-Z0-9_-]/g, "_");
+}
+
+function dataUrl(path) {
+  return `${path}?v=${encodeURIComponent(DATA_VERSION)}`;
 }
 
 function shortTeam(team) {

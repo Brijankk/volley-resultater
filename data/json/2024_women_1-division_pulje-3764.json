@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2024:women:1-division",
     "name": "Vest",
     "pulje_id": 3764,
-    "division": "1. Division"
+    "season_id": "2024",
+    "gender": "Kvinde",
+    "division": "1. Division",
+    "league_name": "1. Division Kvinder",
+    "raekke_id": 2082,
+    "season_value": "2024",
+    "season_start_year": 2024
   },
   "source_standings": [
     {
@@ -151,7 +158,7 @@
   "computed_standings": [
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "DHV Odense",
       "games_played": 18,
@@ -165,7 +172,7 @@
     },
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "ASV Aarhus.2",
       "games_played": 18,
@@ -179,7 +186,7 @@
     },
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "Aalborg Volleyball",
       "games_played": 18,
@@ -193,7 +200,7 @@
     },
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "Volleyball Esbjerg",
       "games_played": 18,
@@ -207,7 +214,7 @@
     },
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Ikast KFUM.2",
       "games_played": 18,
@@ -221,7 +228,7 @@
     },
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "Odense Volleyball",
       "games_played": 18,
@@ -235,7 +242,7 @@
     },
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "IF Lyseng",
       "games_played": 18,
@@ -249,7 +256,7 @@
     },
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "SIK Viborg",
       "games_played": 18,
@@ -263,7 +270,7 @@
     },
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "Bedsted KFUM",
       "games_played": 18,
@@ -277,7 +284,7 @@
     },
     {
       "pool_id": "2024:women:1-division:pulje-3764",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 10,
       "team_name": "VK Raptus",
       "games_played": 18,
@@ -301,7 +308,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 65993,
@@ -313,7 +321,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 65994,
@@ -325,7 +334,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 65992,
@@ -337,7 +347,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 65996,
@@ -349,7 +360,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66001,
@@ -361,7 +373,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 65999,
@@ -373,7 +386,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66000,
@@ -385,7 +399,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 65998,
@@ -397,7 +412,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 65997,
@@ -409,7 +425,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66003,
@@ -421,7 +438,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66005,
@@ -433,7 +451,8 @@
       "venue": "UC-Syd",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66006,
@@ -445,7 +464,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66004,
@@ -457,7 +477,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66002,
@@ -469,7 +490,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66008,
@@ -481,7 +503,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66007,
@@ -493,7 +516,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66010,
@@ -505,7 +529,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66009,
@@ -517,7 +542,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66011,
@@ -529,7 +555,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66018,
@@ -541,7 +568,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66021,
@@ -553,7 +581,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66019,
@@ -565,7 +594,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66017,
@@ -577,7 +607,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66020,
@@ -589,7 +620,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66024,
@@ -601,7 +633,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66022,
@@ -613,7 +646,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66026,
@@ -625,7 +659,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66023,
@@ -637,7 +672,8 @@
       "venue": "UC-Syd",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66025,
@@ -649,7 +685,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66027,
@@ -661,7 +698,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66030,
@@ -673,7 +711,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66028,
@@ -685,7 +724,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66029,
@@ -697,7 +737,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66031,
@@ -709,7 +750,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66034,
@@ -721,7 +763,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66032,
@@ -733,7 +776,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66036,
@@ -745,7 +789,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66035,
@@ -757,7 +802,8 @@
       "venue": "UC-Syd",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66033,
@@ -769,7 +815,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66041,
@@ -781,7 +828,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66040,
@@ -793,7 +841,8 @@
       "venue": "Marselisborg Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66037,
@@ -805,7 +854,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66039,
@@ -817,7 +867,8 @@
       "venue": "UC-Syd",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66038,
@@ -829,7 +880,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66050,
@@ -841,7 +893,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66048,
@@ -853,7 +906,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66049,
@@ -865,7 +919,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66051,
@@ -877,7 +932,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66047,
@@ -889,7 +945,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66054,
@@ -901,7 +958,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66052,
@@ -913,7 +971,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66056,
@@ -925,7 +984,8 @@
       "venue": "UC-Syd",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66053,
@@ -937,7 +997,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66055,
@@ -949,7 +1010,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66067,
@@ -961,7 +1023,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66068,
@@ -973,7 +1036,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66071,
@@ -985,7 +1049,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66069,
@@ -997,7 +1062,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66015,
@@ -1009,7 +1075,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66070,
@@ -1021,7 +1088,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66012,
@@ -1033,7 +1101,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66014,
@@ -1045,7 +1114,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66016,
@@ -1057,7 +1127,8 @@
       "venue": "UC-Syd",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66013,
@@ -1069,7 +1140,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66044,
@@ -1081,7 +1153,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66042,
@@ -1093,7 +1166,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66043,
@@ -1105,7 +1179,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66046,
@@ -1117,7 +1192,8 @@
       "venue": "UC-Syd",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66045,
@@ -1129,7 +1205,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 66063,
@@ -1141,7 +1218,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66066,
@@ -1153,7 +1231,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66062,
@@ -1165,7 +1244,8 @@
       "venue": "UC-Syd",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66064,
@@ -1177,7 +1257,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66080,
@@ -1189,7 +1270,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66077,
@@ -1201,7 +1283,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66078,
@@ -1213,7 +1296,8 @@
       "venue": "Aalborg Katedralskole",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66079,
@@ -1225,7 +1309,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66081,
@@ -1237,7 +1322,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66065,
@@ -1249,7 +1335,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66074,
@@ -1261,7 +1348,8 @@
       "venue": "UC-Syd",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66072,
@@ -1273,7 +1361,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66076,
@@ -1285,7 +1374,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66073,
@@ -1297,7 +1387,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66075,
@@ -1309,7 +1400,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 66058,
@@ -1321,7 +1413,8 @@
       "venue": "Aalborg Katedralskole",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66061,
@@ -1333,7 +1426,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66059,
@@ -1345,7 +1439,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 66060,
@@ -1357,7 +1452,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 66057,
@@ -1369,7 +1465,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4974,7 +5071,7 @@
       "away_set_won": 1
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "ASV Aarhus.2",

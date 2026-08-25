@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2023:women:2-division",
     "name": "Vest B",
     "pulje_id": 3591,
-    "division": "2. Division"
+    "season_id": "2023",
+    "gender": "Kvinde",
+    "division": "2. Division",
+    "league_name": "2. Division Kvinder",
+    "raekke_id": 1933,
+    "season_value": "2023",
+    "season_start_year": 2023
   },
   "source_standings": [
     {
@@ -138,7 +145,7 @@
   "computed_standings": [
     {
       "pool_id": "2023:women:2-division:pulje-3591",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "VK Raptus",
       "games_played": 16,
@@ -152,7 +159,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3591",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "SIK Viborg",
       "games_played": 16,
@@ -166,7 +173,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3591",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "VK Vendsyssel",
       "games_played": 16,
@@ -180,7 +187,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3591",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "ASV Aarhus.3",
       "games_played": 16,
@@ -194,7 +201,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3591",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Aabyhøj IF",
       "games_played": 16,
@@ -208,7 +215,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3591",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "Aalborg Volleyball.2",
       "games_played": 16,
@@ -222,7 +229,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3591",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "Hjerm FIF",
       "games_played": 16,
@@ -236,7 +243,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3591",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "Randers VK",
       "games_played": 16,
@@ -250,7 +257,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3591",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "AASI",
       "games_played": 16,
@@ -274,7 +281,8 @@
       "venue": "Marselisborg Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61646,
@@ -286,7 +294,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61644,
@@ -298,7 +307,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61645,
@@ -310,7 +320,8 @@
       "venue": "Aabyhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61648,
@@ -322,7 +333,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61650,
@@ -334,7 +346,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61651,
@@ -346,7 +359,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61649,
@@ -358,7 +372,8 @@
       "venue": "Aabyhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61653,
@@ -370,7 +385,8 @@
       "venue": "Ceres Park hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61655,
@@ -382,7 +398,8 @@
       "venue": "Gigantium Idrætshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61654,
@@ -394,7 +411,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61656,
@@ -406,7 +424,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61658,
@@ -418,7 +437,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61660,
@@ -430,7 +450,8 @@
       "venue": "Randers Arena Hal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61659,
@@ -442,7 +463,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61661,
@@ -454,7 +476,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61666,
@@ -466,7 +489,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61664,
@@ -478,7 +502,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61663,
@@ -490,7 +515,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61665,
@@ -502,7 +528,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61668,
@@ -514,7 +541,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61670,
@@ -526,7 +554,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61671,
@@ -538,7 +567,8 @@
       "venue": "Havndal Hallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61669,
@@ -550,7 +580,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61675,
@@ -562,7 +593,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61676,
@@ -574,7 +606,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61674,
@@ -586,7 +619,8 @@
       "venue": "Aabyhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61673,
@@ -598,7 +632,8 @@
       "venue": "Gigantium Idrætshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61680,
@@ -610,7 +645,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61678,
@@ -622,7 +658,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61681,
@@ -634,7 +671,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61679,
@@ -646,7 +684,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61683,
@@ -658,7 +697,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61684,
@@ -670,7 +710,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61685,
@@ -682,7 +723,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61686,
@@ -694,7 +736,8 @@
       "venue": "Aabyhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61691,
@@ -706,7 +749,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61688,
@@ -718,7 +762,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61690,
@@ -730,7 +775,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61689,
@@ -742,7 +788,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61696,
@@ -754,7 +801,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61693,
@@ -766,7 +814,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61694,
@@ -778,7 +827,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61695,
@@ -790,7 +840,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61698,
@@ -802,7 +853,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61699,
@@ -814,7 +866,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61701,
@@ -826,7 +879,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61700,
@@ -838,7 +892,8 @@
       "venue": "Aabyhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61705,
@@ -850,7 +905,8 @@
       "venue": "Aabyhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61704,
@@ -862,7 +918,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61706,
@@ -874,7 +931,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61703,
@@ -886,7 +944,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61711,
@@ -898,7 +957,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61710,
@@ -910,7 +970,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61709,
@@ -922,7 +983,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61716,
@@ -934,7 +996,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61715,
@@ -946,7 +1009,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61714,
@@ -958,7 +1022,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61713,
@@ -970,7 +1035,8 @@
       "venue": "Aabyhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61708,
@@ -982,7 +1048,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61718,
@@ -994,7 +1061,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61720,
@@ -1006,7 +1074,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61719,
@@ -1018,7 +1087,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61721,
@@ -1030,7 +1100,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61726,
@@ -1042,7 +1113,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61724,
@@ -1054,7 +1126,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61723,
@@ -1066,7 +1139,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61725,
@@ -1078,7 +1152,8 @@
       "venue": "Aabyhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61728,
@@ -1090,7 +1165,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61729,
@@ -1102,7 +1178,8 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61730,
@@ -1114,7 +1191,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61731,
@@ -1126,7 +1204,8 @@
       "venue": "Gigantium Aalborg Hal 2",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4011,7 +4090,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "AASI",

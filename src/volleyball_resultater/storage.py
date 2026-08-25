@@ -58,7 +58,8 @@ CREATE TABLE IF NOT EXISTS matches (
     venue TEXT NOT NULL,
     court TEXT NOT NULL,
     result_home_sets INTEGER,
-    result_away_sets INTEGER
+    result_away_sets INTEGER,
+    result_note TEXT NOT NULL DEFAULT ''
 );
 
 CREATE TABLE IF NOT EXISTS set_results (
@@ -96,6 +97,12 @@ class Repository:
         self.connection = sqlite3.connect(path)
         self.connection.row_factory = sqlite3.Row
         self.connection.executescript(SCHEMA)
+        self.migrate()
+
+    def migrate(self) -> None:
+        columns = {row["name"] for row in self.connection.execute("PRAGMA table_info(matches)")}
+        if "result_note" not in columns:
+            self.connection.execute("ALTER TABLE matches ADD COLUMN result_note TEXT NOT NULL DEFAULT ''")
 
     def close(self) -> None:
         self.connection.close()
@@ -164,8 +171,8 @@ class Repository:
             """
             INSERT INTO matches (
                 kamp_id, pool_id, match_number, starts_at, home_team, away_team,
-                venue, court, result_home_sets, result_away_sets
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                venue, court, result_home_sets, result_away_sets, result_note
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             [
                 (
@@ -179,6 +186,7 @@ class Repository:
                     match.court,
                     match.result_home_sets,
                     match.result_away_sets,
+                    match.result_note,
                 )
                 for match in matches
             ],

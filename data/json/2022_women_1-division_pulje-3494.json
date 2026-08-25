@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2022:women:1-division",
     "name": "Vest",
     "pulje_id": 3494,
-    "division": "1. Division"
+    "season_id": "2022",
+    "gender": "Kvinde",
+    "division": "1. Division",
+    "league_name": "1. Division Kvinder",
+    "raekke_id": 1861,
+    "season_value": "2022",
+    "season_start_year": 2022
   },
   "source_standings": [
     {
@@ -151,7 +158,7 @@
   "computed_standings": [
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "ASV Aarhus.2",
       "games_played": 18,
@@ -165,7 +172,7 @@
     },
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "Fortuna Odense Volley",
       "games_played": 18,
@@ -179,7 +186,7 @@
     },
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "Aalborg Volleyball",
       "games_played": 18,
@@ -193,7 +200,7 @@
     },
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "Volleyball Esbjerg",
       "games_played": 18,
@@ -207,7 +214,7 @@
     },
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Bedsted KFUM",
       "games_played": 18,
@@ -221,7 +228,7 @@
     },
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "Middelfart VK",
       "games_played": 18,
@@ -235,7 +242,7 @@
     },
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "IF Lyseng",
       "games_played": 18,
@@ -249,7 +256,7 @@
     },
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "Skovbakken",
       "games_played": 18,
@@ -263,7 +270,7 @@
     },
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "Funder GF",
       "games_played": 18,
@@ -277,7 +284,7 @@
     },
     {
       "pool_id": "2022:women:1-division:pulje-3494",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 10,
       "team_name": "Kolding VK",
       "games_played": 18,
@@ -301,7 +308,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55659,
@@ -313,7 +321,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "2",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55657,
@@ -325,7 +334,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55660,
@@ -337,7 +347,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55656,
@@ -349,7 +360,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55665,
@@ -361,7 +373,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55661,
@@ -373,7 +386,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55664,
@@ -385,7 +399,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55663,
@@ -397,7 +412,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55662,
@@ -409,7 +425,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55669,
@@ -421,7 +438,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55670,
@@ -433,7 +451,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55666,
@@ -445,7 +464,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55667,
@@ -457,7 +477,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55668,
@@ -469,7 +490,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55674,
@@ -481,7 +503,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55675,
@@ -493,7 +516,8 @@
       "venue": "Funder Hallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55671,
@@ -505,7 +529,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55673,
@@ -517,7 +542,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55672,
@@ -529,7 +555,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55682,
@@ -541,7 +568,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55681,
@@ -553,7 +581,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55685,
@@ -565,7 +594,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55684,
@@ -577,7 +607,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55683,
@@ -589,7 +620,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55687,
@@ -601,7 +633,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55690,
@@ -613,7 +646,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55686,
@@ -625,7 +659,8 @@
       "venue": "Ceres Park hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55688,
@@ -637,7 +672,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55689,
@@ -649,7 +685,8 @@
       "venue": "Funder Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55691,
@@ -661,7 +698,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55694,
@@ -673,7 +711,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55695,
@@ -685,7 +724,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55692,
@@ -697,7 +737,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55693,
@@ -709,7 +750,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55679,
@@ -721,7 +763,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55677,
@@ -733,7 +776,8 @@
       "venue": "Funder Hallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55678,
@@ -745,7 +789,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55676,
@@ -757,7 +802,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55680,
@@ -769,7 +815,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55698,
@@ -781,7 +828,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55697,
@@ -793,7 +841,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55696,
@@ -805,7 +854,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55699,
@@ -817,7 +867,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55700,
@@ -829,7 +880,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55704,
@@ -841,7 +893,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55703,
@@ -853,7 +906,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55702,
@@ -865,7 +919,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55701,
@@ -877,7 +932,8 @@
       "venue": "Funder Hallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55705,
@@ -889,7 +945,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55710,
@@ -901,7 +958,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55707,
@@ -913,7 +971,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55709,
@@ -925,7 +984,8 @@
       "venue": "Funder Hallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55708,
@@ -937,7 +997,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55706,
@@ -949,7 +1010,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55712,
@@ -961,7 +1023,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55714,
@@ -973,7 +1036,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55715,
@@ -985,7 +1049,8 @@
       "venue": "Funder Hallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55711,
@@ -997,7 +1062,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55713,
@@ -1009,7 +1075,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55717,
@@ -1021,7 +1088,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55718,
@@ -1033,7 +1101,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55720,
@@ -1045,7 +1114,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55716,
@@ -1057,7 +1127,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55723,
@@ -1069,7 +1140,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55719,
@@ -1081,7 +1153,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55724,
@@ -1093,7 +1166,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55722,
@@ -1105,7 +1179,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55725,
@@ -1117,7 +1192,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55721,
@@ -1129,7 +1205,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55726,
@@ -1141,7 +1218,8 @@
       "venue": "Lillebæltshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55730,
@@ -1153,7 +1231,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55728,
@@ -1165,7 +1244,8 @@
       "venue": "Funder Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55727,
@@ -1177,7 +1257,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55729,
@@ -1189,7 +1270,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55732,
@@ -1201,7 +1283,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 55735,
@@ -1213,7 +1296,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55733,
@@ -1225,7 +1309,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55734,
@@ -1237,7 +1322,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55731,
@@ -1249,7 +1335,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55737,
@@ -1261,7 +1348,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55736,
@@ -1273,7 +1361,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55740,
@@ -1285,7 +1374,8 @@
       "venue": "Funder Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 55738,
@@ -1297,7 +1387,8 @@
       "venue": "Strib Fritids & Aktivitetscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55739,
@@ -1309,7 +1400,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55741,
@@ -1321,7 +1413,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55742,
@@ -1333,7 +1426,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 55744,
@@ -1345,7 +1439,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55743,
@@ -1357,7 +1452,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 55745,
@@ -1369,7 +1465,8 @@
       "venue": "Funder Hallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4974,7 +5071,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "ASV Aarhus.2",

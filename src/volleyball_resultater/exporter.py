@@ -8,7 +8,7 @@ import sqlite3
 
 from .models import Match
 from . import __version__
-from .rules import cumulative_points, result_matrix, rules_for_division
+from .rules import RuleContext, cumulative_points, result_matrix, rules_for_context
 from .validation import validation_summary
 
 
@@ -23,9 +23,11 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             dict(row)
             for row in connection.execute(
                 """
-                SELECT p.*, l.division
+                SELECT p.*, l.season_id, l.gender, l.division, l.name AS league_name,
+                       l.raekke_id, s.value AS season_value, s.start_year AS season_start_year
                 FROM pools p
                 JOIN leagues l ON l.id = p.league_id
+                JOIN seasons s ON s.id = l.season_id
                 ORDER BY p.league_id, p.name
                 """
             )
@@ -62,7 +64,20 @@ def export_json(db_path: Path, output_dir: Path) -> None:
 
         for pool in pools:
             pool_id = pool["id"]
-            rule_profile = rules_for_division(pool["division"])
+            rule_profile = rules_for_context(
+                RuleContext(
+                    season_id=pool["season_id"],
+                    season_value=pool["season_value"],
+                    start_year=pool["season_start_year"],
+                    gender=pool["gender"],
+                    division=pool["division"],
+                    league_id=pool["league_id"],
+                    raekke_id=pool["raekke_id"],
+                    pool_id=pool_id,
+                    pool_name=pool["name"],
+                    pulje_id=pool["pulje_id"],
+                )
+            )
             standings = [
                 dict(row)
                 for row in connection.execute(
@@ -108,6 +123,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
                     court=row["court"],
                     result_home_sets=row["result_home_sets"],
                     result_away_sets=row["result_away_sets"],
+                    result_note=row["result_note"],
                 )
                 for row in matches
             ]
@@ -118,6 +134,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
                         "schema_version": 1,
                         "exported_at": exported_at,
                         "scraper_version": __version__,
+                        "rule_profile": rule_profile.id,
                         "validation": pool_validation.get(
                             pool_id,
                             {"mismatch_count": 0, "affected_teams": 0, "affected_fields": []},

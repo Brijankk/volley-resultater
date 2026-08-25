@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_2_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2021:women:volleyligaen",
     "name": "Række 1",
     "pulje_id": 2989,
-    "division": "Volleyligaen"
+    "season_id": "2021",
+    "gender": "Kvinde",
+    "division": "Volleyligaen",
+    "league_name": "VolleyLigaen Kvinder",
+    "raekke_id": 1751,
+    "season_value": "2021",
+    "season_start_year": 2021
   },
   "source_standings": [
     {
@@ -112,7 +119,7 @@
   "computed_standings": [
     {
       "pool_id": "2021:women:volleyligaen:pulje-2989",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 1,
       "team_name": "Brøndby VK",
       "games_played": 18,
@@ -126,7 +133,7 @@
     },
     {
       "pool_id": "2021:women:volleyligaen:pulje-2989",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 2,
       "team_name": "Holte IF",
       "games_played": 18,
@@ -140,7 +147,7 @@
     },
     {
       "pool_id": "2021:women:volleyligaen:pulje-2989",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 3,
       "team_name": "Team Køge",
       "games_played": 18,
@@ -154,7 +161,7 @@
     },
     {
       "pool_id": "2021:women:volleyligaen:pulje-2989",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 4,
       "team_name": "ASV Elite",
       "games_played": 18,
@@ -168,7 +175,7 @@
     },
     {
       "pool_id": "2021:women:volleyligaen:pulje-2989",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 5,
       "team_name": "DHV Odense",
       "games_played": 18,
@@ -182,7 +189,7 @@
     },
     {
       "pool_id": "2021:women:volleyligaen:pulje-2989",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 6,
       "team_name": "Amager VK",
       "games_played": 18,
@@ -196,7 +203,7 @@
     },
     {
       "pool_id": "2021:women:volleyligaen:pulje-2989",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_2_1",
       "rank": 7,
       "team_name": "Gentofte Volley",
       "games_played": 18,
@@ -220,7 +227,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49309,
@@ -232,7 +240,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49300,
@@ -244,7 +253,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49302,
@@ -256,7 +266,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49316,
@@ -268,7 +279,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49343,
@@ -280,7 +292,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49311,
@@ -292,7 +305,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49313,
@@ -304,7 +318,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49321,
@@ -316,7 +331,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49295,
@@ -328,7 +344,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49294,
@@ -340,7 +357,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49335,
@@ -352,7 +370,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49297,
@@ -364,7 +383,8 @@
       "venue": "Birkerød Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49292,
@@ -376,7 +396,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49317,
@@ -388,7 +409,8 @@
       "venue": "Asgård skole",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49337,
@@ -400,7 +422,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49347,
@@ -412,7 +435,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49356,
@@ -424,7 +448,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49312,
@@ -436,7 +461,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49359,
@@ -448,7 +474,8 @@
       "venue": "Birkerød Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49299,
@@ -460,7 +487,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49340,
@@ -472,7 +500,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49330,
@@ -484,7 +513,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49333,
@@ -496,7 +526,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49293,
@@ -508,7 +539,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49339,
@@ -520,7 +552,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49372,
@@ -532,7 +565,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49322,
@@ -544,7 +578,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49323,
@@ -556,7 +591,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49327,
@@ -568,7 +604,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49336,
@@ -580,7 +617,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49345,
@@ -592,7 +630,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49371,
@@ -604,7 +643,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49303,
@@ -616,7 +656,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49329,
@@ -628,7 +669,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49341,
@@ -640,7 +682,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49325,
@@ -652,7 +695,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49320,
@@ -664,7 +708,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49361,
@@ -676,7 +721,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49349,
@@ -688,7 +734,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49315,
@@ -700,7 +747,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49351,
@@ -712,7 +760,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49373,
@@ -724,7 +773,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49363,
@@ -736,7 +786,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49368,
@@ -748,7 +799,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49328,
@@ -760,7 +812,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49364,
@@ -772,7 +825,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49357,
@@ -784,7 +838,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49365,
@@ -796,7 +851,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49305,
@@ -808,7 +864,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49331,
@@ -820,7 +877,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49355,
@@ -832,7 +890,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49291,
@@ -844,7 +903,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49369,
@@ -856,7 +916,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49307,
@@ -868,7 +929,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49308,
@@ -880,7 +942,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49319,
@@ -892,7 +955,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49367,
@@ -904,7 +968,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49348,
@@ -916,7 +981,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49344,
@@ -928,7 +994,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49358,
@@ -940,7 +1007,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49353,
@@ -952,7 +1020,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49350,
@@ -964,7 +1033,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -3489,7 +3559,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_volleyligaen",
+  "rule_profile": "five_set_2_1",
   "cumulative_points": [
     {
       "team": "ASV Elite",

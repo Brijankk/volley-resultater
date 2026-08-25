@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2025:men:1-division",
     "name": "Vest",
     "pulje_id": 3926,
-    "division": "1. Division"
+    "season_id": "2025",
+    "gender": "Mand",
+    "division": "1. Division",
+    "league_name": "1. Division Herrer",
+    "raekke_id": 2250,
+    "season_value": "2025",
+    "season_start_year": 2025
   },
   "source_standings": [
     {
@@ -151,7 +158,7 @@
   "computed_standings": [
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "Randers VK",
       "games_played": 18,
@@ -165,7 +172,7 @@
     },
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "DHV Odense.2",
       "games_played": 18,
@@ -179,7 +186,7 @@
     },
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "VK Raptus",
       "games_played": 18,
@@ -193,7 +200,7 @@
     },
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "Aalborg Volleyball",
       "games_played": 18,
@@ -207,7 +214,7 @@
     },
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Kolding VK",
       "games_played": 18,
@@ -221,7 +228,7 @@
     },
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "Ikast KFUM.2",
       "games_played": 18,
@@ -235,7 +242,7 @@
     },
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "IF Lyseng",
       "games_played": 18,
@@ -249,7 +256,7 @@
     },
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "Bedsted KFUM",
       "games_played": 18,
@@ -263,7 +270,7 @@
     },
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "Aarhus 1900",
       "games_played": 18,
@@ -277,7 +284,7 @@
     },
     {
       "pool_id": "2025:men:1-division:pulje-3926",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 10,
       "team_name": "SGF Vejle",
       "games_played": 18,
@@ -301,7 +308,8 @@
       "venue": "Frederiksbjerghallerne",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71011,
@@ -313,7 +321,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71008,
@@ -325,7 +334,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71010,
@@ -337,7 +347,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71009,
@@ -349,7 +360,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71013,
@@ -361,7 +373,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71016,
@@ -373,7 +386,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71015,
@@ -385,7 +399,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71014,
@@ -397,7 +412,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71017,
@@ -409,7 +425,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71018,
@@ -421,7 +438,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71021,
@@ -433,7 +451,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71020,
@@ -445,7 +464,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71019,
@@ -457,7 +477,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71022,
@@ -469,7 +490,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71027,
@@ -481,7 +503,8 @@
       "venue": "Frederiksbjerghallerne",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71023,
@@ -493,7 +516,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71025,
@@ -505,7 +529,8 @@
       "venue": "Randers Arena Hal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71026,
@@ -517,7 +542,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71024,
@@ -529,7 +555,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71030,
@@ -541,7 +568,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71032,
@@ -553,7 +581,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71028,
@@ -565,7 +594,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71031,
@@ -577,7 +607,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71029,
@@ -589,7 +620,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71035,
@@ -601,7 +633,8 @@
       "venue": "Frederiksbjerghallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71036,
@@ -613,7 +646,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71033,
@@ -625,7 +659,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71034,
@@ -637,7 +672,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71037,
@@ -649,7 +685,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71041,
@@ -661,7 +698,8 @@
       "venue": "Frederiksbjerghallerne",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71042,
@@ -673,7 +711,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71038,
@@ -685,7 +724,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71039,
@@ -697,7 +737,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71040,
@@ -709,7 +750,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71047,
@@ -721,7 +763,8 @@
       "venue": "Frederiksbjerghallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71044,
@@ -733,7 +776,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71091,
@@ -745,7 +789,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71043,
@@ -757,7 +802,8 @@
       "venue": "Sportscenter Ikast Hal A",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71045,
@@ -769,7 +815,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71052,
@@ -781,7 +828,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71050,
@@ -793,7 +841,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71049,
@@ -805,7 +854,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71048,
@@ -817,7 +867,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71055,
@@ -829,7 +880,8 @@
       "venue": "Frederiksbjerghallerne",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71054,
@@ -841,7 +893,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71053,
@@ -853,7 +906,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71056,
@@ -865,7 +919,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71057,
@@ -877,7 +932,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71060,
@@ -889,7 +945,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71059,
@@ -901,7 +958,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71061,
@@ -913,7 +971,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71062,
@@ -925,7 +984,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71058,
@@ -937,7 +997,8 @@
       "venue": "Vestereng Idrætszone",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71066,
@@ -949,7 +1010,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71063,
@@ -961,7 +1023,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71067,
@@ -973,7 +1036,8 @@
       "venue": "Frederiksbjerghallerne",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71065,
@@ -985,7 +1049,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71068,
@@ -997,7 +1062,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71070,
@@ -1009,7 +1075,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71071,
@@ -1021,7 +1088,8 @@
       "venue": "Havndal Hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71069,
@@ -1033,7 +1101,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71072,
@@ -1045,7 +1114,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71076,
@@ -1057,7 +1127,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71077,
@@ -1069,7 +1140,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71075,
@@ -1081,7 +1153,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71073,
@@ -1093,7 +1166,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71074,
@@ -1105,7 +1179,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71051,
@@ -1117,7 +1192,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71080,
@@ -1129,7 +1205,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71082,
@@ -1141,7 +1218,8 @@
       "venue": "Bedstedhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71081,
@@ -1153,7 +1231,8 @@
       "venue": "Vestereng Idrætszone",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71078,
@@ -1165,7 +1244,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71079,
@@ -1177,7 +1257,8 @@
       "venue": "Randers Arena Hal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71064,
@@ -1189,7 +1270,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71093,
@@ -1201,7 +1283,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71085,
@@ -1213,7 +1296,8 @@
       "venue": "Frederiksbjerghallerne",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71087,
@@ -1225,7 +1309,8 @@
       "venue": "Hjallesehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71086,
@@ -1237,7 +1322,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71084,
@@ -1249,7 +1335,8 @@
       "venue": "Randers Arena Hal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71083,
@@ -1261,7 +1348,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71090,
@@ -1273,7 +1361,8 @@
       "venue": "Frederiksbjerghallerne",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71092,
@@ -1285,7 +1374,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71046,
@@ -1297,7 +1387,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71089,
@@ -1309,7 +1400,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71088,
@@ -1321,7 +1413,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71095,
@@ -1333,7 +1426,8 @@
       "venue": "Søndermarkshallen (Vejle)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71094,
@@ -1345,7 +1439,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71096,
@@ -1357,7 +1452,8 @@
       "venue": "Bakkeskolens hal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71097,
@@ -1369,7 +1465,8 @@
       "venue": "Vejlby Risskov Hallen hal 3",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4974,7 +5071,7 @@
       "away_set_won": 1
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "Aalborg Volleyball",

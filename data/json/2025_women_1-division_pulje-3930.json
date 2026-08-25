@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2025:women:1-division",
     "name": "Øst",
     "pulje_id": 3930,
-    "division": "1. Division"
+    "season_id": "2025",
+    "gender": "Kvinde",
+    "division": "1. Division",
+    "league_name": "1. Division Kvinder",
+    "raekke_id": 2252,
+    "season_value": "2025",
+    "season_start_year": 2025
   },
   "source_standings": [
     {
@@ -151,7 +158,7 @@
   "computed_standings": [
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "KSV",
       "games_played": 18,
@@ -165,7 +172,7 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "VLI",
       "games_played": 18,
@@ -179,7 +186,7 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "Amager Volley",
       "games_played": 18,
@@ -193,7 +200,7 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "Hvidovre VK",
       "games_played": 18,
@@ -207,7 +214,7 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Gentofte Volley.2",
       "games_played": 18,
@@ -221,7 +228,7 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "Lynge Uggeløse IF",
       "games_played": 18,
@@ -235,7 +242,7 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "Farum VK Wildcard",
       "games_played": 18,
@@ -249,7 +256,7 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "Lyngby-Gladsaxe Volley",
       "games_played": 18,
@@ -263,7 +270,7 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "KV 61",
       "games_played": 18,
@@ -277,7 +284,7 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-3930",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 10,
       "team_name": "Brøndby VK Wildcard",
       "games_played": 18,
@@ -301,7 +308,8 @@
       "venue": "Buddingehallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71819,
@@ -313,7 +321,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71821,
@@ -325,7 +334,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71820,
@@ -337,7 +347,8 @@
       "venue": "Lyngehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71818,
@@ -349,7 +360,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71827,
@@ -361,7 +373,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71823,
@@ -373,7 +386,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71825,
@@ -385,7 +399,8 @@
       "venue": "Lyngehallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71826,
@@ -397,7 +412,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71824,
@@ -409,7 +425,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71831,
@@ -421,7 +438,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71832,
@@ -433,7 +451,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71829,
@@ -445,7 +464,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71830,
@@ -457,7 +477,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71833,
@@ -469,7 +490,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71836,
@@ -481,7 +503,8 @@
       "venue": "Lyngehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71837,
@@ -493,7 +516,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71834,
@@ -505,7 +529,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71835,
@@ -517,7 +542,8 @@
       "venue": "Byens Hus",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71839,
@@ -529,7 +555,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71840,
@@ -541,7 +568,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71841,
@@ -553,7 +581,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71842,
@@ -565,7 +594,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71838,
@@ -577,7 +607,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71844,
@@ -589,7 +620,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71846,
@@ -601,7 +633,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71843,
@@ -613,7 +646,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71845,
@@ -625,7 +659,8 @@
       "venue": "Buddingehallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71848,
@@ -637,7 +672,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71849,
@@ -649,7 +685,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71852,
@@ -661,7 +698,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71850,
@@ -673,7 +711,8 @@
       "venue": "Lyngehallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71851,
@@ -685,7 +724,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71828,
@@ -697,7 +737,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71847,
@@ -709,7 +750,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71856,
@@ -721,7 +763,8 @@
       "venue": "Bülowsvejhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71854,
@@ -733,7 +776,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71855,
@@ -745,7 +789,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71857,
@@ -757,7 +802,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71853,
@@ -769,7 +815,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71858,
@@ -781,7 +828,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71862,
@@ -793,7 +841,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71859,
@@ -805,7 +854,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71861,
@@ -817,7 +867,8 @@
       "venue": "Lyngehallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71864,
@@ -829,7 +880,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71863,
@@ -841,7 +893,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71867,
@@ -853,7 +906,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71865,
@@ -865,7 +919,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71866,
@@ -877,7 +932,8 @@
       "venue": "Lyngehallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71868,
@@ -889,7 +945,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71870,
@@ -901,7 +958,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71871,
@@ -913,7 +971,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71872,
@@ -925,7 +984,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71869,
@@ -937,7 +997,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71873,
@@ -949,7 +1010,8 @@
       "venue": "Lyngehallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71874,
@@ -961,7 +1023,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71876,
@@ -973,7 +1036,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71875,
@@ -985,7 +1049,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71878,
@@ -997,7 +1062,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71880,
@@ -1009,7 +1075,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71881,
@@ -1021,7 +1088,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71882,
@@ -1033,7 +1101,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71879,
@@ -1045,7 +1114,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71886,
@@ -1057,7 +1127,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71883,
@@ -1069,7 +1140,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71885,
@@ -1081,7 +1153,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71887,
@@ -1093,7 +1166,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71884,
@@ -1105,7 +1179,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71890,
@@ -1117,7 +1192,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71891,
@@ -1129,7 +1205,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71888,
@@ -1141,7 +1218,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71889,
@@ -1153,7 +1231,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71892,
@@ -1165,7 +1244,8 @@
       "venue": "Lyngehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71860,
@@ -1177,7 +1257,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71877,
@@ -1189,7 +1270,8 @@
       "venue": "Buddingehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71894,
@@ -1201,7 +1283,8 @@
       "venue": "Byens Hus",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71893,
@@ -1213,7 +1296,8 @@
       "venue": "Sundbyhal 2",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71895,
@@ -1225,7 +1309,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71896,
@@ -1237,7 +1322,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71897,
@@ -1249,7 +1335,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71898,
@@ -1261,7 +1348,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71900,
@@ -1273,7 +1361,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71899,
@@ -1285,7 +1374,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71901,
@@ -1297,7 +1387,8 @@
       "venue": "Lyngehallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71902,
@@ -1309,7 +1400,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 71905,
@@ -1321,7 +1413,8 @@
       "venue": "Frihedens Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 71903,
@@ -1333,7 +1426,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71904,
@@ -1345,7 +1439,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 71906,
@@ -1357,7 +1452,8 @@
       "venue": "Sundbyhal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 71907,
@@ -1369,7 +1465,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4974,7 +5071,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "Amager Volley",

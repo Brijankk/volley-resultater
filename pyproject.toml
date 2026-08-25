@@ -16,6 +16,9 @@ scrape-volleyball = "volleyball_resultater.cli:main"
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+volleyball_resultater = ["rule_assignments.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]

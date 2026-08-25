@@ -1,22 +1,13 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
-      "mismatch_count": 21,
-      "affected_teams": 5,
-      "affected_fields": [
-        "balls_lost",
-        "balls_won",
-        "games_lost",
-        "games_played",
-        "games_won",
-        "points",
-        "rank",
-        "sets_lost",
-        "sets_won"
-      ]
+      "mismatch_count": 0,
+      "affected_teams": 0,
+      "affected_fields": []
     }
   },
   "pool": {
@@ -24,7 +15,13 @@
     "league_id": "2022:men:2-division",
     "name": "Pulje 1",
     "pulje_id": 3485,
-    "division": "2. Division"
+    "season_id": "2022",
+    "gender": "Mand",
+    "division": "2. Division",
+    "league_name": "2. Division Herrer",
+    "raekke_id": 1854,
+    "season_value": "2022",
+    "season_start_year": 2022
   },
   "source_standings": [
     {
@@ -122,22 +119,36 @@
   "computed_standings": [
     {
       "pool_id": "2022:men:2-division:pulje-3485",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "Kolding VK",
-      "games_played": 16,
-      "games_won": 13,
+      "games_played": 18,
+      "games_won": 15,
       "games_lost": 3,
-      "sets_won": 44,
+      "sets_won": 50,
       "sets_lost": 13,
-      "balls_won": 1358,
+      "balls_won": 1508,
       "balls_lost": 1140,
-      "points": 41
+      "points": 47
     },
     {
       "pool_id": "2022:men:2-division:pulje-3485",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
+      "team_name": "Aabenraa I&G",
+      "games_played": 18,
+      "games_won": 12,
+      "games_lost": 6,
+      "sets_won": 42,
+      "sets_lost": 24,
+      "balls_won": 1494,
+      "balls_lost": 1274,
+      "points": 39
+    },
+    {
+      "pool_id": "2022:men:2-division:pulje-3485",
+      "rule_profile": "five_set_3_1",
+      "rank": 3,
       "team_name": "Midtfyns VK",
       "games_played": 18,
       "games_won": 12,
@@ -150,21 +161,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3485",
-      "rule_profile": "dt_2025_division",
-      "rank": 3,
-      "team_name": "Aabenraa I&G",
-      "games_played": 17,
-      "games_won": 11,
-      "games_lost": 6,
-      "sets_won": 39,
-      "sets_lost": 24,
-      "balls_won": 1419,
-      "balls_lost": 1274,
-      "points": 36
-    },
-    {
-      "pool_id": "2022:men:2-division:pulje-3485",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "DHV Odense.2",
       "games_played": 18,
@@ -178,35 +175,35 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3485",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Fortuna Odense Volley.2",
-      "games_played": 14,
+      "games_played": 18,
       "games_won": 7,
-      "games_lost": 7,
+      "games_lost": 11,
       "sets_won": 28,
-      "sets_lost": 25,
+      "sets_lost": 37,
       "balls_won": 1160,
-      "balls_lost": 1127,
+      "balls_lost": 1427,
       "points": 23
     },
     {
       "pool_id": "2022:men:2-division:pulje-3485",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "Volleyball Esbjerg",
-      "games_played": 17,
-      "games_won": 4,
+      "games_played": 18,
+      "games_won": 5,
       "games_lost": 13,
-      "sets_won": 14,
+      "sets_won": 17,
       "sets_lost": 46,
-      "balls_won": 1132,
+      "balls_won": 1207,
       "balls_lost": 1405,
-      "points": 12
+      "points": 15
     },
     {
       "pool_id": "2022:men:2-division:pulje-3485",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "DSIO Odense",
       "games_played": 18,
@@ -230,7 +227,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56982,
@@ -242,7 +240,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56984,
@@ -254,7 +253,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 56989,
@@ -266,7 +266,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56987,
@@ -278,7 +279,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56986,
@@ -290,7 +292,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56993,
@@ -302,7 +305,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56992,
@@ -314,7 +318,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56990,
@@ -326,7 +331,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56995,
@@ -338,7 +344,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56996,
@@ -350,7 +357,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56997,
@@ -362,7 +370,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 56999,
@@ -374,7 +383,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57000,
@@ -386,7 +396,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56998,
@@ -398,7 +409,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57004,
@@ -410,7 +422,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57003,
@@ -422,7 +435,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57002,
@@ -434,7 +448,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57006,
@@ -446,7 +461,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57008,
@@ -458,7 +474,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57007,
@@ -470,7 +487,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57011,
@@ -482,7 +500,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57012,
@@ -494,7 +513,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57017,
@@ -506,7 +526,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57014,
@@ -518,7 +539,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57015,
@@ -530,7 +552,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57018,
@@ -541,8 +564,9 @@
       "away_team": "Fortuna Odense Volley.2",
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "result_note": "UHT"
     },
     {
       "kamp_id": 57020,
@@ -554,7 +578,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57021,
@@ -566,7 +591,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57010,
@@ -578,7 +604,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57025,
@@ -590,7 +617,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57024,
@@ -602,7 +630,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57023,
@@ -614,7 +643,8 @@
       "venue": "Tornbjerg gymnasiehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57028,
@@ -626,7 +656,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57026,
@@ -638,7 +669,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57027,
@@ -650,7 +682,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57030,
@@ -662,7 +695,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57031,
@@ -674,7 +708,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57032,
@@ -686,7 +721,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57036,
@@ -698,7 +734,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57034,
@@ -710,7 +747,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57035,
@@ -722,7 +760,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57039,
@@ -734,7 +773,8 @@
       "venue": "Idrætscenter Midtfyn",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57040,
@@ -746,7 +786,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57038,
@@ -758,7 +799,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57043,
@@ -770,7 +812,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57045,
@@ -782,7 +825,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57042,
@@ -794,7 +838,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57049,
@@ -806,7 +851,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57046,
@@ -817,8 +863,9 @@
       "away_team": "Kolding VK",
       "venue": "Klostermarkshallen",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null
+      "result_home_sets": 0,
+      "result_away_sets": 3,
+      "result_note": "HHT"
     },
     {
       "kamp_id": 57048,
@@ -830,7 +877,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57051,
@@ -842,7 +890,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57052,
@@ -853,8 +902,9 @@
       "away_team": "Fortuna Odense Volley.2",
       "venue": "Ådalskolen - Bohr",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "result_note": "UHT"
     },
     {
       "kamp_id": 57053,
@@ -866,7 +916,8 @@
       "venue": "KVK Hallen (Kolding Pædagogseminarium)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57054,
@@ -878,7 +929,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57055,
@@ -890,7 +942,8 @@
       "venue": "Arena Aabenraa",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57056,
@@ -902,7 +955,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57058,
@@ -913,8 +967,9 @@
       "away_team": "Fortuna Odense Volley.2",
       "venue": "Arena Aabenraa",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "result_note": "UHT"
     },
     {
       "kamp_id": 57059,
@@ -926,7 +981,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 57060,
@@ -938,7 +994,8 @@
       "venue": "Ådalskolen - Bohr",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 57064,
@@ -950,7 +1007,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 57063,
@@ -962,7 +1020,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 57062,
@@ -974,7 +1033,8 @@
       "venue": "Klostermarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -2059,6 +2119,46 @@
       "away_set_won": null
     },
     {
+      "kamp_id": 57018,
+      "set_number": 1,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57018,
+      "set_number": 2,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57018,
+      "set_number": 3,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57018,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57018,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
       "kamp_id": 57020,
       "set_number": 1,
       "home_points": 18,
@@ -2859,6 +2959,46 @@
       "away_set_won": null
     },
     {
+      "kamp_id": 57046,
+      "set_number": 1,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57046,
+      "set_number": 2,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57046,
+      "set_number": 3,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57046,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57046,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
       "kamp_id": 57048,
       "set_number": 1,
       "home_points": 25,
@@ -2977,6 +3117,46 @@
       "away_points": 8,
       "home_set_won": 1,
       "away_set_won": 0
+    },
+    {
+      "kamp_id": 57052,
+      "set_number": 1,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57052,
+      "set_number": 2,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57052,
+      "set_number": 3,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57052,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57052,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
     },
     {
       "kamp_id": 57053,
@@ -3132,6 +3312,46 @@
     },
     {
       "kamp_id": 57056,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57058,
+      "set_number": 1,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57058,
+      "set_number": 2,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57058,
+      "set_number": 3,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57058,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 57058,
       "set_number": 5,
       "home_points": null,
       "away_points": null,
@@ -3339,7 +3559,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "Aabenraa I&G",
@@ -3807,6 +4027,22 @@
       "kamp_id": 57015
     },
     {
+      "team": "Kolding VK",
+      "date": "2022-12-10T12:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 22,
+      "kamp_id": 57018
+    },
+    {
+      "team": "Fortuna Odense Volley.2",
+      "date": "2022-12-10T12:00:00",
+      "game_number": 7,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 57018
+    },
+    {
       "team": "DSIO Odense",
       "date": "2022-12-10T12:00:00",
       "game_number": 8,
@@ -3849,7 +4085,7 @@
     {
       "team": "Fortuna Odense Volley.2",
       "date": "2022-12-15T20:30:00",
-      "game_number": 7,
+      "game_number": 8,
       "points": 1,
       "cumulative_points": 7,
       "kamp_id": 57010
@@ -3865,15 +4101,15 @@
     {
       "team": "Kolding VK",
       "date": "2023-01-05T20:00:00",
-      "game_number": 9,
+      "game_number": 10,
       "points": 3,
-      "cumulative_points": 22,
+      "cumulative_points": 25,
       "kamp_id": 57025
     },
     {
       "team": "Fortuna Odense Volley.2",
       "date": "2023-01-07T16:30:00",
-      "game_number": 8,
+      "game_number": 9,
       "points": 3,
       "cumulative_points": 10,
       "kamp_id": 57024
@@ -3929,7 +4165,7 @@
     {
       "team": "Fortuna Odense Volley.2",
       "date": "2023-01-14T13:00:00",
-      "game_number": 9,
+      "game_number": 10,
       "points": 1,
       "cumulative_points": 11,
       "kamp_id": 57026
@@ -3953,7 +4189,7 @@
     {
       "team": "Fortuna Odense Volley.2",
       "date": "2023-01-21T15:30:00",
-      "game_number": 10,
+      "game_number": 11,
       "points": 0,
       "cumulative_points": 11,
       "kamp_id": 57030
@@ -3985,9 +4221,9 @@
     {
       "team": "Kolding VK",
       "date": "2023-01-22T10:00:00",
-      "game_number": 10,
+      "game_number": 11,
       "points": 3,
-      "cumulative_points": 25,
+      "cumulative_points": 28,
       "kamp_id": 57032
     },
     {
@@ -4001,9 +4237,9 @@
     {
       "team": "Kolding VK",
       "date": "2023-01-28T14:00:00",
-      "game_number": 11,
+      "game_number": 12,
       "points": 3,
-      "cumulative_points": 28,
+      "cumulative_points": 31,
       "kamp_id": 57036
     },
     {
@@ -4025,7 +4261,7 @@
     {
       "team": "Fortuna Odense Volley.2",
       "date": "2023-01-28T19:00:00",
-      "game_number": 11,
+      "game_number": 12,
       "points": 3,
       "cumulative_points": 14,
       "kamp_id": 57034
@@ -4073,15 +4309,15 @@
     {
       "team": "Kolding VK",
       "date": "2023-02-08T19:30:00",
-      "game_number": 12,
+      "game_number": 13,
       "points": 3,
-      "cumulative_points": 31,
+      "cumulative_points": 34,
       "kamp_id": 57040
     },
     {
       "team": "Fortuna Odense Volley.2",
       "date": "2023-02-11T16:30:00",
-      "game_number": 12,
+      "game_number": 13,
       "points": 3,
       "cumulative_points": 17,
       "kamp_id": 57038
@@ -4097,9 +4333,9 @@
     {
       "team": "Kolding VK",
       "date": "2023-02-25T12:00:00",
-      "game_number": 13,
+      "game_number": 14,
       "points": 3,
-      "cumulative_points": 34,
+      "cumulative_points": 37,
       "kamp_id": 57043
     },
     {
@@ -4159,6 +4395,22 @@
       "kamp_id": 57049
     },
     {
+      "team": "Fortuna Odense Volley.2",
+      "date": "2023-03-04T14:30:00",
+      "game_number": 14,
+      "points": 0,
+      "cumulative_points": 17,
+      "kamp_id": 57046
+    },
+    {
+      "team": "Kolding VK",
+      "date": "2023-03-04T14:30:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 40,
+      "kamp_id": 57046
+    },
+    {
       "team": "Aabenraa I&G",
       "date": "2023-03-05T12:30:00",
       "game_number": 15,
@@ -4191,11 +4443,27 @@
       "kamp_id": 57051
     },
     {
+      "team": "Volleyball Esbjerg",
+      "date": "2023-03-11T13:30:00",
+      "game_number": 16,
+      "points": 3,
+      "cumulative_points": 12,
+      "kamp_id": 57052
+    },
+    {
+      "team": "Fortuna Odense Volley.2",
+      "date": "2023-03-11T13:30:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 17,
+      "kamp_id": 57052
+    },
+    {
       "team": "Kolding VK",
       "date": "2023-03-12T10:00:00",
-      "game_number": 14,
+      "game_number": 16,
       "points": 3,
-      "cumulative_points": 37,
+      "cumulative_points": 43,
       "kamp_id": 57053
     },
     {
@@ -4209,7 +4477,7 @@
     {
       "team": "Fortuna Odense Volley.2",
       "date": "2023-03-18T14:30:00",
-      "game_number": 13,
+      "game_number": 16,
       "points": 3,
       "cumulative_points": 20,
       "kamp_id": 57054
@@ -4241,9 +4509,9 @@
     {
       "team": "Volleyball Esbjerg",
       "date": "2023-03-23T19:30:00",
-      "game_number": 16,
+      "game_number": 17,
       "points": 0,
-      "cumulative_points": 9,
+      "cumulative_points": 12,
       "kamp_id": 57056
     },
     {
@@ -4253,6 +4521,22 @@
       "points": 3,
       "cumulative_points": 10,
       "kamp_id": 57056
+    },
+    {
+      "team": "Aabenraa I&G",
+      "date": "2023-03-25T12:00:00",
+      "game_number": 17,
+      "points": 3,
+      "cumulative_points": 39,
+      "kamp_id": 57058
+    },
+    {
+      "team": "Fortuna Odense Volley.2",
+      "date": "2023-03-25T12:00:00",
+      "game_number": 17,
+      "points": 0,
+      "cumulative_points": 20,
+      "kamp_id": 57058
     },
     {
       "team": "Midtfyns VK",
@@ -4273,17 +4557,17 @@
     {
       "team": "Volleyball Esbjerg",
       "date": "2023-03-25T13:30:00",
-      "game_number": 17,
+      "game_number": 18,
       "points": 3,
-      "cumulative_points": 12,
+      "cumulative_points": 15,
       "kamp_id": 57060
     },
     {
       "team": "Kolding VK",
       "date": "2023-03-25T13:30:00",
-      "game_number": 15,
+      "game_number": 17,
       "points": 1,
-      "cumulative_points": 38,
+      "cumulative_points": 44,
       "kamp_id": 57060
     },
     {
@@ -4297,9 +4581,9 @@
     {
       "team": "Kolding VK",
       "date": "2023-04-01T12:00:00",
-      "game_number": 16,
+      "game_number": 18,
       "points": 3,
-      "cumulative_points": 41,
+      "cumulative_points": 47,
       "kamp_id": 57064
     },
     {
@@ -4313,15 +4597,15 @@
     {
       "team": "Aabenraa I&G",
       "date": "2023-04-01T17:00:00",
-      "game_number": 17,
+      "game_number": 18,
       "points": 0,
-      "cumulative_points": 36,
+      "cumulative_points": 39,
       "kamp_id": 57063
     },
     {
       "team": "Fortuna Odense Volley.2",
       "date": "2023-04-02T10:00:00",
-      "game_number": 14,
+      "game_number": 18,
       "points": 3,
       "cumulative_points": 23,
       "kamp_id": 57062
@@ -4340,7 +4624,7 @@
       "Aabenraa I&G": "",
       "DHV Odense.2": "3-0, 3-1",
       "DSIO Odense": "3-0, 3-0",
-      "Fortuna Odense Volley.2": null,
+      "Fortuna Odense Volley.2": "3-0",
       "Kolding VK": "3-2, 0-3",
       "Midtfyns VK": "2-3",
       "Volleyball Esbjerg": "3-0"
@@ -4368,7 +4652,7 @@
       "DHV Odense.2": "3-1",
       "DSIO Odense": "3-0, 3-0",
       "Fortuna Odense Volley.2": "",
-      "Kolding VK": "1-3",
+      "Kolding VK": "1-3, 0-3",
       "Midtfyns VK": "3-2",
       "Volleyball Esbjerg": "3-0"
     },
@@ -4376,7 +4660,7 @@
       "Aabenraa I&G": "3-0",
       "DHV Odense.2": "3-0, 3-0",
       "DSIO Odense": "3-0, 3-0",
-      "Fortuna Odense Volley.2": null,
+      "Fortuna Odense Volley.2": "3-0",
       "Kolding VK": "",
       "Midtfyns VK": "3-2, 3-0",
       "Volleyball Esbjerg": "3-0"
@@ -4394,7 +4678,7 @@
       "Aabenraa I&G": "0-3, 3-2",
       "DHV Odense.2": "0-3",
       "DSIO Odense": "0-3",
-      "Fortuna Odense Volley.2": "1-3",
+      "Fortuna Odense Volley.2": "1-3, 3-0",
       "Kolding VK": "0-3, 3-2",
       "Midtfyns VK": "0-3",
       "Volleyball Esbjerg": ""

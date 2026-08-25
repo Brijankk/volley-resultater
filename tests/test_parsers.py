@@ -37,6 +37,16 @@ SCHEDULE_HTML = """
     <td>04-10-25 kl.&nbsp;14:30</td>
     <td>A</td><td>B</td><td>Hal</td><td></td>
   </tr>
+  <tr>
+    <td><a href="/tms/Turneringer-og-resultater/Kamp-Information.aspx?KampId=2">2</a></td>
+    <td>05-10-25 kl.&nbsp;14:30</td>
+    <td>C</td><td>D</td><td>Hal</td><td>3&nbsp;-&nbsp;0</td><td>UHT</td>
+  </tr>
+  <tr>
+    <td><a href="/tms/Turneringer-og-resultater/Kamp-Information.aspx?KampId=3">3</a></td>
+    <td>06-10-25 kl.&nbsp;14:30</td>
+    <td>E</td><td>F</td><td>Hal</td><td>0&nbsp;-&nbsp;3</td><td>HHT</td>
+  </tr>
 </table>
 """
 
@@ -87,12 +97,18 @@ class ParserTests(unittest.TestCase):
 
     def test_schedule(self) -> None:
         rows = parse_schedule(SCHEDULE_HTML, "pool")
-        self.assertEqual(len(rows), 2)
+        self.assertEqual(len(rows), 4)
         self.assertEqual(rows[0].kamp_id, 70726)
         self.assertEqual(rows[0].home_team, "VK Vestsjælland")
         self.assertEqual(rows[0].result_home_sets, 3)
         self.assertEqual(rows[0].result_away_sets, 1)
         self.assertIsNone(rows[1].result_home_sets)
+        self.assertEqual(rows[2].result_home_sets, 3)
+        self.assertEqual(rows[2].result_away_sets, 0)
+        self.assertEqual(rows[2].result_note, "UHT")
+        self.assertEqual(rows[3].result_home_sets, 0)
+        self.assertEqual(rows[3].result_away_sets, 3)
+        self.assertEqual(rows[3].result_note, "HHT")
 
     def test_match_sets(self) -> None:
         rows = parse_match_sets(MATCH_HTML, 70726)

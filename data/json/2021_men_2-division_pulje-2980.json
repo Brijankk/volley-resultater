@@ -1,14 +1,13 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_2_1",
     "validation": {
-      "mismatch_count": 4,
-      "affected_teams": 4,
-      "affected_fields": [
-        "points"
-      ]
+      "mismatch_count": 0,
+      "affected_teams": 0,
+      "affected_fields": []
     }
   },
   "pool": {
@@ -16,7 +15,13 @@
     "league_id": "2021:men:2-division",
     "name": "Øst",
     "pulje_id": 2980,
-    "division": "2. Division"
+    "season_id": "2021",
+    "gender": "Mand",
+    "division": "2. Division",
+    "league_name": "2. Division Herrer",
+    "raekke_id": 1744,
+    "season_value": "2021",
+    "season_start_year": 2021
   },
   "source_standings": [
     {
@@ -114,7 +119,7 @@
   "computed_standings": [
     {
       "pool_id": "2021:men:2-division:pulje-2980",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 1,
       "team_name": "VK Holbæk",
       "games_played": 18,
@@ -124,11 +129,11 @@
       "sets_lost": 18,
       "balls_won": 1619,
       "balls_lost": 1330,
-      "points": 49
+      "points": 47
     },
     {
       "pool_id": "2021:men:2-division:pulje-2980",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 2,
       "team_name": "KSV",
       "games_played": 18,
@@ -142,7 +147,7 @@
     },
     {
       "pool_id": "2021:men:2-division:pulje-2980",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 3,
       "team_name": "VK Vestsjælland.2",
       "games_played": 18,
@@ -152,11 +157,11 @@
       "sets_lost": 30,
       "balls_won": 1603,
       "balls_lost": 1548,
-      "points": 37
+      "points": 33
     },
     {
       "pool_id": "2021:men:2-division:pulje-2980",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 4,
       "team_name": "Gentofte Volley.3",
       "games_played": 18,
@@ -166,11 +171,11 @@
       "sets_lost": 32,
       "balls_won": 1644,
       "balls_lost": 1528,
-      "points": 35
+      "points": 32
     },
     {
       "pool_id": "2021:men:2-division:pulje-2980",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 5,
       "team_name": "Lyngby-Gladsaxe Volley",
       "games_played": 18,
@@ -184,7 +189,7 @@
     },
     {
       "pool_id": "2021:men:2-division:pulje-2980",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 6,
       "team_name": "VK Næstved",
       "games_played": 18,
@@ -194,11 +199,11 @@
       "sets_lost": 46,
       "balls_won": 1284,
       "balls_lost": 1522,
-      "points": 13
+      "points": 12
     },
     {
       "pool_id": "2021:men:2-division:pulje-2980",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 7,
       "team_name": "Grøndal EV.2",
       "games_played": 18,
@@ -222,7 +227,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49477,
@@ -234,7 +240,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49478,
@@ -246,7 +253,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49513,
@@ -258,7 +266,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49475,
@@ -270,7 +279,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49502,
@@ -282,7 +292,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49491,
@@ -294,7 +305,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49467,
@@ -306,7 +318,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49461,
@@ -318,7 +331,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49473,
@@ -330,7 +344,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49500,
@@ -342,7 +357,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49485,
@@ -354,7 +370,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49507,
@@ -366,7 +383,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49494,
@@ -378,7 +396,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49462,
@@ -390,7 +409,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49498,
@@ -402,7 +422,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49508,
@@ -414,7 +435,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49510,
@@ -426,7 +448,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49472,
@@ -438,7 +461,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49488,
@@ -450,7 +474,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49495,
@@ -462,7 +487,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49506,
@@ -474,7 +500,8 @@
       "venue": "Gladsaxe Idrætshal 2",
       "court": "3",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49519,
@@ -486,7 +513,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49479,
@@ -498,7 +526,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49482,
@@ -510,7 +539,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49470,
@@ -522,7 +552,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49535,
@@ -534,7 +565,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49517,
@@ -546,7 +578,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49528,
@@ -558,7 +591,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49460,
@@ -570,7 +604,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49511,
@@ -582,7 +617,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49463,
@@ -594,7 +630,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49474,
@@ -606,7 +643,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49526,
@@ -618,7 +656,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49466,
@@ -630,7 +669,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49469,
@@ -642,7 +682,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49483,
@@ -654,7 +695,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49529,
@@ -666,7 +708,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49541,
@@ -678,7 +721,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49464,
@@ -690,7 +734,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49480,
@@ -702,7 +747,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49490,
@@ -714,7 +760,8 @@
       "venue": "Gladsaxe Idrætshal 2",
       "court": "2",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49489,
@@ -726,7 +773,8 @@
       "venue": "Søndermarkshallen (Slagelse)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49487,
@@ -738,7 +786,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49522,
@@ -750,7 +799,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49501,
@@ -762,7 +812,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49520,
@@ -774,7 +825,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49538,
@@ -786,7 +838,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49536,
@@ -798,7 +851,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49539,
@@ -810,7 +864,8 @@
       "venue": "Gentoftehallen 1 - Hal B",
       "court": "",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49492,
@@ -822,7 +877,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49515,
@@ -834,7 +890,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49497,
@@ -846,7 +903,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49534,
@@ -858,7 +916,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49503,
@@ -870,7 +929,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49505,
@@ -882,7 +942,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49530,
@@ -894,7 +955,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49525,
@@ -906,7 +968,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49516,
@@ -918,7 +981,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49523,
@@ -930,7 +994,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49518,
@@ -942,7 +1007,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49533,
@@ -954,7 +1020,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49531,
@@ -966,7 +1033,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -3491,7 +3559,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_2_1",
   "cumulative_points": [
     {
       "team": "Gentofte Volley.3",
@@ -3602,8 +3670,8 @@
       "team": "VK Vestsjælland.2",
       "date": "2021-10-10T10:00:00",
       "game_number": 2,
-      "points": 3,
-      "cumulative_points": 3,
+      "points": 2,
+      "cumulative_points": 2,
       "kamp_id": 49513
     },
     {
@@ -3666,16 +3734,16 @@
       "team": "VK Vestsjælland.2",
       "date": "2021-10-17T10:00:00",
       "game_number": 3,
-      "points": 3,
-      "cumulative_points": 6,
+      "points": 2,
+      "cumulative_points": 4,
       "kamp_id": 49467
     },
     {
       "team": "VK Holbæk",
       "date": "2021-10-30T12:00:00",
       "game_number": 3,
-      "points": 3,
-      "cumulative_points": 9,
+      "points": 2,
+      "cumulative_points": 8,
       "kamp_id": 49461
     },
     {
@@ -3683,7 +3751,7 @@
       "date": "2021-10-30T12:00:00",
       "game_number": 4,
       "points": 1,
-      "cumulative_points": 7,
+      "cumulative_points": 5,
       "kamp_id": 49461
     },
     {
@@ -3698,8 +3766,8 @@
       "team": "Gentofte Volley.3",
       "date": "2021-10-30T16:00:00",
       "game_number": 4,
-      "points": 3,
-      "cumulative_points": 10,
+      "points": 2,
+      "cumulative_points": 9,
       "kamp_id": 49473
     },
     {
@@ -3714,8 +3782,8 @@
       "team": "VK Næstved",
       "date": "2021-10-31T14:00:00",
       "game_number": 3,
-      "points": 3,
-      "cumulative_points": 4,
+      "points": 2,
+      "cumulative_points": 3,
       "kamp_id": 49500
     },
     {
@@ -3723,7 +3791,7 @@
       "date": "2021-11-07T12:00:00",
       "game_number": 5,
       "points": 3,
-      "cumulative_points": 10,
+      "cumulative_points": 8,
       "kamp_id": 49485
     },
     {
@@ -3731,7 +3799,7 @@
       "date": "2021-11-07T12:00:00",
       "game_number": 4,
       "points": 0,
-      "cumulative_points": 4,
+      "cumulative_points": 3,
       "kamp_id": 49485
     },
     {
@@ -3739,7 +3807,7 @@
       "date": "2021-11-07T12:00:00",
       "game_number": 5,
       "points": 0,
-      "cumulative_points": 10,
+      "cumulative_points": 9,
       "kamp_id": 49507
     },
     {
@@ -3747,7 +3815,7 @@
       "date": "2021-11-07T12:00:00",
       "game_number": 4,
       "points": 3,
-      "cumulative_points": 12,
+      "cumulative_points": 11,
       "kamp_id": 49507
     },
     {
@@ -3771,7 +3839,7 @@
       "date": "2021-11-14T12:00:00",
       "game_number": 5,
       "points": 3,
-      "cumulative_points": 7,
+      "cumulative_points": 6,
       "kamp_id": 49462
     },
     {
@@ -3795,7 +3863,7 @@
       "date": "2021-11-21T11:00:00",
       "game_number": 6,
       "points": 0,
-      "cumulative_points": 10,
+      "cumulative_points": 8,
       "kamp_id": 49498
     },
     {
@@ -3811,7 +3879,7 @@
       "date": "2021-11-21T14:00:00",
       "game_number": 6,
       "points": 0,
-      "cumulative_points": 7,
+      "cumulative_points": 6,
       "kamp_id": 49508
     },
     {
@@ -3827,7 +3895,7 @@
       "date": "2021-11-21T16:00:00",
       "game_number": 5,
       "points": 3,
-      "cumulative_points": 15,
+      "cumulative_points": 14,
       "kamp_id": 49510
     },
     {
@@ -3835,7 +3903,7 @@
       "date": "2021-11-27T17:00:00",
       "game_number": 7,
       "points": 3,
-      "cumulative_points": 10,
+      "cumulative_points": 9,
       "kamp_id": 49472
     },
     {
@@ -3867,7 +3935,7 @@
       "date": "2021-11-28T12:00:00",
       "game_number": 7,
       "points": 3,
-      "cumulative_points": 13,
+      "cumulative_points": 11,
       "kamp_id": 49495
     },
     {
@@ -3875,7 +3943,7 @@
       "date": "2021-11-28T12:00:00",
       "game_number": 6,
       "points": 0,
-      "cumulative_points": 10,
+      "cumulative_points": 9,
       "kamp_id": 49495
     },
     {
@@ -3907,7 +3975,7 @@
       "date": "2021-12-01T20:45:00",
       "game_number": 6,
       "points": 0,
-      "cumulative_points": 15,
+      "cumulative_points": 14,
       "kamp_id": 49519
     },
     {
@@ -3915,15 +3983,15 @@
       "date": "2021-12-04T14:00:00",
       "game_number": 7,
       "points": 1,
-      "cumulative_points": 16,
+      "cumulative_points": 15,
       "kamp_id": 49479
     },
     {
       "team": "Gentofte Volley.3",
       "date": "2021-12-04T14:00:00",
       "game_number": 7,
-      "points": 3,
-      "cumulative_points": 13,
+      "points": 2,
+      "cumulative_points": 11,
       "kamp_id": 49479
     },
     {
@@ -3931,7 +3999,7 @@
       "date": "2021-12-11T12:00:00",
       "game_number": 8,
       "points": 3,
-      "cumulative_points": 19,
+      "cumulative_points": 18,
       "kamp_id": 49482
     },
     {
@@ -3947,7 +4015,7 @@
       "date": "2021-12-12T12:00:00",
       "game_number": 8,
       "points": 3,
-      "cumulative_points": 16,
+      "cumulative_points": 14,
       "kamp_id": 49470
     },
     {
@@ -3963,7 +4031,7 @@
       "date": "2021-12-18T14:00:00",
       "game_number": 9,
       "points": 3,
-      "cumulative_points": 22,
+      "cumulative_points": 21,
       "kamp_id": 49535
     },
     {
@@ -3971,7 +4039,7 @@
       "date": "2021-12-18T14:00:00",
       "game_number": 8,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 11,
       "kamp_id": 49535
     },
     {
@@ -3979,7 +4047,7 @@
       "date": "2022-01-08T12:00:00",
       "game_number": 10,
       "points": 3,
-      "cumulative_points": 25,
+      "cumulative_points": 24,
       "kamp_id": 49517
     },
     {
@@ -3987,7 +4055,7 @@
       "date": "2022-01-08T12:00:00",
       "game_number": 9,
       "points": 0,
-      "cumulative_points": 16,
+      "cumulative_points": 14,
       "kamp_id": 49517
     },
     {
@@ -3995,7 +4063,7 @@
       "date": "2022-01-09T10:00:00",
       "game_number": 8,
       "points": 3,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49528
     },
     {
@@ -4035,7 +4103,7 @@
       "date": "2022-01-16T09:00:00",
       "game_number": 9,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 11,
       "kamp_id": 49511
     },
     {
@@ -4051,7 +4119,7 @@
       "date": "2022-01-16T13:00:00",
       "game_number": 11,
       "points": 3,
-      "cumulative_points": 28,
+      "cumulative_points": 27,
       "kamp_id": 49463
     },
     {
@@ -4059,7 +4127,7 @@
       "date": "2022-01-23T12:00:00",
       "game_number": 10,
       "points": 3,
-      "cumulative_points": 16,
+      "cumulative_points": 14,
       "kamp_id": 49474
     },
     {
@@ -4075,7 +4143,7 @@
       "date": "2022-01-23T12:00:00",
       "game_number": 10,
       "points": 3,
-      "cumulative_points": 19,
+      "cumulative_points": 17,
       "kamp_id": 49526
     },
     {
@@ -4107,7 +4175,7 @@
       "date": "2022-01-29T14:00:00",
       "game_number": 12,
       "points": 3,
-      "cumulative_points": 31,
+      "cumulative_points": 30,
       "kamp_id": 49469
     },
     {
@@ -4115,15 +4183,15 @@
       "date": "2022-01-29T14:00:00",
       "game_number": 9,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49469
     },
     {
       "team": "Gentofte Volley.3",
       "date": "2022-01-29T14:00:00",
       "game_number": 11,
-      "points": 3,
-      "cumulative_points": 19,
+      "points": 2,
+      "cumulative_points": 16,
       "kamp_id": 49483
     },
     {
@@ -4147,7 +4215,7 @@
       "date": "2022-01-30T10:00:00",
       "game_number": 12,
       "points": 3,
-      "cumulative_points": 22,
+      "cumulative_points": 19,
       "kamp_id": 49529
     },
     {
@@ -4155,7 +4223,7 @@
       "date": "2022-01-30T12:00:00",
       "game_number": 10,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49541
     },
     {
@@ -4163,7 +4231,7 @@
       "date": "2022-01-30T12:00:00",
       "game_number": 11,
       "points": 3,
-      "cumulative_points": 22,
+      "cumulative_points": 20,
       "kamp_id": 49541
     },
     {
@@ -4171,7 +4239,7 @@
       "date": "2022-02-06T12:00:00",
       "game_number": 12,
       "points": 3,
-      "cumulative_points": 25,
+      "cumulative_points": 23,
       "kamp_id": 49464
     },
     {
@@ -4187,7 +4255,7 @@
       "date": "2022-02-06T12:00:00",
       "game_number": 11,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49480
     },
     {
@@ -4211,7 +4279,7 @@
       "date": "2022-02-08T19:30:00",
       "game_number": 12,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49490
     },
     {
@@ -4219,7 +4287,7 @@
       "date": "2022-02-23T20:00:00",
       "game_number": 13,
       "points": 0,
-      "cumulative_points": 25,
+      "cumulative_points": 23,
       "kamp_id": 49489
     },
     {
@@ -4227,7 +4295,7 @@
       "date": "2022-02-23T20:00:00",
       "game_number": 13,
       "points": 3,
-      "cumulative_points": 34,
+      "cumulative_points": 33,
       "kamp_id": 49489
     },
     {
@@ -4235,7 +4303,7 @@
       "date": "2022-02-23T20:30:00",
       "game_number": 13,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49487
     },
     {
@@ -4243,7 +4311,7 @@
       "date": "2022-02-23T20:30:00",
       "game_number": 13,
       "points": 3,
-      "cumulative_points": 25,
+      "cumulative_points": 22,
       "kamp_id": 49487
     },
     {
@@ -4267,7 +4335,7 @@
       "date": "2022-02-27T12:00:00",
       "game_number": 14,
       "points": 0,
-      "cumulative_points": 25,
+      "cumulative_points": 22,
       "kamp_id": 49501
     },
     {
@@ -4282,8 +4350,8 @@
       "team": "VK Vestsjælland.2",
       "date": "2022-02-27T14:00:00",
       "game_number": 14,
-      "points": 3,
-      "cumulative_points": 28,
+      "points": 2,
+      "cumulative_points": 25,
       "kamp_id": 49520
     },
     {
@@ -4299,7 +4367,7 @@
       "date": "2022-03-05T12:00:00",
       "game_number": 14,
       "points": 3,
-      "cumulative_points": 37,
+      "cumulative_points": 36,
       "kamp_id": 49538
     },
     {
@@ -4315,7 +4383,7 @@
       "date": "2022-03-06T12:00:00",
       "game_number": 14,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49536
     },
     {
@@ -4331,7 +4399,7 @@
       "date": "2022-03-08T18:00:00",
       "game_number": 15,
       "points": 3,
-      "cumulative_points": 28,
+      "cumulative_points": 25,
       "kamp_id": 49539
     },
     {
@@ -4355,7 +4423,7 @@
       "date": "2022-03-10T19:15:00",
       "game_number": 15,
       "points": 3,
-      "cumulative_points": 31,
+      "cumulative_points": 28,
       "kamp_id": 49492
     },
     {
@@ -4363,7 +4431,7 @@
       "date": "2022-03-12T14:30:00",
       "game_number": 16,
       "points": 3,
-      "cumulative_points": 31,
+      "cumulative_points": 28,
       "kamp_id": 49515
     },
     {
@@ -4371,7 +4439,7 @@
       "date": "2022-03-12T14:30:00",
       "game_number": 15,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49515
     },
     {
@@ -4379,7 +4447,7 @@
       "date": "2022-03-13T10:00:00",
       "game_number": 16,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49497
     },
     {
@@ -4387,7 +4455,7 @@
       "date": "2022-03-13T10:00:00",
       "game_number": 15,
       "points": 3,
-      "cumulative_points": 40,
+      "cumulative_points": 39,
       "kamp_id": 49497
     },
     {
@@ -4410,8 +4478,8 @@
       "team": "VK Holbæk",
       "date": "2022-03-19T14:00:00",
       "game_number": 16,
-      "points": 3,
-      "cumulative_points": 43,
+      "points": 2,
+      "cumulative_points": 41,
       "kamp_id": 49503
     },
     {
@@ -4427,7 +4495,7 @@
       "date": "2022-03-20T12:00:00",
       "game_number": 16,
       "points": 3,
-      "cumulative_points": 34,
+      "cumulative_points": 31,
       "kamp_id": 49505
     },
     {
@@ -4443,7 +4511,7 @@
       "date": "2022-03-20T14:00:00",
       "game_number": 17,
       "points": 3,
-      "cumulative_points": 34,
+      "cumulative_points": 31,
       "kamp_id": 49530
     },
     {
@@ -4459,7 +4527,7 @@
       "date": "2022-03-26T12:00:00",
       "game_number": 17,
       "points": 3,
-      "cumulative_points": 46,
+      "cumulative_points": 44,
       "kamp_id": 49525
     },
     {
@@ -4467,7 +4535,7 @@
       "date": "2022-03-26T12:00:00",
       "game_number": 17,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49525
     },
     {
@@ -4491,15 +4559,15 @@
       "date": "2022-03-27T14:00:00",
       "game_number": 18,
       "points": 1,
-      "cumulative_points": 35,
+      "cumulative_points": 32,
       "kamp_id": 49523
     },
     {
       "team": "VK Vestsjælland.2",
       "date": "2022-03-27T14:00:00",
       "game_number": 17,
-      "points": 3,
-      "cumulative_points": 37,
+      "points": 2,
+      "cumulative_points": 33,
       "kamp_id": 49523
     },
     {
@@ -4507,7 +4575,7 @@
       "date": "2022-04-03T12:00:00",
       "game_number": 18,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49518
     },
     {
@@ -4531,7 +4599,7 @@
       "date": "2022-04-03T14:00:00",
       "game_number": 18,
       "points": 0,
-      "cumulative_points": 37,
+      "cumulative_points": 33,
       "kamp_id": 49533
     },
     {
@@ -4547,7 +4615,7 @@
       "date": "2022-04-10T13:00:00",
       "game_number": 18,
       "points": 3,
-      "cumulative_points": 49,
+      "cumulative_points": 47,
       "kamp_id": 49531
     }
   ],

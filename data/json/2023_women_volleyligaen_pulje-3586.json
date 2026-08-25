@@ -1,14 +1,13 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
-      "mismatch_count": 6,
-      "affected_teams": 6,
-      "affected_fields": [
-        "points"
-      ]
+      "mismatch_count": 0,
+      "affected_teams": 0,
+      "affected_fields": []
     }
   },
   "pool": {
@@ -16,7 +15,13 @@
     "league_id": "2023:women:volleyligaen",
     "name": "Række 1",
     "pulje_id": 3586,
-    "division": "Volleyligaen"
+    "season_id": "2023",
+    "gender": "Kvinde",
+    "division": "Volleyligaen",
+    "league_name": "Volleyligaen Kvinder",
+    "raekke_id": 1931,
+    "season_value": "2023",
+    "season_start_year": 2023
   },
   "source_standings": [
     {
@@ -114,7 +119,7 @@
   "computed_standings": [
     {
       "pool_id": "2023:women:volleyligaen:pulje-3586",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "Holte IF",
       "games_played": 18,
@@ -124,11 +129,11 @@
       "sets_lost": 12,
       "balls_won": 1483,
       "balls_lost": 1143,
-      "points": 47
+      "points": 49
     },
     {
       "pool_id": "2023:women:volleyligaen:pulje-3586",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "ASV Elite",
       "games_played": 18,
@@ -138,11 +143,11 @@
       "sets_lost": 11,
       "balls_won": 1412,
       "balls_lost": 1084,
-      "points": 47
+      "points": 48
     },
     {
       "pool_id": "2023:women:volleyligaen:pulje-3586",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "Gentofte Volley",
       "games_played": 18,
@@ -152,11 +157,11 @@
       "sets_lost": 28,
       "balls_won": 1493,
       "balls_lost": 1377,
-      "points": 34
+      "points": 36
     },
     {
       "pool_id": "2023:women:volleyligaen:pulje-3586",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "Brøndby VK",
       "games_played": 18,
@@ -166,11 +171,11 @@
       "sets_lost": 32,
       "balls_won": 1515,
       "balls_lost": 1463,
-      "points": 28
+      "points": 30
     },
     {
       "pool_id": "2023:women:volleyligaen:pulje-3586",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Ikast KFUM",
       "games_played": 18,
@@ -180,11 +185,11 @@
       "sets_lost": 37,
       "balls_won": 1362,
       "balls_lost": 1380,
-      "points": 20
+      "points": 22
     },
     {
       "pool_id": "2023:women:volleyligaen:pulje-3586",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "DHV Odense",
       "games_played": 18,
@@ -198,7 +203,7 @@
     },
     {
       "pool_id": "2023:women:volleyligaen:pulje-3586",
-      "rule_profile": "dt_2025_volleyligaen",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "Team Køge",
       "games_played": 18,
@@ -208,7 +213,7 @@
       "sets_lost": 53,
       "balls_won": 866,
       "balls_lost": 1437,
-      "points": 2
+      "points": 3
     }
   ],
   "matches": [
@@ -222,7 +227,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61834,
@@ -234,7 +240,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61832,
@@ -246,7 +253,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61817,
@@ -258,7 +266,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61830,
@@ -270,7 +279,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61823,
@@ -282,7 +292,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61821,
@@ -294,7 +305,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61833,
@@ -306,7 +318,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61816,
@@ -318,7 +331,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61837,
@@ -330,7 +344,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61838,
@@ -342,7 +357,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61836,
@@ -354,7 +370,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61841,
@@ -366,7 +383,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61827,
@@ -378,7 +396,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61842,
@@ -390,7 +409,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61831,
@@ -402,7 +422,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61840,
@@ -414,7 +435,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61829,
@@ -426,7 +448,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61820,
@@ -438,7 +461,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61824,
@@ -450,7 +474,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61826,
@@ -462,7 +487,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61854,
@@ -474,7 +500,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61868,
@@ -486,7 +513,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61873,
@@ -498,7 +526,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61859,
@@ -510,7 +539,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61844,
@@ -522,7 +552,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61848,
@@ -534,7 +565,8 @@
       "venue": "Sportscenter Ikast Hal A",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61852,
@@ -546,7 +578,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61861,
@@ -558,7 +591,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61851,
@@ -570,7 +604,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61870,
@@ -582,7 +617,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61855,
@@ -594,7 +630,8 @@
       "venue": "Sportscenter Ikast Hal A",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61860,
@@ -606,7 +643,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61864,
@@ -618,7 +656,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61865,
@@ -630,7 +669,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61857,
@@ -642,7 +682,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61846,
@@ -654,7 +695,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61849,
@@ -666,7 +708,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61858,
@@ -678,7 +721,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61869,
@@ -690,7 +734,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61862,
@@ -702,7 +747,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61879,
@@ -714,7 +760,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61877,
@@ -726,7 +773,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61892,
@@ -738,7 +786,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61885,
@@ -750,7 +799,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61886,
@@ -762,7 +812,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61897,
@@ -774,7 +825,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61888,
@@ -786,7 +838,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61894,
@@ -798,7 +851,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61889,
@@ -810,7 +864,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61866,
@@ -822,7 +877,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61876,
@@ -834,7 +890,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61872,
@@ -846,7 +903,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61887,
@@ -858,7 +916,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61845,
@@ -870,7 +929,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61898,
@@ -882,7 +942,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61896,
@@ -894,7 +955,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61890,
@@ -906,7 +968,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61874,
@@ -918,7 +981,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61893,
@@ -930,7 +994,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61882,
@@ -942,7 +1007,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61883,
@@ -954,7 +1020,8 @@
       "venue": "Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61880,
@@ -966,7 +1033,8 @@
       "venue": "Ny Holtehal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -3491,7 +3559,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_volleyligaen",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "ASV Elite",
@@ -3658,8 +3726,8 @@
       "team": "Gentofte Volley",
       "date": "2023-10-14T16:00:00",
       "game_number": 2,
-      "points": 2,
-      "cumulative_points": 5,
+      "points": 3,
+      "cumulative_points": 6,
       "kamp_id": 61833
     },
     {
@@ -3731,15 +3799,15 @@
       "date": "2023-10-22T14:00:00",
       "game_number": 3,
       "points": 0,
-      "cumulative_points": 5,
+      "cumulative_points": 6,
       "kamp_id": 61836
     },
     {
       "team": "ASV Elite",
       "date": "2023-10-28T13:00:00",
       "game_number": 5,
-      "points": 2,
-      "cumulative_points": 14,
+      "points": 3,
+      "cumulative_points": 15,
       "kamp_id": 61841
     },
     {
@@ -3747,7 +3815,7 @@
       "date": "2023-10-28T13:00:00",
       "game_number": 4,
       "points": 1,
-      "cumulative_points": 6,
+      "cumulative_points": 7,
       "kamp_id": 61841
     },
     {
@@ -3795,7 +3863,7 @@
       "date": "2023-11-02T18:30:00",
       "game_number": 6,
       "points": 3,
-      "cumulative_points": 17,
+      "cumulative_points": 18,
       "kamp_id": 61831
     },
     {
@@ -3835,7 +3903,7 @@
       "date": "2023-11-04T16:00:00",
       "game_number": 5,
       "points": 3,
-      "cumulative_points": 9,
+      "cumulative_points": 10,
       "kamp_id": 61820
     },
     {
@@ -3875,7 +3943,7 @@
       "date": "2023-11-07T19:15:00",
       "game_number": 6,
       "points": 3,
-      "cumulative_points": 12,
+      "cumulative_points": 13,
       "kamp_id": 61826
     },
     {
@@ -3883,7 +3951,7 @@
       "date": "2023-11-18T16:00:00",
       "game_number": 7,
       "points": 3,
-      "cumulative_points": 15,
+      "cumulative_points": 16,
       "kamp_id": 61854
     },
     {
@@ -3923,7 +3991,7 @@
       "date": "2023-11-19T14:00:00",
       "game_number": 7,
       "points": 3,
-      "cumulative_points": 20,
+      "cumulative_points": 21,
       "kamp_id": 61873
     },
     {
@@ -3939,7 +4007,7 @@
       "date": "2023-11-25T12:00:00",
       "game_number": 8,
       "points": 3,
-      "cumulative_points": 23,
+      "cumulative_points": 24,
       "kamp_id": 61859
     },
     {
@@ -3971,7 +4039,7 @@
       "date": "2023-11-26T16:00:00",
       "game_number": 8,
       "points": 3,
-      "cumulative_points": 18,
+      "cumulative_points": 19,
       "kamp_id": 61848
     },
     {
@@ -4003,7 +4071,7 @@
       "date": "2023-12-02T14:00:00",
       "game_number": 9,
       "points": 0,
-      "cumulative_points": 18,
+      "cumulative_points": 19,
       "kamp_id": 61861
     },
     {
@@ -4011,7 +4079,7 @@
       "date": "2023-12-02T16:00:00",
       "game_number": 9,
       "points": 3,
-      "cumulative_points": 26,
+      "cumulative_points": 27,
       "kamp_id": 61851
     },
     {
@@ -4050,8 +4118,8 @@
       "team": "Brøndby VK",
       "date": "2023-12-09T16:00:00",
       "game_number": 9,
-      "points": 2,
-      "cumulative_points": 15,
+      "points": 3,
+      "cumulative_points": 16,
       "kamp_id": 61855
     },
     {
@@ -4067,7 +4135,7 @@
       "date": "2023-12-10T14:00:00",
       "game_number": 10,
       "points": 0,
-      "cumulative_points": 26,
+      "cumulative_points": 27,
       "kamp_id": 61860
     },
     {
@@ -4075,15 +4143,15 @@
       "date": "2024-01-06T14:00:00",
       "game_number": 10,
       "points": 1,
-      "cumulative_points": 19,
+      "cumulative_points": 20,
       "kamp_id": 61864
     },
     {
       "team": "Holte IF",
       "date": "2024-01-06T14:00:00",
       "game_number": 11,
-      "points": 2,
-      "cumulative_points": 29,
+      "points": 3,
+      "cumulative_points": 30,
       "kamp_id": 61864
     },
     {
@@ -4091,7 +4159,7 @@
       "date": "2024-01-06T14:00:00",
       "game_number": 11,
       "points": 3,
-      "cumulative_points": 29,
+      "cumulative_points": 30,
       "kamp_id": 61865
     },
     {
@@ -4099,7 +4167,7 @@
       "date": "2024-01-06T14:00:00",
       "game_number": 10,
       "points": 0,
-      "cumulative_points": 15,
+      "cumulative_points": 16,
       "kamp_id": 61865
     },
     {
@@ -4107,7 +4175,7 @@
       "date": "2024-01-13T14:00:00",
       "game_number": 11,
       "points": 3,
-      "cumulative_points": 18,
+      "cumulative_points": 19,
       "kamp_id": 61857
     },
     {
@@ -4131,7 +4199,7 @@
       "date": "2024-01-14T12:00:00",
       "game_number": 11,
       "points": 3,
-      "cumulative_points": 22,
+      "cumulative_points": 23,
       "kamp_id": 61846
     },
     {
@@ -4139,7 +4207,7 @@
       "date": "2024-01-20T14:00:00",
       "game_number": 12,
       "points": 3,
-      "cumulative_points": 21,
+      "cumulative_points": 22,
       "kamp_id": 61849
     },
     {
@@ -4154,8 +4222,8 @@
       "team": "Ikast KFUM",
       "date": "2024-01-20T15:30:00",
       "game_number": 10,
-      "points": 2,
-      "cumulative_points": 9,
+      "points": 3,
+      "cumulative_points": 10,
       "kamp_id": 61858
     },
     {
@@ -4163,7 +4231,7 @@
       "date": "2024-01-20T15:30:00",
       "game_number": 12,
       "points": 1,
-      "cumulative_points": 30,
+      "cumulative_points": 31,
       "kamp_id": 61858
     },
     {
@@ -4171,7 +4239,7 @@
       "date": "2024-01-21T14:00:00",
       "game_number": 12,
       "points": 3,
-      "cumulative_points": 32,
+      "cumulative_points": 33,
       "kamp_id": 61869
     },
     {
@@ -4179,7 +4247,7 @@
       "date": "2024-01-21T14:00:00",
       "game_number": 12,
       "points": 0,
-      "cumulative_points": 22,
+      "cumulative_points": 23,
       "kamp_id": 61869
     },
     {
@@ -4187,7 +4255,7 @@
       "date": "2024-01-21T16:00:00",
       "game_number": 11,
       "points": 3,
-      "cumulative_points": 12,
+      "cumulative_points": 13,
       "kamp_id": 61862
     },
     {
@@ -4211,7 +4279,7 @@
       "date": "2024-01-27T13:30:00",
       "game_number": 13,
       "points": 3,
-      "cumulative_points": 35,
+      "cumulative_points": 36,
       "kamp_id": 61879
     },
     {
@@ -4226,40 +4294,40 @@
       "team": "Brøndby VK",
       "date": "2024-01-27T17:00:00",
       "game_number": 13,
-      "points": 2,
-      "cumulative_points": 23,
+      "points": 3,
+      "cumulative_points": 25,
       "kamp_id": 61877
     },
     {
       "team": "Holte IF",
       "date": "2024-01-28T14:00:00",
       "game_number": 13,
-      "points": 2,
-      "cumulative_points": 32,
+      "points": 3,
+      "cumulative_points": 34,
       "kamp_id": 61892
     },
     {
       "team": "Gentofte Volley",
       "date": "2024-01-28T14:00:00",
       "game_number": 13,
-      "points": 1,
-      "cumulative_points": 23,
-      "kamp_id": 61892
-    },
-    {
-      "team": "Team Køge",
-      "date": "2024-02-10T13:30:00",
-      "game_number": 14,
-      "points": 2,
-      "cumulative_points": 2,
-      "kamp_id": 61885
-    },
-    {
-      "team": "Brøndby VK",
-      "date": "2024-02-10T13:30:00",
-      "game_number": 14,
       "points": 1,
       "cumulative_points": 24,
+      "kamp_id": 61892
+    },
+    {
+      "team": "Team Køge",
+      "date": "2024-02-10T13:30:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 61885
+    },
+    {
+      "team": "Brøndby VK",
+      "date": "2024-02-10T13:30:00",
+      "game_number": 14,
+      "points": 1,
+      "cumulative_points": 26,
       "kamp_id": 61885
     },
     {
@@ -4267,7 +4335,7 @@
       "date": "2024-02-10T14:00:00",
       "game_number": 12,
       "points": 0,
-      "cumulative_points": 12,
+      "cumulative_points": 13,
       "kamp_id": 61886
     },
     {
@@ -4275,7 +4343,7 @@
       "date": "2024-02-10T14:00:00",
       "game_number": 14,
       "points": 3,
-      "cumulative_points": 35,
+      "cumulative_points": 37,
       "kamp_id": 61886
     },
     {
@@ -4283,7 +4351,7 @@
       "date": "2024-02-10T14:00:00",
       "game_number": 14,
       "points": 0,
-      "cumulative_points": 23,
+      "cumulative_points": 24,
       "kamp_id": 61897
     },
     {
@@ -4291,7 +4359,7 @@
       "date": "2024-02-10T14:00:00",
       "game_number": 14,
       "points": 3,
-      "cumulative_points": 38,
+      "cumulative_points": 39,
       "kamp_id": 61897
     },
     {
@@ -4299,7 +4367,7 @@
       "date": "2024-02-17T15:00:00",
       "game_number": 15,
       "points": 0,
-      "cumulative_points": 38,
+      "cumulative_points": 39,
       "kamp_id": 61888
     },
     {
@@ -4307,7 +4375,7 @@
       "date": "2024-02-17T15:00:00",
       "game_number": 15,
       "points": 3,
-      "cumulative_points": 38,
+      "cumulative_points": 40,
       "kamp_id": 61888
     },
     {
@@ -4323,15 +4391,15 @@
       "date": "2024-02-17T15:00:00",
       "game_number": 13,
       "points": 3,
-      "cumulative_points": 15,
+      "cumulative_points": 16,
       "kamp_id": 61894
     },
     {
       "team": "Gentofte Volley",
       "date": "2024-02-20T20:00:00",
       "game_number": 15,
-      "points": 2,
-      "cumulative_points": 25,
+      "points": 3,
+      "cumulative_points": 27,
       "kamp_id": 61889
     },
     {
@@ -4339,15 +4407,15 @@
       "date": "2024-02-20T20:00:00",
       "game_number": 15,
       "points": 1,
-      "cumulative_points": 25,
+      "cumulative_points": 27,
       "kamp_id": 61889
     },
     {
       "team": "Ikast KFUM",
       "date": "2024-02-22T20:15:00",
       "game_number": 14,
-      "points": 2,
-      "cumulative_points": 17,
+      "points": 3,
+      "cumulative_points": 19,
       "kamp_id": 61866
     },
     {
@@ -4363,7 +4431,7 @@
       "date": "2024-02-24T15:00:00",
       "game_number": 15,
       "points": 0,
-      "cumulative_points": 17,
+      "cumulative_points": 19,
       "kamp_id": 61876
     },
     {
@@ -4371,7 +4439,7 @@
       "date": "2024-02-24T15:00:00",
       "game_number": 16,
       "points": 3,
-      "cumulative_points": 28,
+      "cumulative_points": 30,
       "kamp_id": 61876
     },
     {
@@ -4379,7 +4447,7 @@
       "date": "2024-02-24T16:00:00",
       "game_number": 16,
       "points": 3,
-      "cumulative_points": 41,
+      "cumulative_points": 43,
       "kamp_id": 61872
     },
     {
@@ -4387,7 +4455,7 @@
       "date": "2024-02-24T16:00:00",
       "game_number": 15,
       "points": 0,
-      "cumulative_points": 2,
+      "cumulative_points": 3,
       "kamp_id": 61872
     },
     {
@@ -4395,7 +4463,7 @@
       "date": "2024-02-24T16:00:00",
       "game_number": 16,
       "points": 3,
-      "cumulative_points": 41,
+      "cumulative_points": 42,
       "kamp_id": 61887
     },
     {
@@ -4411,7 +4479,7 @@
       "date": "2024-02-29T18:00:00",
       "game_number": 17,
       "points": 3,
-      "cumulative_points": 44,
+      "cumulative_points": 45,
       "kamp_id": 61845
     },
     {
@@ -4419,7 +4487,7 @@
       "date": "2024-02-29T18:00:00",
       "game_number": 16,
       "points": 0,
-      "cumulative_points": 17,
+      "cumulative_points": 19,
       "kamp_id": 61845
     },
     {
@@ -4435,7 +4503,7 @@
       "date": "2024-02-29T18:30:00",
       "game_number": 16,
       "points": 0,
-      "cumulative_points": 2,
+      "cumulative_points": 3,
       "kamp_id": 61898
     },
     {
@@ -4443,7 +4511,7 @@
       "date": "2024-02-29T20:00:00",
       "game_number": 16,
       "points": 0,
-      "cumulative_points": 25,
+      "cumulative_points": 27,
       "kamp_id": 61896
     },
     {
@@ -4451,7 +4519,7 @@
       "date": "2024-02-29T20:00:00",
       "game_number": 17,
       "points": 3,
-      "cumulative_points": 44,
+      "cumulative_points": 46,
       "kamp_id": 61896
     },
     {
@@ -4459,7 +4527,7 @@
       "date": "2024-03-09T13:30:00",
       "game_number": 17,
       "points": 0,
-      "cumulative_points": 2,
+      "cumulative_points": 3,
       "kamp_id": 61890
     },
     {
@@ -4467,7 +4535,7 @@
       "date": "2024-03-09T13:30:00",
       "game_number": 17,
       "points": 3,
-      "cumulative_points": 20,
+      "cumulative_points": 22,
       "kamp_id": 61890
     },
     {
@@ -4475,7 +4543,7 @@
       "date": "2024-03-09T14:00:00",
       "game_number": 17,
       "points": 3,
-      "cumulative_points": 31,
+      "cumulative_points": 33,
       "kamp_id": 61874
     },
     {
@@ -4491,7 +4559,7 @@
       "date": "2024-03-09T14:00:00",
       "game_number": 17,
       "points": 0,
-      "cumulative_points": 25,
+      "cumulative_points": 27,
       "kamp_id": 61893
     },
     {
@@ -4499,7 +4567,7 @@
       "date": "2024-03-09T14:00:00",
       "game_number": 18,
       "points": 3,
-      "cumulative_points": 47,
+      "cumulative_points": 48,
       "kamp_id": 61893
     },
     {
@@ -4507,7 +4575,7 @@
       "date": "2024-03-16T12:00:00",
       "game_number": 18,
       "points": 3,
-      "cumulative_points": 34,
+      "cumulative_points": 36,
       "kamp_id": 61882
     },
     {
@@ -4515,7 +4583,7 @@
       "date": "2024-03-16T12:00:00",
       "game_number": 18,
       "points": 0,
-      "cumulative_points": 2,
+      "cumulative_points": 3,
       "kamp_id": 61882
     },
     {
@@ -4523,7 +4591,7 @@
       "date": "2024-03-16T14:00:00",
       "game_number": 18,
       "points": 3,
-      "cumulative_points": 28,
+      "cumulative_points": 30,
       "kamp_id": 61883
     },
     {
@@ -4531,7 +4599,7 @@
       "date": "2024-03-16T14:00:00",
       "game_number": 18,
       "points": 0,
-      "cumulative_points": 20,
+      "cumulative_points": 22,
       "kamp_id": 61883
     },
     {
@@ -4539,7 +4607,7 @@
       "date": "2024-03-17T14:00:00",
       "game_number": 18,
       "points": 3,
-      "cumulative_points": 47,
+      "cumulative_points": 49,
       "kamp_id": 61880
     },
     {

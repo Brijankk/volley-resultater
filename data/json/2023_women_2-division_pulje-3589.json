@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2023:women:2-division",
     "name": "Øst",
     "pulje_id": 3589,
-    "division": "2. Division"
+    "season_id": "2023",
+    "gender": "Kvinde",
+    "division": "2. Division",
+    "league_name": "2. Division Kvinder",
+    "raekke_id": 1933,
+    "season_value": "2023",
+    "season_start_year": 2023
   },
   "source_standings": [
     {
@@ -138,7 +145,7 @@
   "computed_standings": [
     {
       "pool_id": "2023:women:2-division:pulje-3589",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "KSV.2",
       "games_played": 16,
@@ -152,7 +159,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3589",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "KV 61",
       "games_played": 16,
@@ -166,7 +173,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3589",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "VK Vestsjælland",
       "games_played": 16,
@@ -180,7 +187,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3589",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "Enghave VK",
       "games_played": 16,
@@ -194,7 +201,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3589",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "Frederiksberg Volley",
       "games_played": 16,
@@ -208,7 +215,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3589",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "DTU Volley",
       "games_played": 16,
@@ -222,7 +229,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3589",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "VK Holbæk",
       "games_played": 16,
@@ -236,7 +243,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3589",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "Lyngby-Gladsaxe Volley.2",
       "games_played": 16,
@@ -250,7 +257,7 @@
     },
     {
       "pool_id": "2023:women:2-division:pulje-3589",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "Hillerød G & I",
       "games_played": 16,
@@ -274,7 +281,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61464,
@@ -286,7 +294,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61465,
@@ -298,7 +307,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61462,
@@ -310,7 +320,8 @@
       "venue": "Bavnehøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61468,
@@ -322,7 +333,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61469,
@@ -334,7 +346,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61467,
@@ -346,7 +359,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61471,
@@ -358,7 +372,8 @@
       "venue": "Bülowsvejhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61473,
@@ -370,7 +385,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61476,
@@ -382,7 +398,8 @@
       "venue": "Bülowsvejhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61481,
@@ -394,7 +411,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61478,
@@ -406,7 +424,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61479,
@@ -418,7 +437,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61477,
@@ -430,7 +450,8 @@
       "venue": "Bavnehøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61483,
@@ -442,7 +463,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61485,
@@ -454,7 +476,8 @@
       "venue": "Bülowsvejhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61482,
@@ -466,7 +489,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61484,
@@ -478,7 +502,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61504,
@@ -490,7 +515,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61475,
@@ -502,7 +528,8 @@
       "venue": "Sophienborgskolen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61488,
@@ -514,7 +541,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61489,
@@ -526,7 +554,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61490,
@@ -538,7 +567,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61487,
@@ -550,7 +580,8 @@
       "venue": "Bavnehøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61495,
@@ -562,7 +593,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61494,
@@ -574,7 +606,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61493,
@@ -586,7 +619,8 @@
       "venue": "Sophienborgskolen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61498,
@@ -598,7 +632,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61500,
@@ -610,7 +645,8 @@
       "venue": "Søndermarkshallen (Slagelse)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61501,
@@ -622,7 +658,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61499,
@@ -634,7 +671,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61502,
@@ -646,7 +684,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61506,
@@ -658,7 +697,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61505,
@@ -670,7 +710,8 @@
       "venue": "Sophienborgskolen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61507,
@@ -682,7 +723,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61510,
@@ -694,7 +736,8 @@
       "venue": "Bülowsvejhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61508,
@@ -706,7 +749,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61492,
@@ -718,7 +762,8 @@
       "venue": "Kedelhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61513,
@@ -730,7 +775,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61516,
@@ -742,7 +788,8 @@
       "venue": "Sophienborgskolen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61512,
@@ -754,7 +801,8 @@
       "venue": "Bavnehøjhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61514,
@@ -766,7 +814,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61521,
@@ -778,7 +827,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61520,
@@ -790,7 +840,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61517,
@@ -802,7 +853,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61518,
@@ -814,7 +866,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61522,
@@ -826,7 +879,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61524,
@@ -838,7 +892,8 @@
       "venue": "Bülowsvejhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61472,
@@ -850,7 +905,8 @@
       "venue": "Bavnehøjhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61523,
@@ -862,7 +918,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61529,
@@ -874,7 +931,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 61528,
@@ -886,7 +944,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61530,
@@ -898,7 +957,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61509,
@@ -910,7 +970,8 @@
       "venue": "Sophienborgskolen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61527,
@@ -922,7 +983,8 @@
       "venue": "Bavnehøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61533,
@@ -934,7 +996,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61535,
@@ -946,7 +1009,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61526,
@@ -958,7 +1022,8 @@
       "venue": "Sophienborgskolen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61534,
@@ -970,7 +1035,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61532,
@@ -982,7 +1048,8 @@
       "venue": "Sophienborgskolen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61538,
@@ -994,7 +1061,8 @@
       "venue": "Bjergmarkshallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61537,
@@ -1006,7 +1074,8 @@
       "venue": "Bavnehøjhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61540,
@@ -1018,7 +1087,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61539,
@@ -1030,7 +1100,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61545,
@@ -1042,7 +1113,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61546,
@@ -1054,7 +1126,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61543,
@@ -1066,7 +1139,8 @@
       "venue": "Bülowsvejhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61544,
@@ -1078,7 +1152,8 @@
       "venue": "Sophienborgskolen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 61551,
@@ -1090,7 +1165,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61547,
@@ -1102,7 +1178,8 @@
       "venue": "Bavnehøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 61549,
@@ -1114,7 +1191,8 @@
       "venue": "Idrætshuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 61550,
@@ -1126,7 +1204,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4011,7 +4090,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "DTU Volley",

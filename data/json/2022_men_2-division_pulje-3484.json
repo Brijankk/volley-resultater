@@ -1,8 +1,9 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_3_1",
     "validation": {
       "mismatch_count": 0,
       "affected_teams": 0,
@@ -14,7 +15,13 @@
     "league_id": "2022:men:2-division",
     "name": "Øst",
     "pulje_id": 3484,
-    "division": "2. Division"
+    "season_id": "2022",
+    "gender": "Mand",
+    "division": "2. Division",
+    "league_name": "2. Division Herrer",
+    "raekke_id": 1854,
+    "season_value": "2022",
+    "season_start_year": 2022
   },
   "source_standings": [
     {
@@ -151,7 +158,7 @@
   "computed_standings": [
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "VK Vestsjælland Wildcard",
       "games_played": 18,
@@ -165,7 +172,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 2,
       "team_name": "RS Rødovre",
       "games_played": 18,
@@ -179,7 +186,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 3,
       "team_name": "Gentofte Volley Wildcard",
       "games_played": 18,
@@ -193,7 +200,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "Team Køge",
       "games_played": 18,
@@ -207,7 +214,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 5,
       "team_name": "KV 61",
       "games_played": 18,
@@ -221,7 +228,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 6,
       "team_name": "Lyngby-Gladsaxe Volley",
       "games_played": 18,
@@ -235,7 +242,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 7,
       "team_name": "VK Næstved",
       "games_played": 18,
@@ -249,7 +256,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 8,
       "team_name": "VK Vestsjælland.2",
       "games_played": 18,
@@ -263,7 +270,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 9,
       "team_name": "Gentofte Volley.3",
       "games_played": 18,
@@ -277,7 +284,7 @@
     },
     {
       "pool_id": "2022:men:2-division:pulje-3484",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_3_1",
       "rank": 10,
       "team_name": "Aarby Volley",
       "games_played": 18,
@@ -301,7 +308,8 @@
       "venue": "Søndermarkshallen (Slagelse)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56851,
@@ -313,7 +321,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56850,
@@ -325,7 +334,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56854,
@@ -337,7 +347,8 @@
       "venue": "Aarby Fritidscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56863,
@@ -349,7 +360,8 @@
       "venue": "Rødovrehallen 7 - Hal",
       "court": "3",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56857,
@@ -361,7 +373,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56860,
@@ -373,7 +386,8 @@
       "venue": "Aarby Fritidscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56858,
@@ -385,7 +399,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56859,
@@ -397,7 +412,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56880,
@@ -409,7 +425,8 @@
       "venue": "Rødovrehallen 7 - Hal",
       "court": "3",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56866,
@@ -421,7 +438,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56865,
@@ -433,7 +451,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56867,
@@ -445,7 +464,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56869,
@@ -457,7 +477,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56870,
@@ -469,7 +490,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56868,
@@ -481,7 +503,8 @@
       "venue": "Rødovrehallen 7 - Hal",
       "court": "3",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56877,
@@ -493,7 +516,8 @@
       "venue": "Gentoftehallen 1 - Hal B",
       "court": "",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56874,
@@ -505,7 +529,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56876,
@@ -517,7 +542,8 @@
       "venue": "Søndermarkshallen (Slagelse)",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56881,
@@ -529,7 +555,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56883,
@@ -541,7 +568,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56889,
@@ -553,7 +581,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 56887,
@@ -565,7 +594,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56890,
@@ -577,7 +607,8 @@
       "venue": "Søndermarkshallen (Slagelse)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56886,
@@ -589,7 +620,8 @@
       "venue": "Gladsaxe Idrætshal 2",
       "court": "3",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 56875,
@@ -601,7 +633,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56882,
@@ -613,7 +646,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56896,
@@ -625,7 +659,8 @@
       "venue": "Aarby Fritidscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56893,
@@ -637,7 +672,8 @@
       "venue": "Rødovrehallen 7 - Hal",
       "court": "3",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56892,
@@ -649,7 +685,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56894,
@@ -661,7 +698,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56901,
@@ -673,7 +711,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56902,
@@ -685,7 +724,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56898,
@@ -697,7 +737,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56899,
@@ -709,7 +750,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 56907,
@@ -721,7 +763,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56908,
@@ -733,7 +776,8 @@
       "venue": "Aarby Fritidscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56904,
@@ -745,7 +789,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56905,
@@ -757,7 +802,8 @@
       "venue": "Rødovrehallen 7 - Hal",
       "court": "3",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56912,
@@ -769,7 +815,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56915,
@@ -781,7 +828,8 @@
       "venue": "Aarby Fritidscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56911,
@@ -793,7 +841,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56913,
@@ -805,7 +854,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56917,
@@ -817,7 +867,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56918,
@@ -829,7 +880,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56920,
@@ -841,7 +893,8 @@
       "venue": "Østerbrohuset",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56916,
@@ -853,7 +906,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56923,
@@ -865,7 +919,8 @@
       "venue": "Rødovrehallen 7 - Hal",
       "court": "3",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56922,
@@ -877,7 +932,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56924,
@@ -889,7 +945,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56925,
@@ -901,7 +958,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56926,
@@ -913,7 +971,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56931,
@@ -925,7 +984,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 56933,
@@ -937,7 +997,8 @@
       "venue": "Aarby Fritidscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56929,
@@ -949,7 +1010,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56932,
@@ -961,7 +1023,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56935,
@@ -973,7 +1036,8 @@
       "venue": "Gentoftehallen 1 - Hal B",
       "court": "",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56937,
@@ -985,7 +1049,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56934,
@@ -997,7 +1062,8 @@
       "venue": "Aarby Fritidscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56968,
@@ -1009,7 +1075,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56942,
@@ -1021,7 +1088,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 56940,
@@ -1033,7 +1101,8 @@
       "venue": "Rødovrehallen 7 - Hal",
       "court": "3",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56943,
@@ -1045,7 +1114,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56871,
@@ -1057,7 +1127,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56936,
@@ -1069,7 +1140,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56949,
@@ -1081,7 +1153,8 @@
       "venue": "Søndermarkshallen (Slagelse)",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56948,
@@ -1093,7 +1166,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56947,
@@ -1105,7 +1179,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56946,
@@ -1117,7 +1192,8 @@
       "venue": "Rødovrehallen 4 - Hal 2 (LB)",
       "court": "",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56953,
@@ -1129,7 +1205,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56955,
@@ -1141,7 +1218,8 @@
       "venue": "Aarby Fritidscenter",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56956,
@@ -1153,7 +1231,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56952,
@@ -1165,7 +1244,8 @@
       "venue": "Asgård skole",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 56856,
@@ -1177,7 +1257,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 56959,
@@ -1189,7 +1270,8 @@
       "venue": "Søndermarkshallen (Slagelse)",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56960,
@@ -1201,7 +1283,8 @@
       "venue": "Kobberbakkeskolen, afd. Sydby",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56958,
@@ -1213,7 +1296,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56962,
@@ -1225,7 +1309,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56965,
@@ -1237,7 +1322,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56964,
@@ -1249,7 +1335,8 @@
       "venue": "Aarby Fritidscenter",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56967,
@@ -1261,7 +1348,8 @@
       "venue": "Rødovrehallen 7 - Hal",
       "court": "3",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56973,
@@ -1273,7 +1361,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 56970,
@@ -1285,7 +1374,8 @@
       "venue": "Karrebæk Hallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56971,
@@ -1297,7 +1387,8 @@
       "venue": "Kildeskovshal 1",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56974,
@@ -1309,7 +1400,8 @@
       "venue": "Korsørhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56941,
@@ -1321,7 +1413,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56979,
@@ -1333,7 +1426,8 @@
       "venue": "Spar Nord Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 56977,
@@ -1345,7 +1439,8 @@
       "venue": "Rødovrehallen 7 - Hal",
       "court": "3",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56981,
@@ -1357,7 +1452,8 @@
       "venue": "Engelsborghallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 56978,
@@ -1369,7 +1465,8 @@
       "venue": "Hillerødgades Sportssal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -4974,7 +5071,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_3_1",
   "cumulative_points": [
     {
       "team": "Aarby Volley",

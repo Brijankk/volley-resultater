@@ -58,6 +58,7 @@ class Match:
     court: str
     result_home_sets: int | None
     result_away_sets: int | None
+    result_note: str = ""
 
 
 @dataclass(frozen=True)

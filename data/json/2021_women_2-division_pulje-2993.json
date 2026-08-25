@@ -1,22 +1,13 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-06T12:24:12+02:00",
-    "scraper_version": "0.1.0",
+    "exported_at": "2026-08-25T11:57:58+02:00",
+    "scraper_version": "1.0.1",
+    "rule_profile": "five_set_2_1",
     "validation": {
-      "mismatch_count": 22,
-      "affected_teams": 12,
-      "affected_fields": [
-        "balls_lost",
-        "balls_won",
-        "games_lost",
-        "games_played",
-        "games_won",
-        "points",
-        "rank",
-        "sets_lost",
-        "sets_won"
-      ]
+      "mismatch_count": 0,
+      "affected_teams": 0,
+      "affected_fields": []
     }
   },
   "pool": {
@@ -24,7 +15,13 @@
     "league_id": "2021:women:2-division",
     "name": "Vest",
     "pulje_id": 2993,
-    "division": "2. Division"
+    "season_id": "2021",
+    "gender": "Kvinde",
+    "division": "2. Division",
+    "league_name": "2. Division Kvinder",
+    "raekke_id": 1753,
+    "season_value": "2021",
+    "season_start_year": 2021
   },
   "source_standings": [
     {
@@ -187,7 +184,7 @@
   "computed_standings": [
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 1,
       "team_name": "IF Lyseng",
       "games_played": 22,
@@ -197,11 +194,11 @@
       "sets_lost": 24,
       "balls_won": 1967,
       "balls_lost": 1617,
-      "points": 59
+      "points": 55
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 2,
       "team_name": "Aalborg Volleyball.2",
       "games_played": 22,
@@ -211,11 +208,11 @@
       "sets_lost": 30,
       "balls_won": 2038,
       "balls_lost": 1806,
-      "points": 59
+      "points": 52
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 3,
       "team_name": "DHV Odense.2",
       "games_played": 22,
@@ -225,11 +222,11 @@
       "sets_lost": 28,
       "balls_won": 1870,
       "balls_lost": 1668,
-      "points": 53
+      "points": 50
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 4,
       "team_name": "Holstebro KFUM",
       "games_played": 22,
@@ -239,25 +236,25 @@
       "sets_lost": 30,
       "balls_won": 1945,
       "balls_lost": 1761,
-      "points": 52
+      "points": 48
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 5,
       "team_name": "DSIO Odense",
-      "games_played": 21,
+      "games_played": 22,
       "games_won": 13,
-      "games_lost": 8,
+      "games_lost": 9,
       "sets_won": 46,
-      "sets_lost": 34,
+      "sets_lost": 37,
       "balls_won": 1776,
-      "balls_lost": 1661,
-      "points": 41
+      "balls_lost": 1736,
+      "points": 39
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 6,
       "team_name": "Ikast KFUM.2",
       "games_played": 22,
@@ -267,12 +264,26 @@
       "sets_lost": 40,
       "balls_won": 1925,
       "balls_lost": 1825,
-      "points": 37
+      "points": 34
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 7,
+      "team_name": "Hjerm FIF",
+      "games_played": 22,
+      "games_won": 11,
+      "games_lost": 11,
+      "sets_won": 45,
+      "sets_lost": 40,
+      "balls_won": 1846,
+      "balls_lost": 1812,
+      "points": 34
+    },
+    {
+      "pool_id": "2021:women:2-division:pulje-2993",
+      "rule_profile": "five_set_2_1",
+      "rank": 8,
       "team_name": "Hornsyld IF",
       "games_played": 22,
       "games_won": 10,
@@ -281,25 +292,11 @@
       "sets_lost": 46,
       "balls_won": 1762,
       "balls_lost": 1804,
-      "points": 34
+      "points": 31
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
-      "rank": 8,
-      "team_name": "Hjerm FIF",
-      "games_played": 21,
-      "games_won": 10,
-      "games_lost": 11,
-      "sets_won": 42,
-      "sets_lost": 40,
-      "balls_won": 1771,
-      "balls_lost": 1812,
-      "points": 33
-    },
-    {
-      "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 9,
       "team_name": "VK Raptus",
       "games_played": 22,
@@ -309,11 +306,11 @@
       "sets_lost": 56,
       "balls_won": 1827,
       "balls_lost": 1948,
-      "points": 22
+      "points": 19
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 10,
       "team_name": "Nordenskov UIF",
       "games_played": 22,
@@ -323,11 +320,11 @@
       "sets_lost": 54,
       "balls_won": 1652,
       "balls_lost": 1882,
-      "points": 19
+      "points": 18
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 11,
       "team_name": "Midtfyn VK",
       "games_played": 22,
@@ -337,11 +334,11 @@
       "sets_lost": 60,
       "balls_won": 1593,
       "balls_lost": 1874,
-      "points": 13
+      "points": 12
     },
     {
       "pool_id": "2021:women:2-division:pulje-2993",
-      "rule_profile": "dt_2025_division",
+      "rule_profile": "five_set_2_1",
       "rank": 12,
       "team_name": "ASV Aarhus.3",
       "games_played": 22,
@@ -351,7 +348,7 @@
       "sets_lost": 65,
       "balls_won": 1343,
       "balls_lost": 1811,
-      "points": 5
+      "points": 4
     }
   ],
   "matches": [
@@ -365,7 +362,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49161,
@@ -377,7 +375,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49163,
@@ -389,7 +388,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49159,
@@ -401,7 +401,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49160,
@@ -413,7 +414,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49173,
@@ -425,7 +427,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49171,
@@ -437,7 +440,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49174,
@@ -449,7 +453,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49170,
@@ -461,7 +466,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49175,
@@ -473,7 +479,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49172,
@@ -485,7 +492,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49180,
@@ -497,7 +505,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49178,
@@ -509,7 +518,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49179,
@@ -521,7 +531,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49181,
@@ -533,7 +544,8 @@
       "venue": "Marselisborg Gymnasium",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49176,
@@ -545,7 +557,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49177,
@@ -557,7 +570,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49202,
@@ -569,7 +583,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49201,
@@ -581,7 +596,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49203,
@@ -593,7 +609,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49204,
@@ -605,7 +622,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49200,
@@ -617,7 +635,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49205,
@@ -629,7 +648,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49162,
@@ -641,7 +661,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49207,
@@ -653,7 +674,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49208,
@@ -665,7 +687,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49211,
@@ -677,7 +700,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49209,
@@ -689,7 +713,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49206,
@@ -701,7 +726,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49183,
@@ -713,7 +739,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49184,
@@ -725,7 +752,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49186,
@@ -737,7 +765,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49182,
@@ -749,7 +778,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49185,
@@ -761,7 +791,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49187,
@@ -773,7 +804,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49220,
@@ -785,7 +817,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49218,
@@ -797,7 +830,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49219,
@@ -809,7 +843,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49221,
@@ -821,7 +856,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49222,
@@ -833,7 +869,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49223,
@@ -845,7 +882,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49262,
@@ -857,7 +895,8 @@
       "venue": "Ceres Park hal 1",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49265,
@@ -869,7 +908,8 @@
       "venue": "Idrætscenter Midtfyn",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49261,
@@ -881,7 +921,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49263,
@@ -893,7 +934,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49264,
@@ -905,7 +947,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49260,
@@ -917,7 +960,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49268,
@@ -929,7 +973,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49269,
@@ -941,7 +986,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49270,
@@ -953,7 +999,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49271,
@@ -965,7 +1012,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49267,
@@ -977,7 +1025,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49266,
@@ -989,7 +1038,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49217,
@@ -1001,7 +1051,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49214,
@@ -1013,7 +1064,8 @@
       "venue": "Sportscenter Ikast Hal A",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49213,
@@ -1025,7 +1077,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49215,
@@ -1037,7 +1090,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49225,
@@ -1049,7 +1103,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49229,
@@ -1061,7 +1116,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49224,
@@ -1073,7 +1129,8 @@
       "venue": "Aalborg Katedralskole",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49228,
@@ -1085,7 +1142,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49230,
@@ -1097,7 +1155,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49233,
@@ -1109,7 +1168,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49235,
@@ -1121,7 +1181,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49232,
@@ -1133,7 +1194,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49234,
@@ -1145,7 +1207,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49240,
@@ -1157,7 +1220,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49236,
@@ -1169,7 +1233,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49238,
@@ -1181,7 +1246,8 @@
       "venue": "Ceres Park hal 1",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49241,
@@ -1193,7 +1259,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49239,
@@ -1205,7 +1272,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49212,
@@ -1217,7 +1285,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49243,
@@ -1229,7 +1298,8 @@
       "venue": "Dalumhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49245,
@@ -1241,7 +1311,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49242,
@@ -1253,7 +1324,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49247,
@@ -1265,7 +1337,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49192,
@@ -1277,7 +1350,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49191,
@@ -1289,7 +1363,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49190,
@@ -1301,7 +1376,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49188,
@@ -1313,7 +1389,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49189,
@@ -1325,7 +1402,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49193,
@@ -1337,7 +1415,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49231,
@@ -1349,7 +1428,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49227,
@@ -1361,7 +1441,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49274,
@@ -1373,7 +1454,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49237,
@@ -1385,7 +1467,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49272,
@@ -1397,7 +1480,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49276,
@@ -1409,7 +1493,8 @@
       "venue": "Sportscenter Ikast Hal A",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49277,
@@ -1421,7 +1506,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49275,
@@ -1433,7 +1519,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49273,
@@ -1445,7 +1532,8 @@
       "venue": "Aalborg Katedralskole",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49280,
@@ -1457,7 +1545,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49279,
@@ -1469,7 +1558,8 @@
       "venue": "Hjallesehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49278,
@@ -1481,7 +1571,8 @@
       "venue": "Hornsyld Idrætscenter",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49281,
@@ -1493,7 +1584,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49282,
@@ -1505,7 +1597,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49283,
@@ -1517,7 +1610,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49244,
@@ -1529,7 +1623,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49198,
@@ -1541,7 +1636,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49196,
@@ -1553,7 +1649,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49197,
@@ -1565,7 +1662,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49199,
@@ -1577,7 +1675,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49195,
@@ -1589,7 +1688,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49246,
@@ -1601,7 +1701,8 @@
       "venue": "Raptus Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49250,
@@ -1613,7 +1714,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49251,
@@ -1625,7 +1727,8 @@
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49252,
@@ -1636,8 +1739,9 @@
       "away_team": "DSIO Odense",
       "venue": "Hjermhallerne",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "result_note": "UHT"
     },
     {
       "kamp_id": 49253,
@@ -1649,7 +1753,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49248,
@@ -1661,7 +1766,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49249,
@@ -1673,7 +1779,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49226,
@@ -1685,7 +1792,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49194,
@@ -1697,7 +1805,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49285,
@@ -1709,7 +1818,8 @@
       "venue": "Midtfyns Gymnasium",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49284,
@@ -1721,7 +1831,8 @@
       "venue": "Hjermhallerne",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49288,
@@ -1733,7 +1844,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49286,
@@ -1745,7 +1857,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49289,
@@ -1757,7 +1870,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49287,
@@ -1769,7 +1883,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49216,
@@ -1781,7 +1896,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 1,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49167,
@@ -1793,7 +1909,8 @@
       "venue": "Rårup hallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49169,
@@ -1805,7 +1922,8 @@
       "venue": "Århus Gl. Stadionhal",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49164,
@@ -1817,7 +1935,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 2,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49166,
@@ -1829,7 +1948,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49168,
@@ -1841,7 +1961,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 2
+      "result_away_sets": 2,
+      "result_note": ""
     },
     {
       "kamp_id": 49165,
@@ -1853,7 +1974,8 @@
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49258,
@@ -1865,7 +1987,8 @@
       "venue": "Holstebro Stadionhal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49210,
@@ -1877,7 +2000,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 0,
-      "result_away_sets": 3
+      "result_away_sets": 3,
+      "result_note": ""
     },
     {
       "kamp_id": 49259,
@@ -1889,7 +2013,8 @@
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49256,
@@ -1901,7 +2026,8 @@
       "venue": "Hjallesehallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49257,
@@ -1913,7 +2039,8 @@
       "venue": "Odense Universitetshal",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 1
+      "result_away_sets": 1,
+      "result_note": ""
     },
     {
       "kamp_id": 49255,
@@ -1925,7 +2052,8 @@
       "venue": "Rundhøjhallen",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     },
     {
       "kamp_id": 49254,
@@ -1937,7 +2065,8 @@
       "venue": "Hyldgårdsskolens Hal B",
       "court": "1",
       "result_home_sets": 3,
-      "result_away_sets": 0
+      "result_away_sets": 0,
+      "result_note": ""
     }
   ],
   "set_results": [
@@ -5702,6 +5831,46 @@
       "away_set_won": 1
     },
     {
+      "kamp_id": 49252,
+      "set_number": 1,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 49252,
+      "set_number": 2,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 49252,
+      "set_number": 3,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 49252,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 49252,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
       "kamp_id": 49253,
       "set_number": 1,
       "home_points": 20,
@@ -7182,7 +7351,7 @@
       "away_set_won": null
     }
   ],
-  "rule_profile": "dt_2025_division",
+  "rule_profile": "five_set_2_1",
   "cumulative_points": [
     {
       "team": "ASV Aarhus.3",
@@ -7272,8 +7441,8 @@
       "team": "DHV Odense.2",
       "date": "2021-10-02T12:00:00",
       "game_number": 1,
-      "points": 3,
-      "cumulative_points": 3,
+      "points": 2,
+      "cumulative_points": 2,
       "kamp_id": 49158
     },
     {
@@ -7304,8 +7473,8 @@
       "team": "ASV Aarhus.3",
       "date": "2021-10-02T16:00:00",
       "game_number": 1,
-      "points": 3,
-      "cumulative_points": 3,
+      "points": 2,
+      "cumulative_points": 2,
       "kamp_id": 49163
     },
     {
@@ -7360,8 +7529,8 @@
       "team": "Nordenskov UIF",
       "date": "2021-10-09T10:00:00",
       "game_number": 2,
-      "points": 3,
-      "cumulative_points": 3,
+      "points": 2,
+      "cumulative_points": 2,
       "kamp_id": 49173
     },
     {
@@ -7376,8 +7545,8 @@
       "team": "DSIO Odense",
       "date": "2021-10-09T13:00:00",
       "game_number": 2,
-      "points": 3,
-      "cumulative_points": 3,
+      "points": 2,
+      "cumulative_points": 2,
       "kamp_id": 49171
     },
     {
@@ -7385,23 +7554,23 @@
       "date": "2021-10-09T14:00:00",
       "game_number": 2,
       "points": 1,
-      "cumulative_points": 4,
+      "cumulative_points": 3,
       "kamp_id": 49174
     },
     {
       "team": "IF Lyseng",
       "date": "2021-10-09T14:00:00",
       "game_number": 2,
-      "points": 3,
-      "cumulative_points": 6,
+      "points": 2,
+      "cumulative_points": 5,
       "kamp_id": 49174
     },
     {
       "team": "Aalborg Volleyball.2",
       "date": "2021-10-10T12:00:00",
       "game_number": 2,
-      "points": 3,
-      "cumulative_points": 4,
+      "points": 2,
+      "cumulative_points": 3,
       "kamp_id": 49170
     },
     {
@@ -7441,7 +7610,7 @@
       "date": "2021-10-10T17:00:00",
       "game_number": 2,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49172
     },
     {
@@ -7464,8 +7633,8 @@
       "team": "IF Lyseng",
       "date": "2021-10-16T12:00:00",
       "game_number": 3,
-      "points": 3,
-      "cumulative_points": 9,
+      "points": 2,
+      "cumulative_points": 7,
       "kamp_id": 49178
     },
     {
@@ -7481,7 +7650,7 @@
       "date": "2021-10-16T12:00:00",
       "game_number": 3,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49179
     },
     {
@@ -7489,7 +7658,7 @@
       "date": "2021-10-16T12:00:00",
       "game_number": 3,
       "points": 3,
-      "cumulative_points": 7,
+      "cumulative_points": 6,
       "kamp_id": 49179
     },
     {
@@ -7497,7 +7666,7 @@
       "date": "2021-10-16T12:00:00",
       "game_number": 3,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49181
     },
     {
@@ -7529,7 +7698,7 @@
       "date": "2021-10-17T17:00:00",
       "game_number": 3,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49177
     },
     {
@@ -7537,7 +7706,7 @@
       "date": "2021-10-17T17:00:00",
       "game_number": 3,
       "points": 3,
-      "cumulative_points": 7,
+      "cumulative_points": 6,
       "kamp_id": 49177
     },
     {
@@ -7552,8 +7721,8 @@
       "team": "Hornsyld IF",
       "date": "2021-10-24T15:00:00",
       "game_number": 4,
-      "points": 3,
-      "cumulative_points": 10,
+      "points": 2,
+      "cumulative_points": 9,
       "kamp_id": 49202
     },
     {
@@ -7569,7 +7738,7 @@
       "date": "2021-10-30T11:00:00",
       "game_number": 4,
       "points": 3,
-      "cumulative_points": 12,
+      "cumulative_points": 10,
       "kamp_id": 49201
     },
     {
@@ -7577,7 +7746,7 @@
       "date": "2021-10-30T14:00:00",
       "game_number": 4,
       "points": 3,
-      "cumulative_points": 10,
+      "cumulative_points": 9,
       "kamp_id": 49203
     },
     {
@@ -7601,7 +7770,7 @@
       "date": "2021-10-30T15:00:00",
       "game_number": 4,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49204
     },
     {
@@ -7609,7 +7778,7 @@
       "date": "2021-10-31T10:00:00",
       "game_number": 4,
       "points": 3,
-      "cumulative_points": 10,
+      "cumulative_points": 9,
       "kamp_id": 49200
     },
     {
@@ -7625,7 +7794,7 @@
       "date": "2021-10-31T10:00:00",
       "game_number": 4,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49205
     },
     {
@@ -7633,7 +7802,7 @@
       "date": "2021-10-31T10:00:00",
       "game_number": 4,
       "points": 3,
-      "cumulative_points": 6,
+      "cumulative_points": 5,
       "kamp_id": 49205
     },
     {
@@ -7656,136 +7825,136 @@
       "team": "IF Lyseng",
       "date": "2021-11-06T14:00:00",
       "game_number": 5,
+      "points": 2,
+      "cumulative_points": 12,
+      "kamp_id": 49207
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2021-11-06T14:00:00",
+      "game_number": 5,
+      "points": 1,
+      "cumulative_points": 10,
+      "kamp_id": 49207
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2021-11-06T14:00:00",
+      "game_number": 5,
+      "points": 3,
+      "cumulative_points": 12,
+      "kamp_id": 49208
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2021-11-06T14:00:00",
+      "game_number": 5,
+      "points": 0,
+      "cumulative_points": 2,
+      "kamp_id": 49208
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2021-11-06T16:00:00",
+      "game_number": 5,
+      "points": 2,
+      "cumulative_points": 9,
+      "kamp_id": 49211
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2021-11-06T16:00:00",
+      "game_number": 5,
+      "points": 1,
+      "cumulative_points": 10,
+      "kamp_id": 49211
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2021-11-07T11:00:00",
+      "game_number": 5,
+      "points": 2,
+      "cumulative_points": 2,
+      "kamp_id": 49209
+    },
+    {
+      "team": "Midtfyn VK",
+      "date": "2021-11-07T11:00:00",
+      "game_number": 5,
+      "points": 1,
+      "cumulative_points": 3,
+      "kamp_id": 49209
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2021-11-11T20:30:00",
+      "game_number": 5,
+      "points": 1,
+      "cumulative_points": 6,
+      "kamp_id": 49206
+    },
+    {
+      "team": "Holstebro KFUM",
+      "date": "2021-11-11T20:30:00",
+      "game_number": 5,
+      "points": 2,
+      "cumulative_points": 14,
+      "kamp_id": 49206
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2021-11-17T20:30:00",
+      "game_number": 5,
+      "points": 2,
+      "cumulative_points": 7,
+      "kamp_id": 49183
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2021-11-17T20:30:00",
+      "game_number": 6,
+      "points": 1,
+      "cumulative_points": 7,
+      "kamp_id": 49183
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2021-11-20T12:00:00",
+      "game_number": 6,
       "points": 3,
       "cumulative_points": 15,
-      "kamp_id": 49207
+      "kamp_id": 49184
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2021-11-20T12:00:00",
+      "game_number": 6,
+      "points": 0,
+      "cumulative_points": 10,
+      "kamp_id": 49184
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2021-11-20T12:00:00",
+      "game_number": 5,
+      "points": 3,
+      "cumulative_points": 5,
+      "kamp_id": 49186
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2021-11-20T12:00:00",
+      "game_number": 6,
+      "points": 0,
+      "cumulative_points": 9,
+      "kamp_id": 49186
     },
     {
       "team": "Aalborg Volleyball.2",
-      "date": "2021-11-06T14:00:00",
-      "game_number": 5,
-      "points": 1,
-      "cumulative_points": 11,
-      "kamp_id": 49207
-    },
-    {
-      "team": "DHV Odense.2",
-      "date": "2021-11-06T14:00:00",
-      "game_number": 5,
+      "date": "2021-11-21T12:00:00",
+      "game_number": 6,
       "points": 3,
       "cumulative_points": 13,
-      "kamp_id": 49208
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2021-11-06T14:00:00",
-      "game_number": 5,
-      "points": 0,
-      "cumulative_points": 3,
-      "kamp_id": 49208
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2021-11-06T16:00:00",
-      "game_number": 5,
-      "points": 3,
-      "cumulative_points": 10,
-      "kamp_id": 49211
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2021-11-06T16:00:00",
-      "game_number": 5,
-      "points": 1,
-      "cumulative_points": 11,
-      "kamp_id": 49211
-    },
-    {
-      "team": "VK Raptus",
-      "date": "2021-11-07T11:00:00",
-      "game_number": 5,
-      "points": 3,
-      "cumulative_points": 3,
-      "kamp_id": 49209
-    },
-    {
-      "team": "Midtfyn VK",
-      "date": "2021-11-07T11:00:00",
-      "game_number": 5,
-      "points": 1,
-      "cumulative_points": 3,
-      "kamp_id": 49209
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2021-11-11T20:30:00",
-      "game_number": 5,
-      "points": 1,
-      "cumulative_points": 7,
-      "kamp_id": 49206
-    },
-    {
-      "team": "Holstebro KFUM",
-      "date": "2021-11-11T20:30:00",
-      "game_number": 5,
-      "points": 3,
-      "cumulative_points": 15,
-      "kamp_id": 49206
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2021-11-17T20:30:00",
-      "game_number": 5,
-      "points": 3,
-      "cumulative_points": 8,
-      "kamp_id": 49183
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2021-11-17T20:30:00",
-      "game_number": 6,
-      "points": 1,
-      "cumulative_points": 8,
-      "kamp_id": 49183
-    },
-    {
-      "team": "IF Lyseng",
-      "date": "2021-11-20T12:00:00",
-      "game_number": 6,
-      "points": 3,
-      "cumulative_points": 18,
-      "kamp_id": 49184
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2021-11-20T12:00:00",
-      "game_number": 6,
-      "points": 0,
-      "cumulative_points": 11,
-      "kamp_id": 49184
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2021-11-20T12:00:00",
-      "game_number": 5,
-      "points": 3,
-      "cumulative_points": 6,
-      "kamp_id": 49186
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2021-11-20T12:00:00",
-      "game_number": 6,
-      "points": 0,
-      "cumulative_points": 10,
-      "kamp_id": 49186
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2021-11-21T12:00:00",
-      "game_number": 6,
-      "points": 3,
-      "cumulative_points": 14,
       "kamp_id": 49182
     },
     {
@@ -7801,7 +7970,7 @@
       "date": "2021-11-21T15:00:00",
       "game_number": 6,
       "points": 3,
-      "cumulative_points": 16,
+      "cumulative_points": 15,
       "kamp_id": 49185
     },
     {
@@ -7809,7 +7978,7 @@
       "date": "2021-11-21T15:00:00",
       "game_number": 6,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49185
     },
     {
@@ -7817,7 +7986,7 @@
       "date": "2021-11-21T15:00:00",
       "game_number": 6,
       "points": 3,
-      "cumulative_points": 18,
+      "cumulative_points": 17,
       "kamp_id": 49187
     },
     {
@@ -7825,7 +7994,7 @@
       "date": "2021-11-21T15:00:00",
       "game_number": 6,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49187
     },
     {
@@ -7833,7 +8002,7 @@
       "date": "2021-11-27T10:00:00",
       "game_number": 7,
       "points": 3,
-      "cumulative_points": 19,
+      "cumulative_points": 18,
       "kamp_id": 49220
     },
     {
@@ -7841,103 +8010,103 @@
       "date": "2021-11-27T10:00:00",
       "game_number": 6,
       "points": 0,
-      "cumulative_points": 8,
+      "cumulative_points": 7,
       "kamp_id": 49220
     },
     {
       "team": "IF Lyseng",
       "date": "2021-11-27T14:00:00",
       "game_number": 7,
+      "points": 3,
+      "cumulative_points": 18,
+      "kamp_id": 49218
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2021-11-27T14:00:00",
+      "game_number": 7,
+      "points": 0,
+      "cumulative_points": 9,
+      "kamp_id": 49218
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2021-11-27T15:00:00",
+      "game_number": 7,
+      "points": 3,
+      "cumulative_points": 13,
+      "kamp_id": 49219
+    },
+    {
+      "team": "Midtfyn VK",
+      "date": "2021-11-27T15:00:00",
+      "game_number": 7,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 49219
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2021-11-27T15:00:00",
+      "game_number": 7,
+      "points": 3,
+      "cumulative_points": 5,
+      "kamp_id": 49221
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2021-11-27T15:00:00",
+      "game_number": 7,
+      "points": 0,
+      "cumulative_points": 7,
+      "kamp_id": 49221
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2021-11-28T12:00:00",
+      "game_number": 6,
+      "points": 3,
+      "cumulative_points": 8,
+      "kamp_id": 49222
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2021-11-28T12:00:00",
+      "game_number": 7,
+      "points": 0,
+      "cumulative_points": 2,
+      "kamp_id": 49222
+    },
+    {
+      "team": "Holstebro KFUM",
+      "date": "2021-11-28T15:00:00",
+      "game_number": 7,
+      "points": 1,
+      "cumulative_points": 18,
+      "kamp_id": 49223
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2021-11-28T15:00:00",
+      "game_number": 7,
+      "points": 2,
+      "cumulative_points": 15,
+      "kamp_id": 49223
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2021-12-04T12:00:00",
+      "game_number": 8,
+      "points": 0,
+      "cumulative_points": 2,
+      "kamp_id": 49262
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2021-12-04T12:00:00",
+      "game_number": 8,
       "points": 3,
       "cumulative_points": 21,
-      "kamp_id": 49218
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2021-11-27T14:00:00",
-      "game_number": 7,
-      "points": 0,
-      "cumulative_points": 10,
-      "kamp_id": 49218
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2021-11-27T15:00:00",
-      "game_number": 7,
-      "points": 3,
-      "cumulative_points": 14,
-      "kamp_id": 49219
-    },
-    {
-      "team": "Midtfyn VK",
-      "date": "2021-11-27T15:00:00",
-      "game_number": 7,
-      "points": 0,
-      "cumulative_points": 3,
-      "kamp_id": 49219
-    },
-    {
-      "team": "VK Raptus",
-      "date": "2021-11-27T15:00:00",
-      "game_number": 7,
-      "points": 3,
-      "cumulative_points": 6,
-      "kamp_id": 49221
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2021-11-27T15:00:00",
-      "game_number": 7,
-      "points": 0,
-      "cumulative_points": 8,
-      "kamp_id": 49221
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2021-11-28T12:00:00",
-      "game_number": 6,
-      "points": 3,
-      "cumulative_points": 9,
-      "kamp_id": 49222
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2021-11-28T12:00:00",
-      "game_number": 7,
-      "points": 0,
-      "cumulative_points": 3,
-      "kamp_id": 49222
-    },
-    {
-      "team": "Holstebro KFUM",
-      "date": "2021-11-28T15:00:00",
-      "game_number": 7,
-      "points": 1,
-      "cumulative_points": 19,
-      "kamp_id": 49223
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2021-11-28T15:00:00",
-      "game_number": 7,
-      "points": 3,
-      "cumulative_points": 17,
-      "kamp_id": 49223
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2021-12-04T12:00:00",
-      "game_number": 8,
-      "points": 0,
-      "cumulative_points": 3,
-      "kamp_id": 49262
-    },
-    {
-      "team": "IF Lyseng",
-      "date": "2021-12-04T12:00:00",
-      "game_number": 8,
-      "points": 3,
-      "cumulative_points": 24,
       "kamp_id": 49262
     },
     {
@@ -7951,113 +8120,113 @@
     {
       "team": "Hjerm FIF",
       "date": "2021-12-04T13:00:00",
-      "game_number": 8,
-      "points": 3,
-      "cumulative_points": 13,
-      "kamp_id": 49265
-    },
-    {
-      "team": "VK Raptus",
-      "date": "2021-12-04T14:00:00",
-      "game_number": 8,
-      "points": 3,
-      "cumulative_points": 9,
-      "kamp_id": 49261
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2021-12-04T14:00:00",
-      "game_number": 7,
-      "points": 1,
-      "cumulative_points": 9,
-      "kamp_id": 49261
-    },
-    {
-      "team": "Holstebro KFUM",
-      "date": "2021-12-04T15:00:00",
-      "game_number": 8,
-      "points": 3,
-      "cumulative_points": 22,
-      "kamp_id": 49263
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2021-12-04T15:00:00",
-      "game_number": 8,
-      "points": 0,
-      "cumulative_points": 14,
-      "kamp_id": 49263
-    },
-    {
-      "team": "DHV Odense.2",
-      "date": "2021-12-04T18:00:00",
-      "game_number": 8,
-      "points": 3,
-      "cumulative_points": 22,
-      "kamp_id": 49264
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2021-12-04T18:00:00",
-      "game_number": 7,
-      "points": 0,
-      "cumulative_points": 9,
-      "kamp_id": 49264
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2021-12-05T15:00:00",
-      "game_number": 8,
-      "points": 0,
-      "cumulative_points": 8,
-      "kamp_id": 49260
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2021-12-05T15:00:00",
-      "game_number": 8,
-      "points": 3,
-      "cumulative_points": 20,
-      "kamp_id": 49260
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2021-12-09T19:00:00",
-      "game_number": 9,
-      "points": 3,
-      "cumulative_points": 17,
-      "kamp_id": 49268
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2021-12-09T19:00:00",
-      "game_number": 8,
-      "points": 0,
-      "cumulative_points": 9,
-      "kamp_id": 49268
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2021-12-11T12:00:00",
-      "game_number": 9,
-      "points": 0,
-      "cumulative_points": 13,
-      "kamp_id": 49269
-    },
-    {
-      "team": "DHV Odense.2",
-      "date": "2021-12-11T12:00:00",
-      "game_number": 9,
-      "points": 3,
-      "cumulative_points": 25,
-      "kamp_id": 49269
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2021-12-11T12:00:00",
       "game_number": 8,
       "points": 3,
       "cumulative_points": 12,
+      "kamp_id": 49265
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2021-12-04T14:00:00",
+      "game_number": 8,
+      "points": 2,
+      "cumulative_points": 7,
+      "kamp_id": 49261
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2021-12-04T14:00:00",
+      "game_number": 7,
+      "points": 1,
+      "cumulative_points": 8,
+      "kamp_id": 49261
+    },
+    {
+      "team": "Holstebro KFUM",
+      "date": "2021-12-04T15:00:00",
+      "game_number": 8,
+      "points": 3,
+      "cumulative_points": 21,
+      "kamp_id": 49263
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2021-12-04T15:00:00",
+      "game_number": 8,
+      "points": 0,
+      "cumulative_points": 13,
+      "kamp_id": 49263
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2021-12-04T18:00:00",
+      "game_number": 8,
+      "points": 3,
+      "cumulative_points": 21,
+      "kamp_id": 49264
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2021-12-04T18:00:00",
+      "game_number": 7,
+      "points": 0,
+      "cumulative_points": 8,
+      "kamp_id": 49264
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2021-12-05T15:00:00",
+      "game_number": 8,
+      "points": 0,
+      "cumulative_points": 7,
+      "kamp_id": 49260
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2021-12-05T15:00:00",
+      "game_number": 8,
+      "points": 3,
+      "cumulative_points": 18,
+      "kamp_id": 49260
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2021-12-09T19:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 16,
+      "kamp_id": 49268
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2021-12-09T19:00:00",
+      "game_number": 8,
+      "points": 0,
+      "cumulative_points": 8,
+      "kamp_id": 49268
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2021-12-11T12:00:00",
+      "game_number": 9,
+      "points": 0,
+      "cumulative_points": 12,
+      "kamp_id": 49269
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2021-12-11T12:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 24,
+      "kamp_id": 49269
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2021-12-11T12:00:00",
+      "game_number": 8,
+      "points": 3,
+      "cumulative_points": 11,
       "kamp_id": 49270
     },
     {
@@ -8065,79 +8234,79 @@
       "date": "2021-12-11T12:00:00",
       "game_number": 9,
       "points": 0,
-      "cumulative_points": 22,
+      "cumulative_points": 21,
       "kamp_id": 49270
     },
     {
       "team": "Nordenskov UIF",
       "date": "2021-12-11T13:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 10,
+      "kamp_id": 49271
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2021-12-11T13:00:00",
+      "game_number": 9,
+      "points": 0,
+      "cumulative_points": 2,
+      "kamp_id": 49271
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2021-12-11T14:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 24,
+      "kamp_id": 49267
+    },
+    {
+      "team": "Midtfyn VK",
+      "date": "2021-12-11T14:00:00",
+      "game_number": 9,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 49267
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2021-12-12T15:00:00",
+      "game_number": 9,
+      "points": 0,
+      "cumulative_points": 7,
+      "kamp_id": 49266
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2021-12-12T15:00:00",
+      "game_number": 9,
+      "points": 3,
+      "cumulative_points": 21,
+      "kamp_id": 49266
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2021-12-18T10:00:00",
+      "game_number": 10,
+      "points": 0,
+      "cumulative_points": 2,
+      "kamp_id": 49217
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2021-12-18T10:00:00",
+      "game_number": 10,
+      "points": 3,
+      "cumulative_points": 10,
+      "kamp_id": 49217
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2021-12-18T12:00:00",
       "game_number": 9,
       "points": 3,
       "cumulative_points": 11,
-      "kamp_id": 49271
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2021-12-11T13:00:00",
-      "game_number": 9,
-      "points": 0,
-      "cumulative_points": 3,
-      "kamp_id": 49271
-    },
-    {
-      "team": "IF Lyseng",
-      "date": "2021-12-11T14:00:00",
-      "game_number": 9,
-      "points": 3,
-      "cumulative_points": 27,
-      "kamp_id": 49267
-    },
-    {
-      "team": "Midtfyn VK",
-      "date": "2021-12-11T14:00:00",
-      "game_number": 9,
-      "points": 0,
-      "cumulative_points": 3,
-      "kamp_id": 49267
-    },
-    {
-      "team": "VK Raptus",
-      "date": "2021-12-12T15:00:00",
-      "game_number": 9,
-      "points": 0,
-      "cumulative_points": 9,
-      "kamp_id": 49266
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2021-12-12T15:00:00",
-      "game_number": 9,
-      "points": 3,
-      "cumulative_points": 23,
-      "kamp_id": 49266
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2021-12-18T10:00:00",
-      "game_number": 10,
-      "points": 0,
-      "cumulative_points": 3,
-      "kamp_id": 49217
-    },
-    {
-      "team": "VK Raptus",
-      "date": "2021-12-18T10:00:00",
-      "game_number": 10,
-      "points": 3,
-      "cumulative_points": 12,
-      "kamp_id": 49217
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2021-12-18T12:00:00",
-      "game_number": 9,
-      "points": 3,
-      "cumulative_points": 12,
       "kamp_id": 49214
     },
     {
@@ -8145,7 +8314,7 @@
       "date": "2021-12-18T12:00:00",
       "game_number": 10,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49214
     },
     {
@@ -8161,7 +8330,7 @@
       "date": "2021-12-18T13:00:00",
       "game_number": 10,
       "points": 3,
-      "cumulative_points": 28,
+      "cumulative_points": 27,
       "kamp_id": 49213
     },
     {
@@ -8169,23 +8338,23 @@
       "date": "2021-12-18T14:00:00",
       "game_number": 10,
       "points": 1,
-      "cumulative_points": 12,
+      "cumulative_points": 11,
       "kamp_id": 49215
     },
     {
       "team": "DSIO Odense",
       "date": "2021-12-18T14:00:00",
       "game_number": 9,
-      "points": 3,
-      "cumulative_points": 15,
+      "points": 2,
+      "cumulative_points": 13,
       "kamp_id": 49215
     },
     {
       "team": "Hornsyld IF",
       "date": "2022-01-08T10:00:00",
       "game_number": 10,
-      "points": 3,
-      "cumulative_points": 20,
+      "points": 2,
+      "cumulative_points": 18,
       "kamp_id": 49225
     },
     {
@@ -8193,7 +8362,7 @@
       "date": "2022-01-08T10:00:00",
       "game_number": 11,
       "points": 1,
-      "cumulative_points": 13,
+      "cumulative_points": 11,
       "kamp_id": 49225
     },
     {
@@ -8209,7 +8378,7 @@
       "date": "2022-01-08T13:00:00",
       "game_number": 11,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49229
     },
     {
@@ -8217,7 +8386,7 @@
       "date": "2022-01-08T16:00:00",
       "game_number": 10,
       "points": 3,
-      "cumulative_points": 26,
+      "cumulative_points": 24,
       "kamp_id": 49224
     },
     {
@@ -8225,7 +8394,7 @@
       "date": "2022-01-08T16:00:00",
       "game_number": 11,
       "points": 0,
-      "cumulative_points": 28,
+      "cumulative_points": 27,
       "kamp_id": 49224
     },
     {
@@ -8233,7 +8402,7 @@
       "date": "2022-01-09T15:00:00",
       "game_number": 10,
       "points": 0,
-      "cumulative_points": 12,
+      "cumulative_points": 11,
       "kamp_id": 49228
     },
     {
@@ -8241,7 +8410,7 @@
       "date": "2022-01-09T15:00:00",
       "game_number": 10,
       "points": 3,
-      "cumulative_points": 25,
+      "cumulative_points": 24,
       "kamp_id": 49228
     },
     {
@@ -8249,7 +8418,7 @@
       "date": "2022-01-15T12:00:00",
       "game_number": 11,
       "points": 3,
-      "cumulative_points": 29,
+      "cumulative_points": 27,
       "kamp_id": 49230
     },
     {
@@ -8257,7 +8426,7 @@
       "date": "2022-01-15T12:00:00",
       "game_number": 11,
       "points": 0,
-      "cumulative_points": 12,
+      "cumulative_points": 11,
       "kamp_id": 49230
     },
     {
@@ -8265,7 +8434,7 @@
       "date": "2022-01-15T12:00:00",
       "game_number": 10,
       "points": 3,
-      "cumulative_points": 18,
+      "cumulative_points": 16,
       "kamp_id": 49233
     },
     {
@@ -8273,7 +8442,7 @@
       "date": "2022-01-15T12:00:00",
       "game_number": 11,
       "points": 0,
-      "cumulative_points": 20,
+      "cumulative_points": 18,
       "kamp_id": 49233
     },
     {
@@ -8281,7 +8450,7 @@
       "date": "2022-01-16T10:00:00",
       "game_number": 11,
       "points": 3,
-      "cumulative_points": 16,
+      "cumulative_points": 15,
       "kamp_id": 49235
     },
     {
@@ -8289,7 +8458,7 @@
       "date": "2022-01-16T10:00:00",
       "game_number": 12,
       "points": 0,
-      "cumulative_points": 3,
+      "cumulative_points": 2,
       "kamp_id": 49235
     },
     {
@@ -8297,7 +8466,7 @@
       "date": "2022-01-16T11:00:00",
       "game_number": 12,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 11,
       "kamp_id": 49232
     },
     {
@@ -8305,7 +8474,7 @@
       "date": "2022-01-16T11:00:00",
       "game_number": 10,
       "points": 3,
-      "cumulative_points": 30,
+      "cumulative_points": 27,
       "kamp_id": 49232
     },
     {
@@ -8313,7 +8482,7 @@
       "date": "2022-01-16T13:00:00",
       "game_number": 12,
       "points": 0,
-      "cumulative_points": 28,
+      "cumulative_points": 27,
       "kamp_id": 49234
     },
     {
@@ -8321,7 +8490,7 @@
       "date": "2022-01-16T13:00:00",
       "game_number": 11,
       "points": 3,
-      "cumulative_points": 28,
+      "cumulative_points": 27,
       "kamp_id": 49234
     },
     {
@@ -8329,15 +8498,15 @@
       "date": "2022-01-22T12:00:00",
       "game_number": 11,
       "points": 1,
-      "cumulative_points": 31,
+      "cumulative_points": 28,
       "kamp_id": 49240
     },
     {
       "team": "DHV Odense.2",
       "date": "2022-01-22T12:00:00",
       "game_number": 13,
-      "points": 3,
-      "cumulative_points": 31,
+      "points": 2,
+      "cumulative_points": 29,
       "kamp_id": 49240
     },
     {
@@ -8345,7 +8514,7 @@
       "date": "2022-01-23T12:00:00",
       "game_number": 12,
       "points": 3,
-      "cumulative_points": 19,
+      "cumulative_points": 18,
       "kamp_id": 49236
     },
     {
@@ -8353,7 +8522,7 @@
       "date": "2022-01-23T12:00:00",
       "game_number": 12,
       "points": 0,
-      "cumulative_points": 29,
+      "cumulative_points": 27,
       "kamp_id": 49236
     },
     {
@@ -8361,23 +8530,23 @@
       "date": "2022-01-23T13:00:00",
       "game_number": 13,
       "points": 1,
-      "cumulative_points": 4,
+      "cumulative_points": 3,
       "kamp_id": 49238
     },
     {
       "team": "Ikast KFUM.2",
       "date": "2022-01-23T13:00:00",
       "game_number": 12,
-      "points": 3,
-      "cumulative_points": 15,
+      "points": 2,
+      "cumulative_points": 13,
       "kamp_id": 49238
     },
     {
       "team": "Holstebro KFUM",
       "date": "2022-01-23T15:00:00",
       "game_number": 12,
-      "points": 3,
-      "cumulative_points": 31,
+      "points": 2,
+      "cumulative_points": 29,
       "kamp_id": 49241
     },
     {
@@ -8385,7 +8554,7 @@
       "date": "2022-01-23T15:00:00",
       "game_number": 13,
       "points": 1,
-      "cumulative_points": 14,
+      "cumulative_points": 12,
       "kamp_id": 49241
     },
     {
@@ -8393,7 +8562,7 @@
       "date": "2022-01-23T16:00:00",
       "game_number": 11,
       "points": 0,
-      "cumulative_points": 12,
+      "cumulative_points": 11,
       "kamp_id": 49239
     },
     {
@@ -8401,63 +8570,63 @@
       "date": "2022-01-23T16:00:00",
       "game_number": 12,
       "points": 3,
-      "cumulative_points": 23,
+      "cumulative_points": 21,
       "kamp_id": 49239
     },
     {
       "team": "Aalborg Volleyball.2",
       "date": "2022-01-29T12:00:00",
+      "game_number": 13,
+      "points": 3,
+      "cumulative_points": 30,
+      "kamp_id": 49212
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2022-01-29T12:00:00",
+      "game_number": 13,
+      "points": 0,
+      "cumulative_points": 21,
+      "kamp_id": 49212
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2022-01-29T18:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 32,
+      "kamp_id": 49243
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2022-01-29T18:00:00",
+      "game_number": 12,
+      "points": 0,
+      "cumulative_points": 11,
+      "kamp_id": 49243
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2022-01-30T12:00:00",
+      "game_number": 14,
+      "points": 2,
+      "cumulative_points": 32,
+      "kamp_id": 49245
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2022-01-30T12:00:00",
+      "game_number": 11,
+      "points": 1,
+      "cumulative_points": 17,
+      "kamp_id": 49245
+    },
+    {
+      "team": "Holstebro KFUM",
+      "date": "2022-01-30T15:00:00",
       "game_number": 13,
       "points": 3,
       "cumulative_points": 32,
-      "kamp_id": 49212
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2022-01-29T12:00:00",
-      "game_number": 13,
-      "points": 0,
-      "cumulative_points": 23,
-      "kamp_id": 49212
-    },
-    {
-      "team": "DHV Odense.2",
-      "date": "2022-01-29T18:00:00",
-      "game_number": 14,
-      "points": 3,
-      "cumulative_points": 34,
-      "kamp_id": 49243
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2022-01-29T18:00:00",
-      "game_number": 12,
-      "points": 0,
-      "cumulative_points": 12,
-      "kamp_id": 49243
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2022-01-30T12:00:00",
-      "game_number": 14,
-      "points": 3,
-      "cumulative_points": 35,
-      "kamp_id": 49245
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2022-01-30T12:00:00",
-      "game_number": 11,
-      "points": 1,
-      "cumulative_points": 19,
-      "kamp_id": 49245
-    },
-    {
-      "team": "Holstebro KFUM",
-      "date": "2022-01-30T15:00:00",
-      "game_number": 13,
-      "points": 3,
-      "cumulative_points": 34,
       "kamp_id": 49242
     },
     {
@@ -8472,440 +8641,440 @@
       "team": "Hornsyld IF",
       "date": "2022-02-03T19:00:00",
       "game_number": 14,
-      "points": 3,
-      "cumulative_points": 26,
-      "kamp_id": 49247
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2022-02-03T19:00:00",
-      "game_number": 14,
-      "points": 0,
-      "cumulative_points": 4,
-      "kamp_id": 49247
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2022-02-05T16:00:00",
-      "game_number": 13,
-      "points": 0,
-      "cumulative_points": 19,
-      "kamp_id": 49192
-    },
-    {
-      "team": "Holstebro KFUM",
-      "date": "2022-02-05T16:00:00",
-      "game_number": 14,
-      "points": 3,
-      "cumulative_points": 37,
-      "kamp_id": 49192
-    },
-    {
-      "team": "VK Raptus",
-      "date": "2022-02-06T11:00:00",
-      "game_number": 14,
-      "points": 0,
-      "cumulative_points": 14,
-      "kamp_id": 49191
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2022-02-06T11:00:00",
-      "game_number": 12,
-      "points": 3,
-      "cumulative_points": 22,
-      "kamp_id": 49191
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2022-02-06T12:00:00",
-      "game_number": 15,
-      "points": 0,
-      "cumulative_points": 26,
-      "kamp_id": 49190
-    },
-    {
-      "team": "DHV Odense.2",
-      "date": "2022-02-06T12:00:00",
-      "game_number": 15,
-      "points": 3,
-      "cumulative_points": 37,
-      "kamp_id": 49190
-    },
-    {
-      "team": "Midtfyn VK",
-      "date": "2022-02-06T13:00:00",
-      "game_number": 13,
-      "points": 0,
-      "cumulative_points": 6,
-      "kamp_id": 49188
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2022-02-06T13:00:00",
-      "game_number": 13,
-      "points": 3,
-      "cumulative_points": 18,
-      "kamp_id": 49188
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2022-02-06T14:00:00",
-      "game_number": 13,
-      "points": 0,
-      "cumulative_points": 12,
-      "kamp_id": 49189
-    },
-    {
-      "team": "IF Lyseng",
-      "date": "2022-02-06T14:00:00",
-      "game_number": 12,
-      "points": 3,
-      "cumulative_points": 34,
-      "kamp_id": 49189
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2022-02-08T20:00:00",
-      "game_number": 15,
-      "points": 0,
-      "cumulative_points": 4,
-      "kamp_id": 49193
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2022-02-08T20:00:00",
-      "game_number": 15,
-      "points": 3,
-      "cumulative_points": 38,
-      "kamp_id": 49193
-    },
-    {
-      "team": "Midtfyn VK",
-      "date": "2022-02-12T14:00:00",
-      "game_number": 14,
-      "points": 0,
-      "cumulative_points": 6,
-      "kamp_id": 49231
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2022-02-12T14:00:00",
-      "game_number": 14,
-      "points": 3,
-      "cumulative_points": 15,
-      "kamp_id": 49231
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2022-02-20T16:00:00",
-      "game_number": 15,
-      "points": 0,
-      "cumulative_points": 15,
-      "kamp_id": 49227
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2022-02-20T16:00:00",
-      "game_number": 14,
-      "points": 3,
-      "cumulative_points": 22,
-      "kamp_id": 49227
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2022-02-22T20:00:00",
-      "game_number": 16,
-      "points": 0,
-      "cumulative_points": 4,
-      "kamp_id": 49274
-    },
-    {
-      "team": "DHV Odense.2",
-      "date": "2022-02-22T20:00:00",
-      "game_number": 16,
-      "points": 3,
-      "cumulative_points": 40,
-      "kamp_id": 49274
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2022-02-22T20:30:00",
-      "game_number": 13,
-      "points": 3,
-      "cumulative_points": 25,
-      "kamp_id": 49237
-    },
-    {
-      "team": "Midtfyn VK",
-      "date": "2022-02-22T20:30:00",
-      "game_number": 15,
-      "points": 0,
-      "cumulative_points": 6,
-      "kamp_id": 49237
-    },
-    {
-      "team": "Holstebro KFUM",
-      "date": "2022-02-23T19:00:00",
-      "game_number": 15,
-      "points": 3,
-      "cumulative_points": 40,
-      "kamp_id": 49272
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2022-02-23T19:00:00",
-      "game_number": 16,
-      "points": 0,
-      "cumulative_points": 15,
-      "kamp_id": 49272
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2022-02-26T10:00:00",
-      "game_number": 14,
-      "points": 0,
-      "cumulative_points": 18,
-      "kamp_id": 49276
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2022-02-26T10:00:00",
-      "game_number": 14,
-      "points": 3,
-      "cumulative_points": 28,
-      "kamp_id": 49276
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2022-02-26T10:00:00",
-      "game_number": 16,
-      "points": 0,
-      "cumulative_points": 26,
-      "kamp_id": 49277
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2022-02-26T10:00:00",
-      "game_number": 15,
-      "points": 3,
-      "cumulative_points": 25,
-      "kamp_id": 49277
-    },
-    {
-      "team": "Midtfyn VK",
-      "date": "2022-02-26T13:00:00",
-      "game_number": 16,
-      "points": 3,
-      "cumulative_points": 9,
-      "kamp_id": 49275
-    },
-    {
-      "team": "VK Raptus",
-      "date": "2022-02-26T13:00:00",
-      "game_number": 15,
-      "points": 1,
-      "cumulative_points": 15,
-      "kamp_id": 49275
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2022-03-01T20:00:00",
-      "game_number": 16,
-      "points": 3,
-      "cumulative_points": 41,
-      "kamp_id": 49273
-    },
-    {
-      "team": "IF Lyseng",
-      "date": "2022-03-01T20:00:00",
-      "game_number": 13,
-      "points": 1,
-      "cumulative_points": 35,
-      "kamp_id": 49273
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2022-03-02T20:30:00",
-      "game_number": 16,
-      "points": 1,
-      "cumulative_points": 26,
-      "kamp_id": 49280
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2022-03-02T20:30:00",
-      "game_number": 15,
-      "points": 3,
-      "cumulative_points": 21,
-      "kamp_id": 49280
-    },
-    {
-      "team": "DHV Odense.2",
-      "date": "2022-03-04T19:00:00",
-      "game_number": 17,
-      "points": 3,
-      "cumulative_points": 43,
-      "kamp_id": 49279
-    },
-    {
-      "team": "Midtfyn VK",
-      "date": "2022-03-04T19:00:00",
-      "game_number": 17,
-      "points": 0,
-      "cumulative_points": 9,
-      "kamp_id": 49279
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2022-03-05T12:00:00",
-      "game_number": 17,
-      "points": 1,
-      "cumulative_points": 27,
-      "kamp_id": 49278
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2022-03-05T12:00:00",
-      "game_number": 17,
-      "points": 3,
-      "cumulative_points": 44,
-      "kamp_id": 49278
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2022-03-05T12:00:00",
-      "game_number": 15,
-      "points": 3,
-      "cumulative_points": 31,
-      "kamp_id": 49281
-    },
-    {
-      "team": "Nordenskov UIF",
-      "date": "2022-03-05T12:00:00",
-      "game_number": 17,
-      "points": 0,
-      "cumulative_points": 15,
-      "kamp_id": 49281
-    },
-    {
-      "team": "IF Lyseng",
-      "date": "2022-03-05T14:00:00",
-      "game_number": 14,
-      "points": 3,
-      "cumulative_points": 38,
-      "kamp_id": 49282
-    },
-    {
-      "team": "Holstebro KFUM",
-      "date": "2022-03-05T14:00:00",
-      "game_number": 16,
-      "points": 0,
-      "cumulative_points": 40,
-      "kamp_id": 49282
-    },
-    {
-      "team": "VK Raptus",
-      "date": "2022-03-05T17:00:00",
-      "game_number": 16,
-      "points": 3,
-      "cumulative_points": 18,
-      "kamp_id": 49283
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2022-03-05T17:00:00",
-      "game_number": 17,
-      "points": 0,
-      "cumulative_points": 4,
-      "kamp_id": 49283
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2022-03-09T20:15:00",
-      "game_number": 16,
-      "points": 0,
-      "cumulative_points": 21,
-      "kamp_id": 49244
-    },
-    {
-      "team": "IF Lyseng",
-      "date": "2022-03-09T20:15:00",
-      "game_number": 15,
-      "points": 3,
-      "cumulative_points": 41,
-      "kamp_id": 49244
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2022-03-12T11:00:00",
-      "game_number": 16,
-      "points": 0,
-      "cumulative_points": 31,
-      "kamp_id": 49198
-    },
-    {
-      "team": "DHV Odense.2",
-      "date": "2022-03-12T11:00:00",
-      "game_number": 18,
-      "points": 3,
-      "cumulative_points": 46,
-      "kamp_id": 49198
-    },
-    {
-      "team": "IF Lyseng",
-      "date": "2022-03-12T12:00:00",
-      "game_number": 16,
-      "points": 3,
-      "cumulative_points": 44,
-      "kamp_id": 49196
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2022-03-12T12:00:00",
-      "game_number": 18,
-      "points": 0,
-      "cumulative_points": 4,
-      "kamp_id": 49196
-    },
-    {
-      "team": "Hornsyld IF",
-      "date": "2022-03-12T12:00:00",
-      "game_number": 18,
-      "points": 1,
-      "cumulative_points": 28,
-      "kamp_id": 49197
-    },
-    {
-      "team": "Holstebro KFUM",
-      "date": "2022-03-12T12:00:00",
-      "game_number": 17,
-      "points": 3,
-      "cumulative_points": 43,
-      "kamp_id": 49197
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2022-03-12T12:00:00",
-      "game_number": 17,
-      "points": 0,
-      "cumulative_points": 26,
-      "kamp_id": 49199
-    },
-    {
-      "team": "Midtfyn VK",
-      "date": "2022-03-12T12:00:00",
-      "game_number": 18,
-      "points": 3,
-      "cumulative_points": 12,
-      "kamp_id": 49199
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2022-03-13T16:00:00",
-      "game_number": 17,
       "points": 3,
       "cumulative_points": 24,
+      "kamp_id": 49247
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2022-02-03T19:00:00",
+      "game_number": 14,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 49247
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2022-02-05T16:00:00",
+      "game_number": 13,
+      "points": 0,
+      "cumulative_points": 18,
+      "kamp_id": 49192
+    },
+    {
+      "team": "Holstebro KFUM",
+      "date": "2022-02-05T16:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 35,
+      "kamp_id": 49192
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2022-02-06T11:00:00",
+      "game_number": 14,
+      "points": 0,
+      "cumulative_points": 12,
+      "kamp_id": 49191
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2022-02-06T11:00:00",
+      "game_number": 12,
+      "points": 3,
+      "cumulative_points": 20,
+      "kamp_id": 49191
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2022-02-06T12:00:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 24,
+      "kamp_id": 49190
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2022-02-06T12:00:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 35,
+      "kamp_id": 49190
+    },
+    {
+      "team": "Midtfyn VK",
+      "date": "2022-02-06T13:00:00",
+      "game_number": 13,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 49188
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2022-02-06T13:00:00",
+      "game_number": 13,
+      "points": 3,
+      "cumulative_points": 16,
+      "kamp_id": 49188
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2022-02-06T14:00:00",
+      "game_number": 13,
+      "points": 0,
+      "cumulative_points": 11,
+      "kamp_id": 49189
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2022-02-06T14:00:00",
+      "game_number": 12,
+      "points": 3,
+      "cumulative_points": 31,
+      "kamp_id": 49189
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2022-02-08T20:00:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 49193
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2022-02-08T20:00:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 35,
+      "kamp_id": 49193
+    },
+    {
+      "team": "Midtfyn VK",
+      "date": "2022-02-12T14:00:00",
+      "game_number": 14,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 49231
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2022-02-12T14:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 14,
+      "kamp_id": 49231
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2022-02-20T16:00:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 14,
+      "kamp_id": 49227
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2022-02-20T16:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 21,
+      "kamp_id": 49227
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2022-02-22T20:00:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 49274
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2022-02-22T20:00:00",
+      "game_number": 16,
+      "points": 3,
+      "cumulative_points": 38,
+      "kamp_id": 49274
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2022-02-22T20:30:00",
+      "game_number": 13,
+      "points": 3,
+      "cumulative_points": 23,
+      "kamp_id": 49237
+    },
+    {
+      "team": "Midtfyn VK",
+      "date": "2022-02-22T20:30:00",
+      "game_number": 15,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 49237
+    },
+    {
+      "team": "Holstebro KFUM",
+      "date": "2022-02-23T19:00:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 38,
+      "kamp_id": 49272
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2022-02-23T19:00:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 14,
+      "kamp_id": 49272
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2022-02-26T10:00:00",
+      "game_number": 14,
+      "points": 0,
+      "cumulative_points": 16,
+      "kamp_id": 49276
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2022-02-26T10:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 26,
+      "kamp_id": 49276
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2022-02-26T10:00:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 24,
+      "kamp_id": 49277
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2022-02-26T10:00:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 24,
+      "kamp_id": 49277
+    },
+    {
+      "team": "Midtfyn VK",
+      "date": "2022-02-26T13:00:00",
+      "game_number": 16,
+      "points": 2,
+      "cumulative_points": 8,
+      "kamp_id": 49275
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2022-02-26T13:00:00",
+      "game_number": 15,
+      "points": 1,
+      "cumulative_points": 13,
+      "kamp_id": 49275
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2022-03-01T20:00:00",
+      "game_number": 16,
+      "points": 2,
+      "cumulative_points": 37,
+      "kamp_id": 49273
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2022-03-01T20:00:00",
+      "game_number": 13,
+      "points": 1,
+      "cumulative_points": 32,
+      "kamp_id": 49273
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2022-03-02T20:30:00",
+      "game_number": 16,
+      "points": 1,
+      "cumulative_points": 25,
+      "kamp_id": 49280
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2022-03-02T20:30:00",
+      "game_number": 15,
+      "points": 2,
+      "cumulative_points": 18,
+      "kamp_id": 49280
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2022-03-04T19:00:00",
+      "game_number": 17,
+      "points": 3,
+      "cumulative_points": 41,
+      "kamp_id": 49279
+    },
+    {
+      "team": "Midtfyn VK",
+      "date": "2022-03-04T19:00:00",
+      "game_number": 17,
+      "points": 0,
+      "cumulative_points": 8,
+      "kamp_id": 49279
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2022-03-05T12:00:00",
+      "game_number": 17,
+      "points": 1,
+      "cumulative_points": 25,
+      "kamp_id": 49278
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2022-03-05T12:00:00",
+      "game_number": 17,
+      "points": 2,
+      "cumulative_points": 39,
+      "kamp_id": 49278
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2022-03-05T12:00:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 29,
+      "kamp_id": 49281
+    },
+    {
+      "team": "Nordenskov UIF",
+      "date": "2022-03-05T12:00:00",
+      "game_number": 17,
+      "points": 0,
+      "cumulative_points": 14,
+      "kamp_id": 49281
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2022-03-05T14:00:00",
+      "game_number": 14,
+      "points": 3,
+      "cumulative_points": 35,
+      "kamp_id": 49282
+    },
+    {
+      "team": "Holstebro KFUM",
+      "date": "2022-03-05T14:00:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 38,
+      "kamp_id": 49282
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2022-03-05T17:00:00",
+      "game_number": 16,
+      "points": 3,
+      "cumulative_points": 16,
+      "kamp_id": 49283
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2022-03-05T17:00:00",
+      "game_number": 17,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 49283
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2022-03-09T20:15:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 18,
+      "kamp_id": 49244
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2022-03-09T20:15:00",
+      "game_number": 15,
+      "points": 3,
+      "cumulative_points": 38,
+      "kamp_id": 49244
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2022-03-12T11:00:00",
+      "game_number": 16,
+      "points": 0,
+      "cumulative_points": 29,
+      "kamp_id": 49198
+    },
+    {
+      "team": "DHV Odense.2",
+      "date": "2022-03-12T11:00:00",
+      "game_number": 18,
+      "points": 3,
+      "cumulative_points": 44,
+      "kamp_id": 49198
+    },
+    {
+      "team": "IF Lyseng",
+      "date": "2022-03-12T12:00:00",
+      "game_number": 16,
+      "points": 3,
+      "cumulative_points": 41,
+      "kamp_id": 49196
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2022-03-12T12:00:00",
+      "game_number": 18,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 49196
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2022-03-12T12:00:00",
+      "game_number": 18,
+      "points": 1,
+      "cumulative_points": 26,
+      "kamp_id": 49197
+    },
+    {
+      "team": "Holstebro KFUM",
+      "date": "2022-03-12T12:00:00",
+      "game_number": 17,
+      "points": 2,
+      "cumulative_points": 40,
+      "kamp_id": 49197
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2022-03-12T12:00:00",
+      "game_number": 17,
+      "points": 0,
+      "cumulative_points": 25,
+      "kamp_id": 49199
+    },
+    {
+      "team": "Midtfyn VK",
+      "date": "2022-03-12T12:00:00",
+      "game_number": 18,
+      "points": 3,
+      "cumulative_points": 11,
+      "kamp_id": 49199
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2022-03-13T16:00:00",
+      "game_number": 17,
+      "points": 3,
+      "cumulative_points": 21,
       "kamp_id": 49195
     },
     {
@@ -8913,7 +9082,7 @@
       "date": "2022-03-13T16:00:00",
       "game_number": 17,
       "points": 0,
-      "cumulative_points": 18,
+      "cumulative_points": 16,
       "kamp_id": 49195
     },
     {
@@ -8921,7 +9090,7 @@
       "date": "2022-03-16T20:30:00",
       "game_number": 18,
       "points": 0,
-      "cumulative_points": 18,
+      "cumulative_points": 16,
       "kamp_id": 49246
     },
     {
@@ -8929,7 +9098,7 @@
       "date": "2022-03-16T20:30:00",
       "game_number": 18,
       "points": 3,
-      "cumulative_points": 29,
+      "cumulative_points": 28,
       "kamp_id": 49246
     },
     {
@@ -8937,7 +9106,7 @@
       "date": "2022-03-17T18:30:00",
       "game_number": 19,
       "points": 0,
-      "cumulative_points": 28,
+      "cumulative_points": 26,
       "kamp_id": 49250
     },
     {
@@ -8945,7 +9114,7 @@
       "date": "2022-03-17T18:30:00",
       "game_number": 17,
       "points": 3,
-      "cumulative_points": 47,
+      "cumulative_points": 44,
       "kamp_id": 49250
     },
     {
@@ -8953,23 +9122,39 @@
       "date": "2022-03-19T11:00:00",
       "game_number": 19,
       "points": 1,
-      "cumulative_points": 19,
+      "cumulative_points": 17,
       "kamp_id": 49251
     },
     {
       "team": "DHV Odense.2",
       "date": "2022-03-19T11:00:00",
       "game_number": 19,
-      "points": 3,
-      "cumulative_points": 49,
+      "points": 2,
+      "cumulative_points": 46,
       "kamp_id": 49251
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2022-03-19T12:00:00",
+      "game_number": 19,
+      "points": 3,
+      "cumulative_points": 31,
+      "kamp_id": 49252
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2022-03-19T12:00:00",
+      "game_number": 17,
+      "points": 0,
+      "cumulative_points": 29,
+      "kamp_id": 49252
     },
     {
       "team": "ASV Aarhus.3",
       "date": "2022-03-19T12:00:00",
       "game_number": 19,
       "points": 0,
-      "cumulative_points": 4,
+      "cumulative_points": 3,
       "kamp_id": 49253
     },
     {
@@ -8977,7 +9162,7 @@
       "date": "2022-03-19T12:00:00",
       "game_number": 18,
       "points": 3,
-      "cumulative_points": 46,
+      "cumulative_points": 43,
       "kamp_id": 49253
     },
     {
@@ -8985,15 +9170,15 @@
       "date": "2022-03-19T13:00:00",
       "game_number": 19,
       "points": 1,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49248
     },
     {
       "team": "Aalborg Volleyball.2",
       "date": "2022-03-19T13:00:00",
       "game_number": 18,
-      "points": 3,
-      "cumulative_points": 47,
+      "points": 2,
+      "cumulative_points": 41,
       "kamp_id": 49248
     },
     {
@@ -9001,7 +9186,7 @@
       "date": "2022-03-20T17:00:00",
       "game_number": 18,
       "points": 0,
-      "cumulative_points": 15,
+      "cumulative_points": 14,
       "kamp_id": 49249
     },
     {
@@ -9009,7 +9194,7 @@
       "date": "2022-03-20T17:00:00",
       "game_number": 18,
       "points": 3,
-      "cumulative_points": 27,
+      "cumulative_points": 24,
       "kamp_id": 49249
     },
     {
@@ -9017,15 +9202,15 @@
       "date": "2022-03-23T19:30:00",
       "game_number": 18,
       "points": 0,
-      "cumulative_points": 47,
+      "cumulative_points": 44,
       "kamp_id": 49226
     },
     {
       "team": "DSIO Odense",
       "date": "2022-03-23T19:30:00",
-      "game_number": 17,
+      "game_number": 18,
       "points": 3,
-      "cumulative_points": 34,
+      "cumulative_points": 32,
       "kamp_id": 49226
     },
     {
@@ -9033,7 +9218,7 @@
       "date": "2022-03-25T18:30:00",
       "game_number": 19,
       "points": 3,
-      "cumulative_points": 50,
+      "cumulative_points": 44,
       "kamp_id": 49194
     },
     {
@@ -9041,7 +9226,7 @@
       "date": "2022-03-25T18:30:00",
       "game_number": 19,
       "points": 0,
-      "cumulative_points": 15,
+      "cumulative_points": 14,
       "kamp_id": 49194
     },
     {
@@ -9049,7 +9234,7 @@
       "date": "2022-03-26T13:00:00",
       "game_number": 20,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49285
     },
     {
@@ -9057,23 +9242,23 @@
       "date": "2022-03-26T13:00:00",
       "game_number": 20,
       "points": 3,
-      "cumulative_points": 31,
+      "cumulative_points": 29,
       "kamp_id": 49285
     },
     {
       "team": "Hjerm FIF",
       "date": "2022-03-26T14:00:00",
-      "game_number": 19,
+      "game_number": 20,
       "points": 1,
-      "cumulative_points": 30,
+      "cumulative_points": 32,
       "kamp_id": 49284
     },
     {
       "team": "IF Lyseng",
       "date": "2022-03-26T14:00:00",
       "game_number": 19,
-      "points": 3,
-      "cumulative_points": 50,
+      "points": 2,
+      "cumulative_points": 46,
       "kamp_id": 49284
     },
     {
@@ -9081,15 +9266,15 @@
       "date": "2022-03-26T14:00:00",
       "game_number": 20,
       "points": 0,
-      "cumulative_points": 4,
+      "cumulative_points": 3,
       "kamp_id": 49288
     },
     {
       "team": "DSIO Odense",
       "date": "2022-03-26T14:00:00",
-      "game_number": 18,
+      "game_number": 19,
       "points": 3,
-      "cumulative_points": 37,
+      "cumulative_points": 35,
       "kamp_id": 49288
     },
     {
@@ -9097,7 +9282,7 @@
       "date": "2022-03-27T10:00:00",
       "game_number": 19,
       "points": 3,
-      "cumulative_points": 30,
+      "cumulative_points": 27,
       "kamp_id": 49286
     },
     {
@@ -9105,7 +9290,7 @@
       "date": "2022-03-27T10:00:00",
       "game_number": 20,
       "points": 0,
-      "cumulative_points": 49,
+      "cumulative_points": 46,
       "kamp_id": 49286
     },
     {
@@ -9113,7 +9298,7 @@
       "date": "2022-03-27T14:00:00",
       "game_number": 20,
       "points": 3,
-      "cumulative_points": 53,
+      "cumulative_points": 47,
       "kamp_id": 49289
     },
     {
@@ -9121,7 +9306,7 @@
       "date": "2022-03-27T14:00:00",
       "game_number": 19,
       "points": 0,
-      "cumulative_points": 46,
+      "cumulative_points": 43,
       "kamp_id": 49289
     },
     {
@@ -9129,15 +9314,15 @@
       "date": "2022-03-27T16:00:00",
       "game_number": 20,
       "points": 1,
-      "cumulative_points": 16,
+      "cumulative_points": 15,
       "kamp_id": 49287
     },
     {
       "team": "VK Raptus",
       "date": "2022-03-27T16:00:00",
       "game_number": 20,
-      "points": 3,
-      "cumulative_points": 22,
+      "points": 2,
+      "cumulative_points": 19,
       "kamp_id": 49287
     },
     {
@@ -9145,7 +9330,7 @@
       "date": "2022-03-30T20:00:00",
       "game_number": 20,
       "points": 0,
-      "cumulative_points": 46,
+      "cumulative_points": 43,
       "kamp_id": 49216
     },
     {
@@ -9153,23 +9338,23 @@
       "date": "2022-03-30T20:00:00",
       "game_number": 20,
       "points": 3,
-      "cumulative_points": 53,
+      "cumulative_points": 49,
       "kamp_id": 49216
     },
     {
       "team": "Hornsyld IF",
       "date": "2022-03-31T19:00:00",
       "game_number": 21,
-      "points": 3,
-      "cumulative_points": 34,
+      "points": 2,
+      "cumulative_points": 31,
       "kamp_id": 49167
     },
     {
       "team": "DSIO Odense",
       "date": "2022-03-31T19:00:00",
-      "game_number": 19,
+      "game_number": 20,
       "points": 1,
-      "cumulative_points": 38,
+      "cumulative_points": 36,
       "kamp_id": 49167
     },
     {
@@ -9177,15 +9362,15 @@
       "date": "2022-04-02T11:00:00",
       "game_number": 21,
       "points": 1,
-      "cumulative_points": 5,
+      "cumulative_points": 4,
       "kamp_id": 49169
     },
     {
       "team": "Hjerm FIF",
       "date": "2022-04-02T11:00:00",
-      "game_number": 20,
-      "points": 3,
-      "cumulative_points": 33,
+      "game_number": 21,
+      "points": 2,
+      "cumulative_points": 34,
       "kamp_id": 49169
     },
     {
@@ -9193,15 +9378,15 @@
       "date": "2022-04-02T12:00:00",
       "game_number": 20,
       "points": 1,
-      "cumulative_points": 31,
+      "cumulative_points": 28,
       "kamp_id": 49164
     },
     {
       "team": "Aalborg Volleyball.2",
       "date": "2022-04-02T12:00:00",
       "game_number": 21,
-      "points": 3,
-      "cumulative_points": 56,
+      "points": 2,
+      "cumulative_points": 49,
       "kamp_id": 49164
     },
     {
@@ -9209,7 +9394,7 @@
       "date": "2022-04-03T14:00:00",
       "game_number": 21,
       "points": 3,
-      "cumulative_points": 56,
+      "cumulative_points": 52,
       "kamp_id": 49166
     },
     {
@@ -9217,15 +9402,15 @@
       "date": "2022-04-03T14:00:00",
       "game_number": 21,
       "points": 0,
-      "cumulative_points": 22,
+      "cumulative_points": 19,
       "kamp_id": 49166
     },
     {
       "team": "Holstebro KFUM",
       "date": "2022-04-03T15:00:00",
       "game_number": 21,
-      "points": 3,
-      "cumulative_points": 49,
+      "points": 2,
+      "cumulative_points": 45,
       "kamp_id": 49168
     },
     {
@@ -9233,7 +9418,7 @@
       "date": "2022-04-03T15:00:00",
       "game_number": 21,
       "points": 1,
-      "cumulative_points": 50,
+      "cumulative_points": 47,
       "kamp_id": 49168
     },
     {
@@ -9241,7 +9426,7 @@
       "date": "2022-04-03T17:00:00",
       "game_number": 21,
       "points": 3,
-      "cumulative_points": 19,
+      "cumulative_points": 18,
       "kamp_id": 49165
     },
     {
@@ -9249,47 +9434,47 @@
       "date": "2022-04-03T17:00:00",
       "game_number": 21,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49165
     },
     {
       "team": "Holstebro KFUM",
       "date": "2022-04-06T19:00:00",
+      "game_number": 22,
+      "points": 3,
+      "cumulative_points": 48,
+      "kamp_id": 49258
+    },
+    {
+      "team": "Hjerm FIF",
+      "date": "2022-04-06T19:00:00",
+      "game_number": 22,
+      "points": 0,
+      "cumulative_points": 34,
+      "kamp_id": 49258
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2022-04-06T20:00:00",
+      "game_number": 21,
+      "points": 0,
+      "cumulative_points": 36,
+      "kamp_id": 49210
+    },
+    {
+      "team": "Ikast KFUM.2",
+      "date": "2022-04-06T20:00:00",
+      "game_number": 21,
+      "points": 3,
+      "cumulative_points": 31,
+      "kamp_id": 49210
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2022-04-09T10:00:00",
       "game_number": 22,
       "points": 3,
       "cumulative_points": 52,
-      "kamp_id": 49258
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2022-04-06T19:00:00",
-      "game_number": 21,
-      "points": 0,
-      "cumulative_points": 33,
-      "kamp_id": 49258
-    },
-    {
-      "team": "DSIO Odense",
-      "date": "2022-04-06T20:00:00",
-      "game_number": 20,
-      "points": 0,
-      "cumulative_points": 38,
-      "kamp_id": 49210
-    },
-    {
-      "team": "Ikast KFUM.2",
-      "date": "2022-04-06T20:00:00",
-      "game_number": 21,
-      "points": 3,
-      "cumulative_points": 34,
-      "kamp_id": 49210
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2022-04-09T10:00:00",
-      "game_number": 22,
-      "points": 3,
-      "cumulative_points": 59,
       "kamp_id": 49259
     },
     {
@@ -9297,7 +9482,7 @@
       "date": "2022-04-09T10:00:00",
       "game_number": 22,
       "points": 0,
-      "cumulative_points": 5,
+      "cumulative_points": 4,
       "kamp_id": 49259
     },
     {
@@ -9305,7 +9490,7 @@
       "date": "2022-04-09T12:00:00",
       "game_number": 22,
       "points": 3,
-      "cumulative_points": 53,
+      "cumulative_points": 50,
       "kamp_id": 49256
     },
     {
@@ -9313,15 +9498,15 @@
       "date": "2022-04-09T12:00:00",
       "game_number": 22,
       "points": 0,
-      "cumulative_points": 34,
+      "cumulative_points": 31,
       "kamp_id": 49256
     },
     {
       "team": "DSIO Odense",
       "date": "2022-04-09T12:00:00",
-      "game_number": 21,
+      "game_number": 22,
       "points": 3,
-      "cumulative_points": 41,
+      "cumulative_points": 39,
       "kamp_id": 49257
     },
     {
@@ -9329,7 +9514,7 @@
       "date": "2022-04-09T12:00:00",
       "game_number": 22,
       "points": 0,
-      "cumulative_points": 22,
+      "cumulative_points": 19,
       "kamp_id": 49257
     },
     {
@@ -9337,7 +9522,7 @@
       "date": "2022-04-09T14:00:00",
       "game_number": 22,
       "points": 3,
-      "cumulative_points": 59,
+      "cumulative_points": 55,
       "kamp_id": 49255
     },
     {
@@ -9345,7 +9530,7 @@
       "date": "2022-04-09T14:00:00",
       "game_number": 22,
       "points": 0,
-      "cumulative_points": 19,
+      "cumulative_points": 18,
       "kamp_id": 49255
     },
     {
@@ -9353,7 +9538,7 @@
       "date": "2022-04-10T12:00:00",
       "game_number": 22,
       "points": 3,
-      "cumulative_points": 37,
+      "cumulative_points": 34,
       "kamp_id": 49254
     },
     {
@@ -9361,7 +9546,7 @@
       "date": "2022-04-10T12:00:00",
       "game_number": 22,
       "points": 0,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "kamp_id": 49254
     }
   ],
@@ -9426,7 +9611,7 @@
       "ASV Aarhus.3": "3-0",
       "Aalborg Volleyball.2": "3-0",
       "DHV Odense.2": "1-3",
-      "DSIO Odense": null,
+      "DSIO Odense": "3-0",
       "Hjerm FIF": "",
       "Holstebro KFUM": "0-3",
       "Hornsyld IF": "3-2",

@@ -92,6 +92,9 @@ def parse_standings(html: str, pool_id: str) -> list[StandingRow]:
 def parse_schedule(html: str, pool_id: str) -> list[Match]:
     matches: list[Match] = []
     for table in parse_tables(html):
+        result_index = schedule_result_column(table)
+        if result_index is None:
+            result_index = 5
         for row in table:
             texts = [cell.text for cell in row]
             compact = [text for text in texts if text]
@@ -100,7 +103,9 @@ def parse_schedule(html: str, pool_id: str) -> list[Match]:
             kamp_id = find_kamp_id(row[0].links)
             if kamp_id is None:
                 continue
-            result_home, result_away = parse_optional_score(compact[-1])
+            result_text = row[result_index].text if result_index is not None and result_index < len(row) else compact[-1]
+            result_home, result_away = parse_optional_score(result_text)
+            result_note = row[result_index + 1].text if result_index + 1 < len(row) else ""
             venue, court = split_venue_court(compact[4] if len(compact) > 4 else "")
             matches.append(
                 Match(
@@ -114,9 +119,18 @@ def parse_schedule(html: str, pool_id: str) -> list[Match]:
                     court=court,
                     result_home_sets=result_home,
                     result_away_sets=result_away,
+                    result_note=result_note,
                 )
             )
     return matches
+
+
+def schedule_result_column(table: list[list[Cell]]) -> int | None:
+    for row in table:
+        for index, cell in enumerate(row):
+            if clean_text(cell.text).lower() == "resultat":
+                return index
+    return None
 
 
 def parse_match_sets(html: str, kamp_id: int) -> list[SetResult]:

@@ -8,7 +8,7 @@ import sqlite3
 from .client import ResultaterClient
 from .exporter import export_json
 from .paths import DEFAULT_CACHE_DIR, DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
-from .rules import computed_standings, rules_for_division
+from .rules import computed_standings, rules_for_league
 from .scraper import GENDERS, VolleyballScraper
 from .storage import Repository
 from .validation import validate_rankings
@@ -53,12 +53,12 @@ def main(argv: list[str] | None = None) -> int:
                 for league in leagues:
                     print(f"  {league.name}")
                     repo.save_league(league)
-                    rule_profile = rules_for_division(league.division)
                     for pool_data in scraper.scrape_league(league):
                         print(f"    {pool_data.pool.name}: {len(pool_data.matches)} matches")
                         repo.save_pool(pool_data.pool)
                         repo.replace_source_standings(pool_data.pool.id, pool_data.standings)
                         repo.replace_matches(pool_data.pool.id, pool_data.matches, pool_data.set_results)
+                        rule_profile = rules_for_league(season, league, pool_data.pool)
                         computed = computed_standings(pool_data.pool.id, pool_data.matches, pool_data.set_results, rule_profile)
                         repo.replace_computed_standings(pool_data.pool.id, rule_profile.id, computed)
                     repo.commit()

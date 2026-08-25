@@ -15,7 +15,7 @@ class ValidationTests(unittest.TestCase):
             seed_pool(repo)
             row = standing("pool", 1, "A", points=10)
             repo.replace_source_standings("pool", [row])
-            repo.replace_computed_standings("pool", "dt_2025_division", [row])
+            repo.replace_computed_standings("pool", "five_set_3_1", [row])
             repo.commit()
 
             self.assertEqual(validate_rankings(repo.connection), [])
@@ -24,7 +24,7 @@ class ValidationTests(unittest.TestCase):
         with temp_repo() as repo:
             seed_pool(repo)
             repo.replace_source_standings("pool", [standing("pool", 1, "A", points=10)])
-            repo.replace_computed_standings("pool", "dt_2025_division", [standing("pool", 1, "A", points=9)])
+            repo.replace_computed_standings("pool", "five_set_3_1", [standing("pool", 1, "A", points=9)])
             repo.commit()
 
             mismatches = validate_rankings(repo.connection)
