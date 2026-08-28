@@ -28,9 +28,10 @@ class FetchResult:
 
 
 class ResultaterClient:
-    def __init__(self, cache_dir: Path | None = None, throttle_seconds: float = 0.25) -> None:
+    def __init__(self, cache_dir: Path | None = None, throttle_seconds: float = 0.25, refresh_cache: bool = False) -> None:
         self.cache_dir = cache_dir
         self.throttle_seconds = throttle_seconds
+        self.refresh_cache = refresh_cache
         self.opener = build_opener(HTTPCookieProcessor(CookieJar()))
         if cache_dir:
             cache_dir.mkdir(parents=True, exist_ok=True)
@@ -49,7 +50,7 @@ class ResultaterClient:
     def _fetch(self, method: str, url: str, form: dict[str, str] | None = None) -> FetchResult:
         body = urlencode(form or {}).encode("utf-8") if form is not None else None
         cache_path = self._cache_path(method, url, body)
-        if cache_path and cache_path.exists():
+        if cache_path and cache_path.exists() and not self.refresh_cache:
             return FetchResult(url=url, html=cache_path.read_text(encoding="utf-8"))
 
         request = Request(url, data=body, method=method)

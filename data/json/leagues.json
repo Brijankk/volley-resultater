@@ -1,23 +1,72 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-08-25T11:57:58+02:00",
-    "scraper_version": "1.0.1",
+    "exported_at": "2026-08-28T15:19:28+02:00",
+    "scraper_version": "1.0.2",
     "seasons": [
+      "2026",
       "2025",
       "2024",
       "2023",
       "2022",
       "2021"
     ],
-    "league_count": 30,
-    "pool_count": 58,
+    "league_count": 36,
+    "pool_count": 70,
     "validation": {
-      "pools_with_mismatches": 4,
-      "mismatch_count": 8
+      "pools_with_mismatches": 16,
+      "mismatch_count": 120
     }
   },
   "leagues": [
+    {
+      "id": "2026:women:1-division",
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "name": "1. Division Kvinder",
+      "raekke_id": 2373
+    },
+    {
+      "id": "2026:women:2-division",
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "2. Division",
+      "name": "2. Division Kvinder",
+      "raekke_id": 2374
+    },
+    {
+      "id": "2026:women:volleyligaen",
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "Volleyligaen",
+      "name": "Volleyligaen Kvinder",
+      "raekke_id": 2369
+    },
+    {
+      "id": "2026:men:1-division",
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "1. Division",
+      "name": "1. Division Herrer",
+      "raekke_id": 2371
+    },
+    {
+      "id": "2026:men:2-division",
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "2. Division",
+      "name": "2. Division Herrer",
+      "raekke_id": 2372
+    },
+    {
+      "id": "2026:men:volleyligaen",
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "Volleyligaen",
+      "name": "Volleyligaen Herrer",
+      "raekke_id": 2370
+    },
     {
       "id": "2025:women:1-division",
       "season_id": "2025",
@@ -1013,6 +1062,162 @@
       "raekke_id": 2249,
       "season_value": "2025",
       "season_start_year": 2025
+    },
+    {
+      "id": "2026:men:1-division:pulje-4119",
+      "league_id": "2026:men:1-division",
+      "name": "Vest",
+      "pulje_id": 4119,
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "1. Division",
+      "league_name": "1. Division Herrer",
+      "raekke_id": 2371,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:men:1-division:pulje-4118",
+      "league_id": "2026:men:1-division",
+      "name": "Øst",
+      "pulje_id": 4118,
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "1. Division",
+      "league_name": "1. Division Herrer",
+      "raekke_id": 2371,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:men:2-division:pulje-4124",
+      "league_id": "2026:men:2-division",
+      "name": "Nord",
+      "pulje_id": 4124,
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 2372,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:men:2-division:pulje-4123",
+      "league_id": "2026:men:2-division",
+      "name": "Syd",
+      "pulje_id": 4123,
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 2372,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:men:2-division:pulje-4122",
+      "league_id": "2026:men:2-division",
+      "name": "Øst",
+      "pulje_id": 4122,
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 2372,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:men:volleyligaen:pulje-4141",
+      "league_id": "2026:men:volleyligaen",
+      "name": "Række 1",
+      "pulje_id": 4141,
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "Volleyligaen",
+      "league_name": "Volleyligaen Herrer",
+      "raekke_id": 2370,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:women:1-division:pulje-4129",
+      "league_id": "2026:women:1-division",
+      "name": "Vest",
+      "pulje_id": 4129,
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "league_name": "1. Division Kvinder",
+      "raekke_id": 2373,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:women:1-division:pulje-4128",
+      "league_id": "2026:women:1-division",
+      "name": "Øst",
+      "pulje_id": 4128,
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "league_name": "1. Division Kvinder",
+      "raekke_id": 2373,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:women:2-division:pulje-4127",
+      "league_id": "2026:women:2-division",
+      "name": "Nord",
+      "pulje_id": 4127,
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 2374,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:women:2-division:pulje-4126",
+      "league_id": "2026:women:2-division",
+      "name": "Syd",
+      "pulje_id": 4126,
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 2374,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:women:2-division:pulje-4125",
+      "league_id": "2026:women:2-division",
+      "name": "Øst",
+      "pulje_id": 4125,
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 2374,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:women:volleyligaen:pulje-4140",
+      "league_id": "2026:women:volleyligaen",
+      "name": "Række 1",
+      "pulje_id": 4140,
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "Volleyligaen",
+      "league_name": "Volleyligaen Kvinder",
+      "raekke_id": 2369,
+      "season_value": "0",
+      "season_start_year": 2026
     }
   ],
   "pool_validation": {
@@ -1040,6 +1245,90 @@
     "2021:men:volleyligaen:pulje-2977": {
       "mismatch_count": 2,
       "affected_teams": 2,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:women:1-division:pulje-4129": {
+      "mismatch_count": 9,
+      "affected_teams": 9,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:women:1-division:pulje-4128": {
+      "mismatch_count": 8,
+      "affected_teams": 8,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:women:2-division:pulje-4127": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:women:2-division:pulje-4126": {
+      "mismatch_count": 9,
+      "affected_teams": 9,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:women:2-division:pulje-4125": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:women:volleyligaen:pulje-4140": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:men:1-division:pulje-4119": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:men:1-division:pulje-4118": {
+      "mismatch_count": 7,
+      "affected_teams": 7,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:men:2-division:pulje-4124": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:men:2-division:pulje-4123": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:men:2-division:pulje-4122": {
+      "mismatch_count": 9,
+      "affected_teams": 9,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2026:men:volleyligaen:pulje-4141": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
       "affected_fields": [
         "rank"
       ]

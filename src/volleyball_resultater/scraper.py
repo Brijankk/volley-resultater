@@ -21,17 +21,32 @@ class VolleyballScraper:
     def seasons(self) -> list[Season]:
         html = self._get_search_html()
         form = parse_forms(html)
+        options = form.selects[FIELD_SEASON]
+        current_start_year = newest_numeric_season(options)
+        has_current = any(option.text == "Nuværende" for option in options)
         seasons: list[Season] = []
-        for option in form.selects[FIELD_SEASON]:
+        for option in options:
             if option.text == "Nuværende":
-                seasons.append(Season(id="current", label=option.text, value=option.value, start_year=None, is_current=True))
+                season_id = str(current_start_year) if current_start_year is not None else "current"
+                seasons.append(
+                    Season(
+                        id=season_id,
+                        label=option.text,
+                        value=option.value,
+                        start_year=current_start_year,
+                        is_current=True,
+                    )
+                )
             elif option.value.isdigit():
+                start_year = int(option.value)
+                if has_current and current_start_year == start_year:
+                    continue
                 seasons.append(
                     Season(
                         id=option.value,
                         label=option.text,
                         value=option.value,
-                        start_year=int(option.value),
+                        start_year=start_year,
                         is_current=False,
                     )
                 )
@@ -93,6 +108,15 @@ def regular_season_division(name: str, gender: str) -> str | None:
     if match:
         return f"{match.group(1)}. Division"
     return None
+
+
+def newest_numeric_season(options: list[object]) -> int | None:
+    years = []
+    for option in options:
+        value = getattr(option, "value", "")
+        if value.isdigit():
+            years.append(int(value))
+    return max(years) if years else None
 
 
 def gender_key(gender: str) -> str:

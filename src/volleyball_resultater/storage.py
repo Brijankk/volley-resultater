@@ -53,6 +53,7 @@ CREATE TABLE IF NOT EXISTS matches (
     pool_id TEXT NOT NULL REFERENCES pools(id),
     match_number INTEGER,
     starts_at TEXT,
+    starts_at_time_known INTEGER NOT NULL DEFAULT 1,
     home_team TEXT NOT NULL,
     away_team TEXT NOT NULL,
     venue TEXT NOT NULL,
@@ -103,6 +104,8 @@ class Repository:
         columns = {row["name"] for row in self.connection.execute("PRAGMA table_info(matches)")}
         if "result_note" not in columns:
             self.connection.execute("ALTER TABLE matches ADD COLUMN result_note TEXT NOT NULL DEFAULT ''")
+        if "starts_at_time_known" not in columns:
+            self.connection.execute("ALTER TABLE matches ADD COLUMN starts_at_time_known INTEGER NOT NULL DEFAULT 1")
 
     def close(self) -> None:
         self.connection.close()
@@ -170,9 +173,9 @@ class Repository:
         self.connection.executemany(
             """
             INSERT INTO matches (
-                kamp_id, pool_id, match_number, starts_at, home_team, away_team,
+                kamp_id, pool_id, match_number, starts_at, starts_at_time_known, home_team, away_team,
                 venue, court, result_home_sets, result_away_sets, result_note
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """,
             [
                 (
@@ -180,6 +183,7 @@ class Repository:
                     match.pool_id,
                     match.match_number,
                     match.starts_at.isoformat() if match.starts_at else None,
+                    int(match.starts_at_time_known),
                     match.home_team,
                     match.away_team,
                     match.venue,

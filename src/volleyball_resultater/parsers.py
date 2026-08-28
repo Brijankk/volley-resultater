@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import dataclass
 from datetime import datetime
 import re
 from urllib.parse import parse_qs, urlparse
@@ -9,6 +10,12 @@ from .models import Match, Pool, SetResult, StandingRow
 
 
 BASE_PATH = "/tms/Turneringer-og-resultater/"
+
+
+@dataclass(frozen=True)
+class ParsedDateTime:
+    value: datetime | None
+    time_known: bool
 
 
 def query_int(url: str, key: str) -> int | None:
@@ -107,12 +114,13 @@ def parse_schedule(html: str, pool_id: str) -> list[Match]:
             result_home, result_away = parse_optional_score(result_text)
             result_note = row[result_index + 1].text if result_index + 1 < len(row) else ""
             venue, court = split_venue_court(compact[4] if len(compact) > 4 else "")
+            starts_at = parse_danish_match_datetime(compact[1])
             matches.append(
                 Match(
                     pool_id=pool_id,
                     kamp_id=kamp_id,
                     match_number=int(compact[0]),
-                    starts_at=parse_danish_datetime(compact[1]),
+                    starts_at=starts_at.value,
                     home_team=compact[2],
                     away_team=compact[3],
                     venue=venue,
@@ -120,6 +128,7 @@ def parse_schedule(html: str, pool_id: str) -> list[Match]:
                     result_home_sets=result_home,
                     result_away_sets=result_away,
                     result_note=result_note,
+                    starts_at_time_known=starts_at.time_known,
                 )
             )
     return matches
@@ -187,13 +196,22 @@ def parse_optional_score(value: str) -> tuple[int | None, int | None]:
 
 
 def parse_danish_datetime(value: str) -> datetime | None:
+    return parse_danish_match_datetime(value).value
+
+
+def parse_danish_match_datetime(value: str) -> ParsedDateTime:
     value = clean_text(value).replace("kl. ", "kl.").replace(" kl.", " kl.")
     for fmt in ("%d-%m-%y kl.%H:%M", "%d-%m-%Y kl.%H:%M"):
         try:
-            return datetime.strptime(value, fmt)
+            return ParsedDateTime(datetime.strptime(value, fmt), True)
         except ValueError:
             pass
-    return None
+    for fmt in ("%d-%m-%y", "%d-%m-%Y"):
+        try:
+            return ParsedDateTime(datetime.strptime(value, fmt), False)
+        except ValueError:
+            pass
+    return ParsedDateTime(None, False)
 
 
 def split_venue_court(value: str) -> tuple[str, str]:

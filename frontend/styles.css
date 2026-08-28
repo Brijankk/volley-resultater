@@ -452,6 +452,13 @@ canvas {
   font-weight: 850;
 }
 
+.match-detail-score.pending {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 .set-table {
   grid-column: 1 / -1;
   width: min(100%, 360px);

@@ -30,6 +30,14 @@ If `scrape-volleyball` is not on PATH, run:
 .\.venv\Scripts\python -m volleyball_resultater.cli --season 2025
 ```
 
+For the current season, the scraper also accepts `--season current`,
+`--season Nuværende`, or the season start year, for example `--season 2026`.
+If the website's explicit year option is broken but `Nuværende` works, the
+scraper uses `Nuværende` while storing the data under the numeric start year.
+Use `--refresh-cache` when the website has changed since the previous scrape,
+for example when upcoming match times are added after the initial schedule
+release.
+
 By default, output is written to:
 
 - `data/volleyball.sqlite`

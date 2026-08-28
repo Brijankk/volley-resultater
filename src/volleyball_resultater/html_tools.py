@@ -128,6 +128,8 @@ class TableParser(HTMLParser):
         elif tag in {"td", "th"} and self._current_row is not None:
             self._current_cell_parts = []
             self._current_cell_links = []
+        elif tag == "br" and self._current_cell_parts is not None:
+            self._current_cell_parts.append(" ")
         elif tag == "a" and self._current_cell_parts is not None:
             self._link_href = attr.get("href", "")
             self._link_parts = []

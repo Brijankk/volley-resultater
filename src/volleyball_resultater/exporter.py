@@ -99,6 +99,8 @@ def export_json(db_path: Path, output_dir: Path) -> None:
                     (pool_id,),
                 )
             ]
+            for match in matches:
+                match["starts_at_time_known"] = bool(match["starts_at_time_known"])
             sets = [
                 dict(row)
                 for row in connection.execute(
@@ -124,6 +126,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
                     result_home_sets=row["result_home_sets"],
                     result_away_sets=row["result_away_sets"],
                     result_note=row["result_note"],
+                    starts_at_time_known=bool(row["starts_at_time_known"]),
                 )
                 for row in matches
             ]

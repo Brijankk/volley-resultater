@@ -25,17 +25,18 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--validate", action="store_true", help="Compare computed standings with official standings after scraping.")
     parser.add_argument("--validate-only", action="store_true", help="Only validate the existing SQLite database.")
     parser.add_argument("--throttle", type=float, default=0.25, help="Seconds to pause after live requests.")
+    parser.add_argument("--refresh-cache", action="store_true", help="Fetch fresh HTML instead of reusing cached pages.")
     args = parser.parse_args(argv)
 
     if args.validate_only:
         return run_validation(args.db)
 
-    client = ResultaterClient(cache_dir=args.cache_dir, throttle_seconds=args.throttle)
+    client = ResultaterClient(cache_dir=args.cache_dir, throttle_seconds=args.throttle, refresh_cache=args.refresh_cache)
     scraper = VolleyballScraper(client)
     seasons = scraper.seasons()
     if args.season:
         wanted = set(args.season)
-        seasons = [season for season in seasons if season.value in wanted or season.id in wanted]
+        seasons = [season for season in seasons if season_matches(season, wanted)]
     elif not args.all_seasons:
         seasons = [season for season in seasons if season.is_current]
 
@@ -96,6 +97,21 @@ def run_validation(db_path: Path) -> int:
     if len(mismatches) > 50:
         print(f"...and {len(mismatches) - 50} more.")
     return 1
+
+
+def season_matches(season: object, wanted: set[str]) -> bool:
+    wanted_values = {value.casefold() for value in wanted}
+    season_values = {
+        str(getattr(season, "id", "")),
+        str(getattr(season, "value", "")),
+        str(getattr(season, "label", "")),
+    }
+    start_year = getattr(season, "start_year", None)
+    if start_year is not None:
+        season_values.add(str(start_year))
+    if getattr(season, "is_current", False):
+        season_values.add("current")
+    return any(value.casefold() in wanted_values for value in season_values if value)
 
 
 if __name__ == "__main__":

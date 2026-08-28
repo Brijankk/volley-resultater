@@ -1,5 +1,5 @@
 const DATA_ROOT = "../data/json";
-const DATA_VERSION = "2026-08-25T120000";
+const DATA_VERSION = "2026-08-28T013000";
 const DATA_CACHE = "volley-data-v5";
 
 const state = {
@@ -449,36 +449,43 @@ function renderMatchDetailItem(match) {
   const sets = state.poolData.set_results
     .filter((set) => set.kamp_id === match.kamp_id && set.home_points !== null && set.away_points !== null)
     .sort((a, b) => a.set_number - b.set_number);
+  const hasResult = match.result_home_sets !== null && match.result_away_sets !== null;
   return `
     <article class="match-detail-card">
       <div class="match-detail-main">
-        <span>${formatDateTime(match.starts_at)}</span>
-        <span>${escapeHtml(match.venue || "")}${match.court ? `, bane ${escapeHtml(match.court)}` : ""}</span>
+        <span>${formatMatchDateTime(match)}</span>
+        <span>${formatVenue(match)}</span>
       </div>
-      <div class="match-detail-score">${match.result_home_sets}-${match.result_away_sets}</div>
-      <table class="set-table">
-        <tbody>
-          <tr>
-            <th>Sæt</th>
-            ${sets.map((set) => `<td>${set.set_number}</td>`).join("")}
-          </tr>
-          <tr>
-            <th>Hjemme</th>
-            ${sets.map((set) => `<td>${set.home_points}</td>`).join("")}
-          </tr>
-          <tr>
-            <th>Ude</th>
-            ${sets.map((set) => `<td>${set.away_points}</td>`).join("")}
-          </tr>
-        </tbody>
-      </table>
+      <div class="match-detail-score ${hasResult ? "" : "pending"}">${
+        hasResult ? `${match.result_home_sets}-${match.result_away_sets}` : "Ikke spillet"
+      }</div>
+      ${
+        sets.length
+          ? `<table class="set-table">
+              <tbody>
+                <tr>
+                  <th>Sæt</th>
+                  ${sets.map((set) => `<td>${set.set_number}</td>`).join("")}
+                </tr>
+                <tr>
+                  <th>Hjemme</th>
+                  ${sets.map((set) => `<td>${set.home_points}</td>`).join("")}
+                </tr>
+                <tr>
+                  <th>Ude</th>
+                  ${sets.map((set) => `<td>${set.away_points}</td>`).join("")}
+                </tr>
+              </tbody>
+            </table>`
+          : ""
+      }
     </article>
   `;
 }
 
 function findMatrixMatches(home, away) {
   return state.poolData.matches
-    .filter((match) => match.home_team === home && match.away_team === away && match.result_home_sets !== null)
+    .filter((match) => match.home_team === home && match.away_team === away)
     .sort((a, b) => new Date(a.starts_at) - new Date(b.starts_at));
 }
 
@@ -661,6 +668,24 @@ function formatDateTime(value) {
     hour: "2-digit",
     minute: "2-digit",
   }).format(new Date(value));
+}
+
+function formatMatchDateTime(match) {
+  if (!match.starts_at) return "Dato ikke fastlagt";
+  if (match.starts_at_time_known === false) {
+    const date = new Intl.DateTimeFormat("da-DK", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    }).format(new Date(match.starts_at));
+    return `${date}, tidspunkt ikke fastlagt`;
+  }
+  return formatDateTime(match.starts_at);
+}
+
+function formatVenue(match) {
+  const venue = escapeHtml(match.venue || "Spillested ikke fastlagt");
+  return `${venue}${match.court ? `, bane ${escapeHtml(match.court)}` : ""}`;
 }
 
 function escapeHtml(value) {

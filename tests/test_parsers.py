@@ -2,7 +2,13 @@ from __future__ import annotations
 
 import unittest
 
-from volleyball_resultater.parsers import parse_league_links, parse_match_sets, parse_pools, parse_schedule, parse_standings
+from volleyball_resultater.parsers import (
+    parse_league_links,
+    parse_match_sets,
+    parse_pools,
+    parse_schedule,
+    parse_standings,
+)
 
 
 SEARCH_HTML = """
@@ -46,6 +52,16 @@ SCHEDULE_HTML = """
     <td><a href="/tms/Turneringer-og-resultater/Kamp-Information.aspx?KampId=3">3</a></td>
     <td>06-10-25 kl.&nbsp;14:30</td>
     <td>E</td><td>F</td><td>Hal</td><td>0&nbsp;-&nbsp;3</td><td>HHT</td>
+  </tr>
+  <tr>
+    <td><a href="/tms/Turneringer-og-resultater/Kamp-Information.aspx?KampId=4">4</a></td>
+    <td>07-10-25</td>
+    <td>G</td><td>H</td><td>Hal</td><td></td>
+  </tr>
+  <tr>
+    <td><a href="/tms/Turneringer-og-resultater/Kamp-Information.aspx?KampId=5">5</a></td>
+    <td>08-10-25<br />kl.&nbsp;10:00</td>
+    <td>I</td><td>J</td><td>Hal</td><td></td>
   </tr>
 </table>
 """
@@ -97,9 +113,11 @@ class ParserTests(unittest.TestCase):
 
     def test_schedule(self) -> None:
         rows = parse_schedule(SCHEDULE_HTML, "pool")
-        self.assertEqual(len(rows), 4)
+        self.assertEqual(len(rows), 6)
         self.assertEqual(rows[0].kamp_id, 70726)
         self.assertEqual(rows[0].home_team, "VK Vestsjælland")
+        self.assertEqual(rows[0].starts_at.isoformat(), "2025-10-03T19:30:00")
+        self.assertTrue(rows[0].starts_at_time_known)
         self.assertEqual(rows[0].result_home_sets, 3)
         self.assertEqual(rows[0].result_away_sets, 1)
         self.assertIsNone(rows[1].result_home_sets)
@@ -109,6 +127,10 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(rows[3].result_home_sets, 0)
         self.assertEqual(rows[3].result_away_sets, 3)
         self.assertEqual(rows[3].result_note, "HHT")
+        self.assertEqual(rows[4].starts_at.isoformat(), "2025-10-07T00:00:00")
+        self.assertFalse(rows[4].starts_at_time_known)
+        self.assertEqual(rows[5].starts_at.isoformat(), "2025-10-08T10:00:00")
+        self.assertTrue(rows[5].starts_at_time_known)
 
     def test_match_sets(self) -> None:
         rows = parse_match_sets(MATCH_HTML, 70726)

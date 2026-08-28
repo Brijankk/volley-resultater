@@ -59,6 +59,7 @@ class Match:
     result_home_sets: int | None
     result_away_sets: int | None
     result_note: str = ""
+    starts_at_time_known: bool = True
 
 
 @dataclass(frozen=True)
