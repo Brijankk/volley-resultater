@@ -218,6 +218,34 @@ select {
   margin-top: 14px;
 }
 
+.schedule-panel {
+  margin-top: 14px;
+}
+
+.schedule-heading {
+  align-items: end;
+}
+
+.schedule-filters {
+  display: grid;
+  grid-template-columns: minmax(170px, auto) minmax(190px, 250px) minmax(180px, auto);
+  gap: 10px;
+  align-items: end;
+}
+
+.compact-field span {
+  margin-bottom: 6px;
+}
+
+.compact-field select {
+  min-height: 38px;
+}
+
+.schedule-range-control,
+.schedule-side-control {
+  align-self: end;
+}
+
 .validation-meta {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -303,6 +331,59 @@ th:nth-child(2) {
 
 .standings-table td:nth-child(2) {
   font-weight: 700;
+}
+
+.schedule-table th,
+.schedule-table td {
+  text-align: left;
+  white-space: normal;
+}
+
+.schedule-date-col {
+  width: 18%;
+}
+
+.schedule-team-col {
+  width: 21%;
+}
+
+.schedule-venue-col {
+  width: 28%;
+}
+
+.schedule-result-col {
+  width: 12%;
+}
+
+.schedule-table th:last-child,
+.schedule-table td:last-child {
+  text-align: right;
+}
+
+.schedule-table .team-cell {
+  font-weight: 500;
+}
+
+.mobile-label {
+  display: none;
+}
+
+.schedule-result {
+  color: var(--accent);
+  font-weight: 850;
+}
+
+.schedule-result.pending {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.schedule-empty {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .chart-wrap {
@@ -391,7 +472,7 @@ canvas {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* Experimental matrix-click detail block. Remove this section with
@@ -509,6 +590,78 @@ canvas {
   .selector-band,
   .content-grid {
     grid-template-columns: 1fr;
+  }
+
+  .schedule-heading,
+  .schedule-filters {
+    align-items: stretch;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .schedule-heading {
+    gap: 14px;
+  }
+
+  .schedule-range-control,
+  .schedule-side-control {
+    width: 100%;
+  }
+
+  .schedule-scroll {
+    overflow-x: hidden;
+  }
+
+  .schedule-table {
+    table-layout: fixed;
+    width: 100%;
+    font-size: 0.58rem;
+    line-height: 1.18;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    min-width: 0;
+    padding: 5px 3px;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    white-space: normal;
+  }
+
+  .schedule-table th {
+    font-size: 0.46rem;
+    overflow-wrap: normal;
+    padding-right: 1px;
+    padding-left: 1px;
+    white-space: nowrap;
+  }
+
+  .schedule-table .desktop-label {
+    display: none;
+  }
+
+  .schedule-table .mobile-label {
+    display: inline;
+  }
+
+  .schedule-date-col {
+    width: 16%;
+  }
+
+  .schedule-team-col {
+    width: 22.5%;
+  }
+
+  .schedule-venue-col {
+    width: 25.5%;
+  }
+
+  .schedule-result-col {
+    width: 13.5%;
+  }
+
+  .schedule-result.pending {
+    font-size: 0.52rem;
   }
 
   .panel,

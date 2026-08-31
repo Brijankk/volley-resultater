@@ -10,6 +10,9 @@ const state = {
   selectedLeagueId: "",
   selectedPoolId: "",
   chartMode: "game",
+  scheduleRange: "nearby",
+  selectedScheduleTeam: "",
+  scheduleSide: "all",
   selectedPair: null,
   installPrompt: null,
 };
@@ -77,6 +80,11 @@ const els = {
   connectionStatus: document.querySelector("#connectionStatus"),
   updatedStatus: document.querySelector("#updatedStatus"),
   validationMeta: document.querySelector("#validationMeta"),
+  scheduleRangeControl: document.querySelector("#scheduleRangeControl"),
+  scheduleTeamSelect: document.querySelector("#scheduleTeamSelect"),
+  scheduleSideControl: document.querySelector("#scheduleSideControl"),
+  scheduleBody: document.querySelector("#scheduleBody"),
+  scheduleEmpty: document.querySelector("#scheduleEmpty"),
   standingsBody: document.querySelector("#standingsBody"),
   chartModeControl: document.querySelector("#chartModeControl"),
   chart: document.querySelector("#pointsChart"),
@@ -133,13 +141,37 @@ function bindEvents() {
     await loadSelectedPool();
   });
 
+  els.scheduleRangeControl.addEventListener("click", (event) => {
+    const button = event.target.closest("button");
+    if (!button) return;
+    state.scheduleRange = button.dataset.range;
+    setActiveButton(els.scheduleRangeControl, button);
+    renderSchedule();
+  });
+
+  els.scheduleTeamSelect.addEventListener("change", () => {
+    state.selectedScheduleTeam = els.scheduleTeamSelect.value;
+    if (!state.selectedScheduleTeam) {
+      state.scheduleSide = "all";
+      setActiveButtonByData(els.scheduleSideControl, "side", "all");
+    }
+    renderScheduleControls();
+    renderSchedule();
+  });
+
+  els.scheduleSideControl.addEventListener("click", (event) => {
+    const button = event.target.closest("button");
+    if (!button) return;
+    state.scheduleSide = button.dataset.side;
+    setActiveButton(els.scheduleSideControl, button);
+    renderSchedule();
+  });
+
   els.chartModeControl.addEventListener("click", (event) => {
     const button = event.target.closest("button");
     if (!button) return;
     state.chartMode = button.dataset.mode;
-    for (const item of els.chartModeControl.querySelectorAll("button")) {
-      item.classList.toggle("active", item === button);
-    }
+    setActiveButton(els.chartModeControl, button);
     renderChart();
   });
 
@@ -241,12 +273,15 @@ async function loadSelectedPool() {
   els.status.textContent = "Indlæser række";
   state.selectedPair = null;
   state.poolData = await fetchJson(dataUrl(`${DATA_ROOT}/${safeFilename(state.selectedPoolId)}.json`));
+  normalizeScheduleFilters();
   renderAll();
   els.status.textContent = "Ready";
 }
 
 function renderAll() {
   renderDataMeta();
+  renderScheduleControls();
+  renderSchedule();
   renderStandings();
   renderChart();
   renderMatrix();
@@ -269,6 +304,80 @@ function renderDataMeta() {
   els.validationMeta.textContent = hasWarning
     ? `Officiel stilling og beregnet udvikling afviger i ${validation.mismatch_count} felter.`
     : "Officiel stilling og beregnet udvikling stemmer overens.";
+}
+
+function renderScheduleControls() {
+  const teams = scheduleTeams();
+  const options = [{ value: "", label: "Alle hold" }, ...teams.map((team) => ({ value: team, label: team }))];
+  fillSelect(els.scheduleTeamSelect, options);
+  els.scheduleTeamSelect.value = state.selectedScheduleTeam;
+  els.scheduleSideControl.classList.toggle("hidden", !state.selectedScheduleTeam);
+  setActiveButtonByData(els.scheduleRangeControl, "range", state.scheduleRange);
+  setActiveButtonByData(els.scheduleSideControl, "side", state.scheduleSide);
+}
+
+function renderSchedule() {
+  const rows = filteredScheduleMatches();
+  els.scheduleBody.innerHTML = rows.map((match) => renderScheduleRow(match)).join("");
+  els.scheduleEmpty.classList.toggle("hidden", rows.length > 0);
+}
+
+function renderScheduleRow(match) {
+  const result = formatScheduleResult(match);
+  return `
+    <tr>
+      <td data-label="Dato">${escapeHtml(formatScheduleDateTime(match))}</td>
+      <td data-label="Hjemme" class="team-cell" title="${escapeHtml(match.home_team)}">${escapeHtml(match.home_team)}</td>
+      <td data-label="Ude" class="team-cell" title="${escapeHtml(match.away_team)}">${escapeHtml(match.away_team)}</td>
+      <td data-label="Hal">${formatVenue(match)}</td>
+      <td data-label="Resultat" class="schedule-result ${result ? "" : "pending"}">${escapeHtml(result)}</td>
+    </tr>
+  `;
+}
+
+function filteredScheduleMatches() {
+  let matches = sortedMatches(state.poolData?.matches || []);
+  if (state.selectedScheduleTeam) {
+    matches = matches.filter((match) => {
+      if (state.scheduleSide === "home") return match.home_team === state.selectedScheduleTeam;
+      if (state.scheduleSide === "away") return match.away_team === state.selectedScheduleTeam;
+      return match.home_team === state.selectedScheduleTeam || match.away_team === state.selectedScheduleTeam;
+    });
+  }
+  if (state.scheduleRange === "nearby") {
+    const now = Date.now();
+    const latest = matches.filter((match) => matchDateValue(match) <= now).slice(-5);
+    const next = matches.filter((match) => matchDateValue(match) > now).slice(0, 5);
+    matches = sortedMatches([...latest, ...next]);
+  }
+  return matches;
+}
+
+function normalizeScheduleFilters() {
+  const teams = scheduleTeams();
+  if (!teams.includes(state.selectedScheduleTeam)) {
+    state.selectedScheduleTeam = "";
+    state.scheduleSide = "all";
+  }
+}
+
+function scheduleTeams() {
+  if (!state.poolData) return [];
+  const standingsTeams = state.poolData.source_standings.map((row) => row.team_name);
+  const matchTeams = (state.poolData.matches || []).flatMap((match) => [match.home_team, match.away_team]);
+  return unique([...standingsTeams, ...matchTeams]).filter(Boolean);
+}
+
+function sortedMatches(matches) {
+  return [...matches].sort(compareMatches);
+}
+
+function compareMatches(left, right) {
+  return matchDateValue(left) - matchDateValue(right) || (left.match_number || 0) - (right.match_number || 0);
+}
+
+function matchDateValue(match) {
+  return match.starts_at ? new Date(match.starts_at).getTime() : Number.POSITIVE_INFINITY;
 }
 
 function renderStandings() {
@@ -571,7 +680,9 @@ async function cachedJsonResponse(path) {
 }
 
 function fillSelect(select, options) {
-  select.innerHTML = options.map((option) => `<option value="${option.value}">${escapeHtml(option.label)}</option>`).join("");
+  select.innerHTML = options
+    .map((option) => `<option value="${escapeHtml(option.value)}">${escapeHtml(option.label)}</option>`)
+    .join("");
 }
 
 function unique(values) {
@@ -686,6 +797,40 @@ function formatMatchDateTime(match) {
 function formatVenue(match) {
   const venue = escapeHtml(match.venue || "Spillested ikke fastlagt");
   return `${venue}${match.court ? `, bane ${escapeHtml(match.court)}` : ""}`;
+}
+
+function formatScheduleDateTime(match) {
+  if (!match.starts_at) return "";
+  if (match.starts_at_time_known === false) {
+    return new Intl.DateTimeFormat("da-DK", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    }).format(new Date(match.starts_at));
+  }
+  return formatDateTime(match.starts_at);
+}
+
+function formatScheduleResult(match) {
+  if (!Number.isFinite(match.result_home_sets) || !Number.isFinite(match.result_away_sets)) return "";
+  return `${match.result_home_sets}-${match.result_away_sets}`;
+}
+
+function formatMatchResult(match) {
+  if (match.result_home_sets === null || match.result_away_sets === null) return "Ikke spillet";
+  return `${match.result_home_sets}-${match.result_away_sets}`;
+}
+
+function setActiveButton(container, activeButton) {
+  for (const item of container.querySelectorAll("button")) {
+    item.classList.toggle("active", item === activeButton);
+  }
+}
+
+function setActiveButtonByData(container, key, value) {
+  for (const item of container.querySelectorAll("button")) {
+    item.classList.toggle("active", item.dataset[key] === value);
+  }
 }
 
 function escapeHtml(value) {

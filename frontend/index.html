@@ -11,8 +11,8 @@
       name="description"
       content="Se stillinger, sæsonudvikling og resultater for danske volleyballrækker."
     />
-    <link rel="stylesheet" href="./styles.css?v=1.0.8" />
-    <link rel="manifest" href="./manifest.webmanifest?v=1.0.8" />
+    <link rel="stylesheet" href="./styles.css?v=1.1.0" />
+    <link rel="manifest" href="./manifest.webmanifest?v=1.1.0" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
   </head>
   <body>
@@ -21,7 +21,7 @@
         <div class="title-block">
           <div class="meta-row">
             <p class="eyebrow">Volleyball Danmark</p>
-            <div class="app-version" aria-label="Version">v1.0.8</div>
+            <div class="app-version" aria-label="Version">v1.1.0</div>
           </div>
           <h1>Resultater</h1>
         </div>
@@ -111,8 +111,54 @@
         </div>
       </section>
 
+      <section class="panel schedule-panel">
+        <div class="section-heading schedule-heading">
+          <h2>Kampprogram</h2>
+          <div class="schedule-filters" aria-label="Filtrering af kampprogram">
+            <div class="segmented small schedule-range-control" id="scheduleRangeControl" aria-label="Kampe">
+              <button type="button" data-range="nearby" class="active">Nuværende</button>
+              <button type="button" data-range="all">Alle</button>
+            </div>
+            <label class="field compact-field">
+              <span>Hold</span>
+              <select id="scheduleTeamSelect"></select>
+            </label>
+            <div class="segmented small schedule-side-control hidden" id="scheduleSideControl" aria-label="Hjemme eller ude">
+              <button type="button" data-side="all" class="active">Alle</button>
+              <button type="button" data-side="home">Hjemme</button>
+              <button type="button" data-side="away">Ude</button>
+            </div>
+          </div>
+        </div>
+        <div class="table-scroll schedule-scroll">
+          <table class="schedule-table">
+            <colgroup>
+              <col class="schedule-date-col" />
+              <col class="schedule-team-col" />
+              <col class="schedule-team-col" />
+              <col class="schedule-venue-col" />
+              <col class="schedule-result-col" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Dato</th>
+                <th>Hjemmehold</th>
+                <th>Udehold</th>
+                <th>Spillested</th>
+                <th>
+                  <span class="desktop-label">Resultat</span>
+                  <span class="mobile-label">Res.</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="scheduleBody"></tbody>
+          </table>
+        </div>
+        <p class="schedule-empty hidden" id="scheduleEmpty">Ingen kampe matcher filtrene.</p>
+      </section>
+
     </main>
 
-    <script src="./app.js?v=1.0.8" type="module"></script>
+    <script src="./app.js?v=1.1.0" type="module"></script>
   </body>
 </html>
