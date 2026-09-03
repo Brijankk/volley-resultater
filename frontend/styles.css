@@ -297,8 +297,10 @@ select {
 
 .table-scroll,
 .matrix-scroll {
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   max-width: 100%;
+  position: relative;
 }
 
 table {
@@ -364,6 +366,21 @@ th:nth-child(2) {
   font-weight: 500;
 }
 
+.schedule-date-cell {
+  white-space: nowrap;
+}
+
+.schedule-date-part,
+.schedule-time-part {
+  display: block;
+}
+
+.schedule-time-part {
+  color: var(--muted);
+  font-size: 0.92em;
+  margin-top: 2px;
+}
+
 .mobile-label {
   display: none;
 }
@@ -421,8 +438,20 @@ canvas {
 }
 
 .matrix-table {
+  border-left: 1px solid rgba(217, 226, 228, 0.72);
+  border-top: 1px solid rgba(217, 226, 228, 0.72);
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 0.72rem;
-  table-layout: fixed;
+  min-width: 100%;
+  table-layout: auto;
+  width: max-content;
+}
+
+.matrix-table th,
+.matrix-table td {
+  border: 1px solid rgba(217, 226, 228, 0.72);
+  border-width: 0 1px 1px 0;
 }
 
 .matrix-table th {
@@ -439,15 +468,42 @@ canvas {
   line-height: 1.15;
 }
 
+.matrix-table thead th {
+  background: var(--surface-strong);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
 .matrix-table th:first-child {
   text-align: left;
-  font-weight: 800;
+  min-width: 96px;
+  width: 96px;
+}
+
+.matrix-table thead th:first-child {
+  left: 0;
+  z-index: 4;
+}
+
+.matrix-table tbody th {
+  background: #fbfdfd;
+  left: 0;
+  font-weight: 500;
+  position: sticky;
+  z-index: 3;
 }
 
 .matrix-table td {
   min-width: 42px;
   text-align: center;
+  width: 42px;
   padding: 7px 5px;
+}
+
+.matrix-table thead th:not(:first-child) {
+  min-width: 42px;
+  width: 42px;
 }
 
 .matrix-table td[data-home-team] {
@@ -460,6 +516,10 @@ canvas {
   outline: 2px solid rgba(11, 107, 120, 0.35);
   outline-offset: -2px;
   background: #eef8fa;
+}
+
+.matrix-table td.diagonal {
+  background: var(--surface-strong);
 }
 
 .matrix-table td.win {
@@ -626,6 +686,13 @@ canvas {
     overflow-wrap: anywhere;
     word-break: normal;
     white-space: normal;
+  }
+
+  .schedule-table .schedule-date-cell,
+  .schedule-table .schedule-date-part,
+  .schedule-table .schedule-time-part {
+    overflow-wrap: normal;
+    white-space: nowrap;
   }
 
   .schedule-table th {

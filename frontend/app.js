@@ -326,10 +326,10 @@ function renderScheduleRow(match) {
   const result = formatScheduleResult(match);
   return `
     <tr>
-      <td data-label="Dato">${escapeHtml(formatScheduleDateTime(match))}</td>
+      <td data-label="Dato" class="schedule-date-cell">${renderScheduleDateTime(match)}</td>
       <td data-label="Hjemme" class="team-cell" title="${escapeHtml(match.home_team)}">${escapeHtml(match.home_team)}</td>
       <td data-label="Ude" class="team-cell" title="${escapeHtml(match.away_team)}">${escapeHtml(match.away_team)}</td>
-      <td data-label="Hal">${formatVenue(match)}</td>
+      <td data-label="Spillested">${formatScheduleVenue(match)}</td>
       <td data-label="Resultat" class="schedule-result ${result ? "" : "pending"}">${escapeHtml(result)}</td>
     </tr>
   `;
@@ -517,20 +517,20 @@ function drawGrid(ctx, width, height, pad, maxY, chartData) {
 function renderMatrix() {
   const matrix = state.poolData.result_matrix;
   const teams = state.poolData.source_standings.map((row) => row.team_name);
-  const header = `<tr><th></th>${teams.map((team) => `<th title="${escapeHtml(team)}">${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
+  const header = `<tr><th scope="col"></th>${teams.map((team) => `<th scope="col" title="${escapeHtml(team)}">${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
   const body = teams
     .map((home) => {
       const cells = teams
         .map((away) => {
           const value = matrix[home]?.[away] ?? "";
-          const className = matrixClass(value);
+          const className = [matrixClass(value), home === away ? "diagonal" : ""].filter(Boolean).join(" ");
           const matches = findMatrixMatches(home, away);
           const selected = state.selectedPair?.home === home && state.selectedPair?.away === away ? " selected" : "";
           const attrs = matches.length ? ` data-home-team="${escapeHtml(home)}" data-away-team="${escapeHtml(away)}" tabindex="0"` : "";
           return `<td class="${className}${selected}"${attrs}>${escapeHtml(value || "")}</td>`;
         })
         .join("");
-      return `<tr><td title="${escapeHtml(home)}"><strong>${escapeHtml(shortTeam(home))}</strong></td>${cells}</tr>`;
+      return `<tr><th scope="row" title="${escapeHtml(home)}">${escapeHtml(shortTeam(home))}</th>${cells}</tr>`;
     })
     .join("");
   els.matrixWrap.innerHTML = `<table class="matrix-table">${header}${body}</table>`;
@@ -799,16 +799,35 @@ function formatVenue(match) {
   return `${venue}${match.court ? `, bane ${escapeHtml(match.court)}` : ""}`;
 }
 
-function formatScheduleDateTime(match) {
+function renderScheduleDateTime(match) {
   if (!match.starts_at) return "";
+  const date = formatScheduleDate(match.starts_at);
   if (match.starts_at_time_known === false) {
-    return new Intl.DateTimeFormat("da-DK", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    }).format(new Date(match.starts_at));
+    return `<span class="schedule-date-part">${escapeHtml(date)}</span>`;
   }
-  return formatDateTime(match.starts_at);
+  return `
+    <span class="schedule-date-part">${escapeHtml(date)}</span>
+    <span class="schedule-time-part">${escapeHtml(formatScheduleTime(match.starts_at))}</span>
+  `;
+}
+
+function formatScheduleDate(value) {
+  return new Intl.DateTimeFormat("da-DK", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).format(new Date(value));
+}
+
+function formatScheduleTime(value) {
+  return new Intl.DateTimeFormat("da-DK", {
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date(value));
+}
+
+function formatScheduleVenue(match) {
+  return escapeHtml(match.venue || "Spillested ikke fastlagt");
 }
 
 function formatScheduleResult(match) {
