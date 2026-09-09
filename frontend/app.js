@@ -1,6 +1,7 @@
 const DATA_ROOT = "../data/json";
 const DATA_VERSION = "2026-08-28T013000";
 const DATA_CACHE = "volley-data-v5";
+const SELECTION_STORAGE_KEY = "volley-selection-v1";
 
 const state = {
   metadata: null,
@@ -109,15 +110,19 @@ async function init() {
 }
 
 function initializeSelection() {
+  const savedSelection = readSavedSelection();
   const seasons = unique(state.metadata.leagues.map((league) => league.season_id)).sort((a, b) =>
     b.localeCompare(a, "da"),
   );
-  state.selectedSeason = seasons[0] || "";
+  state.selectedSeason = seasons.includes(savedSelection?.season) ? savedSelection.season : seasons[0] || "";
   fillSelect(els.seasonSelect, seasons.map((season) => ({ value: season, label: seasonLabel(season) })));
+  els.seasonSelect.value = state.selectedSeason;
 
   const genders = unique(state.metadata.leagues.map((league) => league.gender));
-  state.selectedGender = genders.includes("Mand") ? "Mand" : genders[0] || "";
+  state.selectedGender = chooseInitialGender(genders, savedSelection?.gender);
   renderGenderButtons(genders);
+  state.selectedLeagueId = savedSelection?.leagueId || "";
+  state.selectedPoolId = savedSelection?.poolId || "";
   updateLeagueOptions();
   updatePoolOptions();
 }
@@ -125,20 +130,24 @@ function initializeSelection() {
 function bindEvents() {
   els.seasonSelect.addEventListener("change", async () => {
     state.selectedSeason = els.seasonSelect.value;
+    normalizeGenderForSelectedSeason();
     updateLeagueOptions();
     updatePoolOptions();
     await loadSelectedPool();
+    saveCurrentSelection();
   });
 
   els.leagueSelect.addEventListener("change", async () => {
     state.selectedLeagueId = els.leagueSelect.value;
     updatePoolOptions();
     await loadSelectedPool();
+    saveCurrentSelection();
   });
 
   els.poolSelect.addEventListener("change", async () => {
     state.selectedPoolId = els.poolSelect.value;
     await loadSelectedPool();
+    saveCurrentSelection();
   });
 
   els.scheduleRangeControl.addEventListener("click", (event) => {
@@ -224,6 +233,7 @@ function renderGenderButtons(genders) {
   for (const gender of sortedGenders) {
     const button = document.createElement("button");
     button.type = "button";
+    button.dataset.gender = gender;
     button.textContent = genderLabel(gender);
     button.classList.toggle("active", gender === state.selectedGender);
     button.addEventListener("click", async () => {
@@ -234,6 +244,7 @@ function renderGenderButtons(genders) {
       updateLeagueOptions();
       updatePoolOptions();
       await loadSelectedPool();
+      saveCurrentSelection();
     });
     row.append(button);
   }
@@ -268,6 +279,63 @@ function updatePoolOptions() {
   els.poolField.classList.toggle("hidden", pools.length <= 1);
 }
 
+function readSavedSelection() {
+  try {
+    const value = window.localStorage.getItem(SELECTION_STORAGE_KEY);
+    if (!value) return null;
+    const selection = JSON.parse(value);
+    return {
+      season: typeof selection.season === "string" ? selection.season : "",
+      gender: typeof selection.gender === "string" ? selection.gender : "",
+      leagueId: typeof selection.leagueId === "string" ? selection.leagueId : "",
+      poolId: typeof selection.poolId === "string" ? selection.poolId : "",
+    };
+  } catch (error) {
+    return null;
+  }
+}
+
+function saveCurrentSelection() {
+  try {
+    window.localStorage.setItem(
+      SELECTION_STORAGE_KEY,
+      JSON.stringify({
+        season: state.selectedSeason,
+        gender: state.selectedGender,
+        leagueId: state.selectedLeagueId,
+        poolId: state.selectedPoolId,
+      }),
+    );
+  } catch (error) {
+    console.warn("Valg kunne ikke gemmes i denne browser.", error);
+  }
+}
+
+function chooseInitialGender(genders, savedGender) {
+  const availableGenders = gendersForSeason(state.selectedSeason);
+  if (availableGenders.includes(savedGender)) return savedGender;
+  return preferredGender(availableGenders.length ? availableGenders : genders);
+}
+
+function normalizeGenderForSelectedSeason() {
+  const availableGenders = gendersForSeason(state.selectedSeason);
+  if (!availableGenders.length || availableGenders.includes(state.selectedGender)) return;
+  state.selectedGender = preferredGender(availableGenders);
+  setActiveButtonByData(els.genderControl, "gender", state.selectedGender);
+}
+
+function gendersForSeason(season) {
+  return unique(
+    state.metadata.leagues
+      .filter((league) => league.season_id === season)
+      .map((league) => league.gender),
+  );
+}
+
+function preferredGender(genders) {
+  return genders.includes("Mand") ? "Mand" : genders[0] || "";
+}
+
 async function loadSelectedPool() {
   if (!state.selectedPoolId) return;
   els.status.textContent = "Indlæser række";
@@ -299,11 +367,11 @@ function renderDataMeta() {
   els.updatedStatus.textContent = `Senest opdateret: ${exported}`;
   els.updatedStatus.className = "status-pill";
 
-  const hasWarning = validation.mismatch_count > 0;
-  els.validationMeta.className = `validation-meta ${hasWarning ? "data-warning" : "data-ok"}`;
-  els.validationMeta.textContent = hasWarning
-    ? `Officiel stilling og beregnet udvikling afviger i ${validation.mismatch_count} felter.`
-    : "Officiel stilling og beregnet udvikling stemmer overens.";
+  const hasPointsWarning = validation.affected_fields.includes("points");
+  els.validationMeta.className = `validation-meta ${hasPointsWarning ? "data-warning" : "hidden"}`;
+  els.validationMeta.textContent = hasPointsWarning
+    ? "Officiel stilling og beregnet udvikling afviger på point."
+    : "";
 }
 
 function renderScheduleControls() {
