@@ -40,7 +40,7 @@ const teamAbbreviations = [
   ["DSIO Odense", "DSIO"],
   ["Fortuna Odense Volley", "Fortuna"],
   ["Frederiksberg", "Fr.berg"],
-  ["Lyngby-Gladsaxe Volley", "LGV"],
+  ["Lyngby-Gladsaxe", "LGV"],
   ["Lynge Uggeløse IF", "LUIF"],
   ["Marienlyst-Fortuna", "Marienlyst"],
   ["Nordenskov UIF", "NUIF"],
