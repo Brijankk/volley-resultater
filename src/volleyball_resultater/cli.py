@@ -26,6 +26,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--validate-only", action="store_true", help="Only validate the existing SQLite database.")
     parser.add_argument("--throttle", type=float, default=0.25, help="Seconds to pause after live requests.")
     parser.add_argument("--refresh-cache", action="store_true", help="Fetch fresh HTML instead of reusing cached pages.")
+    parser.add_argument(
+        "--merge-existing-export",
+        "--merge-export",
+        action="store_true",
+        help="Merge refreshed seasons into the existing JSON export instead of replacing all exported seasons.",
+    )
     args = parser.parse_args(argv)
 
     if args.validate_only:
@@ -68,7 +74,7 @@ def main(argv: list[str] | None = None) -> int:
         repo.close()
 
     if not args.no_export:
-        export_json(args.db, args.export_dir)
+        export_json(args.db, args.export_dir, merge_existing=args.merge_existing_export)
         print(f"Exported JSON to {args.export_dir}")
     if args.validate:
         validation_code = run_validation(args.db)

@@ -1,5 +1,4 @@
 const DATA_ROOT = "../data/json";
-const DATA_VERSION = "2026-08-28T013000";
 const DATA_CACHE = "volley-data-v5";
 const SELECTION_STORAGE_KEY = "volley-selection-v1";
 
@@ -97,7 +96,7 @@ const els = {
 
 async function init() {
   try {
-    state.metadata = await fetchJson(dataUrl(`${DATA_ROOT}/leagues.json`));
+    state.metadata = await fetchJson(`${DATA_ROOT}/leagues.json`, { cache: "no-cache" });
     initializeSelection();
     bindEvents();
     await loadSelectedPool();
@@ -709,9 +708,9 @@ function poolValidationFor(poolId) {
   };
 }
 
-async function fetchJson(path) {
+async function fetchJson(path, options = {}) {
   try {
-    const response = await fetch(path);
+    const response = await fetch(path, options);
     if (!response.ok) throw new Error(`Kunne ikke indlæse ${path}`);
     await cacheJsonResponse(path, response.clone());
     return response.json();
@@ -821,7 +820,8 @@ function safeFilename(value) {
 }
 
 function dataUrl(path) {
-  return `${path}?v=${encodeURIComponent(DATA_VERSION)}`;
+  const exportedAt = state.metadata?.metadata?.exported_at;
+  return exportedAt ? `${path}?v=${encodeURIComponent(exportedAt)}` : path;
 }
 
 function shortTeam(team) {

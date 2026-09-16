@@ -12,7 +12,7 @@ from .rules import RuleContext, cumulative_points, result_matrix, rules_for_cont
 from .validation import validation_summary
 
 
-def export_json(db_path: Path, output_dir: Path) -> None:
+def export_json(db_path: Path, output_dir: Path, merge_existing: bool = False) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     connection = sqlite3.connect(db_path)
     connection.row_factory = sqlite3.Row
@@ -41,26 +41,10 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             }
             for pool_id, summary in summaries.items()
         }
-        write_json(
-            output_dir / "leagues.json",
-            {
-                "metadata": {
-                    "schema_version": 1,
-                    "exported_at": exported_at,
-                    "scraper_version": __version__,
-                    "seasons": sorted({league["season_id"] for league in leagues}, reverse=True),
-                    "league_count": len(leagues),
-                    "pool_count": len(pools),
-                    "validation": {
-                        "pools_with_mismatches": len(pool_validation),
-                        "mismatch_count": sum(item["mismatch_count"] for item in pool_validation.values()),
-                    },
-                },
-                "leagues": leagues,
-                "pools": pools,
-                "pool_validation": pool_validation,
-            },
-        )
+        league_export = build_leagues_export(exported_at, leagues, pools, pool_validation)
+        if merge_existing:
+            league_export = merge_existing_export(output_dir, league_export)
+        write_json(output_dir / "leagues.json", league_export)
 
         for pool in pools:
             pool_id = pool["id"]
@@ -155,6 +139,125 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             )
     finally:
         connection.close()
+
+
+def build_leagues_export(
+    exported_at: str,
+    leagues: list[dict[str, object]],
+    pools: list[dict[str, object]],
+    pool_validation: dict[str, dict[str, object]],
+) -> dict[str, object]:
+    return {
+        "metadata": {
+            "schema_version": 1,
+            "exported_at": exported_at,
+            "scraper_version": __version__,
+            "seasons": sorted({str(league["season_id"]) for league in leagues}, reverse=True),
+            "league_count": len(leagues),
+            "pool_count": len(pools),
+            "validation": validation_metadata(pool_validation),
+        },
+        "leagues": leagues,
+        "pools": pools,
+        "pool_validation": pool_validation,
+    }
+
+
+def merge_existing_export(output_dir: Path, refreshed: dict[str, object]) -> dict[str, object]:
+    existing_path = output_dir / "leagues.json"
+    if not existing_path.exists():
+        return refreshed
+
+    existing = json.loads(existing_path.read_text(encoding="utf-8"))
+    refreshed_leagues = [league for league in refreshed.get("leagues", []) if isinstance(league, dict)]
+    refreshed_pools = [pool for pool in refreshed.get("pools", []) if isinstance(pool, dict)]
+    refreshed_seasons = {str(league["season_id"]) for league in refreshed_leagues if "season_id" in league}
+    if not refreshed_seasons:
+        return refreshed
+
+    existing_leagues = [
+        league
+        for league in existing.get("leagues", [])
+        if isinstance(league, dict) and str(league.get("season_id")) not in refreshed_seasons
+    ]
+    existing_pools = [
+        pool
+        for pool in existing.get("pools", [])
+        if isinstance(pool, dict) and str(pool.get("season_id")) not in refreshed_seasons
+    ]
+    merged_leagues = sorted(
+        [*existing_leagues, *refreshed_leagues],
+        key=lambda league: (
+            season_sort_key(str(league.get("season_id", ""))),
+            gender_sort_key(str(league.get("gender", ""))),
+            division_sort_key(str(league.get("division", ""))),
+        ),
+    )
+    merged_pools = sorted(
+        [*existing_pools, *refreshed_pools],
+        key=lambda pool: (str(pool.get("league_id", "")), pool_sort_key(str(pool.get("name", "")))),
+    )
+
+    preserved_pool_ids = {str(pool.get("id")) for pool in existing_pools}
+    refreshed_pool_ids = {str(pool.get("id")) for pool in refreshed_pools}
+    existing_validation = {
+        pool_id: validation
+        for pool_id, validation in existing.get("pool_validation", {}).items()
+        if pool_id in preserved_pool_ids
+    }
+    refreshed_validation = {
+        pool_id: validation
+        for pool_id, validation in refreshed.get("pool_validation", {}).items()
+        if pool_id in refreshed_pool_ids
+    }
+    remove_stale_pool_files(output_dir, existing.get("pools", []), refreshed_pool_ids, refreshed_seasons)
+
+    metadata = refreshed.get("metadata", {})
+    exported_at = str(metadata.get("exported_at", datetime.now().astimezone().isoformat(timespec="seconds")))
+    return build_leagues_export(exported_at, merged_leagues, merged_pools, {**existing_validation, **refreshed_validation})
+
+
+def remove_stale_pool_files(
+    output_dir: Path,
+    existing_pools: object,
+    refreshed_pool_ids: set[str],
+    refreshed_seasons: set[str],
+) -> None:
+    for pool in existing_pools:
+        if not isinstance(pool, dict):
+            continue
+        if str(pool.get("season_id")) not in refreshed_seasons:
+            continue
+        pool_id = str(pool.get("id", ""))
+        if pool_id in refreshed_pool_ids:
+            continue
+        pool_file = output_dir / f"{safe_filename(pool_id)}.json"
+        if pool_file.exists():
+            pool_file.unlink()
+
+
+def validation_metadata(pool_validation: dict[str, dict[str, object]]) -> dict[str, int]:
+    return {
+        "pools_with_mismatches": len(pool_validation),
+        "mismatch_count": sum(int(item.get("mismatch_count", 0)) for item in pool_validation.values()),
+    }
+
+
+def gender_sort_key(gender: str) -> int:
+    return {"Kvinde": 0, "Mand": 1}.get(gender, 2)
+
+
+def season_sort_key(season: str) -> tuple[int, str]:
+    return (-int(season), season) if season.isdigit() else (0, season)
+
+
+def division_sort_key(division: str) -> int:
+    prefix = division.split(".", maxsplit=1)[0]
+    return int(prefix) if prefix.isdigit() else 99
+
+
+def pool_sort_key(pool: str) -> tuple[int, str]:
+    return ({"Række 1": 0, "Øst": 1, "Vest": 2, "Syd": 3, "Nord": 4}.get(pool, 20), pool)
 
 
 def write_json(path: Path, data: object) -> None:

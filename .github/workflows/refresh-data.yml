@@ -1,0 +1,45 @@
+name: Refresh volleyball data
+
+on:
+  schedule:
+    - cron: "0 1 * 8-12,1-4 *"
+      timezone: "Europe/Copenhagen"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-volleyball-data
+  cancel-in-progress: false
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install scraper
+        run: python -m pip install -e .
+
+      - name: Refresh current season
+        run: >
+          python -m volleyball_resultater.cli
+          --season current
+          --refresh-cache
+          --merge-existing-export
+
+      - name: Commit refreshed JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/json
+          git diff --cached --quiet || git commit -m "Refresh volleyball data"
+          git push
