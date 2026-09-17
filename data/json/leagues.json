@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-09-15T14:12:01+02:00",
+    "exported_at": "2026-09-16T23:12:56+00:00",
     "scraper_version": "1.0.2",
     "seasons": [
       "2026",
@@ -14,8 +14,8 @@
     "league_count": 36,
     "pool_count": 70,
     "validation": {
-      "pools_with_mismatches": 16,
-      "mismatch_count": 116
+      "pools_with_mismatches": 28,
+      "mismatch_count": 224
     }
   },
   "leagues": [
@@ -73,7 +73,7 @@
       "gender": "Kvinde",
       "division": "1. Division",
       "name": "1. Division Kvinder",
-      "raekke_id": 2252
+      "raekke_id": 2373
     },
     {
       "id": "2025:women:2-division",
@@ -81,7 +81,7 @@
       "gender": "Kvinde",
       "division": "2. Division",
       "name": "2. Division Kvinder",
-      "raekke_id": 2253
+      "raekke_id": 2374
     },
     {
       "id": "2025:women:volleyligaen",
@@ -89,7 +89,7 @@
       "gender": "Kvinde",
       "division": "Volleyligaen",
       "name": "Volleyligaen Kvinder",
-      "raekke_id": 2249
+      "raekke_id": 2369
     },
     {
       "id": "2025:men:1-division",
@@ -97,7 +97,7 @@
       "gender": "Mand",
       "division": "1. Division",
       "name": "1. Division Herrer",
-      "raekke_id": 2250
+      "raekke_id": 2371
     },
     {
       "id": "2025:men:2-division",
@@ -105,7 +105,7 @@
       "gender": "Mand",
       "division": "2. Division",
       "name": "2. Division Herrer",
-      "raekke_id": 2251
+      "raekke_id": 2372
     },
     {
       "id": "2025:men:volleyligaen",
@@ -113,7 +113,7 @@
       "gender": "Mand",
       "division": "Volleyligaen",
       "name": "Volleyligaen Herrer",
-      "raekke_id": 2248
+      "raekke_id": 2370
     },
     {
       "id": "2024:women:1-division",
@@ -310,6 +310,19 @@
   ],
   "pools": [
     {
+      "id": "2021:men:1-division:pulje-2978",
+      "league_id": "2021:men:1-division",
+      "name": "Øst",
+      "pulje_id": 2978,
+      "season_id": "2021",
+      "gender": "Mand",
+      "division": "1. Division",
+      "league_name": "1. Division Herrer",
+      "raekke_id": 1743,
+      "season_value": "2021",
+      "season_start_year": 2021
+    },
+    {
       "id": "2021:men:1-division:pulje-2979",
       "league_id": "2021:men:1-division",
       "name": "Vest",
@@ -323,15 +336,15 @@
       "season_start_year": 2021
     },
     {
-      "id": "2021:men:1-division:pulje-2978",
-      "league_id": "2021:men:1-division",
+      "id": "2021:men:2-division:pulje-2980",
+      "league_id": "2021:men:2-division",
       "name": "Øst",
-      "pulje_id": 2978,
+      "pulje_id": 2980,
       "season_id": "2021",
       "gender": "Mand",
-      "division": "1. Division",
-      "league_name": "1. Division Herrer",
-      "raekke_id": 1743,
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 1744,
       "season_value": "2021",
       "season_start_year": 2021
     },
@@ -362,19 +375,6 @@
       "season_start_year": 2021
     },
     {
-      "id": "2021:men:2-division:pulje-2980",
-      "league_id": "2021:men:2-division",
-      "name": "Øst",
-      "pulje_id": 2980,
-      "season_id": "2021",
-      "gender": "Mand",
-      "division": "2. Division",
-      "league_name": "2. Division Herrer",
-      "raekke_id": 1744,
-      "season_value": "2021",
-      "season_start_year": 2021
-    },
-    {
       "id": "2021:men:volleyligaen:pulje-2977",
       "league_id": "2021:men:volleyligaen",
       "name": "Række 1",
@@ -384,19 +384,6 @@
       "division": "Volleyligaen",
       "league_name": "VolleyLigaen Herrer",
       "raekke_id": 1742,
-      "season_value": "2021",
-      "season_start_year": 2021
-    },
-    {
-      "id": "2021:women:1-division:pulje-2991",
-      "league_id": "2021:women:1-division",
-      "name": "Vest",
-      "pulje_id": 2991,
-      "season_id": "2021",
-      "gender": "Kvinde",
-      "division": "1. Division",
-      "league_name": "1. Division Kvinder",
-      "raekke_id": 1752,
       "season_value": "2021",
       "season_start_year": 2021
     },
@@ -414,10 +401,23 @@
       "season_start_year": 2021
     },
     {
-      "id": "2021:women:2-division:pulje-2993",
-      "league_id": "2021:women:2-division",
+      "id": "2021:women:1-division:pulje-2991",
+      "league_id": "2021:women:1-division",
       "name": "Vest",
-      "pulje_id": 2993,
+      "pulje_id": 2991,
+      "season_id": "2021",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "league_name": "1. Division Kvinder",
+      "raekke_id": 1752,
+      "season_value": "2021",
+      "season_start_year": 2021
+    },
+    {
+      "id": "2021:women:2-division:pulje-2992",
+      "league_id": "2021:women:2-division",
+      "name": "Øst",
+      "pulje_id": 2992,
       "season_id": "2021",
       "gender": "Kvinde",
       "division": "2. Division",
@@ -427,10 +427,10 @@
       "season_start_year": 2021
     },
     {
-      "id": "2021:women:2-division:pulje-2992",
+      "id": "2021:women:2-division:pulje-2993",
       "league_id": "2021:women:2-division",
-      "name": "Øst",
-      "pulje_id": 2992,
+      "name": "Vest",
+      "pulje_id": 2993,
       "season_id": "2021",
       "gender": "Kvinde",
       "division": "2. Division",
@@ -453,6 +453,19 @@
       "season_start_year": 2021
     },
     {
+      "id": "2022:men:1-division:pulje-3482",
+      "league_id": "2022:men:1-division",
+      "name": "Øst",
+      "pulje_id": 3482,
+      "season_id": "2022",
+      "gender": "Mand",
+      "division": "1. Division",
+      "league_name": "1. Division Herrer",
+      "raekke_id": 1853,
+      "season_value": "2022",
+      "season_start_year": 2022
+    },
+    {
       "id": "2022:men:1-division:pulje-3483",
       "league_id": "2022:men:1-division",
       "name": "Vest",
@@ -466,15 +479,15 @@
       "season_start_year": 2022
     },
     {
-      "id": "2022:men:1-division:pulje-3482",
-      "league_id": "2022:men:1-division",
+      "id": "2022:men:2-division:pulje-3484",
+      "league_id": "2022:men:2-division",
       "name": "Øst",
-      "pulje_id": 3482,
+      "pulje_id": 3484,
       "season_id": "2022",
       "gender": "Mand",
-      "division": "1. Division",
-      "league_name": "1. Division Herrer",
-      "raekke_id": 1853,
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 1854,
       "season_value": "2022",
       "season_start_year": 2022
     },
@@ -505,19 +518,6 @@
       "season_start_year": 2022
     },
     {
-      "id": "2022:men:2-division:pulje-3484",
-      "league_id": "2022:men:2-division",
-      "name": "Øst",
-      "pulje_id": 3484,
-      "season_id": "2022",
-      "gender": "Mand",
-      "division": "2. Division",
-      "league_name": "2. Division Herrer",
-      "raekke_id": 1854,
-      "season_value": "2022",
-      "season_start_year": 2022
-    },
-    {
       "id": "2022:men:volleyligaen:pulje-3481",
       "league_id": "2022:men:volleyligaen",
       "name": "Række 1",
@@ -527,6 +527,19 @@
       "division": "Volleyligaen",
       "league_name": "Volleyligaen Herrer",
       "raekke_id": 1852,
+      "season_value": "2022",
+      "season_start_year": 2022
+    },
+    {
+      "id": "2022:women:1-division:pulje-3493",
+      "league_id": "2022:women:1-division",
+      "name": "Øst",
+      "pulje_id": 3493,
+      "season_id": "2022",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "league_name": "1. Division Kvinder",
+      "raekke_id": 1861,
       "season_value": "2022",
       "season_start_year": 2022
     },
@@ -544,15 +557,15 @@
       "season_start_year": 2022
     },
     {
-      "id": "2022:women:1-division:pulje-3493",
-      "league_id": "2022:women:1-division",
+      "id": "2022:women:2-division:pulje-3495",
+      "league_id": "2022:women:2-division",
       "name": "Øst",
-      "pulje_id": 3493,
+      "pulje_id": 3495,
       "season_id": "2022",
       "gender": "Kvinde",
-      "division": "1. Division",
-      "league_name": "1. Division Kvinder",
-      "raekke_id": 1861,
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 1862,
       "season_value": "2022",
       "season_start_year": 2022
     },
@@ -583,19 +596,6 @@
       "season_start_year": 2022
     },
     {
-      "id": "2022:women:2-division:pulje-3495",
-      "league_id": "2022:women:2-division",
-      "name": "Øst",
-      "pulje_id": 3495,
-      "season_id": "2022",
-      "gender": "Kvinde",
-      "division": "2. Division",
-      "league_name": "2. Division Kvinder",
-      "raekke_id": 1862,
-      "season_value": "2022",
-      "season_start_year": 2022
-    },
-    {
       "id": "2022:women:volleyligaen:pulje-3492",
       "league_id": "2022:women:volleyligaen",
       "name": "Række 1",
@@ -607,19 +607,6 @@
       "raekke_id": 1860,
       "season_value": "2022",
       "season_start_year": 2022
-    },
-    {
-      "id": "2023:men:1-division:pulje-3577",
-      "league_id": "2023:men:1-division",
-      "name": "Vest",
-      "pulje_id": 3577,
-      "season_id": "2023",
-      "gender": "Mand",
-      "division": "1. Division",
-      "league_name": "1. Division Herrer",
-      "raekke_id": 1925,
-      "season_value": "2023",
-      "season_start_year": 2023
     },
     {
       "id": "2023:men:1-division:pulje-3576",
@@ -635,10 +622,23 @@
       "season_start_year": 2023
     },
     {
-      "id": "2023:men:2-division:pulje-3579",
-      "league_id": "2023:men:2-division",
+      "id": "2023:men:1-division:pulje-3577",
+      "league_id": "2023:men:1-division",
       "name": "Vest",
-      "pulje_id": 3579,
+      "pulje_id": 3577,
+      "season_id": "2023",
+      "gender": "Mand",
+      "division": "1. Division",
+      "league_name": "1. Division Herrer",
+      "raekke_id": 1925,
+      "season_value": "2023",
+      "season_start_year": 2023
+    },
+    {
+      "id": "2023:men:2-division:pulje-3578",
+      "league_id": "2023:men:2-division",
+      "name": "Øst",
+      "pulje_id": 3578,
       "season_id": "2023",
       "gender": "Mand",
       "division": "2. Division",
@@ -648,10 +648,10 @@
       "season_start_year": 2023
     },
     {
-      "id": "2023:men:2-division:pulje-3578",
+      "id": "2023:men:2-division:pulje-3579",
       "league_id": "2023:men:2-division",
-      "name": "Øst",
-      "pulje_id": 3578,
+      "name": "Vest",
+      "pulje_id": 3579,
       "season_id": "2023",
       "gender": "Mand",
       "division": "2. Division",
@@ -674,6 +674,19 @@
       "season_start_year": 2023
     },
     {
+      "id": "2023:women:1-division:pulje-3587",
+      "league_id": "2023:women:1-division",
+      "name": "Øst",
+      "pulje_id": 3587,
+      "season_id": "2023",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "league_name": "1. Division Kvinder",
+      "raekke_id": 1932,
+      "season_value": "2023",
+      "season_start_year": 2023
+    },
+    {
       "id": "2023:women:1-division:pulje-3588",
       "league_id": "2023:women:1-division",
       "name": "Vest",
@@ -687,15 +700,15 @@
       "season_start_year": 2023
     },
     {
-      "id": "2023:women:1-division:pulje-3587",
-      "league_id": "2023:women:1-division",
+      "id": "2023:women:2-division:pulje-3589",
+      "league_id": "2023:women:2-division",
       "name": "Øst",
-      "pulje_id": 3587,
+      "pulje_id": 3589,
       "season_id": "2023",
       "gender": "Kvinde",
-      "division": "1. Division",
-      "league_name": "1. Division Kvinder",
-      "raekke_id": 1932,
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 1933,
       "season_value": "2023",
       "season_start_year": 2023
     },
@@ -726,19 +739,6 @@
       "season_start_year": 2023
     },
     {
-      "id": "2023:women:2-division:pulje-3589",
-      "league_id": "2023:women:2-division",
-      "name": "Øst",
-      "pulje_id": 3589,
-      "season_id": "2023",
-      "gender": "Kvinde",
-      "division": "2. Division",
-      "league_name": "2. Division Kvinder",
-      "raekke_id": 1933,
-      "season_value": "2023",
-      "season_start_year": 2023
-    },
-    {
       "id": "2023:women:volleyligaen:pulje-3586",
       "league_id": "2023:women:volleyligaen",
       "name": "Række 1",
@@ -750,6 +750,19 @@
       "raekke_id": 1931,
       "season_value": "2023",
       "season_start_year": 2023
+    },
+    {
+      "id": "2024:men:1-division:pulje-3752",
+      "league_id": "2024:men:1-division",
+      "name": "Øst",
+      "pulje_id": 3752,
+      "season_id": "2024",
+      "gender": "Mand",
+      "division": "1. Division",
+      "league_name": "1. Division Herrer",
+      "raekke_id": 2071,
+      "season_value": "2024",
+      "season_start_year": 2024
     },
     {
       "id": "2024:men:1-division:pulje-3753",
@@ -765,15 +778,15 @@
       "season_start_year": 2024
     },
     {
-      "id": "2024:men:1-division:pulje-3752",
-      "league_id": "2024:men:1-division",
+      "id": "2024:men:2-division:pulje-3754",
+      "league_id": "2024:men:2-division",
       "name": "Øst",
-      "pulje_id": 3752,
+      "pulje_id": 3754,
       "season_id": "2024",
       "gender": "Mand",
-      "division": "1. Division",
-      "league_name": "1. Division Herrer",
-      "raekke_id": 2071,
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 2072,
       "season_value": "2024",
       "season_start_year": 2024
     },
@@ -804,19 +817,6 @@
       "season_start_year": 2024
     },
     {
-      "id": "2024:men:2-division:pulje-3754",
-      "league_id": "2024:men:2-division",
-      "name": "Øst",
-      "pulje_id": 3754,
-      "season_id": "2024",
-      "gender": "Mand",
-      "division": "2. Division",
-      "league_name": "2. Division Herrer",
-      "raekke_id": 2072,
-      "season_value": "2024",
-      "season_start_year": 2024
-    },
-    {
       "id": "2024:men:volleyligaen:pulje-3751",
       "league_id": "2024:men:volleyligaen",
       "name": "Række 1",
@@ -826,6 +826,19 @@
       "division": "Volleyligaen",
       "league_name": "Volleyligaen Herrer",
       "raekke_id": 2070,
+      "season_value": "2024",
+      "season_start_year": 2024
+    },
+    {
+      "id": "2024:women:1-division:pulje-3763",
+      "league_id": "2024:women:1-division",
+      "name": "Øst",
+      "pulje_id": 3763,
+      "season_id": "2024",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "league_name": "1. Division Kvinder",
+      "raekke_id": 2082,
       "season_value": "2024",
       "season_start_year": 2024
     },
@@ -843,15 +856,15 @@
       "season_start_year": 2024
     },
     {
-      "id": "2024:women:1-division:pulje-3763",
-      "league_id": "2024:women:1-division",
+      "id": "2024:women:2-division:pulje-3765",
+      "league_id": "2024:women:2-division",
       "name": "Øst",
-      "pulje_id": 3763,
+      "pulje_id": 3765,
       "season_id": "2024",
       "gender": "Kvinde",
-      "division": "1. Division",
-      "league_name": "1. Division Kvinder",
-      "raekke_id": 2082,
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 2083,
       "season_value": "2024",
       "season_start_year": 2024
     },
@@ -882,19 +895,6 @@
       "season_start_year": 2024
     },
     {
-      "id": "2024:women:2-division:pulje-3765",
-      "league_id": "2024:women:2-division",
-      "name": "Øst",
-      "pulje_id": 3765,
-      "season_id": "2024",
-      "gender": "Kvinde",
-      "division": "2. Division",
-      "league_name": "2. Division Kvinder",
-      "raekke_id": 2083,
-      "season_value": "2024",
-      "season_start_year": 2024
-    },
-    {
       "id": "2024:women:volleyligaen:pulje-3762",
       "league_id": "2024:women:volleyligaen",
       "name": "Række 1",
@@ -908,173 +908,160 @@
       "season_start_year": 2024
     },
     {
-      "id": "2025:men:1-division:pulje-3926",
-      "league_id": "2025:men:1-division",
-      "name": "Vest",
-      "pulje_id": 3926,
-      "season_id": "2025",
-      "gender": "Mand",
-      "division": "1. Division",
-      "league_name": "1. Division Herrer",
-      "raekke_id": 2250,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:men:1-division:pulje-3925",
+      "id": "2025:men:1-division:pulje-4118",
       "league_id": "2025:men:1-division",
       "name": "Øst",
-      "pulje_id": 3925,
+      "pulje_id": 4118,
       "season_id": "2025",
-      "gender": "Mand",
-      "division": "1. Division",
-      "league_name": "1. Division Herrer",
-      "raekke_id": 2250,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:men:2-division:pulje-3929",
-      "league_id": "2025:men:2-division",
-      "name": "Nord",
-      "pulje_id": 3929,
-      "season_id": "2025",
-      "gender": "Mand",
-      "division": "2. Division",
-      "league_name": "2. Division Herrer",
-      "raekke_id": 2251,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:men:2-division:pulje-3928",
-      "league_id": "2025:men:2-division",
-      "name": "Syd",
-      "pulje_id": 3928,
-      "season_id": "2025",
-      "gender": "Mand",
-      "division": "2. Division",
-      "league_name": "2. Division Herrer",
-      "raekke_id": 2251,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:men:2-division:pulje-3927",
-      "league_id": "2025:men:2-division",
-      "name": "Øst",
-      "pulje_id": 3927,
-      "season_id": "2025",
-      "gender": "Mand",
-      "division": "2. Division",
-      "league_name": "2. Division Herrer",
-      "raekke_id": 2251,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:men:volleyligaen:pulje-3923",
-      "league_id": "2025:men:volleyligaen",
-      "name": "Række 1",
-      "pulje_id": 3923,
-      "season_id": "2025",
-      "gender": "Mand",
-      "division": "Volleyligaen",
-      "league_name": "Volleyligaen Herrer",
-      "raekke_id": 2248,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:women:1-division:pulje-3931",
-      "league_id": "2025:women:1-division",
-      "name": "Vest",
-      "pulje_id": 3931,
-      "season_id": "2025",
-      "gender": "Kvinde",
-      "division": "1. Division",
-      "league_name": "1. Division Kvinder",
-      "raekke_id": 2252,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:women:1-division:pulje-3930",
-      "league_id": "2025:women:1-division",
-      "name": "Øst",
-      "pulje_id": 3930,
-      "season_id": "2025",
-      "gender": "Kvinde",
-      "division": "1. Division",
-      "league_name": "1. Division Kvinder",
-      "raekke_id": 2252,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:women:2-division:pulje-3934",
-      "league_id": "2025:women:2-division",
-      "name": "Nord",
-      "pulje_id": 3934,
-      "season_id": "2025",
-      "gender": "Kvinde",
-      "division": "2. Division",
-      "league_name": "2. Division Kvinder",
-      "raekke_id": 2253,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:women:2-division:pulje-3933",
-      "league_id": "2025:women:2-division",
-      "name": "Syd",
-      "pulje_id": 3933,
-      "season_id": "2025",
-      "gender": "Kvinde",
-      "division": "2. Division",
-      "league_name": "2. Division Kvinder",
-      "raekke_id": 2253,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:women:2-division:pulje-3932",
-      "league_id": "2025:women:2-division",
-      "name": "Øst",
-      "pulje_id": 3932,
-      "season_id": "2025",
-      "gender": "Kvinde",
-      "division": "2. Division",
-      "league_name": "2. Division Kvinder",
-      "raekke_id": 2253,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2025:women:volleyligaen:pulje-3924",
-      "league_id": "2025:women:volleyligaen",
-      "name": "Række 1",
-      "pulje_id": 3924,
-      "season_id": "2025",
-      "gender": "Kvinde",
-      "division": "Volleyligaen",
-      "league_name": "Volleyligaen Kvinder",
-      "raekke_id": 2249,
-      "season_value": "2025",
-      "season_start_year": 2025
-    },
-    {
-      "id": "2026:men:1-division:pulje-4119",
-      "league_id": "2026:men:1-division",
-      "name": "Vest",
-      "pulje_id": 4119,
-      "season_id": "2026",
       "gender": "Mand",
       "division": "1. Division",
       "league_name": "1. Division Herrer",
       "raekke_id": 2371,
       "season_value": "0",
-      "season_start_year": 2026
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:men:1-division:pulje-4119",
+      "league_id": "2025:men:1-division",
+      "name": "Vest",
+      "pulje_id": 4119,
+      "season_id": "2025",
+      "gender": "Mand",
+      "division": "1. Division",
+      "league_name": "1. Division Herrer",
+      "raekke_id": 2371,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:men:2-division:pulje-4122",
+      "league_id": "2025:men:2-division",
+      "name": "Øst",
+      "pulje_id": 4122,
+      "season_id": "2025",
+      "gender": "Mand",
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 2372,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:men:2-division:pulje-4123",
+      "league_id": "2025:men:2-division",
+      "name": "Syd",
+      "pulje_id": 4123,
+      "season_id": "2025",
+      "gender": "Mand",
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 2372,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:men:2-division:pulje-4124",
+      "league_id": "2025:men:2-division",
+      "name": "Nord",
+      "pulje_id": 4124,
+      "season_id": "2025",
+      "gender": "Mand",
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 2372,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:men:volleyligaen:pulje-4141",
+      "league_id": "2025:men:volleyligaen",
+      "name": "Række 1",
+      "pulje_id": 4141,
+      "season_id": "2025",
+      "gender": "Mand",
+      "division": "Volleyligaen",
+      "league_name": "Volleyligaen Herrer",
+      "raekke_id": 2370,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:women:1-division:pulje-4128",
+      "league_id": "2025:women:1-division",
+      "name": "Øst",
+      "pulje_id": 4128,
+      "season_id": "2025",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "league_name": "1. Division Kvinder",
+      "raekke_id": 2373,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:women:1-division:pulje-4129",
+      "league_id": "2025:women:1-division",
+      "name": "Vest",
+      "pulje_id": 4129,
+      "season_id": "2025",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "league_name": "1. Division Kvinder",
+      "raekke_id": 2373,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:women:2-division:pulje-4125",
+      "league_id": "2025:women:2-division",
+      "name": "Øst",
+      "pulje_id": 4125,
+      "season_id": "2025",
+      "gender": "Kvinde",
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 2374,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:women:2-division:pulje-4126",
+      "league_id": "2025:women:2-division",
+      "name": "Syd",
+      "pulje_id": 4126,
+      "season_id": "2025",
+      "gender": "Kvinde",
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 2374,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:women:2-division:pulje-4127",
+      "league_id": "2025:women:2-division",
+      "name": "Nord",
+      "pulje_id": 4127,
+      "season_id": "2025",
+      "gender": "Kvinde",
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 2374,
+      "season_value": "0",
+      "season_start_year": 2025
+    },
+    {
+      "id": "2025:women:volleyligaen:pulje-4140",
+      "league_id": "2025:women:volleyligaen",
+      "name": "Række 1",
+      "pulje_id": 4140,
+      "season_id": "2025",
+      "gender": "Kvinde",
+      "division": "Volleyligaen",
+      "league_name": "Volleyligaen Kvinder",
+      "raekke_id": 2369,
+      "season_value": "0",
+      "season_start_year": 2025
     },
     {
       "id": "2026:men:1-division:pulje-4118",
@@ -1090,10 +1077,23 @@
       "season_start_year": 2026
     },
     {
-      "id": "2026:men:2-division:pulje-4124",
+      "id": "2026:men:1-division:pulje-4119",
+      "league_id": "2026:men:1-division",
+      "name": "Vest",
+      "pulje_id": 4119,
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "1. Division",
+      "league_name": "1. Division Herrer",
+      "raekke_id": 2371,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:men:2-division:pulje-4122",
       "league_id": "2026:men:2-division",
-      "name": "Nord",
-      "pulje_id": 4124,
+      "name": "Øst",
+      "pulje_id": 4122,
       "season_id": "2026",
       "gender": "Mand",
       "division": "2. Division",
@@ -1116,10 +1116,10 @@
       "season_start_year": 2026
     },
     {
-      "id": "2026:men:2-division:pulje-4122",
+      "id": "2026:men:2-division:pulje-4124",
       "league_id": "2026:men:2-division",
-      "name": "Øst",
-      "pulje_id": 4122,
+      "name": "Nord",
+      "pulje_id": 4124,
       "season_id": "2026",
       "gender": "Mand",
       "division": "2. Division",
@@ -1142,19 +1142,6 @@
       "season_start_year": 2026
     },
     {
-      "id": "2026:women:1-division:pulje-4129",
-      "league_id": "2026:women:1-division",
-      "name": "Vest",
-      "pulje_id": 4129,
-      "season_id": "2026",
-      "gender": "Kvinde",
-      "division": "1. Division",
-      "league_name": "1. Division Kvinder",
-      "raekke_id": 2373,
-      "season_value": "0",
-      "season_start_year": 2026
-    },
-    {
       "id": "2026:women:1-division:pulje-4128",
       "league_id": "2026:women:1-division",
       "name": "Øst",
@@ -1168,10 +1155,23 @@
       "season_start_year": 2026
     },
     {
-      "id": "2026:women:2-division:pulje-4127",
+      "id": "2026:women:1-division:pulje-4129",
+      "league_id": "2026:women:1-division",
+      "name": "Vest",
+      "pulje_id": 4129,
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "1. Division",
+      "league_name": "1. Division Kvinder",
+      "raekke_id": 2373,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
+      "id": "2026:women:2-division:pulje-4125",
       "league_id": "2026:women:2-division",
-      "name": "Nord",
-      "pulje_id": 4127,
+      "name": "Øst",
+      "pulje_id": 4125,
       "season_id": "2026",
       "gender": "Kvinde",
       "division": "2. Division",
@@ -1194,10 +1194,10 @@
       "season_start_year": 2026
     },
     {
-      "id": "2026:women:2-division:pulje-4125",
+      "id": "2026:women:2-division:pulje-4127",
       "league_id": "2026:women:2-division",
-      "name": "Øst",
-      "pulje_id": 4125,
+      "name": "Nord",
+      "pulje_id": 4127,
       "season_id": "2026",
       "gender": "Kvinde",
       "division": "2. Division",
@@ -1327,6 +1327,90 @@
       ]
     },
     "2026:men:volleyligaen:pulje-4141": {
+      "mismatch_count": 9,
+      "affected_teams": 9,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:women:1-division:pulje-4129": {
+      "mismatch_count": 9,
+      "affected_teams": 9,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:women:1-division:pulje-4128": {
+      "mismatch_count": 8,
+      "affected_teams": 8,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:women:2-division:pulje-4127": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:women:2-division:pulje-4126": {
+      "mismatch_count": 9,
+      "affected_teams": 9,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:women:2-division:pulje-4125": {
+      "mismatch_count": 7,
+      "affected_teams": 7,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:women:volleyligaen:pulje-4140": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:men:1-division:pulje-4119": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:men:1-division:pulje-4118": {
+      "mismatch_count": 7,
+      "affected_teams": 7,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:men:2-division:pulje-4124": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:men:2-division:pulje-4123": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:men:2-division:pulje-4122": {
+      "mismatch_count": 9,
+      "affected_teams": 9,
+      "affected_fields": [
+        "rank"
+      ]
+    },
+    "2025:men:volleyligaen:pulje-4141": {
       "mismatch_count": 9,
       "affected_teams": 9,
       "affected_fields": [
