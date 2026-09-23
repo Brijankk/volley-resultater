@@ -1,6 +1,7 @@
 const DATA_ROOT = "../data/json";
 const DATA_CACHE = "volley-data-v5";
 const SELECTION_STORAGE_KEY = "volley-selection-v1";
+const MATCH_CALENDAR_DURATION_MS = 2 * 60 * 60 * 1000;
 
 const state = {
   metadata: null,
@@ -83,6 +84,7 @@ const els = {
   scheduleRangeControl: document.querySelector("#scheduleRangeControl"),
   scheduleTeamSelect: document.querySelector("#scheduleTeamSelect"),
   scheduleSideControl: document.querySelector("#scheduleSideControl"),
+  scheduleExportButton: document.querySelector("#scheduleExportButton"),
   scheduleBody: document.querySelector("#scheduleBody"),
   scheduleEmpty: document.querySelector("#scheduleEmpty"),
   standingsBody: document.querySelector("#standingsBody"),
@@ -174,6 +176,8 @@ function bindEvents() {
     setActiveButton(els.scheduleSideControl, button);
     renderSchedule();
   });
+
+  els.scheduleExportButton.addEventListener("click", exportVisibleScheduleToCalendar);
 
   els.chartModeControl.addEventListener("click", (event) => {
     const button = event.target.closest("button");
@@ -387,6 +391,7 @@ function renderSchedule() {
   const rows = filteredScheduleMatches();
   els.scheduleBody.innerHTML = rows.map((match) => renderScheduleRow(match)).join("");
   els.scheduleEmpty.classList.toggle("hidden", rows.length > 0);
+  renderScheduleExportState(rows);
 }
 
 function renderScheduleRow(match) {
@@ -418,6 +423,170 @@ function filteredScheduleMatches() {
     matches = sortedMatches([...latest, ...next]);
   }
   return matches;
+}
+
+function renderScheduleExportState(matches) {
+  const exportableCount = exportableScheduleMatches(matches).length;
+  els.scheduleExportButton.disabled = exportableCount === 0;
+  els.scheduleExportButton.title = exportableCount
+    ? `Eksporter ${exportableCount} ${exportableCount === 1 ? "kamp" : "kampe"} til kalender`
+    : "Ingen viste kampe med dato kan eksporteres";
+}
+
+function exportVisibleScheduleToCalendar() {
+  const matches = exportableScheduleMatches(filteredScheduleMatches());
+  if (!matches.length) return;
+  downloadTextFile(scheduleCalendarFilename(), buildScheduleCalendar(matches), "text/calendar;charset=utf-8");
+}
+
+function exportableScheduleMatches(matches) {
+  return matches.filter((match) => match.starts_at);
+}
+
+function buildScheduleCalendar(matches) {
+  const nowStamp = calendarDateTimeUtc(new Date());
+  const modifiedStamp = calendarDateTimeUtc(exportedAtDate() || new Date());
+  const sequence = calendarSequence();
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Volleyball Resultater//Kampprogram//DA",
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH",
+    `X-WR-CALNAME:${calendarText(scheduleCalendarName())}`,
+  ];
+
+  for (const match of matches) {
+    lines.push(...buildMatchCalendarEvent(match, nowStamp, modifiedStamp, sequence));
+  }
+
+  lines.push("END:VCALENDAR");
+  return lines.map(foldCalendarLine).join("\r\n");
+}
+
+function buildMatchCalendarEvent(match, nowStamp, modifiedStamp, sequence) {
+  const start = new Date(match.starts_at);
+  const summary = `${match.home_team} - ${match.away_team}`;
+  const location = match.venue || "";
+  const description = [
+    selectedLeague()?.division,
+    selectedPool()?.name,
+    match.match_number ? `Kampnr. ${match.match_number}` : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+  const lines = [
+    "BEGIN:VEVENT",
+    `UID:${calendarText(matchCalendarUid(match))}`,
+    `DTSTAMP:${nowStamp}`,
+    `LAST-MODIFIED:${modifiedStamp}`,
+    `SEQUENCE:${sequence}`,
+    `SUMMARY:${calendarText(summary)}`,
+  ];
+
+  if (match.starts_at_time_known === false) {
+    lines.push(`DTSTART;VALUE=DATE:${calendarDate(start)}`);
+    lines.push(`DTEND;VALUE=DATE:${calendarDate(addDays(start, 1))}`);
+  } else {
+    lines.push(`DTSTART:${calendarDateTimeUtc(start)}`);
+    lines.push(`DTEND:${calendarDateTimeUtc(new Date(start.getTime() + MATCH_CALENDAR_DURATION_MS))}`);
+  }
+
+  if (location) lines.push(`LOCATION:${calendarText(location)}`);
+  if (description) lines.push(`DESCRIPTION:${calendarText(description)}`);
+  lines.push("END:VEVENT");
+  return lines;
+}
+
+function matchCalendarUid(match) {
+  if (match.match_number) return `${match.match_number}@volleyball-resultater`;
+  return `${match.kamp_id}@volleyball-resultater`;
+}
+
+function scheduleCalendarName() {
+  return ["Volleyball", selectedLeague()?.division, selectedPool()?.name, state.selectedScheduleTeam]
+    .filter(Boolean)
+    .join(" - ");
+}
+
+function scheduleCalendarFilename() {
+  return `${safeFilename(scheduleCalendarName()).toLowerCase()}-kampprogram.ics`;
+}
+
+function exportedAtDate() {
+  const value = state.poolData?.metadata?.exported_at || state.metadata?.metadata?.exported_at;
+  if (!value) return null;
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function calendarSequence() {
+  const date = exportedAtDate();
+  return date ? Math.floor(date.getTime() / 1000) : 0;
+}
+
+function calendarDateTimeUtc(date) {
+  return date.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}Z$/, "Z");
+}
+
+function calendarDate(date) {
+  return [
+    date.getFullYear(),
+    String(date.getMonth() + 1).padStart(2, "0"),
+    String(date.getDate()).padStart(2, "0"),
+  ].join("");
+}
+
+function addDays(date, days) {
+  const result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+}
+
+function calendarText(value) {
+  return String(value)
+    .replaceAll("\\", "\\\\")
+    .replaceAll("\r\n", "\\n")
+    .replaceAll("\n", "\\n")
+    .replaceAll(",", "\\,")
+    .replaceAll(";", "\\;");
+}
+
+function foldCalendarLine(line) {
+  const encoder = new TextEncoder();
+  const characters = [...line];
+  const lines = [];
+  let current = "";
+  let currentBytes = 0;
+  let limit = 75;
+
+  for (const character of characters) {
+    const characterBytes = encoder.encode(character).length;
+    if (currentBytes + characterBytes > limit) {
+      lines.push(current);
+      current = ` ${character}`;
+      currentBytes = 1 + characterBytes;
+      limit = 74;
+    } else {
+      current += character;
+      currentBytes += characterBytes;
+    }
+  }
+
+  lines.push(current);
+  return lines.join("\r\n");
+}
+
+function downloadTextFile(filename, content, type) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
 }
 
 function normalizeScheduleFilters() {
@@ -698,6 +867,14 @@ function poolsForLeague(leagueId) {
   return state.metadata.pools
     .filter((pool) => pool.league_id === leagueId)
     .sort((a, b) => poolWeight(a.name) - poolWeight(b.name) || a.name.localeCompare(b.name, "da"));
+}
+
+function selectedLeague() {
+  return state.metadata?.leagues.find((league) => league.id === state.selectedLeagueId) || null;
+}
+
+function selectedPool() {
+  return state.metadata?.pools.find((pool) => pool.id === state.selectedPoolId) || null;
 }
 
 function poolValidationFor(poolId) {

@@ -136,6 +136,32 @@ h2 {
   background: #085560;
 }
 
+.schedule-export-button {
+  align-self: end;
+  min-height: 38px;
+  border: 1px solid rgba(11, 107, 120, 0.28);
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.86rem;
+  font-weight: 800;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.schedule-export-button:hover,
+.schedule-export-button:focus-visible {
+  background: #085560;
+}
+
+.schedule-export-button:disabled {
+  background: var(--surface-strong);
+  border-color: var(--line);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
 .selector-band,
 .panel {
   background: var(--surface);
@@ -231,6 +257,12 @@ select {
   grid-template-columns: minmax(170px, auto) minmax(190px, 250px) minmax(180px, auto);
   gap: 10px;
   align-items: end;
+}
+
+.schedule-export-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
 }
 
 .compact-field span {
@@ -664,7 +696,12 @@ canvas {
   }
 
   .schedule-range-control,
-  .schedule-side-control {
+  .schedule-side-control,
+  .schedule-export-button {
+    width: 100%;
+  }
+
+  .schedule-export-row {
     width: 100%;
   }
 
