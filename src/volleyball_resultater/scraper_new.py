@@ -6,6 +6,8 @@ import numpy as np
 
 from .models import StandingRow
 from .client import FIELD_SEASON, ResultaterClient, build_search_form
+from .html_tools import parse_forms
+from .parsers import parse_league_links, parse_match_sets, parse_pools, parse_schedule, parse_standings
 
 
 class VolleyballScraper:
@@ -23,7 +25,44 @@ class VolleyballScraper:
             self._search_html = self.client.initial_search_page().html
         return self._search_html
 
-    def scrape_pool_scoreboard(self, pool_id: int):
+    def get_seasons(self) -> list[str]:
+        html = self._get_search_html()
+        form = parse_forms(html)
+        options = form.selects[FIELD_SEASON]
+
+        seasons = pd.DataFrame(options)
+        seasons['year'] = pd.to_numeric(seasons['value'])
+        seasons.loc[seasons["text"].eq("Nuværende"), 'year'] = seasons['year'].max() + 1
+
+        return seasons
+
+    def get_league_ids(self, district: str, gender: str, season: int, age_group: str='Senior') -> pd.DataFrame:
+        search_html = self._get_search_html()
+        
+        seasons = self.get_seasons()
+        season_value = seasons.set_index('year')['value'][season]
+        
+        form = build_search_form(search_html, district, gender, age_group, season_value)
+        result = self.client.post_search(form)
+
+        leagues = pd.DataFrame(
+            data=parse_league_links(result.html),
+            columns=["label", "id"],
+        )
+        
+        return leagues
+
+    def get_pool_ids(self, league_id: int) -> pd.DataFrame:
+        overview = self.client.get(f"/tms/Turneringer-og-resultater/Pulje-Oversigt.aspx?RaekkeId={league_id}")
+        pools = pd.DataFrame(
+            data=parse_pools(overview.html, overview.url, league_id),
+        )[['name', 'pulje_id']].rename(
+            columns={'name': 'label', 'pulje_id': 'id'}
+        )
+
+        return pools
+
+    def scrape_pool_scoreboard(self, pool_id: int) -> pd.DataFrame:
         column_types = {
             'rank': int,
             'team_name': str,
@@ -59,7 +98,7 @@ class VolleyballScraper:
 
         return df
 
-    def scrape_pool_schedule(self, pool_id: int):
+    def scrape_pool_schedule(self, pool_id: int) -> pd.DataFrame:
         column_rename = {
             'Kampnr.': 'game_id',
             'Hjemmehold': 'team_home',
@@ -72,7 +111,7 @@ class VolleyballScraper:
 
         return df
 
-    def scrape_match_results(self, match_id: int):
+    def scrape_match_results(self, match_id: int) -> pd.DataFrame:
         columns = [
             'set_number',
             'home_points',

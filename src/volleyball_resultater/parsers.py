@@ -44,23 +44,61 @@ def parse_pools(html: str, final_url: str, league_id: str) -> list[Pool]:
         return [Pool(id=f"{league_id}:pulje-{pulje_id}", league_id=league_id, name="Række 1", pulje_id=pulje_id)]
 
     pools: list[Pool] = []
-    for link in parse_links(html):
-        if "Pulje-Stilling.aspx" not in link.href:
-            continue
-        link_pulje_id = query_int(link.href, "PuljeId")
-        if link_pulje_id is None or not link.text:
-            continue
-        name = "Række 1" if link.text == "Stilling" else link.text
-        if any(pool.pulje_id == link_pulje_id for pool in pools):
-            continue
-        pools.append(
-            Pool(
-                id=f"{league_id}:pulje-{link_pulje_id}",
-                league_id=league_id,
-                name=name,
-                pulje_id=link_pulje_id,
+    # for link in parse_links(html):
+    #     if "Pulje-Stilling.aspx" not in link.href:
+    #         continue
+    #     link_pulje_id = query_int(link.href, "PuljeId")
+    #     if link_pulje_id is None or not link.text:
+    #         continue
+    #     name = "Række 1" if link.text == "Stilling" else link.text
+    #     if any(pool.pulje_id == link_pulje_id for pool in pools):
+    #         continue
+    #     pools.append(
+    #         Pool(
+    #             id=f"{league_id}:pulje-{link_pulje_id}",
+    #             league_id=league_id,
+    #             name=name,
+    #             pulje_id=link_pulje_id,
+    #         )
+    #     )
+
+    if html.find('Oversigt') == -1:
+        for link in parse_links(html):
+            if "Kampprogram.aspx" not in link.href:
+                continue
+            link_pulje_id = query_int(link.href, "PuljeId")
+            if link_pulje_id is None or not link.text:
+                continue
+            name = "Række 1" if link.text == "Kampprogram" else link.text
+            if any(pool.pulje_id == link_pulje_id for pool in pools):
+                continue
+            pools.append(
+                Pool(
+                    id=f"{league_id}:pulje-{link_pulje_id}",
+                    league_id=league_id,
+                    name=name,
+                    pulje_id=link_pulje_id,
+                )
             )
-        )
+    else:
+        for link in parse_links(html):
+            if "Pulje-Stilling.aspx" not in link.href:
+                continue
+            link_pulje_id = query_int(link.href, "PuljeId")
+            if link_pulje_id is None or not link.text:
+                continue
+            name = "Række 1" if link.text == "Stilling" else link.text
+            if any(pool.pulje_id == link_pulje_id for pool in pools):
+                continue
+            pools.append(
+                Pool(
+                    id=f"{league_id}:pulje-{link_pulje_id}",
+                    league_id=league_id,
+                    name=name,
+                    pulje_id=link_pulje_id,
+                )
+            )
+
     return pools
 
 
