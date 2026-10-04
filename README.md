@@ -34,6 +34,12 @@ For the current season, the scraper also accepts `--season current`,
 `--season Nuværende`, or the season start year, for example `--season 2026`.
 If the website's explicit year option is broken but `Nuværende` works, the
 scraper uses `Nuværende` while storing the data under the numeric start year.
+The default assumption is that `Nuværende` refers to the highest numbered
+season option plus one (for example, a highest option of 2025 means the
+current season is 2026). This assumption also applies if the website lists
+the current year separately. Every numbered season option remains available
+for explicit selection. If no numbered options exist, the current season
+keeps the ID `current` with an unknown start year.
 Use `--refresh-cache` when the website has changed since the previous scrape,
 for example when upcoming match times are added after the initial schedule
 release.

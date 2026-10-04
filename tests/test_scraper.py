@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 from volleyball_resultater.client import FIELD_SEASON, FetchResult
+from volleyball_resultater.models import Season
 from volleyball_resultater.scraper import VolleyballScraper, regular_season_division
 
 
@@ -19,15 +20,15 @@ class FakeClient:
 
 
 class ScraperTests(unittest.TestCase):
-    def test_current_season_uses_newest_numeric_year(self) -> None:
+    def test_current_season_uses_newest_numeric_year_plus_one(self) -> None:
         scraper = VolleyballScraper(
             FakeClient(
                 f"""
                 <form>
                   <select name="{FIELD_SEASON}">
                     <option value="0">Nuværende</option>
-                    <option value="2026">2026</option>
                     <option value="2025">2025</option>
+                    <option value="2024">2024</option>
                   </select>
                 </form>
                 """
@@ -41,7 +42,46 @@ class ScraperTests(unittest.TestCase):
         self.assertEqual(seasons[0].value, "0")
         self.assertEqual(seasons[0].start_year, 2026)
         self.assertTrue(seasons[0].is_current)
-        self.assertEqual([season.id for season in seasons], ["2026", "2025"])
+        self.assertEqual([season.id for season in seasons], ["2026", "2025", "2024"])
+        self.assertEqual(seasons[1].value, "2025")
+        self.assertFalse(seasons[1].is_current)
+
+    def test_current_season_assumption_applies_when_newer_year_is_listed(self) -> None:
+        scraper = VolleyballScraper(FakeClient(f"""
+            <form><select name="{FIELD_SEASON}">
+                <option value="0">Nuværende</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select></form>
+        """))
+
+        seasons = scraper.seasons()
+
+        self.assertEqual([season.id for season in seasons], ["2027", "2025", "2026"])
+        self.assertEqual(seasons[0].start_year, 2027)
+        self.assertEqual(seasons[0].value, "0")
+
+    def test_current_season_without_numbered_years_keeps_unknown_year(self) -> None:
+        scraper = VolleyballScraper(FakeClient(f"""
+            <form><select name="{FIELD_SEASON}">
+                <option value="0">Nuværende</option>
+            </select></form>
+        """))
+
+        self.assertEqual(scraper.seasons(), [Season("current", "Nuværende", "0", None, True)])
+
+    def test_numbered_seasons_without_current_option_are_preserved(self) -> None:
+        scraper = VolleyballScraper(FakeClient(f"""
+            <form><select name="{FIELD_SEASON}">
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+            </select></form>
+        """))
+
+        self.assertEqual(scraper.seasons(), [
+            Season("2025", "2025", "2025", 2025, False),
+            Season("2024", "2024", "2024", 2024, False),
+        ])
 
     def test_volleyligaen_matching_is_case_insensitive(self) -> None:
         self.assertEqual(regular_season_division("Volleyligaen Herrer", "Mand"), "Volleyligaen")

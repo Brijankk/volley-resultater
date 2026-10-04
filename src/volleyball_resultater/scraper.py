@@ -22,8 +22,8 @@ class VolleyballScraper:
         html = self._get_search_html()
         form = parse_forms(html)
         options = form.selects[FIELD_SEASON]
-        current_start_year = newest_numeric_season(options)
-        has_current = any(option.text == "Nuværende" for option in options)
+        newest_year = newest_numeric_season(options)
+        current_start_year = newest_year + 1 if newest_year is not None else None
         seasons: list[Season] = []
         for option in options:
             if option.text == "Nuværende":
@@ -39,8 +39,6 @@ class VolleyballScraper:
                 )
             elif option.value.isdigit():
                 start_year = int(option.value)
-                if has_current and current_start_year == start_year:
-                    continue
                 seasons.append(
                     Season(
                         id=option.value,
@@ -114,7 +112,7 @@ def newest_numeric_season(options: list[object]) -> int | None:
     years = []
     for option in options:
         value = getattr(option, "value", "")
-        if value.isdigit():
+        if getattr(option, "text", "") != "Nuværende" and value.isdigit():
             years.append(int(value))
     return max(years) if years else None
 
