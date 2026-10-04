@@ -7,8 +7,11 @@ import numpy as np
 from .models import StandingRow
 from .client import FIELD_SEASON, ResultaterClient, build_search_form
 from .html_tools import parse_forms
-from .parsers import parse_league_links, parse_match_sets, parse_pools, parse_schedule, parse_standings
+from .parsers import parse_league_links, parse_pools, parse_schedule, parse_links, query_int
 
+DISTRICT = "Volleyball Danmark"
+AGE_GROUP = "Senior"
+GENDERS = ("Mand", "Kvinde")
 
 class VolleyballScraper:
     def __init__(self, client: ResultaterClient) -> None:
@@ -25,7 +28,7 @@ class VolleyballScraper:
             self._search_html = self.client.initial_search_page().html
         return self._search_html
 
-    def get_seasons(self) -> list[str]:
+    def get_seasons(self) -> pd.DataFrame:
         html = self._get_search_html()
         form = parse_forms(html)
         options = form.selects[FIELD_SEASON]
@@ -36,18 +39,19 @@ class VolleyballScraper:
 
         return seasons
 
-    def get_league_ids(self, district: str, gender: str, season: int, age_group: str='Senior') -> pd.DataFrame:
+    def get_league_ids(self, district: str, gender: str, season: int|str, age_group: str='Senior') -> pd.DataFrame:
         search_html = self._get_search_html()
         
         seasons = self.get_seasons()
-        season_value = seasons.set_index('year')['value'][season]
+        season_lookup = 'year' if isinstance(season, int) else 'text'
+        season_value = seasons.set_index(season_lookup)['value'][season]
         
         form = build_search_form(search_html, district, gender, age_group, season_value)
         result = self.client.post_search(form)
 
         leagues = pd.DataFrame(
             data=parse_league_links(result.html),
-            columns=["label", "id"],
+            columns=["name", "id"],
         )
         
         return leagues
@@ -57,7 +61,7 @@ class VolleyballScraper:
         pools = pd.DataFrame(
             data=parse_pools(overview.html, overview.url, league_id),
         )[['name', 'pulje_id']].rename(
-            columns={'name': 'label', 'pulje_id': 'id'}
+            columns={'pulje_id': 'id'}
         )
 
         return pools
@@ -100,36 +104,70 @@ class VolleyballScraper:
 
     def scrape_pool_schedule(self, pool_id: int) -> pd.DataFrame:
         column_rename = {
-            'Kampnr.': 'game_id',
-            'Hjemmehold': 'team_home',
-            'Udehold': 'team_away',
-            'Resultat': 'result',
+            'Kampnr.': 'match_number',
+            'Hjemmehold': 'home_team',
+            'Udehold': 'away_team',
         }
         schedule_html = self.client.get(f"{self.schedule_url}{pool_id}").html
+        
+        links = parse_links(schedule_html)
+        match_ids = {link.text:query_int(link.href, "KampId") for link in links if link.text.isdigit()}
 
         df = pd.read_html(StringIO(schedule_html))[0]
+        df['id'] = df['Kampnr.'].astype(str).map(match_ids)
+        df[['venue', 'court']] = df['Spillested / bane'].str.rsplit(' ', n=1, expand=True).apply(lambda x: x.str.strip())
+        df['note'] = df['Unnamed: 6'].astype(str)
+
+        if not ptypes.is_numeric_dtype(df['Dato']):
+            df.loc[~df['Dato'].str.contains('kl.'), 'Dato'] = df.loc[~df['Dato'].str.contains('kl.'), 'Dato'] + '  kl. 00:00'
+        df['match_time'] = pd.to_datetime(df['Dato'], format='%d-%m-%y  kl. %H:%M')
+
+        if ptypes.is_numeric_dtype(df['Resultat']):
+            df[['home_sets', 'away_sets']] = np.nan
+        else:
+            df[['home_sets', 'away_sets']] = df['Resultat'].str.split('-', expand=True).astype('Int64')
+        df[['home_sets', 'away_sets']] = df[['home_sets', 'away_sets']].astype('Int64')
+
+        df = df.rename(columns=column_rename)[[
+            'id',
+            'match_number',
+            'match_time',
+            'home_team',
+            'away_team',
+            'venue',
+            'court',
+            'home_sets',
+            'away_sets',
+            'note',
+        ]]
 
         return df
 
-    def scrape_match_results(self, match_id: int) -> pd.DataFrame:
-        columns = [
-            'set_number',
-            'home_points',
-            'away_points',
-            'home_set_won',
-            'away_set_won',
-        ]
+    def scrape_match_details(self, match_id: int) -> pd.DataFrame:
         match_html = self.client.get(f"{self.match_url}{match_id}").html
 
-        df = pd.read_html(StringIO(match_html))[1]
+        html_tables = pd.read_html(StringIO(match_html))
 
+        match_info = html_tables[0].set_index(0)[1]
+        df = html_tables[1]
         df['set_number'] = df['Unnamed: 0'].str.removesuffix('. Sæt').astype(int)
         if ptypes.is_numeric_dtype(df['Score']):
-            df[['home_points', 'away_points', 'home_set_won', 'away_set_won']] = np.nan
+            df[['home', 'away']] = np.nan
         else:
-            df[['home_points', 'away_points']] = df['Score'].str.split('  ', expand=True)
-            df[['home_set_won', 'away_set_won']] = df['Resultat'].str.split('  ', expand=True)
-        df[columns] = df[columns].astype('Int64')
-        df = df[columns]
+            df[['home', 'away']] = df['Score'].str.split('  ', expand=True)
+        df = df.melt(id_vars='set_number', value_vars=['home', 'away'])
+        df['name'] = df['variable'] + '_balls' + df['set_number'].astype(str)
+        df.set_index('name')['value']
+        df = df.set_index('name')['value'].to_frame().T
+        df = df.apply(pd.to_numeric)
+
+        if match_info['Kampresultat'] == 'Ikke angivet':
+            df[['home_points', 'away_points']] = np.nan
+        else:
+            df[['home_points', 'away_points']] = list(map(int, match_info['Kampresultat'].split('-')))
+        df = df.astype('Int64').reset_index(drop=True)
+        df['address'] = match_info['Spillested']
+        df['referee1'] = match_info['Dommer 1'] if 'Dommer 1' in match_info.index else 'Vakant dommer'
+        df['referee2'] = match_info['Dommer 2'] if 'Dommer 2' in match_info.index else 'Vakant dommer'
 
         return df
