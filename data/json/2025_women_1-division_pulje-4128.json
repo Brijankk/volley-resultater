@@ -1,12 +1,12 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-03T01:47:41+00:00",
+    "exported_at": "2026-10-04T02:28:00+00:00",
     "scraper_version": "1.0.2",
     "rule_profile": "five_set_3_1",
     "validation": {
-      "mismatch_count": 4,
-      "affected_teams": 4,
+      "mismatch_count": 3,
+      "affected_teams": 3,
       "affected_fields": [
         "rank"
       ]
@@ -29,19 +29,45 @@
     {
       "pool_id": "2025:women:1-division:pulje-4128",
       "rank": 1,
-      "team_name": "Lyngby-Gladsaxe Volley",
+      "team_name": "Amager Volley",
       "games_played": 1,
       "games_won": 1,
       "games_lost": 0,
       "sets_won": 3,
-      "sets_lost": 2,
-      "balls_won": 114,
-      "balls_lost": 106,
+      "sets_lost": 1,
+      "balls_won": 97,
+      "balls_lost": 81,
       "points": 3
     },
     {
       "pool_id": "2025:women:1-division:pulje-4128",
       "rank": 2,
+      "team_name": "Farum VK 2",
+      "games_played": 1,
+      "games_won": 1,
+      "games_lost": 0,
+      "sets_won": 3,
+      "sets_lost": 1,
+      "balls_won": 96,
+      "balls_lost": 84,
+      "points": 3
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-4128",
+      "rank": 3,
+      "team_name": "Lyngby-Gladsaxe Volley",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 4,
+      "sets_lost": 5,
+      "balls_won": 195,
+      "balls_lost": 203,
+      "points": 3
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-4128",
+      "rank": 4,
       "team_name": "KV 61",
       "games_played": 1,
       "games_won": 0,
@@ -54,34 +80,8 @@
     },
     {
       "pool_id": "2025:women:1-division:pulje-4128",
-      "rank": 3,
-      "team_name": "Amager Volley",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2025:women:1-division:pulje-4128",
-      "rank": 4,
-      "team_name": "Amager Volley.2",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2025:women:1-division:pulje-4128",
       "rank": 5,
-      "team_name": "Farum VK 2",
+      "team_name": "Amager Volley.2",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -133,7 +133,7 @@
     {
       "pool_id": "2025:women:1-division:pulje-4128",
       "rank": 9,
-      "team_name": "KSV.2",
+      "team_name": "KSV",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -146,14 +146,14 @@
     {
       "pool_id": "2025:women:1-division:pulje-4128",
       "rank": 10,
-      "team_name": "KSV",
-      "games_played": 0,
+      "team_name": "KSV.2",
+      "games_played": 1,
       "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
+      "games_lost": 1,
+      "sets_won": 1,
+      "sets_lost": 3,
+      "balls_won": 84,
+      "balls_lost": 96,
       "points": 0
     }
   ],
@@ -162,20 +162,48 @@
       "pool_id": "2025:women:1-division:pulje-4128",
       "rule_profile": "five_set_3_1",
       "rank": 1,
-      "team_name": "Lyngby-Gladsaxe Volley",
+      "team_name": "Amager Volley",
       "games_played": 1,
       "games_won": 1,
       "games_lost": 0,
       "sets_won": 3,
-      "sets_lost": 2,
-      "balls_won": 114,
-      "balls_lost": 106,
+      "sets_lost": 1,
+      "balls_won": 97,
+      "balls_lost": 81,
       "points": 3
     },
     {
       "pool_id": "2025:women:1-division:pulje-4128",
       "rule_profile": "five_set_3_1",
       "rank": 2,
+      "team_name": "Farum VK 2",
+      "games_played": 1,
+      "games_won": 1,
+      "games_lost": 0,
+      "sets_won": 3,
+      "sets_lost": 1,
+      "balls_won": 96,
+      "balls_lost": 84,
+      "points": 3
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-4128",
+      "rule_profile": "five_set_3_1",
+      "rank": 3,
+      "team_name": "Lyngby-Gladsaxe Volley",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 4,
+      "sets_lost": 5,
+      "balls_won": 195,
+      "balls_lost": 203,
+      "points": 3
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-4128",
+      "rule_profile": "five_set_3_1",
+      "rank": 4,
       "team_name": "KV 61",
       "games_played": 1,
       "games_won": 0,
@@ -189,36 +217,8 @@
     {
       "pool_id": "2025:women:1-division:pulje-4128",
       "rule_profile": "five_set_3_1",
-      "rank": 3,
-      "team_name": "Amager Volley",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2025:women:1-division:pulje-4128",
-      "rule_profile": "five_set_3_1",
-      "rank": 4,
-      "team_name": "Amager Volley.2",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2025:women:1-division:pulje-4128",
-      "rule_profile": "five_set_3_1",
       "rank": 5,
-      "team_name": "Farum VK 2",
+      "team_name": "Amager Volley.2",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -260,20 +260,6 @@
       "pool_id": "2025:women:1-division:pulje-4128",
       "rule_profile": "five_set_3_1",
       "rank": 8,
-      "team_name": "KSV.2",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2025:women:1-division:pulje-4128",
-      "rule_profile": "five_set_3_1",
-      "rank": 9,
       "team_name": "Lynge Uggeløse",
       "games_played": 0,
       "games_won": 0,
@@ -287,7 +273,7 @@
     {
       "pool_id": "2025:women:1-division:pulje-4128",
       "rule_profile": "five_set_3_1",
-      "rank": 10,
+      "rank": 9,
       "team_name": "VLI",
       "games_played": 0,
       "games_won": 0,
@@ -296,6 +282,20 @@
       "sets_lost": 0,
       "balls_won": 0,
       "balls_lost": 0,
+      "points": 0
+    },
+    {
+      "pool_id": "2025:women:1-division:pulje-4128",
+      "rule_profile": "five_set_3_1",
+      "rank": 10,
+      "team_name": "KSV.2",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 1,
+      "sets_lost": 3,
+      "balls_won": 84,
+      "balls_lost": 96,
       "points": 0
     }
   ],
@@ -324,8 +324,8 @@
       "away_team": "Lyngby-Gladsaxe Volley",
       "venue": "Sundbyhal 2",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
       "result_note": ""
     },
     {
@@ -338,8 +338,8 @@
       "away_team": "KSV.2",
       "venue": "Ny Holtehal",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
       "result_note": ""
     },
     {
@@ -1563,6 +1563,86 @@
   ],
   "set_results": [
     {
+      "kamp_id": 76249,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76249,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76249,
+      "set_number": 3,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76249,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76249,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 76252,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76252,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76252,
+      "set_number": 3,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76252,
+      "set_number": 4,
+      "home_points": 26,
+      "away_points": 24,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76252,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
       "kamp_id": 76261,
       "set_number": 1,
       "home_points": 21,
@@ -1690,6 +1770,38 @@
       "points": 3,
       "cumulative_points": 3,
       "kamp_id": 76261
+    },
+    {
+      "team": "Amager Volley",
+      "date": "2026-10-03T14:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 76249
+    },
+    {
+      "team": "Lyngby-Gladsaxe Volley",
+      "date": "2026-10-03T14:00:00",
+      "game_number": 2,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 76249
+    },
+    {
+      "team": "Farum VK 2",
+      "date": "2026-10-03T15:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 76252
+    },
+    {
+      "team": "KSV.2",
+      "date": "2026-10-03T15:00:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 76252
     }
   ],
   "result_matrix": {
@@ -1701,7 +1813,7 @@
       "KSV": null,
       "KSV.2": null,
       "KV 61": null,
-      "Lyngby-Gladsaxe Volley": null,
+      "Lyngby-Gladsaxe Volley": "3-1",
       "Lynge Uggeløse": null,
       "VLI": null
     },
@@ -1723,7 +1835,7 @@
       "Farum VK 2": "",
       "Gentofte Volley.2": null,
       "KSV": null,
-      "KSV.2": null,
+      "KSV.2": "3-1",
       "KV 61": null,
       "Lyngby-Gladsaxe Volley": null,
       "Lynge Uggeløse": null,
