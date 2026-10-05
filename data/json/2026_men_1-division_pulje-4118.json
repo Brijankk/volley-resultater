@@ -1,15 +1,13 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-04T12:14:44+02:00",
+    "exported_at": "2026-10-05T01:44:57+00:00",
     "scraper_version": "1.0.2",
     "rule_profile": "five_set_3_1",
     "validation": {
-      "mismatch_count": 4,
-      "affected_teams": 4,
-      "affected_fields": [
-        "rank"
-      ]
+      "mismatch_count": 0,
+      "affected_teams": 0,
+      "affected_fields": []
     }
   },
   "pool": {
@@ -29,6 +27,19 @@
     {
       "pool_id": "2026:men:1-division:pulje-4118",
       "rank": 1,
+      "team_name": "DTU Volley",
+      "games_played": 1,
+      "games_won": 1,
+      "games_lost": 0,
+      "sets_won": 3,
+      "sets_lost": 0,
+      "balls_won": 75,
+      "balls_lost": 45,
+      "points": 3
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4118",
+      "rank": 2,
       "team_name": "Hvidovre VK.2",
       "games_played": 1,
       "games_won": 1,
@@ -41,7 +52,7 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4118",
-      "rank": 2,
+      "rank": 3,
       "team_name": "RS Rødovre",
       "games_played": 1,
       "games_won": 1,
@@ -54,33 +65,33 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4118",
-      "rank": 3,
-      "team_name": "Frederiksberg Volley",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4118",
       "rank": 4,
-      "team_name": "DTU Volley",
-      "games_played": 0,
-      "games_won": 0,
+      "team_name": "Frederiksberg Volley",
+      "games_played": 1,
+      "games_won": 1,
       "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
+      "sets_won": 3,
+      "sets_lost": 2,
+      "balls_won": 101,
+      "balls_lost": 97,
+      "points": 3
     },
     {
       "pool_id": "2026:men:1-division:pulje-4118",
       "rank": 5,
+      "team_name": "VLI",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 2,
+      "sets_lost": 3,
+      "balls_won": 97,
+      "balls_lost": 101,
+      "points": 1
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4118",
+      "rank": 6,
       "team_name": "Gentofte Volley.2",
       "games_played": 0,
       "games_won": 0,
@@ -93,33 +104,7 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4118",
-      "rank": 6,
-      "team_name": "VLI",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4118",
       "rank": 7,
-      "team_name": "Team Køge",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4118",
-      "rank": 8,
       "team_name": "KSV",
       "games_played": 0,
       "games_won": 0,
@@ -132,7 +117,7 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4118",
-      "rank": 9,
+      "rank": 8,
       "team_name": "Amager Volley.2",
       "games_played": 1,
       "games_won": 0,
@@ -145,7 +130,7 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4118",
-      "rank": 10,
+      "rank": 9,
       "team_name": "Enghave VK",
       "games_played": 1,
       "games_won": 0,
@@ -155,6 +140,19 @@
       "balls_won": 61,
       "balls_lost": 75,
       "points": 0
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4118",
+      "rank": 10,
+      "team_name": "Team Køge",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 0,
+      "sets_lost": 3,
+      "balls_won": 45,
+      "balls_lost": 75,
+      "points": 0
     }
   ],
   "computed_standings": [
@@ -162,6 +160,20 @@
       "pool_id": "2026:men:1-division:pulje-4118",
       "rule_profile": "five_set_3_1",
       "rank": 1,
+      "team_name": "DTU Volley",
+      "games_played": 1,
+      "games_won": 1,
+      "games_lost": 0,
+      "sets_won": 3,
+      "sets_lost": 0,
+      "balls_won": 75,
+      "balls_lost": 45,
+      "points": 3
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4118",
+      "rule_profile": "five_set_3_1",
+      "rank": 2,
       "team_name": "Hvidovre VK.2",
       "games_played": 1,
       "games_won": 1,
@@ -175,7 +187,7 @@
     {
       "pool_id": "2026:men:1-division:pulje-4118",
       "rule_profile": "five_set_3_1",
-      "rank": 2,
+      "rank": 3,
       "team_name": "RS Rødovre",
       "games_played": 1,
       "games_won": 1,
@@ -189,35 +201,35 @@
     {
       "pool_id": "2026:men:1-division:pulje-4118",
       "rule_profile": "five_set_3_1",
-      "rank": 3,
-      "team_name": "DTU Volley",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4118",
-      "rule_profile": "five_set_3_1",
       "rank": 4,
       "team_name": "Frederiksberg Volley",
-      "games_played": 0,
-      "games_won": 0,
+      "games_played": 1,
+      "games_won": 1,
       "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
+      "sets_won": 3,
+      "sets_lost": 2,
+      "balls_won": 101,
+      "balls_lost": 97,
+      "points": 3
     },
     {
       "pool_id": "2026:men:1-division:pulje-4118",
       "rule_profile": "five_set_3_1",
       "rank": 5,
+      "team_name": "VLI",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 2,
+      "sets_lost": 3,
+      "balls_won": 97,
+      "balls_lost": 101,
+      "points": 1
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4118",
+      "rule_profile": "five_set_3_1",
+      "rank": 6,
       "team_name": "Gentofte Volley.2",
       "games_played": 0,
       "games_won": 0,
@@ -231,7 +243,7 @@
     {
       "pool_id": "2026:men:1-division:pulje-4118",
       "rule_profile": "five_set_3_1",
-      "rank": 6,
+      "rank": 7,
       "team_name": "KSV",
       "games_played": 0,
       "games_won": 0,
@@ -245,35 +257,7 @@
     {
       "pool_id": "2026:men:1-division:pulje-4118",
       "rule_profile": "five_set_3_1",
-      "rank": 7,
-      "team_name": "Team Køge",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4118",
-      "rule_profile": "five_set_3_1",
       "rank": 8,
-      "team_name": "VLI",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4118",
-      "rule_profile": "five_set_3_1",
-      "rank": 9,
       "team_name": "Amager Volley.2",
       "games_played": 1,
       "games_won": 0,
@@ -287,7 +271,7 @@
     {
       "pool_id": "2026:men:1-division:pulje-4118",
       "rule_profile": "five_set_3_1",
-      "rank": 10,
+      "rank": 9,
       "team_name": "Enghave VK",
       "games_played": 1,
       "games_won": 0,
@@ -295,6 +279,20 @@
       "sets_won": 0,
       "sets_lost": 3,
       "balls_won": 61,
+      "balls_lost": 75,
+      "points": 0
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4118",
+      "rule_profile": "five_set_3_1",
+      "rank": 10,
+      "team_name": "Team Køge",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 0,
+      "sets_lost": 3,
+      "balls_won": 45,
       "balls_lost": 75,
       "points": 0
     }
@@ -338,8 +336,8 @@
       "away_team": "Team Køge",
       "venue": "Engelsborghallen",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
       "result_note": ""
     },
     {
@@ -352,8 +350,8 @@
       "away_team": "VLI",
       "venue": "Kedelhallen",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 3,
+      "result_away_sets": 2,
       "result_note": ""
     },
     {
@@ -1641,6 +1639,86 @@
       "away_points": null,
       "home_set_won": null,
       "away_set_won": null
+    },
+    {
+      "kamp_id": 75331,
+      "set_number": 1,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75331,
+      "set_number": 2,
+      "home_points": 17,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75331,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 16,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75331,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75331,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 11,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75332,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 13,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75332,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75332,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 12,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75332,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 75332,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
     }
   ],
   "rule_profile": "five_set_3_1",
@@ -1746,6 +1824,38 @@
       "points": 3,
       "cumulative_points": 3,
       "kamp_id": 75329
+    },
+    {
+      "team": "DTU Volley",
+      "date": "2026-10-04T11:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 75332
+    },
+    {
+      "team": "Team Køge",
+      "date": "2026-10-04T11:00:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 75332
+    },
+    {
+      "team": "Frederiksberg Volley",
+      "date": "2026-10-04T12:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 75331
+    },
+    {
+      "team": "VLI",
+      "date": "2026-10-04T12:00:00",
+      "game_number": 1,
+      "points": 1,
+      "cumulative_points": 1,
+      "kamp_id": 75331
     }
   ],
   "result_matrix": {
@@ -1770,7 +1880,7 @@
       "Hvidovre VK.2": null,
       "KSV": null,
       "RS Rødovre": null,
-      "Team Køge": null,
+      "Team Køge": "3-0",
       "VLI": null
     },
     "Enghave VK": {
@@ -1795,7 +1905,7 @@
       "KSV": null,
       "RS Rødovre": null,
       "Team Køge": null,
-      "VLI": null
+      "VLI": "3-2"
     },
     "Gentofte Volley.2": {
       "Amager Volley.2": null,

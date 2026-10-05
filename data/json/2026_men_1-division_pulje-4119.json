@@ -1,12 +1,12 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-04T12:14:44+02:00",
+    "exported_at": "2026-10-05T01:44:57+00:00",
     "scraper_version": "1.0.2",
     "rule_profile": "five_set_3_1",
     "validation": {
-      "mismatch_count": 8,
-      "affected_teams": 8,
+      "mismatch_count": 7,
+      "affected_teams": 7,
       "affected_fields": [
         "rank",
         "team"
@@ -44,14 +44,14 @@
       "pool_id": "2026:men:1-division:pulje-4119",
       "rank": 2,
       "team_name": "VK Raptus",
-      "games_played": 0,
-      "games_won": 0,
+      "games_played": 1,
+      "games_won": 1,
       "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
+      "sets_won": 3,
+      "sets_lost": 1,
+      "balls_won": 111,
+      "balls_lost": 97,
+      "points": 3
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
@@ -82,19 +82,6 @@
     {
       "pool_id": "2026:men:1-division:pulje-4119",
       "rank": 5,
-      "team_name": "ASV Aarhus.2",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4119",
-      "rank": 6,
       "team_name": "Ikast KFUM.2",
       "games_played": 0,
       "games_won": 0,
@@ -107,7 +94,7 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
-      "rank": 7,
+      "rank": 6,
       "team_name": "Aalborg Volleyball",
       "games_played": 0,
       "games_won": 0,
@@ -120,7 +107,7 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
-      "rank": 8,
+      "rank": 7,
       "team_name": "Nordenskov UIF.2",
       "games_played": 0,
       "games_won": 0,
@@ -129,6 +116,19 @@
       "sets_lost": 0,
       "balls_won": 0,
       "balls_lost": 0,
+      "points": 0
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4119",
+      "rank": 8,
+      "team_name": "ASV Aarhus.2",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 1,
+      "sets_lost": 3,
+      "balls_won": 97,
+      "balls_lost": 111,
       "points": 0
     },
     {
@@ -164,15 +164,15 @@
       "pool_id": "2026:men:1-division:pulje-4119",
       "rule_profile": "five_set_3_1",
       "rank": 2,
-      "team_name": "ASV Aarhus.2",
-      "games_played": 0,
-      "games_won": 0,
+      "team_name": "VK Raptus",
+      "games_played": 1,
+      "games_won": 1,
       "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
+      "sets_won": 3,
+      "sets_lost": 1,
+      "balls_won": 111,
+      "balls_lost": 97,
+      "points": 3
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
@@ -262,14 +262,14 @@
       "pool_id": "2026:men:1-division:pulje-4119",
       "rule_profile": "five_set_3_1",
       "rank": 9,
-      "team_name": "VK Raptus",
-      "games_played": 0,
+      "team_name": "ASV Aarhus.2",
+      "games_played": 1,
       "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
+      "games_lost": 1,
+      "sets_won": 1,
+      "sets_lost": 3,
+      "balls_won": 97,
+      "balls_lost": 111,
       "points": 0
     },
     {
@@ -326,8 +326,8 @@
       "away_team": "ASV Aarhus.2",
       "venue": "Vejlby Risskov Hallen hal 4",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
       "result_note": ""
     },
     {
@@ -1299,6 +1299,46 @@
   ],
   "set_results": [
     {
+      "kamp_id": 75419,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75419,
+      "set_number": 2,
+      "home_points": 28,
+      "away_points": 30,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75419,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75419,
+      "set_number": 4,
+      "home_points": 33,
+      "away_points": 31,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75419,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
       "kamp_id": 75423,
       "set_number": 1,
       "home_points": 23,
@@ -1426,6 +1466,22 @@
       "points": 3,
       "cumulative_points": 3,
       "kamp_id": 75423
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2026-10-04T12:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 75419
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-10-04T12:00:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 75419
     }
   ],
   "result_matrix": {
@@ -1538,7 +1594,7 @@
       "VK Raptus": null
     },
     "VK Raptus": {
-      "ASV Aarhus.2": null,
+      "ASV Aarhus.2": "3-1",
       "Aalborg Volleyball": null,
       "Bedsted KFUM": null,
       "Bedstedhallen 1": null,
