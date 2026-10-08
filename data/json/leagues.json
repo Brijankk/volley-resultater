@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-07T02:11:33+00:00",
+    "exported_at": "2026-10-08T02:37:20+00:00",
     "scraper_version": "1.0.2",
     "seasons": [
       "2026",
@@ -12,10 +12,10 @@
       "2021"
     ],
     "league_count": 36,
-    "pool_count": 70,
+    "pool_count": 72,
     "validation": {
-      "pools_with_mismatches": 8,
-      "mismatch_count": 36
+      "pools_with_mismatches": 10,
+      "mismatch_count": 60
     }
   },
   "leagues": [
@@ -1129,6 +1129,19 @@
       "season_start_year": 2026
     },
     {
+      "id": "2026:men:2-division:pulje-4203",
+      "league_id": "2026:men:2-division",
+      "name": "Talent",
+      "pulje_id": 4203,
+      "season_id": "2026",
+      "gender": "Mand",
+      "division": "2. Division",
+      "league_name": "2. Division Herrer",
+      "raekke_id": 2372,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
       "id": "2026:men:volleyligaen:pulje-4141",
       "league_id": "2026:men:volleyligaen",
       "name": "Række 1",
@@ -1207,6 +1220,19 @@
       "season_start_year": 2026
     },
     {
+      "id": "2026:women:2-division:pulje-4202",
+      "league_id": "2026:women:2-division",
+      "name": "Talent",
+      "pulje_id": 4202,
+      "season_id": "2026",
+      "gender": "Kvinde",
+      "division": "2. Division",
+      "league_name": "2. Division Kvinder",
+      "raekke_id": 2374,
+      "season_value": "0",
+      "season_start_year": 2026
+    },
+    {
       "id": "2026:women:volleyligaen:pulje-4140",
       "league_id": "2026:women:volleyligaen",
       "name": "Række 1",
@@ -1256,6 +1282,14 @@
         "rank"
       ]
     },
+    "2026:women:2-division:pulje-4202": {
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank",
+        "team"
+      ]
+    },
     "2026:women:volleyligaen:pulje-4140": {
       "mismatch_count": 10,
       "affected_teams": 10,
@@ -1264,8 +1298,16 @@
       ]
     },
     "2026:men:1-division:pulje-4119": {
-      "mismatch_count": 7,
-      "affected_teams": 7,
+      "mismatch_count": 10,
+      "affected_teams": 10,
+      "affected_fields": [
+        "rank",
+        "team"
+      ]
+    },
+    "2026:men:2-division:pulje-4203": {
+      "mismatch_count": 11,
+      "affected_teams": 11,
       "affected_fields": [
         "rank",
         "team"

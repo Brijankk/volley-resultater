@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-07T02:11:33+00:00",
+    "exported_at": "2026-10-08T02:37:20+00:00",
     "scraper_version": "1.0.2",
     "rule_profile": "five_set_3_1",
     "validation": {
@@ -28,14 +28,14 @@
       "pool_id": "2026:women:2-division:pulje-4127",
       "rank": 1,
       "team_name": "Randers VK",
-      "games_played": 1,
-      "games_won": 1,
+      "games_played": 2,
+      "games_won": 2,
       "games_lost": 0,
-      "sets_won": 3,
+      "sets_won": 6,
       "sets_lost": 0,
-      "balls_won": 75,
-      "balls_lost": 48,
-      "points": 3
+      "balls_won": 151,
+      "balls_lost": 102,
+      "points": 6
     },
     {
       "pool_id": "2026:women:2-division:pulje-4127",
@@ -53,19 +53,6 @@
     {
       "pool_id": "2026:women:2-division:pulje-4127",
       "rank": 3,
-      "team_name": "Holstebro KFUM",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 1,
-      "balls_won": 102,
-      "balls_lost": 78,
-      "points": 3
-    },
-    {
-      "pool_id": "2026:women:2-division:pulje-4127",
-      "rank": 4,
       "team_name": "VK Raptus",
       "games_played": 1,
       "games_won": 1,
@@ -78,7 +65,7 @@
     },
     {
       "pool_id": "2026:women:2-division:pulje-4127",
-      "rank": 5,
+      "rank": 4,
       "team_name": "Skovbakken",
       "games_played": 1,
       "games_won": 1,
@@ -87,6 +74,19 @@
       "sets_lost": 1,
       "balls_won": 90,
       "balls_lost": 91,
+      "points": 3
+    },
+    {
+      "pool_id": "2026:women:2-division:pulje-4127",
+      "rank": 5,
+      "team_name": "Holstebro KFUM",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 3,
+      "sets_lost": 4,
+      "balls_won": 156,
+      "balls_lost": 154,
       "points": 3
     },
     {
@@ -161,14 +161,14 @@
       "rule_profile": "five_set_3_1",
       "rank": 1,
       "team_name": "Randers VK",
-      "games_played": 1,
-      "games_won": 1,
+      "games_played": 2,
+      "games_won": 2,
       "games_lost": 0,
-      "sets_won": 3,
+      "sets_won": 6,
       "sets_lost": 0,
-      "balls_won": 75,
-      "balls_lost": 48,
-      "points": 3
+      "balls_won": 151,
+      "balls_lost": 102,
+      "points": 6
     },
     {
       "pool_id": "2026:women:2-division:pulje-4127",
@@ -188,20 +188,6 @@
       "pool_id": "2026:women:2-division:pulje-4127",
       "rule_profile": "five_set_3_1",
       "rank": 3,
-      "team_name": "Holstebro KFUM",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 1,
-      "balls_won": 102,
-      "balls_lost": 78,
-      "points": 3
-    },
-    {
-      "pool_id": "2026:women:2-division:pulje-4127",
-      "rule_profile": "five_set_3_1",
-      "rank": 4,
       "team_name": "VK Raptus",
       "games_played": 1,
       "games_won": 1,
@@ -215,7 +201,7 @@
     {
       "pool_id": "2026:women:2-division:pulje-4127",
       "rule_profile": "five_set_3_1",
-      "rank": 5,
+      "rank": 4,
       "team_name": "Skovbakken",
       "games_played": 1,
       "games_won": 1,
@@ -224,6 +210,20 @@
       "sets_lost": 1,
       "balls_won": 90,
       "balls_lost": 91,
+      "points": 3
+    },
+    {
+      "pool_id": "2026:women:2-division:pulje-4127",
+      "rule_profile": "five_set_3_1",
+      "rank": 5,
+      "team_name": "Holstebro KFUM",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 3,
+      "sets_lost": 4,
+      "balls_won": 156,
+      "balls_lost": 154,
       "points": 3
     },
     {
@@ -378,8 +378,8 @@
       "away_team": "Randers VK",
       "venue": "Holstebro Stadionhal",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 0,
+      "result_away_sets": 3,
       "result_note": ""
     },
     {
@@ -1352,7 +1352,7 @@
       "kamp_id": 76124,
       "pool_id": "2026:women:2-division:pulje-4127",
       "match_number": 148886,
-      "starts_at": "2027-04-03T12:00:00",
+      "starts_at": "2027-04-03T14:00:00",
       "starts_at_time_known": true,
       "home_team": "Randers VK",
       "away_team": "Skovbakken",
@@ -1759,6 +1759,46 @@
       "away_points": null,
       "home_set_won": null,
       "away_set_won": null
+    },
+    {
+      "kamp_id": 76055,
+      "set_number": 1,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76055,
+      "set_number": 2,
+      "home_points": 24,
+      "away_points": 26,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76055,
+      "set_number": 3,
+      "home_points": 11,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76055,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 76055,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
     }
   ],
   "rule_profile": "five_set_3_1",
@@ -1912,6 +1952,22 @@
       "points": 3,
       "cumulative_points": 3,
       "kamp_id": 76050
+    },
+    {
+      "team": "Holstebro KFUM",
+      "date": "2026-10-07T18:30:00",
+      "game_number": 2,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 76055
+    },
+    {
+      "team": "Randers VK",
+      "date": "2026-10-07T18:30:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 76055
     }
   ],
   "result_matrix": {
@@ -1969,7 +2025,7 @@
       "Aalborg Volleyball.3": null,
       "Hjerm FIF": null,
       "Holstebro KFUM": "",
-      "Randers VK": null,
+      "Randers VK": "0-3",
       "Skovbakken": null,
       "VK Raptus": null,
       "VK Raptus.2": null,
