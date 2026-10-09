@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-08T02:37:20+00:00",
+    "exported_at": "2026-10-09T02:51:31+00:00",
     "scraper_version": "1.0.2",
     "rule_profile": "five_set_3_1",
     "validation": {
@@ -27,6 +27,32 @@
     {
       "pool_id": "2026:men:2-division:pulje-4123",
       "rank": 1,
+      "team_name": "Midtfyns VK",
+      "games_played": 2,
+      "games_won": 2,
+      "games_lost": 0,
+      "sets_won": 6,
+      "sets_lost": 2,
+      "balls_won": 167,
+      "balls_lost": 150,
+      "points": 6
+    },
+    {
+      "pool_id": "2026:men:2-division:pulje-4123",
+      "rank": 2,
+      "team_name": "Hornsyld IF",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 5,
+      "sets_lost": 3,
+      "balls_won": 177,
+      "balls_lost": 147,
+      "points": 4
+    },
+    {
+      "pool_id": "2026:men:2-division:pulje-4123",
+      "rank": 3,
       "team_name": "DHV Odense.2",
       "games_played": 1,
       "games_won": 1,
@@ -35,32 +61,6 @@
       "sets_lost": 0,
       "balls_won": 75,
       "balls_lost": 37,
-      "points": 3
-    },
-    {
-      "pool_id": "2026:men:2-division:pulje-4123",
-      "rank": 2,
-      "team_name": "Midtfyns VK",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 0,
-      "balls_won": 75,
-      "balls_lost": 48,
-      "points": 3
-    },
-    {
-      "pool_id": "2026:men:2-division:pulje-4123",
-      "rank": 3,
-      "team_name": "Hornsyld IF",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 0,
-      "balls_won": 75,
-      "balls_lost": 55,
       "points": 3
     },
     {
@@ -147,6 +147,34 @@
       "pool_id": "2026:men:2-division:pulje-4123",
       "rule_profile": "five_set_3_1",
       "rank": 1,
+      "team_name": "Midtfyns VK",
+      "games_played": 2,
+      "games_won": 2,
+      "games_lost": 0,
+      "sets_won": 6,
+      "sets_lost": 2,
+      "balls_won": 167,
+      "balls_lost": 150,
+      "points": 6
+    },
+    {
+      "pool_id": "2026:men:2-division:pulje-4123",
+      "rule_profile": "five_set_3_1",
+      "rank": 2,
+      "team_name": "Hornsyld IF",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 5,
+      "sets_lost": 3,
+      "balls_won": 177,
+      "balls_lost": 147,
+      "points": 4
+    },
+    {
+      "pool_id": "2026:men:2-division:pulje-4123",
+      "rule_profile": "five_set_3_1",
+      "rank": 3,
       "team_name": "DHV Odense.2",
       "games_played": 1,
       "games_won": 1,
@@ -155,34 +183,6 @@
       "sets_lost": 0,
       "balls_won": 75,
       "balls_lost": 37,
-      "points": 3
-    },
-    {
-      "pool_id": "2026:men:2-division:pulje-4123",
-      "rule_profile": "five_set_3_1",
-      "rank": 2,
-      "team_name": "Midtfyns VK",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 0,
-      "balls_won": 75,
-      "balls_lost": 48,
-      "points": 3
-    },
-    {
-      "pool_id": "2026:men:2-division:pulje-4123",
-      "rule_profile": "five_set_3_1",
-      "rank": 3,
-      "team_name": "Hornsyld IF",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 0,
-      "balls_won": 75,
-      "balls_lost": 55,
       "points": 3
     },
     {
@@ -337,8 +337,8 @@
       "away_team": "Hornsyld IF",
       "venue": "Midtfyns Gymnasium",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 3,
+      "result_away_sets": 2,
       "result_note": ""
     },
     {
@@ -373,8 +373,8 @@
       "kamp_id": 75788,
       "pool_id": "2026:men:2-division:pulje-4123",
       "match_number": 148550,
-      "starts_at": "2026-10-11T11:00:00",
-      "starts_at_time_known": true,
+      "starts_at": "2026-10-11T00:00:00",
+      "starts_at_time_known": false,
       "home_team": "DHV Odense.2",
       "away_team": "Odense Volleyball.2",
       "venue": "Dalumhallen",
@@ -1440,6 +1440,46 @@
       "away_points": null,
       "home_set_won": null,
       "away_set_won": null
+    },
+    {
+      "kamp_id": 75784,
+      "set_number": 1,
+      "home_points": 16,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75784,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75784,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 18,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75784,
+      "set_number": 4,
+      "home_points": 11,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75784,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 11,
+      "home_set_won": 1,
+      "away_set_won": 0
     }
   ],
   "rule_profile": "five_set_3_1",
@@ -1570,6 +1610,22 @@
       "points": 3,
       "cumulative_points": 3,
       "kamp_id": 75782
+    },
+    {
+      "team": "Midtfyns VK",
+      "date": "2026-10-08T20:00:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 75784
+    },
+    {
+      "team": "Hornsyld IF",
+      "date": "2026-10-08T20:00:00",
+      "game_number": 2,
+      "points": 1,
+      "cumulative_points": 4,
+      "kamp_id": 75784
     }
   ],
   "result_matrix": {
@@ -1632,7 +1688,7 @@
       "Aabenraa I&G": null,
       "DHV Odense.2": null,
       "DSIO Odense": null,
-      "Hornsyld IF": null,
+      "Hornsyld IF": "3-2",
       "Kolding VK.2": null,
       "Midtfyns VK": "",
       "Odense Volleyball.2": null,
