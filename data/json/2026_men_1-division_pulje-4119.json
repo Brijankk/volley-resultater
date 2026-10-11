@@ -1,12 +1,12 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-10T02:11:51+00:00",
+    "exported_at": "2026-10-11T01:40:26+00:00",
     "scraper_version": "1.0.2",
     "rule_profile": "five_set_3_1",
     "validation": {
-      "mismatch_count": 10,
-      "affected_teams": 10,
+      "mismatch_count": 8,
+      "affected_teams": 8,
       "affected_fields": [
         "rank",
         "team"
@@ -30,6 +30,32 @@
     {
       "pool_id": "2026:men:1-division:pulje-4119",
       "rank": 1,
+      "team_name": "VK Raptus",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 5,
+      "sets_lost": 4,
+      "balls_won": 222,
+      "balls_lost": 209,
+      "points": 4
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4119",
+      "rank": 2,
+      "team_name": "Nordenskov UIF.2",
+      "games_played": 1,
+      "games_won": 1,
+      "games_lost": 0,
+      "sets_won": 3,
+      "sets_lost": 0,
+      "balls_won": 75,
+      "balls_lost": 51,
+      "points": 3
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4119",
+      "rank": 3,
       "team_name": "DHV Odense",
       "games_played": 1,
       "games_won": 1,
@@ -42,20 +68,20 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
-      "rank": 2,
-      "team_name": "VK Raptus",
+      "rank": 4,
+      "team_name": "Aalborg Volleyball",
       "games_played": 1,
       "games_won": 1,
       "games_lost": 0,
       "sets_won": 3,
-      "sets_lost": 1,
-      "balls_won": 111,
-      "balls_lost": 97,
+      "sets_lost": 2,
+      "balls_won": 112,
+      "balls_lost": 111,
       "points": 3
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
-      "rank": 3,
+      "rank": 5,
       "team_name": "Bedsted KFUM",
       "games_played": 0,
       "games_won": 0,
@@ -68,7 +94,7 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
-      "rank": 4,
+      "rank": 6,
       "team_name": "Randers VK",
       "games_played": 0,
       "games_won": 0,
@@ -81,7 +107,7 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
-      "rank": 5,
+      "rank": 7,
       "team_name": "Aarhus 1900",
       "games_played": 0,
       "games_won": 0,
@@ -94,34 +120,8 @@
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
-      "rank": 6,
-      "team_name": "Ikast KFUM.2",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4119",
-      "rank": 7,
-      "team_name": "Aalborg Volleyball",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4119",
       "rank": 8,
-      "team_name": "Nordenskov UIF.2",
+      "team_name": "Ikast KFUM.2",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -148,13 +148,13 @@
       "pool_id": "2026:men:1-division:pulje-4119",
       "rank": 10,
       "team_name": "Kolding VK",
-      "games_played": 1,
+      "games_played": 2,
       "games_won": 0,
-      "games_lost": 1,
+      "games_lost": 2,
       "sets_won": 0,
-      "sets_lost": 3,
-      "balls_won": 54,
-      "balls_lost": 75,
+      "sets_lost": 6,
+      "balls_won": 105,
+      "balls_lost": 150,
       "points": 0
     }
   ],
@@ -163,6 +163,34 @@
       "pool_id": "2026:men:1-division:pulje-4119",
       "rule_profile": "five_set_3_1",
       "rank": 1,
+      "team_name": "VK Raptus",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 5,
+      "sets_lost": 4,
+      "balls_won": 222,
+      "balls_lost": 209,
+      "points": 4
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4119",
+      "rule_profile": "five_set_3_1",
+      "rank": 2,
+      "team_name": "Nordenskov UIF.2",
+      "games_played": 1,
+      "games_won": 1,
+      "games_lost": 0,
+      "sets_won": 3,
+      "sets_lost": 0,
+      "balls_won": 75,
+      "balls_lost": 51,
+      "points": 3
+    },
+    {
+      "pool_id": "2026:men:1-division:pulje-4119",
+      "rule_profile": "five_set_3_1",
+      "rank": 3,
       "team_name": "DHV Odense",
       "games_played": 1,
       "games_won": 1,
@@ -176,35 +204,21 @@
     {
       "pool_id": "2026:men:1-division:pulje-4119",
       "rule_profile": "five_set_3_1",
-      "rank": 2,
-      "team_name": "VK Raptus",
+      "rank": 4,
+      "team_name": "Aalborg Volleyball",
       "games_played": 1,
       "games_won": 1,
       "games_lost": 0,
       "sets_won": 3,
-      "sets_lost": 1,
-      "balls_won": 111,
-      "balls_lost": 97,
+      "sets_lost": 2,
+      "balls_won": 112,
+      "balls_lost": 111,
       "points": 3
     },
     {
       "pool_id": "2026:men:1-division:pulje-4119",
       "rule_profile": "five_set_3_1",
-      "rank": 3,
-      "team_name": "Aalborg Volleyball",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4119",
-      "rule_profile": "five_set_3_1",
-      "rank": 4,
+      "rank": 5,
       "team_name": "Aarhus 1900",
       "games_played": 0,
       "games_won": 0,
@@ -218,7 +232,7 @@
     {
       "pool_id": "2026:men:1-division:pulje-4119",
       "rule_profile": "five_set_3_1",
-      "rank": 5,
+      "rank": 6,
       "team_name": "Bedsted KFUM",
       "games_played": 0,
       "games_won": 0,
@@ -232,7 +246,7 @@
     {
       "pool_id": "2026:men:1-division:pulje-4119",
       "rule_profile": "five_set_3_1",
-      "rank": 6,
+      "rank": 7,
       "team_name": "Bedstedhallen 1",
       "games_played": 0,
       "games_won": 0,
@@ -246,7 +260,7 @@
     {
       "pool_id": "2026:men:1-division:pulje-4119",
       "rule_profile": "five_set_3_1",
-      "rank": 7,
+      "rank": 8,
       "team_name": "Hyldgårdsskolens Hal B 1",
       "games_played": 0,
       "games_won": 0,
@@ -260,22 +274,8 @@
     {
       "pool_id": "2026:men:1-division:pulje-4119",
       "rule_profile": "five_set_3_1",
-      "rank": 8,
-      "team_name": "Ikast KFUM.2",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "2026:men:1-division:pulje-4119",
-      "rule_profile": "five_set_3_1",
       "rank": 9,
-      "team_name": "Nordenskov UIF.2",
+      "team_name": "Ikast KFUM.2",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -318,13 +318,13 @@
       "rule_profile": "five_set_3_1",
       "rank": 12,
       "team_name": "Kolding VK",
-      "games_played": 1,
+      "games_played": 2,
       "games_won": 0,
-      "games_lost": 1,
+      "games_lost": 2,
       "sets_won": 0,
-      "sets_lost": 3,
-      "balls_won": 54,
-      "balls_lost": 75,
+      "sets_lost": 6,
+      "balls_won": 105,
+      "balls_lost": 150,
       "points": 0
     }
   ],
@@ -423,8 +423,8 @@
       "away_team": "Kolding VK",
       "venue": "Helle Hallen - Granly Volley Arena",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
       "result_note": ""
     },
     {
@@ -437,8 +437,8 @@
       "away_team": "VK Raptus",
       "venue": "Aalborg Stadionhal 1",
       "court": "1",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 3,
+      "result_away_sets": 2,
       "result_note": ""
     },
     {
@@ -1670,6 +1670,86 @@
       "away_points": null,
       "home_set_won": null,
       "away_set_won": null
+    },
+    {
+      "kamp_id": 75426,
+      "set_number": 1,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75426,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 20,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75426,
+      "set_number": 3,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75426,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 19,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75426,
+      "set_number": 5,
+      "home_points": 24,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75427,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75427,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 12,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75427,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75427,
+      "set_number": 4,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
+    },
+    {
+      "kamp_id": 75427,
+      "set_number": 5,
+      "home_points": null,
+      "away_points": null,
+      "home_set_won": null,
+      "away_set_won": null
     }
   ],
   "rule_profile": "five_set_3_1",
@@ -1789,6 +1869,38 @@
       "points": 0,
       "cumulative_points": 0,
       "kamp_id": 75419
+    },
+    {
+      "team": "Nordenskov UIF.2",
+      "date": "2026-10-10T13:30:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 75427
+    },
+    {
+      "team": "Kolding VK",
+      "date": "2026-10-10T13:30:00",
+      "game_number": 2,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 75427
+    },
+    {
+      "team": "Aalborg Volleyball",
+      "date": "2026-10-10T14:30:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 75426
+    },
+    {
+      "team": "VK Raptus",
+      "date": "2026-10-10T14:30:00",
+      "game_number": 2,
+      "points": 1,
+      "cumulative_points": 4,
+      "kamp_id": 75426
     }
   ],
   "result_matrix": {
@@ -1818,7 +1930,7 @@
       "Kolding VK": null,
       "Nordenskov UIF.2": null,
       "Randers VK": null,
-      "VK Raptus": null
+      "VK Raptus": "3-2"
     },
     "Aarhus 1900": {
       "ASV Aarhus.2": null,
@@ -1927,7 +2039,7 @@
       "DHV Odense": null,
       "Hyldgårdsskolens Hal B 1": null,
       "Ikast KFUM.2": null,
-      "Kolding VK": null,
+      "Kolding VK": "3-0",
       "Nordenskov UIF.2": "",
       "Randers VK": null,
       "VK Raptus": null
