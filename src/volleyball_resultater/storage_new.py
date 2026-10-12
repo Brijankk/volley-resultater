@@ -23,10 +23,10 @@ CREATE TABLE IF NOT EXISTS leagues (
 CREATE TABLE IF NOT EXISTS pools (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    league_id TEXT NOT NULL REFERENCES leagues(id)
+    league_id INTEGER NOT NULL REFERENCES leagues(id)
 );
 
-CREATE TABLE IF NOT EXISTS source_standings (
+CREATE TABLE IF NOT EXISTS rankings (
     pool_id INTEGER NOT NULL REFERENCES pools(id),
     rank INTEGER NOT NULL,
     team_name TEXT NOT NULL,
@@ -41,22 +41,9 @@ CREATE TABLE IF NOT EXISTS source_standings (
     PRIMARY KEY (pool_id, team_name)
 );
 
-CREATE TABLE IF NOT EXISTS schedules (
-    match_id INTEGER PRIMARY KEY,
-    pool_id INTEGER NOT NULL REFERENCES pools(id),
-    match_number INTEGER,
-    match_time TEXT,
-    home_team TEXT NOT NULL,
-    away_team TEXT NOT NULL,
-    venue TEXT NOT NULL,
-    court TEXT NOT NULL,
-    result_home_sets INTEGER,
-    result_away_sets INTEGER,
-    note TEXT NOT NULL DEFAULT ''
-);
-
 CREATE TABLE IF NOT EXISTS matches (
-    match_id INTEGER PRIMARY KEY,
+    pool_id INTEGER NOT NULL REFERENCES pools(id),
+    id INTEGER PRIMARY KEY,
     match_number INTEGER,
     match_time TEXT,
     home_team TEXT NOT NULL,
@@ -82,22 +69,6 @@ CREATE TABLE IF NOT EXISTS matches (
     away_balls5 INTEGER,
     note TEXT
 );
-
-CREATE TABLE IF NOT EXISTS computed_standings (
-    pool_id TEXT NOT NULL REFERENCES pools(id),
-    rule_profile TEXT NOT NULL,
-    rank INTEGER NOT NULL,
-    team_name TEXT NOT NULL,
-    games_played INTEGER NOT NULL,
-    games_won INTEGER NOT NULL,
-    games_lost INTEGER NOT NULL,
-    sets_won INTEGER NOT NULL,
-    sets_lost INTEGER NOT NULL,
-    balls_won INTEGER NOT NULL,
-    balls_lost INTEGER NOT NULL,
-    points INTEGER NOT NULL,
-    PRIMARY KEY (pool_id, rule_profile, team_name)
-);
 """
 
 
@@ -112,7 +83,7 @@ class Repository:
     def close(self) -> None:
         self.connection.close()
 
-    def save_league(self, leagues: pd.DataFrame) -> None:
+    def upsert_leagues(self, leagues: pd.DataFrame) -> None:
         column_order = [
             'id',
             'name',
@@ -136,7 +107,7 @@ class Repository:
             [row for row in leagues[column_order].itertuples(index=False, name=None)],
         )
 
-    def save_pool(self, pools: pd.DataFrame) -> None:
+    def upsert_pools(self, pools: pd.DataFrame) -> None:
         column_order = [
             'id',
             'name',
@@ -154,7 +125,7 @@ class Repository:
             [row for row in pools[column_order].itertuples(index=False, name=None)],
         )
 
-    def upsert_ranking(self, ranking: pd.DataFrame) -> None:
+    def upsert_rankings(self, ranking: pd.DataFrame) -> None:
         column_order = [
             'pool_id',
             'rank',
@@ -171,7 +142,7 @@ class Repository:
 
         self.connection.executemany(
             """
-            INSERT INTO source_standings (
+            INSERT INTO rankings (
                 pool_id,
                 rank,
                 team_name,
@@ -201,6 +172,7 @@ class Repository:
 
     def upsert_matches(self, matches: pd.DataFrame) -> None:
         column_order = [
+            'pool_id',
             'id',
             'match_number',
             'match_time',
@@ -228,9 +200,15 @@ class Repository:
             'note',
         ]
 
+        df = matches.copy()
+        int64_cols = df.loc[:, df.dtypes.eq('Int64')].columns
+        df[int64_cols] = df[int64_cols].astype(object).fillna(None)
+        df['match_time'] = df['match_time'].dt.strftime(date_format='%Y-%m-%dT%H:%M:%S')
+
         self.connection.executemany(
             """
             INSERT INTO matches (
+                pool_id,
                 id,
                 match_number,
                 match_time,
@@ -257,8 +235,9 @@ class Repository:
                 away_balls5,
                 note
             )
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(id) DO UPDATE SET
+                pool_id=excluded.pool_id,
                 match_number=excluded.match_number,
                 match_time=excluded.match_time,
                 home_team=excluded.home_team,
@@ -284,39 +263,10 @@ class Repository:
                 away_balls5=excluded.away_balls5,
                 note=excluded.note
             """,
-            [row for row in matches[column_order].itertuples(index=False, name=None)],
-        )
-
-    def replace_computed_standings(self, pool_id: str, rule_profile: str, rows: list[StandingRow]) -> None:
-        self.connection.execute(
-            "DELETE FROM computed_standings WHERE pool_id = ? AND rule_profile = ?",
-            (pool_id, rule_profile),
-        )
-        self.connection.executemany(
-            """
-            INSERT INTO computed_standings (
-                pool_id, rule_profile, rank, team_name, games_played, games_won, games_lost,
-                sets_won, sets_lost, balls_won, balls_lost, points
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """,
-            [(row.pool_id, rule_profile, *standing_tuple(row)[1:]) for row in rows],
+            [row for row in df[column_order].itertuples(index=False, name=None)],
+            # [row for row in matches.where(matches.notna(), None)[column_order].itertuples(index=False, name=None)],
         )
 
     def commit(self) -> None:
         self.connection.commit()
 
-
-def standing_tuple(row: StandingRow) -> tuple[object, ...]:
-    return (
-        row.pool_id,
-        row.rank,
-        row.team_name,
-        row.games_played,
-        row.games_won,
-        row.games_lost,
-        row.sets_won,
-        row.sets_lost,
-        row.balls_won,
-        row.balls_lost,
-        row.points,
-    )

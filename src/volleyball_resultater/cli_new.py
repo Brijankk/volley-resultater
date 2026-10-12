@@ -1,94 +1,118 @@
 from __future__ import annotations
 
+import sys
 import argparse
 from pathlib import Path
-import sys
-import sqlite3
+from itertools import product
 
 import pandas as pd
 
 from .client import ResultaterClient
-from .exporter import export_json
-from .paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
-from .rules import computed_standings, rules_for_league
+from .exporter_new import export_json
+from .paths import DEFAULT_CACHE_DIR, DEFAULT_DB_PATH_NEW as DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
 from .scraper_new import DISTRICT, AGE_GROUP, GENDERS, VolleyballScraper
 from .storage_new import Repository
 from .validation import validate_rankings
 
-def main(season: str|int="Nuværende"):
-    client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0, refresh_cache=False)
-    scraper = VolleyballScraper(client)
-    repo = Repository(DB_PATH = PROJECT_ROOT / "data" / "volleyball2.sqlite")
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Scrape Danish volleyball league results.")
+    parser.add_argument("--db", type=Path, default=DEFAULT_DB_PATH, help="SQLite database path.")
+    parser.add_argument("--export-dir", type=Path, default=DEFAULT_EXPORT_DIR, help="JSON export directory.")
+    parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR, help="Raw HTML cache directory.")
+    parser.add_argument("--season", action="append", help="Season value to scrape, for example 2025. May be repeated.")
+    parser.add_argument("--no-export", action="store_true", help="Skip JSON export after scraping.")
+    parser.add_argument("--throttle", type=float, default=0.25, help="Seconds to pause after live requests.")
+    parser.add_argument("--refresh-cache", action="store_true", help="Fetch fresh HTML instead of reusing cached pages.")
+    args = parser.parse_args(argv)
 
-    seasons = scraper.get_seasons()
-    test_league = scraper.get_league_ids(DISTRICT, GENDERS[0], "Nuværende", AGE_GROUP)
-    liga_id = test_league.set_index('name')['id']['Volleyligaen Herrer']
-    liga_pool = scraper.get_pool_ids(liga_id)
-    liga_schedule = scraper.scrape_pool_schedule(liga_pool.loc[0, 'id'])
-    seasons.loc[seasons['text'].eq('Nuværende'), 'year'] = liga_schedule['match_time'].min().year
 
-    leagues = {}
-    for gender in GENDERS:
+    client = ResultaterClient(cache_dir=args.cache_dir, throttle_seconds=args.throttle, refresh_cache=args.refresh_cache)
+    scraper = VolleyballScraper(client, append_parameters=True)
+    repo = Repository(args.db)
+
+    season_overview = scraper._get_season_overview()
+    seasons = [int(season) for season in args.season if season.isdigit()]
+    if "current" in args.season:
+        seasons.append(season_overview.set_index("text")["year"]["Nuværende"])
+
+    if set(seasons).difference(season_overview["year"]):
+        print("One or more seasons not found.", file=sys.stderr)
+        return 2
+    
+    league_list = []
+    for gender, season in product(GENDERS, seasons):
         league = scraper.get_league_ids(DISTRICT, gender, season, AGE_GROUP)
-        leagues[(gender, season)] = league
-    leagues = pd.concat(leagues, names=['gender', 'season']).droplevel(-1).reset_index()
-    leagues['district'] = DISTRICT
-    leagues['age_group'] = AGE_GROUP
+        league_list.append(league)
+    leagues = pd.concat(league_list).reset_index(drop=True)
+    leagues_filtered = league_filter(leagues)
 
-    filter = leagues.loc[
+    pool_list = []
+    for league_id in leagues_filtered['id']:
+        pool_list.append(scraper.get_pool_ids(league_id))
+    pools = pd.concat(pool_list).reset_index(drop=True)
+
+    rank_list = []
+    for pool_id in pools['id']:
+        rank_list.append(scraper.scrape_pool_scoreboard(pool_id))
+    rankings = pd.concat(rank_list).reset_index(drop=True)
+
+    schedule_list = []
+    for pool_id in pools['id']:
+        schedule_list.append(scraper.scrape_pool_schedule(pool_id))
+    schedules = pd.concat(schedule_list).reset_index(drop=True)
+
+    match_details_list = []
+    for match_id in schedules['match_id']:
+        match_details_list.append(scraper.scrape_match_details(match_id))
+    match_details = pd.concat(match_details_list).reset_index(drop=True)
+
+    matches = schedules.merge(match_details, on='match_id').rename(columns={'match_id': 'id'})
+
+    try:
+        repo.upsert_leagues(leagues_filtered)
+        repo.upsert_pools(pools)
+        repo.upsert_rankings(rankings)
+        repo.upsert_matches(matches)
+        repo.commit()
+    finally:
+        repo.close()
+
+    if not args.no_export:
+        export_json(args.db, args.export_dir)
+        print(f"Exported JSON to {args.export_dir}")
+
+    return 0
+
+def league_filter(leagues_df: pd.DataFrame) -> pd.DataFrame:
+    df = leagues_df
+    leagues_filtered = df.loc[
         (
-            leagues['name'].str.contains('. div', case=False) &
-            ~leagues['name'].str.contains('kval', case=False)
+            df['name'].str.contains('. div', case=False) &
+            ~df['name'].str.contains('kval', case=False)
         ) |
         (
             (
-                leagues['name'].str.contains('Pokal', case=False) |
-                leagues['name'].str.contains('LP')
+                df['name'].str.contains('Pokal', case=False) |
+                df['name'].str.contains('LP')
             ) &
-            ~leagues['name'].str.contains('Seed') &
-            ~leagues['name'].str.contains('Kreds')
+            ~df['name'].str.contains('Seed') &
+            ~df['name'].str.contains('Kreds')
         )
-    ]
-    league_filtred = leagues.loc[
+    ].copy()
+
+    leagues_filtered = df.loc[
         (
-            leagues['name'].str.contains('. div', case=False) &
-            ~leagues['name'].str.contains('kval', case=False)
+            df['name'].str.contains('. div', case=False) &
+            ~df['name'].str.contains('kval', case=False)
         ) |
         (
-            leagues['name'].str.lower().eq('volleyligaen herrer') |
-            leagues['name'].str.lower().eq('volleyligaen kvinder')
+            df['name'].str.lower().eq('volleyligaen herrer') |
+            df['name'].str.lower().eq('volleyligaen kvinder')
         )
-    ]
+    ].copy()
 
-    pools = {}
-    for league_id in league_filtred['id']:
-        pools[league_id] = scraper.get_pool_ids(league_id)
-    pools = pd.concat(pools, names=['league_id']).droplevel(-1).reset_index()
+    return leagues_filtered
 
-    rankings = {}
-    for pool_id in pools['id']:
-        rankings[pool_id] = scraper.scrape_pool_scoreboard(pool_id)
-    rankings = pd.concat(rankings, names=['pool_id']).droplevel(-1).reset_index()
-
-    schedules = {}
-    for pool_id in pools['id']:
-        schedules[pool_id] = scraper.scrape_pool_schedule(pool_id)
-    schedules = pd.concat(schedules, names=['pool_id']).droplevel(-1).reset_index()
-
-    match_details = {}
-    for match_id in schedules['id']:
-        match_details[match_id] = scraper.scrape_match_details(match_id)
-    match_details = pd.concat(match_details, names=['id']).droplevel(-1).reset_index()
-
-    matches = schedules.merge(match_details, on='id')
-
-    repo.save_league(league_filtred)
-    repo.save_pool(pools)
-    repo.upsert_ranking(rankings)
-    repo.upsert_matches(matches)
-    repo.commit()
-
-    return
 
 if __name__ == "__main__":
-    pass
+    raise SystemExit(main())

@@ -3,17 +3,18 @@ from pathlib import Path
 from volleyball_resultater.client import ResultaterClient
 from volleyball_resultater.scraper import VolleyballScraper, DISTRICT, AGE_GROUP, GENDERS
 from volleyball_resultater.scraper_new import VolleyballScraper as VolleyballScraper2
-from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH
+from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH, DEFAULT_DB_PATH_NEW, DEFAULT_EXPORT_DIR, DEFAULT_EXPORT_DIR_NEW
 from volleyball_resultater.storage_new import Repository
 from volleyball_resultater.wrangling import order_tournament, deduct_tournament
 
 def first_test():
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0, refresh_cache=False)
     scraper = VolleyballScraper(client)
-    scraper2 = VolleyballScraper2(client)
+    scraper2 = VolleyballScraper2(client, append_parameters=True)
 
     # season_list = scraper2.get_seasons()
-    # league_df = scraper2.get_league_ids(DISTRICT, GENDERS[0], 2026, 'U-22')
+    age_groups = scraper2.get_age_groups()
+    league_df = scraper2.get_league_ids(DISTRICT, GENDERS[0], season=2025, age_group='Oldies')
     # pool_df = scraper2.get_pool_ids(2248)
     # pool_df = scraper2.get_pool_ids(2370)
     scraper2.scrape_pool_schedule(4124) # No matches played
@@ -33,16 +34,20 @@ def get_all_leagues():
     from itertools import product
 
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0.25, refresh_cache=False)
-    scraper = VolleyballScraper2(client)
+    scraper = VolleyballScraper2(client, append_parameters=True)
 
-    seasons = scraper.get_seasons()
+    seasons = scraper._get_season_overview()
 
-    leagues = {}
-    for gender, season in product(GENDERS, seasons['year']):
-        league = scraper.get_league_ids(DISTRICT, gender, season, AGE_GROUP)
-        leagues[(gender, season)] = league
+    
+    DISTRICTS = ['Volleyball Danmark', 'Sjællands Volleyball Kreds', 'Fyns Volleyball Kreds', 'Volleyball Sydjylland', 'Midtjysk Volleyball', 'Volleyball Nordjylland', 'Grønlands Volleyballforbund']
+    AGE_GROUPS = ['Oldies', 'Senior', 'U-22', 'U-21', 'U-20', 'U-19', 'U-18', 'U-17', 'U-16', 'U-15', 'U-14']
 
-    leagues_df = pd.concat(leagues, names=['gender', 'season']).droplevel(-1).reset_index()
+    leagues = []
+    for district, gender, season, age_group in product(DISTRICTS, GENDERS, seasons['year'], AGE_GROUPS):
+        league = scraper.get_league_ids(district, gender, season, age_group)
+        leagues.append(league)
+
+    leagues_df = pd.concat(leagues).reset_index(drop=True)
 
     return leagues_df
 
@@ -161,7 +166,7 @@ def liga_slutspil(season, gender):
     return
 
 def test_repo():
-    DB_PATH = PROJECT_ROOT / "data" / "volleyball2.sqlite"
+    DB_PATH = PROJECT_ROOT / "data" / "volleyball_new.sqlite"
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0.25, refresh_cache=False)
     scraper = VolleyballScraper2(client)
     repo = Repository(DB_PATH)
@@ -176,7 +181,38 @@ def test_repo():
     leagues_df['age_group'] = AGE_GROUP
     leagues_df['name'] = leagues_df['name']
 
-    repo.save_league(leagues_df)
+    league_filtered = leagues_df.loc[
+        (
+            leagues_df['name'].str.contains('. div', case=False) &
+            ~leagues_df['name'].str.contains('kval', case=False)
+        )
+    ]
+    pools = {}
+    for league_id in league_filtered['id']:
+        pools[league_id] = scraper.get_pool_ids(league_id)
+    pools = pd.concat(pools, names=['league_id']).droplevel(-1).reset_index()
+
+    rankings = {}
+    for pool_id in pools['id']:
+        rankings[pool_id] = scraper.scrape_pool_scoreboard(pool_id)
+    rankings = pd.concat(rankings, names=['pool_id']).droplevel(-1).reset_index()
+
+    schedules = {}
+    for pool_id in pools['id']:
+        schedules[pool_id] = scraper.scrape_pool_schedule(pool_id)
+    schedules = pd.concat(schedules, names=['pool_id']).droplevel(-1).reset_index()
+
+    match_details = {}
+    for match_id in schedules['id'].head(10):
+        match_details[match_id] = scraper.scrape_match_details(match_id)
+    match_details = pd.concat(match_details, names=['id']).droplevel(-1).reset_index()
+
+    matches = schedules.merge(match_details, on='id')
+
+    repo.upsert_leagues(leagues_df)
+    repo.upsert_pools(pools)
+    repo.upsert_rankings(rankings)
+    repo.upsert_matches(matches)
     repo.commit()
     repo.close()
 
@@ -184,7 +220,30 @@ def test_repo():
 
 def run_main():
     from volleyball_resultater.cli_new import main
-    main(2025)
+    main([
+        # "--season", "current",
+        "--db", str(DEFAULT_DB_PATH_NEW),
+        "--export-dir", str(DEFAULT_EXPORT_DIR_NEW),
+        # "--no-export",
+    ])
+
+
+def run_old_main():
+    from volleyball_resultater.cli import main
+    main([
+        # "--season", "current",
+        "--db", str(DEFAULT_DB_PATH),
+        "--export-dir", str(DEFAULT_EXPORT_DIR),
+        # "--no-export",
+    ])
+
+def test_old_exporter():
+    from volleyball_resultater.exporter import export_json
+    export_json(DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR)
+
+def test_new_exporter():
+    from volleyball_resultater.exporter_new import export_json
+    export_json(DEFAULT_DB_PATH_NEW, DEFAULT_EXPORT_DIR_NEW)
 
 if __name__ == '__main__':
     # test_slutspil_order()
@@ -193,4 +252,5 @@ if __name__ == '__main__':
     # pokalturnering(2026, "Kvinde")
     # liga_slutspil(2025, "Mand")
     # test_repo()
-    run_main()
+    run_old_main()
+    # test_new_exporter()
