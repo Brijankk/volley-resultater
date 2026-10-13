@@ -152,6 +152,7 @@ class VolleyballScraper:
         df = df.dropna(axis=0, how='all').dropna(axis=1, how='all')
         df.rename(columns=column_rename, inplace=True)
         df[['balls_won', 'balls_lost']] = df['balls'].str.split('-', expand=True)
+        df['rank'] = df['rank'].fillna(-1)
 
         df = df.astype(dtype=column_types)
         df = df[column_types.keys()]

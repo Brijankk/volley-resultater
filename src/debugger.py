@@ -7,21 +7,10 @@ from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT
 from volleyball_resultater.storage import Repository
 from volleyball_resultater.wrangling import order_tournament, deduct_tournament
 
-def first_test():
+def test_scraper_old():
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0, refresh_cache=False)
     scraper = VolleyballScraper_old(client)
-    scraper2 = VolleyballScraper(client, append_parameters=True)
-
-    # season_list = scraper2.get_seasons()
-    age_groups = scraper2.get_age_groups()
-    league_df = scraper2.get_league_ids(DISTRICT, GENDERS[0], season=2025, age_group='Oldies')
-    # pool_df = scraper2.get_pool_ids(2248)
-    # pool_df = scraper2.get_pool_ids(2370)
-    scraper2.scrape_pool_schedule(4124) # No matches played
-    scraper2.scrape_pool_schedule(4151) # Incomplete matches
-    scraper2.scrape_pool_schedule(4123) # Some matches miss starttime
-
-
+    
     seasons = scraper.seasons()
     season = next(s for s in seasons if s.id == "2025")
 
@@ -29,6 +18,20 @@ def first_test():
     league = leagues[-1]
 
     pool_data = scraper.scrape_league(league)
+
+def test_scraper():
+    client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0, refresh_cache=False)
+    scraper = VolleyballScraper(client, append_parameters=True)
+
+    age_groups = scraper.get_age_groups()
+    league_df = scraper.get_league_ids(DISTRICT, GENDERS[0], season=2026, age_group='Senior')
+    # pool_df = scraper.get_pool_ids(2248)
+    # pool_df = scraper.get_pool_ids(2372)
+    scraper.scrape_pool_schedule(4124) # No matches played
+    scraper.scrape_pool_schedule(4151) # Incomplete matches
+    scraper.scrape_pool_schedule(4123) # Some matches miss starttime
+
+
 
 def get_all_leagues():
     from itertools import product
@@ -221,10 +224,11 @@ def test_repo():
 def run_main():
     from volleyball_resultater.cli import main
     main([
-        # "--season", "current",
+        "--season", "current",
         "--db", str(DEFAULT_DB_PATH),
+        "--refresh-cache",
         "--export-dir", str(DEFAULT_EXPORT_DIR),
-        # "--no-export",
+        "--no-export",
     ])
 
 
@@ -248,9 +252,9 @@ def test_new_exporter():
 if __name__ == '__main__':
     # test_slutspil_order()
     # get_all_leagues()
-    # first_test()
+    # test_scraper()
     # pokalturnering(2026, "Kvinde")
     # liga_slutspil(2025, "Mand")
     # test_repo()
-    # run_old_main()
-    test_new_exporter()
+    run_main()
+    # test_new_exporter()
