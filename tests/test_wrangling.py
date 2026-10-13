@@ -4,9 +4,9 @@ import unittest
 
 import pandas as pd
 
-from volleyball_resultater.scraper_new import VolleyballScraper, DISTRICT, AGE_GROUP, GENDERS
+from volleyball_resultater.scraper import VolleyballScraper, DISTRICT, AGE_GROUP, GENDERS
 from volleyball_resultater.client import ResultaterClient
-from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH
+from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH_OLD
 from volleyball_resultater.wrangling import calculate_running_rankings, result_matrix, order_tournament, deduct_tournament
 
 

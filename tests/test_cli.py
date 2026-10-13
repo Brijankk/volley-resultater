@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from volleyball_resultater.cli import season_matches
+from volleyball_resultater.cli_old import season_matches
 from volleyball_resultater.models import Season
 
 

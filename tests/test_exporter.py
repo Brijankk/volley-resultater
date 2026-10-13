@@ -7,7 +7,7 @@ import sqlite3
 import tempfile
 import unittest
 
-from volleyball_resultater.exporter_new import export_json
+from volleyball_resultater.exporter import export_json
 
 
 class ExporterNewTests(unittest.TestCase):

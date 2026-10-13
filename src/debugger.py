@@ -1,16 +1,16 @@
 import pandas as pd
 from pathlib import Path
 from volleyball_resultater.client import ResultaterClient
-from volleyball_resultater.scraper import VolleyballScraper, DISTRICT, AGE_GROUP, GENDERS
-from volleyball_resultater.scraper_new import VolleyballScraper as VolleyballScraper2
-from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH, DEFAULT_DB_PATH_NEW, DEFAULT_EXPORT_DIR, DEFAULT_EXPORT_DIR_NEW
-from volleyball_resultater.storage_new import Repository
+from volleyball_resultater.scraper_old import VolleyballScraper as VolleyballScraper_old, DISTRICT, AGE_GROUP, GENDERS
+from volleyball_resultater.scraper import VolleyballScraper as VolleyballScraper
+from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH_OLD, DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR_OLD, DEFAULT_EXPORT_DIR
+from volleyball_resultater.storage import Repository
 from volleyball_resultater.wrangling import order_tournament, deduct_tournament
 
 def first_test():
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0, refresh_cache=False)
-    scraper = VolleyballScraper(client)
-    scraper2 = VolleyballScraper2(client, append_parameters=True)
+    scraper = VolleyballScraper_old(client)
+    scraper2 = VolleyballScraper(client, append_parameters=True)
 
     # season_list = scraper2.get_seasons()
     age_groups = scraper2.get_age_groups()
@@ -34,7 +34,7 @@ def get_all_leagues():
     from itertools import product
 
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0.25, refresh_cache=False)
-    scraper = VolleyballScraper2(client, append_parameters=True)
+    scraper = VolleyballScraper(client, append_parameters=True)
 
     seasons = scraper._get_season_overview()
 
@@ -89,7 +89,7 @@ def test_slutspil_order():
 
 def pokalturnering(season, gender):
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0)
-    scraper = VolleyballScraper2(client)
+    scraper = VolleyballScraper(client)
     leagues = scraper.get_league_ids(DISTRICT, gender, season, AGE_GROUP)
 
     pokal_leagues = leagues.loc[
@@ -128,7 +128,7 @@ def pokalturnering(season, gender):
 
 def liga_slutspil(season, gender):
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0)
-    scraper = VolleyballScraper2(client)
+    scraper = VolleyballScraper(client)
     leagues = scraper.get_league_ids(DISTRICT, gender, season, AGE_GROUP)
 
     slutspil = leagues.loc[
@@ -168,7 +168,7 @@ def liga_slutspil(season, gender):
 def test_repo():
     DB_PATH = PROJECT_ROOT / "data" / "volleyball_new.sqlite"
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0.25, refresh_cache=False)
-    scraper = VolleyballScraper2(client)
+    scraper = VolleyballScraper(client)
     repo = Repository(DB_PATH)
 
     season = 2025
@@ -219,16 +219,6 @@ def test_repo():
     return
 
 def run_main():
-    from volleyball_resultater.cli_new import main
-    main([
-        # "--season", "current",
-        "--db", str(DEFAULT_DB_PATH_NEW),
-        "--export-dir", str(DEFAULT_EXPORT_DIR_NEW),
-        # "--no-export",
-    ])
-
-
-def run_old_main():
     from volleyball_resultater.cli import main
     main([
         # "--season", "current",
@@ -237,13 +227,23 @@ def run_old_main():
         # "--no-export",
     ])
 
+
+def run_old_main():
+    from volleyball_resultater.cli_old import main
+    main([
+        # "--season", "current",
+        "--db", str(DEFAULT_DB_PATH_OLD),
+        "--export-dir", str(DEFAULT_EXPORT_DIR_OLD),
+        # "--no-export",
+    ])
+
 def test_old_exporter():
-    from volleyball_resultater.exporter import export_json
-    export_json(DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR)
+    from volleyball_resultater.exporter_old import export_json
+    export_json(DEFAULT_DB_PATH_OLD, DEFAULT_EXPORT_DIR_OLD)
 
 def test_new_exporter():
-    from volleyball_resultater.exporter_new import export_json
-    export_json(DEFAULT_DB_PATH_NEW, DEFAULT_EXPORT_DIR_NEW)
+    from volleyball_resultater.exporter import export_json
+    export_json(DEFAULT_DB_PATH, Path(str(DEFAULT_EXPORT_DIR) + '_test'))
 
 if __name__ == '__main__':
     # test_slutspil_order()
@@ -252,5 +252,5 @@ if __name__ == '__main__':
     # pokalturnering(2026, "Kvinde")
     # liga_slutspil(2025, "Mand")
     # test_repo()
-    run_old_main()
-    # test_new_exporter()
+    # run_old_main()
+    test_new_exporter()

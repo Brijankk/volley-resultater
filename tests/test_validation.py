@@ -5,7 +5,7 @@ from pathlib import Path
 import unittest
 
 from volleyball_resultater.models import League, Pool, Season, StandingRow
-from volleyball_resultater.storage import Repository
+from volleyball_resultater.storage_old import Repository
 from volleyball_resultater.validation import validate_rankings, validation_summary
 
 
