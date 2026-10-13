@@ -34,7 +34,6 @@ jobs:
           python -m volleyball_resultater.cli
           --season current
           --refresh-cache
-          --merge-existing-export
 
       - name: Commit refreshed JSON
         run: |

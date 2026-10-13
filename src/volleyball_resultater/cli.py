@@ -22,12 +22,6 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--no-export", action="store_true", help="Skip JSON export after scraping.")
     parser.add_argument("--throttle", type=float, default=0.25, help="Seconds to pause after live requests.")
     parser.add_argument("--refresh-cache", action="store_true", help="Fetch fresh HTML instead of reusing cached pages.")
-    parser.add_argument(
-        "--merge-existing-export",
-        "--merge-export",
-        action="store_true",
-        help="Merge refreshed seasons into the existing JSON export instead of replacing all exported seasons.",
-    )
     args = parser.parse_args(argv)
 
 
@@ -83,7 +77,7 @@ def main(argv: list[str] | None = None) -> int:
         repo.close()
 
     if not args.no_export:
-        export_json(args.db, args.export_dir, merge_existing=args.merge_existing_export)
+        export_json(args.db, args.export_dir)
         print(f"Exported JSON to {args.export_dir}")
 
     return 0
