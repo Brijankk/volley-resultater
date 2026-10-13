@@ -25,3 +25,7 @@ volleyball_resultater = ["rule_assignments.json"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.uv]
+# Independent files inherit project permissions instead of shared cache ACLs.
+link-mode = "copy"

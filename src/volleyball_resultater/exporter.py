@@ -1,8 +1,3 @@
-"""Export the new SQLite schema for the frontend using pandas dataframes.
-
-Tournament points come from the scraped matches, not rule profiles.
-Run with ``python -m volleyball_resultater.exporter_new``.
-"""
 from __future__ import annotations
 
 import argparse
@@ -14,7 +9,7 @@ import sqlite3
 import pandas as pd
 
 from . import __version__
-from .paths import PROJECT_ROOT
+from .paths import DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
 
 
 POINT_SOURCE = "source_points"
@@ -297,8 +292,8 @@ def write_json(path: Path, payload: dict) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--db", type=Path, default=PROJECT_ROOT / "data" / "volleyball_new.sqlite")
-    parser.add_argument("--output", type=Path, default=PROJECT_ROOT / "data" / "json_new")
+    parser.add_argument("--db", type=Path, default=DEFAULT_DB_PATH)
+    parser.add_argument("--output", type=Path, default=DEFAULT_EXPORT_DIR)
     args = parser.parse_args()
     export_json(args.db, args.output)
 

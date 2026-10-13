@@ -156,10 +156,9 @@ def liga_slutspil(season, gender):
     return
 
 def test_repo():
-    DB_PATH = PROJECT_ROOT / "data" / "volleyball_new.sqlite"
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0.25, refresh_cache=False)
     scraper = VolleyballScraper(client)
-    repo = Repository(DB_PATH)
+    repo = Repository(DEFAULT_DB_PATH)
 
     season = 2025
     leagues = {}
@@ -218,7 +217,7 @@ def run_main():
         "--no-export",
     ])
 
-def test_new_exporter():
+def test_exporter():
     from volleyball_resultater.exporter import export_json
     export_json(DEFAULT_DB_PATH, Path(str(DEFAULT_EXPORT_DIR) + '_test'))
 
