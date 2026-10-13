@@ -210,11 +210,17 @@ def test_repo():
 def run_main():
     from volleyball_resultater.cli import main
     main([
+        # "--season", "2021",
+        # "--season", "2022",
+        # "--season", "2023",
+        # "--season", "2024",
+        # "--season", "2025",
+        # "--season", "2026",
         "--season", "current",
-        "--db", str(DEFAULT_DB_PATH),
         "--refresh-cache",
-        "--export-dir", str(DEFAULT_EXPORT_DIR),
-        "--no-export",
+        # "--db", str(DEFAULT_DB_PATH),
+        # "--export-dir", str(DEFAULT_EXPORT_DIR),
+        # "--no-export",
     ])
 
 def test_exporter():
