@@ -12,7 +12,6 @@ from .exporter import export_json
 from .paths import DEFAULT_CACHE_DIR, DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
 from .scraper import DISTRICT, AGE_GROUP, GENDERS, VolleyballScraper
 from .storage import Repository
-from .validation import validate_rankings
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Scrape Danish volleyball league results.")

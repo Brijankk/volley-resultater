@@ -5,9 +5,6 @@ import sqlite3
 
 import pandas as pd
 
-from .models import League, Match, Pool, Season, SetResult, StandingRow
-
-
 SCHEMA = """
 PRAGMA foreign_keys = ON;
 

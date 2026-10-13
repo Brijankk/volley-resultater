@@ -1,23 +1,10 @@
 import pandas as pd
 from pathlib import Path
 from volleyball_resultater.client import ResultaterClient
-from volleyball_resultater.scraper_old import VolleyballScraper as VolleyballScraper_old, DISTRICT, AGE_GROUP, GENDERS
-from volleyball_resultater.scraper import VolleyballScraper as VolleyballScraper
-from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH_OLD, DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR_OLD, DEFAULT_EXPORT_DIR
+from volleyball_resultater.scraper import VolleyballScraper as VolleyballScraper, DISTRICT, AGE_GROUP, GENDERS
+from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
 from volleyball_resultater.storage import Repository
 from volleyball_resultater.wrangling import order_tournament, deduct_tournament
-
-def test_scraper_old():
-    client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0, refresh_cache=False)
-    scraper = VolleyballScraper_old(client)
-    
-    seasons = scraper.seasons()
-    season = next(s for s in seasons if s.id == "2025")
-
-    leagues = scraper.leagues_for(season, "Mand")
-    league = leagues[-1]
-
-    pool_data = scraper.scrape_league(league)
 
 def test_scraper():
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0, refresh_cache=False)
@@ -230,20 +217,6 @@ def run_main():
         "--export-dir", str(DEFAULT_EXPORT_DIR),
         "--no-export",
     ])
-
-
-def run_old_main():
-    from volleyball_resultater.cli_old import main
-    main([
-        # "--season", "current",
-        "--db", str(DEFAULT_DB_PATH_OLD),
-        "--export-dir", str(DEFAULT_EXPORT_DIR_OLD),
-        # "--no-export",
-    ])
-
-def test_old_exporter():
-    from volleyball_resultater.exporter_old import export_json
-    export_json(DEFAULT_DB_PATH_OLD, DEFAULT_EXPORT_DIR_OLD)
 
 def test_new_exporter():
     from volleyball_resultater.exporter import export_json

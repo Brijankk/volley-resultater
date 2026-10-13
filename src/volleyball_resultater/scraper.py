@@ -6,10 +6,9 @@ import pandas as pd
 import pandas.api.types as ptypes
 import numpy as np
 
-from .models import StandingRow
 from .client import FIELD_SEASON, FIELD_AGE_GROUP, ResultaterClient, build_search_form
 from .html_tools import parse_forms
-from .parsers import parse_league_links, parse_pools, parse_schedule, parse_links, query_int
+from .parsers import parse_league_links, parse_pools, parse_links, query_int
 
 DISTRICT = "Volleyball Danmark"
 AGE_GROUP = "Senior"
