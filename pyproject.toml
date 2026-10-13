@@ -8,7 +8,10 @@ version = "1.0.2"
 description = "Scrape and normalize Danish volleyball league results from resultater.volleyball.dk."
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "lxml>=6.1.3",
+    "pandas>=3.0.5",
+]
 
 [project.scripts]
 scrape-volleyball = "volleyball_resultater.cli:main"
@@ -22,3 +25,7 @@ volleyball_resultater = ["rule_assignments.json"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.uv]
+# Independent files inherit project permissions instead of shared cache ACLs.
+link-mode = "copy"

@@ -3,38 +3,28 @@ from __future__ import annotations
 from pathlib import Path
 import sqlite3
 
-from .models import League, Match, Pool, Season, SetResult, StandingRow
-
+import pandas as pd
 
 SCHEMA = """
 PRAGMA foreign_keys = ON;
 
-CREATE TABLE IF NOT EXISTS seasons (
-    id TEXT PRIMARY KEY,
-    label TEXT NOT NULL,
-    value TEXT NOT NULL,
-    start_year INTEGER,
-    is_current INTEGER NOT NULL
-);
-
 CREATE TABLE IF NOT EXISTS leagues (
-    id TEXT PRIMARY KEY,
-    season_id TEXT NOT NULL REFERENCES seasons(id),
-    gender TEXT NOT NULL,
-    division TEXT NOT NULL,
+    id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    raekke_id INTEGER NOT NULL
+    district TEXT NOT NULL,
+    gender TEXT NOT NULL,
+    age_group TEXT NOT NULL,
+    season INTEGER NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS pools (
-    id TEXT PRIMARY KEY,
-    league_id TEXT NOT NULL REFERENCES leagues(id),
+    id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    pulje_id INTEGER NOT NULL
+    league_id INTEGER NOT NULL REFERENCES leagues(id)
 );
 
-CREATE TABLE IF NOT EXISTS source_standings (
-    pool_id TEXT NOT NULL REFERENCES pools(id),
+CREATE TABLE IF NOT EXISTS rankings (
+    pool_id INTEGER NOT NULL REFERENCES pools(id),
     rank INTEGER NOT NULL,
     team_name TEXT NOT NULL,
     games_played INTEGER NOT NULL,
@@ -49,44 +39,32 @@ CREATE TABLE IF NOT EXISTS source_standings (
 );
 
 CREATE TABLE IF NOT EXISTS matches (
-    kamp_id INTEGER PRIMARY KEY,
-    pool_id TEXT NOT NULL REFERENCES pools(id),
+    pool_id INTEGER NOT NULL REFERENCES pools(id),
+    id INTEGER PRIMARY KEY,
     match_number INTEGER,
-    starts_at TEXT,
-    starts_at_time_known INTEGER NOT NULL DEFAULT 1,
+    match_time TEXT,
     home_team TEXT NOT NULL,
     away_team TEXT NOT NULL,
     venue TEXT NOT NULL,
     court TEXT NOT NULL,
-    result_home_sets INTEGER,
-    result_away_sets INTEGER,
-    result_note TEXT NOT NULL DEFAULT ''
-);
-
-CREATE TABLE IF NOT EXISTS set_results (
-    kamp_id INTEGER NOT NULL REFERENCES matches(kamp_id),
-    set_number INTEGER NOT NULL,
+    address TEXT NOT NULL,
+    referee1 TEXT,
+    referee2 TEXT,
+    home_sets INTEGER,
+    away_sets INTEGER,
     home_points INTEGER,
     away_points INTEGER,
-    home_set_won INTEGER,
-    away_set_won INTEGER,
-    PRIMARY KEY (kamp_id, set_number)
-);
-
-CREATE TABLE IF NOT EXISTS computed_standings (
-    pool_id TEXT NOT NULL REFERENCES pools(id),
-    rule_profile TEXT NOT NULL,
-    rank INTEGER NOT NULL,
-    team_name TEXT NOT NULL,
-    games_played INTEGER NOT NULL,
-    games_won INTEGER NOT NULL,
-    games_lost INTEGER NOT NULL,
-    sets_won INTEGER NOT NULL,
-    sets_lost INTEGER NOT NULL,
-    balls_won INTEGER NOT NULL,
-    balls_lost INTEGER NOT NULL,
-    points INTEGER NOT NULL,
-    PRIMARY KEY (pool_id, rule_profile, team_name)
+    home_balls1 INTEGER,
+    away_balls1 INTEGER,
+    home_balls2 INTEGER,
+    away_balls2 INTEGER,
+    home_balls3 INTEGER,
+    away_balls3 INTEGER,
+    home_balls4 INTEGER,
+    away_balls4 INTEGER,
+    home_balls5 INTEGER,
+    away_balls5 INTEGER,
+    note TEXT
 );
 """
 
@@ -98,152 +76,194 @@ class Repository:
         self.connection = sqlite3.connect(path)
         self.connection.row_factory = sqlite3.Row
         self.connection.executescript(SCHEMA)
-        self.migrate()
-
-    def migrate(self) -> None:
-        columns = {row["name"] for row in self.connection.execute("PRAGMA table_info(matches)")}
-        if "result_note" not in columns:
-            self.connection.execute("ALTER TABLE matches ADD COLUMN result_note TEXT NOT NULL DEFAULT ''")
-        if "starts_at_time_known" not in columns:
-            self.connection.execute("ALTER TABLE matches ADD COLUMN starts_at_time_known INTEGER NOT NULL DEFAULT 1")
 
     def close(self) -> None:
         self.connection.close()
 
-    def save_season(self, season: Season) -> None:
-        self.connection.execute(
-            """
-            INSERT INTO seasons (id, label, value, start_year, is_current)
-            VALUES (?, ?, ?, ?, ?)
-            ON CONFLICT(id) DO UPDATE SET
-                label=excluded.label,
-                value=excluded.value,
-                start_year=excluded.start_year,
-                is_current=excluded.is_current
-            """,
-            (season.id, season.label, season.value, season.start_year, int(season.is_current)),
-        )
+    def upsert_leagues(self, leagues: pd.DataFrame) -> None:
+        column_order = [
+            'id',
+            'name',
+            'district',
+            'gender',
+            'age_group',
+            'season'
+        ]
 
-    def save_league(self, league: League) -> None:
-        self.connection.execute(
-            """
-            INSERT INTO leagues (id, season_id, gender, division, name, raekke_id)
-            VALUES (?, ?, ?, ?, ?, ?)
-            ON CONFLICT(id) DO UPDATE SET
-                season_id=excluded.season_id,
-                gender=excluded.gender,
-                division=excluded.division,
-                name=excluded.name,
-                raekke_id=excluded.raekke_id
-            """,
-            (league.id, league.season_id, league.gender, league.division, league.name, league.raekke_id),
-        )
-
-    def save_pool(self, pool: Pool) -> None:
-        self.connection.execute(
-            """
-            INSERT INTO pools (id, league_id, name, pulje_id)
-            VALUES (?, ?, ?, ?)
-            ON CONFLICT(id) DO UPDATE SET
-                league_id=excluded.league_id,
-                name=excluded.name,
-                pulje_id=excluded.pulje_id
-            """,
-            (pool.id, pool.league_id, pool.name, pool.pulje_id),
-        )
-
-    def replace_source_standings(self, pool_id: str, rows: list[StandingRow]) -> None:
-        self.connection.execute("DELETE FROM source_standings WHERE pool_id = ?", (pool_id,))
         self.connection.executemany(
             """
-            INSERT INTO source_standings (
-                pool_id, rank, team_name, games_played, games_won, games_lost,
-                sets_won, sets_lost, balls_won, balls_lost, points
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO leagues (id, name, district, gender, age_group, season)
+            VALUES (?, ?, ?, ?, ?, ?)
+            ON CONFLICT(id) DO UPDATE SET
+                name=excluded.name,
+                district=excluded.district,
+                gender=excluded.gender,
+                age_group=excluded.age_group,
+                season=excluded.season
             """,
-            [standing_tuple(row) for row in rows],
+            [row for row in leagues[column_order].itertuples(index=False, name=None)],
         )
 
-    def replace_matches(self, pool_id: str, matches: list[Match], set_results: list[SetResult]) -> None:
-        kamp_ids = [match.kamp_id for match in matches]
-        if kamp_ids:
-            placeholders = ",".join("?" for _ in kamp_ids)
-            self.connection.execute(f"DELETE FROM set_results WHERE kamp_id IN ({placeholders})", kamp_ids)
-        self.connection.execute("DELETE FROM matches WHERE pool_id = ?", (pool_id,))
+    def upsert_pools(self, pools: pd.DataFrame) -> None:
+        column_order = [
+            'id',
+            'name',
+            'league_id',
+        ]
+
+        self.connection.executemany(
+            """
+            INSERT INTO pools (id, name, league_id)
+            VALUES (?, ?, ?)
+            ON CONFLICT(id) DO UPDATE SET
+                name=excluded.name,
+                league_id=excluded.league_id                
+            """,
+            [row for row in pools[column_order].itertuples(index=False, name=None)],
+        )
+
+    def upsert_rankings(self, ranking: pd.DataFrame) -> None:
+        column_order = [
+            'pool_id',
+            'rank',
+            'team_name',
+            'games_played',
+            'games_won',
+            'games_lost',
+            'sets_won',
+            'sets_lost',
+            'balls_won',
+            'balls_lost',
+            'points',
+        ]
+
+        self.connection.executemany(
+            """
+            INSERT INTO rankings (
+                pool_id,
+                rank,
+                team_name,
+                games_played,
+                games_won,
+                games_lost,
+                sets_won,
+                sets_lost,
+                balls_won,
+                balls_lost,
+                points
+            )
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(pool_id, team_name) DO UPDATE SET
+                rank=excluded.rank,
+                games_played=excluded.games_played,
+                games_won=excluded.games_won,
+                games_lost=excluded.games_lost,
+                sets_won=excluded.sets_won,
+                sets_lost=excluded.sets_lost,
+                balls_won=excluded.balls_won,
+                balls_lost=excluded.balls_lost,
+                points=excluded.points
+            """,
+            [row for row in ranking[column_order].itertuples(index=False, name=None)],
+        )
+
+    def upsert_matches(self, matches: pd.DataFrame) -> None:
+        column_order = [
+            'pool_id',
+            'id',
+            'match_number',
+            'match_time',
+            'home_team',
+            'away_team',
+            'venue',
+            'court',
+            'address',
+            'referee1',
+            'referee2',
+            'home_sets',
+            'away_sets',
+            'home_points',
+            'away_points',
+            'home_balls1',
+            'away_balls1',
+            'home_balls2',
+            'away_balls2',
+            'home_balls3',
+            'away_balls3',
+            'home_balls4',
+            'away_balls4',
+            'home_balls5',
+            'away_balls5',
+            'note',
+        ]
+
+        df = matches.copy()
+        int64_cols = df.loc[:, df.dtypes.eq('Int64')].columns
+        df[int64_cols] = df[int64_cols].astype(object).fillna(None)
+        df['match_time'] = df['match_time'].dt.strftime(date_format='%Y-%m-%dT%H:%M:%S')
+
         self.connection.executemany(
             """
             INSERT INTO matches (
-                kamp_id, pool_id, match_number, starts_at, starts_at_time_known, home_team, away_team,
-                venue, court, result_home_sets, result_away_sets, result_note
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                pool_id,
+                id,
+                match_number,
+                match_time,
+                home_team,
+                away_team,
+                venue,
+                court,
+                address,
+                referee1,
+                referee2,
+                home_sets,
+                away_sets,
+                home_points,
+                away_points,
+                home_balls1,
+                away_balls1,
+                home_balls2,
+                away_balls2,
+                home_balls3,
+                away_balls3,
+                home_balls4,
+                away_balls4,
+                home_balls5,
+                away_balls5,
+                note
+            )
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(id) DO UPDATE SET
+                pool_id=excluded.pool_id,
+                match_number=excluded.match_number,
+                match_time=excluded.match_time,
+                home_team=excluded.home_team,
+                away_team=excluded.away_team,
+                venue=excluded.venue,
+                court=excluded.court,
+                address=excluded.address,
+                referee1=excluded.referee1,
+                referee2=excluded.referee2,
+                home_sets=excluded.home_sets,
+                away_sets=excluded.away_sets,
+                home_points=excluded.home_points,
+                away_points=excluded.away_points,
+                home_balls1=excluded.home_balls1,
+                away_balls1=excluded.away_balls1,
+                home_balls2=excluded.home_balls2,
+                away_balls2=excluded.away_balls2,
+                home_balls3=excluded.home_balls3,
+                away_balls3=excluded.away_balls3,
+                home_balls4=excluded.home_balls4,
+                away_balls4=excluded.away_balls4,
+                home_balls5=excluded.home_balls5,
+                away_balls5=excluded.away_balls5,
+                note=excluded.note
             """,
-            [
-                (
-                    match.kamp_id,
-                    match.pool_id,
-                    match.match_number,
-                    match.starts_at.isoformat() if match.starts_at else None,
-                    int(match.starts_at_time_known),
-                    match.home_team,
-                    match.away_team,
-                    match.venue,
-                    match.court,
-                    match.result_home_sets,
-                    match.result_away_sets,
-                    match.result_note,
-                )
-                for match in matches
-            ],
-        )
-        self.connection.executemany(
-            """
-            INSERT INTO set_results (
-                kamp_id, set_number, home_points, away_points, home_set_won, away_set_won
-            ) VALUES (?, ?, ?, ?, ?, ?)
-            """,
-            [
-                (
-                    row.kamp_id,
-                    row.set_number,
-                    row.home_points,
-                    row.away_points,
-                    row.home_set_won,
-                    row.away_set_won,
-                )
-                for row in set_results
-            ],
-        )
-
-    def replace_computed_standings(self, pool_id: str, rule_profile: str, rows: list[StandingRow]) -> None:
-        self.connection.execute(
-            "DELETE FROM computed_standings WHERE pool_id = ? AND rule_profile = ?",
-            (pool_id, rule_profile),
-        )
-        self.connection.executemany(
-            """
-            INSERT INTO computed_standings (
-                pool_id, rule_profile, rank, team_name, games_played, games_won, games_lost,
-                sets_won, sets_lost, balls_won, balls_lost, points
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """,
-            [(row.pool_id, rule_profile, *standing_tuple(row)[1:]) for row in rows],
+            [row for row in df[column_order].itertuples(index=False, name=None)],
+            # [row for row in matches.where(matches.notna(), None)[column_order].itertuples(index=False, name=None)],
         )
 
     def commit(self) -> None:
         self.connection.commit()
 
-
-def standing_tuple(row: StandingRow) -> tuple[object, ...]:
-    return (
-        row.pool_id,
-        row.rank,
-        row.team_name,
-        row.games_played,
-        row.games_won,
-        row.games_lost,
-        row.sets_won,
-        row.sets_lost,
-        row.balls_won,
-        row.balls_lost,
-        row.points,
-    )
