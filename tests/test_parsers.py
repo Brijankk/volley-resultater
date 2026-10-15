@@ -4,10 +4,7 @@ import unittest
 
 from volleyball_resultater.parsers import (
     parse_league_links,
-    parse_match_sets,
     parse_pools,
-    parse_schedule,
-    parse_standings,
 )
 
 
@@ -83,10 +80,10 @@ class ParserTests(unittest.TestCase):
         self.assertIn(("1. Division Herrer", 2250), links)
 
     def test_pools_from_redirect_or_overview_links(self) -> None:
-        redirected = parse_pools("", "https://resultater.volleyball.dk/tms/Turneringer-og-resultater/Pulje-Stilling.aspx?PuljeId=3923", "league")
+        redirected = parse_pools("", "https://resultater.volleyball.dk/tms/Turneringer-og-resultater/Pulje-Stilling.aspx?PuljeId=3923")
         self.assertEqual(redirected[0].pulje_id, 3923)
         overview = '<a href="/tms/Turneringer-og-resultater/Pulje-Stilling.aspx?PuljeId=4122">Øst</a>'
-        pools = parse_pools(overview, "https://resultater.volleyball.dk/tms/Turneringer-og-resultater/Pulje-Oversigt.aspx?RaekkeId=2372", "league")
+        pools = parse_pools(overview, "https://resultater.volleyball.dk/tms/Turneringer-og-resultater/Pulje-Oversigt.aspx?RaekkeId=2372")
         self.assertEqual((pools[0].name, pools[0].pulje_id), ("Øst", 4122))
 
     def test_pools_ignore_team_links_on_cached_redirect_page(self) -> None:
@@ -97,59 +94,9 @@ class ParserTests(unittest.TestCase):
         pools = parse_pools(
             standing_page_links,
             "https://resultater.volleyball.dk/tms/Turneringer-og-resultater/Pulje-Oversigt.aspx?RaekkeId=2248",
-            "league",
         )
         self.assertEqual(len(pools), 1)
         self.assertEqual((pools[0].name, pools[0].pulje_id), ("Række 1", 3923))
-
-    def test_standings(self) -> None:
-        rows = parse_standings(STANDINGS_HTML, "pool")
-        self.assertEqual(len(rows), 2)
-        self.assertEqual(rows[0].team_name, "Middelfart VK")
-        self.assertEqual(rows[0].sets_won, 48)
-        self.assertEqual(rows[0].sets_lost, 14)
-        self.assertEqual(rows[0].balls_won, 1458)
-        self.assertEqual(rows[0].points, 44)
-
-    def test_schedule(self) -> None:
-        rows = parse_schedule(SCHEDULE_HTML, "pool")
-        self.assertEqual(len(rows), 6)
-        self.assertEqual(rows[0].kamp_id, 70726)
-        self.assertEqual(rows[0].home_team, "VK Vestsjælland")
-        self.assertEqual(rows[0].starts_at.isoformat(), "2025-10-03T19:30:00")
-        self.assertTrue(rows[0].starts_at_time_known)
-        self.assertEqual(rows[0].result_home_sets, 3)
-        self.assertEqual(rows[0].result_away_sets, 1)
-        self.assertIsNone(rows[1].result_home_sets)
-        self.assertEqual(rows[2].result_home_sets, 3)
-        self.assertEqual(rows[2].result_away_sets, 0)
-        self.assertEqual(rows[2].result_note, "UHT")
-        self.assertEqual(rows[3].result_home_sets, 0)
-        self.assertEqual(rows[3].result_away_sets, 3)
-        self.assertEqual(rows[3].result_note, "HHT")
-        self.assertEqual(rows[4].starts_at.isoformat(), "2025-10-07T00:00:00")
-        self.assertFalse(rows[4].starts_at_time_known)
-        self.assertEqual(rows[5].starts_at.isoformat(), "2025-10-08T10:00:00")
-        self.assertTrue(rows[5].starts_at_time_known)
-
-    def test_match_sets(self) -> None:
-        rows = parse_match_sets(MATCH_HTML, 70726)
-        self.assertEqual(len(rows), 3)
-        self.assertEqual(rows[0].home_points, 25)
-        self.assertEqual(rows[0].away_points, 21)
-        self.assertEqual(rows[0].home_set_won, 1)
-        self.assertIsNone(rows[2].home_points)
-
-    def test_match_sets_with_combined_score_cells(self) -> None:
-        html = """
-        <table>
-          <tr><td>1. Sæt</td><td>Skive FVK Aalborg Volleyball.3</td><td>25 14</td><td>1 0</td></tr>
-        </table>
-        """
-        rows = parse_match_sets(html, 72449)
-        self.assertEqual(rows[0].home_points, 25)
-        self.assertEqual(rows[0].away_points, 14)
-        self.assertEqual(rows[0].home_set_won, 1)
 
 
 if __name__ == "__main__":

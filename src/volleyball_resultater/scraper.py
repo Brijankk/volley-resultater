@@ -113,9 +113,7 @@ class VolleyballScraper:
     def get_pool_ids(self, league_id: int) -> pd.DataFrame:
         overview = self.client.get(f"/tms/Turneringer-og-resultater/Pulje-Oversigt.aspx?RaekkeId={league_id}")
         pools = pd.DataFrame(
-            data=parse_pools(overview.html, overview.url, league_id),
-        )[['name', 'pulje_id']].rename(
-            columns={'pulje_id': 'id'}
+            data=parse_pools(overview.html, overview.url),
         )
 
         return pools
