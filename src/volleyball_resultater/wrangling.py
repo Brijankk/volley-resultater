@@ -88,43 +88,25 @@ def deduct_tournament(schedule):
 
     return bouts
 
-def deduct_tournament2(schedule):
-    df = schedule.copy()
+def pokal_filter(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.loc[
+        (
+            df['name'].str.contains('Pokal', case=False) |
+            df['name'].str.contains('LP')
+        ) &
+        ~df['name'].str.contains('Seed') &
+        ~df['name'].str.contains('Kreds'),
+    ].copy()
 
+    return df
 
-    df[['home_team', 'away_team']] = df[['home_team', 'away_team']].apply(sorted, axis=1).to_list()
-    # df = df.groupby(['round', 'name_league', 'home_team', 'away_team'], as_index=False)['match_number'].max()
-    
-    runder = list(df['round'].drop_duplicates())
+def slutspil_filter(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.loc[
+        df['name'].str.contains('Volleyligaen', case=False) &
+        (
+            df['name'].str.contains('finale', case=False) |
+            df['name'].str.contains('bronze', case=False)
+        ),
+    ].copy()
 
-    bracket = []
-    for round in sorted(runder, reverse=True)[:-1]:
-        df1 = df.loc[df['round'].eq(round)]
-        df0 = df.loc[df['round'].eq(round - 1)]
-        df0 = df0.melt(
-            id_vars='match_number',
-            value_vars=['home_team', 'away_team'],
-            value_name='team'
-        ).set_index('team')['match_number'].astype(str)
-
-        #Leg1 (hjemmehold)
-        df1['leg1'] = df1['home_team'].str.rsplit('#').apply(lambda x: x[-1])
-        df1['leg1'] = df1['leg1'].replace(df0)
-        df1.loc[df1['leg1'].str.isdigit().eq(False), 'leg1'] = 'NaN'
-
-        #Leg2 (udehold)
-        df1['leg2'] = df1['away_team'].str.rsplit('#').apply(lambda x: x[-1])
-        df1['leg2'] = df1['leg2'].replace(df0)
-        df1.loc[df1['leg2'].str.isdigit().eq(False), 'leg2'] = 'NaN'
-
-        bracket.append(df1)
-    bracket.append(
-        df.loc[df['round'].eq(0)].assign(
-            leg1='NaN',
-            leg2='NaN',
-        )
-    )
-    bracket = pd.concat(bracket)
-    bracket.loc[bracket['name_league'].str.contains('bronze', case=False), ['leg1', 'leg2']] = 'NaN'
-
-    return bracket
+    return df

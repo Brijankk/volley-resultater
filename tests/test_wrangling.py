@@ -7,31 +7,8 @@ import pandas as pd
 from volleyball_resultater.scraper import VolleyballScraper
 from volleyball_resultater.client import ResultaterClient
 from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH
-from volleyball_resultater.wrangling import calculate_running_rankings, result_matrix, order_tournament, deduct_tournament
+from volleyball_resultater.wrangling import calculate_running_rankings, result_matrix, order_tournament, deduct_tournament, pokal_filter, slutspil_filter
 from volleyball_resultater.storage import Repository
-
-def pokal_filter(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.loc[
-        (
-            df['name'].str.contains('Pokal', case=False) |
-            df['name'].str.contains('LP')
-        ) &
-        ~df['name'].str.contains('Seed') &
-        ~df['name'].str.contains('Kreds'),
-    ].copy()
-
-    return df
-
-def slutspil_filter(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.loc[
-        df['name'].str.contains('Volleyligaen', case=False) &
-        (
-            df['name'].str.contains('finale', case=False) |
-            df['name'].str.contains('bronze', case=False)
-        ),
-    ].copy()
-
-    return df
 
 class WranglingTests(unittest.TestCase):
     def __init__(self, methodName = "runTest"):
@@ -85,11 +62,13 @@ class WranglingTests(unittest.TestCase):
     def test_deduct_tournament(self):
         district = 'Volleyball Danmark'
         season = 2025
-        gender = 'Mand'
+        gender = 'Kvinde'
+        bracket = slutspil_filter
+
         leagues = self.repo.get_leagues()
         leagues = leagues.loc[leagues['season'].eq(season) & leagues['gender'].eq(gender) & leagues['district'].eq(district)]
 
-        bracket_leagues = slutspil_filter(leagues)
+        bracket_leagues = bracket(leagues)
         bracket_leagues['round'] = order_tournament(bracket_leagues['name'])
 
         matches = pd.read_sql(
