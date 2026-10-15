@@ -264,6 +264,19 @@ class Repository:
             # [row for row in matches.where(matches.notna(), None)[column_order].itertuples(index=False, name=None)],
         )
 
+    def get_leagues(self) -> pd.DataFrame:
+        query = """
+            SELECT *
+            FROM leagues
+        """
+
+        df = pd.read_sql(
+            sql=query,
+            con=self.connection
+        )
+
+        return df
+
     def commit(self) -> None:
         self.connection.commit()
 

@@ -61,31 +61,65 @@ def order_tournament(tournament_names: pd.Series[str]) -> pd.Series[int]:
 
 def deduct_tournament(schedule):
     df = schedule.copy()
+    df[['home_team', 'away_team']] = df[['home_team', 'away_team']].apply(sorted, axis=1).to_list()
 
-    df[['Hjemmehold', 'Udehold']] = df[['Hjemmehold', 'Udehold']].apply(sorted, axis=1).to_list()
-    df = df.groupby(['runde', 'name_league', 'Hjemmehold', 'Udehold'], as_index=False)['Kampnr.'].max()
+    bouts = df.groupby(['round', 'name_league', 'home_team', 'away_team'], as_index=False)['match_number'].apply(list)
+    bouts = bouts.reset_index(names=['bout_id'])
 
-    runder = list(df['runde'].drop_duplicates())
+    mapping = bouts.explode('match_number')
+    mapping['match_number'] = mapping['match_number'].astype(str)
+    mapping['round'] += 1
+    mapping = mapping.melt(
+        id_vars=['bout_id', 'round'],
+        value_vars=['home_team', 'away_team', 'match_number'],
+        value_name='key'
+    ).drop_duplicates(['round', 'key'])
+    mapping = mapping.set_index(['round', 'key'])['bout_id']
+
+    bouts['key1'] = bouts['home_team'].str.rsplit('#').apply(lambda x: x[-1])
+    bouts['key2'] = bouts['away_team'].str.rsplit('#').apply(lambda x: x[-1])
+
+    bouts['leg1'] = bouts[['round', 'key1']].apply(tuple, axis=1).map(mapping)
+    bouts['leg2'] = bouts[['round', 'key2']].apply(tuple, axis=1).map(mapping)
+    bouts.loc[bouts['name_league'].str.contains('bronze', case=False), ['leg1', 'leg2']] = np.nan
+    bouts[['leg1', 'leg2']] = bouts[['leg1', 'leg2']].astype('Int64')
+    
+    bouts.drop(columns=['key1', 'key2'], inplace=True)
+
+    return bouts
+
+def deduct_tournament2(schedule):
+    df = schedule.copy()
+
+
+    df[['home_team', 'away_team']] = df[['home_team', 'away_team']].apply(sorted, axis=1).to_list()
+    # df = df.groupby(['round', 'name_league', 'home_team', 'away_team'], as_index=False)['match_number'].max()
+    
+    runder = list(df['round'].drop_duplicates())
 
     bracket = []
-    for runde in sorted(runder, reverse=True)[:-1]:
-        df1 = df.loc[df['runde'].eq(runde)]
-        df0 = df.loc[df['runde'].eq(runde - 1)]
-        df0 = df0.melt(id_vars='Kampnr.', value_vars=['Hjemmehold', 'Udehold'], value_name='hold').set_index('hold')['Kampnr.'].astype(str)
+    for round in sorted(runder, reverse=True)[:-1]:
+        df1 = df.loc[df['round'].eq(round)]
+        df0 = df.loc[df['round'].eq(round - 1)]
+        df0 = df0.melt(
+            id_vars='match_number',
+            value_vars=['home_team', 'away_team'],
+            value_name='team'
+        ).set_index('team')['match_number'].astype(str)
 
         #Leg1 (hjemmehold)
-        df1['leg1'] = df1['Hjemmehold'].str.rsplit('#').apply(lambda x: x[-1])
+        df1['leg1'] = df1['home_team'].str.rsplit('#').apply(lambda x: x[-1])
         df1['leg1'] = df1['leg1'].replace(df0)
         df1.loc[df1['leg1'].str.isdigit().eq(False), 'leg1'] = 'NaN'
 
         #Leg2 (udehold)
-        df1['leg2'] = df1['Udehold'].str.rsplit('#').apply(lambda x: x[-1])
+        df1['leg2'] = df1['away_team'].str.rsplit('#').apply(lambda x: x[-1])
         df1['leg2'] = df1['leg2'].replace(df0)
         df1.loc[df1['leg2'].str.isdigit().eq(False), 'leg2'] = 'NaN'
 
         bracket.append(df1)
     bracket.append(
-        df.loc[df['runde'].eq(0)].assign(
+        df.loc[df['round'].eq(0)].assign(
             leg1='NaN',
             leg2='NaN',
         )

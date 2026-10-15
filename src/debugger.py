@@ -41,119 +41,63 @@ def get_all_leagues():
 
     return leagues_df
 
-
-
-def test_tournament_order():
-    leagues = get_all_leagues()
-    pokal_leagues = leagues.loc[
-        (
-            leagues['name'].str.contains('Pokal', case=False) |
-            leagues['name'].str.contains('LP')
-        ) &
-        ~leagues['name'].str.contains('Seed') &
-        ~leagues['name'].str.contains('Kreds')
-    ]
-
-    pokal_leagues['round'] = pokal_leagues.groupby(['gender', 'season'])['name'].apply(order_tournament).droplevel(['gender', 'season'])
-
-    pokal_leagues.sort_values(['season', 'gender', 'round']).to_clipboard()
-
-    return pokal_leagues
-
-def test_slutspil_order():
-    leagues = get_all_leagues()
-    slutspil = leagues.loc[
-        leagues['name'].str.contains('Volleyligaen', case=False) &
-        ~leagues['name'].str.contains('pokal', case=False) &
-        (
-            leagues['name'].str.contains('finale', case=False) |
-            leagues['name'].str.contains('bronze', case=False)
-        )
-    ]
-
-    slutspil['round']= slutspil.groupby(['gender', 'season'])['name'].apply(order_tournament).droplevel(['gender', 'season'])
-
-    slutspil.sort_values(['season', 'gender', 'round']).to_clipboard()
-
-    return slutspil
-
-def pokalturnering(season, gender):
-    client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0)
+def scrape_tournaments():
+    client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0.25, refresh_cache=False)
     scraper = VolleyballScraper(client)
-    leagues = scraper.get_league_ids(DISTRICT, gender, season, AGE_GROUP)
+    repo = Repository(DEFAULT_DB_PATH)
 
-    pokal_leagues = leagues.loc[
-        (
-            leagues['name'].str.contains('Pokal', case=False) |
-            leagues['name'].str.contains('LP')
-        ) &
-        ~leagues['name'].str.contains('Seed') &
-        ~leagues['name'].str.contains('Kreds')
-    ]
-    pokal_leagues['runde'] = order_tournament(pokal_leagues['name'])
+    def pokal_filter(df: pd.DataFrame) -> pd.DataFrame:
+        df = df.loc[
+            (
+                df['name'].str.contains('Pokal', case=False) |
+                df['name'].str.contains('LP')
+            ) &
+            ~df['name'].str.contains('Seed') &
+            ~df['name'].str.contains('Kreds'),
+        ].copy()
 
-    pokal_pools = {}
-    for league_id in pokal_leagues['id']:
-        pokal_pools[league_id] = scraper.get_pool_ids(league_id)
-    pools = pd.concat(pokal_pools, names=['league_id']).droplevel(-1)
+        return df
+
+    def slutspil_filter(df: pd.DataFrame) -> pd.DataFrame:
+        df = df.loc[
+            df['name'].str.contains('Volleyligaen', case=False) &
+            (
+                df['name'].str.contains('finale', case=False) |
+                df['name'].str.contains('bronze', case=False)
+            ),
+        ].copy()
+
+        return df
+
+    all_leagues = repo.get_leagues()
+    all_leagues = all_leagues.loc[all_leagues['season'].eq(2025) & all_leagues['age_group'].eq('Senior') & all_leagues['district'].eq('Volleyball Danmark')]
+    pokal = pokal_filter(all_leagues)
+    slutspil = slutspil_filter(all_leagues)
+    bracket_leagues = pd.concat([pokal, slutspil])
+
+    bracket_pools = {}
+    for league_id in bracket_leagues['id']:
+        bracket_pools[league_id] = scraper.get_pool_ids(league_id)
+    pools = pd.concat(bracket_pools, names=['league_id']).droplevel(-1)
 
     schedule = {}
     for pool_id in pools['id']:
         schedule[pool_id] = scraper.scrape_pool_schedule(pool_id)
-    schedule = pd.concat(schedule, names=['pool_id']).droplevel(-1)
+    schedules = pd.concat(schedule, names=['pool_id']).droplevel(-1)
 
-    df = pokal_leagues.join(
-        other=pools,
-        on='id',
-        rsuffix='_pool',
-        lsuffix='_league'
-    ).join(
-        other=schedule,
-        on='id_pool',
-    )[['runde', 'name_league', 'Kampnr.', 'Hjemmehold', 'Udehold', 'Resultat']]
+    match_details_list = {}
+    for match_id in schedules['match_id']:
+        match_details_list[match_id] = scraper.scrape_match_details(match_id)
+    match_details = pd.concat(match_details_list, names=['match_id']).droplevel(-1)
 
-    tournament = deduct_tournament(df)
+    matches = schedules.reset_index().merge(match_details, on='match_id').rename(columns={'match_id': 'id'})
     
-    return df
+    repo.upsert_pools(pools.reset_index())
+    repo.upsert_matches(matches)
+    repo.commit()
+    repo.close()
 
-def liga_slutspil(season, gender):
-    client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0)
-    scraper = VolleyballScraper(client)
-    leagues = scraper.get_league_ids(DISTRICT, gender, season, AGE_GROUP)
-
-    slutspil = leagues.loc[
-        leagues['name'].str.contains('Volleyligaen', case=False) &
-        ~leagues['name'].str.contains('pokal', case=False) &
-        (
-            leagues['name'].str.contains('finale', case=False) |
-            leagues['name'].str.contains('bronze', case=False)
-        )
-    ]
-    slutspil['runde'] = order_tournament(slutspil['name'])
-
-    slut_pools = {}
-    for league_id in slutspil['id']:
-        slut_pools[league_id] = scraper.get_pool_ids(league_id)
-    pools = pd.concat(slut_pools, names=['league_id']).droplevel(-1)
-
-    schedule = {}
-    for pool_id in pools['id']:
-        schedule[pool_id] = scraper.scrape_pool_schedule(pool_id)
-    schedule = pd.concat(schedule, names=['pool_id']).droplevel(-1)
-
-    df = slutspil.join(
-        other=pools,
-        on='id',
-        rsuffix='_pool',
-        lsuffix='_league'
-    ).join(
-        other=schedule,
-        on='id_pool',
-    )[['runde', 'name_league', 'Kampnr.', 'Hjemmehold', 'Udehold', 'Resultat']]
-
-    tournament = deduct_tournament(df)
-
-    return
+    pass
 
 def test_repo():
     client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0.25, refresh_cache=False)
@@ -228,11 +172,9 @@ def test_exporter():
     export_json(DEFAULT_DB_PATH, Path(str(DEFAULT_EXPORT_DIR) + '_test'))
 
 if __name__ == '__main__':
-    # test_slutspil_order()
     # get_all_leagues()
     # test_scraper()
-    # pokalturnering(2026, "Kvinde")
-    # liga_slutspil(2025, "Mand")
+    scrape_tournaments()
     # test_repo()
-    run_main()
-    # test_new_exporter()
+    # run_main()
+    # test_exporter()

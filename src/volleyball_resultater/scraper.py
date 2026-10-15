@@ -219,7 +219,7 @@ class VolleyballScraper:
         df = df.set_index('name')['value'].to_frame().T
         df = df.apply(pd.to_numeric)
 
-        if match_info['Kamppoint'] in ['Ikke angivet', 'KU']:
+        if match_info['Kamppoint'] in ['Ikke angivet', 'KU', 'ANN']:
             df[['home_points', 'away_points']] = np.nan
         else:
             dash_idx = match_info['Kamppoint'].find('-')
