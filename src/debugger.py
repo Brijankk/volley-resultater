@@ -12,8 +12,8 @@ def test_scraper():
 
     age_groups = scraper.get_age_groups()
     league_df = scraper.get_league_ids(DISTRICT, GENDERS[0], season=2026, age_group='Senior')
-    # pool_df = scraper.get_pool_ids(2248)
-    # pool_df = scraper.get_pool_ids(2372)
+    pool_df = scraper.get_pool_ids(2248)
+    pool_df = scraper.get_pool_ids(2372)
     scraper.scrape_pool_schedule(4124) # No matches played
     scraper.scrape_pool_schedule(4151) # Incomplete matches
     scraper.scrape_pool_schedule(4123) # Some matches miss starttime
@@ -173,8 +173,8 @@ def test_exporter():
 
 if __name__ == '__main__':
     # get_all_leagues()
-    # test_scraper()
-    scrape_tournaments()
+    test_scraper()
+    # scrape_tournaments()
     # test_repo()
     # run_main()
     # test_exporter()
