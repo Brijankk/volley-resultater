@@ -362,7 +362,7 @@ function renderAll() {
 function renderDataMeta() {
   if (!state.metadata || !state.poolData) return;
   const metadata = state.metadata.metadata || {};
-  const validation = state.poolData.metadata?.validation || poolValidationFor(state.selectedPoolId);
+  const validation = state.poolData.metadata?.validation ?? poolValidationFor(state.selectedPoolId);
   const exported = metadata.exported_at ? formatDateTime(metadata.exported_at) : "Ukendt";
 
   els.connectionStatus.textContent = navigator.onLine ? "Online" : "Offline - viser gemte data";
@@ -370,7 +370,9 @@ function renderDataMeta() {
   els.updatedStatus.textContent = `Senest opdateret: ${exported}`;
   els.updatedStatus.className = "status-pill";
 
-  const hasPointsWarning = validation.affected_fields.includes("points");
+  const hasPointsWarning = typeof validation === "boolean"
+    ? validation
+    : Boolean(validation.affected_fields?.includes("points"));
   els.validationMeta.className = `validation-meta ${hasPointsWarning ? "data-warning" : "hidden"}`;
   els.validationMeta.textContent = hasPointsWarning
     ? "Officiel stilling og beregnet udvikling afviger på point."

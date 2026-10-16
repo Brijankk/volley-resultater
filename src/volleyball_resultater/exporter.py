@@ -75,8 +75,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             pool_validation[str(pool_id)] = validation
         # Rename fields and convert to records only at the frontend boundary.
         payloads.append((str(pool_id), {
-            "metadata": {**metadata, "validation": validation,
-                         "ranking_note": "Rank is indicative; validation compares statistics, not tie-break order."},
+            "metadata": {**metadata, "validation": "points" in validation["affected_fields"]},
             "pool": records(frontend_pools(pools.loc[pools["pool_id"].eq(pool_id)]))[0],
             "source_standings": records(pool_rankings.assign(pool_id=str(pool_id))),
             "matches": records(frontend_matches(pool_matches)),

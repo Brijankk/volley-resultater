@@ -81,7 +81,7 @@ class ExporterNewTests(unittest.TestCase):
         self.assertEqual(data['set_results'][0]['home_points'], 25)
         self.assertEqual(data['computed_standings'][0]['points'], 2)
         self.assertEqual(data['cumulative_points'][-2]['cumulative_points'], 2)
-        self.assertEqual(data['metadata']['validation']['mismatch_count'], 0)
+        self.assertIs(data['metadata']['validation'], False)
 
     def test_upcoming_and_undated_matches_and_repeated_pair(self):
         self.seed_pool()
@@ -106,9 +106,11 @@ class ExporterNewTests(unittest.TestCase):
         self.ranking('A', 2, 1, 1, 0, 3, 2, 25, 20, 3)
         self.ranking('B', 1, 1, 0, 1, 2, 3, 20, 25, 1)
         data = self.export()
-        self.assertEqual(data['metadata']['validation']['affected_fields'], ['points'])
-        self.assertEqual(data['metadata']['validation']['mismatch_count'], 1)
-        self.assertNotIn('rank', data['metadata']['validation']['compared_fields'])
+        self.assertIs(data['metadata']['validation'], True)
+        index = json.loads((self.output / "leagues.json").read_text(encoding="utf-8"))
+        self.assertEqual(index['pool_validation']['42']['affected_fields'], ['points'])
+        self.assertEqual(index['pool_validation']['42']['mismatch_count'], 1)
+        self.assertNotIn('rank', index['pool_validation']['42']['compared_fields'])
 
     def test_forfeit_uses_administrative_ball_scores(self):
         self.seed_pool()
@@ -140,7 +142,7 @@ class ExporterNewTests(unittest.TestCase):
         self.ranking('A', 1, 0, 0, 0, 0, 0, 0, 0, 0)
         self.ranking('B', 2, 0, 0, 0, 0, 0, 0, 0, 0)
         data = self.export()
-        self.assertEqual(data['metadata']['validation']['mismatch_count'], 0)
+        self.assertIs(data['metadata']['validation'], False)
         self.assertEqual(len(data['cumulative_points']), 2)
         self.assertEqual(data['set_results'], [])
         self.assertIsNone(data['result_matrix']['A']['B'])
