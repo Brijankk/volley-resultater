@@ -76,10 +76,12 @@ class ExporterNewTests(unittest.TestCase):
         self.assertNotIn('home_sets', data['matches'][0])
         self.assertNotIn('id', data['matches'][0])
         self.assertNotIn('match_id', data['matches'][0])
-        self.assertEqual(data['set_results'][0]['kamp_id'], 1)
+        self.assertNotIn('set_results', data)
+        self.assertEqual(data['matches'][0]['kamp_id'], 1)
         self.assertEqual(data['cumulative_points'][-2]['kamp_id'], 1)
-        self.assertEqual(data['set_results'][0]['home_points'], 25)
-        self.assertEqual(data['computed_standings'][0]['points'], 2)
+        self.assertEqual(data['matches'][0]['home_balls1'], 25)
+        self.assertEqual(data['matches'][0]['away_balls1'], 20)
+        self.assertNotIn('computed_standings', data)
         self.assertEqual(data['cumulative_points'][-2]['cumulative_points'], 2)
         self.assertIs(data['metadata']['validation'], False)
 
@@ -116,15 +118,13 @@ class ExporterNewTests(unittest.TestCase):
         self.seed_pool()
         self.match(home_sets=3, away_sets=0, home_points=3, away_points=0, note='UHT', balls=False)
         data = self.export()
-        self.assertEqual(data['computed_standings'][0]['balls_won'], 75)
-        self.assertEqual(data['computed_standings'][0]['balls_lost'], 0)
+        self.assertNotIn('computed_standings', data)
 
     def test_missing_awarded_points_are_not_inferred(self):
         self.seed_pool()
         self.match(home_points=None)
         data = self.export()
-        a = next(row for row in data['computed_standings'] if row['team_name'] == 'A')
-        self.assertIsNone(a['points'])
+        self.assertNotIn('computed_standings', data)
         self.assertIsNone(data['cumulative_points'][-2]['cumulative_points'])
 
     def test_missing_points_propagate_to_later_chart_totals(self):
@@ -144,7 +144,7 @@ class ExporterNewTests(unittest.TestCase):
         data = self.export()
         self.assertIs(data['metadata']['validation'], False)
         self.assertEqual(len(data['cumulative_points']), 2)
-        self.assertEqual(data['set_results'], [])
+        self.assertNotIn('set_results', data)
         self.assertIsNone(data['result_matrix']['A']['B'])
 
     def test_empty_pool_and_empty_database(self):

@@ -793,9 +793,14 @@ function renderMatchDetail() {
 }
 
 function renderMatchDetailItem(match) {
-  const sets = state.poolData.set_results
-    .filter((set) => set.kamp_id === match.kamp_id && set.home_points !== null && set.away_points !== null)
-    .sort((a, b) => a.set_number - b.set_number);
+  const sets = Array.from({ length: 5 }, (_, index) => {
+    const setNumber = index + 1;
+    return {
+      set_number: setNumber,
+      home_points: match[`home_balls${setNumber}`],
+      away_points: match[`away_balls${setNumber}`],
+    };
+  }).filter((set) => set.home_points != null && set.away_points != null);
   const hasResult = match.result_home_sets !== null && match.result_away_sets !== null;
   return `
     <article class="match-detail-card">

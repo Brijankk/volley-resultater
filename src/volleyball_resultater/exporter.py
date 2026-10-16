@@ -79,7 +79,6 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             "pool": records(frontend_pools(pools.loc[pools["pool_id"].eq(pool_id)]))[0],
             "source_standings": records(pool_rankings.assign(pool_id=str(pool_id))),
             "matches": records(frontend_matches(pool_matches)),
-            "set_results": records(sets.rename(columns={"match_id": "kamp_id"})),
             "cumulative_points": records(events.rename(columns={"match_id": "kamp_id"})),
             "result_matrix": matrix.astype(object).where(matrix.notna(), None).to_dict(orient="index"),
         }))
