@@ -12,7 +12,6 @@ from . import __version__
 from .paths import DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
 
 
-POINT_SOURCE = "source_points"
 STAT_FIELDS = [
     "games_played", "games_won", "games_lost", "sets_won", "sets_lost",
     "balls_won", "balls_lost", "points",
@@ -76,14 +75,12 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             pool_validation[str(pool_id)] = validation
         # Rename fields and convert to records only at the frontend boundary.
         payloads.append((str(pool_id), {
-            "metadata": {**metadata, "rule_profile": POINT_SOURCE, "validation": validation,
+            "metadata": {**metadata, "validation": validation,
                          "ranking_note": "Rank is indicative; validation compares statistics, not tie-break order."},
             "pool": records(frontend_pools(pools.loc[pools["pool_id"].eq(pool_id)]))[0],
             "source_standings": records(pool_rankings.assign(pool_id=str(pool_id))),
-            "computed_standings": records(computed.assign(pool_id=str(pool_id))),
             "matches": records(frontend_matches(pool_matches)),
             "set_results": records(sets.rename(columns={"match_id": "kamp_id"})),
-            "rule_profile": POINT_SOURCE,
             "cumulative_points": records(events.rename(columns={"match_id": "kamp_id"})),
             "result_matrix": matrix.astype(object).where(matrix.notna(), None).to_dict(orient="index"),
         }))
@@ -256,7 +253,7 @@ def derive_pool(pool_id: int, rankings: pd.DataFrame, matches: pd.DataFrame,
         sort_points=lambda df: df["points"].fillna(0),
     ).sort_values(["sort_points", "set_difference", "ball_difference", "team_name"],
                   ascending=[False, False, False, True]).drop(columns=["sort_points", "set_difference", "ball_difference"])
-    computed = computed.assign(pool_id=pool_id, rule_profile=POINT_SOURCE, rank=range(1, len(computed) + 1))
+    computed = computed.assign(pool_id=pool_id, rank=range(1, len(computed) + 1))
     team_matches["game_number"] = grouped.cumcount() + 1
     team_matches["cumulative_points"] = grouped["points"].cumsum(skipna=False)
     baseline = pd.DataFrame({"team": teams, "date": pd.NaT, "game_number": 0,
