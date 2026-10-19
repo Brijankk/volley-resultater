@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-18T00:57:19+00:00",
+    "exported_at": "2026-10-19T01:08:27+00:00",
     "scraper_version": "1.0.2",
     "point_source": "scraped_tournament_points",
     "rule_profile": "source_points",
@@ -42,18 +42,31 @@
       "pool_id": "4140",
       "rank": 1,
       "team_name": "Holte IF",
+      "games_played": 2,
+      "games_won": 2,
+      "games_lost": 0,
+      "sets_won": 6,
+      "sets_lost": 0,
+      "balls_won": 150,
+      "balls_lost": 77,
+      "points": 6
+    },
+    {
+      "pool_id": "4140",
+      "rank": 2,
+      "team_name": "ASV Elite",
       "games_played": 1,
       "games_won": 1,
       "games_lost": 0,
       "sets_won": 3,
       "sets_lost": 0,
       "balls_won": 75,
-      "balls_lost": 38,
+      "balls_lost": 42,
       "points": 3
     },
     {
       "pool_id": "4140",
-      "rank": 2,
+      "rank": 3,
       "team_name": "Ikast KFUM",
       "games_played": 2,
       "games_won": 1,
@@ -66,33 +79,7 @@
     },
     {
       "pool_id": "4140",
-      "rank": 3,
-      "team_name": "Brøndby VK",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "4140",
       "rank": 4,
-      "team_name": "Hvidovre VK",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "4140",
-      "rank": 5,
       "team_name": "Farum VK",
       "games_played": 0,
       "games_won": 0,
@@ -105,20 +92,7 @@
     },
     {
       "pool_id": "4140",
-      "rank": 6,
-      "team_name": "ASV Elite",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "4140",
-      "rank": 7,
+      "rank": 5,
       "team_name": "Aalborg Volleyball",
       "games_played": 0,
       "games_won": 0,
@@ -131,7 +105,7 @@
     },
     {
       "pool_id": "4140",
-      "rank": 8,
+      "rank": 6,
       "team_name": "Team Køge",
       "games_played": 0,
       "games_won": 0,
@@ -144,7 +118,7 @@
     },
     {
       "pool_id": "4140",
-      "rank": 9,
+      "rank": 7,
       "team_name": "DHV Odense",
       "games_played": 0,
       "games_won": 0,
@@ -157,7 +131,7 @@
     },
     {
       "pool_id": "4140",
-      "rank": 10,
+      "rank": 8,
       "team_name": "Gentofte Volley",
       "games_played": 1,
       "games_won": 0,
@@ -167,22 +141,62 @@
       "balls_won": 85,
       "balls_lost": 99,
       "points": 0
+    },
+    {
+      "pool_id": "4140",
+      "rank": 9,
+      "team_name": "Brøndby VK",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 0,
+      "sets_lost": 3,
+      "balls_won": 42,
+      "balls_lost": 75,
+      "points": 0
+    },
+    {
+      "pool_id": "4140",
+      "rank": 10,
+      "team_name": "Hvidovre VK",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 0,
+      "sets_lost": 3,
+      "balls_won": 39,
+      "balls_lost": 75,
+      "points": 0
     }
   ],
   "computed_standings": [
     {
       "team_name": "Holte IF",
+      "games_played": 2,
+      "games_won": 2,
+      "games_lost": 0,
+      "sets_won": 6,
+      "sets_lost": 0,
+      "balls_won": 150,
+      "balls_lost": 77,
+      "points": 6,
+      "pool_id": "4140",
+      "rule_profile": "source_points",
+      "rank": 1
+    },
+    {
+      "team_name": "ASV Elite",
       "games_played": 1,
       "games_won": 1,
       "games_lost": 0,
       "sets_won": 3,
       "sets_lost": 0,
       "balls_won": 75,
-      "balls_lost": 38,
+      "balls_lost": 42,
       "points": 3,
       "pool_id": "4140",
       "rule_profile": "source_points",
-      "rank": 1
+      "rank": 2
     },
     {
       "team_name": "Ikast KFUM",
@@ -194,20 +208,6 @@
       "balls_won": 137,
       "balls_lost": 160,
       "points": 3,
-      "pool_id": "4140",
-      "rule_profile": "source_points",
-      "rank": 2
-    },
-    {
-      "team_name": "ASV Elite",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0,
       "pool_id": "4140",
       "rule_profile": "source_points",
       "rank": 3
@@ -227,7 +227,7 @@
       "rank": 4
     },
     {
-      "team_name": "Brøndby VK",
+      "team_name": "DHV Odense",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -241,7 +241,7 @@
       "rank": 5
     },
     {
-      "team_name": "DHV Odense",
+      "team_name": "Farum VK",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -255,7 +255,7 @@
       "rank": 6
     },
     {
-      "team_name": "Farum VK",
+      "team_name": "Team Køge",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -269,34 +269,6 @@
       "rank": 7
     },
     {
-      "team_name": "Hvidovre VK",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0,
-      "pool_id": "4140",
-      "rule_profile": "source_points",
-      "rank": 8
-    },
-    {
-      "team_name": "Team Køge",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0,
-      "pool_id": "4140",
-      "rule_profile": "source_points",
-      "rank": 9
-    },
-    {
       "team_name": "Gentofte Volley",
       "games_played": 1,
       "games_won": 0,
@@ -305,6 +277,34 @@
       "sets_lost": 3,
       "balls_won": 85,
       "balls_lost": 99,
+      "points": 0,
+      "pool_id": "4140",
+      "rule_profile": "source_points",
+      "rank": 8
+    },
+    {
+      "team_name": "Brøndby VK",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 0,
+      "sets_lost": 3,
+      "balls_won": 42,
+      "balls_lost": 75,
+      "points": 0,
+      "pool_id": "4140",
+      "rule_profile": "source_points",
+      "rank": 9
+    },
+    {
+      "team_name": "Hvidovre VK",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 0,
+      "sets_lost": 3,
+      "balls_won": 39,
+      "balls_lost": 75,
       "points": 0,
       "pool_id": "4140",
       "rule_profile": "source_points",
@@ -382,16 +382,16 @@
       "address": "Ny Holtehal  Kongevejen 464 2840 Holte Danmark",
       "referee1": "Olaf Jørs",
       "referee2": "Sten Storgaard",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 14,
+      "home_balls2": 25,
+      "away_balls2": 15,
+      "home_balls3": 25,
+      "away_balls3": 10,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -411,16 +411,16 @@
       "address": "Stadionhal 1  Brøndby Stadion 8 2605 Brøndby Danmark",
       "referee1": "Michael Andersen",
       "referee2": "Tim Poulsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 0,
+      "result_away_sets": 3,
+      "home_points": 0,
+      "away_points": 3,
+      "home_balls1": 12,
+      "away_balls1": 25,
+      "home_balls2": 19,
+      "away_balls2": 25,
+      "home_balls3": 11,
+      "away_balls3": 25,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2925,6 +2925,30 @@
   ],
   "set_results": [
     {
+      "kamp_id": 76439,
+      "set_number": 1,
+      "home_points": 12,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76439,
+      "set_number": 2,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76439,
+      "set_number": 3,
+      "home_points": 11,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
       "kamp_id": 76481,
       "set_number": 1,
       "home_points": 26,
@@ -2979,6 +3003,30 @@
       "away_points": 25,
       "home_set_won": 0,
       "away_set_won": 1
+    },
+    {
+      "kamp_id": 76504,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 14,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76504,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76504,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 10,
+      "home_set_won": 1,
+      "away_set_won": 0
     }
   ],
   "rule_profile": "source_points",
@@ -3094,6 +3142,38 @@
       "points": 3,
       "cumulative_points": 3,
       "kamp_id": 76481
+    },
+    {
+      "team": "Holte IF",
+      "date": "2026-10-18T13:30:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 76504
+    },
+    {
+      "team": "Hvidovre VK",
+      "date": "2026-10-18T13:30:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 76504
+    },
+    {
+      "team": "Brøndby VK",
+      "date": "2026-10-18T14:00:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 76439
+    },
+    {
+      "team": "ASV Elite",
+      "date": "2026-10-18T14:00:00",
+      "game_number": 1,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 76439
     }
   ],
   "result_matrix": {
@@ -3122,7 +3202,7 @@
       "Team Køge": null
     },
     "Brøndby VK": {
-      "ASV Elite": null,
+      "ASV Elite": "0-3",
       "Aalborg Volleyball": null,
       "Brøndby VK": "",
       "DHV Odense": null,
@@ -3177,7 +3257,7 @@
       "Farum VK": null,
       "Gentofte Volley": null,
       "Holte IF": "",
-      "Hvidovre VK": null,
+      "Hvidovre VK": "3-0",
       "Ikast KFUM": null,
       "Team Køge": null
     },
