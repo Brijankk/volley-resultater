@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-21T01:40:52+00:00",
+    "exported_at": "2026-10-22T01:37:45+00:00",
     "scraper_version": "1.0.2",
     "point_source": "scraped_tournament_points",
     "rule_profile": "source_points",
@@ -42,14 +42,14 @@
       "pool_id": "4127",
       "rank": 1,
       "team_name": "Randers VK",
-      "games_played": 2,
-      "games_won": 2,
+      "games_played": 3,
+      "games_won": 3,
       "games_lost": 0,
-      "sets_won": 6,
+      "sets_won": 9,
       "sets_lost": 0,
-      "balls_won": 151,
-      "balls_lost": 102,
-      "points": 6
+      "balls_won": 226,
+      "balls_lost": 149,
+      "points": 9
     },
     {
       "pool_id": "4127",
@@ -145,19 +145,6 @@
     {
       "pool_id": "4127",
       "rank": 9,
-      "team_name": "ASV Aarhus.3",
-      "games_played": 2,
-      "games_won": 0,
-      "games_lost": 2,
-      "sets_won": 1,
-      "sets_lost": 6,
-      "balls_won": 143,
-      "balls_lost": 174,
-      "points": 0
-    },
-    {
-      "pool_id": "4127",
-      "rank": 10,
       "team_name": "Aalborg Volleyball.3",
       "games_played": 2,
       "games_won": 0,
@@ -167,19 +154,32 @@
       "balls_won": 88,
       "balls_lost": 150,
       "points": 0
+    },
+    {
+      "pool_id": "4127",
+      "rank": 10,
+      "team_name": "ASV Aarhus.3",
+      "games_played": 3,
+      "games_won": 0,
+      "games_lost": 3,
+      "sets_won": 1,
+      "sets_lost": 9,
+      "balls_won": 190,
+      "balls_lost": 249,
+      "points": 0
     }
   ],
   "computed_standings": [
     {
       "team_name": "Randers VK",
-      "games_played": 2,
-      "games_won": 2,
+      "games_played": 3,
+      "games_won": 3,
       "games_lost": 0,
-      "sets_won": 6,
+      "sets_won": 9,
       "sets_lost": 0,
-      "balls_won": 151,
-      "balls_lost": 102,
-      "points": 6,
+      "balls_won": 226,
+      "balls_lost": 149,
+      "points": 9,
       "pool_id": "4127",
       "rule_profile": "source_points",
       "rank": 1
@@ -283,20 +283,6 @@
       "rank": 8
     },
     {
-      "team_name": "ASV Aarhus.3",
-      "games_played": 2,
-      "games_won": 0,
-      "games_lost": 2,
-      "sets_won": 1,
-      "sets_lost": 6,
-      "balls_won": 143,
-      "balls_lost": 174,
-      "points": 0,
-      "pool_id": "4127",
-      "rule_profile": "source_points",
-      "rank": 9
-    },
-    {
       "team_name": "Aalborg Volleyball.3",
       "games_played": 2,
       "games_won": 0,
@@ -305,6 +291,20 @@
       "sets_lost": 6,
       "balls_won": 88,
       "balls_lost": 150,
+      "points": 0,
+      "pool_id": "4127",
+      "rule_profile": "source_points",
+      "rank": 9
+    },
+    {
+      "team_name": "ASV Aarhus.3",
+      "games_played": 3,
+      "games_won": 0,
+      "games_lost": 3,
+      "sets_won": 1,
+      "sets_lost": 9,
+      "balls_won": 190,
+      "balls_lost": 249,
       "points": 0,
       "pool_id": "4127",
       "rule_profile": "source_points",
@@ -614,16 +614,16 @@
       "address": "Randers Arena Hal 1  Fyensgade 1 8900 Randers C Danmark",
       "referee1": "Birger Jensen",
       "referee2": "Bruno Schmidt Bennedsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 17,
+      "home_balls2": 25,
+      "away_balls2": 15,
+      "home_balls3": 25,
+      "away_balls3": 15,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -902,8 +902,8 @@
       "venue": "Vestereng Idrætszone",
       "court": "1",
       "address": "Vestereng Idrætszone  Paludan-Müllers Vej 110 8200 Århus N Danmark",
-      "referee1": "Vakant dommer",
-      "referee2": "Vakant dommer",
+      "referee1": "Per Vind Petersen",
+      "referee2": "Bruno Schmidt Bennedsen",
       "result_home_sets": null,
       "result_away_sets": null,
       "home_points": null,
@@ -3219,6 +3219,30 @@
       "away_points": 17,
       "home_set_won": 0,
       "away_set_won": 1
+    },
+    {
+      "kamp_id": 76061,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76061,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76061,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
     }
   ],
   "rule_profile": "source_points",
@@ -3462,6 +3486,22 @@
       "points": 3,
       "cumulative_points": 3,
       "kamp_id": 76054
+    },
+    {
+      "team": "Randers VK",
+      "date": "2026-10-21T19:30:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 9,
+      "kamp_id": 76061
+    },
+    {
+      "team": "ASV Aarhus.3",
+      "date": "2026-10-21T19:30:00",
+      "game_number": 3,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 76061
     }
   ],
   "result_matrix": {
@@ -3526,7 +3566,7 @@
       "VK Vendsyssel": null
     },
     "Randers VK": {
-      "ASV Aarhus.3": null,
+      "ASV Aarhus.3": "3-0",
       "Aabyhøj IF": null,
       "Aalborg Volleyball.3": "3-0",
       "Hjerm FIF": null,
