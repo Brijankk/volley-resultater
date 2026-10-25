@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-24T01:40:02+00:00",
+    "exported_at": "2026-10-25T01:08:51+00:00",
     "scraper_version": "1.0.2",
     "point_source": "scraped_tournament_points",
     "rule_profile": "source_points",
@@ -67,6 +67,19 @@
     {
       "pool_id": "4140",
       "rank": 3,
+      "team_name": "Brøndby VK",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 3,
+      "sets_lost": 3,
+      "balls_won": 117,
+      "balls_lost": 132,
+      "points": 3
+    },
+    {
+      "pool_id": "4140",
+      "rank": 4,
       "team_name": "Ikast KFUM",
       "games_played": 2,
       "games_won": 1,
@@ -79,21 +92,8 @@
     },
     {
       "pool_id": "4140",
-      "rank": 4,
-      "team_name": "Farum VK",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "4140",
       "rank": 5,
-      "team_name": "Team Køge",
+      "team_name": "Farum VK",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -132,13 +132,13 @@
     {
       "pool_id": "4140",
       "rank": 8,
-      "team_name": "Brøndby VK",
+      "team_name": "Team Køge",
       "games_played": 1,
       "games_won": 0,
       "games_lost": 1,
       "sets_won": 0,
       "sets_lost": 3,
-      "balls_won": 42,
+      "balls_won": 57,
       "balls_lost": 75,
       "points": 0
     },
@@ -199,6 +199,20 @@
       "rank": 2
     },
     {
+      "team_name": "Brøndby VK",
+      "games_played": 2,
+      "games_won": 1,
+      "games_lost": 1,
+      "sets_won": 3,
+      "sets_lost": 3,
+      "balls_won": 117,
+      "balls_lost": 132,
+      "points": 3,
+      "pool_id": "4140",
+      "rule_profile": "source_points",
+      "rank": 3
+    },
+    {
       "team_name": "Ikast KFUM",
       "games_played": 2,
       "games_won": 1,
@@ -210,7 +224,7 @@
       "points": 3,
       "pool_id": "4140",
       "rule_profile": "source_points",
-      "rank": 3
+      "rank": 4
     },
     {
       "team_name": "DHV Odense",
@@ -224,24 +238,10 @@
       "points": 0,
       "pool_id": "4140",
       "rule_profile": "source_points",
-      "rank": 4
-    },
-    {
-      "team_name": "Farum VK",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0,
-      "pool_id": "4140",
-      "rule_profile": "source_points",
       "rank": 5
     },
     {
-      "team_name": "Team Køge",
+      "team_name": "Farum VK",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -269,13 +269,13 @@
       "rank": 7
     },
     {
-      "team_name": "Brøndby VK",
+      "team_name": "Team Køge",
       "games_played": 1,
       "games_won": 0,
       "games_lost": 1,
       "sets_won": 0,
       "sets_lost": 3,
-      "balls_won": 42,
+      "balls_won": 57,
       "balls_lost": 75,
       "points": 0,
       "pool_id": "4140",
@@ -469,16 +469,16 @@
       "address": "Stadionhal 1  Brøndby Stadion 8 2605 Brøndby Danmark",
       "referee1": "Sten Storgaard",
       "referee2": "Olaf Jørs",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 21,
+      "home_balls2": 25,
+      "away_balls2": 15,
+      "home_balls3": 25,
+      "away_balls3": 21,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2949,6 +2949,30 @@
       "away_set_won": 1
     },
     {
+      "kamp_id": 76478,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76478,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76478,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
       "kamp_id": 76481,
       "set_number": 1,
       "home_points": 26,
@@ -3214,6 +3238,22 @@
       "points": 0,
       "cumulative_points": 0,
       "kamp_id": 76506
+    },
+    {
+      "team": "Brøndby VK",
+      "date": "2026-10-24T14:00:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 76478
+    },
+    {
+      "team": "Team Køge",
+      "date": "2026-10-24T14:00:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 76478
     }
   ],
   "result_matrix": {
@@ -3251,7 +3291,7 @@
       "Holte IF": null,
       "Hvidovre VK": null,
       "Ikast KFUM": null,
-      "Team Køge": null
+      "Team Køge": "3-0"
     },
     "DHV Odense": {
       "ASV Elite": null,

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-24T01:40:02+00:00",
+    "exported_at": "2026-10-25T01:08:51+00:00",
     "scraper_version": "1.0.2",
     "point_source": "scraped_tournament_points",
     "rule_profile": "source_points",
@@ -42,14 +42,14 @@
       "pool_id": "4123",
       "rank": 1,
       "team_name": "DSIO Odense",
-      "games_played": 2,
-      "games_won": 2,
+      "games_played": 3,
+      "games_won": 3,
       "games_lost": 0,
-      "sets_won": 6,
+      "sets_won": 9,
       "sets_lost": 1,
-      "balls_won": 170,
-      "balls_lost": 128,
-      "points": 6
+      "balls_won": 245,
+      "balls_lost": 188,
+      "points": 9
     },
     {
       "pool_id": "4123",
@@ -132,19 +132,6 @@
     {
       "pool_id": "4123",
       "rank": 8,
-      "team_name": "Volleyball Esbjerg",
-      "games_played": 1,
-      "games_won": 0,
-      "games_lost": 1,
-      "sets_won": 0,
-      "sets_lost": 3,
-      "balls_won": 48,
-      "balls_lost": 75,
-      "points": 0
-    },
-    {
-      "pool_id": "4123",
-      "rank": 9,
       "team_name": "Kolding VK.2",
       "games_played": 2,
       "games_won": 0,
@@ -154,19 +141,32 @@
       "balls_won": 109,
       "balls_lost": 170,
       "points": 0
+    },
+    {
+      "pool_id": "4123",
+      "rank": 9,
+      "team_name": "Volleyball Esbjerg",
+      "games_played": 2,
+      "games_won": 0,
+      "games_lost": 2,
+      "sets_won": 0,
+      "sets_lost": 6,
+      "balls_won": 108,
+      "balls_lost": 150,
+      "points": 0
     }
   ],
   "computed_standings": [
     {
       "team_name": "DSIO Odense",
-      "games_played": 2,
-      "games_won": 2,
+      "games_played": 3,
+      "games_won": 3,
       "games_lost": 0,
-      "sets_won": 6,
+      "sets_won": 9,
       "sets_lost": 1,
-      "balls_won": 170,
-      "balls_lost": 128,
-      "points": 6,
+      "balls_won": 245,
+      "balls_lost": 188,
+      "points": 9,
       "pool_id": "4123",
       "rule_profile": "source_points",
       "rank": 1
@@ -256,20 +256,6 @@
       "rank": 7
     },
     {
-      "team_name": "Volleyball Esbjerg",
-      "games_played": 1,
-      "games_won": 0,
-      "games_lost": 1,
-      "sets_won": 0,
-      "sets_lost": 3,
-      "balls_won": 48,
-      "balls_lost": 75,
-      "points": 0,
-      "pool_id": "4123",
-      "rule_profile": "source_points",
-      "rank": 8
-    },
-    {
       "team_name": "Kolding VK.2",
       "games_played": 2,
       "games_won": 0,
@@ -278,6 +264,20 @@
       "sets_lost": 6,
       "balls_won": 109,
       "balls_lost": 170,
+      "points": 0,
+      "pool_id": "4123",
+      "rule_profile": "source_points",
+      "rank": 8
+    },
+    {
+      "team_name": "Volleyball Esbjerg",
+      "games_played": 2,
+      "games_won": 0,
+      "games_lost": 2,
+      "sets_won": 0,
+      "sets_lost": 6,
+      "balls_won": 108,
+      "balls_lost": 150,
       "points": 0,
       "pool_id": "4123",
       "rule_profile": "source_points",
@@ -529,16 +529,16 @@
       "address": "UC-Syd Skolebakken 171 6705 Esbjerg Ø Danmark",
       "referee1": "Birger Jensen",
       "referee2": "Ruslan Khodak",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 0,
+      "result_away_sets": 3,
+      "home_points": 0,
+      "away_points": 3,
+      "home_balls1": 15,
+      "away_balls1": 25,
+      "home_balls2": 22,
+      "away_balls2": 25,
+      "home_balls3": 23,
+      "away_balls3": 25,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2574,6 +2574,30 @@
       "away_points": 14,
       "home_set_won": 1,
       "away_set_won": 0
+    },
+    {
+      "kamp_id": 75789,
+      "set_number": 1,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75789,
+      "set_number": 2,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75789,
+      "set_number": 3,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
     }
   ],
   "rule_profile": "source_points",
@@ -2761,6 +2785,22 @@
       "points": 0,
       "cumulative_points": 0,
       "kamp_id": 75785
+    },
+    {
+      "team": "Volleyball Esbjerg",
+      "date": "2026-10-24T10:30:00",
+      "game_number": 2,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 75789
+    },
+    {
+      "team": "DSIO Odense",
+      "date": "2026-10-24T10:30:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 9,
+      "kamp_id": 75789
     }
   ],
   "result_matrix": {
@@ -2855,7 +2895,7 @@
     "Volleyball Esbjerg": {
       "Aabenraa I&G": null,
       "DHV Odense.2": null,
-      "DSIO Odense": null,
+      "DSIO Odense": "0-3",
       "Hornsyld IF": null,
       "Kolding VK.2": null,
       "Midtfyns VK": "0-3",
