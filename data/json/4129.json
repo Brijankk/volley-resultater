@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-25T01:08:51+00:00",
+    "exported_at": "2026-10-26T04:09:24+00:00",
     "scraper_version": "1.0.2",
     "point_source": "scraped_tournament_points",
     "rule_profile": "source_points",
@@ -41,6 +41,19 @@
     {
       "pool_id": "4129",
       "rank": 1,
+      "team_name": "ASV Aarhus.2",
+      "games_played": 2,
+      "games_won": 2,
+      "games_lost": 0,
+      "sets_won": 6,
+      "sets_lost": 0,
+      "balls_won": 150,
+      "balls_lost": 79,
+      "points": 6
+    },
+    {
+      "pool_id": "4129",
+      "rank": 2,
       "team_name": "Volleyball Esbjerg",
       "games_played": 2,
       "games_won": 2,
@@ -53,7 +66,7 @@
     },
     {
       "pool_id": "4129",
-      "rank": 2,
+      "rank": 3,
       "team_name": "DHV Odense.2",
       "games_played": 2,
       "games_won": 2,
@@ -66,7 +79,7 @@
     },
     {
       "pool_id": "4129",
-      "rank": 3,
+      "rank": 4,
       "team_name": "Ikast KFUM.2",
       "games_played": 2,
       "games_won": 2,
@@ -79,7 +92,7 @@
     },
     {
       "pool_id": "4129",
-      "rank": 4,
+      "rank": 5,
       "team_name": "DSIO Odense",
       "games_played": 3,
       "games_won": 2,
@@ -92,33 +105,33 @@
     },
     {
       "pool_id": "4129",
-      "rank": 5,
-      "team_name": "ASV Aarhus.2",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 0,
-      "balls_won": 75,
-      "balls_lost": 43,
-      "points": 3
-    },
-    {
-      "pool_id": "4129",
       "rank": 6,
       "team_name": "Aalborg Volleyball.2",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 1,
-      "games_lost": 1,
-      "sets_won": 3,
-      "sets_lost": 3,
-      "balls_won": 126,
-      "balls_lost": 130,
+      "games_lost": 2,
+      "sets_won": 4,
+      "sets_lost": 6,
+      "balls_won": 211,
+      "balls_lost": 224,
       "points": 3
     },
     {
       "pool_id": "4129",
       "rank": 7,
+      "team_name": "SIK Viborg",
+      "games_played": 3,
+      "games_won": 1,
+      "games_lost": 2,
+      "sets_won": 4,
+      "sets_lost": 7,
+      "balls_won": 242,
+      "balls_lost": 260,
+      "points": 3
+    },
+    {
+      "pool_id": "4129",
+      "rank": 8,
       "team_name": "Bedsted KFUM",
       "games_played": 3,
       "games_won": 0,
@@ -131,7 +144,7 @@
     },
     {
       "pool_id": "4129",
-      "rank": 8,
+      "rank": 9,
       "team_name": "IF Lyseng",
       "games_played": 1,
       "games_won": 0,
@@ -144,32 +157,33 @@
     },
     {
       "pool_id": "4129",
-      "rank": 9,
-      "team_name": "SIK Viborg",
-      "games_played": 2,
-      "games_won": 0,
-      "games_lost": 2,
-      "sets_won": 1,
-      "sets_lost": 6,
-      "balls_won": 148,
-      "balls_lost": 175,
-      "points": 0
-    },
-    {
-      "pool_id": "4129",
       "rank": 10,
       "team_name": "Odense Volleyball",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 0,
-      "games_lost": 2,
+      "games_lost": 3,
       "sets_won": 0,
-      "sets_lost": 6,
-      "balls_won": 104,
-      "balls_lost": 152,
+      "sets_lost": 9,
+      "balls_won": 140,
+      "balls_lost": 227,
       "points": 0
     }
   ],
   "computed_standings": [
+    {
+      "team_name": "ASV Aarhus.2",
+      "games_played": 2,
+      "games_won": 2,
+      "games_lost": 0,
+      "sets_won": 6,
+      "sets_lost": 0,
+      "balls_won": 150,
+      "balls_lost": 79,
+      "points": 6,
+      "pool_id": "4129",
+      "rule_profile": "source_points",
+      "rank": 1
+    },
     {
       "team_name": "Volleyball Esbjerg",
       "games_played": 2,
@@ -182,7 +196,7 @@
       "points": 6,
       "pool_id": "4129",
       "rule_profile": "source_points",
-      "rank": 1
+      "rank": 2
     },
     {
       "team_name": "DHV Odense.2",
@@ -196,7 +210,7 @@
       "points": 6,
       "pool_id": "4129",
       "rule_profile": "source_points",
-      "rank": 2
+      "rank": 3
     },
     {
       "team_name": "Ikast KFUM.2",
@@ -210,7 +224,7 @@
       "points": 6,
       "pool_id": "4129",
       "rule_profile": "source_points",
-      "rank": 3
+      "rank": 4
     },
     {
       "team_name": "DSIO Odense",
@@ -224,35 +238,35 @@
       "points": 6,
       "pool_id": "4129",
       "rule_profile": "source_points",
-      "rank": 4
-    },
-    {
-      "team_name": "ASV Aarhus.2",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 0,
-      "balls_won": 75,
-      "balls_lost": 43,
-      "points": 3,
-      "pool_id": "4129",
-      "rule_profile": "source_points",
       "rank": 5
     },
     {
       "team_name": "Aalborg Volleyball.2",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 1,
-      "games_lost": 1,
-      "sets_won": 3,
-      "sets_lost": 3,
-      "balls_won": 126,
-      "balls_lost": 130,
+      "games_lost": 2,
+      "sets_won": 4,
+      "sets_lost": 6,
+      "balls_won": 211,
+      "balls_lost": 224,
       "points": 3,
       "pool_id": "4129",
       "rule_profile": "source_points",
       "rank": 6
+    },
+    {
+      "team_name": "SIK Viborg",
+      "games_played": 3,
+      "games_won": 1,
+      "games_lost": 2,
+      "sets_won": 4,
+      "sets_lost": 7,
+      "balls_won": 242,
+      "balls_lost": 260,
+      "points": 3,
+      "pool_id": "4129",
+      "rule_profile": "source_points",
+      "rank": 7
     },
     {
       "team_name": "Bedsted KFUM",
@@ -266,7 +280,7 @@
       "points": 2,
       "pool_id": "4129",
       "rule_profile": "source_points",
-      "rank": 7
+      "rank": 8
     },
     {
       "team_name": "IF Lyseng",
@@ -280,31 +294,17 @@
       "points": 0,
       "pool_id": "4129",
       "rule_profile": "source_points",
-      "rank": 8
-    },
-    {
-      "team_name": "SIK Viborg",
-      "games_played": 2,
-      "games_won": 0,
-      "games_lost": 2,
-      "sets_won": 1,
-      "sets_lost": 6,
-      "balls_won": 148,
-      "balls_lost": 175,
-      "points": 0,
-      "pool_id": "4129",
-      "rule_profile": "source_points",
       "rank": 9
     },
     {
       "team_name": "Odense Volleyball",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 0,
-      "games_lost": 2,
+      "games_lost": 3,
       "sets_won": 0,
-      "sets_lost": 6,
-      "balls_won": 104,
-      "balls_lost": 152,
+      "sets_lost": 9,
+      "balls_won": 140,
+      "balls_lost": 227,
       "points": 0,
       "pool_id": "4129",
       "rule_profile": "source_points",
@@ -643,18 +643,18 @@
       "address": "Finderuphøj Hallen  Spættevej 2 8800 Viborg Danmark",
       "referee1": "Bruno Schmidt Bennedsen",
       "referee2": "Kaj Verner Kappel Krongård Hansen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 15,
+      "home_balls2": 25,
+      "away_balls2": 22,
+      "home_balls3": 19,
+      "away_balls3": 25,
+      "home_balls4": 25,
+      "away_balls4": 23,
       "home_balls5": null,
       "away_balls5": null,
       "result_note": "",
@@ -672,16 +672,16 @@
       "address": "Tietgenskolen BOXEN  Elmelundsvej 10 5200 Odense V Danmark",
       "referee1": "Morten Andersen",
       "referee2": "Lars B. Nielsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 0,
+      "result_away_sets": 3,
+      "home_points": 0,
+      "away_points": 3,
+      "home_balls1": 10,
+      "away_balls1": 25,
+      "home_balls2": 16,
+      "away_balls2": 25,
+      "home_balls3": 10,
+      "away_balls3": 25,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -3203,6 +3203,62 @@
       "away_points": 15,
       "home_set_won": 0,
       "away_set_won": 1
+    },
+    {
+      "kamp_id": 76351,
+      "set_number": 1,
+      "home_points": 10,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76351,
+      "set_number": 2,
+      "home_points": 16,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76351,
+      "set_number": 3,
+      "home_points": 10,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76353,
+      "set_number": 1,
+      "home_points": 25,
+      "away_points": 15,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76353,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 22,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 76353,
+      "set_number": 3,
+      "home_points": 19,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76353,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
     }
   ],
   "rule_profile": "source_points",
@@ -3446,6 +3502,38 @@
       "points": 3,
       "cumulative_points": 6,
       "kamp_id": 76350
+    },
+    {
+      "team": "SIK Viborg",
+      "date": "2026-10-25T10:00:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 3,
+      "kamp_id": 76353
+    },
+    {
+      "team": "Aalborg Volleyball.2",
+      "date": "2026-10-25T10:00:00",
+      "game_number": 3,
+      "points": 0,
+      "cumulative_points": 3,
+      "kamp_id": 76353
+    },
+    {
+      "team": "Odense Volleyball",
+      "date": "2026-10-25T12:30:00",
+      "game_number": 3,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 76351
+    },
+    {
+      "team": "ASV Aarhus.2",
+      "date": "2026-10-25T12:30:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 76351
     }
   ],
   "result_matrix": {
@@ -3534,7 +3622,7 @@
       "Volleyball Esbjerg": null
     },
     "Odense Volleyball": {
-      "ASV Aarhus.2": null,
+      "ASV Aarhus.2": "0-3",
       "Aalborg Volleyball.2": "0-3",
       "Bedsted KFUM": null,
       "DHV Odense.2": null,
@@ -3547,7 +3635,7 @@
     },
     "SIK Viborg": {
       "ASV Aarhus.2": null,
-      "Aalborg Volleyball.2": null,
+      "Aalborg Volleyball.2": "3-1",
       "Bedsted KFUM": null,
       "DHV Odense.2": "0-3",
       "DSIO Odense": null,

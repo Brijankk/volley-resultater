@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-25T01:08:51+00:00",
+    "exported_at": "2026-10-26T04:09:24+00:00",
     "scraper_version": "1.0.2",
     "point_source": "scraped_tournament_points",
     "rule_profile": "source_points",
@@ -54,6 +54,19 @@
     {
       "pool_id": "4119",
       "rank": 2,
+      "team_name": "Aalborg Volleyball",
+      "games_played": 2,
+      "games_won": 2,
+      "games_lost": 0,
+      "sets_won": 6,
+      "sets_lost": 2,
+      "balls_won": 187,
+      "balls_lost": 162,
+      "points": 6
+    },
+    {
+      "pool_id": "4119",
+      "rank": 3,
       "team_name": "DHV Odense",
       "games_played": 1,
       "games_won": 1,
@@ -66,7 +79,7 @@
     },
     {
       "pool_id": "4119",
-      "rank": 3,
+      "rank": 4,
       "team_name": "Randers VK",
       "games_played": 1,
       "games_won": 1,
@@ -75,19 +88,6 @@
       "sets_lost": 1,
       "balls_won": 100,
       "balls_lost": 88,
-      "points": 3
-    },
-    {
-      "pool_id": "4119",
-      "rank": 4,
-      "team_name": "Aalborg Volleyball",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 2,
-      "balls_won": 112,
-      "balls_lost": 111,
       "points": 3
     },
     {
@@ -159,13 +159,13 @@
       "pool_id": "4119",
       "rank": 10,
       "team_name": "Kolding VK",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 0,
-      "games_lost": 2,
+      "games_lost": 3,
       "sets_won": 0,
-      "sets_lost": 6,
-      "balls_won": 105,
-      "balls_lost": 150,
+      "sets_lost": 9,
+      "balls_won": 156,
+      "balls_lost": 225,
       "points": 0
     }
   ],
@@ -185,6 +185,20 @@
       "rank": 1
     },
     {
+      "team_name": "Aalborg Volleyball",
+      "games_played": 2,
+      "games_won": 2,
+      "games_lost": 0,
+      "sets_won": 6,
+      "sets_lost": 2,
+      "balls_won": 187,
+      "balls_lost": 162,
+      "points": 6,
+      "pool_id": "4119",
+      "rule_profile": "source_points",
+      "rank": 2
+    },
+    {
       "team_name": "DHV Odense",
       "games_played": 1,
       "games_won": 1,
@@ -196,7 +210,7 @@
       "points": 3,
       "pool_id": "4119",
       "rule_profile": "source_points",
-      "rank": 2
+      "rank": 3
     },
     {
       "team_name": "Randers VK",
@@ -207,20 +221,6 @@
       "sets_lost": 1,
       "balls_won": 100,
       "balls_lost": 88,
-      "points": 3,
-      "pool_id": "4119",
-      "rule_profile": "source_points",
-      "rank": 3
-    },
-    {
-      "team_name": "Aalborg Volleyball",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 2,
-      "balls_won": 112,
-      "balls_lost": 111,
       "points": 3,
       "pool_id": "4119",
       "rule_profile": "source_points",
@@ -298,13 +298,13 @@
     },
     {
       "team_name": "Kolding VK",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 0,
-      "games_lost": 2,
+      "games_lost": 3,
       "sets_won": 0,
-      "sets_lost": 6,
-      "balls_won": 105,
-      "balls_lost": 150,
+      "sets_lost": 9,
+      "balls_won": 156,
+      "balls_lost": 225,
       "points": 0,
       "pool_id": "4119",
       "rule_profile": "source_points",
@@ -556,16 +556,16 @@
       "address": "Bakkeskolens hal  Seestvej 6 6000 Kolding Danmark",
       "referee1": "Jim Holm Hansen",
       "referee2": "Carsten B. Nielsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 0,
+      "result_away_sets": 3,
+      "home_points": 0,
+      "away_points": 3,
+      "home_balls1": 16,
+      "away_balls1": 25,
+      "home_balls2": 20,
+      "away_balls2": 25,
+      "home_balls3": 15,
+      "away_balls3": 25,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -3123,6 +3123,30 @@
       "away_points": 19,
       "home_set_won": 1,
       "away_set_won": 0
+    },
+    {
+      "kamp_id": 75433,
+      "set_number": 1,
+      "home_points": 16,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75433,
+      "set_number": 2,
+      "home_points": 20,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75433,
+      "set_number": 3,
+      "home_points": 15,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
     }
   ],
   "rule_profile": "source_points",
@@ -3318,6 +3342,22 @@
       "points": 0,
       "cumulative_points": 3,
       "kamp_id": 75431
+    },
+    {
+      "team": "Kolding VK",
+      "date": "2026-10-25T16:00:00",
+      "game_number": 3,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 75433
+    },
+    {
+      "team": "Aalborg Volleyball",
+      "date": "2026-10-25T16:00:00",
+      "game_number": 2,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 75433
     }
   ],
   "result_matrix": {
@@ -3395,7 +3435,7 @@
     },
     "Kolding VK": {
       "ASV Aarhus.2": null,
-      "Aalborg Volleyball": null,
+      "Aalborg Volleyball": "0-3",
       "Aarhus 1900": null,
       "Bedsted KFUM": null,
       "DHV Odense": "0-3",

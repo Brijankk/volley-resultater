@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-25T01:08:51+00:00",
+    "exported_at": "2026-10-26T04:09:24+00:00",
     "scraper_version": "1.0.2",
     "point_source": "scraped_tournament_points",
     "rule_profile": "source_points",
@@ -41,6 +41,19 @@
     {
       "pool_id": "4140",
       "rank": 1,
+      "team_name": "Holte IF",
+      "games_played": 3,
+      "games_won": 3,
+      "games_lost": 0,
+      "sets_won": 9,
+      "sets_lost": 0,
+      "balls_won": 225,
+      "balls_lost": 128,
+      "points": 9
+    },
+    {
+      "pool_id": "4140",
+      "rank": 2,
       "team_name": "ASV Elite",
       "games_played": 2,
       "games_won": 2,
@@ -49,19 +62,6 @@
       "sets_lost": 0,
       "balls_won": 150,
       "balls_lost": 63,
-      "points": 6
-    },
-    {
-      "pool_id": "4140",
-      "rank": 2,
-      "team_name": "Holte IF",
-      "games_played": 2,
-      "games_won": 2,
-      "games_lost": 0,
-      "sets_won": 6,
-      "sets_lost": 0,
-      "balls_won": 150,
-      "balls_lost": 77,
       "points": 6
     },
     {
@@ -93,19 +93,6 @@
     {
       "pool_id": "4140",
       "rank": 5,
-      "team_name": "Farum VK",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "4140",
-      "rank": 6,
       "team_name": "DHV Odense",
       "games_played": 0,
       "games_won": 0,
@@ -118,7 +105,7 @@
     },
     {
       "pool_id": "4140",
-      "rank": 7,
+      "rank": 6,
       "team_name": "Gentofte Volley",
       "games_played": 1,
       "games_won": 0,
@@ -131,7 +118,7 @@
     },
     {
       "pool_id": "4140",
-      "rank": 8,
+      "rank": 7,
       "team_name": "Team Køge",
       "games_played": 1,
       "games_won": 0,
@@ -139,6 +126,19 @@
       "sets_won": 0,
       "sets_lost": 3,
       "balls_won": 57,
+      "balls_lost": 75,
+      "points": 0
+    },
+    {
+      "pool_id": "4140",
+      "rank": 8,
+      "team_name": "Farum VK",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 0,
+      "sets_lost": 3,
+      "balls_won": 51,
       "balls_lost": 75,
       "points": 0
     },
@@ -171,6 +171,20 @@
   ],
   "computed_standings": [
     {
+      "team_name": "Holte IF",
+      "games_played": 3,
+      "games_won": 3,
+      "games_lost": 0,
+      "sets_won": 9,
+      "sets_lost": 0,
+      "balls_won": 225,
+      "balls_lost": 128,
+      "points": 9,
+      "pool_id": "4140",
+      "rule_profile": "source_points",
+      "rank": 1
+    },
+    {
       "team_name": "ASV Elite",
       "games_played": 2,
       "games_won": 2,
@@ -179,20 +193,6 @@
       "sets_lost": 0,
       "balls_won": 150,
       "balls_lost": 63,
-      "points": 6,
-      "pool_id": "4140",
-      "rule_profile": "source_points",
-      "rank": 1
-    },
-    {
-      "team_name": "Holte IF",
-      "games_played": 2,
-      "games_won": 2,
-      "games_lost": 0,
-      "sets_won": 6,
-      "sets_lost": 0,
-      "balls_won": 150,
-      "balls_lost": 77,
       "points": 6,
       "pool_id": "4140",
       "rule_profile": "source_points",
@@ -241,20 +241,6 @@
       "rank": 5
     },
     {
-      "team_name": "Farum VK",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0,
-      "pool_id": "4140",
-      "rule_profile": "source_points",
-      "rank": 6
-    },
-    {
       "team_name": "Gentofte Volley",
       "games_played": 1,
       "games_won": 0,
@@ -266,7 +252,7 @@
       "points": 0,
       "pool_id": "4140",
       "rule_profile": "source_points",
-      "rank": 7
+      "rank": 6
     },
     {
       "team_name": "Team Køge",
@@ -276,6 +262,20 @@
       "sets_won": 0,
       "sets_lost": 3,
       "balls_won": 57,
+      "balls_lost": 75,
+      "points": 0,
+      "pool_id": "4140",
+      "rule_profile": "source_points",
+      "rank": 7
+    },
+    {
+      "team_name": "Farum VK",
+      "games_played": 1,
+      "games_won": 0,
+      "games_lost": 1,
+      "sets_won": 0,
+      "sets_lost": 3,
+      "balls_won": 51,
       "balls_lost": 75,
       "points": 0,
       "pool_id": "4140",
@@ -498,16 +498,16 @@
       "address": "Ny Holtehal  Kongevejen 464 2840 Holte Danmark",
       "referee1": "Andreas Bak-Georgsen",
       "referee2": "Nicklas Kjær Thomsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 0,
+      "result_away_sets": 3,
+      "home_points": 0,
+      "away_points": 3,
+      "home_balls1": 18,
+      "away_balls1": 25,
+      "home_balls2": 11,
+      "away_balls2": 25,
+      "home_balls3": 22,
+      "away_balls3": 25,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2949,6 +2949,30 @@
       "away_set_won": 1
     },
     {
+      "kamp_id": 76469,
+      "set_number": 1,
+      "home_points": 18,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76469,
+      "set_number": 2,
+      "home_points": 11,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 76469,
+      "set_number": 3,
+      "home_points": 22,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
       "kamp_id": 76478,
       "set_number": 1,
       "home_points": 25,
@@ -3254,6 +3278,22 @@
       "points": 0,
       "cumulative_points": 0,
       "kamp_id": 76478
+    },
+    {
+      "team": "Farum VK",
+      "date": "2026-10-25T14:30:00",
+      "game_number": 1,
+      "points": 0,
+      "cumulative_points": 0,
+      "kamp_id": 76469
+    },
+    {
+      "team": "Holte IF",
+      "date": "2026-10-25T14:30:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 9,
+      "kamp_id": 76469
     }
   ],
   "result_matrix": {
@@ -3312,7 +3352,7 @@
       "DHV Odense": null,
       "Farum VK": "",
       "Gentofte Volley": null,
-      "Holte IF": null,
+      "Holte IF": "0-3",
       "Hvidovre VK": null,
       "Ikast KFUM": null,
       "Team Køge": null
