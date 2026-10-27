@@ -10,12 +10,7 @@ import pandas as pd
 
 from . import __version__
 from .paths import DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
-
-
-STAT_FIELDS = [
-    "games_played", "games_won", "games_lost", "sets_won", "sets_lost",
-    "balls_won", "balls_lost", "points",
-]
+from .wrangling import calculate_running_points, result_matrix
 
 
 def export_json(db_path: Path, output_dir: Path) -> None:
@@ -68,25 +63,27 @@ def export_json(db_path: Path, output_dir: Path) -> None:
     for pool_id in pools["pool_id"]:
         pool_rankings = rankings.loc[rankings["pool_id"].eq(pool_id)]
         pool_matches = matches.loc[matches["pool_id"].eq(pool_id)]
-        sets = set_results(pool_matches)
-        computed, events, matrix = derive_pool(pool_id, pool_rankings, pool_matches, sets)
-        validation = compare_standings(pool_rankings, computed)
-        if validation["mismatch_count"]:
+
+        events, matrix = derive_pool(pool_matches)
+        
+        validation = compare_standings(pool_rankings, events)
+        if not validation:
             pool_validation[str(pool_id)] = validation
+
         # Rename fields and convert to records only at the frontend boundary.
         payloads.append((str(pool_id), {
             "metadata": {**metadata, "validation": "points" in validation["affected_fields"]},
             "pool": records(frontend_pools(pools.loc[pools["pool_id"].eq(pool_id)]))[0],
             "source_standings": records(pool_rankings.assign(pool_id=str(pool_id))),
             "matches": records(frontend_matches(pool_matches)),
-            "cumulative_points": records(events.rename(columns={"match_id": "kamp_id"})),
+            "cumulative_points": records(events),
             "result_matrix": matrix.astype(object).where(matrix.notna(), None).to_dict(orient="index"),
         }))
     index = {
         "metadata": {**metadata, "seasons": sorted(leagues["season"].astype(str).unique(), reverse=True),
                      "league_count": len(leagues), "pool_count": len(pools),
                      "validation": {"pools_with_mismatches": len(pool_validation),
-                                    "mismatch_count": sum(v["mismatch_count"] for v in pool_validation.values())}},
+                                    "mismatch_count": len(pool_validation)}},
         "leagues": records(frontend_leagues(leagues)), "pools": records(frontend_pools(pools)),
         "pool_validation": pool_validation,
     }
@@ -191,94 +188,21 @@ def records(frame: pd.DataFrame) -> list[dict]:
     return frame.astype(object).where(frame.notna(), None).to_dict(orient="records")
 
 
-def set_results(matches: pd.DataFrame) -> pd.DataFrame:
-    columns = ["match_id", "set_number", "home_points", "away_points", "home_set_won", "away_set_won"]
-    if matches.empty:
-        return pd.DataFrame(columns=columns)
-    sets = pd.wide_to_long(
-        df=matches[matches.columns[matches.columns.str.contains('match_id|balls')]],
-        stubnames=["home_balls", "away_balls"],
-        i="match_id",
-        j="set_number",
-    ).reset_index().rename(columns={"home_balls": "home_points", "away_balls": "away_points"})
-    sets = sets.dropna(subset=["home_points", "away_points"], how="all")
-    known = sets[["home_points", "away_points"]].notna().all(axis=1)
-    sets["home_set_won"] = sets["home_points"].gt(sets["away_points"]).astype("Int64").where(known)
-    sets["away_set_won"] = sets["away_points"].gt(sets["home_points"]).astype("Int64").where(known)
-    return sets[columns].sort_values(["match_id", "set_number"])
+def derive_pool(matches: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    events = calculate_running_points(matches)
+    events.rename(columns={"match_time": "date"}, inplace=True)
+
+    matrix = result_matrix(matches).unstack()
+
+    return events, matrix
 
 
-def derive_pool(pool_id: int, rankings: pd.DataFrame, matches: pd.DataFrame,
-                sets: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    teams = pd.Index(sorted(pd.concat([rankings["team_name"], matches["home_team"],
-                                      matches["away_team"]]).dropna().unique()), name="team_name")
-    played = matches.loc[matches[["home_sets", "away_sets"]].notna().all(axis=1)
-                         & matches["home_sets"].ne(matches["away_sets"])].copy()
-    played["match_order"] = range(len(played))
-    balls = sets.dropna(subset=["home_points", "away_points"]).groupby("match_id")[["home_points", "away_points"]].sum()
-    balls = balls.reindex(played["match_id"], fill_value=0)
-    # Retain the administrative 25-0 convention when a forfeit has no set details.
-    forfeits = played.loc[played["note"].str.contains("HHT|UHT", case=False)
-                         & ~played["match_id"].isin(sets["match_id"])]
-    home_won = forfeits["home_sets"].gt(forfeits["away_sets"])
-    awarded_balls = forfeits[["home_sets", "away_sets"]].max(axis=1) * 25
-    balls.loc[forfeits["match_id"], "home_points"] = awarded_balls.where(home_won, 0).to_numpy()
-    balls.loc[forfeits["match_id"], "away_points"] = awarded_balls.where(~home_won, 0).to_numpy()
-    sides = []
-    for side_number, (side, opponent) in enumerate((("home", "away"), ("away", "home"))):
-        team_matches = played[["match_id", "match_time", "match_order", f"{side}_team", f"{side}_points",
-                               f"{side}_sets", f"{opponent}_sets"]].rename(columns={
-            f"{side}_team": "team_name", f"{side}_points": "points",
-            f"{side}_sets": "sets_won", f"{opponent}_sets": "sets_lost",
-        })
-        sides.append(team_matches.assign(
-            side_order=side_number, games_played=1,
-            games_won=team_matches["sets_won"].gt(team_matches["sets_lost"]).astype(int),
-            games_lost=team_matches["sets_won"].lt(team_matches["sets_lost"]).astype(int),
-            balls_won=team_matches["match_id"].map(balls[f"{side}_points"]),
-            balls_lost=team_matches["match_id"].map(balls[f"{opponent}_points"]),
-        ))
-    team_matches = pd.concat(sides, ignore_index=True).sort_values(["match_order", "side_order"])
-    team_matches[STAT_FIELDS] = team_matches[STAT_FIELDS].astype("Int64")
-    grouped = team_matches.groupby("team_name", sort=False)
-    stats = grouped[STAT_FIELDS].sum().reindex(teams, fill_value=0)
-    # Missing scraped points make the total unknown; do not infer an award.
-    incomplete = grouped["points"].count().lt(grouped.size())
-    stats.loc[incomplete.index[incomplete], "points"] = pd.NA
-    computed = stats.reset_index().assign(
-        set_difference=lambda df: df["sets_won"] - df["sets_lost"],
-        ball_difference=lambda df: df["balls_won"] - df["balls_lost"],
-        sort_points=lambda df: df["points"].fillna(0),
-    ).sort_values(["sort_points", "set_difference", "ball_difference", "team_name"],
-                  ascending=[False, False, False, True]).drop(columns=["sort_points", "set_difference", "ball_difference"])
-    computed = computed.assign(pool_id=pool_id, rank=range(1, len(computed) + 1))
-    team_matches["game_number"] = grouped.cumcount() + 1
-    team_matches["cumulative_points"] = grouped["points"].cumsum(skipna=False)
-    baseline = pd.DataFrame({"team": teams, "date": pd.NaT, "game_number": 0,
-                             "points": 0, "cumulative_points": 0, "match_id": pd.NA})
-    events = pd.concat([baseline, team_matches.rename(columns={
-        "team_name": "team", "match_time": "date",
-    })[baseline.columns]], ignore_index=True)
-    played["score"] = played["home_sets"].astype(str) + "-" + played["away_sets"].astype(str)
-    matrix = played.groupby(["home_team", "away_team"])["score"].agg(", ".join).unstack("away_team")
-    matrix = matrix.reindex(index=teams, columns=teams)
-    diagonal = teams.to_numpy()[:, None] == teams.to_numpy()[None, :]
-    matrix = matrix.mask(diagonal, "")
-    return computed, events, matrix
+def compare_standings(rankings: pd.DataFrame, events: pd.DataFrame) -> bool:
+    current = events.loc[events.groupby(['team'])['date'].idxmax()]
+    compare = rankings.join(current.set_index('team')[['cumulative_points']], on='team_name')
+    validation = compare['points'].eq(compare['cumulative_points']).all()
 
-
-def compare_standings(official: pd.DataFrame, computed: pd.DataFrame) -> dict:
-    source = official.set_index("team_name")[STAT_FIELDS]
-    derived = computed.set_index("team_name")[STAT_FIELDS]
-    common = source.index.intersection(derived.index)
-    missing = source.index.symmetric_difference(derived.index)
-    differences = source.loc[common].ne(derived.loc[common]).fillna(True)
-    fields = differences.columns[differences.any()].tolist()
-    if len(missing):
-        fields.append("team")
-    return {"mismatch_count": int(differences.sum().sum()) + len(missing),
-            "affected_teams": int(differences.any(axis=1).sum()) + len(missing),
-            "affected_fields": sorted(fields), "compared_fields": STAT_FIELDS}
+    return validation
 
 
 def write_json(path: Path, payload: dict) -> None:
