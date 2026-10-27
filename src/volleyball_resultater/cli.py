@@ -37,29 +37,38 @@ def main(argv: list[str] | None = None) -> int:
     if set(seasons).difference(season_overview["year"]):
         print("One or more seasons not found.", file=sys.stderr)
         return 2
-    
+
+    print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting leagues")
     league_list = []
     for gender, season in product(GENDERS, seasons):
         league = scraper.get_league_ids(DISTRICT, gender, season, AGE_GROUP)
         league_list.append(league)
     leagues = pd.concat(league_list).reset_index(drop=True)
     leagues_filtered = league_filter(leagues)
+    print(f"{leagues.shape[0]} found. After filtering, {leagues_filtered.shape[0]} remains.")
 
+    print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting pools")
     pool_list = []
     for league_id in leagues_filtered['league_id']:
         pool_list.append(scraper.get_pool_ids(league_id))
     pools = pd.concat(pool_list).reset_index(drop=True)
+    print(f"{pools.shape[0]} found.")
 
+    print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting rankings")
     rank_list = []
     for pool_id in pools['pool_id']:
         rank_list.append(scraper.scrape_pool_scoreboard(pool_id))
     rankings = pd.concat(rank_list).reset_index(drop=True)
+    print(f"{rankings.shape[0]} scraped.")
 
+    print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting schedules")
     schedule_list = []
     for pool_id in pools['pool_id']:
         schedule_list.append(scraper.scrape_pool_schedule(pool_id))
     schedules = pd.concat(schedule_list).reset_index(drop=True)
+    print(f"Schedules scraped. {schedules.shape[0]} matches found.")
 
+    print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting match details")
     match_details_list = []
     for match_id in schedules['match_id']:
         match_details_list.append(scraper.scrape_match_details(match_id))
@@ -67,6 +76,7 @@ def main(argv: list[str] | None = None) -> int:
 
     matches = schedules.merge(match_details, on='match_id')
 
+    print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Uploading to database")
     try:
         repo.upsert_leagues(leagues_filtered)
         repo.upsert_pools(pools)
@@ -75,8 +85,10 @@ def main(argv: list[str] | None = None) -> int:
         repo.commit()
     finally:
         repo.close()
+    print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Upload done")
 
     if not args.no_export:
+        print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Exporting results to frontend JSONs")
         export_json(args.db, args.export_dir)
         print(f"Exported JSON to {args.export_dir}")
 
