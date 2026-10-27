@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-26T04:09:24+00:00",
+    "exported_at": "2026-10-27T04:29:05+00:00",
     "scraper_version": "1.0.2",
     "point_source": "scraped_tournament_points",
     "rule_profile": "source_points",
@@ -54,6 +54,19 @@
     {
       "pool_id": "4118",
       "rank": 2,
+      "team_name": "Gentofte Volley.2",
+      "games_played": 3,
+      "games_won": 2,
+      "games_lost": 1,
+      "sets_won": 8,
+      "sets_lost": 5,
+      "balls_won": 280,
+      "balls_lost": 269,
+      "points": 7
+    },
+    {
+      "pool_id": "4118",
+      "rank": 3,
       "team_name": "VLI",
       "games_played": 3,
       "games_won": 2,
@@ -66,7 +79,7 @@
     },
     {
       "pool_id": "4118",
-      "rank": 3,
+      "rank": 4,
       "team_name": "DTU Volley",
       "games_played": 2,
       "games_won": 2,
@@ -79,29 +92,16 @@
     },
     {
       "pool_id": "4118",
-      "rank": 4,
-      "team_name": "Gentofte Volley.2",
+      "rank": 5,
+      "team_name": "KSV",
       "games_played": 2,
       "games_won": 1,
       "games_lost": 1,
       "sets_won": 5,
       "sets_lost": 3,
-      "balls_won": 176,
-      "balls_lost": 167,
+      "balls_won": 178,
+      "balls_lost": 155,
       "points": 4
-    },
-    {
-      "pool_id": "4118",
-      "rank": 5,
-      "team_name": "KSV",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 0,
-      "balls_won": 76,
-      "balls_lost": 51,
-      "points": 3
     },
     {
       "pool_id": "4118",
@@ -185,6 +185,20 @@
       "rank": 1
     },
     {
+      "team_name": "Gentofte Volley.2",
+      "games_played": 3,
+      "games_won": 2,
+      "games_lost": 1,
+      "sets_won": 8,
+      "sets_lost": 5,
+      "balls_won": 280,
+      "balls_lost": 269,
+      "points": 7,
+      "pool_id": "4118",
+      "rule_profile": "source_points",
+      "rank": 2
+    },
+    {
       "team_name": "VLI",
       "games_played": 3,
       "games_won": 2,
@@ -196,7 +210,7 @@
       "points": 7,
       "pool_id": "4118",
       "rule_profile": "source_points",
-      "rank": 2
+      "rank": 3
     },
     {
       "team_name": "DTU Volley",
@@ -210,32 +224,18 @@
       "points": 6,
       "pool_id": "4118",
       "rule_profile": "source_points",
-      "rank": 3
+      "rank": 4
     },
     {
-      "team_name": "Gentofte Volley.2",
+      "team_name": "KSV",
       "games_played": 2,
       "games_won": 1,
       "games_lost": 1,
       "sets_won": 5,
       "sets_lost": 3,
-      "balls_won": 176,
-      "balls_lost": 167,
+      "balls_won": 178,
+      "balls_lost": 155,
       "points": 4,
-      "pool_id": "4118",
-      "rule_profile": "source_points",
-      "rank": 4
-    },
-    {
-      "team_name": "KSV",
-      "games_played": 1,
-      "games_won": 1,
-      "games_lost": 0,
-      "sets_won": 3,
-      "sets_lost": 0,
-      "balls_won": 76,
-      "balls_lost": 51,
-      "points": 3,
       "pool_id": "4118",
       "rule_profile": "source_points",
       "rank": 5
@@ -670,22 +670,22 @@
       "venue": "Gentoftehallen  1 - Hal",
       "court": "B",
       "address": "Gentoftehallen  Ved Stadion 10 2820 Gentofte Danmark",
-      "referee1": "Arne Jensen",
-      "referee2": "Laura Jørgensen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
-      "home_balls5": null,
-      "away_balls5": null,
+      "referee1": "Laura Jørgensen",
+      "referee2": "Arne Jensen",
+      "result_home_sets": 3,
+      "result_away_sets": 2,
+      "home_points": 3,
+      "away_points": 1,
+      "home_balls1": 16,
+      "away_balls1": 25,
+      "home_balls2": 23,
+      "away_balls2": 25,
+      "home_balls3": 25,
+      "away_balls3": 23,
+      "home_balls4": 25,
+      "away_balls4": 17,
+      "home_balls5": 15,
+      "away_balls5": 12,
       "result_note": "",
       "starts_at_time_known": true
     },
@@ -3037,6 +3037,46 @@
       "away_set_won": 0
     },
     {
+      "kamp_id": 75333,
+      "set_number": 1,
+      "home_points": 16,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75333,
+      "set_number": 2,
+      "home_points": 23,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75333,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 23,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75333,
+      "set_number": 4,
+      "home_points": 25,
+      "away_points": 17,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75333,
+      "set_number": 5,
+      "home_points": 15,
+      "away_points": 12,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
       "kamp_id": 75335,
       "set_number": 1,
       "home_points": 13,
@@ -3534,6 +3574,22 @@
       "points": 3,
       "cumulative_points": 3,
       "kamp_id": 75340
+    },
+    {
+      "team": "Gentofte Volley.2",
+      "date": "2026-10-26T18:00:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 7,
+      "kamp_id": 75333
+    },
+    {
+      "team": "KSV",
+      "date": "2026-10-26T18:00:00",
+      "game_number": 2,
+      "points": 1,
+      "cumulative_points": 4,
+      "kamp_id": 75333
     }
   ],
   "result_matrix": {
@@ -3592,7 +3648,7 @@
       "Frederiksberg Volley": null,
       "Gentofte Volley.2": "",
       "Hvidovre VK.2": null,
-      "KSV": null,
+      "KSV": "3-2",
       "RS Rødovre": null,
       "Team Køge": null,
       "VLI": "2-3"
