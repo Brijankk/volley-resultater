@@ -9,8 +9,8 @@ SCHEMA = """
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE IF NOT EXISTS leagues (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
+    league_id INTEGER PRIMARY KEY,
+    league_name TEXT NOT NULL,
     district TEXT NOT NULL,
     gender TEXT NOT NULL,
     age_group TEXT NOT NULL,
@@ -18,13 +18,13 @@ CREATE TABLE IF NOT EXISTS leagues (
 );
 
 CREATE TABLE IF NOT EXISTS pools (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    league_id INTEGER NOT NULL REFERENCES leagues(id)
+    pool_id INTEGER PRIMARY KEY,
+    pool_name TEXT NOT NULL,
+    league_id INTEGER NOT NULL REFERENCES leagues(league_id)
 );
 
 CREATE TABLE IF NOT EXISTS rankings (
-    pool_id INTEGER NOT NULL REFERENCES pools(id),
+    pool_id INTEGER NOT NULL REFERENCES pools(pool_id),
     rank INTEGER NOT NULL,
     team_name TEXT NOT NULL,
     games_played INTEGER NOT NULL,
@@ -39,8 +39,8 @@ CREATE TABLE IF NOT EXISTS rankings (
 );
 
 CREATE TABLE IF NOT EXISTS matches (
-    pool_id INTEGER NOT NULL REFERENCES pools(id),
-    id INTEGER PRIMARY KEY,
+    pool_id INTEGER NOT NULL REFERENCES pools(pool_id),
+    match_id INTEGER PRIMARY KEY,
     match_number INTEGER,
     match_time TEXT,
     home_team TEXT NOT NULL,
@@ -68,7 +68,6 @@ CREATE TABLE IF NOT EXISTS matches (
 );
 """
 
-
 class Repository:
     def __init__(self, path: Path) -> None:
         self.path = path
@@ -82,8 +81,8 @@ class Repository:
 
     def upsert_leagues(self, leagues: pd.DataFrame) -> None:
         column_order = [
-            'id',
-            'name',
+            'league_id',
+            'league_name',
             'district',
             'gender',
             'age_group',
@@ -92,10 +91,10 @@ class Repository:
 
         self.connection.executemany(
             """
-            INSERT INTO leagues (id, name, district, gender, age_group, season)
+            INSERT INTO leagues (league_id, league_name, district, gender, age_group, season)
             VALUES (?, ?, ?, ?, ?, ?)
-            ON CONFLICT(id) DO UPDATE SET
-                name=excluded.name,
+            ON CONFLICT(league_id) DO UPDATE SET
+                league_name=excluded.league_name,
                 district=excluded.district,
                 gender=excluded.gender,
                 age_group=excluded.age_group,
@@ -106,17 +105,17 @@ class Repository:
 
     def upsert_pools(self, pools: pd.DataFrame) -> None:
         column_order = [
-            'id',
-            'name',
+            'pool_id',
+            'pool_name',
             'league_id',
         ]
 
         self.connection.executemany(
             """
-            INSERT INTO pools (id, name, league_id)
+            INSERT INTO pools (pool_id, pool_name, league_id)
             VALUES (?, ?, ?)
-            ON CONFLICT(id) DO UPDATE SET
-                name=excluded.name,
+            ON CONFLICT(pool_id) DO UPDATE SET
+                pool_name=excluded.pool_name,
                 league_id=excluded.league_id                
             """,
             [row for row in pools[column_order].itertuples(index=False, name=None)],
@@ -170,7 +169,7 @@ class Repository:
     def upsert_matches(self, matches: pd.DataFrame) -> None:
         column_order = [
             'pool_id',
-            'id',
+            'match_id',
             'match_number',
             'match_time',
             'home_team',
@@ -206,7 +205,7 @@ class Repository:
             """
             INSERT INTO matches (
                 pool_id,
-                id,
+                match_id,
                 match_number,
                 match_time,
                 home_team,
@@ -233,7 +232,7 @@ class Repository:
                 note
             )
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT(id) DO UPDATE SET
+            ON CONFLICT(match_id) DO UPDATE SET
                 pool_id=excluded.pool_id,
                 match_number=excluded.match_number,
                 match_time=excluded.match_time,

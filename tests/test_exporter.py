@@ -27,16 +27,16 @@ class ExporterNewTests(unittest.TestCase):
         self.connection.executescript(schema)
 
     def seed_pool(self):
-        self.connection.execute("INSERT INTO leagues VALUES (7, 'Volleyligaen Herrer', 'Volleyball Danmark', 'Mand', 'Senior', 2025)")
-        self.connection.execute("INSERT INTO pools VALUES (42, 'Øst', '7')")
+        self.connection.execute("INSERT INTO leagues (league_id, league_name, district, gender, age_group, season) VALUES (7, 'Volleyligaen Herrer', 'Volleyball Danmark', 'Mand', 'Senior', 2025)")
+        self.connection.execute("INSERT INTO pools (pool_id, pool_name, league_id) VALUES (42, 'Øst', '7')")
 
-    def match(self, id=1, time="2025-10-04T00:00:00", home_sets=3, away_sets=2,
+    def match(self, match_id=1, time="2025-10-04T00:00:00", home_sets=3, away_sets=2,
               home_points=2, away_points=1, note=None, balls=True):
         self.connection.execute(
-            "INSERT INTO matches (pool_id,id,match_number,match_time,home_team,away_team,"
+            "INSERT INTO matches (pool_id,match_id,match_number,match_time,home_team,away_team,"
             "venue,court,address,home_sets,away_sets,home_points,away_points,note,home_balls1,away_balls1) "
             "VALUES (42,?,?,?,'A','B','Hal','1','Adresse',?,?,?,?,?,?,?)",
-            (id, 100 + id, time, home_sets, away_sets, home_points, away_points, note,
+            (match_id, 100 + match_id, time, home_sets, away_sets, home_points, away_points, note,
              25 if balls else None, 20 if balls else None),
         )
 
@@ -53,7 +53,7 @@ class ExporterNewTests(unittest.TestCase):
 
     def test_frontend_contract_uses_scraped_points_and_string_ids(self):
         self.seed_pool()
-        self.connection.execute("INSERT INTO leagues VALUES (8, 'Unscraped league', 'Volleyball Danmark', 'Mand', 'Senior', 2026)")
+        self.connection.execute("INSERT INTO leagues (league_id, league_name, district, gender, age_group, season) VALUES (8, 'Unscraped league', 'Volleyball Danmark', 'Mand', 'Senior', 2026)")
         self.match()
         self.ranking('A', 1, 1, 1, 0, 3, 2, 25, 20, 2)
         self.ranking('B', 2, 1, 0, 1, 2, 3, 20, 25, 1)
@@ -88,8 +88,8 @@ class ExporterNewTests(unittest.TestCase):
     def test_upcoming_and_undated_matches_and_repeated_pair(self):
         self.seed_pool()
         self.match()
-        self.match(id=2, time=None, home_points=3, away_points=1)
-        self.match(id=3, time='2025-11-01T12:00:00', home_sets=None, away_sets=None,
+        self.match(match_id=2, time=None, home_points=3, away_points=1)
+        self.match(match_id=3, time='2025-11-01T12:00:00', home_sets=None, away_sets=None,
                    home_points=None, away_points=None, note='nan', balls=False)
         data = self.export()
         self.assertEqual(data['result_matrix']['A']['B'], '3-2, 3-2')
@@ -130,7 +130,7 @@ class ExporterNewTests(unittest.TestCase):
     def test_missing_points_propagate_to_later_chart_totals(self):
         self.seed_pool()
         self.match(home_points=None)
-        self.match(id=2, time='2025-10-05T12:00:00', home_points=3)
+        self.match(match_id=2, time='2025-10-05T12:00:00', home_points=3)
         data = self.export()
         events = [event for event in data['cumulative_points'] if event['team'] == 'A']
         self.assertEqual([event['cumulative_points'] for event in events], [0, None, None])
@@ -166,10 +166,10 @@ class ExporterNewTests(unittest.TestCase):
     def test_prefixed_identifiers_keep_multiple_leagues_and_pools_separate(self):
         self.seed_pool()
         self.match()
-        self.connection.execute("INSERT INTO leagues VALUES (9, '1. Division Kvinder', 'Volleyball Danmark', 'Kvinde', 'Senior', 2025)")
-        self.connection.execute("INSERT INTO pools VALUES (99, 'Vest', 9)")
-        self.match(id=2)
-        self.connection.execute("UPDATE matches SET pool_id=99,home_team='C',away_team='D' WHERE id=2")
+        self.connection.execute("INSERT INTO leagues (league_id, league_name, district, gender, age_group, season) VALUES (9, '1. Division Kvinder', 'Volleyball Danmark', 'Kvinde', 'Senior', 2025)")
+        self.connection.execute("INSERT INTO pools (pool_id, pool_name, league_id) VALUES (99, 'Vest', 9)")
+        self.match(match_id=2)
+        self.connection.execute("UPDATE matches SET pool_id=99,home_team='C',away_team='D' WHERE match_id=2")
         data = self.export()
         other = json.loads((self.output / '99.json').read_text(encoding='utf-8'))
         self.assertEqual(data['pool']['league_id'], '7')

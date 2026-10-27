@@ -22,26 +22,26 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             sql="""
                 SELECT 
                     x.*,
-                    y.name as [league_name],
+                    y.league_name,
                     y.district,
                     y.gender,
                     y.season,
                     y.age_group
                 FROM pools x 
                 JOIN leagues y
-                ON x.league_id=y.id
-                ORDER BY x.league_id, x.name, x.id
+                ON x.league_id=y.league_id
+                ORDER BY x.league_id, x.pool_name, x.pool_id
             """,
             con=connection,
             dtype_backend="numpy_nullable"
-        ).rename(columns={"id": "pool_id", "name": "pool_name"})
+        )
 
         rankings = pd.read_sql("SELECT * FROM rankings ORDER BY pool_id, rank, team_name",
                                connection, dtype_backend="numpy_nullable")
         matches = pd.read_sql(
-            "SELECT * FROM matches ORDER BY pool_id, match_time IS NULL, match_time, match_number, id",
+            "SELECT * FROM matches ORDER BY pool_id, match_time IS NULL, match_time, match_number, match_id",
             connection, dtype_backend="numpy_nullable",
-        ).rename(columns={"id": "match_id"})
+        )
     finally:
         connection.close()
 

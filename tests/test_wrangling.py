@@ -41,7 +41,7 @@ class WranglingTests(unittest.TestCase):
 
         bracket_leagues['round'] = bracket_leagues.groupby(
             by=['gender', 'season']
-        )['name'].apply(order_tournament).droplevel(['gender', 'season'])
+        )['league_name'].apply(order_tournament).droplevel(['gender', 'season'])
 
         bracket_leagues = bracket_leagues.sort_values(['season', 'gender', 'round'])
 
@@ -53,7 +53,7 @@ class WranglingTests(unittest.TestCase):
 
         bracket_leagues['round']= bracket_leagues.groupby(
             by=['gender', 'season']
-        )['name'].apply(order_tournament).droplevel(['gender', 'season'])
+        )['league_name'].apply(order_tournament).droplevel(['gender', 'season'])
 
         bracket_leagues = bracket_leagues.sort_values(['season', 'gender', 'round'])
 
@@ -69,24 +69,24 @@ class WranglingTests(unittest.TestCase):
         leagues = leagues.loc[leagues['season'].eq(season) & leagues['gender'].eq(gender) & leagues['district'].eq(district)]
 
         bracket_leagues = bracket(leagues)
-        bracket_leagues['round'] = order_tournament(bracket_leagues['name'])
+        bracket_leagues['round'] = order_tournament(bracket_leagues['league_name'])
 
         matches = pd.read_sql(
             sql=f"""
-                SELECT x.*, z.id as [league_id], z.name as [name_league]
+                SELECT x.*, z.league_id, z.league_name
                 FROM matches x
                 JOIN pools y
                 JOIN leagues z
-                ON x.pool_id=y.id and y.league_id=z.id
-                WHERE z.id in ({', '.join(map(str,bracket_leagues['id'].to_list()))})
+                ON x.pool_id=y.pool_id and y.league_id=z.league_id
+                WHERE z.league_id in ({', '.join(map(str,bracket_leagues['league_id'].to_list()))})
             """,
             con=self.repo.connection
         )
 
         df = matches.join(
-            other=bracket_leagues.set_index('id')[['round']],
+            other=bracket_leagues.set_index('league_id')[['round']],
             on='league_id'
-        )[['round', 'name_league', 'match_number', 'home_team', 'away_team', 'home_sets', 'away_sets']]
+        )[['round', 'league_name', 'match_number', 'home_team', 'away_team', 'home_sets', 'away_sets']]
 
         tournament = deduct_tournament(df)
         pass

@@ -81,10 +81,10 @@ class ParserTests(unittest.TestCase):
 
     def test_pools_from_redirect_or_overview_links(self) -> None:
         redirected = parse_pools("", "https://resultater.volleyball.dk/tms/Turneringer-og-resultater/Pulje-Stilling.aspx?PuljeId=3923")
-        self.assertEqual(redirected[0].pulje_id, 3923)
+        self.assertEqual(redirected[0]["pool_id"], 3923)
         overview = '<a href="/tms/Turneringer-og-resultater/Pulje-Stilling.aspx?PuljeId=4122">Øst</a>'
         pools = parse_pools(overview, "https://resultater.volleyball.dk/tms/Turneringer-og-resultater/Pulje-Oversigt.aspx?RaekkeId=2372")
-        self.assertEqual((pools[0].name, pools[0].pulje_id), ("Øst", 4122))
+        self.assertEqual((pools[0]["pool_name"], pools[0]["pool_id"]), ("Øst", 4122))
 
     def test_pools_ignore_team_links_on_cached_redirect_page(self) -> None:
         standing_page_links = """
@@ -96,7 +96,7 @@ class ParserTests(unittest.TestCase):
             "https://resultater.volleyball.dk/tms/Turneringer-og-resultater/Pulje-Oversigt.aspx?RaekkeId=2248",
         )
         self.assertEqual(len(pools), 1)
-        self.assertEqual((pools[0].name, pools[0].pulje_id), ("Række 1", 3923))
+        self.assertEqual((pools[0]["pool_name"], pools[0]["pool_id"]), ("Række 1", 3923))
 
 
 if __name__ == "__main__":

@@ -57,12 +57,12 @@ class VolleyballScraper:
 
             current_leagues = pd.DataFrame(
                 data=parse_league_links(result.html),
-                columns=["name", "id"],
+                columns=["league_name", "league_id"],
             )
 
-            liga_id = current_leagues.set_index('name')['id']['Volleyligaen Herrer']
+            liga_id = current_leagues.set_index('league_name')['league_id']['Volleyligaen Herrer']
             liga_pool = self.get_pool_ids(liga_id)
-            liga_schedule = self.scrape_pool_schedule(liga_pool.loc[0, 'id'])
+            liga_schedule = self.scrape_pool_schedule(liga_pool.loc[0, 'pool_id'])
 
             seasons = self.get_seasons()
             seasons['year'] = pd.to_numeric(seasons['value'])
@@ -102,7 +102,7 @@ class VolleyballScraper:
     
             league = pd.DataFrame(
                 data=parse_league_links(result.html),
-                columns=["name", "id"],
+                columns=["league_name", "league_id"],
             )
             league_list.append(league)
         leagues = pd.concat(league_list)

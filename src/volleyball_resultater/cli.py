@@ -46,17 +46,17 @@ def main(argv: list[str] | None = None) -> int:
     leagues_filtered = league_filter(leagues)
 
     pool_list = []
-    for league_id in leagues_filtered['id']:
+    for league_id in leagues_filtered['league_id']:
         pool_list.append(scraper.get_pool_ids(league_id))
     pools = pd.concat(pool_list).reset_index(drop=True)
 
     rank_list = []
-    for pool_id in pools['id']:
+    for pool_id in pools['pool_id']:
         rank_list.append(scraper.scrape_pool_scoreboard(pool_id))
     rankings = pd.concat(rank_list).reset_index(drop=True)
 
     schedule_list = []
-    for pool_id in pools['id']:
+    for pool_id in pools['pool_id']:
         schedule_list.append(scraper.scrape_pool_schedule(pool_id))
     schedules = pd.concat(schedule_list).reset_index(drop=True)
 
@@ -65,7 +65,7 @@ def main(argv: list[str] | None = None) -> int:
         match_details_list.append(scraper.scrape_match_details(match_id))
     match_details = pd.concat(match_details_list).reset_index(drop=True)
 
-    matches = schedules.merge(match_details, on='match_id').rename(columns={'match_id': 'id'})
+    matches = schedules.merge(match_details, on='match_id')
 
     try:
         repo.upsert_leagues(leagues_filtered)
@@ -86,27 +86,27 @@ def league_filter(leagues_df: pd.DataFrame) -> pd.DataFrame:
     df = leagues_df
     leagues_filtered = df.loc[
         (
-            df['name'].str.contains('. div', case=False) &
-            ~df['name'].str.contains('kval', case=False)
+            df['league_name'].str.contains('. div', case=False) &
+            ~df['league_name'].str.contains('kval', case=False)
         ) |
         (
             (
-                df['name'].str.contains('Pokal', case=False) |
-                df['name'].str.contains('LP')
+                df['league_name'].str.contains('Pokal', case=False) |
+                df['league_name'].str.contains('LP')
             ) &
-            ~df['name'].str.contains('Seed') &
-            ~df['name'].str.contains('Kreds')
+            ~df['league_name'].str.contains('Seed') &
+            ~df['league_name'].str.contains('Kreds')
         )
     ].copy()
 
     leagues_filtered = df.loc[
         (
-            df['name'].str.contains('. div', case=False) &
-            ~df['name'].str.contains('kval', case=False)
+            df['league_name'].str.contains('. div', case=False) &
+            ~df['league_name'].str.contains('kval', case=False)
         ) |
         (
-            df['name'].str.lower().eq('volleyligaen herrer') |
-            df['name'].str.lower().eq('volleyligaen kvinder')
+            df['league_name'].str.lower().eq('volleyligaen herrer') |
+            df['league_name'].str.lower().eq('volleyligaen kvinder')
         )
     ].copy()
 

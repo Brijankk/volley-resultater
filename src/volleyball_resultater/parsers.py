@@ -28,7 +28,7 @@ def parse_league_links(html: str) -> list[tuple[str, int]]:
 def parse_pools(html: str, final_url: str) -> list[dict]:
     pulje_id = query_int(final_url, "PuljeId")
     if pulje_id is not None:
-        return [{"name": "Række 1", "id": pulje_id}]
+        return [{"pool_name": "Række 1", "pool_id": pulje_id}]
 
     html_has_oversigt = html.find('Oversigt') == -1
     href_searchword = "Kampprogram.aspx" if html_has_oversigt else "Pulje-Stilling.aspx"
@@ -42,11 +42,11 @@ def parse_pools(html: str, final_url: str) -> list[dict]:
         if link_pulje_id is None or not link.text:
             continue
         name = "Række 1" if link.text == text_searchword else link.text
-        if any(pool["id"] == link_pulje_id for pool in pools):
+        if any(pool["pool_id"] == link_pulje_id for pool in pools):
             continue
         pools.append({
-            "name": name,
-            "id": link_pulje_id,
+            "pool_name": name,
+            "pool_id": link_pulje_id,
         })
 
     return pools

@@ -164,7 +164,7 @@ def deduct_tournament(schedule):
     df = schedule.copy()
     df[['home_team', 'away_team']] = df[['home_team', 'away_team']].apply(sorted, axis=1).to_list()
 
-    bouts = df.groupby(['round', 'name_league', 'home_team', 'away_team'], as_index=False)['match_number'].apply(list)
+    bouts = df.groupby(['round', 'league_name', 'home_team', 'away_team'], as_index=False)['match_number'].apply(list)
     bouts = bouts.reset_index(names=['bout_id'])
 
     mapping = bouts.explode('match_number')
@@ -182,7 +182,7 @@ def deduct_tournament(schedule):
 
     bouts['leg1'] = bouts[['round', 'key1']].apply(tuple, axis=1).map(mapping)
     bouts['leg2'] = bouts[['round', 'key2']].apply(tuple, axis=1).map(mapping)
-    bouts.loc[bouts['name_league'].str.contains('bronze', case=False), ['leg1', 'leg2']] = np.nan
+    bouts.loc[bouts['league_name'].str.contains('bronze', case=False), ['leg1', 'leg2']] = np.nan
     bouts[['leg1', 'leg2']] = bouts[['leg1', 'leg2']].astype('Int64')
     
     bouts.drop(columns=['key1', 'key2'], inplace=True)
@@ -192,21 +192,21 @@ def deduct_tournament(schedule):
 def pokal_filter(df: pd.DataFrame) -> pd.DataFrame:
     df = df.loc[
         (
-            df['name'].str.contains('Pokal', case=False) |
-            df['name'].str.contains('LP')
+            df['league_name'].str.contains('Pokal', case=False) |
+            df['league_name'].str.contains('LP')
         ) &
-        ~df['name'].str.contains('Seed') &
-        ~df['name'].str.contains('Kreds'),
+        ~df['league_name'].str.contains('Seed') &
+        ~df['league_name'].str.contains('Kreds'),
     ].copy()
 
     return df
 
 def slutspil_filter(df: pd.DataFrame) -> pd.DataFrame:
     df = df.loc[
-        df['name'].str.contains('Volleyligaen', case=False) &
+        df['league_name'].str.contains('Volleyligaen', case=False) &
         (
-            df['name'].str.contains('finale', case=False) |
-            df['name'].str.contains('bronze', case=False)
+            df['league_name'].str.contains('finale', case=False) |
+            df['league_name'].str.contains('bronze', case=False)
         ),
     ].copy()
 
