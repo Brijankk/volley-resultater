@@ -44,6 +44,8 @@ def export_json(db_path: Path, output_dir: Path) -> None:
         )
     finally:
         connection.close()
+    pools = pool_filter(pools)
+    # pools = pools.loc[pools['pool_id'].eq(4124)].copy()
 
     # Keep prefixed identifiers throughout calculations; map frontend names at export.
     score_columns = matches.columns[matches.columns.str.contains(r"_(?:sets|points|balls\d+)$")]
@@ -55,8 +57,8 @@ def export_json(db_path: Path, output_dir: Path) -> None:
         ignore_index=True
     ).sort_values(['season', 'gender', 'league_name', 'league_id'], ascending=[False, True, True, True])
     metadata = {
-        "schema_version": 1, "exported_at": datetime.now().astimezone().isoformat(timespec="seconds"),
-        "scraper_version": __version__, "point_source": "scraped_tournament_points",
+        "exported_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "scraper_version": __version__,
     }
     payloads = []
     pool_validation = {}
@@ -72,7 +74,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
 
         # Rename fields and convert to records only at the frontend boundary.
         payloads.append((str(pool_id), {
-            "metadata": {**metadata, "validation": "points" in validation["affected_fields"]},
+            "metadata": {**metadata, "validation": validation},
             "pool": records(frontend_pools(pools.loc[pools["pool_id"].eq(pool_id)]))[0],
             "source_standings": records(pool_rankings.assign(pool_id=str(pool_id))),
             "matches": records(frontend_matches(pool_matches)),
@@ -80,11 +82,14 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             "result_matrix": matrix.astype(object).where(matrix.notna(), None).to_dict(orient="index"),
         }))
     index = {
-        "metadata": {**metadata, "seasons": sorted(leagues["season"].astype(str).unique(), reverse=True),
-                     "league_count": len(leagues), "pool_count": len(pools),
-                     "validation": {"pools_with_mismatches": len(pool_validation),
-                                    "mismatch_count": len(pool_validation)}},
-        "leagues": records(frontend_leagues(leagues)), "pools": records(frontend_pools(pools)),
+        "metadata": {
+            **metadata,
+            "seasons": sorted(leagues["season"].astype(str).unique(), reverse=True),
+            "league_count": len(leagues),
+            "pool_count": len(pools)
+        },
+        "leagues": records(frontend_leagues(leagues)),
+        "pools": records(frontend_pools(pools)[['id', 'name', 'league_id']]),
         "pool_validation": pool_validation,
     }
     # Read and merge before writing any files: an unreadable index must not lose history.
@@ -93,29 +98,6 @@ def export_json(db_path: Path, output_dir: Path) -> None:
     for pool_id, payload in payloads:
         write_json(output_dir / f"{safe_filename(pool_id)}.json", payload)
     write_json(output_dir / "leagues.json", index)
-
-
-def merge_entries(previous: list[dict], current: list[dict], source_id: str,
-                  seasonal: bool = False) -> tuple[list[dict], dict[str, str]]:
-    """Prefer current entries, matching both JSON IDs and legacy source IDs."""
-    entries = previous + current
-    frame = pd.DataFrame(entries)
-    if frame.empty:
-        return [], {}
-    frame["id"] = frame["id"].astype(str)
-    frame = frame.drop_duplicates("id", keep="last")
-    frame["_identity"] = "id:" + frame["id"]
-    if source_id in frame:
-        source = pd.to_numeric(frame[source_id]).astype("Int64").astype("string")
-        identity = "source:" + source
-        if seasonal:
-            identity = frame["season_id"].astype(str) + ":" + identity
-        frame["_identity"] = identity.fillna(frame["_identity"])
-    merged = frame.drop_duplicates("_identity", keep="last")
-    aliases = frame.set_index("id")["_identity"].map(merged.set_index("_identity")["id"]).to_dict()
-    # Keep each selected JSON record's original fields; dataframe alignment would
-    # otherwise add null fields to historical records that never contained them.
-    return [{**entries[position], "id": str(entries[position]["id"])} for position in merged.index], aliases
 
 
 def merge_index(path: Path, current: dict) -> dict:
@@ -127,31 +109,40 @@ def merge_index(path: Path, current: dict) -> dict:
         isinstance(previous.get(key), list) for key in ("leagues", "pools")
     ):
         raise ValueError(f"Cannot merge invalid index: {path}")
-    leagues, league_aliases = merge_entries(previous["leagues"], current["leagues"], "raekke_id", seasonal=True)
-    pools, pool_aliases = merge_entries(previous["pools"], current["pools"], "pulje_id")
-    pools = [{**pool, "league_id": league_aliases.get(str(pool["league_id"]), str(pool["league_id"]))}
-             for pool in pools]
-    refreshed = {str(pool["id"]) for pool in current["pools"]}
-    validation = {
-        pool_aliases.get(str(pool_id), str(pool_id)): summary
-        for pool_id, summary in previous.get("pool_validation", {}).items()
-        if pool_aliases.get(str(pool_id), str(pool_id)) not in refreshed and summary["mismatch_count"] > 0
-    }
-    validation.update(current["pool_validation"])
-    return {
-        **previous, **current,
-        "leagues": leagues, "pools": pools, "pool_validation": validation,
-        "metadata": {
-            **previous.get("metadata", {}), **current["metadata"],
-            "seasons": sorted({str(league["season_id"]) for league in leagues}, reverse=True),
-            "league_count": len(leagues), "pool_count": len(pools),
-            "validation": {
-                "pools_with_mismatches": len(validation),
-                "mismatch_count": sum(summary["mismatch_count"] for summary in validation.values()),
-            },
-        },
+
+    previous_leagues = pd.DataFrame(previous['leagues'])
+    current_leagues = pd.DataFrame(current['leagues'])
+    new_leagues = pd.concat(
+        objs=[previous_leagues, current_leagues],
+        ignore_index=True
+    ).drop_duplicates(subset='id', keep='last')
+
+    previous_pools = pd.DataFrame(previous['pools'])
+    current_pools = pd.DataFrame(current['pools'])
+    new_pools = pd.concat(
+        objs=[previous_pools, current_pools],
+        ignore_index=True
+    ).drop_duplicates(subset='id', keep='last')
+
+    previous_validation = set(previous['pool_validation'].keys())
+    current_validation = set(current['pool_validation'].keys())
+    new_validation = previous_validation.difference(current_pools['id']) | current_validation
+    new_pool_validation = {item: True for item in new_validation}
+
+    new_metadata = current['metadata'].copy()
+    new_metadata['seasons'] = sorted(list(set(previous['metadata']['seasons']) | set(current['metadata']['seasons'])), reverse=True)
+    new_metadata['league_count'] = new_leagues.shape[0]
+    new_metadata['pool_count'] = new_pools.shape[0]
+
+    new_index = {
+        'metadata': new_metadata,
+        'leagues': new_leagues.to_dict(orient='records'),
+        'pools': new_pools.to_dict(orient='records'),
+        'pool_validation': new_pool_validation
     }
 
+    return new_index
+    
 
 def frontend_leagues(leagues: pd.DataFrame) -> pd.DataFrame:
     return leagues.rename(columns={"league_id": "id", "league_name": "name", "season": "season_id"}).assign(
@@ -179,6 +170,17 @@ def frontend_matches(matches: pd.DataFrame) -> pd.DataFrame:
         starts_at_time_known=matches["match_time"].notna() & matches["match_time"].dt.time.ne(time(0)),
     )
 
+def pool_filter(pools: pd.DataFrame) -> pd.DataFrame:
+    pools = pools.loc[
+        pools['league_name'].str.contains('division', case=False) |
+        (
+            pools['league_name'].str.contains('volleyligaen', case=False) &
+            ~pools['league_name'].str.contains('finale', case=False) &
+            ~pools['league_name'].str.contains('bronze', case=False)
+        )
+    ].copy()
+
+    return pools
 
 def records(frame: pd.DataFrame) -> list[dict]:
     """Serialize timestamps and missing values without losing integer IDs."""
@@ -198,9 +200,9 @@ def derive_pool(matches: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
 
 
 def compare_standings(rankings: pd.DataFrame, events: pd.DataFrame) -> bool:
-    current = events.loc[events.groupby(['team'])['date'].idxmax()]
+    current = events.loc[events.groupby(['team'])['game_number'].idxmax()]
     compare = rankings.join(current.set_index('team')[['cumulative_points']], on='team_name')
-    validation = compare['points'].eq(compare['cumulative_points']).all()
+    validation = bool(compare['points'].eq(compare['cumulative_points']).all())
 
     return validation
 
