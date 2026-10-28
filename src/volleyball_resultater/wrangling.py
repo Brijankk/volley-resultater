@@ -9,7 +9,7 @@ def calculate_running_points(matches: pd.DataFrame) -> pd.DataFrame:
     ).dropna(subset='points')
     df['team'] = df['home_team'].where(df['variable'].eq('home_points'), df['away_team'])
 
-    teams = matches[['home_team', 'away_team']].melt()['value'].drop_duplicates()
+    teams = matches[['home_team', 'away_team']].melt()['value'].unique()
     df0 = pd.DataFrame(
         data={
             'match_time': pd.NaT,
@@ -17,10 +17,9 @@ def calculate_running_points(matches: pd.DataFrame) -> pd.DataFrame:
             'points': 0,
             }
     )
-    df = pd.concat([df0, df], axis=0).sort_values('match_time', na_position='first')[['match_time', 'team', 'points']]
+    df = pd.concat([df0, df], axis=0).sort_values(by='match_time', na_position='first', ignore_index=True)[['match_time', 'team', 'points']]
     df['cumulative_points'] = df.groupby('team')['points'].cumsum()
     df['game_number'] = df.groupby('team')['points'].cumcount()
-    df.loc[df['game_number'].eq(0), 'match_time'] = pd.NaT
 
     return df
 
