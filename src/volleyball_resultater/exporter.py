@@ -45,7 +45,6 @@ def export_json(db_path: Path, output_dir: Path) -> None:
     finally:
         connection.close()
     pools = pool_filter(pools)
-    # pools = pools.loc[pools['pool_id'].eq(4124)].copy()
 
     # Keep prefixed identifiers throughout calculations; map frontend names at export.
     score_columns = matches.columns[matches.columns.str.contains(r"_(?:sets|points|balls\d+)$")]

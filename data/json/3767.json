@@ -1,26 +1,8 @@
 {
   "metadata": {
-    "schema_version": 1,
-    "exported_at": "2026-10-13T12:31:59+02:00",
-    "scraper_version": "1.0.2",
-    "point_source": "scraped_tournament_points",
-    "rule_profile": "source_points",
-    "validation": {
-      "mismatch_count": 0,
-      "affected_teams": 0,
-      "affected_fields": [],
-      "compared_fields": [
-        "games_played",
-        "games_won",
-        "games_lost",
-        "sets_won",
-        "sets_lost",
-        "balls_won",
-        "balls_lost",
-        "points"
-      ]
-    },
-    "ranking_note": "Rank is indicative; validation compares statistics, not tie-break order."
+    "exported_at": "2026-10-28T11:04:10+01:00",
+    "scraper_version": "2.0.0",
+    "validation": true
   },
   "pool": {
     "id": "3767",
@@ -167,148 +149,6 @@
       "balls_won": 1303,
       "balls_lost": 1524,
       "points": 13
-    }
-  ],
-  "computed_standings": [
-    {
-      "team_name": "Skovbakken",
-      "games_played": 18,
-      "games_won": 15,
-      "games_lost": 3,
-      "sets_won": 49,
-      "sets_lost": 18,
-      "balls_won": 1541,
-      "balls_lost": 1270,
-      "points": 46,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 1
-    },
-    {
-      "team_name": "VK Vendsyssel",
-      "games_played": 18,
-      "games_won": 14,
-      "games_lost": 4,
-      "sets_won": 48,
-      "sets_lost": 21,
-      "balls_won": 1566,
-      "balls_lost": 1376,
-      "points": 45,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 2
-    },
-    {
-      "team_name": "Funder GF",
-      "games_played": 18,
-      "games_won": 13,
-      "games_lost": 5,
-      "sets_won": 46,
-      "sets_lost": 24,
-      "balls_won": 1578,
-      "balls_lost": 1406,
-      "points": 42,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 3
-    },
-    {
-      "team_name": "Aabyhøj IF",
-      "games_played": 18,
-      "games_won": 11,
-      "games_lost": 7,
-      "sets_won": 38,
-      "sets_lost": 29,
-      "balls_won": 1511,
-      "balls_lost": 1357,
-      "points": 34,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 4
-    },
-    {
-      "team_name": "ASV Aarhus.3",
-      "games_played": 18,
-      "games_won": 10,
-      "games_lost": 8,
-      "sets_won": 33,
-      "sets_lost": 38,
-      "balls_won": 1532,
-      "balls_lost": 1516,
-      "points": 30,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 5
-    },
-    {
-      "team_name": "Aalborg Volleyball.2",
-      "games_played": 18,
-      "games_won": 7,
-      "games_lost": 11,
-      "sets_won": 33,
-      "sets_lost": 37,
-      "balls_won": 1477,
-      "balls_lost": 1498,
-      "points": 26,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 6
-    },
-    {
-      "team_name": "Aarhus 1900",
-      "games_played": 18,
-      "games_won": 7,
-      "games_lost": 11,
-      "sets_won": 32,
-      "sets_lost": 37,
-      "balls_won": 1475,
-      "balls_lost": 1536,
-      "points": 24,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 7
-    },
-    {
-      "team_name": "VK Raptus.2",
-      "games_played": 18,
-      "games_won": 4,
-      "games_lost": 14,
-      "sets_won": 27,
-      "sets_lost": 48,
-      "balls_won": 1425,
-      "balls_lost": 1628,
-      "points": 16,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 8
-    },
-    {
-      "team_name": "Hjerm FIF",
-      "games_played": 18,
-      "games_won": 5,
-      "games_lost": 13,
-      "sets_won": 21,
-      "sets_lost": 44,
-      "balls_won": 1196,
-      "balls_lost": 1493,
-      "points": 16,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 9
-    },
-    {
-      "team_name": "Randers VK",
-      "games_played": 18,
-      "games_won": 4,
-      "games_lost": 14,
-      "sets_won": 18,
-      "sets_lost": 49,
-      "balls_won": 1303,
-      "balls_lost": 1524,
-      "points": 13,
-      "pool_id": "3767",
-      "rule_profile": "source_points",
-      "rank": 10
     }
   ],
   "matches": [
@@ -2923,4289 +2763,1336 @@
       "starts_at_time_known": true
     }
   ],
-  "set_results": [
-    {
-      "kamp_id": 66262,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66262,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 27,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66262,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66262,
-      "set_number": 4,
-      "home_points": 27,
-      "away_points": 25,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66263,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 4,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66263,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66263,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66264,
-      "set_number": 1,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66264,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66264,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66264,
-      "set_number": 4,
-      "home_points": 13,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66264,
-      "set_number": 5,
-      "home_points": 12,
-      "away_points": 15,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66265,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66265,
-      "set_number": 2,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66265,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66265,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 15,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66266,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66266,
-      "set_number": 2,
-      "home_points": 7,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66266,
-      "set_number": 3,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66266,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66266,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 9,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66267,
-      "set_number": 1,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66267,
-      "set_number": 2,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66267,
-      "set_number": 3,
-      "home_points": 14,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66268,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66268,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 15,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66268,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66269,
-      "set_number": 1,
-      "home_points": 14,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66269,
-      "set_number": 2,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66269,
-      "set_number": 3,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66270,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66270,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 16,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66270,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66271,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 27,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66271,
-      "set_number": 2,
-      "home_points": 12,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66271,
-      "set_number": 3,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66272,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 12,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66272,
-      "set_number": 2,
-      "home_points": 13,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66272,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66272,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 10,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66273,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66273,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66273,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66274,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 27,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66274,
-      "set_number": 2,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66274,
-      "set_number": 3,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66275,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66275,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66275,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66276,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66276,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 27,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66276,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66276,
-      "set_number": 4,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66276,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66277,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66277,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66277,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66278,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 10,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66278,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66278,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66279,
-      "set_number": 1,
-      "home_points": 13,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66279,
-      "set_number": 2,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66279,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66279,
-      "set_number": 4,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66280,
-      "set_number": 1,
-      "home_points": 16,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66280,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66280,
-      "set_number": 3,
-      "home_points": 14,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66281,
-      "set_number": 1,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66281,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66281,
-      "set_number": 3,
-      "home_points": 16,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66281,
-      "set_number": 4,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66282,
-      "set_number": 1,
-      "home_points": 26,
-      "away_points": 28,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66282,
-      "set_number": 2,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66282,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66282,
-      "set_number": 4,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66283,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66283,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66283,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66284,
-      "set_number": 1,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66284,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66284,
-      "set_number": 3,
-      "home_points": 26,
-      "away_points": 24,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66284,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66284,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 12,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66285,
-      "set_number": 1,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66285,
-      "set_number": 2,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66285,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66285,
-      "set_number": 4,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66286,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66286,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 10,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66286,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66287,
-      "set_number": 1,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66287,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66287,
-      "set_number": 3,
-      "home_points": 11,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66288,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66288,
-      "set_number": 2,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66288,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66288,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66289,
-      "set_number": 1,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66289,
-      "set_number": 2,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66289,
-      "set_number": 3,
-      "home_points": 28,
-      "away_points": 30,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66290,
-      "set_number": 1,
-      "home_points": 12,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66290,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66290,
-      "set_number": 3,
-      "home_points": 13,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66290,
-      "set_number": 4,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66291,
-      "set_number": 1,
-      "home_points": 13,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66291,
-      "set_number": 2,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66291,
-      "set_number": 3,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66292,
-      "set_number": 1,
-      "home_points": 27,
-      "away_points": 25,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66292,
-      "set_number": 2,
-      "home_points": 27,
-      "away_points": 29,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66292,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66292,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66293,
-      "set_number": 1,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66293,
-      "set_number": 2,
-      "home_points": 16,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66293,
-      "set_number": 3,
-      "home_points": 26,
-      "away_points": 24,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66293,
-      "set_number": 4,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66294,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66294,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66294,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66295,
-      "set_number": 1,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66295,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66295,
-      "set_number": 3,
-      "home_points": 26,
-      "away_points": 24,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66295,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66295,
-      "set_number": 5,
-      "home_points": 11,
-      "away_points": 15,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66296,
-      "set_number": 1,
-      "home_points": 30,
-      "away_points": 32,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66296,
-      "set_number": 2,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66296,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66296,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 10,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66296,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66297,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66297,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66297,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66298,
-      "set_number": 1,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66298,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66298,
-      "set_number": 3,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66298,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66298,
-      "set_number": 5,
-      "home_points": 18,
-      "away_points": 20,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66299,
-      "set_number": 1,
-      "home_points": 13,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66299,
-      "set_number": 2,
-      "home_points": 14,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66299,
-      "set_number": 3,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66300,
-      "set_number": 1,
-      "home_points": 9,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66300,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66300,
-      "set_number": 3,
-      "home_points": 9,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66300,
-      "set_number": 4,
-      "home_points": 11,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66301,
-      "set_number": 1,
-      "home_points": 13,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66301,
-      "set_number": 2,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66301,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66301,
-      "set_number": 4,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66302,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66302,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66302,
-      "set_number": 3,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66302,
-      "set_number": 4,
-      "home_points": 16,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66302,
-      "set_number": 5,
-      "home_points": 16,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66303,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 11,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66303,
-      "set_number": 2,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66303,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66303,
-      "set_number": 4,
-      "home_points": 15,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66303,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 8,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66304,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 11,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66304,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66304,
-      "set_number": 3,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66304,
-      "set_number": 4,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66304,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 8,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66305,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 10,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66305,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 15,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66305,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66306,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66306,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 16,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66306,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66307,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66307,
-      "set_number": 2,
-      "home_points": 16,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66307,
-      "set_number": 3,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66307,
-      "set_number": 4,
-      "home_points": 15,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66308,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 15,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66308,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66308,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 12,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66308,
-      "set_number": 4,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66308,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 8,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66309,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66309,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66309,
-      "set_number": 3,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66309,
-      "set_number": 4,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66309,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 7,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66310,
-      "set_number": 1,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66310,
-      "set_number": 2,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66310,
-      "set_number": 3,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66311,
-      "set_number": 1,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66311,
-      "set_number": 2,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66311,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 12,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66311,
-      "set_number": 4,
-      "home_points": 14,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66312,
-      "set_number": 1,
-      "home_points": 13,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66312,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66312,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66312,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66313,
-      "set_number": 1,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66313,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66313,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66313,
-      "set_number": 4,
-      "home_points": 14,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66313,
-      "set_number": 5,
-      "home_points": 13,
-      "away_points": 15,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66314,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66314,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66314,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66315,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66315,
-      "set_number": 2,
-      "home_points": 13,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66315,
-      "set_number": 3,
-      "home_points": 14,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66315,
-      "set_number": 4,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66316,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66316,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66316,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66317,
-      "set_number": 1,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66317,
-      "set_number": 2,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66317,
-      "set_number": 3,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66318,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66318,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66318,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66319,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66319,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66319,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 8,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66320,
-      "set_number": 1,
-      "home_points": 15,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66320,
-      "set_number": 2,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66320,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66320,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66320,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 11,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66321,
-      "set_number": 1,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66321,
-      "set_number": 2,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66321,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66321,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66321,
-      "set_number": 5,
-      "home_points": 8,
-      "away_points": 15,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66322,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66322,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66322,
-      "set_number": 3,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66322,
-      "set_number": 4,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66322,
-      "set_number": 5,
-      "home_points": 10,
-      "away_points": 15,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66323,
-      "set_number": 1,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66323,
-      "set_number": 2,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66323,
-      "set_number": 3,
-      "home_points": 15,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66324,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 10,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66324,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66324,
-      "set_number": 3,
-      "home_points": 23,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66324,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 15,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66324,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 10,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66325,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 12,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66325,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 11,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66325,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 15,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66326,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 16,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66326,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 10,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66326,
-      "set_number": 3,
-      "home_points": 26,
-      "away_points": 24,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66327,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66327,
-      "set_number": 2,
-      "home_points": 15,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66327,
-      "set_number": 3,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66327,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66327,
-      "set_number": 5,
-      "home_points": 14,
-      "away_points": 16,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66328,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66328,
-      "set_number": 2,
-      "home_points": 11,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66328,
-      "set_number": 3,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66328,
-      "set_number": 4,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66329,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66329,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66329,
-      "set_number": 3,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66329,
-      "set_number": 4,
-      "home_points": 12,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66329,
-      "set_number": 5,
-      "home_points": 6,
-      "away_points": 15,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66330,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66330,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66330,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66331,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66331,
-      "set_number": 2,
-      "home_points": 11,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66331,
-      "set_number": 3,
-      "home_points": 9,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66331,
-      "set_number": 4,
-      "home_points": 8,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66332,
-      "set_number": 1,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66332,
-      "set_number": 2,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66332,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66332,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66332,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66333,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66333,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66333,
-      "set_number": 3,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66333,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66334,
-      "set_number": 1,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66334,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66334,
-      "set_number": 3,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66334,
-      "set_number": 4,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66335,
-      "set_number": 1,
-      "home_points": 14,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66335,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66335,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66335,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66336,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66336,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66336,
-      "set_number": 3,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66336,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66337,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66337,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 13,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66337,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 20,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66338,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66338,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66338,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66338,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66339,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 16,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66339,
-      "set_number": 2,
-      "home_points": 21,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66339,
-      "set_number": 3,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66339,
-      "set_number": 4,
-      "home_points": 24,
-      "away_points": 26,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66340,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 17,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66340,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66340,
-      "set_number": 3,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66340,
-      "set_number": 4,
-      "home_points": 12,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66341,
-      "set_number": 1,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66341,
-      "set_number": 2,
-      "home_points": 12,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66341,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66341,
-      "set_number": 4,
-      "home_points": 17,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66342,
-      "set_number": 1,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66342,
-      "set_number": 2,
-      "home_points": 7,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66342,
-      "set_number": 3,
-      "home_points": 12,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66343,
-      "set_number": 1,
-      "home_points": 20,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66343,
-      "set_number": 2,
-      "home_points": 16,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66343,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66343,
-      "set_number": 4,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66344,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 14,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66344,
-      "set_number": 2,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66344,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66344,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 8,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66345,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 16,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66345,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66345,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66345,
-      "set_number": 4,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66345,
-      "set_number": 5,
-      "home_points": 10,
-      "away_points": 15,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66346,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66346,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66346,
-      "set_number": 3,
-      "home_points": 27,
-      "away_points": 25,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66347,
-      "set_number": 1,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66347,
-      "set_number": 2,
-      "home_points": 11,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66347,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 23,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66347,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66347,
-      "set_number": 5,
-      "home_points": 15,
-      "away_points": 9,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66348,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 12,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66348,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 21,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66348,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66349,
-      "set_number": 1,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66349,
-      "set_number": 2,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66349,
-      "set_number": 3,
-      "home_points": 25,
-      "away_points": 18,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66349,
-      "set_number": 4,
-      "home_points": 19,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66350,
-      "set_number": 1,
-      "home_points": 18,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66350,
-      "set_number": 2,
-      "home_points": 22,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66350,
-      "set_number": 3,
-      "home_points": 11,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66351,
-      "set_number": 1,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66351,
-      "set_number": 2,
-      "home_points": 25,
-      "away_points": 22,
-      "home_set_won": 1,
-      "away_set_won": 0
-    },
-    {
-      "kamp_id": 66351,
-      "set_number": 3,
-      "home_points": 16,
-      "away_points": 25,
-      "home_set_won": 0,
-      "away_set_won": 1
-    },
-    {
-      "kamp_id": 66351,
-      "set_number": 4,
-      "home_points": 25,
-      "away_points": 19,
-      "home_set_won": 1,
-      "away_set_won": 0
-    }
-  ],
-  "rule_profile": "source_points",
   "cumulative_points": [
     {
-      "team": "ASV Aarhus.3",
       "date": null,
-      "game_number": 0,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": null
-    },
-    {
-      "team": "Aabyhøj IF",
-      "date": null,
-      "game_number": 0,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": null
-    },
-    {
       "team": "Aalborg Volleyball.2",
-      "date": null,
-      "game_number": 0,
       "points": 0,
       "cumulative_points": 0,
-      "kamp_id": null
+      "game_number": 0
     },
     {
-      "team": "Aarhus 1900",
       "date": null,
-      "game_number": 0,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": null
-    },
-    {
-      "team": "Funder GF",
-      "date": null,
-      "game_number": 0,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": null
-    },
-    {
       "team": "Hjerm FIF",
-      "date": null,
-      "game_number": 0,
       "points": 0,
       "cumulative_points": 0,
-      "kamp_id": null
+      "game_number": 0
     },
     {
-      "team": "Randers VK",
       "date": null,
-      "game_number": 0,
+      "team": "Funder GF",
       "points": 0,
       "cumulative_points": 0,
-      "kamp_id": null
+      "game_number": 0
     },
     {
-      "team": "Skovbakken",
       "date": null,
-      "game_number": 0,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": null
-    },
-    {
-      "team": "VK Raptus.2",
-      "date": null,
-      "game_number": 0,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": null
-    },
-    {
       "team": "VK Vendsyssel",
-      "date": null,
-      "game_number": 0,
       "points": 0,
       "cumulative_points": 0,
-      "kamp_id": null
+      "game_number": 0
     },
     {
-      "team": "Aalborg Volleyball.2",
+      "date": null,
+      "team": "Aabyhøj IF",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 0
+    },
+    {
+      "date": null,
+      "team": "ASV Aarhus.3",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 0
+    },
+    {
+      "date": null,
+      "team": "VK Raptus.2",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 0
+    },
+    {
+      "date": null,
+      "team": "Randers VK",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 0
+    },
+    {
+      "date": null,
+      "team": "Skovbakken",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 0
+    },
+    {
+      "date": null,
+      "team": "Aarhus 1900",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 0
+    },
+    {
       "date": "2024-09-28T10:00:00",
-      "game_number": 1,
+      "team": "Aalborg Volleyball.2",
       "points": 3,
       "cumulative_points": 3,
-      "kamp_id": 66263
+      "game_number": 1
     },
     {
-      "team": "Randers VK",
       "date": "2024-09-28T10:00:00",
-      "game_number": 1,
+      "team": "Randers VK",
       "points": 0,
       "cumulative_points": 0,
-      "kamp_id": 66263
+      "game_number": 1
     },
     {
+      "date": "2024-09-28T10:00:00",
+      "team": "VK Raptus.2",
+      "points": 1,
+      "cumulative_points": 1,
+      "game_number": 1
+    },
+    {
+      "date": "2024-09-28T10:00:00",
       "team": "Hjerm FIF",
-      "date": "2024-09-28T10:00:00",
-      "game_number": 1,
       "points": 3,
       "cumulative_points": 3,
-      "kamp_id": 66266
+      "game_number": 1
     },
     {
-      "team": "VK Raptus.2",
-      "date": "2024-09-28T10:00:00",
-      "game_number": 1,
-      "points": 1,
-      "cumulative_points": 1,
-      "kamp_id": 66266
-    },
-    {
-      "team": "Funder GF",
       "date": "2024-09-28T14:00:00",
-      "game_number": 1,
-      "points": 3,
-      "cumulative_points": 3,
-      "kamp_id": 66262
-    },
-    {
-      "team": "Aarhus 1900",
-      "date": "2024-09-28T14:00:00",
-      "game_number": 1,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": 66262
-    },
-    {
       "team": "VK Vendsyssel",
-      "date": "2024-09-28T14:00:00",
-      "game_number": 1,
       "points": 1,
       "cumulative_points": 1,
-      "kamp_id": 66264
+      "game_number": 1
     },
     {
-      "team": "Skovbakken",
       "date": "2024-09-28T14:00:00",
-      "game_number": 1,
+      "team": "Funder GF",
       "points": 3,
       "cumulative_points": 3,
-      "kamp_id": 66264
+      "game_number": 1
     },
     {
-      "team": "Aabyhøj IF",
-      "date": "2024-09-29T13:00:00",
-      "game_number": 1,
-      "points": 3,
-      "cumulative_points": 3,
-      "kamp_id": 66265
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2024-09-29T13:00:00",
-      "game_number": 1,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": 66265
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2024-10-04T20:00:00",
-      "game_number": 2,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": 66271
-    },
-    {
+      "date": "2024-09-28T14:00:00",
       "team": "Skovbakken",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 1
+    },
+    {
+      "date": "2024-09-28T14:00:00",
+      "team": "Aarhus 1900",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 1
+    },
+    {
+      "date": "2024-09-29T13:00:00",
+      "team": "Aabyhøj IF",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 1
+    },
+    {
+      "date": "2024-09-29T13:00:00",
+      "team": "ASV Aarhus.3",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 1
+    },
+    {
       "date": "2024-10-04T20:00:00",
-      "game_number": 2,
+      "team": "ASV Aarhus.3",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 2
+    },
+    {
+      "date": "2024-10-04T20:00:00",
+      "team": "Skovbakken",
       "points": 3,
       "cumulative_points": 6,
-      "kamp_id": 66271
+      "game_number": 2
     },
     {
+      "date": "2024-10-05T15:00:00",
       "team": "VK Raptus.2",
-      "date": "2024-10-05T15:00:00",
-      "game_number": 2,
       "points": 3,
       "cumulative_points": 4,
-      "kamp_id": 66268
+      "game_number": 2
     },
     {
+      "date": "2024-10-05T15:00:00",
       "team": "Aalborg Volleyball.2",
-      "date": "2024-10-05T15:00:00",
-      "game_number": 2,
       "points": 0,
       "cumulative_points": 3,
-      "kamp_id": 66268
+      "game_number": 2
     },
     {
-      "team": "Aabyhøj IF",
       "date": "2024-10-06T13:00:00",
-      "game_number": 2,
-      "points": 0,
-      "cumulative_points": 3,
-      "kamp_id": 66269
-    },
-    {
       "team": "VK Vendsyssel",
-      "date": "2024-10-06T13:00:00",
-      "game_number": 2,
       "points": 3,
       "cumulative_points": 4,
-      "kamp_id": 66269
+      "game_number": 2
     },
     {
+      "date": "2024-10-06T13:00:00",
+      "team": "Aabyhøj IF",
+      "points": 0,
+      "cumulative_points": 3,
+      "game_number": 2
+    },
+    {
+      "date": "2024-10-06T14:00:00",
       "team": "Randers VK",
-      "date": "2024-10-06T14:00:00",
-      "game_number": 2,
       "points": 0,
       "cumulative_points": 0,
-      "kamp_id": 66267
+      "game_number": 2
     },
     {
-      "team": "Funder GF",
       "date": "2024-10-06T14:00:00",
-      "game_number": 2,
+      "team": "Funder GF",
       "points": 3,
       "cumulative_points": 6,
-      "kamp_id": 66267
+      "game_number": 2
     },
     {
-      "team": "Aalborg Volleyball.2",
       "date": "2024-10-12T10:00:00",
-      "game_number": 3,
-      "points": 3,
-      "cumulative_points": 6,
-      "kamp_id": 66273
-    },
-    {
       "team": "VK Vendsyssel",
-      "date": "2024-10-12T10:00:00",
-      "game_number": 3,
       "points": 0,
       "cumulative_points": 4,
-      "kamp_id": 66273
+      "game_number": 3
     },
     {
-      "team": "ASV Aarhus.3",
       "date": "2024-10-12T10:00:00",
-      "game_number": 3,
+      "team": "ASV Aarhus.3",
       "points": 3,
       "cumulative_points": 3,
-      "kamp_id": 66276
+      "game_number": 3
     },
     {
-      "team": "Aarhus 1900",
       "date": "2024-10-12T10:00:00",
-      "game_number": 2,
+      "team": "Aalborg Volleyball.2",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 3
+    },
+    {
+      "date": "2024-10-12T10:00:00",
+      "team": "Aarhus 1900",
       "points": 1,
       "cumulative_points": 1,
-      "kamp_id": 66276
+      "game_number": 2
     },
     {
-      "team": "Skovbakken",
       "date": "2024-10-12T11:00:00",
-      "game_number": 3,
+      "team": "Skovbakken",
       "points": 3,
       "cumulative_points": 9,
-      "kamp_id": 66275
+      "game_number": 3
     },
     {
-      "team": "Aabyhøj IF",
       "date": "2024-10-12T11:00:00",
-      "game_number": 3,
+      "team": "Aabyhøj IF",
       "points": 0,
       "cumulative_points": 3,
-      "kamp_id": 66275
+      "game_number": 3
     },
     {
-      "team": "Funder GF",
       "date": "2024-10-12T14:00:00",
-      "game_number": 3,
+      "team": "Funder GF",
       "points": 3,
       "cumulative_points": 9,
-      "kamp_id": 66272
+      "game_number": 3
     },
     {
-      "team": "VK Raptus.2",
       "date": "2024-10-12T14:00:00",
-      "game_number": 3,
+      "team": "VK Raptus.2",
       "points": 0,
       "cumulative_points": 4,
-      "kamp_id": 66272
+      "game_number": 3
     },
     {
-      "team": "Randers VK",
       "date": "2024-10-13T12:00:00",
-      "game_number": 3,
+      "team": "Hjerm FIF",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 2
+    },
+    {
+      "date": "2024-10-13T12:00:00",
+      "team": "Randers VK",
       "points": 0,
       "cumulative_points": 0,
-      "kamp_id": 66274
+      "game_number": 3
     },
     {
-      "team": "Hjerm FIF",
-      "date": "2024-10-13T12:00:00",
-      "game_number": 2,
-      "points": 3,
-      "cumulative_points": 6,
-      "kamp_id": 66274
-    },
-    {
-      "team": "Hjerm FIF",
       "date": "2024-10-26T10:00:00",
-      "game_number": 3,
-      "points": 0,
-      "cumulative_points": 6,
-      "kamp_id": 66280
-    },
-    {
       "team": "Aabyhøj IF",
-      "date": "2024-10-26T10:00:00",
-      "game_number": 4,
       "points": 3,
       "cumulative_points": 6,
-      "kamp_id": 66280
+      "game_number": 4
     },
     {
-      "team": "Aarhus 1900",
       "date": "2024-10-26T10:00:00",
-      "game_number": 3,
+      "team": "Aarhus 1900",
       "points": 0,
       "cumulative_points": 1,
-      "kamp_id": 66281
+      "game_number": 3
     },
     {
-      "team": "Skovbakken",
       "date": "2024-10-26T10:00:00",
-      "game_number": 4,
-      "points": 3,
-      "cumulative_points": 12,
-      "kamp_id": 66281
-    },
-    {
-      "team": "Funder GF",
-      "date": "2024-10-26T14:00:00",
-      "game_number": 4,
-      "points": 3,
-      "cumulative_points": 12,
-      "kamp_id": 66277
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2024-10-26T14:00:00",
-      "game_number": 4,
+      "team": "Hjerm FIF",
       "points": 0,
       "cumulative_points": 6,
-      "kamp_id": 66277
+      "game_number": 3
     },
     {
-      "team": "VK Vendsyssel",
+      "date": "2024-10-26T10:00:00",
+      "team": "Skovbakken",
+      "points": 3,
+      "cumulative_points": 12,
+      "game_number": 4
+    },
+    {
       "date": "2024-10-26T14:00:00",
-      "game_number": 4,
+      "team": "Randers VK",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 4
+    },
+    {
+      "date": "2024-10-26T14:00:00",
+      "team": "Funder GF",
+      "points": 3,
+      "cumulative_points": 12,
+      "game_number": 4
+    },
+    {
+      "date": "2024-10-26T14:00:00",
+      "team": "Aalborg Volleyball.2",
+      "points": 0,
+      "cumulative_points": 6,
+      "game_number": 4
+    },
+    {
+      "date": "2024-10-26T14:00:00",
+      "team": "VK Vendsyssel",
       "points": 3,
       "cumulative_points": 7,
-      "kamp_id": 66278
+      "game_number": 4
     },
     {
-      "team": "Randers VK",
-      "date": "2024-10-26T14:00:00",
-      "game_number": 4,
-      "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": 66278
-    },
-    {
-      "team": "VK Raptus.2",
       "date": "2024-10-27T15:00:00",
-      "game_number": 4,
+      "team": "VK Raptus.2",
       "points": 0,
       "cumulative_points": 4,
-      "kamp_id": 66279
+      "game_number": 4
     },
     {
-      "team": "ASV Aarhus.3",
       "date": "2024-10-27T15:00:00",
-      "game_number": 4,
+      "team": "ASV Aarhus.3",
       "points": 3,
       "cumulative_points": 6,
-      "kamp_id": 66279
+      "game_number": 4
     },
     {
-      "team": "Hjerm FIF",
       "date": "2024-11-02T10:00:00",
-      "game_number": 4,
-      "points": 0,
-      "cumulative_points": 6,
-      "kamp_id": 66291
-    },
-    {
       "team": "ASV Aarhus.3",
-      "date": "2024-11-02T10:00:00",
-      "game_number": 5,
       "points": 3,
       "cumulative_points": 9,
-      "kamp_id": 66291
+      "game_number": 5
     },
     {
-      "team": "Funder GF",
+      "date": "2024-11-02T10:00:00",
+      "team": "Hjerm FIF",
+      "points": 0,
+      "cumulative_points": 6,
+      "game_number": 4
+    },
+    {
       "date": "2024-11-02T14:00:00",
-      "game_number": 5,
+      "team": "Funder GF",
       "points": 0,
       "cumulative_points": 12,
-      "kamp_id": 66287
+      "game_number": 5
     },
     {
-      "team": "Skovbakken",
       "date": "2024-11-02T14:00:00",
-      "game_number": 5,
-      "points": 3,
-      "cumulative_points": 15,
-      "kamp_id": 66287
-    },
-    {
       "team": "Randers VK",
-      "date": "2024-11-02T14:00:00",
-      "game_number": 5,
       "points": 0,
       "cumulative_points": 0,
-      "kamp_id": 66289
+      "game_number": 5
     },
     {
-      "team": "Aarhus 1900",
       "date": "2024-11-02T14:00:00",
-      "game_number": 4,
+      "team": "Aarhus 1900",
       "points": 3,
       "cumulative_points": 4,
-      "kamp_id": 66289
+      "game_number": 4
     },
     {
-      "team": "Aalborg Volleyball.2",
+      "date": "2024-11-02T14:00:00",
+      "team": "Skovbakken",
+      "points": 3,
+      "cumulative_points": 15,
+      "game_number": 5
+    },
+    {
       "date": "2024-11-02T16:00:00",
-      "game_number": 5,
+      "team": "Aalborg Volleyball.2",
       "points": 3,
       "cumulative_points": 9,
-      "kamp_id": 66288
+      "game_number": 5
     },
     {
-      "team": "Aabyhøj IF",
       "date": "2024-11-02T16:00:00",
-      "game_number": 5,
+      "team": "Aabyhøj IF",
       "points": 0,
       "cumulative_points": 6,
-      "kamp_id": 66288
+      "game_number": 5
     },
     {
-      "team": "VK Raptus.2",
       "date": "2024-11-03T16:00:00",
-      "game_number": 5,
+      "team": "VK Raptus.2",
       "points": 0,
       "cumulative_points": 4,
-      "kamp_id": 66290
+      "game_number": 5
     },
     {
-      "team": "VK Vendsyssel",
       "date": "2024-11-03T16:00:00",
-      "game_number": 5,
+      "team": "VK Vendsyssel",
       "points": 3,
       "cumulative_points": 10,
-      "kamp_id": 66290
+      "game_number": 5
     },
     {
-      "team": "Aarhus 1900",
       "date": "2024-11-09T12:00:00",
-      "game_number": 5,
-      "points": 1,
-      "cumulative_points": 5,
-      "kamp_id": 66295
-    },
-    {
       "team": "VK Raptus.2",
-      "date": "2024-11-09T12:00:00",
-      "game_number": 6,
       "points": 3,
       "cumulative_points": 7,
-      "kamp_id": 66295
+      "game_number": 6
     },
     {
-      "team": "VK Vendsyssel",
+      "date": "2024-11-09T12:00:00",
+      "team": "Aarhus 1900",
+      "points": 1,
+      "cumulative_points": 5,
+      "game_number": 5
+    },
+    {
       "date": "2024-11-09T14:00:00",
-      "game_number": 6,
+      "team": "Hjerm FIF",
+      "points": 1,
+      "cumulative_points": 7,
+      "game_number": 5
+    },
+    {
+      "date": "2024-11-09T14:00:00",
+      "team": "VK Vendsyssel",
       "points": 3,
       "cumulative_points": 13,
-      "kamp_id": 66296
+      "game_number": 6
     },
     {
-      "team": "Hjerm FIF",
-      "date": "2024-11-09T14:00:00",
-      "game_number": 5,
-      "points": 1,
-      "cumulative_points": 7,
-      "kamp_id": 66296
-    },
-    {
-      "team": "ASV Aarhus.3",
       "date": "2024-11-09T18:00:00",
-      "game_number": 6,
+      "team": "ASV Aarhus.3",
       "points": 3,
       "cumulative_points": 12,
-      "kamp_id": 66292
+      "game_number": 6
     },
     {
-      "team": "Funder GF",
       "date": "2024-11-09T18:00:00",
-      "game_number": 6,
+      "team": "Funder GF",
       "points": 0,
       "cumulative_points": 12,
-      "kamp_id": 66292
+      "game_number": 6
     },
     {
-      "team": "Skovbakken",
       "date": "2024-11-10T13:00:00",
-      "game_number": 6,
+      "team": "Aalborg Volleyball.2",
+      "points": 3,
+      "cumulative_points": 12,
+      "game_number": 6
+    },
+    {
+      "date": "2024-11-10T13:00:00",
+      "team": "Skovbakken",
       "points": 0,
       "cumulative_points": 15,
-      "kamp_id": 66293
+      "game_number": 6
     },
     {
-      "team": "Aalborg Volleyball.2",
-      "date": "2024-11-10T13:00:00",
-      "game_number": 6,
-      "points": 3,
-      "cumulative_points": 12,
-      "kamp_id": 66293
-    },
-    {
-      "team": "Aabyhøj IF",
       "date": "2024-11-17T13:00:00",
-      "game_number": 6,
-      "points": 3,
-      "cumulative_points": 9,
-      "kamp_id": 66294
-    },
-    {
       "team": "Randers VK",
-      "date": "2024-11-17T13:00:00",
-      "game_number": 6,
       "points": 0,
       "cumulative_points": 0,
-      "kamp_id": 66294
+      "game_number": 6
     },
     {
-      "team": "Aarhus 1900",
+      "date": "2024-11-17T13:00:00",
+      "team": "Aabyhøj IF",
+      "points": 3,
+      "cumulative_points": 9,
+      "game_number": 6
+    },
+    {
       "date": "2024-11-23T12:00:00",
-      "game_number": 6,
-      "points": 0,
-      "cumulative_points": 5,
-      "kamp_id": 66301
-    },
-    {
       "team": "VK Vendsyssel",
-      "date": "2024-11-23T12:00:00",
-      "game_number": 7,
       "points": 3,
       "cumulative_points": 16,
-      "kamp_id": 66301
+      "game_number": 7
     },
     {
-      "team": "Randers VK",
-      "date": "2024-11-23T13:00:00",
-      "game_number": 7,
+      "date": "2024-11-23T12:00:00",
+      "team": "Aarhus 1900",
       "points": 0,
-      "cumulative_points": 0,
-      "kamp_id": 66299
+      "cumulative_points": 5,
+      "game_number": 6
     },
     {
-      "team": "Skovbakken",
       "date": "2024-11-23T13:00:00",
-      "game_number": 7,
+      "team": "Skovbakken",
       "points": 3,
       "cumulative_points": 18,
-      "kamp_id": 66299
+      "game_number": 7
     },
     {
-      "team": "VK Raptus.2",
-      "date": "2024-11-23T17:00:00",
-      "game_number": 7,
+      "date": "2024-11-23T13:00:00",
+      "team": "Randers VK",
       "points": 0,
-      "cumulative_points": 7,
-      "kamp_id": 66300
+      "cumulative_points": 0,
+      "game_number": 7
     },
     {
-      "team": "Aabyhøj IF",
       "date": "2024-11-23T17:00:00",
-      "game_number": 7,
+      "team": "Aabyhøj IF",
       "points": 3,
       "cumulative_points": 12,
-      "kamp_id": 66300
+      "game_number": 7
     },
     {
-      "team": "Aalborg Volleyball.2",
-      "date": "2024-11-23T18:00:00",
-      "game_number": 7,
-      "points": 1,
-      "cumulative_points": 13,
-      "kamp_id": 66298
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2024-11-23T18:00:00",
-      "game_number": 7,
-      "points": 3,
-      "cumulative_points": 15,
-      "kamp_id": 66298
-    },
-    {
-      "team": "Funder GF",
-      "date": "2024-11-24T11:30:00",
-      "game_number": 7,
-      "points": 3,
-      "cumulative_points": 15,
-      "kamp_id": 66297
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2024-11-24T11:30:00",
-      "game_number": 6,
+      "date": "2024-11-23T17:00:00",
+      "team": "VK Raptus.2",
       "points": 0,
       "cumulative_points": 7,
-      "kamp_id": 66297
+      "game_number": 7
     },
     {
-      "team": "Hjerm FIF",
-      "date": "2024-11-30T12:00:00",
-      "game_number": 7,
+      "date": "2024-11-23T18:00:00",
+      "team": "ASV Aarhus.3",
       "points": 3,
-      "cumulative_points": 10,
-      "kamp_id": 66303
+      "cumulative_points": 15,
+      "game_number": 7
     },
     {
+      "date": "2024-11-23T18:00:00",
       "team": "Aalborg Volleyball.2",
+      "points": 1,
+      "cumulative_points": 13,
+      "game_number": 7
+    },
+    {
+      "date": "2024-11-24T11:30:00",
+      "team": "Funder GF",
+      "points": 3,
+      "cumulative_points": 15,
+      "game_number": 7
+    },
+    {
+      "date": "2024-11-24T11:30:00",
+      "team": "Hjerm FIF",
+      "points": 0,
+      "cumulative_points": 7,
+      "game_number": 6
+    },
+    {
       "date": "2024-11-30T12:00:00",
-      "game_number": 8,
+      "team": "Aalborg Volleyball.2",
       "points": 1,
       "cumulative_points": 14,
-      "kamp_id": 66303
+      "game_number": 8
     },
     {
-      "team": "ASV Aarhus.3",
       "date": "2024-11-30T12:00:00",
-      "game_number": 8,
-      "points": 3,
-      "cumulative_points": 18,
-      "kamp_id": 66304
-    },
-    {
       "team": "Randers VK",
-      "date": "2024-11-30T12:00:00",
-      "game_number": 8,
       "points": 1,
       "cumulative_points": 1,
-      "kamp_id": 66304
+      "game_number": 8
     },
     {
-      "team": "VK Vendsyssel",
-      "date": "2024-11-30T15:00:00",
-      "game_number": 8,
+      "date": "2024-11-30T12:00:00",
+      "team": "Hjerm FIF",
       "points": 3,
-      "cumulative_points": 19,
-      "kamp_id": 66302
+      "cumulative_points": 10,
+      "game_number": 7
     },
     {
-      "team": "Funder GF",
+      "date": "2024-11-30T12:00:00",
+      "team": "ASV Aarhus.3",
+      "points": 3,
+      "cumulative_points": 18,
+      "game_number": 8
+    },
+    {
       "date": "2024-11-30T15:00:00",
-      "game_number": 8,
+      "team": "Funder GF",
       "points": 1,
       "cumulative_points": 16,
-      "kamp_id": 66302
+      "game_number": 8
     },
     {
-      "team": "Skovbakken",
-      "date": "2024-12-01T11:00:00",
-      "game_number": 8,
-      "points": 3,
-      "cumulative_points": 21,
-      "kamp_id": 66305
-    },
-    {
-      "team": "VK Raptus.2",
-      "date": "2024-12-01T11:00:00",
-      "game_number": 8,
-      "points": 0,
-      "cumulative_points": 7,
-      "kamp_id": 66305
-    },
-    {
-      "team": "Aabyhøj IF",
-      "date": "2024-12-01T13:00:00",
-      "game_number": 8,
-      "points": 3,
-      "cumulative_points": 15,
-      "kamp_id": 66306
-    },
-    {
-      "team": "Aarhus 1900",
-      "date": "2024-12-01T13:00:00",
-      "game_number": 7,
-      "points": 0,
-      "cumulative_points": 5,
-      "kamp_id": 66306
-    },
-    {
-      "team": "Skovbakken",
-      "date": "2024-12-07T11:00:00",
-      "game_number": 9,
-      "points": 3,
-      "cumulative_points": 24,
-      "kamp_id": 66309
-    },
-    {
+      "date": "2024-11-30T15:00:00",
       "team": "VK Vendsyssel",
-      "date": "2024-12-07T11:00:00",
-      "game_number": 9,
-      "points": 1,
-      "cumulative_points": 20,
-      "kamp_id": 66309
-    },
-    {
-      "team": "Aarhus 1900",
-      "date": "2024-12-07T12:00:00",
-      "game_number": 8,
-      "points": 0,
-      "cumulative_points": 5,
-      "kamp_id": 66307
-    },
-    {
-      "team": "Funder GF",
-      "date": "2024-12-07T12:00:00",
-      "game_number": 9,
       "points": 3,
       "cumulative_points": 19,
-      "kamp_id": 66307
+      "game_number": 8
     },
     {
-      "team": "Randers VK",
+      "date": "2024-12-01T11:00:00",
+      "team": "VK Raptus.2",
+      "points": 0,
+      "cumulative_points": 7,
+      "game_number": 8
+    },
+    {
+      "date": "2024-12-01T11:00:00",
+      "team": "Skovbakken",
+      "points": 3,
+      "cumulative_points": 21,
+      "game_number": 8
+    },
+    {
+      "date": "2024-12-01T13:00:00",
+      "team": "Aarhus 1900",
+      "points": 0,
+      "cumulative_points": 5,
+      "game_number": 7
+    },
+    {
+      "date": "2024-12-01T13:00:00",
+      "team": "Aabyhøj IF",
+      "points": 3,
+      "cumulative_points": 15,
+      "game_number": 8
+    },
+    {
+      "date": "2024-12-07T11:00:00",
+      "team": "Skovbakken",
+      "points": 3,
+      "cumulative_points": 24,
+      "game_number": 9
+    },
+    {
+      "date": "2024-12-07T11:00:00",
+      "team": "VK Vendsyssel",
+      "points": 1,
+      "cumulative_points": 20,
+      "game_number": 9
+    },
+    {
+      "date": "2024-12-07T12:00:00",
+      "team": "Funder GF",
+      "points": 3,
+      "cumulative_points": 19,
+      "game_number": 9
+    },
+    {
+      "date": "2024-12-07T12:00:00",
+      "team": "Aarhus 1900",
+      "points": 0,
+      "cumulative_points": 5,
+      "game_number": 8
+    },
+    {
       "date": "2024-12-07T14:00:00",
-      "game_number": 9,
+      "team": "Randers VK",
       "points": 3,
       "cumulative_points": 4,
-      "kamp_id": 66308
+      "game_number": 9
     },
     {
-      "team": "Aalborg Volleyball.2",
       "date": "2024-12-07T14:00:00",
-      "game_number": 9,
+      "team": "ASV Aarhus.3",
+      "points": 0,
+      "cumulative_points": 18,
+      "game_number": 9
+    },
+    {
+      "date": "2024-12-07T14:00:00",
+      "team": "Aalborg Volleyball.2",
       "points": 1,
       "cumulative_points": 15,
-      "kamp_id": 66308
+      "game_number": 9
     },
     {
-      "team": "ASV Aarhus.3",
       "date": "2024-12-07T14:00:00",
-      "game_number": 9,
-      "points": 0,
-      "cumulative_points": 18,
-      "kamp_id": 66310
-    },
-    {
       "team": "Aabyhøj IF",
-      "date": "2024-12-07T14:00:00",
-      "game_number": 9,
       "points": 3,
       "cumulative_points": 18,
-      "kamp_id": 66310
+      "game_number": 9
     },
     {
-      "team": "VK Raptus.2",
       "date": "2024-12-07T16:00:00",
-      "game_number": 9,
-      "points": 0,
-      "cumulative_points": 7,
-      "kamp_id": 66311
-    },
-    {
       "team": "Hjerm FIF",
-      "date": "2024-12-07T16:00:00",
-      "game_number": 8,
       "points": 3,
       "cumulative_points": 13,
-      "kamp_id": 66311
+      "game_number": 8
     },
     {
-      "team": "Aarhus 1900",
-      "date": "2025-01-11T10:00:00",
-      "game_number": 9,
-      "points": 1,
-      "cumulative_points": 6,
-      "kamp_id": 66321
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2025-01-11T10:00:00",
-      "game_number": 10,
-      "points": 3,
-      "cumulative_points": 21,
-      "kamp_id": 66321
-    },
-    {
-      "team": "VK Vendsyssel",
-      "date": "2025-01-11T14:00:00",
-      "game_number": 10,
-      "points": 3,
-      "cumulative_points": 23,
-      "kamp_id": 66318
-    },
-    {
-      "team": "Aalborg Volleyball.2",
-      "date": "2025-01-11T14:00:00",
-      "game_number": 10,
-      "points": 0,
-      "cumulative_points": 15,
-      "kamp_id": 66318
-    },
-    {
-      "team": "Aabyhøj IF",
-      "date": "2025-01-12T13:00:00",
-      "game_number": 10,
-      "points": 3,
-      "cumulative_points": 21,
-      "kamp_id": 66320
-    },
-    {
-      "team": "Skovbakken",
-      "date": "2025-01-12T13:00:00",
-      "game_number": 10,
-      "points": 1,
-      "cumulative_points": 25,
-      "kamp_id": 66320
-    },
-    {
+      "date": "2024-12-07T16:00:00",
       "team": "VK Raptus.2",
-      "date": "2025-01-12T15:00:00",
-      "game_number": 10,
       "points": 0,
       "cumulative_points": 7,
-      "kamp_id": 66317
+      "game_number": 9
     },
     {
-      "team": "Funder GF",
+      "date": "2025-01-11T10:00:00",
+      "team": "Aarhus 1900",
+      "points": 1,
+      "cumulative_points": 6,
+      "game_number": 9
+    },
+    {
+      "date": "2025-01-11T10:00:00",
+      "team": "ASV Aarhus.3",
+      "points": 3,
+      "cumulative_points": 21,
+      "game_number": 10
+    },
+    {
+      "date": "2025-01-11T14:00:00",
+      "team": "VK Vendsyssel",
+      "points": 3,
+      "cumulative_points": 23,
+      "game_number": 10
+    },
+    {
+      "date": "2025-01-11T14:00:00",
+      "team": "Aalborg Volleyball.2",
+      "points": 0,
+      "cumulative_points": 15,
+      "game_number": 10
+    },
+    {
+      "date": "2025-01-12T13:00:00",
+      "team": "Skovbakken",
+      "points": 1,
+      "cumulative_points": 25,
+      "game_number": 10
+    },
+    {
+      "date": "2025-01-12T13:00:00",
+      "team": "Aabyhøj IF",
+      "points": 3,
+      "cumulative_points": 21,
+      "game_number": 10
+    },
+    {
       "date": "2025-01-12T15:00:00",
-      "game_number": 10,
+      "team": "Funder GF",
       "points": 3,
       "cumulative_points": 22,
-      "kamp_id": 66317
+      "game_number": 10
     },
     {
-      "team": "Hjerm FIF",
+      "date": "2025-01-12T15:00:00",
+      "team": "VK Raptus.2",
+      "points": 0,
+      "cumulative_points": 7,
+      "game_number": 10
+    },
+    {
       "date": "2025-01-15T20:00:00",
-      "game_number": 9,
-      "points": 3,
-      "cumulative_points": 16,
-      "kamp_id": 66319
-    },
-    {
       "team": "Randers VK",
-      "date": "2025-01-15T20:00:00",
-      "game_number": 10,
       "points": 0,
       "cumulative_points": 4,
-      "kamp_id": 66319
+      "game_number": 10
     },
     {
-      "team": "Aalborg Volleyball.2",
+      "date": "2025-01-15T20:00:00",
+      "team": "Hjerm FIF",
+      "points": 3,
+      "cumulative_points": 16,
+      "game_number": 9
+    },
+    {
       "date": "2025-01-18T12:00:00",
-      "game_number": 11,
+      "team": "VK Vendsyssel",
+      "points": 3,
+      "cumulative_points": 26,
+      "game_number": 11
+    },
+    {
+      "date": "2025-01-18T12:00:00",
+      "team": "VK Raptus.2",
+      "points": 1,
+      "cumulative_points": 8,
+      "game_number": 11
+    },
+    {
+      "date": "2025-01-18T12:00:00",
+      "team": "ASV Aarhus.3",
+      "points": 3,
+      "cumulative_points": 24,
+      "game_number": 11
+    },
+    {
+      "date": "2025-01-18T12:00:00",
+      "team": "Randers VK",
+      "points": 0,
+      "cumulative_points": 4,
+      "game_number": 11
+    },
+    {
+      "date": "2025-01-18T12:00:00",
+      "team": "Aalborg Volleyball.2",
       "points": 1,
       "cumulative_points": 16,
-      "kamp_id": 66322
+      "game_number": 11
     },
     {
-      "team": "Funder GF",
       "date": "2025-01-18T12:00:00",
-      "game_number": 11,
+      "team": "Funder GF",
       "points": 3,
       "cumulative_points": 25,
-      "kamp_id": 66322
+      "game_number": 11
     },
     {
-      "team": "Randers VK",
-      "date": "2025-01-18T12:00:00",
-      "game_number": 11,
-      "points": 0,
-      "cumulative_points": 4,
-      "kamp_id": 66323
-    },
-    {
-      "team": "VK Vendsyssel",
-      "date": "2025-01-18T12:00:00",
-      "game_number": 11,
-      "points": 3,
-      "cumulative_points": 26,
-      "kamp_id": 66323
-    },
-    {
-      "team": "ASV Aarhus.3",
-      "date": "2025-01-18T12:00:00",
-      "game_number": 11,
-      "points": 3,
-      "cumulative_points": 24,
-      "kamp_id": 66324
-    },
-    {
-      "team": "VK Raptus.2",
-      "date": "2025-01-18T12:00:00",
-      "game_number": 11,
-      "points": 1,
-      "cumulative_points": 8,
-      "kamp_id": 66324
-    },
-    {
-      "team": "Skovbakken",
       "date": "2025-01-18T13:30:00",
-      "game_number": 11,
+      "team": "Skovbakken",
       "points": 3,
       "cumulative_points": 28,
-      "kamp_id": 66326
+      "game_number": 11
     },
     {
-      "team": "Aarhus 1900",
       "date": "2025-01-18T13:30:00",
-      "game_number": 10,
+      "team": "Aarhus 1900",
       "points": 0,
       "cumulative_points": 6,
-      "kamp_id": 66326
+      "game_number": 10
     },
     {
-      "team": "Aabyhøj IF",
       "date": "2025-01-19T13:00:00",
-      "game_number": 11,
+      "team": "Aabyhøj IF",
       "points": 3,
       "cumulative_points": 24,
-      "kamp_id": 66325
+      "game_number": 11
     },
     {
-      "team": "Hjerm FIF",
       "date": "2025-01-19T13:00:00",
-      "game_number": 10,
+      "team": "Hjerm FIF",
       "points": 0,
       "cumulative_points": 16,
-      "kamp_id": 66325
+      "game_number": 10
     },
     {
-      "team": "VK Raptus.2",
       "date": "2025-01-24T18:30:00",
-      "game_number": 12,
+      "team": "Aarhus 1900",
+      "points": 3,
+      "cumulative_points": 9,
+      "game_number": 11
+    },
+    {
+      "date": "2025-01-24T18:30:00",
+      "team": "VK Raptus.2",
       "points": 0,
       "cumulative_points": 8,
-      "kamp_id": 66340
+      "game_number": 12
     },
     {
-      "team": "Aarhus 1900",
-      "date": "2025-01-24T18:30:00",
-      "game_number": 11,
-      "points": 3,
-      "cumulative_points": 9,
-      "kamp_id": 66340
-    },
-    {
-      "team": "Hjerm FIF",
       "date": "2025-01-25T10:00:00",
-      "game_number": 11,
-      "points": 0,
-      "cumulative_points": 16,
-      "kamp_id": 66341
-    },
-    {
       "team": "VK Vendsyssel",
-      "date": "2025-01-25T10:00:00",
-      "game_number": 12,
       "points": 3,
       "cumulative_points": 29,
-      "kamp_id": 66341
+      "game_number": 12
     },
     {
-      "team": "Aalborg Volleyball.2",
+      "date": "2025-01-25T10:00:00",
+      "team": "Hjerm FIF",
+      "points": 0,
+      "cumulative_points": 16,
+      "game_number": 11
+    },
+    {
       "date": "2025-01-25T12:00:00",
-      "game_number": 12,
+      "team": "Aalborg Volleyball.2",
       "points": 3,
       "cumulative_points": 19,
-      "kamp_id": 66338
+      "game_number": 12
     },
     {
-      "team": "Skovbakken",
       "date": "2025-01-25T12:00:00",
-      "game_number": 12,
+      "team": "Skovbakken",
       "points": 0,
       "cumulative_points": 28,
-      "kamp_id": 66338
+      "game_number": 12
     },
     {
-      "team": "Funder GF",
       "date": "2025-01-25T14:00:00",
-      "game_number": 12,
+      "team": "Funder GF",
       "points": 3,
       "cumulative_points": 28,
-      "kamp_id": 66337
+      "game_number": 12
     },
     {
-      "team": "ASV Aarhus.3",
       "date": "2025-01-25T14:00:00",
-      "game_number": 12,
+      "team": "ASV Aarhus.3",
       "points": 0,
       "cumulative_points": 24,
-      "kamp_id": 66337
+      "game_number": 12
     },
     {
-      "team": "Randers VK",
       "date": "2025-01-26T14:00:00",
-      "game_number": 12,
+      "team": "Randers VK",
       "points": 0,
       "cumulative_points": 4,
-      "kamp_id": 66339
+      "game_number": 12
     },
     {
-      "team": "Aabyhøj IF",
       "date": "2025-01-26T14:00:00",
-      "game_number": 12,
+      "team": "Aabyhøj IF",
       "points": 3,
       "cumulative_points": 27,
-      "kamp_id": 66339
+      "game_number": 12
     },
     {
-      "team": "Randers VK",
       "date": "2025-02-05T18:30:00",
-      "game_number": 13,
-      "points": 3,
-      "cumulative_points": 7,
-      "kamp_id": 66284
-    },
-    {
       "team": "VK Raptus.2",
-      "date": "2025-02-05T18:30:00",
-      "game_number": 13,
       "points": 1,
       "cumulative_points": 9,
-      "kamp_id": 66284
+      "game_number": 13
     },
     {
-      "team": "ASV Aarhus.3",
+      "date": "2025-02-05T18:30:00",
+      "team": "Randers VK",
+      "points": 3,
+      "cumulative_points": 7,
+      "game_number": 13
+    },
+    {
       "date": "2025-02-08T11:00:00",
-      "game_number": 13,
+      "team": "ASV Aarhus.3",
       "points": 0,
       "cumulative_points": 24,
-      "kamp_id": 66285
+      "game_number": 13
     },
     {
-      "team": "VK Vendsyssel",
       "date": "2025-02-08T11:00:00",
-      "game_number": 13,
+      "team": "VK Vendsyssel",
       "points": 3,
       "cumulative_points": 32,
-      "kamp_id": 66285
+      "game_number": 13
     },
     {
-      "team": "Aabyhøj IF",
       "date": "2025-02-09T13:00:00",
-      "game_number": 13,
+      "team": "Aabyhøj IF",
       "points": 0,
       "cumulative_points": 27,
-      "kamp_id": 66282
+      "game_number": 13
     },
     {
-      "team": "Funder GF",
       "date": "2025-02-09T13:00:00",
-      "game_number": 13,
+      "team": "Funder GF",
       "points": 3,
       "cumulative_points": 31,
-      "kamp_id": 66282
+      "game_number": 13
     },
     {
-      "team": "Aarhus 1900",
       "date": "2025-02-16T12:00:00",
-      "game_number": 12,
-      "points": 3,
-      "cumulative_points": 12,
-      "kamp_id": 66270
-    },
-    {
       "team": "Hjerm FIF",
-      "date": "2025-02-16T12:00:00",
-      "game_number": 12,
       "points": 0,
       "cumulative_points": 16,
-      "kamp_id": 66270
+      "game_number": 12
     },
     {
+      "date": "2025-02-16T12:00:00",
       "team": "Aarhus 1900",
+      "points": 3,
+      "cumulative_points": 12,
+      "game_number": 12
+    },
+    {
       "date": "2025-02-22T10:00:00",
-      "game_number": 13,
+      "team": "Aarhus 1900",
       "points": 3,
       "cumulative_points": 15,
-      "kamp_id": 66283
+      "game_number": 13
     },
     {
-      "team": "Aalborg Volleyball.2",
       "date": "2025-02-22T10:00:00",
-      "game_number": 13,
+      "team": "Aalborg Volleyball.2",
       "points": 0,
       "cumulative_points": 19,
-      "kamp_id": 66283
+      "game_number": 13
     },
     {
-      "team": "Skovbakken",
       "date": "2025-02-23T11:00:00",
-      "game_number": 13,
+      "team": "Skovbakken",
       "points": 3,
       "cumulative_points": 31,
-      "kamp_id": 66286
+      "game_number": 13
     },
     {
-      "team": "Hjerm FIF",
       "date": "2025-02-23T11:00:00",
-      "game_number": 13,
+      "team": "Hjerm FIF",
       "points": 0,
       "cumulative_points": 16,
-      "kamp_id": 66286
+      "game_number": 13
     },
     {
-      "team": "Aalborg Volleyball.2",
       "date": "2025-03-01T10:00:00",
-      "game_number": 14,
+      "team": "Aalborg Volleyball.2",
       "points": 1,
       "cumulative_points": 20,
-      "kamp_id": 66313
+      "game_number": 14
     },
     {
-      "team": "VK Raptus.2",
       "date": "2025-03-01T10:00:00",
-      "game_number": 14,
+      "team": "VK Raptus.2",
       "points": 3,
       "cumulative_points": 12,
-      "kamp_id": 66313
+      "game_number": 14
     },
     {
-      "team": "Hjerm FIF",
       "date": "2025-03-01T11:00:00",
-      "game_number": 14,
+      "team": "Hjerm FIF",
       "points": 0,
       "cumulative_points": 16,
-      "kamp_id": 66315
+      "game_number": 14
     },
     {
-      "team": "Aarhus 1900",
       "date": "2025-03-01T11:00:00",
-      "game_number": 14,
+      "team": "Aarhus 1900",
       "points": 3,
       "cumulative_points": 18,
-      "kamp_id": 66315
+      "game_number": 14
     },
     {
-      "team": "Skovbakken",
       "date": "2025-03-01T13:00:00",
-      "game_number": 14,
-      "points": 3,
-      "cumulative_points": 34,
-      "kamp_id": 66316
-    },
-    {
       "team": "ASV Aarhus.3",
-      "date": "2025-03-01T13:00:00",
-      "game_number": 14,
       "points": 0,
       "cumulative_points": 24,
-      "kamp_id": 66316
+      "game_number": 14
     },
     {
-      "team": "Funder GF",
-      "date": "2025-03-01T14:00:00",
-      "game_number": 14,
+      "date": "2025-03-01T13:00:00",
+      "team": "Skovbakken",
       "points": 3,
       "cumulative_points": 34,
-      "kamp_id": 66312
+      "game_number": 14
     },
     {
-      "team": "Randers VK",
       "date": "2025-03-01T14:00:00",
-      "game_number": 14,
+      "team": "Funder GF",
+      "points": 3,
+      "cumulative_points": 34,
+      "game_number": 14
+    },
+    {
+      "date": "2025-03-01T14:00:00",
+      "team": "Aabyhøj IF",
+      "points": 0,
+      "cumulative_points": 27,
+      "game_number": 14
+    },
+    {
+      "date": "2025-03-01T14:00:00",
+      "team": "Randers VK",
       "points": 0,
       "cumulative_points": 7,
-      "kamp_id": 66312
+      "game_number": 14
     },
     {
-      "team": "VK Vendsyssel",
       "date": "2025-03-01T14:00:00",
-      "game_number": 14,
+      "team": "VK Vendsyssel",
       "points": 3,
       "cumulative_points": 35,
-      "kamp_id": 66314
+      "game_number": 14
     },
     {
-      "team": "Aabyhøj IF",
-      "date": "2025-03-01T14:00:00",
-      "game_number": 14,
-      "points": 0,
-      "cumulative_points": 27,
-      "kamp_id": 66314
-    },
-    {
-      "team": "Aarhus 1900",
       "date": "2025-03-15T12:00:00",
-      "game_number": 15,
+      "team": "Aarhus 1900",
       "points": 0,
       "cumulative_points": 18,
-      "kamp_id": 66334
+      "game_number": 15
     },
     {
-      "team": "Randers VK",
       "date": "2025-03-15T12:00:00",
-      "game_number": 15,
+      "team": "Randers VK",
       "points": 3,
       "cumulative_points": 10,
-      "kamp_id": 66334
+      "game_number": 15
     },
     {
-      "team": "VK Vendsyssel",
       "date": "2025-03-15T14:00:00",
-      "game_number": 15,
-      "points": 3,
-      "cumulative_points": 38,
-      "kamp_id": 66335
-    },
-    {
       "team": "VK Raptus.2",
-      "date": "2025-03-15T14:00:00",
-      "game_number": 15,
       "points": 0,
       "cumulative_points": 12,
-      "kamp_id": 66335
+      "game_number": 15
     },
     {
-      "team": "ASV Aarhus.3",
+      "date": "2025-03-15T14:00:00",
+      "team": "VK Vendsyssel",
+      "points": 3,
+      "cumulative_points": 38,
+      "game_number": 15
+    },
+    {
       "date": "2025-03-15T16:00:00",
-      "game_number": 15,
+      "team": "Hjerm FIF",
+      "points": 0,
+      "cumulative_points": 16,
+      "game_number": 15
+    },
+    {
+      "date": "2025-03-15T16:00:00",
+      "team": "ASV Aarhus.3",
       "points": 3,
       "cumulative_points": 27,
-      "kamp_id": 66336
+      "game_number": 15
     },
     {
-      "team": "Hjerm FIF",
-      "date": "2025-03-15T16:00:00",
-      "game_number": 15,
-      "points": 0,
-      "cumulative_points": 16,
-      "kamp_id": 66336
-    },
-    {
-      "team": "Skovbakken",
       "date": "2025-03-16T11:00:00",
-      "game_number": 15,
-      "points": 3,
-      "cumulative_points": 37,
-      "kamp_id": 66332
-    },
-    {
       "team": "Funder GF",
-      "date": "2025-03-16T11:00:00",
-      "game_number": 15,
       "points": 1,
       "cumulative_points": 35,
-      "kamp_id": 66332
+      "game_number": 15
     },
     {
-      "team": "Aabyhøj IF",
+      "date": "2025-03-16T11:00:00",
+      "team": "Skovbakken",
+      "points": 3,
+      "cumulative_points": 37,
+      "game_number": 15
+    },
+    {
       "date": "2025-03-16T13:00:00",
-      "game_number": 15,
+      "team": "Aabyhøj IF",
       "points": 3,
       "cumulative_points": 30,
-      "kamp_id": 66333
+      "game_number": 15
     },
     {
-      "team": "Aalborg Volleyball.2",
       "date": "2025-03-16T13:00:00",
-      "game_number": 15,
+      "team": "Aalborg Volleyball.2",
       "points": 0,
       "cumulative_points": 20,
-      "kamp_id": 66333
+      "game_number": 15
     },
     {
-      "team": "Aalborg Volleyball.2",
       "date": "2025-03-22T10:00:00",
-      "game_number": 16,
+      "team": "Hjerm FIF",
+      "points": 0,
+      "cumulative_points": 16,
+      "game_number": 16
+    },
+    {
+      "date": "2025-03-22T10:00:00",
+      "team": "Aabyhøj IF",
+      "points": 0,
+      "cumulative_points": 30,
+      "game_number": 16
+    },
+    {
+      "date": "2025-03-22T10:00:00",
+      "team": "Aalborg Volleyball.2",
       "points": 3,
       "cumulative_points": 23,
-      "kamp_id": 66348
+      "game_number": 16
     },
     {
-      "team": "Hjerm FIF",
       "date": "2025-03-22T10:00:00",
-      "game_number": 16,
-      "points": 0,
-      "cumulative_points": 16,
-      "kamp_id": 66348
-    },
-    {
       "team": "Aarhus 1900",
-      "date": "2025-03-22T10:00:00",
-      "game_number": 16,
       "points": 3,
       "cumulative_points": 21,
-      "kamp_id": 66351
+      "game_number": 16
     },
     {
-      "team": "Aabyhøj IF",
-      "date": "2025-03-22T10:00:00",
-      "game_number": 16,
-      "points": 0,
-      "cumulative_points": 30,
-      "kamp_id": 66351
-    },
-    {
-      "team": "Funder GF",
       "date": "2025-03-22T14:00:00",
-      "game_number": 16,
-      "points": 3,
-      "cumulative_points": 38,
-      "kamp_id": 66347
-    },
-    {
       "team": "VK Vendsyssel",
-      "date": "2025-03-22T14:00:00",
-      "game_number": 16,
       "points": 1,
       "cumulative_points": 39,
-      "kamp_id": 66347
+      "game_number": 16
     },
     {
-      "team": "Randers VK",
       "date": "2025-03-22T14:00:00",
-      "game_number": 16,
-      "points": 0,
-      "cumulative_points": 10,
-      "kamp_id": 66349
-    },
-    {
       "team": "ASV Aarhus.3",
-      "date": "2025-03-22T14:00:00",
-      "game_number": 16,
       "points": 3,
       "cumulative_points": 30,
-      "kamp_id": 66349
+      "game_number": 16
     },
     {
-      "team": "VK Raptus.2",
+      "date": "2025-03-22T14:00:00",
+      "team": "Randers VK",
+      "points": 0,
+      "cumulative_points": 10,
+      "game_number": 16
+    },
+    {
+      "date": "2025-03-22T14:00:00",
+      "team": "Funder GF",
+      "points": 3,
+      "cumulative_points": 38,
+      "game_number": 16
+    },
+    {
       "date": "2025-03-22T17:00:00",
-      "game_number": 16,
+      "team": "VK Raptus.2",
       "points": 0,
       "cumulative_points": 12,
-      "kamp_id": 66350
+      "game_number": 16
     },
     {
-      "team": "Skovbakken",
       "date": "2025-03-22T17:00:00",
-      "game_number": 16,
+      "team": "Skovbakken",
       "points": 3,
       "cumulative_points": 40,
-      "kamp_id": 66350
+      "game_number": 16
     },
     {
-      "team": "Skovbakken",
       "date": "2025-03-29T11:00:00",
-      "game_number": 17,
-      "points": 3,
-      "cumulative_points": 43,
-      "kamp_id": 66344
-    },
-    {
       "team": "Randers VK",
-      "date": "2025-03-29T11:00:00",
-      "game_number": 17,
       "points": 0,
       "cumulative_points": 10,
-      "kamp_id": 66344
+      "game_number": 17
     },
     {
-      "team": "VK Vendsyssel",
-      "date": "2025-03-29T14:00:00",
-      "game_number": 17,
+      "date": "2025-03-29T11:00:00",
+      "team": "Skovbakken",
       "points": 3,
-      "cumulative_points": 42,
-      "kamp_id": 66346
+      "cumulative_points": 43,
+      "game_number": 17
     },
     {
-      "team": "Aarhus 1900",
       "date": "2025-03-29T14:00:00",
-      "game_number": 17,
+      "team": "Aarhus 1900",
       "points": 0,
       "cumulative_points": 21,
-      "kamp_id": 66346
+      "game_number": 17
     },
     {
-      "team": "Hjerm FIF",
+      "date": "2025-03-29T14:00:00",
+      "team": "VK Vendsyssel",
+      "points": 3,
+      "cumulative_points": 42,
+      "game_number": 17
+    },
+    {
       "date": "2025-03-30T10:00:00",
-      "game_number": 17,
-      "points": 0,
-      "cumulative_points": 16,
-      "kamp_id": 66342
+      "team": "Aalborg Volleyball.2",
+      "points": 3,
+      "cumulative_points": 26,
+      "game_number": 17
     },
     {
+      "date": "2025-03-30T10:00:00",
       "team": "Funder GF",
-      "date": "2025-03-30T10:00:00",
-      "game_number": 17,
       "points": 3,
       "cumulative_points": 41,
-      "kamp_id": 66342
+      "game_number": 17
     },
     {
-      "team": "ASV Aarhus.3",
       "date": "2025-03-30T10:00:00",
-      "game_number": 17,
+      "team": "ASV Aarhus.3",
       "points": 0,
       "cumulative_points": 30,
-      "kamp_id": 66343
+      "game_number": 17
     },
     {
-      "team": "Aalborg Volleyball.2",
       "date": "2025-03-30T10:00:00",
-      "game_number": 17,
-      "points": 3,
-      "cumulative_points": 26,
-      "kamp_id": 66343
+      "team": "Hjerm FIF",
+      "points": 0,
+      "cumulative_points": 16,
+      "game_number": 17
     },
     {
-      "team": "Aabyhøj IF",
       "date": "2025-03-30T13:00:00",
-      "game_number": 17,
+      "team": "Aabyhøj IF",
       "points": 1,
       "cumulative_points": 31,
-      "kamp_id": 66345
+      "game_number": 17
     },
     {
-      "team": "VK Raptus.2",
       "date": "2025-03-30T13:00:00",
-      "game_number": 17,
+      "team": "VK Raptus.2",
       "points": 3,
       "cumulative_points": 15,
-      "kamp_id": 66345
+      "game_number": 17
     },
     {
-      "team": "Aalborg Volleyball.2",
       "date": "2025-04-05T12:00:00",
-      "game_number": 18,
-      "points": 0,
-      "cumulative_points": 26,
-      "kamp_id": 66328
-    },
-    {
-      "team": "Aarhus 1900",
-      "date": "2025-04-05T12:00:00",
-      "game_number": 18,
-      "points": 3,
-      "cumulative_points": 24,
-      "kamp_id": 66328
-    },
-    {
-      "team": "Hjerm FIF",
-      "date": "2025-04-05T12:00:00",
-      "game_number": 18,
-      "points": 0,
-      "cumulative_points": 16,
-      "kamp_id": 66331
-    },
-    {
       "team": "Skovbakken",
-      "date": "2025-04-05T12:00:00",
-      "game_number": 18,
       "points": 3,
       "cumulative_points": 46,
-      "kamp_id": 66331
+      "game_number": 18
     },
     {
-      "team": "Funder GF",
-      "date": "2025-04-05T14:00:00",
-      "game_number": 18,
-      "points": 1,
-      "cumulative_points": 42,
-      "kamp_id": 66327
-    },
-    {
-      "team": "Aabyhøj IF",
-      "date": "2025-04-05T14:00:00",
-      "game_number": 18,
+      "date": "2025-04-05T12:00:00",
+      "team": "Aarhus 1900",
       "points": 3,
-      "cumulative_points": 34,
-      "kamp_id": 66327
+      "cumulative_points": 24,
+      "game_number": 18
     },
     {
-      "team": "VK Vendsyssel",
+      "date": "2025-04-05T12:00:00",
+      "team": "Aalborg Volleyball.2",
+      "points": 0,
+      "cumulative_points": 26,
+      "game_number": 18
+    },
+    {
+      "date": "2025-04-05T12:00:00",
+      "team": "Hjerm FIF",
+      "points": 0,
+      "cumulative_points": 16,
+      "game_number": 18
+    },
+    {
       "date": "2025-04-05T14:00:00",
-      "game_number": 18,
+      "team": "VK Vendsyssel",
       "points": 3,
       "cumulative_points": 45,
-      "kamp_id": 66330
+      "game_number": 18
     },
     {
-      "team": "ASV Aarhus.3",
       "date": "2025-04-05T14:00:00",
-      "game_number": 18,
+      "team": "Funder GF",
+      "points": 1,
+      "cumulative_points": 42,
+      "game_number": 18
+    },
+    {
+      "date": "2025-04-05T14:00:00",
+      "team": "ASV Aarhus.3",
       "points": 0,
       "cumulative_points": 30,
-      "kamp_id": 66330
+      "game_number": 18
     },
     {
-      "team": "VK Raptus.2",
+      "date": "2025-04-05T14:00:00",
+      "team": "Aabyhøj IF",
+      "points": 3,
+      "cumulative_points": 34,
+      "game_number": 18
+    },
+    {
       "date": "2025-04-05T16:00:00",
-      "game_number": 18,
+      "team": "VK Raptus.2",
       "points": 1,
       "cumulative_points": 16,
-      "kamp_id": 66329
+      "game_number": 18
     },
     {
-      "team": "Randers VK",
       "date": "2025-04-05T16:00:00",
-      "game_number": 18,
+      "team": "Randers VK",
       "points": 3,
       "cumulative_points": 13,
-      "kamp_id": 66329
+      "game_number": 18
     }
   ],
   "result_matrix": {
