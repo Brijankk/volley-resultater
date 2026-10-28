@@ -371,7 +371,7 @@ function renderDataMeta() {
   els.updatedStatus.className = "status-pill";
 
   const hasPointsWarning = typeof validation === "boolean"
-    ? validation
+    ? !validation
     : Boolean(validation.affected_fields?.includes("points"));
   els.validationMeta.className = `validation-meta ${hasPointsWarning ? "data-warning" : "hidden"}`;
   els.validationMeta.textContent = hasPointsWarning
