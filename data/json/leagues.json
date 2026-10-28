@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-10-28T11:04:10+01:00",
+    "exported_at": "2026-10-28T10:42:28+00:00",
     "scraper_version": "2.0.0",
     "seasons": [
       "2026",
@@ -14,66 +14,6 @@
     "pool_count": 72
   },
   "leagues": [
-    {
-      "id": "2373",
-      "name": "1. Division Kvinder",
-      "district": "Volleyball Danmark",
-      "gender": "Kvinde",
-      "age_group": "Senior",
-      "season_id": "2026",
-      "raekke_id": 2373,
-      "division": "1. Division"
-    },
-    {
-      "id": "2374",
-      "name": "2. Division Kvinder",
-      "district": "Volleyball Danmark",
-      "gender": "Kvinde",
-      "age_group": "Senior",
-      "season_id": "2026",
-      "raekke_id": 2374,
-      "division": "2. Division"
-    },
-    {
-      "id": "2369",
-      "name": "Volleyligaen Kvinder",
-      "district": "Volleyball Danmark",
-      "gender": "Kvinde",
-      "age_group": "Senior",
-      "season_id": "2026",
-      "raekke_id": 2369,
-      "division": "Volleyligaen"
-    },
-    {
-      "id": "2371",
-      "name": "1. Division Herrer",
-      "district": "Volleyball Danmark",
-      "gender": "Mand",
-      "age_group": "Senior",
-      "season_id": "2026",
-      "raekke_id": 2371,
-      "division": "1. Division"
-    },
-    {
-      "id": "2372",
-      "name": "2. Division Herrer",
-      "district": "Volleyball Danmark",
-      "gender": "Mand",
-      "age_group": "Senior",
-      "season_id": "2026",
-      "raekke_id": 2372,
-      "division": "2. Division"
-    },
-    {
-      "id": "2370",
-      "name": "Volleyligaen Herrer",
-      "district": "Volleyball Danmark",
-      "gender": "Mand",
-      "age_group": "Senior",
-      "season_id": "2026",
-      "raekke_id": 2370,
-      "division": "Volleyligaen"
-    },
     {
       "id": "2252",
       "name": "1. Division Kvinder",
@@ -373,6 +313,66 @@
       "season_id": "2021",
       "raekke_id": 1742,
       "division": "VolleyLigaen"
+    },
+    {
+      "id": "2373",
+      "name": "1. Division Kvinder",
+      "district": "Volleyball Danmark",
+      "gender": "Kvinde",
+      "age_group": "Senior",
+      "season_id": "2026",
+      "raekke_id": 2373,
+      "division": "1. Division"
+    },
+    {
+      "id": "2374",
+      "name": "2. Division Kvinder",
+      "district": "Volleyball Danmark",
+      "gender": "Kvinde",
+      "age_group": "Senior",
+      "season_id": "2026",
+      "raekke_id": 2374,
+      "division": "2. Division"
+    },
+    {
+      "id": "2369",
+      "name": "Volleyligaen Kvinder",
+      "district": "Volleyball Danmark",
+      "gender": "Kvinde",
+      "age_group": "Senior",
+      "season_id": "2026",
+      "raekke_id": 2369,
+      "division": "Volleyligaen"
+    },
+    {
+      "id": "2371",
+      "name": "1. Division Herrer",
+      "district": "Volleyball Danmark",
+      "gender": "Mand",
+      "age_group": "Senior",
+      "season_id": "2026",
+      "raekke_id": 2371,
+      "division": "1. Division"
+    },
+    {
+      "id": "2372",
+      "name": "2. Division Herrer",
+      "district": "Volleyball Danmark",
+      "gender": "Mand",
+      "age_group": "Senior",
+      "season_id": "2026",
+      "raekke_id": 2372,
+      "division": "2. Division"
+    },
+    {
+      "id": "2370",
+      "name": "Volleyligaen Herrer",
+      "district": "Volleyball Danmark",
+      "gender": "Mand",
+      "age_group": "Senior",
+      "season_id": "2026",
+      "raekke_id": 2370,
+      "division": "Volleyligaen"
     }
   ],
   "pools": [
@@ -738,15 +738,16 @@
     }
   ],
   "pool_validation": {
-    "4119": false,
-    "4118": false,
-    "4124": false,
-    "4123": false,
-    "4122": false,
-    "4129": false,
-    "4128": false,
-    "4127": false,
-    "4126": false,
-    "4125": false
+    "4122": true,
+    "4124": true,
+    "4125": true,
+    "4123": true,
+    "4119": true,
+    "4126": true,
+    "4127": true,
+    "4128": true,
+    "4129": true,
+    "4141": true,
+    "4140": true
   }
 }

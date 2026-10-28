@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-10-28T11:04:10+01:00",
+    "exported_at": "2026-10-28T10:42:28+00:00",
     "scraper_version": "2.0.0",
     "validation": false
   },
@@ -24,14 +24,14 @@
       "pool_id": "4125",
       "rank": 1,
       "team_name": "DTU Volley",
-      "games_played": 3,
-      "games_won": 3,
+      "games_played": 4,
+      "games_won": 4,
       "games_lost": 0,
-      "sets_won": 9,
-      "sets_lost": 1,
-      "balls_won": 252,
-      "balls_lost": 216,
-      "points": 9
+      "sets_won": 12,
+      "sets_lost": 2,
+      "balls_won": 346,
+      "balls_lost": 297,
+      "points": 12
     },
     {
       "pool_id": "4125",
@@ -49,28 +49,28 @@
     {
       "pool_id": "4125",
       "rank": 3,
-      "team_name": "KSV.3",
+      "team_name": "Rosenlund Volley",
       "games_played": 3,
       "games_won": 2,
       "games_lost": 1,
-      "sets_won": 6,
+      "sets_won": 7,
       "sets_lost": 4,
-      "balls_won": 227,
-      "balls_lost": 194,
+      "balls_won": 260,
+      "balls_lost": 232,
       "points": 6
     },
     {
       "pool_id": "4125",
       "rank": 4,
-      "team_name": "Rosenlund Volley",
-      "games_played": 2,
-      "games_won": 1,
-      "games_lost": 1,
-      "sets_won": 4,
-      "sets_lost": 4,
-      "balls_won": 185,
-      "balls_lost": 181,
-      "points": 3
+      "team_name": "KSV.3",
+      "games_played": 4,
+      "games_won": 2,
+      "games_lost": 2,
+      "sets_won": 6,
+      "sets_lost": 7,
+      "balls_won": 278,
+      "balls_lost": 269,
+      "points": 6
     },
     {
       "pool_id": "4125",
@@ -114,19 +114,6 @@
     {
       "pool_id": "4125",
       "rank": 8,
-      "team_name": "Lyngby-Gladsaxe Volley.2",
-      "games_played": 2,
-      "games_won": 0,
-      "games_lost": 2,
-      "sets_won": 2,
-      "sets_lost": 6,
-      "balls_won": 162,
-      "balls_lost": 175,
-      "points": 0
-    },
-    {
-      "pool_id": "4125",
-      "rank": 9,
       "team_name": "Brøndby VK Wildcard",
       "games_played": 2,
       "games_won": 0,
@@ -135,6 +122,19 @@
       "sets_lost": 6,
       "balls_won": 111,
       "balls_lost": 176,
+      "points": 0
+    },
+    {
+      "pool_id": "4125",
+      "rank": 9,
+      "team_name": "Lyngby-Gladsaxe Volley.2",
+      "games_played": 3,
+      "games_won": 0,
+      "games_lost": 3,
+      "sets_won": 3,
+      "sets_lost": 9,
+      "balls_won": 243,
+      "balls_lost": 269,
       "points": 0
     }
   ],
@@ -441,16 +441,16 @@
       "address": "Ny Rosenlundhal  Ejbyvej 47 2740 Skovlunde Danmark",
       "referee1": "Jesper West Danbo",
       "referee2": "Mads Hendrichsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 23,
+      "home_balls2": 25,
+      "away_balls2": 12,
+      "home_balls3": 25,
+      "away_balls3": 16,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -470,18 +470,18 @@
       "address": "Engelsborghallen  Engelsborgvej 93 2800 Kgs.Lyngby Danmark",
       "referee1": "Arne Jensen",
       "referee2": "Jan Herneth",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 21,
+      "home_balls2": 19,
+      "away_balls2": 25,
+      "home_balls3": 25,
+      "away_balls3": 19,
+      "home_balls4": 25,
+      "away_balls4": 16,
       "home_balls5": null,
       "away_balls5": null,
       "result_note": "",
@@ -2350,21 +2350,14 @@
     },
     {
       "date": "2026-10-01T20:00:00",
-      "team": "Lyngby-Gladsaxe WC",
-      "points": 3,
-      "cumulative_points": 3,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-01T20:00:00",
       "team": "DTU Volley",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
     },
     {
-      "date": "2026-10-04T10:00:00",
-      "team": "Frederiksberg Volley",
+      "date": "2026-10-01T20:00:00",
+      "team": "Lyngby-Gladsaxe WC",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 2
@@ -2377,10 +2370,10 @@
       "game_number": 1
     },
     {
-      "date": "2026-10-04T13:00:00",
-      "team": "DTU Volley",
+      "date": "2026-10-04T10:00:00",
+      "team": "Frederiksberg Volley",
       "points": 3,
-      "cumulative_points": 6,
+      "cumulative_points": 3,
       "game_number": 2
     },
     {
@@ -2388,6 +2381,13 @@
       "team": "Enghave VK",
       "points": 0,
       "cumulative_points": 3,
+      "game_number": 2
+    },
+    {
+      "date": "2026-10-04T13:00:00",
+      "team": "DTU Volley",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
@@ -2420,17 +2420,45 @@
     },
     {
       "date": "2026-10-11T18:00:00",
+      "team": "Brøndby VK Wildcard",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 2
+    },
+    {
+      "date": "2026-10-11T18:00:00",
       "team": "Enghave VK",
       "points": 3,
       "cumulative_points": 6,
       "game_number": 3
     },
     {
-      "date": "2026-10-11T18:00:00",
-      "team": "Brøndby VK Wildcard",
+      "date": "2026-10-24T13:00:00",
+      "team": "KSV.3",
+      "points": 0,
+      "cumulative_points": 6,
+      "game_number": 4
+    },
+    {
+      "date": "2026-10-24T13:00:00",
+      "team": "Rosenlund Volley",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 3
+    },
+    {
+      "date": "2026-10-24T16:30:00",
+      "team": "DTU Volley",
+      "points": 3,
+      "cumulative_points": 12,
+      "game_number": 4
+    },
+    {
+      "date": "2026-10-24T16:30:00",
+      "team": "Lyngby-Gladsaxe Volley.2",
       "points": 0,
       "cumulative_points": 0,
-      "game_number": 2
+      "game_number": 3
     }
   ],
   "result_matrix": {
@@ -2451,7 +2479,7 @@
       "Enghave VK": "3-0",
       "Frederiksberg Volley": "",
       "KSV.3": "",
-      "Lyngby-Gladsaxe Volley.2": "",
+      "Lyngby-Gladsaxe Volley.2": "3-1",
       "Lyngby-Gladsaxe WC": "",
       "Rosenlund Volley": "",
       "VLI.2": ""
@@ -2516,7 +2544,7 @@
       "DTU Volley": "1-3",
       "Enghave VK": "",
       "Frederiksberg Volley": "",
-      "KSV.3": "",
+      "KSV.3": "3-0",
       "Lyngby-Gladsaxe Volley.2": "",
       "Lyngby-Gladsaxe WC": "",
       "Rosenlund Volley": "",
