@@ -144,7 +144,7 @@ def result_matrix(matches: pd.DataFrame) -> pd.DataFrame:
 
     return matrix
 
-def order_tournament(tournament_names: pd.Series[str]) -> pd.Series[int]:
+def order_tournament(tournament_names: pd.Series) -> pd.Series:
     df = tournament_names.to_frame('name')
 
     df['is_final'] = df['name'].str.contains('finale', case=False)
