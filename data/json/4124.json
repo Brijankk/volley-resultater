@@ -1,7 +1,7 @@
 {
   "metadata": {
     "schema_version": 1,
-    "exported_at": "2026-10-27T04:29:05+00:00",
+    "exported_at": "2026-10-28T04:56:02+00:00",
     "scraper_version": "1.0.2",
     "point_source": "scraped_tournament_points",
     "rule_profile": "source_points",
@@ -54,19 +54,6 @@
     {
       "pool_id": "4124",
       "rank": 2,
-      "team_name": "Silkeborg KFUM",
-      "games_played": 3,
-      "games_won": 2,
-      "games_lost": 1,
-      "sets_won": 7,
-      "sets_lost": 3,
-      "balls_won": 233,
-      "balls_lost": 200,
-      "points": 6
-    },
-    {
-      "pool_id": "4124",
-      "rank": 3,
       "team_name": "Aalborg Volleyball.2",
       "games_played": 3,
       "games_won": 2,
@@ -75,6 +62,19 @@
       "sets_lost": 4,
       "balls_won": 253,
       "balls_lost": 213,
+      "points": 6
+    },
+    {
+      "pool_id": "4124",
+      "rank": 3,
+      "team_name": "Silkeborg KFUM",
+      "games_played": 4,
+      "games_won": 2,
+      "games_lost": 2,
+      "sets_won": 8,
+      "sets_lost": 6,
+      "balls_won": 325,
+      "balls_lost": 286,
       "points": 6
     },
     {
@@ -106,6 +106,19 @@
     {
       "pool_id": "4124",
       "rank": 6,
+      "team_name": "SKF KFUM",
+      "games_played": 3,
+      "games_won": 2,
+      "games_lost": 1,
+      "sets_won": 6,
+      "sets_lost": 4,
+      "balls_won": 221,
+      "balls_lost": 233,
+      "points": 6
+    },
+    {
+      "pool_id": "4124",
+      "rank": 7,
       "team_name": "IF Lyseng 2",
       "games_played": 2,
       "games_won": 1,
@@ -114,19 +127,6 @@
       "sets_lost": 4,
       "balls_won": 188,
       "balls_lost": 167,
-      "points": 3
-    },
-    {
-      "pool_id": "4124",
-      "rank": 7,
-      "team_name": "SKF KFUM",
-      "games_played": 2,
-      "games_won": 1,
-      "games_lost": 1,
-      "sets_won": 3,
-      "sets_lost": 3,
-      "balls_won": 135,
-      "balls_lost": 141,
       "points": 3
     },
     {
@@ -185,20 +185,6 @@
       "rank": 1
     },
     {
-      "team_name": "Silkeborg KFUM",
-      "games_played": 3,
-      "games_won": 2,
-      "games_lost": 1,
-      "sets_won": 7,
-      "sets_lost": 3,
-      "balls_won": 233,
-      "balls_lost": 200,
-      "points": 6,
-      "pool_id": "4124",
-      "rule_profile": "source_points",
-      "rank": 2
-    },
-    {
       "team_name": "Aalborg Volleyball.2",
       "games_played": 3,
       "games_won": 2,
@@ -207,6 +193,20 @@
       "sets_lost": 4,
       "balls_won": 253,
       "balls_lost": 213,
+      "points": 6,
+      "pool_id": "4124",
+      "rule_profile": "source_points",
+      "rank": 2
+    },
+    {
+      "team_name": "Silkeborg KFUM",
+      "games_played": 4,
+      "games_won": 2,
+      "games_lost": 2,
+      "sets_won": 8,
+      "sets_lost": 6,
+      "balls_won": 325,
+      "balls_lost": 286,
       "points": 6,
       "pool_id": "4124",
       "rule_profile": "source_points",
@@ -241,6 +241,20 @@
       "rank": 5
     },
     {
+      "team_name": "SKF KFUM",
+      "games_played": 3,
+      "games_won": 2,
+      "games_lost": 1,
+      "sets_won": 6,
+      "sets_lost": 4,
+      "balls_won": 221,
+      "balls_lost": 233,
+      "points": 6,
+      "pool_id": "4124",
+      "rule_profile": "source_points",
+      "rank": 6
+    },
+    {
       "team_name": "IF Lyseng 2",
       "games_played": 2,
       "games_won": 1,
@@ -249,20 +263,6 @@
       "sets_lost": 4,
       "balls_won": 188,
       "balls_lost": 167,
-      "points": 3,
-      "pool_id": "4124",
-      "rule_profile": "source_points",
-      "rank": 6
-    },
-    {
-      "team_name": "SKF KFUM",
-      "games_played": 2,
-      "games_won": 1,
-      "games_lost": 1,
-      "sets_won": 3,
-      "sets_lost": 3,
-      "balls_won": 135,
-      "balls_lost": 141,
       "points": 3,
       "pool_id": "4124",
       "rule_profile": "source_points",
@@ -730,18 +730,18 @@
       "address": "Alhedehallerne  Trehusevej 16 Frederiks 7470 Karup J Danmark",
       "referee1": "Andreas Bak-Georgsen",
       "referee2": "Maiken Malene Bendtsen Vejrup",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 9,
+      "away_balls1": 25,
+      "home_balls2": 25,
+      "away_balls2": 21,
+      "home_balls3": 25,
+      "away_balls3": 21,
+      "home_balls4": 27,
+      "away_balls4": 25,
       "home_balls5": null,
       "away_balls5": null,
       "result_note": "",
@@ -1280,7 +1280,7 @@
       "court": "1",
       "address": "Aakjærhallen  Frederiksgade 21 7800 Skive Danmark",
       "referee1": "Vahid G. Mehdi",
-      "referee2": "Maiken Malene Bendtsen Vejrup",
+      "referee2": "Vakant dommer",
       "result_home_sets": null,
       "result_away_sets": null,
       "home_points": null,
@@ -3339,6 +3339,38 @@
       "away_points": 11,
       "home_set_won": 1,
       "away_set_won": 0
+    },
+    {
+      "kamp_id": 75888,
+      "set_number": 1,
+      "home_points": 9,
+      "away_points": 25,
+      "home_set_won": 0,
+      "away_set_won": 1
+    },
+    {
+      "kamp_id": 75888,
+      "set_number": 2,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75888,
+      "set_number": 3,
+      "home_points": 25,
+      "away_points": 21,
+      "home_set_won": 1,
+      "away_set_won": 0
+    },
+    {
+      "kamp_id": 75888,
+      "set_number": 4,
+      "home_points": 27,
+      "away_points": 25,
+      "home_set_won": 1,
+      "away_set_won": 0
     }
   ],
   "rule_profile": "source_points",
@@ -3646,6 +3678,22 @@
       "points": 0,
       "cumulative_points": 6,
       "kamp_id": 75882
+    },
+    {
+      "team": "SKF KFUM",
+      "date": "2026-10-27T20:30:00",
+      "game_number": 3,
+      "points": 3,
+      "cumulative_points": 6,
+      "kamp_id": 75888
+    },
+    {
+      "team": "Silkeborg KFUM",
+      "date": "2026-10-27T20:30:00",
+      "game_number": 4,
+      "points": 0,
+      "cumulative_points": 6,
+      "kamp_id": 75888
     }
   ],
   "result_matrix": {
@@ -3716,7 +3764,7 @@
       "Aalborg Volleyball.3": null,
       "IF Lyseng 2": null,
       "SKF KFUM": "",
-      "Silkeborg KFUM": null,
+      "Silkeborg KFUM": "3-1",
       "Skive FVK": null,
       "VK Raptus.2": null,
       "VK Vendsyssel": null
