@@ -95,8 +95,12 @@
         </section>
 
         <section class="panel matrix-panel">
-          <div class="section-heading">
+          <div class="section-heading matrix-heading">
             <h2>Hjemme / ude</h2>
+            <div class="segmented small" id="matrixSortControl" aria-label="Sortering af matrix">
+              <button type="button" data-matrix-sort="alphabetical" class="active">Alfabetisk</button>
+              <button type="button" data-matrix-sort="ranking">Placering</button>
+            </div>
           </div>
           <div class="matrix-scroll" id="matrixWrap"></div>
           <div class="section-heading match-detail-section-heading">

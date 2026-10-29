@@ -11,6 +11,7 @@ const state = {
   selectedLeagueId: "",
   selectedPoolId: "",
   chartMode: "game",
+  matrixSortMode: "alphabetical",
   scheduleRange: "nearby",
   selectedScheduleTeam: "",
   scheduleSide: "all",
@@ -91,6 +92,7 @@ const els = {
   chartModeControl: document.querySelector("#chartModeControl"),
   chart: document.querySelector("#pointsChart"),
   legend: document.querySelector("#chartLegend"),
+  matrixSortControl: document.querySelector("#matrixSortControl"),
   matrixWrap: document.querySelector("#matrixWrap"),
   matchDetailContent: document.querySelector("#matchDetailContent"),
   installButton: document.querySelector("#installButton"),
@@ -185,6 +187,14 @@ function bindEvents() {
     state.chartMode = button.dataset.mode;
     setActiveButton(els.chartModeControl, button);
     renderChart();
+  });
+
+  els.matrixSortControl.addEventListener("click", (event) => {
+    const button = event.target.closest("button");
+    if (!button) return;
+    state.matrixSortMode = button.dataset.matrixSort;
+    setActiveButton(els.matrixSortControl, button);
+    renderMatrix();
   });
 
   els.matrixWrap.addEventListener("click", (event) => {
@@ -761,6 +771,9 @@ function drawGrid(ctx, width, height, pad, maxY, chartData) {
 function renderMatrix() {
   const matrix = state.poolData.result_matrix;
   const teams = state.poolData.source_standings.map((row) => row.team_name);
+  if (state.matrixSortMode === "alphabetical") {
+    teams.sort((left, right) => left.localeCompare(right, "da", { sensitivity: "base" }));
+  }
   const header = `<tr><th scope="col"></th>${teams.map((team) => `<th scope="col" title="${escapeHtml(team)}">${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
   const body = teams
     .map((home) => {
