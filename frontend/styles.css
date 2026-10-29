@@ -318,6 +318,10 @@ select {
   font-size: 0.82rem;
 }
 
+.match-detail-section-heading {
+  margin-top: 18px;
+}
+
 .chart-heading {
   align-items: start;
 }
@@ -565,12 +569,6 @@ canvas {
 
 .hidden {
   display: none !important;
-}
-
-/* Experimental matrix-click detail block. Remove this section with
-   #matchDetailPanel and renderMatchDetail() if it does not fit mobile use. */
-.detail-panel {
-  margin-top: 14px;
 }
 
 .match-detail-empty {
