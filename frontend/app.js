@@ -605,7 +605,9 @@ function scheduleTeams() {
   if (!state.poolData) return [];
   const standingsTeams = state.poolData.source_standings.map((row) => row.team_name);
   const matchTeams = (state.poolData.matches || []).flatMap((match) => [match.home_team, match.away_team]);
-  return unique([...standingsTeams, ...matchTeams]).filter(Boolean);
+  return unique([...standingsTeams, ...matchTeams])
+    .filter(Boolean)
+    .sort((left, right) => left.localeCompare(right, "da", { sensitivity: "base" }));
 }
 
 function sortedMatches(matches) {
@@ -655,7 +657,9 @@ function renderChart() {
 
   const chartData = buildChartData(state.poolData.cumulative_points, state.chartMode);
   const dataByTeam = chartData.byTeam;
-  const teams = state.poolData.source_standings.map((row) => row.team_name);
+  const teams = state.poolData.source_standings
+    .map((row) => row.team_name)
+    .sort((left, right) => shortTeam(left).localeCompare(shortTeam(right), "da", { sensitivity: "base" }));
   const maxY = yAxisMax(Math.max(1, ...Object.values(dataByTeam).flat().map((point) => point.y)));
   const minX = chartData.minX;
   const maxX = chartData.maxX;
@@ -809,6 +813,8 @@ function renderMatchDetailItem(match) {
       <div class="match-detail-main">
         <span>${formatMatchDateTime(match)}</span>
         <span>${formatVenue(match)}</span>
+        ${match.referee1 ? `<span>Dommer 1: ${escapeHtml(match.referee1)}</span>` : ""}
+        ${match.referee2 ? `<span>Dommer 2: ${escapeHtml(match.referee2)}</span>` : ""}
       </div>
       <div class="match-detail-score ${hasResult ? "" : "pending"}">${
         hasResult ? `${match.result_home_sets}-${match.result_away_sets}` : "Ikke spillet"
@@ -1049,8 +1055,7 @@ function formatMatchDateTime(match) {
 }
 
 function formatVenue(match) {
-  const venue = escapeHtml(match.venue || "Spillested ikke fastlagt");
-  return `${venue}${match.court ? `, bane ${escapeHtml(match.court)}` : ""}`;
+  return escapeHtml(match.venue || "Spillested ikke fastlagt");
 }
 
 function renderScheduleDateTime(match) {
