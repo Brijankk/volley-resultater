@@ -210,15 +210,6 @@ def write_json(path: Path, payload: dict) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--db", type=Path, default=DEFAULT_DB_PATH)
-    parser.add_argument("--output", type=Path, default=DEFAULT_EXPORT_DIR)
-    args = parser.parse_args()
-    export_json(args.db, args.output)
-
 def safe_filename(value: str) -> str:
     return "".join(char if char.isalnum() or char in "-_" else "_" for char in value)
 
-if __name__ == "__main__":
-    main()
