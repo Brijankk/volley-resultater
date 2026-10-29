@@ -469,11 +469,13 @@ function buildScheduleCalendar(matches) {
 function buildMatchCalendarEvent(match, nowStamp, modifiedStamp, sequence) {
   const start = new Date(match.starts_at);
   const summary = `${match.home_team} - ${match.away_team}`;
-  const location = match.venue || "";
+  const location = match.address || "";
   const description = [
-    selectedLeague()?.division,
-    selectedPool()?.name,
-    match.match_number ? `Kampnr. ${match.match_number}` : "",
+    match.match_number ? `Kampnummer: ${match.match_number}` : "",
+    match.venue ? `Spillested: ${match.venue}` : "",
+    match.court ? `Bane: ${match.court}` : "",
+    match.referee1 ? `Dommer 1: ${match.referee1}` : "",
+    match.referee2 ? `Dommer 2: ${match.referee2}` : "",
   ]
     .filter(Boolean)
     .join("\n");
