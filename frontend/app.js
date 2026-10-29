@@ -772,7 +772,10 @@ function renderMatrix() {
   const matrix = state.poolData.result_matrix;
   const teams = state.poolData.source_standings.map((row) => row.team_name);
   if (state.matrixSortMode === "alphabetical") {
-    teams.sort((left, right) => left.localeCompare(right, "da", { sensitivity: "base" }));
+    teams.sort((left, right) =>
+      shortTeam(left).localeCompare(shortTeam(right), "da", { sensitivity: "base" }) ||
+      left.localeCompare(right, "da", { sensitivity: "base" }),
+    );
   }
   const header = `<tr><th scope="col"></th>${teams.map((team) => `<th scope="col" title="${escapeHtml(team)}">${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
   const body = teams
