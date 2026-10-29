@@ -52,21 +52,21 @@ def main(argv: list[str] | None = None) -> int:
     for league_id in leagues_filtered['league_id']:
         pool_list.append(scraper.get_pool_ids(league_id))
     pools = pd.concat(pool_list).reset_index(drop=True)
-    print(f"{pools.shape[0]} found.")
+    print(f"{pools.shape[0]} pools found.")
 
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting rankings")
     rank_list = []
     for pool_id in pools['pool_id']:
         rank_list.append(scraper.scrape_pool_scoreboard(pool_id))
     rankings = pd.concat(rank_list).reset_index(drop=True)
-    print(f"{rankings.shape[0]} scraped.")
+    print(f"{len(rank_list)} rankings scraped.")
 
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting schedules")
     schedule_list = []
     for pool_id in pools['pool_id']:
         schedule_list.append(scraper.scrape_pool_schedule(pool_id))
     schedules = pd.concat(schedule_list).reset_index(drop=True)
-    print(f"Schedules scraped. {schedules.shape[0]} matches found.")
+    print(f"{len(schedule_list)} schedules scraped. {schedules.shape[0]} matches found.")
 
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting match details")
     match_details_list = []
@@ -75,6 +75,7 @@ def main(argv: list[str] | None = None) -> int:
     match_details = pd.concat(match_details_list).reset_index(drop=True)
 
     matches = schedules.merge(match_details, on='match_id')
+    matches['address'] = matches.apply(lambda x: x['address'].removeprefix(x['venue']).lstrip(), axis=1)
 
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Uploading to database")
     try:

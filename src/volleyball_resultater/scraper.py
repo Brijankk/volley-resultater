@@ -170,8 +170,12 @@ class VolleyballScraper:
 
         df = pd.read_html(StringIO(schedule_html))[0]
         df['match_id'] = df['Kampnr.'].astype(str).map(match_ids)
-        df[['venue', 'court']] = df['Spillested / bane'].str.rsplit(' ', n=1, expand=True).apply(lambda x: x.str.strip())
         df['note'] = df['Unnamed: 6'].astype(str)
+        # Following is complicated, but will work unless there is no court.
+        df[['venue', 'court']] = df['Spillested / bane'].str.split('  ', n=1, expand=True).where(
+            df['Spillested / bane'].str.contains('  '),
+            df['Spillested / bane'].str.rsplit(' ', n=1, expand=True)
+        ).apply(lambda x: x.str.strip())
 
         if not ptypes.is_numeric_dtype(df['Dato']):
             df.loc[~df['Dato'].str.contains('kl.'), 'Dato'] = df.loc[~df['Dato'].str.contains('kl.'), 'Dato'] + '  kl. 00:00'
