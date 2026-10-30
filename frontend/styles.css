@@ -776,7 +776,8 @@ canvas {
     flex-direction: column;
   }
 
-  .chart-heading {
+  .chart-heading,
+  .matrix-heading {
     flex-direction: row;
     align-items: center;
   }

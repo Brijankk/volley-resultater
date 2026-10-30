@@ -617,7 +617,7 @@ function scheduleTeams() {
   const matchTeams = (state.poolData.matches || []).flatMap((match) => [match.home_team, match.away_team]);
   return unique([...standingsTeams, ...matchTeams])
     .filter(Boolean)
-    .sort((left, right) => left.localeCompare(right, "da", { sensitivity: "base" }));
+    .sort(compareAlphabetically);
 }
 
 function sortedMatches(matches) {
@@ -669,7 +669,7 @@ function renderChart() {
   const dataByTeam = chartData.byTeam;
   const teams = state.poolData.source_standings
     .map((row) => row.team_name)
-    .sort((left, right) => shortTeam(left).localeCompare(shortTeam(right), "da", { sensitivity: "base" }));
+    .sort((left, right) => compareAlphabetically(shortTeam(left), shortTeam(right)));
   const maxY = yAxisMax(Math.max(1, ...Object.values(dataByTeam).flat().map((point) => point.y)));
   const minX = chartData.minX;
   const maxX = chartData.maxX;
@@ -773,8 +773,7 @@ function renderMatrix() {
   const teams = state.poolData.source_standings.map((row) => row.team_name);
   if (state.matrixSortMode === "alphabetical") {
     teams.sort((left, right) =>
-      shortTeam(left).localeCompare(shortTeam(right), "da", { sensitivity: "base" }) ||
-      left.localeCompare(right, "da", { sensitivity: "base" }),
+      compareAlphabetically(shortTeam(left), shortTeam(right)) || compareAlphabetically(left, right),
     );
   }
   const header = `<tr><th scope="col"></th>${teams.map((team) => `<th scope="col" title="${escapeHtml(team)}">${escapeHtml(shortTeam(team))}</th>`).join("")}</tr>`;
@@ -1034,6 +1033,21 @@ function dataUrl(path) {
 
 function shortTeam(team) {
   return teamAbbreviations.reduce((name, [from, to]) => name.replace(from, to), team).trim();
+}
+
+function compareAlphabetically(left, right) {
+  const sortKey = (value) =>
+    Array.from(String(value).toLowerCase())
+      .map((character) => {
+        if (character === "æ") return "\uE000";
+        if (character === "ø") return "\uE001";
+        if (character === "å") return "\uE002";
+        return character.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      })
+      .join("");
+  const leftKey = sortKey(left);
+  const rightKey = sortKey(right);
+  return leftKey < rightKey ? -1 : leftKey > rightKey ? 1 : 0;
 }
 
 function genderLabel(gender) {
