@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-10-31T04:53:56+00:00",
+    "exported_at": "2026-11-01T05:15:59+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -36,6 +36,19 @@
     {
       "pool_id": "4128",
       "rank": 2,
+      "team_name": "VLI",
+      "games_played": 4,
+      "games_won": 2,
+      "games_lost": 2,
+      "sets_won": 10,
+      "sets_lost": 7,
+      "balls_won": 365,
+      "balls_lost": 342,
+      "points": 8
+    },
+    {
+      "pool_id": "4128",
+      "rank": 3,
       "team_name": "KSV.2",
       "games_played": 3,
       "games_won": 2,
@@ -48,7 +61,7 @@
     },
     {
       "pool_id": "4128",
-      "rank": 3,
+      "rank": 4,
       "team_name": "Lynge Uggeløse",
       "games_played": 3,
       "games_won": 2,
@@ -61,7 +74,7 @@
     },
     {
       "pool_id": "4128",
-      "rank": 4,
+      "rank": 5,
       "team_name": "Lyngby-Gladsaxe Volley",
       "games_played": 3,
       "games_won": 2,
@@ -74,7 +87,7 @@
     },
     {
       "pool_id": "4128",
-      "rank": 5,
+      "rank": 6,
       "team_name": "Amager Volley",
       "games_played": 4,
       "games_won": 2,
@@ -84,19 +97,6 @@
       "balls_won": 330,
       "balls_lost": 331,
       "points": 6
-    },
-    {
-      "pool_id": "4128",
-      "rank": 6,
-      "team_name": "VLI",
-      "games_played": 3,
-      "games_won": 1,
-      "games_lost": 2,
-      "sets_won": 7,
-      "sets_lost": 7,
-      "balls_won": 290,
-      "balls_lost": 300,
-      "points": 5
     },
     {
       "pool_id": "4128",
@@ -141,13 +141,13 @@
       "pool_id": "4128",
       "rank": 10,
       "team_name": "Amager Volley.2",
-      "games_played": 3,
+      "games_played": 4,
       "games_won": 0,
-      "games_lost": 3,
+      "games_lost": 4,
       "sets_won": 2,
-      "sets_lost": 9,
-      "balls_won": 236,
-      "balls_lost": 270,
+      "sets_lost": 12,
+      "balls_won": 278,
+      "balls_lost": 345,
       "points": 0
     }
   ],
@@ -599,16 +599,16 @@
       "address": "Bülowsvej 34 1870 Frederiksberg C Danmark",
       "referee1": "Ayhan Günes Soleil",
       "referee2": "Michael Lang Sørensen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 15,
+      "home_balls2": 25,
+      "away_balls2": 15,
+      "home_balls3": 25,
+      "away_balls3": 12,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2850,21 +2850,14 @@
     },
     {
       "date": "2026-10-03T14:00:00",
-      "team": "Amager Volley",
-      "points": 3,
-      "cumulative_points": 3,
-      "game_number": 1
-    },
-    {
-      "date": "2026-10-03T14:00:00",
       "team": "Lyngby-Gladsaxe Volley",
       "points": 0,
       "cumulative_points": 3,
       "game_number": 2
     },
     {
-      "date": "2026-10-03T15:00:00",
-      "team": "Farum VK 2",
+      "date": "2026-10-03T14:00:00",
+      "team": "Amager Volley",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
@@ -2874,6 +2867,13 @@
       "team": "KSV.2",
       "points": 0,
       "cumulative_points": 0,
+      "game_number": 1
+    },
+    {
+      "date": "2026-10-03T15:00:00",
+      "team": "Farum VK 2",
+      "points": 3,
+      "cumulative_points": 3,
       "game_number": 1
     },
     {
@@ -2892,14 +2892,21 @@
     },
     {
       "date": "2026-10-04T14:30:00",
+      "team": "Gentofte Volley.2",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 1
+    },
+    {
+      "date": "2026-10-04T14:30:00",
       "team": "KSV",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
     },
     {
-      "date": "2026-10-04T14:30:00",
-      "team": "Gentofte Volley.2",
+      "date": "2026-10-10T13:00:00",
+      "team": "Lynge Uggeløse",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 1
@@ -2912,11 +2919,11 @@
       "game_number": 3
     },
     {
-      "date": "2026-10-10T13:00:00",
-      "team": "Lynge Uggeløse",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 1
+      "date": "2026-10-10T14:30:00",
+      "team": "Lyngby-Gladsaxe Volley",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 3
     },
     {
       "date": "2026-10-10T14:30:00",
@@ -2924,13 +2931,6 @@
       "points": 0,
       "cumulative_points": 0,
       "game_number": 1
-    },
-    {
-      "date": "2026-10-10T14:30:00",
-      "team": "Lyngby-Gladsaxe Volley",
-      "points": 3,
-      "cumulative_points": 6,
-      "game_number": 3
     },
     {
       "date": "2026-10-11T14:30:00",
@@ -2976,16 +2976,16 @@
     },
     {
       "date": "2026-10-20T20:00:00",
-      "team": "Lynge Uggeløse",
-      "points": 3,
-      "cumulative_points": 3,
+      "team": "Amager Volley.2",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 2
     },
     {
       "date": "2026-10-20T20:00:00",
-      "team": "Amager Volley.2",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "Lynge Uggeløse",
+      "points": 3,
+      "cumulative_points": 3,
       "game_number": 2
     },
     {
@@ -2997,17 +2997,17 @@
     },
     {
       "date": "2026-10-25T10:00:00",
-      "team": "Amager Volley",
-      "points": 0,
-      "cumulative_points": 6,
-      "game_number": 4
-    },
-    {
-      "date": "2026-10-25T10:00:00",
       "team": "KSV.2",
       "points": 3,
       "cumulative_points": 6,
       "game_number": 3
+    },
+    {
+      "date": "2026-10-25T10:00:00",
+      "team": "Amager Volley",
+      "points": 0,
+      "cumulative_points": 6,
+      "game_number": 4
     },
     {
       "date": "2026-10-25T10:00:00",
@@ -3032,17 +3032,31 @@
     },
     {
       "date": "2026-10-25T12:00:00",
+      "team": "Lynge Uggeløse",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 3
+    },
+    {
+      "date": "2026-10-25T12:00:00",
       "team": "KSV",
       "points": 3,
       "cumulative_points": 9,
       "game_number": 3
     },
     {
-      "date": "2026-10-25T12:00:00",
-      "team": "Lynge Uggeløse",
+      "date": "2026-10-31T16:00:00",
+      "team": "VLI",
       "points": 3,
-      "cumulative_points": 6,
-      "game_number": 3
+      "cumulative_points": 8,
+      "game_number": 4
+    },
+    {
+      "date": "2026-10-31T16:00:00",
+      "team": "Amager Volley.2",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 4
     }
   ],
   "result_matrix": {
@@ -3156,7 +3170,7 @@
     },
     "VLI": {
       "Amager Volley": "2-3",
-      "Amager Volley.2": "",
+      "Amager Volley.2": "3-0",
       "Farum VK 2": "",
       "Gentofte Volley.2": "",
       "KSV": "",

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-10-31T04:53:56+00:00",
+    "exported_at": "2026-11-01T05:15:59+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -23,6 +23,19 @@
     {
       "pool_id": "4122",
       "rank": 1,
+      "team_name": "VK Holbæk",
+      "games_played": 4,
+      "games_won": 3,
+      "games_lost": 1,
+      "sets_won": 11,
+      "sets_lost": 5,
+      "balls_won": 365,
+      "balls_lost": 334,
+      "points": 10
+    },
+    {
+      "pool_id": "4122",
+      "rank": 2,
       "team_name": "Lyngby-Gladsaxe Volley",
       "games_played": 3,
       "games_won": 3,
@@ -32,19 +45,6 @@
       "balls_won": 246,
       "balls_lost": 177,
       "points": 9
-    },
-    {
-      "pool_id": "4122",
-      "rank": 2,
-      "team_name": "VK Holbæk",
-      "games_played": 3,
-      "games_won": 2,
-      "games_lost": 1,
-      "sets_won": 8,
-      "sets_lost": 3,
-      "balls_won": 258,
-      "balls_lost": 229,
-      "points": 7
     },
     {
       "pool_id": "4122",
@@ -128,14 +128,14 @@
       "pool_id": "4122",
       "rank": 9,
       "team_name": "KV 61",
-      "games_played": 3,
+      "games_played": 4,
       "games_won": 0,
-      "games_lost": 3,
-      "sets_won": 1,
-      "sets_lost": 9,
-      "balls_won": 201,
-      "balls_lost": 249,
-      "points": 0
+      "games_lost": 4,
+      "sets_won": 3,
+      "sets_lost": 12,
+      "balls_won": 306,
+      "balls_lost": 356,
+      "points": 1
     },
     {
       "pool_id": "4122",
@@ -570,20 +570,20 @@
       "address": "Bispehøjen 2 4300 Holbæk Danmark",
       "referee1": "Yasir Saleh",
       "referee2": "Ibrahim Hakizimfura",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
-      "home_balls5": null,
-      "away_balls5": null,
+      "result_home_sets": 3,
+      "result_away_sets": 2,
+      "home_points": 3,
+      "away_points": 1,
+      "home_balls1": 18,
+      "away_balls1": 25,
+      "home_balls2": 21,
+      "away_balls2": 25,
+      "home_balls3": 25,
+      "away_balls3": 16,
+      "home_balls4": 27,
+      "away_balls4": 25,
+      "home_balls5": 16,
+      "away_balls5": 14,
       "result_note": "",
       "starts_at_time_known": true
     },
@@ -2878,7 +2878,14 @@
     },
     {
       "date": "2026-10-04T12:00:00",
-      "team": "Lyngby-Gladsaxe Volley",
+      "team": "Himmelev VK",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 1
+    },
+    {
+      "date": "2026-10-04T12:00:00",
+      "team": "Gentofte Volley Wildcard",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
@@ -2892,30 +2899,23 @@
     },
     {
       "date": "2026-10-04T12:00:00",
-      "team": "Gentofte Volley Wildcard",
+      "team": "Lyngby-Gladsaxe Volley",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
     },
     {
-      "date": "2026-10-04T12:00:00",
-      "team": "Himmelev VK",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 1
-    },
-    {
       "date": "2026-10-11T10:00:00",
-      "team": "VLI.2",
+      "team": "Lyngby-Gladsaxe Volley",
       "points": 3,
       "cumulative_points": 6,
       "game_number": 2
     },
     {
       "date": "2026-10-11T10:00:00",
-      "team": "Himmelev VK",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "VLI.2",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
@@ -2927,9 +2927,9 @@
     },
     {
       "date": "2026-10-11T10:00:00",
-      "team": "Lyngby-Gladsaxe Volley",
-      "points": 3,
-      "cumulative_points": 6,
+      "team": "Himmelev VK",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 2
     },
     {
@@ -2948,16 +2948,16 @@
     },
     {
       "date": "2026-10-11T14:00:00",
-      "team": "KV 61",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "Ishøj Volley",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
       "date": "2026-10-11T14:00:00",
-      "team": "Ishøj Volley",
-      "points": 3,
-      "cumulative_points": 6,
+      "team": "KV 61",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 2
     },
     {
@@ -2976,16 +2976,16 @@
     },
     {
       "date": "2026-10-25T12:00:00",
-      "team": "KV 61",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "Himmelev VK",
+      "points": 1,
+      "cumulative_points": 1,
       "game_number": 3
     },
     {
       "date": "2026-10-25T12:00:00",
-      "team": "Himmelev VK",
-      "points": 1,
-      "cumulative_points": 1,
+      "team": "KV 61",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 3
     },
     {
@@ -3004,17 +3004,31 @@
     },
     {
       "date": "2026-10-28T19:30:00",
+      "team": "Farum-Holte Wildcard",
+      "points": 0,
+      "cumulative_points": 3,
+      "game_number": 2
+    },
+    {
+      "date": "2026-10-28T19:30:00",
       "team": "VK Holbæk",
       "points": 3,
       "cumulative_points": 7,
       "game_number": 3
     },
     {
-      "date": "2026-10-28T19:30:00",
-      "team": "Farum-Holte Wildcard",
-      "points": 0,
-      "cumulative_points": 3,
-      "game_number": 2
+      "date": "2026-10-31T10:00:00",
+      "team": "VK Holbæk",
+      "points": 3,
+      "cumulative_points": 10,
+      "game_number": 4
+    },
+    {
+      "date": "2026-10-31T10:00:00",
+      "team": "KV 61",
+      "points": 1,
+      "cumulative_points": 1,
+      "game_number": 4
     }
   ],
   "result_matrix": {
@@ -3108,7 +3122,7 @@
       "Himmelev VK": "",
       "Hvidovre VK.3": "",
       "Ishøj Volley": "",
-      "KV 61": "",
+      "KV 61": "3-2",
       "Lyngby-Gladsaxe Volley": "",
       "VK Holbæk": "",
       "VK Vestsjælland.2": "",
