@@ -35,13 +35,23 @@
 
       <section class="selector-band" aria-label="Valg af række">
         <label class="field">
-          <span>Sæson</span>
-          <select id="seasonSelect"></select>
+          <span>Distrikt</span>
+          <select id="districtSelect"></select>
         </label>
 
         <fieldset class="segmented" id="genderControl">
           <legend>Køn</legend>
         </fieldset>
+
+        <label class="field">
+          <span>Aldersgruppe</span>
+          <select id="ageGroupSelect"></select>
+        </label>
+
+        <label class="field">
+          <span>Sæson</span>
+          <select id="seasonSelect"></select>
+        </label>
 
         <label class="field">
           <span>Række</span>
@@ -54,6 +64,11 @@
         </label>
       </section>
 
+      <p class="no-data-message hidden" id="noDataMessage" role="status">
+        Der er ingen data for dette valg.
+      </p>
+
+      <div id="resultsArea">
       <section class="content-grid">
         <section class="panel standings-panel">
           <div class="section-heading">
@@ -162,6 +177,7 @@
         </div>
         <p class="schedule-empty hidden" id="scheduleEmpty">Ingen kampe matcher filtrene.</p>
       </section>
+      </div>
 
     </main>
 

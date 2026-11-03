@@ -6,8 +6,12 @@ const MATCH_CALENDAR_DURATION_MS = 2 * 60 * 60 * 1000;
 const state = {
   metadata: null,
   poolData: null,
+  selectedDistrict: "",
+  selectedAgeGroup: "",
   selectedSeason: "",
   selectedGender: "",
+  hasMatchingLeagues: false,
+  poolLoadToken: 0,
   selectedLeagueId: "",
   selectedPoolId: "",
   chartMode: "game",
@@ -74,6 +78,8 @@ const teamAbbreviations = [
 
 const els = {
   status: document.querySelector("#status"),
+  districtSelect: document.querySelector("#districtSelect"),
+  ageGroupSelect: document.querySelector("#ageGroupSelect"),
   seasonSelect: document.querySelector("#seasonSelect"),
   genderControl: document.querySelector("#genderControl"),
   leagueSelect: document.querySelector("#leagueSelect"),
@@ -89,6 +95,8 @@ const els = {
   scheduleBody: document.querySelector("#scheduleBody"),
   scheduleEmpty: document.querySelector("#scheduleEmpty"),
   standingsBody: document.querySelector("#standingsBody"),
+  resultsArea: document.querySelector("#resultsArea"),
+  noDataMessage: document.querySelector("#noDataMessage"),
   chartModeControl: document.querySelector("#chartModeControl"),
   chart: document.querySelector("#pointsChart"),
   legend: document.querySelector("#chartLegend"),
@@ -114,15 +122,27 @@ async function init() {
 
 function initializeSelection() {
   const savedSelection = readSavedSelection();
+  const districts = unique(state.metadata.leagues.map((league) => league.district)).sort((a, b) => a.localeCompare(b, "da"));
+  const ageGroups = unique(state.metadata.leagues.map((league) => league.age_group)).sort((a, b) => a.localeCompare(b, "da"));
   const seasons = unique(state.metadata.leagues.map((league) => league.season_id)).sort((a, b) =>
     b.localeCompare(a, "da"),
   );
+  state.selectedDistrict = initialFilterValue(districts, savedSelection?.district, "Volleyball Danmark");
+  fillSelect(els.districtSelect, districts.map((district) => ({ value: district, label: district })));
+  els.districtSelect.value = state.selectedDistrict;
+
+  state.selectedAgeGroup = initialFilterValue(ageGroups, savedSelection?.ageGroup, "Senior");
+  fillSelect(els.ageGroupSelect, ageGroups.map((ageGroup) => ({ value: ageGroup, label: ageGroup })));
+  els.ageGroupSelect.value = state.selectedAgeGroup;
+
   state.selectedSeason = seasons.includes(savedSelection?.season) ? savedSelection.season : seasons[0] || "";
   fillSelect(els.seasonSelect, seasons.map((season) => ({ value: season, label: seasonLabel(season) })));
   els.seasonSelect.value = state.selectedSeason;
 
   const genders = unique(state.metadata.leagues.map((league) => league.gender));
-  state.selectedGender = chooseInitialGender(genders, savedSelection?.gender);
+  state.selectedGender = genders.includes(savedSelection?.gender)
+    ? savedSelection.gender
+    : preferredGender(genders);
   renderGenderButtons(genders);
   state.selectedLeagueId = savedSelection?.leagueId || "";
   state.selectedPoolId = savedSelection?.poolId || "";
@@ -131,14 +151,20 @@ function initializeSelection() {
 }
 
 function bindEvents() {
-  els.seasonSelect.addEventListener("change", async () => {
+  const updateFilters = async () => {
+    state.selectedDistrict = els.districtSelect.value;
+    state.selectedAgeGroup = els.ageGroupSelect.value;
     state.selectedSeason = els.seasonSelect.value;
-    normalizeGenderForSelectedSeason();
+    updateFilterControls();
     updateLeagueOptions();
     updatePoolOptions();
     await loadSelectedPool();
     saveCurrentSelection();
-  });
+  };
+
+  els.districtSelect.addEventListener("change", updateFilters);
+  els.ageGroupSelect.addEventListener("change", updateFilters);
+  els.seasonSelect.addEventListener("change", updateFilters);
 
   els.leagueSelect.addEventListener("change", async () => {
     state.selectedLeagueId = els.leagueSelect.value;
@@ -254,6 +280,7 @@ function renderGenderButtons(genders) {
       for (const item of row.querySelectorAll("button")) {
         item.classList.toggle("active", item === button);
       }
+      updateFilterControls();
       updateLeagueOptions();
       updatePoolOptions();
       await loadSelectedPool();
@@ -266,17 +293,27 @@ function renderGenderButtons(genders) {
 
 function updateLeagueOptions() {
   const leagues = state.metadata.leagues
-    .filter((league) => league.season_id === state.selectedSeason && league.gender === state.selectedGender)
+    .filter((league) =>
+      league.district === state.selectedDistrict &&
+      league.age_group === state.selectedAgeGroup &&
+      league.season_id === state.selectedSeason &&
+      league.gender === state.selectedGender,
+    )
     .sort((a, b) => divisionWeight(a.division) - divisionWeight(b.division));
 
+  state.hasMatchingLeagues = leagues.length > 0;
   if (!leagues.some((league) => league.id === state.selectedLeagueId)) {
     state.selectedLeagueId = leagues[0]?.id || "";
   }
   fillSelect(
     els.leagueSelect,
-    leagues.map((league) => ({ value: league.id, label: league.division })),
+    leagues.length
+      ? leagues.map((league) => ({ value: league.id, label: league.division }))
+      : [{ value: "", label: "Ingen rækker" }],
   );
   els.leagueSelect.value = state.selectedLeagueId;
+  els.leagueSelect.disabled = leagues.length === 0;
+  updateResultVisibility();
 }
 
 function updatePoolOptions() {
@@ -292,12 +329,26 @@ function updatePoolOptions() {
   els.poolField.classList.toggle("hidden", pools.length <= 1);
 }
 
+function updateResultVisibility() {
+  els.noDataMessage.classList.toggle("hidden", state.hasMatchingLeagues);
+  els.resultsArea.classList.toggle("hidden", !state.hasMatchingLeagues || !state.poolData);
+}
+
+function updateFilterControls() {
+  els.districtSelect.value = state.selectedDistrict;
+  els.ageGroupSelect.value = state.selectedAgeGroup;
+  els.seasonSelect.value = state.selectedSeason;
+  setActiveButtonByData(els.genderControl, "gender", state.selectedGender);
+}
+
 function readSavedSelection() {
   try {
     const value = window.localStorage.getItem(SELECTION_STORAGE_KEY);
     if (!value) return null;
     const selection = JSON.parse(value);
     return {
+      district: typeof selection.district === "string" ? selection.district : "",
+      ageGroup: typeof selection.ageGroup === "string" ? selection.ageGroup : "",
       season: typeof selection.season === "string" ? selection.season : "",
       gender: typeof selection.gender === "string" ? selection.gender : "",
       leagueId: typeof selection.leagueId === "string" ? selection.leagueId : "",
@@ -313,6 +364,8 @@ function saveCurrentSelection() {
     window.localStorage.setItem(
       SELECTION_STORAGE_KEY,
       JSON.stringify({
+        district: state.selectedDistrict,
+        ageGroup: state.selectedAgeGroup,
         season: state.selectedSeason,
         gender: state.selectedGender,
         leagueId: state.selectedLeagueId,
@@ -324,25 +377,10 @@ function saveCurrentSelection() {
   }
 }
 
-function chooseInitialGender(genders, savedGender) {
-  const availableGenders = gendersForSeason(state.selectedSeason);
-  if (availableGenders.includes(savedGender)) return savedGender;
-  return preferredGender(availableGenders.length ? availableGenders : genders);
-}
-
-function normalizeGenderForSelectedSeason() {
-  const availableGenders = gendersForSeason(state.selectedSeason);
-  if (!availableGenders.length || availableGenders.includes(state.selectedGender)) return;
-  state.selectedGender = preferredGender(availableGenders);
-  setActiveButtonByData(els.genderControl, "gender", state.selectedGender);
-}
-
-function gendersForSeason(season) {
-  return unique(
-    state.metadata.leagues
-      .filter((league) => league.season_id === season)
-      .map((league) => league.gender),
-  );
+function initialFilterValue(options, savedValue, defaultValue) {
+  if (options.includes(savedValue)) return savedValue;
+  if (options.includes(defaultValue)) return defaultValue;
+  return options[0] || "";
 }
 
 function preferredGender(genders) {
@@ -350,13 +388,38 @@ function preferredGender(genders) {
 }
 
 async function loadSelectedPool() {
-  if (!state.selectedPoolId) return;
-  els.status.textContent = "Indlæser række";
+  const loadToken = ++state.poolLoadToken;
+  state.poolData = null;
   state.selectedPair = null;
-  state.poolData = await fetchJson(dataUrl(`${DATA_ROOT}/${safeFilename(state.selectedPoolId)}.json`));
+  clearPoolResults();
+  updateResultVisibility();
+  if (!state.hasMatchingLeagues || !state.selectedPoolId) {
+    els.status.textContent = "Ready";
+    return;
+  }
+  els.status.textContent = "Indlæser række";
+  const poolData = await fetchJson(dataUrl(`${DATA_ROOT}/${safeFilename(state.selectedPoolId)}.json`));
+  if (loadToken !== state.poolLoadToken) return;
+  state.poolData = poolData;
   normalizeScheduleFilters();
+  updateResultVisibility();
   renderAll();
   els.status.textContent = "Ready";
+}
+
+function clearPoolResults() {
+  els.standingsBody.innerHTML = "";
+  els.scheduleBody.innerHTML = "";
+  els.scheduleEmpty.classList.add("hidden");
+  els.legend.innerHTML = "";
+  els.matrixWrap.innerHTML = "";
+  els.matchDetailContent.className = "match-detail-empty";
+  els.matchDetailContent.textContent = "";
+  els.validationMeta.className = "validation-meta hidden";
+  els.connectionStatus.className = "status-pill hidden";
+  els.updatedStatus.className = "status-pill hidden";
+  const context = els.chart.getContext("2d");
+  context?.clearRect(0, 0, els.chart.width, els.chart.height);
 }
 
 function renderAll() {
