@@ -5,7 +5,7 @@ import unittest
 import pandas as pd
 
 from volleyball_resultater.client import FIELD_SEASON, FetchResult
-from volleyball_resultater.scraper import VolleyballScraper, DISTRICT, AGE_GROUP, GENDERS
+from volleyball_resultater.scraper import VolleyballScraper, LeagueFilters, DISTRICT, AGE_GROUP, GENDERS
 from volleyball_resultater.client import ResultaterClient
 from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH
 
@@ -30,7 +30,7 @@ class ScraperTests(unittest.TestCase):
         super().__init__(methodName)
 
     def test_get_seasons(self):
-        seasons = self.scraper.get_seasons()
+        seasons = self.scraper.get_filter_options(LeagueFilters.Season)
 
         pass
 

@@ -10,7 +10,7 @@ import pandas as pd
 from .client import ResultaterClient
 from .exporter import export_json
 from .paths import DEFAULT_CACHE_DIR, DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
-from .scraper import DISTRICT, AGE_GROUP, GENDERS, VolleyballScraper
+from .scraper import DISTRICT, GENDERS, VolleyballScraper, LeagueFilters
 from .storage import Repository
 
 def main(argv: list[str] | None = None) -> int:
@@ -18,6 +18,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--db", type=Path, default=DEFAULT_DB_PATH, help="SQLite database path.")
     parser.add_argument("--export-dir", type=Path, default=DEFAULT_EXPORT_DIR, help="JSON export directory.")
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR, help="Raw HTML cache directory.")
+    parser.add_argument("--district", action="append", help="District value to scrape, for example 'Volleyball Danmark'. May be repeated.")
     parser.add_argument("--season", action="append", help="Season value to scrape, for example 2025. May be repeated.")
     parser.add_argument("--no-export", action="store_true", help="Skip JSON export after scraping.")
     parser.add_argument("--throttle", type=float, default=0.25, help="Seconds to pause after live requests.")
@@ -38,10 +39,15 @@ def main(argv: list[str] | None = None) -> int:
         print("One or more seasons not found.", file=sys.stderr)
         return 2
 
+    district_options = scraper.get_filter_options(LeagueFilters.District)
+    if set(args.district).difference(district_options["text"]):
+        print("One or more districts not found.", file=sys.stderr)
+        return 2
+
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting leagues")
     league_list = []
-    for gender, season in product(GENDERS, seasons):
-        league = scraper.get_league_ids(DISTRICT, gender, season, AGE_GROUP)
+    for district, gender, season in product(args.district, GENDERS, seasons):
+        league = scraper.get_league_ids(district, gender, season, "Senior")
         league_list.append(league)
     leagues = pd.concat(league_list).reset_index(drop=True)
     leagues_filtered = league_filter(leagues)
@@ -113,6 +119,8 @@ def league_filter(leagues_df: pd.DataFrame) -> pd.DataFrame:
     ].copy()
 
     leagues_filtered = df.loc[
+        df['district'].str.lower().eq('volleyball nordjylland') |
+        df['district'].str.lower().eq('midtjysk volleyball') |
         (
             df['league_name'].str.contains('. div', case=False) &
             ~df['league_name'].str.contains('kval', case=False)
