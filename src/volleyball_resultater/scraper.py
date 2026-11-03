@@ -1,18 +1,25 @@
 from io import StringIO
 from functools import wraps
 import inspect
+from enum import Enum
 
 import pandas as pd
 import pandas.api.types as ptypes
 import numpy as np
 
-from .client import FIELD_SEASON, FIELD_AGE_GROUP, ResultaterClient, build_search_form
+from .client import FIELD_SEASON, FIELD_AGE_GROUP, FIELD_DISTRICT, FIELD_GENDER, ResultaterClient, build_search_form
 from .html_tools import parse_forms
 from .parsers import parse_league_links, parse_pools, parse_links, query_int
 
 DISTRICT = "Volleyball Danmark"
 AGE_GROUP = "Senior"
 GENDERS = ("Mand", "Kvinde")
+
+class LeagueFilters(Enum):
+    District = FIELD_DISTRICT
+    Gender = FIELD_GENDER
+    Age_group = FIELD_AGE_GROUP
+    Season = FIELD_SEASON
 
 class VolleyballScraper:
     def __init__(self, client: ResultaterClient, append_parameters: bool=False) -> None:
@@ -64,31 +71,21 @@ class VolleyballScraper:
             liga_pool = self.get_pool_ids(liga_id)
             liga_schedule = self.scrape_pool_schedule(liga_pool.loc[0, 'pool_id'])
 
-            seasons = self.get_seasons()
+            seasons = self.get_filter_options(LeagueFilters.Season)
             seasons['year'] = pd.to_numeric(seasons['value'])
-            seasons.loc[seasons["text"].eq("Nuværende"), 'year'] = seasons['year'].max() + 1
             seasons.loc[seasons['text'].eq('Nuværende'), 'year'] = liga_schedule['match_time'].min().year
 
             self._season_overview = seasons
         return self._season_overview
 
-    def get_seasons(self) -> pd.DataFrame:
+    def get_filter_options(self, filter: LeagueFilters) -> pd.DataFrame:
         html = self._get_search_html()
         form = parse_forms(html)
-        options = form.selects[FIELD_SEASON]
+        options = form.selects[filter.value]
 
-        seasons = pd.DataFrame(options)
+        options_df = pd.DataFrame(options)
 
-        return seasons
-
-    def get_age_groups(self) -> pd.DataFrame:
-        html = self._get_search_html()
-        form = parse_forms(html)
-        options = form.selects[FIELD_AGE_GROUP]
-
-        seasons = pd.DataFrame(options)
-
-        return seasons
+        return options_df
 
     @append_parameters
     def get_league_ids(self, district: str, gender: str, season: int, age_group: str='Senior') -> pd.DataFrame:

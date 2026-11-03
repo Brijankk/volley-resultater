@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import argparse
 from datetime import datetime, time
 import json
 from pathlib import Path
@@ -9,7 +8,6 @@ import sqlite3
 import pandas as pd
 
 from . import __version__
-from .paths import DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
 from .wrangling import calculate_running_points, result_matrix
 
 
@@ -45,6 +43,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
     finally:
         connection.close()
     pools = pool_filter(pools)
+    pools = pools.loc[pools['district'].ne('Volleyball Danmark')]
 
     # Keep prefixed identifiers throughout calculations; map frontend names at export.
     score_columns = matches.columns[matches.columns.str.contains(r"_(?:sets|points|balls\d+)$")]
@@ -146,7 +145,7 @@ def merge_index(path: Path, current: dict) -> dict:
 def frontend_leagues(leagues: pd.DataFrame) -> pd.DataFrame:
     return leagues.rename(columns={"league_id": "id", "league_name": "name", "season": "season_id"}).assign(
         raekke_id=leagues["league_id"], id=leagues["league_id"].astype(str), season_id=leagues["season"].astype(str),
-        division=leagues["league_name"].str.replace(r"(?i)\s+(Herrer|Kvinder)$", "", regex=True).str.strip(),
+        division=leagues["league_name"].str.replace(r"(?i)\s+(Herrer|Mænd|Kvinder|Damer|Nord|Syd)", "", regex=True).str.strip(),
     )
 
 
@@ -155,7 +154,7 @@ def frontend_pools(pools: pd.DataFrame) -> pd.DataFrame:
         pulje_id=pools["pool_id"], id=pools["pool_id"].astype(str), league_id=pools["league_id"].astype(str),
         raekke_id=pools["league_id"], season_id=pools["season"].astype(str),
         season_value=pools["season"].astype(str), season_start_year=pools["season"],
-        division=pools["league_name"].str.replace(r"(?i)\s+(Herrer|Kvinder)$", "", regex=True).str.strip(),
+        division=pools["league_name"].str.replace(r"(?i)\s+(Herrer|Mænd|Kvinder|Damer|Nord|Syd)", "", regex=True).str.strip(),
     )
 
 
@@ -171,6 +170,8 @@ def frontend_matches(matches: pd.DataFrame) -> pd.DataFrame:
 
 def pool_filter(pools: pd.DataFrame) -> pd.DataFrame:
     pools = pools.loc[
+        pools['district'].str.lower().eq('volleyball nordjylland') |
+        pools['district'].str.lower().eq('midtjysk volleyball') |
         pools['league_name'].str.contains('division', case=False) |
         (
             pools['league_name'].str.contains('volleyligaen', case=False) &
