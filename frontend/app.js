@@ -37,6 +37,7 @@ const colors = [
 ];
 
 const teamAbbreviations = [
+  ["Aalborg Studenter", "AASI"],
   ["Aalborg Volleyball", "AAV"],
   ["Aarhus 1900", "1900"],
   ["ASV Aarhus", "ASV"],
@@ -52,6 +53,7 @@ const teamAbbreviations = [
   ["Nordenskov Ungdoms-og IF", "NUIF"],
   ["UVS-Nordenskov", "Nordenskov"],
   ["Vendsyssel", "Vends."],
+  ["Vesthimmerlands", "Vesthimm."],
   ["Vestsjælland", "Vestsj."],
   ["Wildcard", "WC"],
   [" Volleyball", ""],
