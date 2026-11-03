@@ -696,6 +696,11 @@ canvas {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .selector-band .district-field,
+  .selector-band #genderControl {
+    grid-column: 1 / -1;
+  }
+
   .schedule-heading,
   .schedule-filters {
     align-items: stretch;
