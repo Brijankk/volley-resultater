@@ -4,6 +4,10 @@ from pathlib import Path
 import sqlite3
 
 import pandas as pd
+import pandera.pandas as pa
+from pandera.typing import DataFrame
+
+from .models import Leagues, Pools, Rankings, Matches
 
 SCHEMA = """
 PRAGMA foreign_keys = ON;
@@ -79,15 +83,9 @@ class Repository:
     def close(self) -> None:
         self.connection.close()
 
-    def upsert_leagues(self, leagues: pd.DataFrame) -> None:
-        column_order = [
-            'league_id',
-            'league_name',
-            'district',
-            'gender',
-            'age_group',
-            'season'
-        ]
+    @pa.check_types
+    def upsert_leagues(self, leagues: DataFrame[Leagues]) -> None:
+        column_order = list(Leagues.to_schema().columns)
 
         self.connection.executemany(
             """
@@ -103,12 +101,9 @@ class Repository:
             [row for row in leagues[column_order].itertuples(index=False, name=None)],
         )
 
-    def upsert_pools(self, pools: pd.DataFrame) -> None:
-        column_order = [
-            'pool_id',
-            'pool_name',
-            'league_id',
-        ]
+    @pa.check_types
+    def upsert_pools(self, pools: DataFrame[Pools]) -> None:
+        column_order = list(Pools.to_schema().columns)
 
         self.connection.executemany(
             """
@@ -121,20 +116,9 @@ class Repository:
             [row for row in pools[column_order].itertuples(index=False, name=None)],
         )
 
-    def upsert_rankings(self, ranking: pd.DataFrame) -> None:
-        column_order = [
-            'pool_id',
-            'rank',
-            'team_name',
-            'games_played',
-            'games_won',
-            'games_lost',
-            'sets_won',
-            'sets_lost',
-            'balls_won',
-            'balls_lost',
-            'points',
-        ]
+    @pa.check_types
+    def upsert_rankings(self, ranking: DataFrame[Rankings]) -> None:
+        column_order = list(Rankings.to_schema().columns)
 
         self.connection.executemany(
             """
@@ -166,7 +150,8 @@ class Repository:
             [row for row in ranking[column_order].itertuples(index=False, name=None)],
         )
 
-    def upsert_matches(self, matches: pd.DataFrame) -> None:
+    @pa.check_types
+    def upsert_matches(self, matches: DataFrame[Matches]) -> None:
         column_order = [
             'pool_id',
             'match_id',

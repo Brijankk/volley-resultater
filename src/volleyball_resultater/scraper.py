@@ -6,10 +6,13 @@ from enum import Enum
 import pandas as pd
 import pandas.api.types as ptypes
 import numpy as np
+import pandera.pandas as pa
+from pandera.typing import DataFrame
 
 from .client import FIELD_SEASON, FIELD_AGE_GROUP, FIELD_DISTRICT, FIELD_GENDER, ResultaterClient, build_search_form
 from .html_tools import parse_forms
 from .parsers import parse_league_links, parse_pools, parse_links, query_int
+from .models import Leagues, Pools, Schedules, Rankings, MatchDetails
 
 DISTRICT = "Volleyball Danmark"
 AGE_GROUP = "Senior"
@@ -85,8 +88,9 @@ class VolleyballScraper:
 
         return options_df
 
+    @pa.check_types
     @append_parameters
-    def get_league_ids(self, district: str, gender: str, season: int, age_group: str='Senior') -> pd.DataFrame:
+    def get_league_ids(self, district: str, gender: str, season: int, age_group: str='Senior') -> DataFrame[Leagues]:
         search_html = self._get_search_html()
         season_overview = self._get_season_overview()
         
@@ -104,8 +108,9 @@ class VolleyballScraper:
         
         return leagues
 
+    @pa.check_types
     @append_parameters
-    def get_pool_ids(self, league_id: int) -> pd.DataFrame:
+    def get_pool_ids(self, league_id: int) -> DataFrame[Pools]:
         overview = self.client.get(f"/tms/Turneringer-og-resultater/Pulje-Oversigt.aspx?RaekkeId={league_id}")
         pools = pd.DataFrame(
             data=parse_pools(overview.html, overview.url),
@@ -113,8 +118,9 @@ class VolleyballScraper:
 
         return pools
 
+    @pa.check_types
     @append_parameters
-    def scrape_pool_scoreboard(self, pool_id: int) -> pd.DataFrame:
+    def scrape_pool_scoreboard(self, pool_id: int) -> DataFrame[Rankings]:
         column_types = {
             'rank': int,
             'team_name': str,
@@ -141,7 +147,7 @@ class VolleyballScraper:
         score_html = self.client.get(f"{self.scoreboard_url}{pool_id}").html
         if "Ingen stilling fundet" in score_html:
             print(f"No scoreboard found for pool id {pool_id}")
-            return pd.DataFrame(columns=column_types.keys()).astype(dtype=column_types)
+            return Rankings.empty()
 
         df = pd.read_html(StringIO(score_html))[0]
         df = df.dropna(axis=0, how='all').dropna(axis=1, how='all')
@@ -154,8 +160,9 @@ class VolleyballScraper:
 
         return df
 
+    @pa.check_types
     @append_parameters
-    def scrape_pool_schedule(self, pool_id: int) -> pd.DataFrame:
+    def scrape_pool_schedule(self, pool_id: int) -> DataFrame[Schedules]:
         column_rename = {
             'Kampnr.': 'match_number',
             'Hjemmehold': 'home_team',
@@ -164,18 +171,7 @@ class VolleyballScraper:
         schedule_html = self.client.get(f"{self.schedule_url}{pool_id}").html
         if "Ingen kampe fundet" in schedule_html:
             print(f"No schedule found for pool id {pool_id}")
-            return pd.DataFrame(data={
-                'match_id': pd.Series(dtype="int64"),
-                'match_number': pd.Series(dtype="int64"),
-                'match_time': pd.Series(dtype="datetime64[us]"),
-                'home_team': pd.Series(dtype="str"),
-                'away_team': pd.Series(dtype="str"),
-                'venue': pd.Series(dtype="str"),
-                'court': pd.Series(dtype="str"),
-                'home_sets': pd.Series(dtype="int64"),
-                'away_sets': pd.Series(dtype="int64"),
-                'note': pd.Series(dtype="str"),
-            })
+            return Schedules.empty()
         
         links = parse_links(schedule_html)
         match_ids = {link.text:query_int(link.href, "KampId") for link in links if link.text.isdigit()}
@@ -214,8 +210,9 @@ class VolleyballScraper:
 
         return df
 
+    @pa.check_types
     @append_parameters
-    def scrape_match_details(self, match_id: int) -> pd.DataFrame:
+    def scrape_match_details(self, match_id: int) -> DataFrame[MatchDetails]:
         match_html = self.client.get(f"{self.match_url}{match_id}").html
 
         html_tables = pd.read_html(StringIO(match_html))
