@@ -32,8 +32,8 @@ jobs:
       - name: Refresh current season
         run: >
           python -m volleyball_resultater.cli
-          --district Volleyball Danmark
-          --district Volleyball Nordjylland
+          --district "Volleyball Danmark"
+          --district "Volleyball Nordjylland"
           --season current
           --refresh-cache
 
