@@ -63,7 +63,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting rankings")
     rank_list = []
     for pool_id in pools['pool_id']:
-        rank_list.append(scraper.scrape_pool_scoreboard(pool_id))
+        rank_list.append(scraper.scrape_pool_ranking(pool_id))
     rankings = pd.concat(rank_list).reset_index(drop=True)
     print(f"{len([df for df in rank_list if not df.empty])} rankings scraped.")
 

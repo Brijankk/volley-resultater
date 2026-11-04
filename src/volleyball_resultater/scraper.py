@@ -120,7 +120,7 @@ class VolleyballScraper:
 
     @pa.check_types
     @append_parameters
-    def scrape_pool_scoreboard(self, pool_id: int) -> DataFrame[Rankings]:
+    def scrape_pool_ranking(self, pool_id: int) -> DataFrame[Rankings]:
         column_types = {
             'rank': int,
             'team_name': str,
