@@ -34,6 +34,7 @@ jobs:
           python -m volleyball_resultater.cli
           --district "Volleyball Danmark"
           --district "Volleyball Nordjylland"
+          --district "Midtjysk Volleyball"
           --season current
           --refresh-cache
 
