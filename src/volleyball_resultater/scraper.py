@@ -141,6 +141,9 @@ class VolleyballScraper:
             'P': 'points',
         }
         score_html = self.client.get(f"{self.scoreboard_url}{pool_id}").html
+        if "Ingen stilling fundet" in score_html:
+            print(f"No scoreboard found for pool id {pool_id}")
+            return pd.DataFrame(columns=column_types.keys()).astype(dtype=column_types)
 
         df = pd.read_html(StringIO(score_html))[0]
         df = df.dropna(axis=0, how='all').dropna(axis=1, how='all')
@@ -161,6 +164,20 @@ class VolleyballScraper:
             'Udehold': 'away_team',
         }
         schedule_html = self.client.get(f"{self.schedule_url}{pool_id}").html
+        if "Ingen kampe fundet" in schedule_html:
+            print(f"No schedule found for pool id {pool_id}")
+            return pd.DataFrame(data={
+                'match_id': pd.Series(dtype="int64"),
+                'match_number': pd.Series(dtype="int64"),
+                'match_time': pd.Series(dtype="datetime64[us]"),
+                'home_team': pd.Series(dtype="str"),
+                'away_team': pd.Series(dtype="str"),
+                'venue': pd.Series(dtype="str"),
+                'court': pd.Series(dtype="str"),
+                'home_sets': pd.Series(dtype="int64"),
+                'away_sets': pd.Series(dtype="int64"),
+                'note': pd.Series(dtype="str"),
+            })
         
         links = parse_links(schedule_html)
         match_ids = {link.text:query_int(link.href, "KampId") for link in links if link.text.isdigit()}

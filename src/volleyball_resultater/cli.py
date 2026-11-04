@@ -65,14 +65,14 @@ def main(argv: list[str] | None = None) -> int:
     for pool_id in pools['pool_id']:
         rank_list.append(scraper.scrape_pool_scoreboard(pool_id))
     rankings = pd.concat(rank_list).reset_index(drop=True)
-    print(f"{len(rank_list)} rankings scraped.")
+    print(f"{len([df for df in rank_list if not df.empty])} rankings scraped.")
 
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting schedules")
     schedule_list = []
     for pool_id in pools['pool_id']:
         schedule_list.append(scraper.scrape_pool_schedule(pool_id))
     schedules = pd.concat(schedule_list).reset_index(drop=True)
-    print(f"{len(schedule_list)} schedules scraped. {schedules.shape[0]} matches found.")
+    print(f"{len([df for df in schedule_list if not df.empty])} schedules scraped. {schedules.shape[0]} matches found.")
 
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting match details")
     match_details_list = []
@@ -121,6 +121,7 @@ def league_filter(leagues_df: pd.DataFrame) -> pd.DataFrame:
     leagues_filtered = df.loc[
         df['district'].str.lower().eq('volleyball nordjylland') |
         df['district'].str.lower().eq('midtjysk volleyball') |
+        df['district'].str.lower().eq('fyns volleyball kreds') |
         (
             df['league_name'].str.contains('. div', case=False) &
             ~df['league_name'].str.contains('kval', case=False)
