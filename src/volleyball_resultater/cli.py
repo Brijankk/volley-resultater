@@ -27,7 +27,7 @@ def main(argv: list[str] | None = None) -> int:
 
 
     client = ResultaterClient(cache_dir=args.cache_dir, throttle_seconds=args.throttle, refresh_cache=args.refresh_cache)
-    scraper = VolleyballScraper(client, append_parameters=True)
+    scraper = VolleyballScraper(client)
     repo = Repository(args.db)
 
     season_overview = scraper._get_season_overview()

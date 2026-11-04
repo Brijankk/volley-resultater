@@ -22,9 +22,8 @@ class LeagueFilters(Enum):
     Season = FIELD_SEASON
 
 class VolleyballScraper:
-    def __init__(self, client: ResultaterClient, append_parameters: bool=False) -> None:
+    def __init__(self, client: ResultaterClient) -> None:
         self.client = client
-        self.append_parameters = append_parameters
         self._search_html: str | None = None
         self._season_overview: pd.DataFrame = pd.DataFrame()
 
@@ -46,8 +45,7 @@ class VolleyballScraper:
         def wrapper(self, *args, **kwargs):
             parameters = self._get_action_parameters(func, args, kwargs)
             df = func(self, *args, **kwargs)
-            if self.append_parameters:
-                df = df.assign(**parameters)
+            df = df.assign(**parameters)
             return df
         return wrapper
 
