@@ -104,7 +104,7 @@ class VolleyballScraper:
                 columns=["league_name", "league_id"],
             )
             league_list.append(league)
-        leagues = pd.concat(league_list)
+        leagues = pd.concat(league_list).astype({'league_name': str, 'league_id': int})
         
         return leagues
 
