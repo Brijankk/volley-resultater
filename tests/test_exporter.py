@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import ast
 import json
 from pathlib import Path
 import sqlite3
@@ -8,6 +7,7 @@ import tempfile
 import unittest
 
 from volleyball_resultater.exporter import export_json
+from volleyball_resultater.paths import SCHEMA_PATH
 
 
 class ExporterNewTests(unittest.TestCase):
@@ -19,11 +19,7 @@ class ExporterNewTests(unittest.TestCase):
         self.connection = sqlite3.connect(self.db)
         self.addCleanup(self.connection.close)
         # Read the actual storage schema without initializing a repository or fetching pages.
-        storage = Path(__file__).resolve().parents[1] / "src/volleyball_resultater/storage.py"
-        tree = ast.parse(storage.read_text(encoding="utf-8"))
-        schema = next(ast.literal_eval(node.value) for node in tree.body
-                      if isinstance(node, ast.Assign) and any(
-                          isinstance(target, ast.Name) and target.id == "SCHEMA" for target in node.targets))
+        schema = SCHEMA_PATH.read_text(encoding="utf-8")
         self.connection.executescript(schema)
 
     def seed_pool(self):
