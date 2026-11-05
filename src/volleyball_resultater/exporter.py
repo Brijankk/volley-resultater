@@ -8,51 +8,26 @@ import sqlite3
 import pandas as pd
 
 from . import __version__
+from .storage import Repository
 from .wrangling import calculate_running_points, result_matrix
 
 
 def export_json(db_path: Path, output_dir: Path) -> None:
-    """Read a consistent database snapshot and write frontend-compatible JSON."""
-    connection = sqlite3.connect(db_path.resolve().as_uri() + "?mode=ro", uri=True)
-    try:
-        connection.execute("BEGIN")
-        pools = pd.read_sql(
-            sql="""
-                SELECT 
-                    x.*,
-                    y.league_name,
-                    y.district,
-                    y.gender,
-                    y.season,
-                    y.age_group
-                FROM pools x 
-                JOIN leagues y
-                ON x.league_id=y.league_id
-                ORDER BY x.league_id, x.pool_name, x.pool_id
-            """,
-            con=connection,
-            dtype_backend="numpy_nullable"
-        )
+    with Repository.open_readonly(db_path) as repo:
+        pools = repo.get_pools_with_leagues()
+        rankings = repo.get_rankings()
+        matches = repo.get_matches()
 
-        rankings = pd.read_sql("SELECT * FROM rankings ORDER BY pool_id, rank, team_name",
-                               connection, dtype_backend="numpy_nullable")
-        matches = pd.read_sql(
-            "SELECT * FROM matches ORDER BY pool_id, match_time IS NULL, match_time, match_number, match_id",
-            connection, dtype_backend="numpy_nullable",
-        )
-    finally:
-        connection.close()
     pools = pool_filter(pools)
-
-    # Keep prefixed identifiers throughout calculations; map frontend names at export.
-    score_columns = matches.columns[matches.columns.str.contains(r"_(?:sets|points|balls\d+)$")]
-    # SQL cannot infer numeric dtypes from a column containing only NULL values.
-    matches[score_columns] = matches[score_columns].astype("Int64")
-    matches["match_time"] = pd.to_datetime(matches["match_time"])
-    matches["note"] = matches["note"].fillna("").replace(r"(?i)^\s*(nan|<na>)\s*$", "", regex=True)
-    leagues = pools[['league_id', 'league_name', 'district', 'gender', 'age_group', 'season']].drop_duplicates(
+    leagues = pools[
+        ['league_id', 'league_name', 'district', 'gender', 'age_group', 'season']
+    ].drop_duplicates(
         ignore_index=True
-    ).sort_values(['season', 'gender', 'league_name', 'league_id'], ascending=[False, True, True, True])
+    ).sort_values(
+        by=['season', 'gender', 'league_name', 'league_id'],
+        ascending=[False, True, True, True]
+    )
+
     metadata = {
         "exported_at": datetime.now().astimezone().isoformat(timespec="seconds"),
         "scraper_version": __version__,

@@ -20,6 +20,26 @@ class Repository:
         self.connection = sqlite3.connect(path)
         self.connection.row_factory = sqlite3.Row
         self.connection.executescript(SCHEMA)
+    
+    @classmethod
+    def open_readonly(cls, path: Path) -> "Repository":
+        repo = cls.__new__(cls)
+        repo.path = path
+        uri = path.resolve().as_uri() + "?mode=ro"
+        repo.connection = sqlite3.connect(uri, uri=True)
+        repo.connection.row_factory = sqlite3.Row
+        repo.connection.execute("BEGIN")
+
+        return repo
+
+    def __enter__(self) -> "Repository":
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback) -> None:
+        self.close()
+
+    def commit(self) -> None:
+        self.connection.commit()
 
     def close(self) -> None:
         self.connection.close()
@@ -186,7 +206,6 @@ class Repository:
                 note=excluded.note
             """,
             [row for row in df[column_order].itertuples(index=False, name=None)],
-            # [row for row in matches.where(matches.notna(), None)[column_order].itertuples(index=False, name=None)],
         )
 
     def get_leagues(self) -> pd.DataFrame:
@@ -202,6 +221,68 @@ class Repository:
 
         return df
 
+    def get_pools_with_leagues(self) -> pd.DataFrame:
+        query = """
+            SELECT 
+                x.*,
+                y.league_name,
+                y.district,
+                y.gender,
+                y.season,
+                y.age_group
+            FROM pools x 
+            JOIN leagues y
+            ON x.league_id=y.league_id
+        """
+        df = pd.read_sql(
+            sql=query,
+            con=self.connection,
+            dtype_backend="numpy_nullable"
+        )
+        df.sort_values(
+            by=["league_id", "pool_name", "pool_id"],
+            ignore_index=True,
+            inplace=True
+        )
+
+        return df
+
+    def get_rankings(self) -> pd.DataFrame:
+        query = "SELECT * FROM rankings ORDER BY pool_id, rank, team_name"
+
+        df = pd.read_sql(
+            sql=query,
+            con=self.connection,
+            dtype_backend="numpy_nullable"
+        )
+        df.sort_values(
+            by=["pool_id", "rank", "team_name"],
+            ignore_index=True,
+            inplace=True
+        )
+
+        return df
+
+    def get_matches(self) -> pd.DataFrame:
+        query = "SELECT * FROM matches ORDER BY pool_id, match_time IS NULL, match_time, match_number, match_id"
+        df = pd.read_sql(
+            sql=query,
+            con=self.connection,
+            dtype_backend="numpy_nullable",
+        )
+        # SQL cannot infer numeric dtypes from a column containing only NULL values.
+        score_columns = df.columns[df.columns.str.contains(r"_(?:sets|points|balls\d+)$")]        
+        df[score_columns] = df[score_columns].astype("Int64")
+        df["match_time"] = pd.to_datetime(df["match_time"])
+        df["note"] = df["note"].fillna("").replace(r"(?i)^\s*(nan|<na>)\s*$", "", regex=True)
+
+        df.sort_values(
+            by=["pool_id", "match_time", "match_number", "match_id"],
+            ignore_index=True,
+            inplace=True
+        )
+
+        return df
     def commit(self) -> None:
         self.connection.commit()
 
