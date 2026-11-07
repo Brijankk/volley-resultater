@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-07T05:29:41+00:00",
+    "exported_at": "2026-11-07T13:55:36+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -36,6 +36,19 @@
     {
       "pool_id": "4123",
       "rank": 2,
+      "team_name": "Hornsyld IF",
+      "games_played": 4,
+      "games_won": 3,
+      "games_lost": 1,
+      "sets_won": 11,
+      "sets_lost": 3,
+      "balls_won": 329,
+      "balls_lost": 284,
+      "points": 10
+    },
+    {
+      "pool_id": "4123",
+      "rank": 3,
       "team_name": "DSIO Odense",
       "games_played": 4,
       "games_won": 3,
@@ -45,19 +58,6 @@
       "balls_won": 331,
       "balls_lost": 282,
       "points": 9
-    },
-    {
-      "pool_id": "4123",
-      "rank": 3,
-      "team_name": "Hornsyld IF",
-      "games_played": 3,
-      "games_won": 2,
-      "games_lost": 1,
-      "sets_won": 8,
-      "sets_lost": 3,
-      "balls_won": 252,
-      "balls_lost": 214,
-      "points": 7
     },
     {
       "pool_id": "4123",
@@ -128,13 +128,13 @@
       "pool_id": "4123",
       "rank": 9,
       "team_name": "Kolding VK.2",
-      "games_played": 3,
+      "games_played": 4,
       "games_won": 0,
-      "games_lost": 3,
+      "games_lost": 4,
       "sets_won": 2,
-      "sets_lost": 9,
-      "balls_won": 188,
-      "balls_lost": 268,
+      "sets_lost": 12,
+      "balls_won": 258,
+      "balls_lost": 345,
       "points": 0
     }
   ],
@@ -586,16 +586,16 @@
       "address": "Kirkedalsvej 53 7130 Juelsminde Danmark",
       "referee1": "Jan Søgaard",
       "referee2": "Kaj Verner Kappel Krongård Hansen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 22,
+      "home_balls2": 26,
+      "away_balls2": 24,
+      "home_balls3": 26,
+      "away_balls3": 24,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2392,23 +2392,16 @@
     },
     {
       "date": "2026-10-24T10:30:00",
-      "team": "DSIO Odense",
-      "points": 3,
-      "cumulative_points": 9,
-      "game_number": 3
-    },
-    {
-      "date": "2026-10-24T10:30:00",
       "team": "Volleyball Esbjerg",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 2
     },
     {
-      "date": "2026-10-25T12:00:00",
-      "team": "Hornsyld IF",
+      "date": "2026-10-24T10:30:00",
+      "team": "DSIO Odense",
       "points": 3,
-      "cumulative_points": 7,
+      "cumulative_points": 9,
       "game_number": 3
     },
     {
@@ -2419,10 +2412,10 @@
       "game_number": 2
     },
     {
-      "date": "2026-10-25T14:00:00",
-      "team": "Midtfyns VK",
+      "date": "2026-10-25T12:00:00",
+      "team": "Hornsyld IF",
       "points": 3,
-      "cumulative_points": 9,
+      "cumulative_points": 7,
       "game_number": 3
     },
     {
@@ -2431,6 +2424,13 @@
       "points": 1,
       "cumulative_points": 1,
       "game_number": 2
+    },
+    {
+      "date": "2026-10-25T14:00:00",
+      "team": "Midtfyns VK",
+      "points": 3,
+      "cumulative_points": 9,
+      "game_number": 3
     },
     {
       "date": "2026-10-25T14:30:00",
@@ -2476,17 +2476,31 @@
     },
     {
       "date": "2026-10-31T17:00:00",
+      "team": "Aabenraa I&G",
+      "points": 0,
+      "cumulative_points": 1,
+      "game_number": 3
+    },
+    {
+      "date": "2026-10-31T17:00:00",
       "team": "DHV Odense.2",
       "points": 3,
       "cumulative_points": 6,
       "game_number": 3
     },
     {
-      "date": "2026-10-31T17:00:00",
-      "team": "Aabenraa I&G",
+      "date": "2026-11-07T10:00:00",
+      "team": "Hornsyld IF",
+      "points": 3,
+      "cumulative_points": 10,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-07T10:00:00",
+      "team": "Kolding VK.2",
       "points": 0,
-      "cumulative_points": 1,
-      "game_number": 3
+      "cumulative_points": 0,
+      "game_number": 4
     }
   ],
   "result_matrix": {
@@ -2528,7 +2542,7 @@
       "DHV Odense.2": "3-0",
       "DSIO Odense": "",
       "Hornsyld IF": "",
-      "Kolding VK.2": "",
+      "Kolding VK.2": "3-0",
       "Midtfyns VK": "",
       "Odense Volleyball.2": "",
       "SGF Vejle": "3-0",
