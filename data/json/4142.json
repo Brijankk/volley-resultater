@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-07T13:55:36+00:00",
+    "exported_at": "2026-11-08T05:25:43+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -23,6 +23,19 @@
     {
       "pool_id": "4142",
       "rank": 1,
+      "team_name": "Hjerm FIF",
+      "games_played": 6,
+      "games_won": 4,
+      "games_lost": 2,
+      "sets_won": 14,
+      "sets_lost": 11,
+      "balls_won": 558,
+      "balls_lost": 535,
+      "points": 13
+    },
+    {
+      "pool_id": "4142",
+      "rank": 2,
       "team_name": "Spaccatura Volleyball",
       "games_played": 4,
       "games_won": 4,
@@ -35,28 +48,15 @@
     },
     {
       "pool_id": "4142",
-      "rank": 2,
-      "team_name": "VK Raptus 3",
-      "games_played": 5,
-      "games_won": 3,
-      "games_lost": 2,
-      "sets_won": 12,
-      "sets_lost": 9,
-      "balls_won": 458,
-      "balls_lost": 446,
-      "points": 10
-    },
-    {
-      "pool_id": "4142",
       "rank": 3,
-      "team_name": "Hjerm FIF",
-      "games_played": 5,
+      "team_name": "VK Raptus 3",
+      "games_played": 6,
       "games_won": 3,
-      "games_lost": 2,
-      "sets_won": 11,
-      "sets_lost": 11,
-      "balls_won": 481,
-      "balls_lost": 471,
+      "games_lost": 3,
+      "sets_won": 12,
+      "sets_lost": 12,
+      "balls_won": 522,
+      "balls_lost": 523,
       "points": 10
     },
     {
@@ -789,16 +789,16 @@
       "address": "Vestre Hovedgade 34 B 7560 Hjerm Danmark",
       "referee1": "Vakant dommer",
       "referee2": "Vakant dommer",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 16,
+      "home_balls2": 27,
+      "away_balls2": 25,
+      "home_balls3": 25,
+      "away_balls3": 23,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2364,16 +2364,16 @@
     },
     {
       "date": "2026-09-27T14:00:00",
-      "team": "VK Raptus 3",
-      "points": 3,
-      "cumulative_points": 4,
+      "team": "Ikast KFUM 4",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 2
     },
     {
       "date": "2026-09-27T14:00:00",
-      "team": "Ikast KFUM 4",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "VK Raptus 3",
+      "points": 3,
+      "cumulative_points": 4,
       "game_number": 2
     },
     {
@@ -2420,16 +2420,16 @@
     },
     {
       "date": "2026-10-24T10:00:00",
-      "team": "VK Raptus 3",
-      "points": 3,
-      "cumulative_points": 7,
+      "team": "Ry VK",
+      "points": 1,
+      "cumulative_points": 3,
       "game_number": 3
     },
     {
       "date": "2026-10-24T10:00:00",
-      "team": "Ry VK",
-      "points": 1,
-      "cumulative_points": 3,
+      "team": "VK Raptus 3",
+      "points": 3,
+      "cumulative_points": 7,
       "game_number": 3
     },
     {
@@ -2490,29 +2490,29 @@
     },
     {
       "date": "2026-10-25T14:00:00",
-      "team": "ASV Aarhus 4",
-      "points": 1,
-      "cumulative_points": 1,
-      "game_number": 4
-    },
-    {
-      "date": "2026-10-25T14:00:00",
       "team": "Ikast KFUM 4",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 4
     },
     {
-      "date": "2026-10-31T10:00:00",
-      "team": "Hjerm FIF",
-      "points": 3,
-      "cumulative_points": 6,
-      "game_number": 3
+      "date": "2026-10-25T14:00:00",
+      "team": "ASV Aarhus 4",
+      "points": 1,
+      "cumulative_points": 1,
+      "game_number": 4
     },
     {
       "date": "2026-10-31T10:00:00",
       "team": "Skjern KFUM",
       "points": 0,
+      "cumulative_points": 6,
+      "game_number": 3
+    },
+    {
+      "date": "2026-10-31T10:00:00",
+      "team": "Hjerm FIF",
+      "points": 3,
       "cumulative_points": 6,
       "game_number": 3
     },
@@ -2560,17 +2560,31 @@
     },
     {
       "date": "2026-11-07T12:00:00",
+      "team": "VK Raptus 3",
+      "points": 0,
+      "cumulative_points": 10,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-07T12:00:00",
       "team": "ASV Aarhus 4",
       "points": 3,
       "cumulative_points": 7,
       "game_number": 6
     },
     {
-      "date": "2026-11-07T12:00:00",
+      "date": "2026-11-07T14:00:00",
+      "team": "Hjerm FIF",
+      "points": 3,
+      "cumulative_points": 13,
+      "game_number": 6
+    },
+    {
+      "date": "2026-11-07T14:00:00",
       "team": "VK Raptus 3",
       "points": 0,
       "cumulative_points": 10,
-      "game_number": 5
+      "game_number": 6
     }
   ],
   "result_matrix": {
@@ -2594,7 +2608,7 @@
       "Skjern KFUM": "",
       "Skovbakken 2": "",
       "Spaccatura Volleyball": "",
-      "VK Raptus 3": ""
+      "VK Raptus 3": "3-0"
     },
     "Ikast KFUM 3": {
       "ASV Aarhus 4": "",

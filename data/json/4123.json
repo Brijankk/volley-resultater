@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-07T13:55:36+00:00",
+    "exported_at": "2026-11-08T05:25:43+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -62,6 +62,19 @@
     {
       "pool_id": "4123",
       "rank": 4,
+      "team_name": "Odense Volleyball.2",
+      "games_played": 4,
+      "games_won": 2,
+      "games_lost": 2,
+      "sets_won": 8,
+      "sets_lost": 7,
+      "balls_won": 331,
+      "balls_lost": 332,
+      "points": 7
+    },
+    {
+      "pool_id": "4123",
+      "rank": 5,
       "team_name": "DHV Odense.2",
       "games_played": 3,
       "games_won": 2,
@@ -74,7 +87,7 @@
     },
     {
       "pool_id": "4123",
-      "rank": 5,
+      "rank": 6,
       "team_name": "SGF Vejle",
       "games_played": 3,
       "games_won": 2,
@@ -84,19 +97,6 @@
       "balls_won": 258,
       "balls_lost": 266,
       "points": 6
-    },
-    {
-      "pool_id": "4123",
-      "rank": 6,
-      "team_name": "Odense Volleyball.2",
-      "games_played": 3,
-      "games_won": 1,
-      "games_lost": 2,
-      "sets_won": 5,
-      "sets_lost": 7,
-      "balls_won": 255,
-      "balls_lost": 262,
-      "points": 4
     },
     {
       "pool_id": "4123",
@@ -115,13 +115,13 @@
       "pool_id": "4123",
       "rank": 8,
       "team_name": "Volleyball Esbjerg",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 0,
-      "games_lost": 2,
+      "games_lost": 3,
       "sets_won": 0,
-      "sets_lost": 6,
-      "balls_won": 108,
-      "balls_lost": 150,
+      "sets_lost": 9,
+      "balls_won": 178,
+      "balls_lost": 226,
       "points": 0
     },
     {
@@ -615,16 +615,16 @@
       "address": "Skolebakken 171 6705 Esbjerg Ø Danmark",
       "referee1": "Vahid G. Mehdi",
       "referee2": "Jim Holm Hansen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 0,
+      "result_away_sets": 3,
+      "home_points": 0,
+      "away_points": 3,
+      "home_balls1": 23,
+      "away_balls1": 25,
+      "home_balls2": 23,
+      "away_balls2": 25,
+      "home_balls3": 24,
+      "away_balls3": 26,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2308,20 +2308,6 @@
     },
     {
       "date": "2026-10-03T14:00:00",
-      "team": "Volleyball Esbjerg",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 1
-    },
-    {
-      "date": "2026-10-03T14:00:00",
-      "team": "Kolding VK.2",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 1
-    },
-    {
-      "date": "2026-10-03T14:00:00",
       "team": "DHV Odense.2",
       "points": 3,
       "cumulative_points": 3,
@@ -2335,8 +2321,15 @@
       "game_number": 1
     },
     {
-      "date": "2026-10-04T14:30:00",
-      "team": "Odense Volleyball.2",
+      "date": "2026-10-03T14:00:00",
+      "team": "Kolding VK.2",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 1
+    },
+    {
+      "date": "2026-10-03T14:00:00",
+      "team": "Volleyball Esbjerg",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 1
@@ -2346,6 +2339,13 @@
       "team": "DSIO Odense",
       "points": 3,
       "cumulative_points": 3,
+      "game_number": 1
+    },
+    {
+      "date": "2026-10-04T14:30:00",
+      "team": "Odense Volleyball.2",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 1
     },
     {
@@ -2420,24 +2420,17 @@
     },
     {
       "date": "2026-10-25T14:00:00",
-      "team": "Aabenraa I&G",
-      "points": 1,
-      "cumulative_points": 1,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-25T14:00:00",
       "team": "Midtfyns VK",
       "points": 3,
       "cumulative_points": 9,
       "game_number": 3
     },
     {
-      "date": "2026-10-25T14:30:00",
-      "team": "SGF Vejle",
-      "points": 3,
-      "cumulative_points": 6,
-      "game_number": 3
+      "date": "2026-10-25T14:00:00",
+      "team": "Aabenraa I&G",
+      "points": 1,
+      "cumulative_points": 1,
+      "game_number": 2
     },
     {
       "date": "2026-10-25T14:30:00",
@@ -2445,6 +2438,13 @@
       "points": 1,
       "cumulative_points": 1,
       "game_number": 2
+    },
+    {
+      "date": "2026-10-25T14:30:00",
+      "team": "SGF Vejle",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 3
     },
     {
       "date": "2026-10-31T13:00:00",
@@ -2490,16 +2490,30 @@
     },
     {
       "date": "2026-11-07T10:00:00",
+      "team": "Kolding VK.2",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-07T10:00:00",
       "team": "Hornsyld IF",
       "points": 3,
       "cumulative_points": 10,
       "game_number": 4
     },
     {
-      "date": "2026-11-07T10:00:00",
-      "team": "Kolding VK.2",
+      "date": "2026-11-07T14:30:00",
+      "team": "Volleyball Esbjerg",
       "points": 0,
       "cumulative_points": 0,
+      "game_number": 3
+    },
+    {
+      "date": "2026-11-07T14:30:00",
+      "team": "Odense Volleyball.2",
+      "points": 3,
+      "cumulative_points": 7,
       "game_number": 4
     }
   ],
@@ -2599,7 +2613,7 @@
       "Hornsyld IF": "",
       "Kolding VK.2": "",
       "Midtfyns VK": "0-3",
-      "Odense Volleyball.2": "",
+      "Odense Volleyball.2": "0-3",
       "SGF Vejle": "",
       "Volleyball Esbjerg": ""
     }

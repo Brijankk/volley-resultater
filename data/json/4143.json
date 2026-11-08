@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-07T13:55:36+00:00",
+    "exported_at": "2026-11-08T05:25:43+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -101,6 +101,19 @@
     {
       "pool_id": "4143",
       "rank": 7,
+      "team_name": "Hornsyld IF",
+      "games_played": 6,
+      "games_won": 2,
+      "games_lost": 4,
+      "sets_won": 8,
+      "sets_lost": 14,
+      "balls_won": 438,
+      "balls_lost": 479,
+      "points": 6
+    },
+    {
+      "pool_id": "4143",
+      "rank": 8,
       "team_name": "ASV Aarhus.4",
       "games_played": 4,
       "games_won": 1,
@@ -113,28 +126,15 @@
     },
     {
       "pool_id": "4143",
-      "rank": 8,
-      "team_name": "Hornsyld IF",
-      "games_played": 5,
-      "games_won": 1,
-      "games_lost": 4,
-      "sets_won": 5,
-      "sets_lost": 14,
-      "balls_won": 363,
-      "balls_lost": 443,
-      "points": 3
-    },
-    {
-      "pool_id": "4143",
       "rank": 9,
       "team_name": "VK Raptus 3",
-      "games_played": 5,
+      "games_played": 6,
       "games_won": 0,
-      "games_lost": 5,
+      "games_lost": 6,
       "sets_won": 6,
-      "sets_lost": 15,
-      "balls_won": 375,
-      "balls_lost": 468,
+      "sets_lost": 18,
+      "balls_won": 411,
+      "balls_lost": 543,
       "points": 2
     }
   ],
@@ -731,16 +731,16 @@
       "address": "Nørremarksvej 3 8783 Hornsyld Danmark",
       "referee1": "Vakant dommer",
       "referee2": "Vakant dommer",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 11,
+      "home_balls2": 25,
+      "away_balls2": 13,
+      "home_balls3": 25,
+      "away_balls3": 12,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2350,23 +2350,16 @@
     },
     {
       "date": "2026-09-27T12:00:00",
-      "team": "VK Raptus 3",
-      "points": 0,
-      "cumulative_points": 1,
-      "game_number": 2
-    },
-    {
-      "date": "2026-09-27T12:00:00",
       "team": "Ikast KFUM 3",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
     },
     {
-      "date": "2026-09-27T14:00:00",
-      "team": "Ikast KFUM 3",
-      "points": 3,
-      "cumulative_points": 6,
+      "date": "2026-09-27T12:00:00",
+      "team": "VK Raptus 3",
+      "points": 0,
+      "cumulative_points": 1,
       "game_number": 2
     },
     {
@@ -2377,11 +2370,11 @@
       "game_number": 2
     },
     {
-      "date": "2026-10-03T12:00:00",
-      "team": "Horsens VBC",
+      "date": "2026-09-27T14:00:00",
+      "team": "Ikast KFUM 3",
       "points": 3,
-      "cumulative_points": 3,
-      "game_number": 1
+      "cumulative_points": 6,
+      "game_number": 2
     },
     {
       "date": "2026-10-03T12:00:00",
@@ -2391,8 +2384,8 @@
       "game_number": 1
     },
     {
-      "date": "2026-10-03T14:00:00",
-      "team": "Randers VK 2",
+      "date": "2026-10-03T12:00:00",
+      "team": "Horsens VBC",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
@@ -2403,6 +2396,13 @@
       "points": 0,
       "cumulative_points": 3,
       "game_number": 2
+    },
+    {
+      "date": "2026-10-03T14:00:00",
+      "team": "Randers VK 2",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 1
     },
     {
       "date": "2026-10-03T16:00:00",
@@ -2434,16 +2434,30 @@
     },
     {
       "date": "2026-10-25T10:00:00",
-      "team": "Aarhus 1900 2",
+      "team": "Horsens VBC",
       "points": 3,
       "cumulative_points": 6,
       "game_number": 3
     },
     {
       "date": "2026-10-25T10:00:00",
-      "team": "Horsens VBC",
+      "team": "Aarhus 1900 2",
       "points": 3,
       "cumulative_points": 6,
+      "game_number": 3
+    },
+    {
+      "date": "2026-10-25T12:00:00",
+      "team": "Aarhus 1900 2",
+      "points": 1,
+      "cumulative_points": 7,
+      "game_number": 4
+    },
+    {
+      "date": "2026-10-25T12:00:00",
+      "team": "Ikast KFUM 3",
+      "points": 3,
+      "cumulative_points": 9,
       "game_number": 3
     },
     {
@@ -2455,23 +2469,16 @@
     },
     {
       "date": "2026-10-25T12:00:00",
-      "team": "Aarhus 1900 2",
-      "points": 1,
-      "cumulative_points": 7,
-      "game_number": 4
-    },
-    {
-      "date": "2026-10-25T12:00:00",
-      "team": "Ikast KFUM 3",
-      "points": 3,
-      "cumulative_points": 9,
-      "game_number": 3
-    },
-    {
-      "date": "2026-10-25T12:00:00",
       "team": "Hornsyld IF",
       "points": 0,
       "cumulative_points": 0,
+      "game_number": 4
+    },
+    {
+      "date": "2026-10-25T14:00:00",
+      "team": "Skovbakken 2",
+      "points": 3,
+      "cumulative_points": 7,
       "game_number": 4
     },
     {
@@ -2496,24 +2503,17 @@
       "game_number": 4
     },
     {
-      "date": "2026-10-25T14:00:00",
-      "team": "Skovbakken 2",
-      "points": 3,
-      "cumulative_points": 7,
-      "game_number": 4
+      "date": "2026-11-01T10:00:00",
+      "team": "Randers VK 2",
+      "points": 0,
+      "cumulative_points": 6,
+      "game_number": 3
     },
     {
       "date": "2026-11-01T10:00:00",
       "team": "Skive FVK",
       "points": 3,
       "cumulative_points": 9,
-      "game_number": 3
-    },
-    {
-      "date": "2026-11-01T10:00:00",
-      "team": "Randers VK 2",
-      "points": 0,
-      "cumulative_points": 6,
       "game_number": 3
     },
     {
@@ -2560,16 +2560,30 @@
     },
     {
       "date": "2026-11-07T12:00:00",
+      "team": "Randers VK 2",
+      "points": 3,
+      "cumulative_points": 13,
+      "game_number": 6
+    },
+    {
+      "date": "2026-11-07T12:00:00",
       "team": "VK Raptus 3",
       "points": 0,
       "cumulative_points": 2,
       "game_number": 5
     },
     {
-      "date": "2026-11-07T12:00:00",
-      "team": "Randers VK 2",
+      "date": "2026-11-07T14:00:00",
+      "team": "Hornsyld IF",
       "points": 3,
-      "cumulative_points": 13,
+      "cumulative_points": 6,
+      "game_number": 6
+    },
+    {
+      "date": "2026-11-07T14:00:00",
+      "team": "VK Raptus 3",
+      "points": 0,
+      "cumulative_points": 2,
       "game_number": 6
     }
   ],
@@ -2605,7 +2619,7 @@
       "Randers VK 2": "3-2",
       "Skive FVK": "0-3",
       "Skovbakken 2": "",
-      "VK Raptus 3": ""
+      "VK Raptus 3": "3-0"
     },
     "Horsens VBC": {
       "ASV Aarhus.4": "",

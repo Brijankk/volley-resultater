@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-07T13:55:36+00:00",
+    "exported_at": "2026-11-08T05:25:43+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -23,6 +23,19 @@
     {
       "pool_id": "4119",
       "rank": 1,
+      "team_name": "Aalborg Volleyball",
+      "games_played": 4,
+      "games_won": 4,
+      "games_lost": 0,
+      "sets_won": 12,
+      "sets_lost": 3,
+      "balls_won": 361,
+      "balls_lost": 282,
+      "points": 12
+    },
+    {
+      "pool_id": "4119",
+      "rank": 2,
       "team_name": "VK Raptus",
       "games_played": 4,
       "games_won": 3,
@@ -35,42 +48,29 @@
     },
     {
       "pool_id": "4119",
-      "rank": 2,
-      "team_name": "Aalborg Volleyball",
-      "games_played": 3,
-      "games_won": 3,
-      "games_lost": 0,
-      "sets_won": 9,
-      "sets_lost": 2,
-      "balls_won": 262,
-      "balls_lost": 209,
-      "points": 9
-    },
-    {
-      "pool_id": "4119",
       "rank": 3,
       "team_name": "Nordenskov UIF.2",
-      "games_played": 3,
-      "games_won": 2,
+      "games_played": 4,
+      "games_won": 3,
       "games_lost": 1,
-      "sets_won": 6,
-      "sets_lost": 3,
-      "balls_won": 209,
-      "balls_lost": 180,
-      "points": 6
+      "sets_won": 9,
+      "sets_lost": 5,
+      "balls_won": 318,
+      "balls_lost": 282,
+      "points": 9
     },
     {
       "pool_id": "4119",
       "rank": 4,
       "team_name": "Randers VK",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 2,
-      "games_lost": 0,
-      "sets_won": 6,
-      "sets_lost": 3,
-      "balls_won": 197,
-      "balls_lost": 183,
-      "points": 6
+      "games_lost": 1,
+      "sets_won": 8,
+      "sets_lost": 6,
+      "balls_won": 299,
+      "balls_lost": 292,
+      "points": 7
     },
     {
       "pool_id": "4119",
@@ -128,13 +128,13 @@
       "pool_id": "4119",
       "rank": 9,
       "team_name": "Ikast KFUM.2",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 0,
-      "games_lost": 2,
-      "sets_won": 2,
-      "sets_lost": 6,
-      "balls_won": 186,
-      "balls_lost": 199,
+      "games_lost": 3,
+      "sets_won": 3,
+      "sets_lost": 9,
+      "balls_won": 259,
+      "balls_lost": 298,
       "points": 0
     },
     {
@@ -599,20 +599,20 @@
       "address": "Fyensgade 1 8900 Randers C Danmark",
       "referee1": "Bruno Schmidt Bennedsen",
       "referee2": "Morten Møller Nielsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
-      "home_balls5": null,
-      "away_balls5": null,
+      "result_home_sets": 2,
+      "result_away_sets": 3,
+      "home_points": 1,
+      "away_points": 3,
+      "home_balls1": 21,
+      "away_balls1": 25,
+      "home_balls2": 25,
+      "away_balls2": 22,
+      "home_balls3": 25,
+      "away_balls3": 22,
+      "home_balls4": 19,
+      "away_balls4": 25,
+      "home_balls5": 12,
+      "away_balls5": 15,
       "result_note": "",
       "starts_at_time_known": true
     },
@@ -628,18 +628,18 @@
       "address": "Annebergvej 48 9000 Aalborg Danmark",
       "referee1": "Sander Madsen",
       "referee2": "Gunner Bendtsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 10,
+      "home_balls2": 25,
+      "away_balls2": 14,
+      "home_balls3": 24,
+      "away_balls3": 26,
+      "home_balls4": 25,
+      "away_balls4": 23,
       "home_balls5": null,
       "away_balls5": null,
       "result_note": "",
@@ -2850,21 +2850,14 @@
     },
     {
       "date": "2026-10-04T12:00:00",
-      "team": "VK Raptus",
-      "points": 3,
-      "cumulative_points": 3,
-      "game_number": 1
-    },
-    {
-      "date": "2026-10-04T12:00:00",
       "team": "ASV Aarhus.2",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 1
     },
     {
-      "date": "2026-10-10T13:30:00",
-      "team": "Nordenskov UIF.2",
+      "date": "2026-10-04T12:00:00",
+      "team": "VK Raptus",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
@@ -2875,6 +2868,13 @@
       "points": 0,
       "cumulative_points": 0,
       "game_number": 2
+    },
+    {
+      "date": "2026-10-10T13:30:00",
+      "team": "Nordenskov UIF.2",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 1
     },
     {
       "date": "2026-10-10T14:30:00",
@@ -2934,30 +2934,30 @@
     },
     {
       "date": "2026-10-25T16:00:00",
-      "team": "Aalborg Volleyball",
-      "points": 3,
-      "cumulative_points": 6,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-25T16:00:00",
       "team": "Kolding VK",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 3
     },
     {
-      "date": "2026-10-28T20:30:00",
-      "team": "Ikast KFUM.2",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 1
+      "date": "2026-10-25T16:00:00",
+      "team": "Aalborg Volleyball",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 2
     },
     {
       "date": "2026-10-28T20:30:00",
       "team": "Aarhus 1900",
       "points": 3,
       "cumulative_points": 3,
+      "game_number": 1
+    },
+    {
+      "date": "2026-10-28T20:30:00",
+      "team": "Ikast KFUM.2",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 1
     },
     {
@@ -2976,16 +2976,16 @@
     },
     {
       "date": "2026-10-31T12:30:00",
-      "team": "Randers VK",
-      "points": 3,
-      "cumulative_points": 6,
+      "team": "DHV Odense",
+      "points": 1,
+      "cumulative_points": 4,
       "game_number": 2
     },
     {
       "date": "2026-10-31T12:30:00",
-      "team": "DHV Odense",
-      "points": 1,
-      "cumulative_points": 4,
+      "team": "Randers VK",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
@@ -3018,17 +3018,45 @@
     },
     {
       "date": "2026-11-01T16:00:00",
+      "team": "VK Raptus",
+      "points": 3,
+      "cumulative_points": 10,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-01T16:00:00",
       "team": "Ikast KFUM.2",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 2
     },
     {
-      "date": "2026-11-01T16:00:00",
-      "team": "VK Raptus",
+      "date": "2026-11-07T14:00:00",
+      "team": "Nordenskov UIF.2",
       "points": 3,
-      "cumulative_points": 10,
+      "cumulative_points": 9,
       "game_number": 4
+    },
+    {
+      "date": "2026-11-07T14:00:00",
+      "team": "Randers VK",
+      "points": 1,
+      "cumulative_points": 7,
+      "game_number": 3
+    },
+    {
+      "date": "2026-11-07T18:30:00",
+      "team": "Aalborg Volleyball",
+      "points": 3,
+      "cumulative_points": 12,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-07T18:30:00",
+      "team": "Ikast KFUM.2",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 3
     }
   ],
   "result_matrix": {
@@ -3050,7 +3078,7 @@
       "Aarhus 1900": "",
       "Bedsted KFUM": "3-0",
       "DHV Odense": "",
-      "Ikast KFUM.2": "",
+      "Ikast KFUM.2": "3-1",
       "Kolding VK": "",
       "Nordenskov UIF.2": "",
       "Randers VK": "",
@@ -3136,7 +3164,7 @@
       "DHV Odense": "",
       "Ikast KFUM.2": "",
       "Kolding VK": "",
-      "Nordenskov UIF.2": "",
+      "Nordenskov UIF.2": "2-3",
       "Randers VK": "",
       "VK Raptus": ""
     },
