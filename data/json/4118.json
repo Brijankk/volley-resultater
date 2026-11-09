@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-08T05:25:43+00:00",
+    "exported_at": "2026-11-09T05:38:43+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -50,14 +50,14 @@
       "pool_id": "4118",
       "rank": 3,
       "team_name": "VLI",
-      "games_played": 4,
-      "games_won": 3,
+      "games_played": 5,
+      "games_won": 4,
       "games_lost": 1,
-      "sets_won": 11,
+      "sets_won": 14,
       "sets_lost": 6,
-      "balls_won": 366,
-      "balls_lost": 339,
-      "points": 10
+      "balls_won": 441,
+      "balls_lost": 395,
+      "points": 13
     },
     {
       "pool_id": "4118",
@@ -141,13 +141,13 @@
       "pool_id": "4118",
       "rank": 10,
       "team_name": "Enghave VK",
-      "games_played": 4,
+      "games_played": 5,
       "games_won": 0,
-      "games_lost": 4,
+      "games_lost": 5,
       "sets_won": 0,
-      "sets_lost": 12,
-      "balls_won": 215,
-      "balls_lost": 300,
+      "sets_lost": 15,
+      "balls_won": 271,
+      "balls_lost": 375,
       "points": 0
     }
   ],
@@ -773,16 +773,16 @@
       "address": "Nyelandsvej 75 2000 Frederiksberg Danmark",
       "referee1": "Ayhan Günes Soleil",
       "referee2": "Julie Molin de Blanck",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 20,
+      "home_balls2": 25,
+      "away_balls2": 14,
+      "home_balls3": 25,
+      "away_balls3": 22,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2920,16 +2920,16 @@
     },
     {
       "date": "2026-10-11T16:00:00",
-      "team": "Frederiksberg Volley",
-      "points": 3,
-      "cumulative_points": 6,
+      "team": "Enghave VK",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 2
     },
     {
       "date": "2026-10-11T16:00:00",
-      "team": "Enghave VK",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "Frederiksberg Volley",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
@@ -2990,17 +2990,17 @@
     },
     {
       "date": "2026-10-25T14:00:00",
-      "team": "Hvidovre VK.2",
-      "points": 0,
-      "cumulative_points": 3,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-25T14:00:00",
       "team": "KSV",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
+    },
+    {
+      "date": "2026-10-25T14:00:00",
+      "team": "Hvidovre VK.2",
+      "points": 0,
+      "cumulative_points": 3,
+      "game_number": 2
     },
     {
       "date": "2026-10-26T18:00:00",
@@ -3046,23 +3046,16 @@
     },
     {
       "date": "2026-11-01T14:30:00",
-      "team": "KSV",
-      "points": 0,
-      "cumulative_points": 4,
-      "game_number": 3
-    },
-    {
-      "date": "2026-11-01T14:30:00",
       "team": "Frederiksberg Volley",
       "points": 3,
       "cumulative_points": 12,
       "game_number": 4
     },
     {
-      "date": "2026-11-01T16:30:00",
-      "team": "DTU Volley",
+      "date": "2026-11-01T14:30:00",
+      "team": "KSV",
       "points": 0,
-      "cumulative_points": 6,
+      "cumulative_points": 4,
       "game_number": 3
     },
     {
@@ -3071,6 +3064,13 @@
       "points": 3,
       "cumulative_points": 10,
       "game_number": 4
+    },
+    {
+      "date": "2026-11-01T16:30:00",
+      "team": "DTU Volley",
+      "points": 0,
+      "cumulative_points": 6,
+      "game_number": 3
     },
     {
       "date": "2026-11-03T19:00:00",
@@ -3116,17 +3116,31 @@
     },
     {
       "date": "2026-11-07T15:00:00",
+      "team": "DTU Volley",
+      "points": 3,
+      "cumulative_points": 9,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-07T15:00:00",
       "team": "Amager Volley.2",
       "points": 0,
       "cumulative_points": 3,
       "game_number": 5
     },
     {
-      "date": "2026-11-07T15:00:00",
-      "team": "DTU Volley",
+      "date": "2026-11-08T14:30:00",
+      "team": "VLI",
       "points": 3,
-      "cumulative_points": 9,
-      "game_number": 4
+      "cumulative_points": 13,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-08T14:30:00",
+      "team": "Enghave VK",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 5
     }
   ],
   "result_matrix": {
@@ -3241,7 +3255,7 @@
     "VLI": {
       "Amager Volley.2": "3-1",
       "DTU Volley": "",
-      "Enghave VK": "",
+      "Enghave VK": "3-0",
       "Frederiksberg Volley": "",
       "Gentofte Volley.2": "",
       "Hvidovre VK.2": "3-0",
