@@ -9,7 +9,7 @@ import pandas as pd
 
 from . import __version__
 from .storage import Repository
-from .wrangling import calculate_running_points, result_matrix
+from .wrangling import calculate_running_points, result_matrix, order_tournament, deduct_bracket, slutspil_filter, pokal_filter
 
 
 def export_json(db_path: Path, output_dir: Path) -> None:
@@ -18,7 +18,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
         rankings = repo.get_rankings()
         matches = repo.get_matches()
 
-    pools = pool_filter(pools)
+    pools = pools.loc[pools['season'].ge(2025)].copy() # pools = pool_filter(pools)
     leagues = pools[
         ['league_id', 'league_name', 'district', 'gender', 'age_group', 'season']
     ].drop_duplicates(
@@ -27,6 +27,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
         by=['season', 'gender', 'league_name', 'league_id'],
         ascending=[False, True, True, True]
     )
+    pool_groups = group_pools(pools)
 
     metadata = {
         "exported_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -34,41 +35,70 @@ def export_json(db_path: Path, output_dir: Path) -> None:
     }
     payloads = []
     pool_validation = {}
-    for pool_id in pools["pool_id"]:
-        pool_rankings = rankings.loc[rankings["pool_id"].eq(pool_id)]
-        pool_matches = matches.loc[matches["pool_id"].eq(pool_id)]
+    for group_id in pool_groups["group_id"].unique():
+        group = pool_groups.loc[pool_groups['group_id'].eq(group_id)]
 
-        events, matrix = derive_pool(pool_matches)
+        tournament_format = group['format'].unique()[0]
+        pool_matches = matches.loc[matches["pool_id"].isin(group['pool_id'])]
+        pool_rankings = rankings.loc[rankings["pool_id"].isin(group['pool_id'])]
+
+        if tournament_format == 'Robin':
+
+            events, matrix = derive_pool(pool_matches)
         
-        validation = compare_standings(pool_rankings, events)
+            validation = compare_standings(pool_rankings, events)
+
+            bracket = pd.DataFrame()
+
+        elif tournament_format == 'Bracket':
+
+            bracket = derive_bracket(
+                leagues=group,
+                matches=pool_matches
+            )
+            validation = True
+
+            events = pd.DataFrame()
+            matrix = pd.DataFrame()
+
         if not validation:
-            pool_validation[str(pool_id)] = validation
+            pool_validation[str(group_id)] = validation
 
         # Rename fields and convert to records only at the frontend boundary.
-        payloads.append((str(pool_id), {
-            "metadata": {**metadata, "validation": validation},
-            "pool": records(frontend_pools(pools.loc[pools["pool_id"].eq(pool_id)]))[0],
-            "source_standings": records(pool_rankings.assign(pool_id=str(pool_id))),
+        payloads.append((str(group_id), {
+            "metadata": {**metadata, "validation": validation, "format": tournament_format},
+            "pool": records(frontend_pools(pools.loc[pools["pool_id"].eq(group_id)]))[0],
+            "source_standings": records(pool_rankings.assign(pool_id=str(group_id))) if not pool_rankings.empty else [],
+            "bracket": records(bracket) if not bracket.empty else [],
             "matches": records(frontend_matches(pool_matches)),
-            "cumulative_points": records(events),
-            "result_matrix": matrix.astype(object).where(matrix.notna(), None).to_dict(orient="index"),
+            "cumulative_points": records(events) if not events.empty else [],
+            "result_matrix": matrix.astype(object).where(matrix.notna(), None).to_dict(orient="index") if not matrix.empty else {},
         }))
+
+    pools_meta = pool_groups.sort_values('league_id').drop_duplicates('group_id').drop(columns=['pool_id']).rename(columns={'group_id': 'pool_id'})
+    pools_meta['pool_name'] = pools_meta['pool_name'].where(pools_meta['format'].eq('Robin'), 'Række 1')
+    leagues_meta = pools_meta.drop_duplicates('league_id')
+    leagues_meta['league_name'] = leagues_meta['league_name'].where(leagues_meta['format'].eq('Robin'), leagues_meta['group_name'])
+    # leagues_meta.loc[leagues_meta['group_name'].eq('slutspil'), 'league_name'] = "Volleyliga slutspil"
+    # leagues_meta.loc[leagues_meta['group_name'].eq('pokal'), 'league_name'] = "Pokalturnering"
     index = {
         "metadata": {
             **metadata,
-            "seasons": sorted(leagues["season"].astype(str).unique(), reverse=True),
-            "league_count": len(leagues),
-            "pool_count": len(pools)
+            "seasons": sorted(leagues_meta["season"].astype(str).unique(), reverse=True),
+            "league_count": len(leagues_meta),
+            "pool_count": len(pools_meta)
         },
-        "leagues": records(frontend_leagues(leagues)),
-        "pools": records(frontend_pools(pools)[['id', 'name', 'league_id']]),
+        # "leagues": records(frontend_leagues(leagues)),
+        "leagues": records(frontend_leagues(leagues_meta).drop(columns=['pool_id', 'pool_name', 'group_name'])),
+        # "pools": records(frontend_pools(pools)[['id', 'name', 'league_id']]),
+        "pools": records(frontend_pools(pools_meta)[['id', 'name', 'league_id']]),
         "pool_validation": pool_validation,
     }
     # Read and merge before writing any files: an unreadable index must not lose history.
     index = merge_index(output_dir / "leagues.json", index)
     output_dir.mkdir(parents=True, exist_ok=True)
-    for pool_id, payload in payloads:
-        write_json(output_dir / f"{safe_filename(pool_id)}.json", payload)
+    for group_id, payload in payloads:
+        write_json(output_dir / f"{safe_filename(group_id)}.json", payload)
     write_json(output_dir / "leagues.json", index)
 
 
@@ -163,6 +193,58 @@ def records(frame: pd.DataFrame) -> list[dict]:
         frame[column] = frame[column].map(lambda value: value.isoformat() if pd.notna(value) else None)
     return frame.astype(object).where(frame.notna(), None).to_dict(orient="records")
 
+def group_pools(pools: pd.DataFrame) -> pd.DataFrame:
+    robins = pools.copy()
+    robins['group_name'] = robins['pool_name']
+    robins['group_id'] = robins['pool_id']
+
+    brackets = pd.concat(
+        objs=[
+            pokal_filter(pools),
+            slutspil_filter(pools),
+        ],
+        keys=['Pokalturnering', 'Volleyliga slutspil'],
+        names=['group_name'],
+    ).droplevel(-1).reset_index()
+    brackets['group_id'] = brackets.groupby(by=['district', 'gender', 'season', 'age_group', 'group_name'])['pool_id'].transform(min)
+
+    pool_groups = pd.concat(
+        objs=[
+            robins,
+            brackets,
+        ],
+        keys=['Robin', 'Bracket'],
+        names=['format']
+    ).droplevel(-1).reset_index().drop_duplicates(
+        subset='pool_id',
+        keep='last',
+        ignore_index=True,
+    )
+    
+    # pokal = pokal_filter(pools).assign(pool_name='pokal', league_name='pokal', style='Bracket')
+    # slutspil = slutspil_filter(pools).assign(pool_name='slutspil', league_name='slutspil', style='Bracket')
+
+    # df = pd.concat(
+    #     objs=[
+    #         pools,
+    #         pokal,
+    #         slutspil
+    #     ],
+    # ).drop_duplicates(
+    #     subset='pool_id',
+    #     keep='last',
+    #     ignore_index=True,
+    # )
+    # df['style'] = df['style'].fillna('Robin')
+
+    # pool_groups = df.groupby(
+    #     by=['district', 'gender', 'season', 'age_group', 'pool_name', 'league_name', 'style'],
+    #     as_index=False
+    # ).aggregate({'pool_id': ['min', list], 'league_id': ['min', list]})
+    # pool_groups.rename(columns={'min': '', 'list': 's'}, inplace=True)
+    # pool_groups.columns = pool_groups.columns.map(''.join)
+
+    return pool_groups
 
 def derive_pool(matches: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     events = calculate_running_points(matches)
@@ -171,6 +253,22 @@ def derive_pool(matches: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     matrix = result_matrix(matches).unstack()
 
     return events, matrix
+
+def derive_bracket(leagues: pd.DataFrame, matches: pd.DataFrame):
+    leagues_unique = leagues.drop_duplicates('league_id')
+    leagues_unique['round'] = order_tournament(leagues_unique['league_name'])
+
+    df = matches.join(
+        other=leagues.set_index('pool_id')[['league_id']],
+        on='pool_id'
+    ).join(
+        other=leagues_unique.set_index('league_id')[['league_name', 'round']],
+        on='league_id'
+    )[['round', 'league_name', 'match_number', 'home_team', 'away_team', 'home_sets', 'away_sets']]
+
+    bracket = deduct_bracket(df).drop(columns=['league_name'])
+
+    return bracket
 
 
 def compare_standings(rankings: pd.DataFrame, events: pd.DataFrame) -> bool:

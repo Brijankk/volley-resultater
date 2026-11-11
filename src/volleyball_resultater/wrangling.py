@@ -160,11 +160,11 @@ def order_tournament(tournament_names: pd.Series) -> pd.Series:
 
     return df['round']
 
-def deduct_tournament(schedule):
+def deduct_bracket(schedule):
     df = schedule.copy()
     df[['home_team', 'away_team']] = df[['home_team', 'away_team']].apply(sorted, axis=1).to_list()
 
-    bouts = df.groupby(['round', 'league_name', 'home_team', 'away_team'], as_index=False)['match_number'].apply(list)
+    bouts = df.groupby(['round', 'league_name', 'home_team', 'away_team'], as_index=False)['match_number'].apply(lambda x: x.to_list())
     bouts = bouts.reset_index(names=['bout_id'])
 
     mapping = bouts.explode('match_number')
