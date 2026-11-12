@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-11T05:38:57+00:00",
+    "exported_at": "2026-11-12T06:42:18+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -49,6 +49,19 @@
     {
       "pool_id": "4144",
       "rank": 3,
+      "team_name": "Aalborg Volleyball.5 OB",
+      "games_played": 4,
+      "games_won": 2,
+      "games_lost": 2,
+      "sets_won": 9,
+      "sets_lost": 6,
+      "balls_won": 332,
+      "balls_lost": 333,
+      "points": 7
+    },
+    {
+      "pool_id": "4144",
+      "rank": 4,
       "team_name": "Aalborg Studenter IF",
       "games_played": 4,
       "games_won": 2,
@@ -58,19 +71,6 @@
       "balls_won": 321,
       "balls_lost": 330,
       "points": 6
-    },
-    {
-      "pool_id": "4144",
-      "rank": 4,
-      "team_name": "Aalborg Volleyball.5 OB",
-      "games_played": 3,
-      "games_won": 1,
-      "games_lost": 2,
-      "sets_won": 6,
-      "sets_lost": 6,
-      "balls_won": 256,
-      "balls_lost": 269,
-      "points": 4
     },
     {
       "pool_id": "4144",
@@ -115,13 +115,13 @@
       "pool_id": "4144",
       "rank": 8,
       "team_name": "Vesthimmerlands VK",
-      "games_played": 3,
+      "games_played": 4,
       "games_won": 0,
-      "games_lost": 3,
+      "games_lost": 4,
       "sets_won": 2,
-      "sets_lost": 9,
-      "balls_won": 189,
-      "balls_lost": 267,
+      "sets_lost": 12,
+      "balls_won": 253,
+      "balls_lost": 343,
       "points": 0
     }
   ],
@@ -544,16 +544,16 @@
       "address": "Skt. Jørgensgade 5 9000 Aalborg Danmark",
       "referee1": "Vakant dommer",
       "referee2": "Vakant dommer",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 26,
+      "away_balls1": 24,
+      "home_balls2": 25,
+      "away_balls2": 21,
+      "home_balls3": 25,
+      "away_balls3": 19,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -1346,35 +1346,6 @@
     },
     {
       "pool_id": "4144",
-      "kamp_id": 77048,
-      "match_number": 149642,
-      "starts_at": "2027-02-14T13:30:00",
-      "home_team": "VK Shima.1",
-      "away_team": "Randers VK 2",
-      "venue": "Skansen",
-      "court": "1",
-      "address": "Lerumbakken 11 9400 Nørresundby Danmark",
-      "referee1": "Vakant dommer",
-      "referee2": "Vakant dommer",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
-      "home_balls5": null,
-      "away_balls5": null,
-      "result_note": "",
-      "starts_at_time_known": true
-    },
-    {
-      "pool_id": "4144",
       "kamp_id": 77023,
       "match_number": 149617,
       "starts_at": "2027-03-07T10:00:00",
@@ -1495,6 +1466,35 @@
       "match_number": 149625,
       "starts_at": "2027-03-14T11:45:00",
       "home_team": "VK Shima.2",
+      "away_team": "Randers VK 2",
+      "venue": "Skansen",
+      "court": "1",
+      "address": "Lerumbakken 11 9400 Nørresundby Danmark",
+      "referee1": "Vakant dommer",
+      "referee2": "Vakant dommer",
+      "result_home_sets": null,
+      "result_away_sets": null,
+      "home_points": null,
+      "away_points": null,
+      "home_balls1": null,
+      "away_balls1": null,
+      "home_balls2": null,
+      "away_balls2": null,
+      "home_balls3": null,
+      "away_balls3": null,
+      "home_balls4": null,
+      "away_balls4": null,
+      "home_balls5": null,
+      "away_balls5": null,
+      "result_note": "",
+      "starts_at_time_known": true
+    },
+    {
+      "pool_id": "4144",
+      "kamp_id": 77048,
+      "match_number": 149642,
+      "starts_at": "2027-03-14T13:30:00",
+      "home_team": "VK Shima.1",
       "away_team": "Randers VK 2",
       "venue": "Skansen",
       "court": "1",
@@ -1908,24 +1908,17 @@
     },
     {
       "date": "2026-10-24T11:45:00",
-      "team": "Aalborg Volleyball.4",
-      "points": 3,
-      "cumulative_points": 9,
-      "game_number": 3
-    },
-    {
-      "date": "2026-10-24T11:45:00",
       "team": "Vesthimmerlands VK",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 2
     },
     {
-      "date": "2026-10-24T13:30:00",
-      "team": "Aalborg Studenter IF",
-      "points": 0,
-      "cumulative_points": 6,
-      "game_number": 4
+      "date": "2026-10-24T11:45:00",
+      "team": "Aalborg Volleyball.4",
+      "points": 3,
+      "cumulative_points": 9,
+      "game_number": 3
     },
     {
       "date": "2026-10-24T13:30:00",
@@ -1935,17 +1928,24 @@
       "game_number": 4
     },
     {
-      "date": "2026-11-01T10:00:00",
-      "team": "VK Shima.1",
+      "date": "2026-10-24T13:30:00",
+      "team": "Aalborg Studenter IF",
       "points": 0,
-      "cumulative_points": 3,
-      "game_number": 3
+      "cumulative_points": 6,
+      "game_number": 4
     },
     {
       "date": "2026-11-01T10:00:00",
       "team": "Randers VK 2",
       "points": 3,
       "cumulative_points": 9,
+      "game_number": 3
+    },
+    {
+      "date": "2026-11-01T10:00:00",
+      "team": "VK Shima.1",
+      "points": 0,
+      "cumulative_points": 3,
       "game_number": 3
     },
     {
@@ -1992,17 +1992,31 @@
     },
     {
       "date": "2026-11-08T11:45:00",
+      "team": "Vesthimmerlands VK",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 3
+    },
+    {
+      "date": "2026-11-08T11:45:00",
       "team": "Randers VK 2",
       "points": 3,
       "cumulative_points": 15,
       "game_number": 6
     },
     {
-      "date": "2026-11-08T11:45:00",
+      "date": "2026-11-08T13:30:00",
+      "team": "Aalborg Volleyball.5 OB",
+      "points": 3,
+      "cumulative_points": 7,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-08T13:30:00",
       "team": "Vesthimmerlands VK",
       "points": 0,
       "cumulative_points": 0,
-      "game_number": 3
+      "game_number": 4
     }
   ],
   "result_matrix": {
@@ -2034,7 +2048,7 @@
       "Randers VK 2": "3-0",
       "VK Shima.1": "",
       "VK Shima.2": "",
-      "Vesthimmerlands VK": ""
+      "Vesthimmerlands VK": "3-0"
     },
     "Hobro VK": {
       "Aalborg Studenter IF": "",
