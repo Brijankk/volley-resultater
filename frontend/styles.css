@@ -263,6 +263,114 @@ select {
   margin-top: 14px;
 }
 
+.bracket-heading {
+  align-items: center;
+}
+
+.bracket-round-range {
+  display: block;
+  width: min(430px, 48vw);
+}
+
+.bracket-round-slider {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 12px;
+  width: calc(100% - 24px);
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  appearance: none;
+  background: transparent;
+  pointer-events: none;
+}
+
+.bracket-dual-range {
+  position: relative;
+  height: 32px;
+  margin-top: 2px;
+}
+
+.bracket-dual-range-track {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  left: 12px;
+  height: 6px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: var(--surface-strong);
+}
+
+.bracket-dual-range-track > #bracketRoundRangeFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: var(--accent);
+}
+
+.bracket-dual-range-track .bracket-dual-range-ticks {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+}
+
+.bracket-dual-range-tick {
+  position: absolute;
+  top: -3px;
+  width: 1px;
+  height: 12px;
+  transform: translateX(-50%);
+  background: var(--muted);
+  opacity: 0.7;
+}
+
+.bracket-round-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  background: transparent;
+}
+
+.bracket-round-slider::-moz-range-track {
+  height: 6px;
+  background: transparent;
+}
+
+.bracket-round-slider::-webkit-slider-thumb {
+  width: 24px;
+  height: 24px;
+  margin-top: -9px;
+  appearance: none;
+  border: 3px solid var(--surface);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 1px 4px rgba(11, 107, 120, 0.28);
+  cursor: grab;
+  pointer-events: auto;
+}
+
+.bracket-round-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: 3px solid var(--surface);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 1px 4px rgba(11, 107, 120, 0.28);
+  cursor: grab;
+  pointer-events: auto;
+}
+
+.bracket-round-slider:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.bracket-round-slider:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
 .bracket-graph-scroll {
   max-width: 100%;
   overflow: auto;
@@ -294,6 +402,17 @@ select {
   fill: var(--surface);
   stroke: var(--line);
   stroke-width: 1.4;
+}
+
+.bracket-bout {
+  cursor: pointer;
+}
+
+.bracket-bout:hover rect,
+.bracket-bout.selected rect,
+.bracket-bout:focus-visible rect {
+  stroke: var(--accent);
+  stroke-width: 2.2;
 }
 
 .bracket-bout text {
@@ -841,6 +960,14 @@ canvas {
   .section-heading {
     align-items: start;
     flex-direction: column;
+  }
+
+  .bracket-heading {
+    align-items: stretch;
+  }
+
+  .bracket-round-range {
+    width: 100%;
   }
 
   .chart-heading,
