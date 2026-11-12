@@ -96,6 +96,12 @@ const els = {
   scheduleExportButton: document.querySelector("#scheduleExportButton"),
   scheduleBody: document.querySelector("#scheduleBody"),
   scheduleEmpty: document.querySelector("#scheduleEmpty"),
+  robinPanels: document.querySelector("#robinPanels"),
+  standingsPanel: document.querySelector("#standingsPanel"),
+  chartPanel: document.querySelector("#chartPanel"),
+  matrixPanel: document.querySelector("#matrixPanel"),
+  bracketPanel: document.querySelector("#bracketPanel"),
+  bracketGraph: document.querySelector("#bracketGraph"),
   standingsBody: document.querySelector("#standingsBody"),
   resultsArea: document.querySelector("#resultsArea"),
   noDataMessage: document.querySelector("#noDataMessage"),
@@ -410,6 +416,8 @@ async function loadSelectedPool() {
 }
 
 function clearPoolResults() {
+  updateSectionVisibility();
+  els.bracketGraph.innerHTML = "";
   els.standingsBody.innerHTML = "";
   els.scheduleBody.innerHTML = "";
   els.scheduleEmpty.classList.add("hidden");
@@ -425,6 +433,7 @@ function clearPoolResults() {
 }
 
 function renderAll() {
+  updateSectionVisibility();
   renderDataMeta();
   renderScheduleControls();
   renderSchedule();
@@ -432,6 +441,29 @@ function renderAll() {
   renderChart();
   renderMatrix();
   renderMatchDetail();
+  renderBracket();
+}
+
+function updateSectionVisibility() {
+  const standings = Array.isArray(state.poolData?.source_standings)
+    ? state.poolData.source_standings
+    : [];
+  const events = Array.isArray(state.poolData?.cumulative_points)
+    ? state.poolData.cumulative_points
+    : [];
+  const matrix = state.poolData?.result_matrix;
+  const hasMatrixData = matrix && typeof matrix === "object" && Object.keys(matrix).length > 0;
+  const bouts = bracketBouts();
+
+  const hasStandings = standings.length > 0;
+  const hasChart = events.length > 0;
+  const hasMatrix = Boolean(hasStandings && hasMatrixData);
+
+  els.standingsPanel.classList.toggle("hidden", !hasStandings);
+  els.chartPanel.classList.toggle("hidden", !hasChart);
+  els.matrixPanel.classList.toggle("hidden", !hasMatrix);
+  els.robinPanels.classList.toggle("hidden", !hasStandings && !hasChart && !hasMatrix);
+  els.bracketPanel.classList.toggle("hidden", bouts.length === 0);
 }
 
 function renderDataMeta() {
@@ -445,9 +477,11 @@ function renderDataMeta() {
   els.updatedStatus.textContent = `Senest opdateret: ${exported}`;
   els.updatedStatus.className = "status-pill";
 
-  const hasPointsWarning = typeof validation === "boolean"
+  const hasStandings = Array.isArray(state.poolData.source_standings)
+    && state.poolData.source_standings.length > 0;
+  const hasPointsWarning = hasStandings && (typeof validation === "boolean"
     ? !validation
-    : Boolean(validation.affected_fields?.includes("points"));
+    : Boolean(validation.affected_fields?.includes("points")));
   els.validationMeta.className = `validation-meta ${hasPointsWarning ? "data-warning" : "hidden"}`;
   els.validationMeta.textContent = hasPointsWarning
     ? "Officiel stilling og beregnet udvikling afviger på point."
@@ -858,6 +892,156 @@ function renderMatrix() {
     })
     .join("");
   els.matrixWrap.innerHTML = `<table class="matrix-table">${header}${body}</table>`;
+}
+
+function bracketBouts() {
+  if (!Array.isArray(state.poolData?.bracket)) return [];
+  return state.poolData.bracket.filter((bout) =>
+    bout?.bout_id != null && Number.isFinite(Number(bout.round)),
+  );
+}
+
+function renderBracket() {
+  const bouts = bracketBouts();
+  if (!bouts.length) {
+    els.bracketGraph.innerHTML = "";
+    return;
+  }
+
+  const cardWidth = 270;
+  const cardHeight = 76;
+  const rowStep = 112;
+  const roundStep = 370;
+  const marginX = 24;
+  const marginY = 40;
+  const rounds = [...new Set(bouts.map((bout) => Number(bout.round)))].sort((a, b) => a - b);
+  const roundIndex = new Map(rounds.map((round, index) => [round, index]));
+  const boutById = new Map(bouts.map((bout) => [String(bout.bout_id), bout]));
+  const positions = new Map();
+  const feedersFor = (bout) => [bout.leg1, bout.leg2]
+    .filter((id) => id != null)
+    .map((id) => boutById.get(String(id)))
+    .filter(Boolean);
+
+  const referencedBoutIds = new Set(
+    bouts.flatMap((bout) => [bout.leg1, bout.leg2])
+      .filter((id) => id != null && boutById.has(String(id)))
+      .map(String),
+  );
+  const roots = bouts
+    .filter((bout) => !referencedBoutIds.has(String(bout.bout_id)))
+    .sort((left, right) =>
+      Number(right.round) - Number(left.round)
+      || feedersFor(right).length - feedersFor(left).length
+      || Number(left.bout_id) - Number(right.bout_id),
+    );
+  const leafOrder = [];
+  const visited = new Set();
+
+  function collectLeafOrder(bout) {
+    const key = String(bout.bout_id);
+    if (visited.has(key)) return;
+    visited.add(key);
+    const feeders = feedersFor(bout);
+    if (!feeders.length) {
+      leafOrder.push(key);
+      return;
+    }
+    for (const feeder of feeders) collectLeafOrder(feeder);
+  }
+
+  for (const root of roots) collectLeafOrder(root);
+  for (const bout of bouts.slice().sort((left, right) =>
+    Number(right.round) - Number(left.round) || Number(left.bout_id) - Number(right.bout_id),
+  )) {
+    if (!visited.has(String(bout.bout_id))) collectLeafOrder(bout);
+  }
+
+  const leafY = new Map(leafOrder.map((key, index) => [key, marginY + cardHeight / 2 + index * rowStep]));
+  const centerMemo = new Map();
+
+  function centerFor(bout, active = new Set()) {
+    const key = String(bout.bout_id);
+    if (centerMemo.has(key)) return centerMemo.get(key);
+    if (active.has(key)) return leafY.get(key) ?? marginY + cardHeight / 2;
+    const feeders = feedersFor(bout);
+    if (!feeders.length) return leafY.get(key) ?? marginY + cardHeight / 2;
+    const nextActive = new Set(active);
+    nextActive.add(key);
+    const feederCenters = feeders.map((feeder) => centerFor(feeder, nextActive));
+    const center = feederCenters.reduce((total, value) => total + value, 0) / feederCenters.length;
+    centerMemo.set(key, center);
+    return center;
+  }
+
+  for (const bout of bouts) {
+    const centerY = centerFor(bout);
+    positions.set(String(bout.bout_id), {
+      x: marginX + roundIndex.get(Number(bout.round)) * roundStep,
+      centerY,
+    });
+  }
+
+  const orderedBouts = bouts.slice().sort((left, right) =>
+    Number(left.round) - Number(right.round)
+    || positions.get(String(left.bout_id)).centerY - positions.get(String(right.bout_id)).centerY
+    || Number(left.bout_id) - Number(right.bout_id),
+  );
+  const lowestBottom = Math.max(...[...positions.values()].map((position) => position.centerY + cardHeight / 2));
+
+  const width = marginX * 2 + cardWidth + Math.max(0, rounds.length - 1) * roundStep;
+  const height = Math.ceil(lowestBottom + marginY);
+  const connectors = [];
+
+  for (const bout of orderedBouts) {
+    const target = positions.get(String(bout.bout_id));
+    const targetY = target.centerY;
+    const feederPositions = [bout.leg1, bout.leg2]
+      .filter((id) => id != null)
+      .map((id) => positions.get(String(id)))
+      .filter((position) => position && position.x < target.x);
+    if (!feederPositions.length) continue;
+
+    const joinX = Math.round((Math.max(...feederPositions.map((position) => position.x + cardWidth)) + target.x) / 2);
+    for (const feeder of feederPositions) {
+      connectors.push(`<path d="M ${feeder.x + cardWidth} ${feeder.centerY} H ${joinX}" />`);
+    }
+    const routeYs = [...feederPositions.map((position) => position.centerY), targetY];
+    const minY = Math.min(...routeYs);
+    const maxY = Math.max(...routeYs);
+    if (minY !== maxY) connectors.push(`<path d="M ${joinX} ${minY} V ${maxY}" />`);
+    connectors.push(`<path d="M ${joinX} ${targetY} H ${target.x}" />`);
+  }
+
+  const roundLabels = rounds.map((round) => {
+    const x = marginX + roundIndex.get(round) * roundStep;
+    return `<text class="bracket-round-label" x="${x}" y="20">Runde ${round + 1}</text>`;
+  }).join("");
+
+  const cards = orderedBouts.map((bout) => {
+    const position = positions.get(String(bout.bout_id));
+    const top = position.centerY - cardHeight / 2;
+    const home = escapeHtml(String(bout.home_team ?? ""));
+    const away = escapeHtml(String(bout.away_team ?? ""));
+    const label = escapeHtml(`${bout.home_team ?? ""} mod ${bout.away_team ?? ""}`);
+    return `
+      <g class="bracket-bout" role="group" aria-label="${label}">
+        <rect x="${position.x}" y="${top}" width="${cardWidth}" height="${cardHeight}" rx="7" />
+        <text x="${position.x + 12}" y="${top + 29}">${home}</text>
+        <line x1="${position.x + 12}" y1="${top + 38}" x2="${position.x + cardWidth - 12}" y2="${top + 38}" />
+        <text x="${position.x + 12}" y="${top + 62}">${away}</text>
+      </g>
+    `;
+  }).join("");
+
+  els.bracketGraph.innerHTML = `
+    <svg class="bracket-graph" role="img" aria-label="Turneringstræ med ${bouts.length} opgør"
+      width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+      ${roundLabels}
+      <g class="bracket-connectors" aria-hidden="true">${connectors.join("")}</g>
+      ${cards}
+    </svg>
+  `;
 }
 
 function renderMatchDetail() {

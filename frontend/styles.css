@@ -259,6 +259,54 @@ select {
   margin-top: 14px;
 }
 
+.bracket-panel {
+  margin-top: 14px;
+}
+
+.bracket-graph-scroll {
+  max-width: 100%;
+  overflow: auto;
+  overscroll-behavior-x: contain;
+  padding: 4px 0 10px;
+}
+
+.bracket-graph {
+  display: block;
+  max-width: none;
+  font-family: inherit;
+}
+
+.bracket-round-label {
+  fill: var(--muted);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.bracket-connectors path {
+  fill: none;
+  stroke: #91a7ad;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: round;
+}
+
+.bracket-bout rect {
+  fill: var(--surface);
+  stroke: var(--line);
+  stroke-width: 1.4;
+}
+
+.bracket-bout text {
+  fill: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.bracket-bout line {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
 .schedule-heading {
   align-items: end;
 }
