@@ -122,6 +122,7 @@ def league_filter(leagues_df: pd.DataFrame) -> pd.DataFrame:
         df['district'].str.lower().eq('volleyball nordjylland') |
         df['district'].str.lower().eq('midtjysk volleyball') |
         df['district'].str.lower().eq('fyns volleyball kreds') |
+        df['league_name'].str.contains('pokal', case=False) |
         (
             df['league_name'].str.contains('. div', case=False) &
             ~df['league_name'].str.contains('kval', case=False)

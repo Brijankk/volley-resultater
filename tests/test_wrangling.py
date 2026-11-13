@@ -63,7 +63,7 @@ class WranglingTests(unittest.TestCase):
         district = 'Volleyball Danmark'
         season = 2025
         gender = 'Kvinde'
-        bracket = slutspil_filter
+        bracket = pokal_filter
 
         leagues = self.repo.get_leagues()
         leagues = leagues.loc[leagues['season'].eq(season) & leagues['gender'].eq(gender) & leagues['district'].eq(district)]

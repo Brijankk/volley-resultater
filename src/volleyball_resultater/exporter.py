@@ -18,7 +18,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
         rankings = repo.get_rankings()
         matches = repo.get_matches()
 
-    pools = pools.loc[pools['season'].ge(2025)].copy() # pools = pool_filter(pools)
+    pools = pools.loc[pools['season'].ge(2026)].copy() # pools = pool_filter(pools)
     leagues = pools[
         ['league_id', 'league_name', 'district', 'gender', 'age_group', 'season']
     ].drop_duplicates(
@@ -264,7 +264,7 @@ def derive_bracket(leagues: pd.DataFrame, matches: pd.DataFrame):
     ).join(
         other=leagues_unique.set_index('league_id')[['league_name', 'round']],
         on='league_id'
-    )[['round', 'league_name', 'match_number', 'home_team', 'away_team', 'home_sets', 'away_sets']]
+    )[['round', 'league_name', 'match_number', 'home_team', 'away_team', 'home_sets', 'away_sets', 'note']]
 
     bracket = deduct_bracket(df).drop(columns=['league_name'])
 

@@ -1139,15 +1139,17 @@ function renderBracket() {
     const home = escapeHtml(String(bout.home_team ?? ""));
     const away = escapeHtml(String(bout.away_team ?? ""));
     const label = escapeHtml(`${bout.home_team ?? ""} mod ${bout.away_team ?? ""}`);
+    const homeWon = bout.winner != null && String(bout.winner) === String(bout.home_team);
+    const awayWon = bout.winner != null && String(bout.winner) === String(bout.away_team);
     const selected = String(bout.bout_id) === state.selectedBracketBoutId;
     return `
       <g class="bracket-bout${selected ? " selected" : ""}" role="button" tabindex="0"
         data-bout-id="${escapeHtml(String(bout.bout_id))}" aria-pressed="${selected}"
         aria-label="${label}; vis kampdetaljer">
         <rect x="${position.x}" y="${top}" width="${cardWidth}" height="${cardHeight}" rx="7" />
-        <text x="${position.x + 12}" y="${top + 29}">${home}</text>
+        <text class="${homeWon ? "winner" : ""}" x="${position.x + 12}" y="${top + 29}">${home}</text>
         <line x1="${position.x + 12}" y1="${top + 38}" x2="${position.x + cardWidth - 12}" y2="${top + 38}" />
-        <text x="${position.x + 12}" y="${top + 62}">${away}</text>
+        <text class="${awayWon ? "winner" : ""}" x="${position.x + 12}" y="${top + 62}">${away}</text>
       </g>
     `;
   }).join("");

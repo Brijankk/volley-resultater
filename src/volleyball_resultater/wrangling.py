@@ -146,26 +146,68 @@ def result_matrix(matches: pd.DataFrame) -> pd.DataFrame:
 def order_tournament(tournament_names: pd.Series) -> pd.Series:
     df = tournament_names.to_frame('name')
 
-    df['is_final'] = df['name'].str.contains('finale', case=False)
-    df['final_prefix'] = df['name'].str.lower().str.extract(
-        pat=r"(?:^|\s)([^\s-]+)-?finaler?\b"
-    ).fillna('1/1').replace({'semi': '1/2', 'kvart': '1/4'})
-    df['runde_prefix'] = df['name'].str.lower().str.extract(r"\b(\d+)\.\s*runde\b")
-    
-    df = df.sort_values(by=['is_final', 'final_prefix', 'runde_prefix'], ascending=[False, True, False])
+    names = df['name'].fillna('').str.lower().str.strip()
+    fraction = names.str.extract(r'\b1\s*/\s*(\d+)\b', expand=False)
+    named_final = names.str.extract(r'\b(kvart|semi|final)\w*\b', expand=False)
+    final_denominator = pd.to_numeric(fraction, errors='coerce')
+    final_denominator = final_denominator.fillna(named_final.map({
+        'kvart': 4,
+        'semi': 2,
+        'final': 1,
+    }))
+
+    df['is_final'] = names.str.contains(r'finale|\b\d+\s*/\s*\d+\b', regex=True)
+    df['final_order'] = final_denominator.fillna(1)
+    df['runde_order'] = pd.to_numeric(
+        names.str.extract(r'\b(\d+)\s*\.?\s*runde\b', expand=False),
+        errors='coerce',
+    )
+    df = df.sort_values(
+        by=['is_final', 'final_order', 'runde_order'],
+        ascending=[False, True, False],
+        kind='stable',
+    )
     df['round'] = range(df.shape[0])
-    df.loc[df['name'].str.contains('bronze', case=False), 'round'] = 0
+    df.loc[names.str.contains('bronze'), 'round'] = 0
 
     df['round'] = df['round'].max() - df['round']
 
-    return df['round']
+    return df['round'].reindex(tournament_names.index)
 
 def deduct_bracket(schedule):
-    df = schedule.copy()
-    df[['home_team', 'away_team']] = df[['home_team', 'away_team']].apply(sorted, axis=1).to_list()
+    def safe_idxmax(s):
+        #Wrapper for empty series
+        if s.empty:
+            return pd.NA
+        return s.idxmax()
 
-    bouts = df.groupby(['round', 'league_name', 'home_team', 'away_team'], as_index=False)['match_number'].apply(lambda x: x.to_list())
+    df = schedule.loc[schedule['note'].ne('ANN')].copy()
+
+    # Finding winner of each match
+    df['played'] = df[['home_sets', 'away_sets']].notna().all(axis=1)
+    df['winner'] = pd.NA
+    df.loc[df['played'], 'winner'] = np.take_along_axis(
+        arr=df.loc[df['played'], ['home_team', 'away_team']].values,
+        indices=np.argmax(
+            a=df.loc[df['played'], ['home_sets', 'away_sets']],
+            axis=1,
+            keepdims=True
+        ),
+        axis=1
+    )
+    df['winner'] = df['winner'].astype(str)
+
+    df[['home_team', 'away_team']] = df[['home_team', 'away_team']].apply(sorted, axis=1).to_list()
+    bouts = df.groupby(
+        by=['round', 'league_name', 'home_team', 'away_team'],
+        as_index=False
+    ).aggregate({
+        'match_number': lambda x: x.to_list(),
+        'winner':lambda x: safe_idxmax(x.value_counts()),
+        'played': 'all'}
+    )
     bouts = bouts.reset_index(names=['bout_id'])
+    bouts['winner'] = bouts['winner'].where(bouts['played'], pd.NA)
 
     mapping = bouts.explode('match_number')
     mapping['match_number'] = mapping['match_number'].astype(str)
@@ -185,7 +227,7 @@ def deduct_bracket(schedule):
     bouts.loc[bouts['league_name'].str.contains('bronze', case=False), ['leg1', 'leg2']] = np.nan
     bouts[['leg1', 'leg2']] = bouts[['leg1', 'leg2']].astype('Int64')
     
-    bouts.drop(columns=['key1', 'key2'], inplace=True)
+    bouts.drop(columns=['key1', 'key2', 'played'], inplace=True)
 
     return bouts
 
