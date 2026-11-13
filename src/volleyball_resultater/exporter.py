@@ -18,7 +18,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
         rankings = repo.get_rankings()
         matches = repo.get_matches()
 
-    pools = pools.loc[pools['season'].ge(2026)].copy() # pools = pool_filter(pools)
+    pools = pools.loc[pools['season'].ge(2025)].copy() # pools = pool_filter(pools)
     leagues = pools[
         ['league_id', 'league_name', 'district', 'gender', 'age_group', 'season']
     ].drop_duplicates(
@@ -27,7 +27,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
         by=['season', 'gender', 'league_name', 'league_id'],
         ascending=[False, True, True, True]
     )
-    pool_groups = group_pools(pools)
+    pool_groups, pools_meta, leagues_meta = group_pools(pools)
 
     metadata = {
         "exported_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -66,8 +66,9 @@ def export_json(db_path: Path, output_dir: Path) -> None:
 
         # Rename fields and convert to records only at the frontend boundary.
         payloads.append((str(group_id), {
-            "metadata": {**metadata, "validation": validation, "format": tournament_format},
+            "metadata": {**metadata, "validation": validation},
             "pool": records(frontend_pools(pools.loc[pools["pool_id"].eq(group_id)]))[0],
+            "pool": records(frontend_pools(pools_meta.loc[pools_meta["pool_id"].eq(group_id)]))[0],
             "source_standings": records(pool_rankings.assign(pool_id=str(group_id))) if not pool_rankings.empty else [],
             "bracket": records(bracket) if not bracket.empty else [],
             "matches": records(frontend_matches(pool_matches)),
@@ -75,12 +76,6 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             "result_matrix": matrix.astype(object).where(matrix.notna(), None).to_dict(orient="index") if not matrix.empty else {},
         }))
 
-    pools_meta = pool_groups.sort_values('league_id').drop_duplicates('group_id').drop(columns=['pool_id']).rename(columns={'group_id': 'pool_id'})
-    pools_meta['pool_name'] = pools_meta['pool_name'].where(pools_meta['format'].eq('Robin'), 'Række 1')
-    leagues_meta = pools_meta.drop_duplicates('league_id')
-    leagues_meta['league_name'] = leagues_meta['league_name'].where(leagues_meta['format'].eq('Robin'), leagues_meta['group_name'])
-    # leagues_meta.loc[leagues_meta['group_name'].eq('slutspil'), 'league_name'] = "Volleyliga slutspil"
-    # leagues_meta.loc[leagues_meta['group_name'].eq('pokal'), 'league_name'] = "Pokalturnering"
     index = {
         "metadata": {
             **metadata,
@@ -88,9 +83,7 @@ def export_json(db_path: Path, output_dir: Path) -> None:
             "league_count": len(leagues_meta),
             "pool_count": len(pools_meta)
         },
-        # "leagues": records(frontend_leagues(leagues)),
-        "leagues": records(frontend_leagues(leagues_meta).drop(columns=['pool_id', 'pool_name', 'group_name'])),
-        # "pools": records(frontend_pools(pools)[['id', 'name', 'league_id']]),
+        "leagues": records(frontend_leagues(leagues_meta)),
         "pools": records(frontend_pools(pools_meta)[['id', 'name', 'league_id']]),
         "pool_validation": pool_validation,
     }
@@ -193,7 +186,7 @@ def records(frame: pd.DataFrame) -> list[dict]:
         frame[column] = frame[column].map(lambda value: value.isoformat() if pd.notna(value) else None)
     return frame.astype(object).where(frame.notna(), None).to_dict(orient="records")
 
-def group_pools(pools: pd.DataFrame) -> pd.DataFrame:
+def group_pools(pools: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     robins = pools.copy()
     robins['group_name'] = robins['pool_name']
     robins['group_id'] = robins['pool_id']
@@ -203,7 +196,7 @@ def group_pools(pools: pd.DataFrame) -> pd.DataFrame:
             pokal_filter(pools),
             slutspil_filter(pools),
         ],
-        keys=['Pokalturnering', 'Volleyliga slutspil'],
+        keys=['Pokalturneringen', 'Volleyliga slutspil'],
         names=['group_name'],
     ).droplevel(-1).reset_index()
     brackets['group_id'] = brackets.groupby(by=['district', 'gender', 'season', 'age_group', 'group_name'])['pool_id'].transform(min)
@@ -220,31 +213,24 @@ def group_pools(pools: pd.DataFrame) -> pd.DataFrame:
         keep='last',
         ignore_index=True,
     )
-    
-    # pokal = pokal_filter(pools).assign(pool_name='pokal', league_name='pokal', style='Bracket')
-    # slutspil = slutspil_filter(pools).assign(pool_name='slutspil', league_name='slutspil', style='Bracket')
 
-    # df = pd.concat(
-    #     objs=[
-    #         pools,
-    #         pokal,
-    #         slutspil
-    #     ],
-    # ).drop_duplicates(
-    #     subset='pool_id',
-    #     keep='last',
-    #     ignore_index=True,
-    # )
-    # df['style'] = df['style'].fillna('Robin')
+    pools_meta = pool_groups.sort_values('league_id').drop_duplicates('group_id').drop(columns=['pool_id']).rename(columns={'group_id': 'pool_id'})
+    pools_meta['pool_name'] = pools_meta['pool_name'].where(pools_meta['format'].eq('Robin'), 'Række 1')
 
-    # pool_groups = df.groupby(
-    #     by=['district', 'gender', 'season', 'age_group', 'pool_name', 'league_name', 'style'],
-    #     as_index=False
-    # ).aggregate({'pool_id': ['min', list], 'league_id': ['min', list]})
-    # pool_groups.rename(columns={'min': '', 'list': 's'}, inplace=True)
-    # pool_groups.columns = pool_groups.columns.map(''.join)
+    # Group all volleyliga in same league but different pools for start and endgame rounds
+    liga_idx = pools_meta['league_name'].str.contains('volleyligaen', case=False)
+    pools_meta.loc[liga_idx, 'league_name'] = "Volleyligaen"
+    pools_meta.loc[liga_idx & pools_meta['format'].eq('Robin'), 'pool_name'] = "Indledende"
+    pools_meta.loc[liga_idx & pools_meta['format'].eq('Bracket'), 'pool_name'] = "Slutspil"
+    pools_meta['league_id'] = pools_meta.groupby(['district', 'gender', 'season', 'age_group', 'league_name'])['league_id'].transform(min)
 
-    return pool_groups
+    leagues_meta = pools_meta.drop_duplicates('league_id')
+    leagues_meta.loc[leagues_meta['group_name'].eq('Pokalturneringen'), 'league_name'] = 'Pokalturneringen'
+
+    pools_meta.drop(columns=['group_name'], inplace=True)
+    leagues_meta.drop(columns=['format', 'pool_name', 'group_name', 'pool_id'], inplace=True)
+
+    return pool_groups, pools_meta, leagues_meta
 
 def derive_pool(matches: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     events = calculate_running_points(matches)
