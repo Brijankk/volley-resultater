@@ -1,0 +1,92 @@
+{
+    "league_filter": {
+        "union": [
+            [
+                {
+                    "column": "district",
+                    "type": "equal",
+                    "value": "volleyball nordjylland",                
+                    "invert": false
+                }
+            ],
+            [
+                {
+                    "column": "district",
+                    "type": "equal",
+                    "value": "midtjysk volleyball",
+                    "invert": false
+                }
+            ],
+            [
+                {
+                    "column": "district",
+                    "type": "equal",
+                    "value": "volleyball danmark",
+                    "invert": false
+                },
+                {
+                    "column": "league_name",
+                    "type": "contains",
+                    "value": "pokal",
+                    "invert": false
+                },
+                {
+                    "column": "league_name",
+                    "type": "contains",
+                    "value": "seed",
+                    "invert": true
+                }
+            ],
+            [
+                {
+                    "column": "district",
+                    "type": "equal",
+                    "value": "volleyball danmark",
+                    "invert": false
+                },
+                {
+                    "column": "league_name",
+                    "type": "contains",
+                    "value": ". div",
+                    "invert": false
+                },
+                {
+                    "column": "league_name",
+                    "type": "contains",
+                    "value": "kval",
+                    "invert": true
+                }
+            ],
+            [
+                {
+                    "column": "district",
+                    "type": "equal",
+                    "value": "volleyball danmark",
+                    "invert": false
+                },
+                {
+                    "column": "league_name",
+                    "type": "contains",
+                    "value": "volleyligaen",
+                    "invert": false
+                },
+                {
+                    "column": "league_name",
+                    "type": "contains",
+                    "value": "plads",
+                    "invert": true
+                }
+            ]
+        ],
+        "intersect": [
+            [
+                {
+                    "column": "season",
+                    "type": ">=",
+                    "value": 2021,
+                    "invert": false
+                }
+            ]
+        ]
+    }
+}

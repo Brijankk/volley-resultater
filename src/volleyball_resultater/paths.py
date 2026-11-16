@@ -4,6 +4,7 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 SCHEMA_PATH = Path(__file__).resolve().with_name("schema.sql")
+DEFAULT_CONFIG_PATH = Path(__file__).resolve().with_name("config.json")
 DEFAULT_DB_PATH = PROJECT_ROOT / "data" / "volleyball.sqlite"
 DEFAULT_EXPORT_DIR = PROJECT_ROOT / "data" / "json"
 DEFAULT_CACHE_DIR = PROJECT_ROOT / "data" / "raw-html"

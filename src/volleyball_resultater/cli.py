@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import json
 import argparse
 from pathlib import Path
 from itertools import product
@@ -9,15 +10,17 @@ import pandas as pd
 
 from .client import ResultaterClient
 from .exporter import export_json
-from .paths import DEFAULT_CACHE_DIR, DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR
-from .scraper import DISTRICT, GENDERS, VolleyballScraper, LeagueFilters
+from .paths import DEFAULT_CACHE_DIR, DEFAULT_DB_PATH, DEFAULT_EXPORT_DIR, DEFAULT_CONFIG_PATH
+from .scraper import GENDERS, VolleyballScraper, LeagueFilters
 from .storage import Repository
+from .wrangling import frame_filter
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Scrape Danish volleyball league results.")
     parser.add_argument("--db", type=Path, default=DEFAULT_DB_PATH, help="SQLite database path.")
     parser.add_argument("--export-dir", type=Path, default=DEFAULT_EXPORT_DIR, help="JSON export directory.")
     parser.add_argument("--cache-dir", type=Path, default=DEFAULT_CACHE_DIR, help="Raw HTML cache directory.")
+    parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG_PATH, help="Path to config file")
     parser.add_argument("--district", action="append", help="District value to scrape, for example 'Volleyball Danmark'. May be repeated.")
     parser.add_argument("--season", action="append", help="Season value to scrape, for example 2025. May be repeated.")
     parser.add_argument("--no-export", action="store_true", help="Skip JSON export after scraping.")
@@ -29,6 +32,8 @@ def main(argv: list[str] | None = None) -> int:
     client = ResultaterClient(cache_dir=args.cache_dir, throttle_seconds=args.throttle, refresh_cache=args.refresh_cache)
     scraper = VolleyballScraper(client)
     repo = Repository(args.db)
+    with open(args.config) as f:
+        config = json.load(f)
 
     season_overview = scraper._get_season_overview()
     seasons = [int(season) for season in args.season if season.isdigit()]
@@ -50,7 +55,7 @@ def main(argv: list[str] | None = None) -> int:
         league = scraper.get_league_ids(district, gender, season, "Senior")
         league_list.append(league)
     leagues = pd.concat(league_list).reset_index(drop=True)
-    leagues_filtered = league_filter(leagues)
+    leagues_filtered = frame_filter(leagues, config['league_filter'])
     print(f"{leagues.shape[0]} found. After filtering, {leagues_filtered.shape[0]} remains.")
 
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Getting pools")
@@ -100,41 +105,6 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Exported JSON to {args.export_dir}")
 
     return 0
-
-def league_filter(leagues_df: pd.DataFrame) -> pd.DataFrame:
-    df = leagues_df
-    leagues_filtered = df.loc[
-        (
-            df['league_name'].str.contains('. div', case=False) &
-            ~df['league_name'].str.contains('kval', case=False)
-        ) |
-        (
-            (
-                df['league_name'].str.contains('Pokal', case=False) |
-                df['league_name'].str.contains('LP')
-            ) &
-            ~df['league_name'].str.contains('Seed') &
-            ~df['league_name'].str.contains('Kreds')
-        )
-    ].copy()
-
-    leagues_filtered = df.loc[
-        df['district'].str.lower().eq('volleyball nordjylland') |
-        df['district'].str.lower().eq('midtjysk volleyball') |
-        df['district'].str.lower().eq('fyns volleyball kreds') |
-        df['league_name'].str.contains('pokal', case=False) |
-        (
-            df['league_name'].str.contains('. div', case=False) &
-            ~df['league_name'].str.contains('kval', case=False)
-        ) |
-        (
-            df['league_name'].str.lower().eq('volleyligaen herrer') |
-            df['league_name'].str.lower().eq('volleyligaen kvinder')
-        )
-    ].copy()
-
-    return leagues_filtered
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

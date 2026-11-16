@@ -3,22 +3,23 @@ from __future__ import annotations
 from datetime import datetime, time
 import json
 from pathlib import Path
-import sqlite3
 
 import pandas as pd
 
 from . import __version__
 from .storage import Repository
-from .wrangling import calculate_running_points, result_matrix, order_tournament, deduct_bracket, slutspil_filter, pokal_filter
+from .wrangling import calculate_running_points, result_matrix, order_tournament, deduct_bracket, frame_filter
 
 
-def export_json(db_path: Path, output_dir: Path) -> None:
+def export_json(db_path: Path, output_dir: Path, config_path: Path) -> None:
+    with open(config_path) as f:
+        config = json.load(f)
     with Repository.open_readonly(db_path) as repo:
         backend_pools = repo.get_pools_with_leagues()
         rankings = repo.get_rankings()
         matches = repo.get_matches()
 
-    filtered_pools = backend_pools.loc[backend_pools['season'].ge(2025)].copy() # backend_pools = pool_filter(backend_pools)
+    filtered_pools = frame_filter(backend_pools, config['league_filter'])
     groups, pools, leagues = frontend_pool_grouping(filtered_pools)
 
     metadata = {
@@ -150,20 +151,6 @@ def frontend_matches(matches: pd.DataFrame) -> pd.DataFrame:
         pool_id=matches["pool_id"].astype(str),
         starts_at_time_known=matches["match_time"].notna() & matches["match_time"].dt.time.ne(time(0)),
     )
-
-def pool_filter(pools: pd.DataFrame) -> pd.DataFrame:
-    pools = pools.loc[
-        pools['district'].str.lower().eq('volleyball nordjylland') |
-        pools['district'].str.lower().eq('midtjysk volleyball') |
-        pools['league_name'].str.contains('division', case=False) |
-        (
-            pools['league_name'].str.contains('volleyligaen', case=False) &
-            ~pools['league_name'].str.contains('finale', case=False) &
-            ~pools['league_name'].str.contains('bronze', case=False)
-        )
-    ].copy()
-
-    return pools
 
 def records(frame: pd.DataFrame) -> list[dict]:
     """Serialize timestamps and missing values without losing integer IDs."""

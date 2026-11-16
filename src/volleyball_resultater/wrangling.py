@@ -253,3 +253,37 @@ def slutspil_filter(df: pd.DataFrame) -> pd.DataFrame:
     ].copy()
 
     return df
+
+def frame_filter(dataframe: pd.DataFrame, filter: dict) -> pd.DataFrame:
+    def apply_condition(df: pd.DataFrame, condition: dict) -> set:
+        types = {
+            'equal': lambda x, y: x.str.lower().eq(y),
+            'contains': lambda x, y: x.str.lower().str.contains(y),
+            '=': lambda x, y: x.eq(y),
+            '>': lambda x, y: x.gt(y),
+            '>=': lambda x, y: x.ge(y),
+            '<': lambda x, y: x.lt(y),
+            '=<': lambda x, y: x.lt(y),
+        }
+        idx = set(df.index[
+            types[condition['type']](df[condition['column']], condition['value']).eq(not condition['invert'])
+        ])
+
+        return idx
+
+    df = dataframe.reset_index(drop=True)
+
+    idx = set()
+    for condition in filter['union']:
+        sub_idx = set(df.index)
+        for sub_condition in condition:
+            sub_idx &= apply_condition(df, sub_condition)
+        idx |= sub_idx
+    for condition in filter['intersect']:
+        sub_idx = set()
+        for sub_condition in condition:
+            sub_idx |= apply_condition(df, sub_condition)
+        idx &= sub_idx
+
+    return df.loc[list(idx)]
+
