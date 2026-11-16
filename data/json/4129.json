@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-10T06:50:37+00:00",
+    "exported_at": "2026-11-16T05:45:46+00:00",
     "scraper_version": "2.0.0",
     "validation": true
   },
@@ -23,27 +23,27 @@
     {
       "pool_id": "4129",
       "rank": 1,
-      "team_name": "Volleyball Esbjerg",
-      "games_played": 4,
-      "games_won": 4,
+      "team_name": "ASV Aarhus.2",
+      "games_played": 5,
+      "games_won": 5,
       "games_lost": 0,
-      "sets_won": 12,
-      "sets_lost": 0,
-      "balls_won": 302,
-      "balls_lost": 199,
-      "points": 12
+      "sets_won": 15,
+      "sets_lost": 1,
+      "balls_won": 396,
+      "balls_lost": 264,
+      "points": 15
     },
     {
       "pool_id": "4129",
       "rank": 2,
-      "team_name": "ASV Aarhus.2",
-      "games_played": 4,
+      "team_name": "Volleyball Esbjerg",
+      "games_played": 5,
       "games_won": 4,
-      "games_lost": 0,
+      "games_lost": 1,
       "sets_won": 12,
-      "sets_lost": 1,
-      "balls_won": 321,
-      "balls_lost": 215,
+      "sets_lost": 3,
+      "balls_won": 351,
+      "balls_lost": 274,
       "points": 12
     },
     {
@@ -88,28 +88,28 @@
     {
       "pool_id": "4129",
       "rank": 6,
-      "team_name": "Bedsted KFUM",
+      "team_name": "SIK Viborg",
       "games_played": 4,
-      "games_won": 1,
-      "games_lost": 3,
+      "games_won": 2,
+      "games_lost": 2,
       "sets_won": 7,
       "sets_lost": 9,
-      "balls_won": 309,
-      "balls_lost": 331,
-      "points": 5
+      "balls_won": 341,
+      "balls_lost": 363,
+      "points": 6
     },
     {
       "pool_id": "4129",
       "rank": 7,
-      "team_name": "SIK Viborg",
-      "games_played": 3,
+      "team_name": "Bedsted KFUM",
+      "games_played": 5,
       "games_won": 1,
-      "games_lost": 2,
-      "sets_won": 4,
-      "sets_lost": 7,
-      "balls_won": 242,
-      "balls_lost": 260,
-      "points": 3
+      "games_lost": 4,
+      "sets_won": 9,
+      "sets_lost": 12,
+      "balls_won": 412,
+      "balls_lost": 430,
+      "points": 6
     },
     {
       "pool_id": "4129",
@@ -773,16 +773,16 @@
       "address": "Skolebakken 171 6705 Esbjerg Ø Danmark",
       "referee1": "Morten Andersen",
       "referee2": "Bruno Schmidt Bennedsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 0,
+      "result_away_sets": 3,
+      "home_points": 0,
+      "away_points": 3,
+      "home_balls1": 18,
+      "away_balls1": 25,
+      "home_balls2": 15,
+      "away_balls2": 25,
+      "home_balls3": 16,
+      "away_balls3": 25,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -802,20 +802,20 @@
       "address": "Ved Stadion 7 7755 Bedsted Thy Danmark",
       "referee1": "Per Vind Petersen",
       "referee2": "Andreas Hovard Hansen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
-      "home_balls5": null,
-      "away_balls5": null,
+      "result_home_sets": 2,
+      "result_away_sets": 3,
+      "home_points": 1,
+      "away_points": 3,
+      "home_balls1": 25,
+      "away_balls1": 17,
+      "home_balls2": 25,
+      "away_balls2": 17,
+      "home_balls3": 19,
+      "away_balls3": 25,
+      "home_balls4": 22,
+      "away_balls4": 25,
+      "home_balls5": 12,
+      "away_balls5": 15,
       "result_note": "",
       "starts_at_time_known": true
     },
@@ -859,7 +859,7 @@
       "court": "1",
       "address": "Mejerivej 1 5260 Odense S Danmark",
       "referee1": "Lars B. Nielsen",
-      "referee2": "Ruslan Khodak",
+      "referee2": "Morten Andersen",
       "result_home_sets": null,
       "result_away_sets": null,
       "home_points": null,
@@ -945,8 +945,8 @@
       "venue": "Finderuphøj Hallen",
       "court": "1",
       "address": "Spættevej 2 8800 Viborg Danmark",
-      "referee1": "Vakant dommer",
-      "referee2": "Vakant dommer",
+      "referee1": "Lars B. Nielsen",
+      "referee2": "Gunner Bendtsen",
       "result_home_sets": null,
       "result_away_sets": null,
       "home_points": null,
@@ -2906,16 +2906,23 @@
     },
     {
       "date": "2026-10-10T13:00:00",
+      "team": "DSIO Odense",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 2
+    },
+    {
+      "date": "2026-10-10T13:00:00",
       "team": "SIK Viborg",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 2
     },
     {
-      "date": "2026-10-10T13:00:00",
-      "team": "DSIO Odense",
-      "points": 3,
-      "cumulative_points": 6,
+      "date": "2026-10-10T16:30:00",
+      "team": "Aalborg Volleyball.2",
+      "points": 0,
+      "cumulative_points": 3,
       "game_number": 2
     },
     {
@@ -2924,13 +2931,6 @@
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
-    },
-    {
-      "date": "2026-10-10T16:30:00",
-      "team": "Aalborg Volleyball.2",
-      "points": 0,
-      "cumulative_points": 3,
-      "game_number": 2
     },
     {
       "date": "2026-10-17T12:00:00",
@@ -2962,17 +2962,17 @@
     },
     {
       "date": "2026-10-24T13:00:00",
-      "team": "Bedsted KFUM",
-      "points": 1,
-      "cumulative_points": 2,
-      "game_number": 3
-    },
-    {
-      "date": "2026-10-24T13:00:00",
       "team": "DHV Odense.2",
       "points": 3,
       "cumulative_points": 6,
       "game_number": 2
+    },
+    {
+      "date": "2026-10-24T13:00:00",
+      "team": "Bedsted KFUM",
+      "points": 1,
+      "cumulative_points": 2,
+      "game_number": 3
     },
     {
       "date": "2026-10-25T10:00:00",
@@ -2990,17 +2990,17 @@
     },
     {
       "date": "2026-10-25T12:30:00",
-      "team": "Odense Volleyball",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 3
-    },
-    {
-      "date": "2026-10-25T12:30:00",
       "team": "ASV Aarhus.2",
       "points": 3,
       "cumulative_points": 6,
       "game_number": 2
+    },
+    {
+      "date": "2026-10-25T12:30:00",
+      "team": "Odense Volleyball",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 3
     },
     {
       "date": "2026-10-31T11:00:00",
@@ -3029,13 +3029,6 @@
       "points": 3,
       "cumulative_points": 9,
       "game_number": 3
-    },
-    {
-      "date": "2026-11-01T14:00:00",
-      "team": "Aalborg Volleyball.2",
-      "points": 0,
-      "cumulative_points": 3,
-      "game_number": 4
     },
     {
       "date": "2026-11-01T14:00:00",
@@ -3045,6 +3038,13 @@
       "game_number": 4
     },
     {
+      "date": "2026-11-01T14:00:00",
+      "team": "Aalborg Volleyball.2",
+      "points": 0,
+      "cumulative_points": 3,
+      "game_number": 4
+    },
+    {
       "date": "2026-11-01T18:00:00",
       "team": "Volleyball Esbjerg",
       "points": 3,
@@ -3060,17 +3060,17 @@
     },
     {
       "date": "2026-11-07T12:30:00",
-      "team": "IF Lyseng",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 2
-    },
-    {
-      "date": "2026-11-07T12:30:00",
       "team": "Volleyball Esbjerg",
       "points": 3,
       "cumulative_points": 12,
       "game_number": 4
+    },
+    {
+      "date": "2026-11-07T12:30:00",
+      "team": "IF Lyseng",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 2
     },
     {
       "date": "2026-11-07T16:30:00",
@@ -3102,16 +3102,44 @@
     },
     {
       "date": "2026-11-08T16:30:00",
+      "team": "DHV Odense.2",
+      "points": 0,
+      "cumulative_points": 9,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-08T16:30:00",
       "team": "ASV Aarhus.2",
       "points": 3,
       "cumulative_points": 12,
       "game_number": 4
     },
     {
-      "date": "2026-11-08T16:30:00",
-      "team": "DHV Odense.2",
+      "date": "2026-11-14T13:00:00",
+      "team": "ASV Aarhus.2",
+      "points": 3,
+      "cumulative_points": 15,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-14T13:00:00",
+      "team": "Volleyball Esbjerg",
       "points": 0,
-      "cumulative_points": 9,
+      "cumulative_points": 12,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-15T13:00:00",
+      "team": "Bedsted KFUM",
+      "points": 1,
+      "cumulative_points": 6,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-15T13:00:00",
+      "team": "SIK Viborg",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 4
     }
   ],
@@ -3149,7 +3177,7 @@
       "IF Lyseng": "",
       "Ikast KFUM.2": "2-3",
       "Odense Volleyball": "",
-      "SIK Viborg": "",
+      "SIK Viborg": "2-3",
       "Volleyball Esbjerg": ""
     },
     "DHV Odense.2": {
@@ -3225,7 +3253,7 @@
       "Volleyball Esbjerg": ""
     },
     "Volleyball Esbjerg": {
-      "ASV Aarhus.2": "",
+      "ASV Aarhus.2": "0-3",
       "Aalborg Volleyball.2": "",
       "Bedsted KFUM": "",
       "DHV Odense.2": "",
