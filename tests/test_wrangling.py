@@ -7,7 +7,7 @@ import pandas as pd
 from volleyball_resultater.scraper import VolleyballScraper
 from volleyball_resultater.client import ResultaterClient
 from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH
-from volleyball_resultater.wrangling import calculate_running_points, result_matrix, order_tournament, deduct_tournament, pokal_filter, slutspil_filter
+from volleyball_resultater.wrangling import calculate_running_points, result_matrix, order_tournament, deduct_bracket, pokal_filter, slutspil_filter
 from volleyball_resultater.storage import Repository
 
 class WranglingTests(unittest.TestCase):
@@ -63,7 +63,7 @@ class WranglingTests(unittest.TestCase):
         district = 'Volleyball Danmark'
         season = 2025
         gender = 'Kvinde'
-        bracket = slutspil_filter
+        bracket = pokal_filter
 
         leagues = self.repo.get_leagues()
         leagues = leagues.loc[leagues['season'].eq(season) & leagues['gender'].eq(gender) & leagues['district'].eq(district)]
@@ -88,7 +88,7 @@ class WranglingTests(unittest.TestCase):
             on='league_id'
         )[['round', 'league_name', 'match_number', 'home_team', 'away_team', 'home_sets', 'away_sets']]
 
-        tournament = deduct_tournament(df)
+        tournament = deduct_bracket(df)
         pass
 
 

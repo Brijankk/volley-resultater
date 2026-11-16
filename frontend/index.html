@@ -69,8 +69,8 @@
       </p>
 
       <div id="resultsArea">
-      <section class="content-grid">
-        <section class="panel standings-panel">
+      <section class="content-grid" id="robinPanels">
+        <section class="panel standings-panel" id="standingsPanel">
           <div class="section-heading">
             <h2>Stilling</h2>
           </div>
@@ -95,7 +95,7 @@
 
         <section class="validation-meta hidden" id="validationMeta" aria-label="Validering af stilling"></section>
 
-        <section class="panel chart-panel">
+        <section class="panel chart-panel" id="chartPanel">
           <div class="section-heading chart-heading">
             <h2>Sæsonudvikling</h2>
             <div class="segmented small" id="chartModeControl" aria-label="Diagramvisning">
@@ -109,7 +109,7 @@
           <div class="legend" id="chartLegend"></div>
         </section>
 
-        <section class="panel matrix-panel">
+        <section class="panel matrix-panel" id="matrixPanel">
           <div class="section-heading matrix-heading">
             <h2>Hjemme / ude</h2>
             <div class="segmented small" id="matrixSortControl" aria-label="Sortering af matrix">
@@ -125,6 +125,32 @@
             Vælg en kamp i matrixen.
           </div>
         </section>
+      </section>
+
+      <section class="panel bracket-panel hidden" id="bracketPanel">
+        <div class="section-heading bracket-heading">
+          <h2>Turneringstræ</h2>
+          <div class="bracket-round-range">
+            <label class="field compact-field">
+              <span>Viser <output id="bracketRoundRangeValue"></output></span>
+              <div class="bracket-dual-range">
+                <div class="bracket-dual-range-track">
+                  <span id="bracketRoundRangeFill"></span>
+                  <div class="bracket-dual-range-ticks" id="bracketRoundTicks" aria-hidden="true"></div>
+                </div>
+                <input class="bracket-round-slider" id="bracketMinRound" type="range" min="0" max="0" step="1" aria-label="Første viste runde" />
+                <input class="bracket-round-slider" id="bracketMaxRound" type="range" min="0" max="0" step="1" aria-label="Sidste viste runde" />
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="bracket-graph-scroll" id="bracketGraph"></div>
+        <div class="section-heading match-detail-section-heading">
+          <h2>Kampdetaljer</h2>
+        </div>
+        <div id="bracketMatchDetailContent" class="match-detail-empty">
+          Vælg et opgør i turneringstræet.
+        </div>
       </section>
 
       <section class="panel schedule-panel">

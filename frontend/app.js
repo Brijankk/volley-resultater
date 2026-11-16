@@ -2,6 +2,7 @@ const DATA_ROOT = "../data/json";
 const DATA_CACHE = "volley-data-v5";
 const SELECTION_STORAGE_KEY = "volley-selection-v1";
 const MATCH_CALENDAR_DURATION_MS = 2 * 60 * 60 * 1000;
+const BRACKET_FOCUS_THRESHOLD = 16;
 
 const state = {
   metadata: null,
@@ -20,6 +21,9 @@ const state = {
   selectedScheduleTeam: "",
   scheduleSide: "all",
   selectedPair: null,
+  selectedBracketBoutId: "",
+  bracketMinRoundIndex: null,
+  bracketMaxRoundIndex: null,
   installPrompt: null,
 };
 
@@ -96,6 +100,18 @@ const els = {
   scheduleExportButton: document.querySelector("#scheduleExportButton"),
   scheduleBody: document.querySelector("#scheduleBody"),
   scheduleEmpty: document.querySelector("#scheduleEmpty"),
+  robinPanels: document.querySelector("#robinPanels"),
+  standingsPanel: document.querySelector("#standingsPanel"),
+  chartPanel: document.querySelector("#chartPanel"),
+  matrixPanel: document.querySelector("#matrixPanel"),
+  bracketPanel: document.querySelector("#bracketPanel"),
+  bracketGraph: document.querySelector("#bracketGraph"),
+  bracketMinRound: document.querySelector("#bracketMinRound"),
+  bracketMaxRound: document.querySelector("#bracketMaxRound"),
+  bracketRoundRangeValue: document.querySelector("#bracketRoundRangeValue"),
+  bracketRoundRangeFill: document.querySelector("#bracketRoundRangeFill"),
+  bracketRoundTicks: document.querySelector("#bracketRoundTicks"),
+  bracketMatchDetailContent: document.querySelector("#bracketMatchDetailContent"),
   standingsBody: document.querySelector("#standingsBody"),
   resultsArea: document.querySelector("#resultsArea"),
   noDataMessage: document.querySelector("#noDataMessage"),
@@ -241,6 +257,37 @@ function bindEvents() {
     renderMatrix();
     renderMatchDetail();
   });
+
+  els.bracketGraph.addEventListener("click", (event) => {
+    const bout = event.target.closest("[data-bout-id]");
+    if (!bout) return;
+    selectBracketBout(bout.dataset.boutId, true);
+  });
+  els.bracketGraph.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const bout = event.target.closest("[data-bout-id]");
+    if (!bout) return;
+    event.preventDefault();
+    selectBracketBout(bout.dataset.boutId, true);
+  });
+
+  const updateBracketRoundRange = (event) => {
+    const index = Number(event.target.value);
+    if (event.target === els.bracketMinRound) {
+      state.bracketMinRoundIndex = index;
+      if (state.bracketMinRoundIndex > state.bracketMaxRoundIndex) {
+        state.bracketMaxRoundIndex = state.bracketMinRoundIndex;
+      }
+    } else {
+      state.bracketMaxRoundIndex = index;
+      if (state.bracketMaxRoundIndex < state.bracketMinRoundIndex) {
+        state.bracketMinRoundIndex = state.bracketMaxRoundIndex;
+      }
+    }
+    renderBracket();
+  };
+  els.bracketMinRound.addEventListener("input", updateBracketRoundRange);
+  els.bracketMaxRound.addEventListener("input", updateBracketRoundRange);
 
   window.addEventListener("online", renderDataMeta);
   window.addEventListener("offline", renderDataMeta);
@@ -393,6 +440,7 @@ async function loadSelectedPool() {
   const loadToken = ++state.poolLoadToken;
   state.poolData = null;
   state.selectedPair = null;
+  state.selectedBracketBoutId = "";
   clearPoolResults();
   updateResultVisibility();
   if (!state.hasMatchingLeagues || !state.selectedPoolId) {
@@ -403,6 +451,8 @@ async function loadSelectedPool() {
   const poolData = await fetchJson(dataUrl(`${DATA_ROOT}/${safeFilename(state.selectedPoolId)}.json`));
   if (loadToken !== state.poolLoadToken) return;
   state.poolData = poolData;
+  state.bracketMinRoundIndex = null;
+  state.bracketMaxRoundIndex = null;
   normalizeScheduleFilters();
   updateResultVisibility();
   renderAll();
@@ -410,6 +460,10 @@ async function loadSelectedPool() {
 }
 
 function clearPoolResults() {
+  updateSectionVisibility();
+  els.bracketGraph.innerHTML = "";
+  els.bracketMatchDetailContent.className = "match-detail-empty";
+  els.bracketMatchDetailContent.textContent = "";
   els.standingsBody.innerHTML = "";
   els.scheduleBody.innerHTML = "";
   els.scheduleEmpty.classList.add("hidden");
@@ -425,6 +479,7 @@ function clearPoolResults() {
 }
 
 function renderAll() {
+  updateSectionVisibility();
   renderDataMeta();
   renderScheduleControls();
   renderSchedule();
@@ -432,6 +487,29 @@ function renderAll() {
   renderChart();
   renderMatrix();
   renderMatchDetail();
+  renderBracket();
+}
+
+function updateSectionVisibility() {
+  const standings = Array.isArray(state.poolData?.source_standings)
+    ? state.poolData.source_standings
+    : [];
+  const events = Array.isArray(state.poolData?.cumulative_points)
+    ? state.poolData.cumulative_points
+    : [];
+  const matrix = state.poolData?.result_matrix;
+  const hasMatrixData = matrix && typeof matrix === "object" && Object.keys(matrix).length > 0;
+  const bouts = bracketBouts();
+
+  const hasStandings = standings.length > 0;
+  const hasChart = events.length > 0;
+  const hasMatrix = Boolean(hasStandings && hasMatrixData);
+
+  els.standingsPanel.classList.toggle("hidden", !hasStandings);
+  els.chartPanel.classList.toggle("hidden", !hasChart);
+  els.matrixPanel.classList.toggle("hidden", !hasMatrix);
+  els.robinPanels.classList.toggle("hidden", !hasStandings && !hasChart && !hasMatrix);
+  els.bracketPanel.classList.toggle("hidden", bouts.length === 0);
 }
 
 function renderDataMeta() {
@@ -445,9 +523,11 @@ function renderDataMeta() {
   els.updatedStatus.textContent = `Senest opdateret: ${exported}`;
   els.updatedStatus.className = "status-pill";
 
-  const hasPointsWarning = typeof validation === "boolean"
+  const hasStandings = Array.isArray(state.poolData.source_standings)
+    && state.poolData.source_standings.length > 0;
+  const hasPointsWarning = hasStandings && (typeof validation === "boolean"
     ? !validation
-    : Boolean(validation.affected_fields?.includes("points"));
+    : Boolean(validation.affected_fields?.includes("points")));
   els.validationMeta.className = `validation-meta ${hasPointsWarning ? "data-warning" : "hidden"}`;
   els.validationMeta.textContent = hasPointsWarning
     ? "Officiel stilling og beregnet udvikling afviger på point."
@@ -860,6 +940,264 @@ function renderMatrix() {
   els.matrixWrap.innerHTML = `<table class="matrix-table">${header}${body}</table>`;
 }
 
+function bracketBouts() {
+  if (!Array.isArray(state.poolData?.bracket)) return [];
+  return state.poolData.bracket.filter((bout) =>
+    bout?.bout_id != null && Number.isFinite(Number(bout.round)),
+  );
+}
+
+function bracketRoots(bouts) {
+  const boutById = new Map(bouts.map((bout) => [String(bout.bout_id), bout]));
+  const referencedBoutIds = new Set(
+    bouts.flatMap((bout) => [bout.leg1, bout.leg2])
+      .filter((id) => id != null && boutById.has(String(id)))
+      .map(String),
+  );
+  const feederCount = (bout) => [bout.leg1, bout.leg2]
+    .filter((id) => id != null && boutById.has(String(id)))
+    .length;
+  return bouts
+    .filter((bout) => !referencedBoutIds.has(String(bout.bout_id)))
+    .sort((left, right) =>
+      Number(right.round) - Number(left.round)
+      || feederCount(right) - feederCount(left)
+      || Number(left.bout_id) - Number(right.bout_id),
+    );
+}
+
+function renderBracketControls(bouts) {
+  const rounds = [...new Set(bouts.map((bout) => Number(bout.round)))].sort((a, b) => a - b);
+  const lastIndex = rounds.length - 1;
+  if (!Number.isInteger(state.bracketMinRoundIndex)
+    || state.bracketMinRoundIndex < 0
+    || state.bracketMinRoundIndex > lastIndex) {
+    state.bracketMinRoundIndex = bouts.length > BRACKET_FOCUS_THRESHOLD
+      ? Math.max(0, lastIndex - 1)
+      : 0;
+  }
+  if (!Number.isInteger(state.bracketMaxRoundIndex)
+    || state.bracketMaxRoundIndex < state.bracketMinRoundIndex
+    || state.bracketMaxRoundIndex > lastIndex) {
+    state.bracketMaxRoundIndex = lastIndex;
+  }
+
+  els.bracketMinRound.min = "0";
+  els.bracketMinRound.max = String(lastIndex);
+  els.bracketMinRound.value = String(state.bracketMinRoundIndex);
+  els.bracketMaxRound.min = "0";
+  els.bracketMaxRound.max = String(lastIndex);
+  els.bracketMaxRound.value = String(state.bracketMaxRoundIndex);
+  els.bracketMinRound.setAttribute("aria-valuetext", `Runde ${rounds[state.bracketMinRoundIndex] + 1}`);
+  els.bracketMaxRound.setAttribute("aria-valuetext", `Runde ${rounds[state.bracketMaxRoundIndex] + 1}`);
+  els.bracketRoundRangeValue.textContent = `Runde ${rounds[state.bracketMinRoundIndex] + 1}–${rounds[state.bracketMaxRoundIndex] + 1}`;
+  const minPercent = lastIndex ? (state.bracketMinRoundIndex / lastIndex) * 100 : 0;
+  const maxPercent = lastIndex ? (state.bracketMaxRoundIndex / lastIndex) * 100 : 0;
+  els.bracketRoundRangeFill.style.left = `${minPercent}%`;
+  els.bracketRoundRangeFill.style.width = `${maxPercent - minPercent}%`;
+  els.bracketRoundTicks.innerHTML = rounds.map((round, index) => {
+    const position = lastIndex ? (index / lastIndex) * 100 : 0;
+    return `<span class="bracket-dual-range-tick" style="left:${position}%"></span>`;
+  }).join("");
+  const minIsRightHandle = state.bracketMinRoundIndex === state.bracketMaxRoundIndex
+    || state.bracketMinRoundIndex > lastIndex / 2;
+  els.bracketMinRound.style.zIndex = minIsRightHandle ? "3" : "2";
+  els.bracketMaxRound.style.zIndex = minIsRightHandle ? "2" : "3";
+  return {
+    minRound: rounds[state.bracketMinRoundIndex],
+    maxRound: rounds[state.bracketMaxRoundIndex],
+  };
+}
+
+function bracketBoutsInRoundRange(allBouts, minRound, maxRound) {
+  return allBouts.filter((bout) => Number(bout.round) >= minRound && Number(bout.round) <= maxRound);
+}
+
+function selectBracketBout(boutId, restoreFocus = false) {
+  state.selectedBracketBoutId = boutId;
+  renderBracket();
+  if (!restoreFocus) return;
+  const selected = [...els.bracketGraph.querySelectorAll("[data-bout-id]")]
+    .find((bout) => bout.dataset.boutId === boutId);
+  selected?.focus({ preventScroll: true });
+}
+
+function renderBracket() {
+  const allBouts = bracketBouts();
+  if (!allBouts.length) {
+    els.bracketGraph.innerHTML = "";
+    return;
+  }
+
+  const focusRange = renderBracketControls(allBouts);
+  const bouts = bracketBoutsInRoundRange(allBouts, focusRange.minRound, focusRange.maxRound);
+  if (!bouts.some((bout) => String(bout.bout_id) === state.selectedBracketBoutId)) {
+    state.selectedBracketBoutId = "";
+  }
+
+  const cardWidth = 270;
+  const cardHeight = 76;
+  const rowStep = 112;
+  const roundStep = 370;
+  const marginX = 24;
+  const marginY = 40;
+  const rounds = [...new Set(bouts.map((bout) => Number(bout.round)))].sort((a, b) => a - b);
+  const roundIndex = new Map(rounds.map((round, index) => [round, index]));
+  const boutById = new Map(bouts.map((bout) => [String(bout.bout_id), bout]));
+  const positions = new Map();
+  const feedersFor = (bout) => [bout.leg1, bout.leg2]
+    .filter((id) => id != null)
+    .map((id) => boutById.get(String(id)))
+    .filter(Boolean);
+  const roots = bracketRoots(bouts);
+  const leafOrder = [];
+  const visited = new Set();
+
+  function collectLeafOrder(bout) {
+    const key = String(bout.bout_id);
+    if (visited.has(key)) return;
+    visited.add(key);
+    const feeders = feedersFor(bout);
+    if (!feeders.length) {
+      leafOrder.push(key);
+      return;
+    }
+    for (const feeder of feeders) collectLeafOrder(feeder);
+  }
+
+  for (const root of roots) collectLeafOrder(root);
+  for (const bout of bouts.slice().sort((left, right) =>
+    Number(right.round) - Number(left.round) || Number(left.bout_id) - Number(right.bout_id),
+  )) {
+    if (!visited.has(String(bout.bout_id))) collectLeafOrder(bout);
+  }
+
+  const leafY = new Map(leafOrder.map((key, index) => [key, marginY + cardHeight / 2 + index * rowStep]));
+  const centerMemo = new Map();
+
+  function centerFor(bout, active = new Set()) {
+    const key = String(bout.bout_id);
+    if (centerMemo.has(key)) return centerMemo.get(key);
+    if (active.has(key)) return leafY.get(key) ?? marginY + cardHeight / 2;
+    const feeders = feedersFor(bout);
+    if (!feeders.length) return leafY.get(key) ?? marginY + cardHeight / 2;
+    const nextActive = new Set(active);
+    nextActive.add(key);
+    const feederCenters = feeders.map((feeder) => centerFor(feeder, nextActive));
+    const center = feederCenters.reduce((total, value) => total + value, 0) / feederCenters.length;
+    centerMemo.set(key, center);
+    return center;
+  }
+
+  for (const bout of bouts) {
+    const centerY = centerFor(bout);
+    positions.set(String(bout.bout_id), {
+      x: marginX + roundIndex.get(Number(bout.round)) * roundStep,
+      centerY,
+    });
+  }
+
+  const orderedBouts = bouts.slice().sort((left, right) =>
+    Number(left.round) - Number(right.round)
+    || positions.get(String(left.bout_id)).centerY - positions.get(String(right.bout_id)).centerY
+    || Number(left.bout_id) - Number(right.bout_id),
+  );
+  const lowestBottom = Math.max(...[...positions.values()].map((position) => position.centerY + cardHeight / 2));
+
+  const width = marginX * 2 + cardWidth + Math.max(0, rounds.length - 1) * roundStep;
+  const height = Math.ceil(lowestBottom + marginY);
+  const connectors = [];
+
+  for (const bout of orderedBouts) {
+    const target = positions.get(String(bout.bout_id));
+    const targetY = target.centerY;
+    const feederPositions = [bout.leg1, bout.leg2]
+      .filter((id) => id != null)
+      .map((id) => positions.get(String(id)))
+      .filter((position) => position && position.x < target.x);
+    if (!feederPositions.length) continue;
+
+    const joinX = Math.round((Math.max(...feederPositions.map((position) => position.x + cardWidth)) + target.x) / 2);
+    for (const feeder of feederPositions) {
+      connectors.push(`<path d="M ${feeder.x + cardWidth} ${feeder.centerY} H ${joinX}" />`);
+    }
+    const routeYs = [...feederPositions.map((position) => position.centerY), targetY];
+    const minY = Math.min(...routeYs);
+    const maxY = Math.max(...routeYs);
+    if (minY !== maxY) connectors.push(`<path d="M ${joinX} ${minY} V ${maxY}" />`);
+    connectors.push(`<path d="M ${joinX} ${targetY} H ${target.x}" />`);
+  }
+
+  const roundLabels = rounds.map((round) => {
+    const x = marginX + roundIndex.get(round) * roundStep;
+    return `<text class="bracket-round-label" x="${x}" y="20">Runde ${round + 1}</text>`;
+  }).join("");
+
+  const cards = orderedBouts.map((bout) => {
+    const position = positions.get(String(bout.bout_id));
+    const top = position.centerY - cardHeight / 2;
+    const home = escapeHtml(String(bout.home_team ?? ""));
+    const away = escapeHtml(String(bout.away_team ?? ""));
+    const label = escapeHtml(`${bout.home_team ?? ""} mod ${bout.away_team ?? ""}`);
+    const homeWon = bout.winner != null && String(bout.winner) === String(bout.home_team);
+    const awayWon = bout.winner != null && String(bout.winner) === String(bout.away_team);
+    const selected = String(bout.bout_id) === state.selectedBracketBoutId;
+    return `
+      <g class="bracket-bout${selected ? " selected" : ""}" role="button" tabindex="0"
+        data-bout-id="${escapeHtml(String(bout.bout_id))}" aria-pressed="${selected}"
+        aria-label="${label}; vis kampdetaljer">
+        <rect x="${position.x}" y="${top}" width="${cardWidth}" height="${cardHeight}" rx="7" />
+        <text class="${homeWon ? "winner" : ""}" x="${position.x + 12}" y="${top + 29}">${home}</text>
+        <line x1="${position.x + 12}" y1="${top + 38}" x2="${position.x + cardWidth - 12}" y2="${top + 38}" />
+        <text class="${awayWon ? "winner" : ""}" x="${position.x + 12}" y="${top + 62}">${away}</text>
+      </g>
+    `;
+  }).join("");
+
+  els.bracketGraph.innerHTML = `
+    <svg class="bracket-graph" role="group" aria-label="Turneringstræ med ${bouts.length} opgør"
+      width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+      ${roundLabels}
+      <g class="bracket-connectors" aria-hidden="true">${connectors.join("")}</g>
+      ${cards}
+    </svg>
+  `;
+  renderBracketMatchDetail();
+}
+
+function renderBracketMatchDetail() {
+  const detail = els.bracketMatchDetailContent;
+  const bout = bracketBouts().find((item) => String(item.bout_id) === state.selectedBracketBoutId);
+  if (!bout) {
+    detail.className = "match-detail-empty";
+    detail.textContent = "Vælg et opgør i turneringstræet.";
+    return;
+  }
+
+  const matchNumbers = new Set(
+    (Array.isArray(bout.match_number) ? bout.match_number : [bout.match_number])
+      .filter((number) => number != null)
+      .map(String),
+  );
+  const matches = (state.poolData?.matches || [])
+    .filter((match) => matchNumbers.has(String(match.match_number)))
+    .sort(compareMatches);
+  if (!matches.length) {
+    detail.className = "match-detail-empty";
+    detail.textContent = "Der er ingen kampdetaljer for dette opgør.";
+    return;
+  }
+
+  detail.className = "match-detail";
+  detail.innerHTML = `
+    <div class="match-detail-heading">
+      <strong>${escapeHtml(String(bout.home_team ?? ""))} - ${escapeHtml(String(bout.away_team ?? ""))}</strong>
+      <span>${matches.length} ${matches.length === 1 ? "kamp" : "kampe"}</span>
+    </div>
+    ${matches.map((match) => renderMatchDetailItem(match, true)).join("")}
+  `;
+}
+
 function renderMatchDetail() {
   if (!state.selectedPair) {
     els.matchDetailContent.className = "match-detail-empty";
@@ -878,7 +1216,7 @@ function renderMatchDetail() {
   `;
 }
 
-function renderMatchDetailItem(match) {
+function renderMatchDetailItem(match, showTeamNames = false) {
   const sets = Array.from({ length: 5 }, (_, index) => {
     const setNumber = index + 1;
     return {
@@ -888,6 +1226,10 @@ function renderMatchDetailItem(match) {
     };
   }).filter((set) => set.home_points != null && set.away_points != null);
   const hasResult = match.result_home_sets !== null && match.result_away_sets !== null;
+  const score = hasResult ? `${match.result_home_sets}-${match.result_away_sets}` : "Ikke spillet";
+  const scoreClass = `match-detail-score ${hasResult ? "" : "pending"}`;
+  const homeTeam = escapeHtml(String(match.home_team ?? "Hjemme"));
+  const awayTeam = escapeHtml(String(match.away_team ?? "Ude"));
   return `
     <article class="match-detail-card">
       <div class="match-detail-main">
@@ -896,9 +1238,7 @@ function renderMatchDetailItem(match) {
         ${match.referee1 ? `<span>Dommer 1: ${escapeHtml(match.referee1)}</span>` : ""}
         ${match.referee2 ? `<span>Dommer 2: ${escapeHtml(match.referee2)}</span>` : ""}
       </div>
-      <div class="match-detail-score ${hasResult ? "" : "pending"}">${
-        hasResult ? `${match.result_home_sets}-${match.result_away_sets}` : "Ikke spillet"
-      }</div>
+      <div class="${scoreClass}">${score}</div>
       ${
         sets.length
           ? `<table class="set-table">
@@ -908,11 +1248,11 @@ function renderMatchDetailItem(match) {
                   ${sets.map((set) => `<td>${set.set_number}</td>`).join("")}
                 </tr>
                 <tr>
-                  <th>Hjemme</th>
+                  <th>${showTeamNames ? homeTeam : "Hjemme"}</th>
                   ${sets.map((set) => `<td>${set.home_points}</td>`).join("")}
                 </tr>
                 <tr>
-                  <th>Ude</th>
+                  <th>${showTeamNames ? awayTeam : "Ude"}</th>
                   ${sets.map((set) => `<td>${set.away_points}</td>`).join("")}
                 </tr>
               </tbody>
