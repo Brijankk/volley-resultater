@@ -156,7 +156,7 @@ def order_tournament(tournament_names: pd.Series) -> pd.Series:
         'final': 1,
     }))
 
-    df['is_final'] = names.str.contains(r'finale|\b\d+\s*/\s*\d+\b', regex=True)
+    df['is_final'] = names.str.contains(r'semi|finale|\b\d+\s*/\s*\d+\b', regex=True)
     df['final_order'] = final_denominator.fillna(1)
     df['runde_order'] = pd.to_numeric(
         names.str.extract(r'\b(\d+)\s*\.?\s*runde\b', expand=False),

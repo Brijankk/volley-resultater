@@ -86,7 +86,9 @@ def main(argv: list[str] | None = None) -> int:
     match_details = pd.concat(match_details_list).reset_index(drop=True)
 
     matches = schedules.merge(match_details, on='match_id')
-    matches['address'] = matches.apply(lambda x: x['address'].removeprefix(x['venue']).lstrip(), axis=1)
+    matches.loc[matches['venue'].notna(), 'address'] = matches.loc[matches['venue'].notna()].apply(
+        func=lambda x: x['address'].removeprefix(x['venue']).lstrip(), axis=1
+    )
 
     print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Uploading to database")
     try:
