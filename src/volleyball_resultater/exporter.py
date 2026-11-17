@@ -128,7 +128,7 @@ def merge_index(path: Path, current: dict) -> dict:
 
 def frontend_leagues(leagues: pd.DataFrame) -> pd.DataFrame:
     return leagues.rename(columns={"league_id": "id", "league_name": "name", "season": "season_id"}).assign(
-        raekke_id=leagues["league_id"], id=leagues["league_id"].astype(str), season_id=leagues["season"].astype(str),
+        id=leagues["league_id"].astype(str), season_id=leagues["season"].astype(str),
         division=leagues["league_name"].str.replace(r"(?i)\s+(Herrer|Mænd|Kvinder|Damer|Nord|Syd)", "", regex=True).str.strip(),
     )
 
@@ -136,7 +136,7 @@ def frontend_leagues(leagues: pd.DataFrame) -> pd.DataFrame:
 def frontend_pools(pools: pd.DataFrame) -> pd.DataFrame:
     return pools.rename(columns={"pool_id": "id", "pool_name": "name", "season": "season_id"}).assign(
         pulje_id=pools["pool_id"], id=pools["pool_id"].astype(str), league_id=pools["league_id"].astype(str),
-        raekke_id=pools["league_id"], season_id=pools["season"].astype(str),
+        season_id=pools["season"].astype(str),
         season_value=pools["season"].astype(str), season_start_year=pools["season"],
         division=pools["league_name"].str.replace(r"(?i)\s+(Herrer|Mænd|Kvinder|Damer|Nord|Syd)", "", regex=True).str.strip(),
     )
