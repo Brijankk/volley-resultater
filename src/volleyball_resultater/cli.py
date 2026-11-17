@@ -38,7 +38,7 @@ def main(argv: list[str] | None = None) -> int:
     season_overview = scraper._get_season_overview()
     seasons = [int(season) for season in args.season if season.isdigit()]
     if "current" in args.season:
-        seasons.append(season_overview.set_index("text")["year"]["Nuværende"])
+        seasons.append(int(season_overview.set_index("text")["year"]["Nuværende"]))
 
     if set(seasons).difference(season_overview["year"]):
         print("One or more seasons not found.", file=sys.stderr)
