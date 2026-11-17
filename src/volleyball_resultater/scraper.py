@@ -241,7 +241,13 @@ class VolleyballScraper:
             df[['home_points', 'away_points']] = list(map(int, match_info['Kamppoint'][:dash_idx+2].split('-')))
         df = df.astype('Int64').reset_index(drop=True)
         df['address'] = match_info['Spillested']
-        df['referee1'] = match_info['Dommer 1'] if 'Dommer 1' in match_info.index else 'Vakant dommer'
-        df['referee2'] = match_info['Dommer 2'] if 'Dommer 2' in match_info.index else 'Vakant dommer'
+        def referee_value(field: str):
+            value = match_info.get(field, pd.NA)
+            if pd.isna(value) or str(value).strip().casefold() == 'vakant dommer':
+                return pd.NA
+            return value
+
+        df['referee1'] = pd.array([referee_value('Dommer 1')], dtype=str)
+        df['referee2'] = pd.array([referee_value('Dommer 2')], dtype=str)
 
         return df
