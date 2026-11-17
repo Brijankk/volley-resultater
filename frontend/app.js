@@ -1035,10 +1035,10 @@ function renderBracket() {
     state.selectedBracketBoutId = "";
   }
 
-  const cardWidth = 270;
-  const cardHeight = 76;
-  const rowStep = 112;
-  const roundStep = 370;
+  const cardWidth = 180;
+  const cardHeight = 62;
+  const rowStep = 90;
+  const roundStep = 240;
   const marginX = 24;
   const marginY = 40;
   const rounds = [...new Set(bouts.map((bout) => Number(bout.round)))].sort((a, b) => a - b);
@@ -1147,9 +1147,9 @@ function renderBracket() {
         data-bout-id="${escapeHtml(String(bout.bout_id))}" aria-pressed="${selected}"
         aria-label="${label}; vis kampdetaljer">
         <rect x="${position.x}" y="${top}" width="${cardWidth}" height="${cardHeight}" rx="7" />
-        <text class="${homeWon ? "winner" : ""}" x="${position.x + 12}" y="${top + 29}">${home}</text>
-        <line x1="${position.x + 12}" y1="${top + 38}" x2="${position.x + cardWidth - 12}" y2="${top + 38}" />
-        <text class="${awayWon ? "winner" : ""}" x="${position.x + 12}" y="${top + 62}">${away}</text>
+        <text class="${homeWon ? "winner" : ""}" x="${position.x + 8}" y="${top + 24}">${home}</text>
+        <line x1="${position.x + 8}" y1="${top + 31}" x2="${position.x + cardWidth - 8}" y2="${top + 31}" />
+        <text class="${awayWon ? "winner" : ""}" x="${position.x + 8}" y="${top + 50}">${away}</text>
       </g>
     `;
   }).join("");
