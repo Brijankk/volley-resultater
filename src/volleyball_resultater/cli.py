@@ -103,7 +103,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.no_export:
         print(f"{pd.Timestamp.now(): %Y-%m-%d %H:%M:%S}: Exporting results to frontend JSONs")
-        export_json(args.db, args.export_dir)
+        export_json(args.db, args.export_dir, args.config)
         print(f"Exported JSON to {args.export_dir}")
 
     return 0
