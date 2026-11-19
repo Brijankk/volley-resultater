@@ -146,7 +146,7 @@ function initializeSelection() {
     return a.localeCompare(b, "da");
   });
   const ageGroups = unique(state.metadata.leagues.map((league) => league.age_group)).sort((a, b) => a.localeCompare(b, "da"));
-  const seasons = unique(state.metadata.leagues.map((league) => league.season_id)).sort((a, b) =>
+  const seasons = unique(state.metadata.leagues.map((league) => league.season)).sort((a, b) =>
     b.localeCompare(a, "da"),
   );
   state.selectedDistrict = initialFilterValue(districts, savedSelection?.district, "Volleyball Danmark");
@@ -349,7 +349,7 @@ function updateLeagueOptions() {
     .filter((league) =>
       league.district === state.selectedDistrict &&
       league.age_group === state.selectedAgeGroup &&
-      league.season_id === state.selectedSeason &&
+      league.season === state.selectedSeason &&
       league.gender === state.selectedGender,
     )
     .sort((a, b) => divisionWeight(a.division) - divisionWeight(b.division));
