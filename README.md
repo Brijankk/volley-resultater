@@ -1,71 +1,86 @@
-# Danish Volleyball Results Scraper
+# Volleyball Danmark Resultater
 
-This project scrapes selected senior Danish volleyball league data from
-`resultater.volleyball.dk` and prepares it for a future mobile-friendly app.
+This project collects results from [resultater.volleyball.dk](https://resultater.volleyball.dk), stores them in SQLite, and exports JSON for a browser app. The app presents the available league standings, match schedules, results, and season data.
 
-The first milestone is data only:
+## What the app includes
 
-- discover available seasons
-- scrape men/women senior regular-season leagues under Volleyball Danmark
-- support Volleyligaen plus numbered divisions
-- store official source standings in SQLite
-- store match schedules and set-by-set match details
-- export JSON for standings, schedules, cumulative points, and home/away matrices
+- Filters for district, gender, age group, season, league, and pool.
+- Official standings and a chart of each team's cumulative match points, shown by match or date.
+- A home/away results matrix with set-by-set match details.
+- Tournament brackets for knockout formats, with controls to focus on selected rounds.
+- Schedule filters for upcoming or all matches and for a selected team's home and away games.
+- Calendar export (`.ics`) for the matches currently shown by the schedule filters.
+- Installable progressive web app support. The service worker caches the app and data so previously loaded content can be used offline.
 
-The scraper uses only Python's standard library.
+The frontend is static and reads the JSON files in `data/json`; it does not call the results site directly. Scrape and export data before expecting newly collected results to appear in the app.
 
-## Run
+## Requirements and installation
 
-From this folder:
+Python 3.11 or newer is required. Install the project and its dependencies from the repository root:
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -e .
-.\.venv\Scripts\scrape-volleyball --season 2025
 ```
 
-If `scrape-volleyball` is not on PATH, run:
+## Run the app locally
+
+Serve the repository over HTTP so the browser can load the JSON files and register the service worker:
 
 ```powershell
-.\.venv\Scripts\python -m volleyball_resultater.cli --season 2025
+.\.venv\Scripts\python -m http.server 8000
 ```
 
-For the current season, the scraper also accepts `--season current`,
-`--season Nuværende`, or the season start year, for example `--season 2026`.
-If the website's explicit year option is broken but `Nuværende` works, the
-scraper uses `Nuværende` while storing the data under the numeric start year.
-The default assumption is that `Nuværende` refers to the highest numbered
-season option plus one (for example, a highest option of 2025 means the
-current season is 2026). This assumption also applies if the website lists
-the current year separately. Every numbered season option remains available
-for explicit selection. If no numbered options exist, the current season
-keeps the ID `current` with an unknown start year.
-Use `--refresh-cache` when the website has changed since the previous scrape,
-for example when upcoming match times are added after the initial schedule
-release.
+Then open <http://localhost:8000/frontend/>. Stop the server with `Ctrl+C`.
 
-By default, output is written to:
+## Scrape and export results
 
-- `data/volleyball.sqlite`
-- `data/json`
-- `data/raw-html`
+The scraper handles senior competitions for the selected districts and seasons. Pass `--district` and `--season` at least once; repeat either option to include more than one value. District names must match the options on the source website.
 
-Use `--all-seasons` to scrape every season discovered from the search page. That can take a while because match detail pages are fetched for played matches.
+For the same districts refreshed by the scheduled workflow, run:
 
-## Data Rules
+```powershell
+.\.venv\Scripts\python -m volleyball_resultater.cli `
+  --district "Volleyball Danmark" `
+  --district "Volleyball Nordjylland" `
+  --district "Midtjysk Volleyball" `
+  --season current
+```
 
-Official standings from the website are stored as source truth.
+To select a season by its start year, replace `current` with a year such as `2025`. `current` selects the source site's `Nuværende` season and uses the year inferred from the first men's Volleyligaen schedule. The scraper reuses cached source HTML by default; add `--refresh-cache` to fetch fresh pages.
 
-Derived standings and running-point charts use rule profiles selected from
-`src/volleyball_resultater/rule_assignments.json`. Rule assignment can vary by
-season, division, league, or pool. If a future season has no exact assignment,
-the selector falls back to the latest previous matching season.
+The scraper's default files are:
 
-- ranking: match points, set difference, ball difference, then head-to-head
-- `five_set_2_1`: 3-0 and 3-1 give 3/0 points; 3-2 gives 2/1 points
-- `five_set_3_1`: 3-0 and 3-1 give 3/0 points; 3-2 gives 3/1 points
+- `data/volleyball.sqlite` — normalized SQLite database.
+- `data/raw-html/` — cached source pages used by the scraper.
+- `data/json/leagues.json` and `data/json/<pool-id>.json` — metadata and pool data read by the frontend. Exports retain data for seasons not included in the latest scrape.
 
-Head-to-head is represented as the final unresolved tie-breaker; official source standings remain stored as source truth.
-Historical rule profiles are represented in code so older seasons can be handled without changing the database shape.
+The main command options are:
 
-Open investigation: season 2021 still has rank-only validation differences in four tied pairs. The point totals, sets, and balls now match, so the remaining issue is likely that 2021 used different ranking criteria or tie-breakers than the current ordering.
+| Option | Purpose |
+| --- | --- |
+| `--district NAME` | District to scrape; repeat to select multiple districts. |
+| `--season YEAR` | Season start year or `current`; repeat to select multiple seasons. |
+| `--refresh-cache` | Fetch fresh HTML instead of reusing cached pages. |
+| `--no-export` | Update SQLite without regenerating frontend JSON. |
+| `--db PATH` | Override the SQLite database path. |
+| `--export-dir PATH` | Override the JSON export directory. |
+| `--cache-dir PATH` | Override the raw HTML cache directory. |
+| `--config PATH` | Use a different league filter configuration. |
+| `--throttle SECONDS` | Set the pause after live requests (default: `0.25`). |
+
+The default configuration in `src/volleyball_resultater/config.json` limits which scraped leagues are stored and exported. The GitHub Actions workflow refreshes the current season for Volleyball Danmark, Volleyball Nordjylland, and Midtjysk Volleyball, then commits changed JSON exports.
+
+## Data and validation
+
+Standings are kept as reported by the source website. The exporter also derives cumulative match-point data, results matrices, and tournament brackets from scraped schedules and match details. For round-robin pools, it compares the final cumulative match points with the official standings and records whether they match; this check validates points, not the full ranking order. Match details include set scores and, when available, venue and referee information.
+
+## Project structure
+
+```text
+frontend/                   Static browser app
+src/volleyball_resultater/  Scraper, storage, and JSON exporter
+data/json/                  Frontend data exports
+data/raw-html/              Cached pages from the source website
+tests/                      Python test suite
+```
