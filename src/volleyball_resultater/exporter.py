@@ -52,10 +52,20 @@ def export_json(db_path: Path, output_dir: Path, config_path: Path) -> None:
         if not validation:
             pool_validation[str(group_id)] = validation
 
+        pool_meta = pools.loc[
+            pools['id'].eq(str(group_id))
+        ].join(
+            other=leagues.set_index('id')[['name', 'district', 'gender', 'season', 'age_group']].rename(
+                columns={'name': 'league_name'}
+                ),
+            on='league_id'
+        )
+        pool_meta = pool_meta[['id', 'name', 'format', 'league_id', 'league_name', 'district', 'gender', 'season', 'age_group', 'backend_pool_ids']]
+
         # Rename fields and convert to records only at the frontend boundary.
         payloads.append((str(group_id), {
             "metadata": {**metadata, "validation": validation},
-            "pool": records(frontend_pools(pools.loc[pools["pool_id"].eq(group_id)]))[0],
+            "pool": records(pool_meta)[0],
             "source_standings": records(pool_rankings.assign(pool_id=str(group_id))) if not pool_rankings.empty else [],
             "bracket": records(bracket) if not bracket.empty else [],
             "matches": records(frontend_matches(pool_matches)),
@@ -66,13 +76,12 @@ def export_json(db_path: Path, output_dir: Path, config_path: Path) -> None:
     index = {
         "metadata": {
             **metadata,
-            "seasons": sorted(leagues["season"].astype(str).unique(), reverse=True),
             "league_count": len(leagues),
             "pool_count": len(pools)
         },
-        "leagues": records(frontend_leagues(leagues)),
-        "pools": records(frontend_pools(pools)[['id', 'name', 'league_id']]),
-        "pool_validation": pool_validation,
+        "leagues": records(leagues),
+        "pools": records(pools),
+        "pool_validation": dict(sorted(pool_validation.items())),
     }
     # Read and merge before writing any files: an unreadable index must not lose history.
     index = merge_index(output_dir / "leagues.json", index)
@@ -109,10 +118,9 @@ def merge_index(path: Path, current: dict) -> dict:
     previous_validation = set(previous['pool_validation'].keys())
     current_validation = set(current['pool_validation'].keys())
     new_validation = previous_validation.difference(current_pools['id']) | current_validation
-    new_pool_validation = {item: True for item in new_validation}
+    new_pool_validation = {item: False for item in sorted(new_validation)}
 
     new_metadata = current['metadata'].copy()
-    new_metadata['seasons'] = sorted(list(set(previous['metadata']['seasons']) | set(current['metadata']['seasons'])), reverse=True)
     new_metadata['league_count'] = new_leagues.shape[0]
     new_metadata['pool_count'] = new_pools.shape[0]
 
@@ -124,21 +132,6 @@ def merge_index(path: Path, current: dict) -> dict:
     }
 
     return new_index
-    
-
-def frontend_leagues(leagues: pd.DataFrame) -> pd.DataFrame:
-    return leagues.rename(columns={"league_id": "id", "league_name": "name"}).assign(
-        id=leagues["league_id"].astype(str), season=leagues["season"].astype(str),
-        name=leagues["league_name"].str.replace(r"(?i)\s+(Herrer|Mænd|Kvinder|Damer|Nord|Syd)", "", regex=True).str.strip(),
-    )
-
-def frontend_pools(pools: pd.DataFrame) -> pd.DataFrame:
-    return pools.rename(columns={"pool_id": "id", "pool_name": "name", "season": "season_id"}).assign(
-        id=pools["pool_id"].astype(str), league_id=pools["league_id"].astype(str),
-        season_id=pools["season"].astype(str),
-        division=pools["league_name"].str.replace(r"(?i)\s+(Herrer|Mænd|Kvinder|Damer|Nord|Syd)", "", regex=True).str.strip(),
-    )
-
 
 def frontend_matches(matches: pd.DataFrame) -> pd.DataFrame:
     # The original columns stay in SQLite; JSON only carries their frontend names.
@@ -158,6 +151,7 @@ def records(frame: pd.DataFrame) -> list[dict]:
     return frame.astype(object).where(frame.notna(), None).to_dict(orient="records")
 
 def frontend_pool_grouping(pools: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    selection_fields = ['district', 'gender', 'season', 'age_group']
     df = pools.copy()
     df['frontend_league_name'] = df['league_name']
     df['frontend_pool_name'] = df['pool_name']
@@ -173,15 +167,21 @@ def frontend_pool_grouping(pools: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFr
     df.loc[pokal_idx, 'frontend_league_name'] = 'Pokalturneringen'
     df.loc[pokal_idx, 'frontend_pool_name'] = 'Række 1'
 
-    df['frontend_pool_id'] = df.groupby(by=['district', 'gender', 'season', 'age_group', 'frontend_league_name', 'frontend_pool_name'])['pool_id'].transform('min')
-    df['frontend_league_id'] = df.groupby(by=['district', 'gender', 'season', 'age_group', 'frontend_league_name'])['league_id'].transform('min')
+    df['frontend_pool_id'] = df.groupby(by=selection_fields + ['frontend_league_name', 'frontend_pool_name'])['pool_id'].transform('min')
+    df['frontend_league_id'] = df.groupby(by=selection_fields + ['frontend_league_name'])['league_id'].transform('min')
 
     grouping = df.rename(columns={'frontend_pool_id': 'group_id'})[['format', 'pool_id', 'pool_name', 'league_id', 'league_name', 'district', 'gender', 'season', 'age_group', 'group_id']].copy()
-    pools_frontend = df.drop_duplicates('frontend_pool_id', ignore_index=True)[['format', 'frontend_pool_name', 'frontend_league_id', 'frontend_league_name', 'district', 'gender', 'season', 'age_group', 'frontend_pool_id']]
-    pools_frontend.columns = pools_frontend.columns.str.removeprefix('frontend_')
 
-    leagues_frontend = df.drop_duplicates('frontend_league_id', ignore_index=True)[['frontend_league_id', 'frontend_league_name', 'district', 'gender', 'season', 'age_group']]
-    leagues_frontend.columns = leagues_frontend.columns.str.removeprefix('frontend_')
+    pools_meta = df.groupby(by=['frontend_pool_id', 'frontend_pool_name', 'format', 'frontend_league_id'])['pool_id'].apply(lambda x: x.to_list()).to_frame('backend_pool_ids').reset_index()
+    pools_meta.columns = pools_meta.columns.str.removeprefix('frontend_').str.removeprefix('pool_')
+    pools_meta[['id', 'league_id']] = pools_meta[['id', 'league_id']].astype(str)
+    pools_frontend = pools_meta.copy()
+
+    leagues_meta = df.groupby(by=['frontend_league_id', 'frontend_league_name'] + selection_fields)['league_id'].apply(lambda x: sorted(list(set(x.to_list())))).to_frame('backend_league_ids').reset_index()
+    leagues_meta.columns = leagues_meta.columns.str.removeprefix('frontend_league_')
+    leagues_meta[['id', 'season']] = leagues_meta[['id', 'season']].astype(str)
+    leagues_meta['name'] = leagues_meta['name'].str.replace(r"(?i)\s+(Herrer|Mænd|Kvinder|Damer|Nord|Syd)", "", regex=True).str.strip()
+    leagues_frontend = leagues_meta.copy()
 
     return grouping, pools_frontend, leagues_frontend
 
