@@ -129,7 +129,7 @@ def merge_index(path: Path, current: dict) -> dict:
 def frontend_leagues(leagues: pd.DataFrame) -> pd.DataFrame:
     return leagues.rename(columns={"league_id": "id", "league_name": "name"}).assign(
         id=leagues["league_id"].astype(str), season=leagues["season"].astype(str),
-        division=leagues["league_name"].str.replace(r"(?i)\s+(Herrer|Mænd|Kvinder|Damer|Nord|Syd)", "", regex=True).str.strip(),
+        name=leagues["league_name"].str.replace(r"(?i)\s+(Herrer|Mænd|Kvinder|Damer|Nord|Syd)", "", regex=True).str.strip(),
     )
 
 def frontend_pools(pools: pd.DataFrame) -> pd.DataFrame:

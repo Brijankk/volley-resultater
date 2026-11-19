@@ -352,7 +352,7 @@ function updateLeagueOptions() {
       league.season === state.selectedSeason &&
       league.gender === state.selectedGender,
     )
-    .sort((a, b) => divisionWeight(a.division) - divisionWeight(b.division));
+    .sort((a, b) => divisionWeight(a.name) - divisionWeight(b.name));
 
   state.hasMatchingLeagues = leagues.length > 0;
   if (!leagues.some((league) => league.id === state.selectedLeagueId)) {
@@ -361,7 +361,7 @@ function updateLeagueOptions() {
   fillSelect(
     els.leagueSelect,
     leagues.length
-      ? leagues.map((league) => ({ value: league.id, label: league.division }))
+      ? leagues.map((league) => ({ value: league.id, label: league.name }))
       : [{ value: "", label: "Ingen rækker" }],
   );
   els.leagueSelect.value = state.selectedLeagueId;
@@ -667,7 +667,7 @@ function matchCalendarUid(match) {
 }
 
 function scheduleCalendarName() {
-  return ["Volleyball", selectedLeague()?.division, selectedPool()?.name, state.selectedScheduleTeam]
+  return ["Volleyball", selectedLeague()?.name, selectedPool()?.name, state.selectedScheduleTeam]
     .filter(Boolean)
     .join(" - ");
 }
