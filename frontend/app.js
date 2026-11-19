@@ -140,7 +140,11 @@ async function init() {
 
 function initializeSelection() {
   const savedSelection = readSavedSelection();
-  const districts = unique(state.metadata.leagues.map((league) => league.district)).sort((a, b) => a.localeCompare(b, "da"));
+  const districts = unique(state.metadata.leagues.map((league) => league.district)).sort((a, b) => {
+    if (a === "Volleyball Danmark") return -1;
+    if (b === "Volleyball Danmark") return 1;
+    return a.localeCompare(b, "da");
+  });
   const ageGroups = unique(state.metadata.leagues.map((league) => league.age_group)).sort((a, b) => a.localeCompare(b, "da"));
   const seasons = unique(state.metadata.leagues.map((league) => league.season_id)).sort((a, b) =>
     b.localeCompare(a, "da"),
