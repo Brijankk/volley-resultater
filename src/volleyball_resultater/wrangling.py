@@ -263,7 +263,7 @@ def frame_filter(dataframe: pd.DataFrame, filter: dict) -> pd.DataFrame:
             '>': lambda x, y: x.gt(y),
             '>=': lambda x, y: x.ge(y),
             '<': lambda x, y: x.lt(y),
-            '=<': lambda x, y: x.lt(y),
+            '<=': lambda x, y: x.le(y),
         }
         idx = set(df.index[
             types[condition['type']](df[condition['column']], condition['value']).eq(not condition['invert'])
