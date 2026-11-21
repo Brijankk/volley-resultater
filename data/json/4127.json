@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-20T06:40:54+00:00",
+    "exported_at": "2026-11-21T06:31:08+00:00",
     "scraper_version": "2.1.0",
     "validation": true
   },
@@ -113,6 +113,19 @@
     {
       "pool_id": "4127",
       "rank": 8,
+      "team_name": "VK Raptus.2",
+      "games_played": 5,
+      "games_won": 1,
+      "games_lost": 4,
+      "sets_won": 7,
+      "sets_lost": 12,
+      "balls_won": 377,
+      "balls_lost": 430,
+      "points": 4
+    },
+    {
+      "pool_id": "4127",
+      "rank": 9,
       "team_name": "Hjerm FIF",
       "games_played": 5,
       "games_won": 1,
@@ -125,29 +138,16 @@
     },
     {
       "pool_id": "4127",
-      "rank": 9,
-      "team_name": "VK Raptus.2",
-      "games_played": 4,
-      "games_won": 1,
-      "games_lost": 3,
-      "sets_won": 5,
-      "sets_lost": 9,
-      "balls_won": 280,
-      "balls_lost": 326,
-      "points": 3
-    },
-    {
-      "pool_id": "4127",
       "rank": 10,
       "team_name": "Aalborg Volleyball.3",
-      "games_played": 4,
-      "games_won": 0,
+      "games_played": 5,
+      "games_won": 1,
       "games_lost": 4,
-      "sets_won": 2,
-      "sets_lost": 12,
-      "balls_won": 233,
-      "balls_lost": 337,
-      "points": 1
+      "sets_won": 5,
+      "sets_lost": 14,
+      "balls_won": 337,
+      "balls_lost": 434,
+      "points": 4
     }
   ],
   "bracket": [],
@@ -802,20 +802,20 @@
       "address": "Annebergvej 48 9000 Aalborg Danmark",
       "referee1": "Andreas Bak-Georgsen",
       "referee2": "Nicklas Kjær Thomsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
-      "home_balls5": null,
-      "away_balls5": null,
+      "result_home_sets": 3,
+      "result_away_sets": 2,
+      "home_points": 3,
+      "away_points": 1,
+      "home_balls1": 25,
+      "away_balls1": 20,
+      "home_balls2": 18,
+      "away_balls2": 25,
+      "home_balls3": 21,
+      "away_balls3": 25,
+      "home_balls4": 25,
+      "away_balls4": 17,
+      "home_balls5": 15,
+      "away_balls5": 10,
       "result_note": "",
       "starts_at_time_known": true
     },
@@ -1119,7 +1119,7 @@
       "venue": "Toftegårdshallen",
       "court": "1",
       "address": "Sdr Ringgade 83 Jerslev J 9740 Jerslev J Danmark",
-      "referee1": null,
+      "referee1": "Bruno Schmidt Bennedsen",
       "referee2": "Flemming Kjerulff Munk",
       "result_home_sets": null,
       "result_away_sets": null,
@@ -2920,23 +2920,16 @@
     },
     {
       "date": "2026-10-10T10:00:00",
-      "team": "Hjerm FIF",
-      "points": 1,
-      "cumulative_points": 1,
+      "team": "Skovbakken",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
       "date": "2026-10-10T10:00:00",
-      "team": "Skovbakken",
-      "points": 3,
-      "cumulative_points": 6,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-10T14:00:00",
-      "team": "VK Vendsyssel",
+      "team": "Hjerm FIF",
       "points": 1,
-      "cumulative_points": 4,
+      "cumulative_points": 1,
       "game_number": 2
     },
     {
@@ -2944,6 +2937,13 @@
       "team": "Aabyhøj IF",
       "points": 3,
       "cumulative_points": 3,
+      "game_number": 2
+    },
+    {
+      "date": "2026-10-10T14:00:00",
+      "team": "VK Vendsyssel",
+      "points": 1,
+      "cumulative_points": 4,
       "game_number": 2
     },
     {
@@ -2990,16 +2990,16 @@
     },
     {
       "date": "2026-10-24T14:00:00",
-      "team": "Aalborg Volleyball.3",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "VK Vendsyssel",
+      "points": 3,
+      "cumulative_points": 7,
       "game_number": 3
     },
     {
       "date": "2026-10-24T14:00:00",
-      "team": "VK Vendsyssel",
-      "points": 3,
-      "cumulative_points": 7,
+      "team": "Aalborg Volleyball.3",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 3
     },
     {
@@ -3018,16 +3018,16 @@
     },
     {
       "date": "2026-10-25T11:00:00",
-      "team": "Holstebro KFUM",
-      "points": 0,
-      "cumulative_points": 3,
+      "team": "Skovbakken",
+      "points": 3,
+      "cumulative_points": 9,
       "game_number": 3
     },
     {
       "date": "2026-10-25T11:00:00",
-      "team": "Skovbakken",
-      "points": 3,
-      "cumulative_points": 9,
+      "team": "Holstebro KFUM",
+      "points": 0,
+      "cumulative_points": 3,
       "game_number": 3
     },
     {
@@ -3042,6 +3042,13 @@
       "team": "Aabyhøj IF",
       "points": 1,
       "cumulative_points": 7,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-07T10:00:00",
+      "team": "Holstebro KFUM",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 4
     },
     {
@@ -3066,32 +3073,11 @@
       "game_number": 3
     },
     {
-      "date": "2026-11-07T10:00:00",
-      "team": "Holstebro KFUM",
-      "points": 3,
-      "cumulative_points": 6,
-      "game_number": 4
-    },
-    {
       "date": "2026-11-07T12:00:00",
       "team": "Aabyhøj IF",
       "points": 3,
       "cumulative_points": 10,
       "game_number": 5
-    },
-    {
-      "date": "2026-11-07T12:00:00",
-      "team": "Skovbakken",
-      "points": 1,
-      "cumulative_points": 10,
-      "game_number": 4
-    },
-    {
-      "date": "2026-11-07T12:00:00",
-      "team": "VK Raptus",
-      "points": 3,
-      "cumulative_points": 9,
-      "game_number": 4
     },
     {
       "date": "2026-11-07T12:00:00",
@@ -3101,6 +3087,20 @@
       "game_number": 4
     },
     {
+      "date": "2026-11-07T12:00:00",
+      "team": "VK Raptus",
+      "points": 3,
+      "cumulative_points": 9,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-07T12:00:00",
+      "team": "Skovbakken",
+      "points": 1,
+      "cumulative_points": 10,
+      "game_number": 4
+    },
+    {
       "date": "2026-11-08T14:30:00",
       "team": "Hjerm FIF",
       "points": 0,
@@ -3130,16 +3130,30 @@
     },
     {
       "date": "2026-11-18T20:00:00",
+      "team": "Holstebro KFUM",
+      "points": 3,
+      "cumulative_points": 9,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-18T20:00:00",
       "team": "Hjerm FIF",
       "points": 0,
       "cumulative_points": 4,
       "game_number": 5
     },
     {
-      "date": "2026-11-18T20:00:00",
-      "team": "Holstebro KFUM",
+      "date": "2026-11-20T19:30:00",
+      "team": "Aalborg Volleyball.3",
       "points": 3,
-      "cumulative_points": 9,
+      "cumulative_points": 4,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-20T19:30:00",
+      "team": "VK Raptus.2",
+      "points": 1,
+      "cumulative_points": 4,
       "game_number": 5
     }
   ],
@@ -3177,7 +3191,7 @@
       "Randers VK": "",
       "Skovbakken": "",
       "VK Raptus": "0-3",
-      "VK Raptus.2": "",
+      "VK Raptus.2": "3-2",
       "VK Vendsyssel": ""
     },
     "Hjerm FIF": {
