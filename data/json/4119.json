@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-21T06:31:08+00:00",
+    "exported_at": "2026-11-22T06:02:22+00:00",
     "scraper_version": "2.1.0",
     "validation": true
   },
@@ -48,6 +48,19 @@
     {
       "pool_id": "4119",
       "rank": 3,
+      "team_name": "DHV Odense",
+      "games_played": 4,
+      "games_won": 3,
+      "games_lost": 1,
+      "sets_won": 11,
+      "sets_lost": 5,
+      "balls_won": 362,
+      "balls_lost": 334,
+      "points": 10
+    },
+    {
+      "pool_id": "4119",
+      "rank": 4,
       "team_name": "Nordenskov UIF.2",
       "games_played": 4,
       "games_won": 3,
@@ -57,19 +70,6 @@
       "balls_won": 318,
       "balls_lost": 282,
       "points": 9
-    },
-    {
-      "pool_id": "4119",
-      "rank": 4,
-      "team_name": "DHV Odense",
-      "games_played": 3,
-      "games_won": 2,
-      "games_lost": 1,
-      "sets_won": 8,
-      "sets_lost": 4,
-      "balls_won": 267,
-      "balls_lost": 239,
-      "points": 7
     },
     {
       "pool_id": "4119",
@@ -126,19 +126,6 @@
     {
       "pool_id": "4119",
       "rank": 9,
-      "team_name": "Ikast KFUM.2",
-      "games_played": 3,
-      "games_won": 0,
-      "games_lost": 3,
-      "sets_won": 3,
-      "sets_lost": 9,
-      "balls_won": 259,
-      "balls_lost": 298,
-      "points": 0
-    },
-    {
-      "pool_id": "4119",
-      "rank": 10,
       "team_name": "Bedsted KFUM",
       "games_played": 2,
       "games_won": 0,
@@ -147,6 +134,19 @@
       "sets_lost": 6,
       "balls_won": 103,
       "balls_lost": 150,
+      "points": 0
+    },
+    {
+      "pool_id": "4119",
+      "rank": 10,
+      "team_name": "Ikast KFUM.2",
+      "games_played": 4,
+      "games_won": 0,
+      "games_lost": 4,
+      "sets_won": 4,
+      "sets_lost": 12,
+      "balls_won": 354,
+      "balls_lost": 393,
       "points": 0
     }
   ],
@@ -715,18 +715,18 @@
       "address": "Mejerivej 1 5260 Odense S Danmark",
       "referee1": "Morten Andersen",
       "referee2": "Lars B. Nielsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 22,
+      "home_balls2": 18,
+      "away_balls2": 25,
+      "home_balls3": 26,
+      "away_balls3": 24,
+      "home_balls4": 26,
+      "away_balls4": 24,
       "home_balls5": null,
       "away_balls5": null,
       "result_note": "",
@@ -2878,17 +2878,17 @@
     },
     {
       "date": "2026-10-10T14:30:00",
-      "team": "VK Raptus",
-      "points": 1,
-      "cumulative_points": 4,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-10T14:30:00",
       "team": "Aalborg Volleyball",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
+    },
+    {
+      "date": "2026-10-10T14:30:00",
+      "team": "VK Raptus",
+      "points": 1,
+      "cumulative_points": 4,
+      "game_number": 2
     },
     {
       "date": "2026-10-17T14:00:00",
@@ -2901,6 +2901,13 @@
       "date": "2026-10-17T14:00:00",
       "team": "ASV Aarhus.2",
       "points": 3,
+      "cumulative_points": 3,
+      "game_number": 2
+    },
+    {
+      "date": "2026-10-24T10:00:00",
+      "team": "Nordenskov UIF.2",
+      "points": 0,
       "cumulative_points": 3,
       "game_number": 2
     },
@@ -2912,13 +2919,6 @@
       "game_number": 3
     },
     {
-      "date": "2026-10-24T10:00:00",
-      "team": "Nordenskov UIF.2",
-      "points": 0,
-      "cumulative_points": 3,
-      "game_number": 2
-    },
-    {
       "date": "2026-10-24T12:00:00",
       "team": "ASV Aarhus.2",
       "points": 0,
@@ -2945,6 +2945,13 @@
       "points": 3,
       "cumulative_points": 6,
       "game_number": 2
+    },
+    {
+      "date": "2026-10-28T20:30:00",
+      "team": "Aarhus 1900",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 1
     },
     {
       "date": "2026-10-28T20:30:00",
@@ -2954,13 +2961,6 @@
       "game_number": 1
     },
     {
-      "date": "2026-10-28T20:30:00",
-      "team": "Aarhus 1900",
-      "points": 3,
-      "cumulative_points": 3,
-      "game_number": 1
-    },
-    {
       "date": "2026-10-31T12:00:00",
       "team": "Aarhus 1900",
       "points": 0,
@@ -2976,16 +2976,16 @@
     },
     {
       "date": "2026-10-31T12:30:00",
-      "team": "Randers VK",
-      "points": 3,
-      "cumulative_points": 6,
+      "team": "DHV Odense",
+      "points": 1,
+      "cumulative_points": 4,
       "game_number": 2
     },
     {
       "date": "2026-10-31T12:30:00",
-      "team": "DHV Odense",
-      "points": 1,
-      "cumulative_points": 4,
+      "team": "Randers VK",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
@@ -3000,13 +3000,6 @@
       "team": "Nordenskov UIF.2",
       "points": 3,
       "cumulative_points": 6,
-      "game_number": 3
-    },
-    {
-      "date": "2026-11-01T12:00:00",
-      "team": "Aalborg Volleyball",
-      "points": 3,
-      "cumulative_points": 9,
       "game_number": 3
     },
     {
@@ -3017,11 +3010,11 @@
       "game_number": 2
     },
     {
-      "date": "2026-11-01T16:00:00",
-      "team": "VK Raptus",
+      "date": "2026-11-01T12:00:00",
+      "team": "Aalborg Volleyball",
       "points": 3,
-      "cumulative_points": 10,
-      "game_number": 4
+      "cumulative_points": 9,
+      "game_number": 3
     },
     {
       "date": "2026-11-01T16:00:00",
@@ -3029,6 +3022,13 @@
       "points": 0,
       "cumulative_points": 0,
       "game_number": 2
+    },
+    {
+      "date": "2026-11-01T16:00:00",
+      "team": "VK Raptus",
+      "points": 3,
+      "cumulative_points": 10,
+      "game_number": 4
     },
     {
       "date": "2026-11-07T14:00:00",
@@ -3074,17 +3074,31 @@
     },
     {
       "date": "2026-11-14T11:00:00",
+      "team": "ASV Aarhus.2",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 6
+    },
+    {
+      "date": "2026-11-14T11:00:00",
       "team": "Aarhus 1900",
       "points": 0,
       "cumulative_points": 3,
       "game_number": 3
     },
     {
-      "date": "2026-11-14T11:00:00",
-      "team": "ASV Aarhus.2",
+      "date": "2026-11-21T17:00:00",
+      "team": "DHV Odense",
       "points": 3,
-      "cumulative_points": 6,
-      "game_number": 6
+      "cumulative_points": 10,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-21T17:00:00",
+      "team": "Ikast KFUM.2",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 4
     }
   ],
   "result_matrix": {
@@ -3142,7 +3156,7 @@
       "Aarhus 1900": "",
       "Bedsted KFUM": "",
       "DHV Odense": "",
-      "Ikast KFUM.2": "",
+      "Ikast KFUM.2": "3-1",
       "Kolding VK": "",
       "Nordenskov UIF.2": "",
       "Randers VK": "2-3",

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-21T06:31:08+00:00",
+    "exported_at": "2026-11-22T06:02:22+00:00",
     "scraper_version": "2.1.0",
     "validation": true
   },
@@ -35,19 +35,32 @@
     {
       "pool_id": "4122",
       "rank": 2,
-      "team_name": "Ishøj Volley",
-      "games_played": 4,
+      "team_name": "VK Holbæk",
+      "games_played": 6,
       "games_won": 4,
-      "games_lost": 0,
-      "sets_won": 12,
-      "sets_lost": 1,
-      "balls_won": 324,
-      "balls_lost": 264,
-      "points": 12
+      "games_lost": 2,
+      "sets_won": 15,
+      "sets_lost": 9,
+      "balls_won": 554,
+      "balls_lost": 515,
+      "points": 13
     },
     {
       "pool_id": "4122",
       "rank": 3,
+      "team_name": "Ishøj Volley",
+      "games_played": 5,
+      "games_won": 4,
+      "games_lost": 1,
+      "sets_won": 13,
+      "sets_lost": 4,
+      "balls_won": 412,
+      "balls_lost": 359,
+      "points": 12
+    },
+    {
+      "pool_id": "4122",
+      "rank": 4,
       "team_name": "Gentofte Volley Wildcard",
       "games_played": 4,
       "games_won": 4,
@@ -57,19 +70,6 @@
       "balls_won": 379,
       "balls_lost": 328,
       "points": 12
-    },
-    {
-      "pool_id": "4122",
-      "rank": 4,
-      "team_name": "VK Holbæk",
-      "games_played": 5,
-      "games_won": 3,
-      "games_lost": 2,
-      "sets_won": 12,
-      "sets_lost": 8,
-      "balls_won": 459,
-      "balls_lost": 427,
-      "points": 10
     },
     {
       "pool_id": "4122",
@@ -860,18 +860,18 @@
       "address": "Bispehøjen 2 4300 Holbæk Danmark",
       "referee1": "Yasir Saleh",
       "referee2": "Jan Labusz",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 20,
+      "away_balls1": 25,
+      "home_balls2": 25,
+      "away_balls2": 21,
+      "home_balls3": 25,
+      "away_balls3": 22,
+      "home_balls4": 25,
+      "away_balls4": 20,
       "home_balls5": null,
       "away_balls5": null,
       "result_note": "",
@@ -2850,16 +2850,16 @@
     },
     {
       "date": "2026-10-03T15:30:00",
-      "team": "Ishøj Volley",
-      "points": 3,
-      "cumulative_points": 3,
+      "team": "Hvidovre VK.3",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 1
     },
     {
       "date": "2026-10-03T15:30:00",
-      "team": "Hvidovre VK.3",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "Ishøj Volley",
+      "points": 3,
+      "cumulative_points": 3,
       "game_number": 1
     },
     {
@@ -2886,13 +2886,6 @@
     {
       "date": "2026-10-04T12:00:00",
       "team": "Gentofte Volley Wildcard",
-      "points": 3,
-      "cumulative_points": 3,
-      "game_number": 1
-    },
-    {
-      "date": "2026-10-04T12:00:00",
-      "team": "Lyngby-Gladsaxe Volley",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
@@ -2905,6 +2898,13 @@
       "game_number": 1
     },
     {
+      "date": "2026-10-04T12:00:00",
+      "team": "Lyngby-Gladsaxe Volley",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 1
+    },
+    {
       "date": "2026-10-11T10:00:00",
       "team": "Lyngby-Gladsaxe Volley",
       "points": 3,
@@ -2934,23 +2934,16 @@
     },
     {
       "date": "2026-10-11T12:00:00",
-      "team": "VK Vestsjælland.2",
-      "points": 1,
-      "cumulative_points": 1,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-11T12:00:00",
       "team": "Gentofte Volley Wildcard",
       "points": 3,
       "cumulative_points": 6,
       "game_number": 2
     },
     {
-      "date": "2026-10-11T14:00:00",
-      "team": "Ishøj Volley",
-      "points": 3,
-      "cumulative_points": 6,
+      "date": "2026-10-11T12:00:00",
+      "team": "VK Vestsjælland.2",
+      "points": 1,
+      "cumulative_points": 1,
       "game_number": 2
     },
     {
@@ -2958,6 +2951,13 @@
       "team": "KV 61",
       "points": 0,
       "cumulative_points": 0,
+      "game_number": 2
+    },
+    {
+      "date": "2026-10-11T14:00:00",
+      "team": "Ishøj Volley",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
@@ -3088,16 +3088,23 @@
     },
     {
       "date": "2026-11-07T15:30:00",
+      "team": "Hvidovre VK.3",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-07T15:30:00",
       "team": "Gentofte Volley Wildcard",
       "points": 3,
       "cumulative_points": 12,
       "game_number": 4
     },
     {
-      "date": "2026-11-07T15:30:00",
-      "team": "Hvidovre VK.3",
-      "points": 0,
-      "cumulative_points": 0,
+      "date": "2026-11-07T16:00:00",
+      "team": "VK Vestsjælland.2",
+      "points": 3,
+      "cumulative_points": 7,
       "game_number": 5
     },
     {
@@ -3105,13 +3112,6 @@
       "team": "KV 61",
       "points": 0,
       "cumulative_points": 1,
-      "game_number": 5
-    },
-    {
-      "date": "2026-11-07T16:00:00",
-      "team": "VK Vestsjælland.2",
-      "points": 3,
-      "cumulative_points": 7,
       "game_number": 5
     },
     {
@@ -3144,16 +3144,30 @@
     },
     {
       "date": "2026-11-08T12:00:00",
+      "team": "VK Holbæk",
+      "points": 0,
+      "cumulative_points": 10,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-08T12:00:00",
       "team": "Farum-Holte Wildcard",
       "points": 3,
       "cumulative_points": 6,
       "game_number": 4
     },
     {
-      "date": "2026-11-08T12:00:00",
+      "date": "2026-11-21T12:00:00",
       "team": "VK Holbæk",
+      "points": 3,
+      "cumulative_points": 13,
+      "game_number": 6
+    },
+    {
+      "date": "2026-11-21T12:00:00",
+      "team": "Ishøj Volley",
       "points": 0,
-      "cumulative_points": 10,
+      "cumulative_points": 12,
       "game_number": 5
     }
   ],
@@ -3247,7 +3261,7 @@
       "Gentofte Volley Wildcard": "",
       "Himmelev VK": "",
       "Hvidovre VK.3": "",
-      "Ishøj Volley": "",
+      "Ishøj Volley": "3-1",
       "KV 61": "3-2",
       "Lyngby-Gladsaxe Volley": "",
       "VK Holbæk": "",
