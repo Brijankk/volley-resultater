@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-22T06:02:22+00:00",
+    "exported_at": "2026-11-22T16:51:28+00:00",
     "scraper_version": "2.1.0",
     "validation": true
   },
@@ -36,13 +36,13 @@
       "pool_id": "4144",
       "rank": 2,
       "team_name": "Aalborg Volleyball.4",
-      "games_played": 4,
+      "games_played": 5,
       "games_won": 4,
-      "games_lost": 0,
-      "sets_won": 12,
-      "sets_lost": 3,
-      "balls_won": 354,
-      "balls_lost": 298,
+      "games_lost": 1,
+      "sets_won": 13,
+      "sets_lost": 6,
+      "balls_won": 444,
+      "balls_lost": 388,
       "points": 12
     },
     {
@@ -61,6 +61,19 @@
     {
       "pool_id": "4144",
       "rank": 4,
+      "team_name": "Hobro VK",
+      "games_played": 3,
+      "games_won": 2,
+      "games_lost": 1,
+      "sets_won": 6,
+      "sets_lost": 6,
+      "balls_won": 265,
+      "balls_lost": 278,
+      "points": 6
+    },
+    {
+      "pool_id": "4144",
+      "rank": 5,
       "team_name": "Aalborg Studenter IF",
       "games_played": 4,
       "games_won": 2,
@@ -73,7 +86,7 @@
     },
     {
       "pool_id": "4144",
-      "rank": 5,
+      "rank": 6,
       "team_name": "VK Shima.1",
       "games_played": 4,
       "games_won": 1,
@@ -83,19 +96,6 @@
       "balls_won": 350,
       "balls_lost": 350,
       "points": 4
-    },
-    {
-      "pool_id": "4144",
-      "rank": 6,
-      "team_name": "Hobro VK",
-      "games_played": 2,
-      "games_won": 1,
-      "games_lost": 1,
-      "sets_won": 3,
-      "sets_lost": 5,
-      "balls_won": 175,
-      "balls_lost": 188,
-      "points": 3
     },
     {
       "pool_id": "4144",
@@ -573,18 +573,18 @@
       "address": "Amerikavej 22 9500 Hobro Danmark",
       "referee1": null,
       "referee2": null,
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
+      "result_home_sets": 3,
+      "result_away_sets": 1,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 20,
+      "home_balls2": 15,
+      "away_balls2": 25,
+      "home_balls3": 25,
+      "away_balls3": 22,
+      "home_balls4": 25,
+      "away_balls4": 23,
       "home_balls5": null,
       "away_balls5": null,
       "result_note": "",
@@ -1824,16 +1824,23 @@
     },
     {
       "date": "2026-09-27T11:45:00",
+      "team": "VK Shima.2",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 2
+    },
+    {
+      "date": "2026-09-27T11:45:00",
       "team": "Randers VK 2",
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
     },
     {
-      "date": "2026-09-27T11:45:00",
-      "team": "VK Shima.2",
-      "points": 0,
-      "cumulative_points": 0,
+      "date": "2026-09-27T13:30:00",
+      "team": "Randers VK 2",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
@@ -1841,13 +1848,6 @@
       "team": "Aalborg Studenter IF",
       "points": 0,
       "cumulative_points": 3,
-      "game_number": 2
-    },
-    {
-      "date": "2026-09-27T13:30:00",
-      "team": "Randers VK 2",
-      "points": 3,
-      "cumulative_points": 6,
       "game_number": 2
     },
     {
@@ -1936,24 +1936,17 @@
     },
     {
       "date": "2026-11-01T10:00:00",
-      "team": "Randers VK 2",
-      "points": 3,
-      "cumulative_points": 9,
-      "game_number": 3
-    },
-    {
-      "date": "2026-11-01T10:00:00",
       "team": "VK Shima.1",
       "points": 0,
       "cumulative_points": 3,
       "game_number": 3
     },
     {
-      "date": "2026-11-01T11:45:00",
-      "team": "Hobro VK",
+      "date": "2026-11-01T10:00:00",
+      "team": "Randers VK 2",
       "points": 3,
-      "cumulative_points": 3,
-      "game_number": 1
+      "cumulative_points": 9,
+      "game_number": 3
     },
     {
       "date": "2026-11-01T11:45:00",
@@ -1961,6 +1954,13 @@
       "points": 1,
       "cumulative_points": 4,
       "game_number": 4
+    },
+    {
+      "date": "2026-11-01T11:45:00",
+      "team": "Hobro VK",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 1
     },
     {
       "date": "2026-11-01T13:30:00",
@@ -2006,17 +2006,31 @@
     },
     {
       "date": "2026-11-08T13:30:00",
+      "team": "Vesthimmerlands VK",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 4
+    },
+    {
+      "date": "2026-11-08T13:30:00",
       "team": "Aalborg Volleyball.5 OB",
       "points": 3,
       "cumulative_points": 7,
       "game_number": 4
     },
     {
-      "date": "2026-11-08T13:30:00",
-      "team": "Vesthimmerlands VK",
+      "date": "2026-11-22T10:00:00",
+      "team": "Hobro VK",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 3
+    },
+    {
+      "date": "2026-11-22T10:00:00",
+      "team": "Aalborg Volleyball.4",
       "points": 0,
-      "cumulative_points": 0,
-      "game_number": 4
+      "cumulative_points": 12,
+      "game_number": 5
     }
   ],
   "result_matrix": {
@@ -2052,7 +2066,7 @@
     },
     "Hobro VK": {
       "Aalborg Studenter IF": "",
-      "Aalborg Volleyball.4": "",
+      "Aalborg Volleyball.4": "3-1",
       "Aalborg Volleyball.5 OB": "",
       "Hobro VK": "",
       "Randers VK 2": "",

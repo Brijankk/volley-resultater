@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-22T06:02:22+00:00",
+    "exported_at": "2026-11-22T16:51:28+00:00",
     "scraper_version": "2.1.0",
     "validation": true
   },
@@ -22,6 +22,19 @@
     {
       "pool_id": "4127",
       "rank": 1,
+      "team_name": "Aabyhøj IF",
+      "games_played": 6,
+      "games_won": 4,
+      "games_lost": 2,
+      "sets_won": 15,
+      "sets_lost": 8,
+      "balls_won": 520,
+      "balls_lost": 459,
+      "points": 13
+    },
+    {
+      "pool_id": "4127",
+      "rank": 2,
       "team_name": "Skovbakken",
       "games_played": 5,
       "games_won": 4,
@@ -34,7 +47,20 @@
     },
     {
       "pool_id": "4127",
-      "rank": 2,
+      "rank": 3,
+      "team_name": "Randers VK",
+      "games_played": 5,
+      "games_won": 4,
+      "games_lost": 1,
+      "sets_won": 12,
+      "sets_lost": 3,
+      "balls_won": 367,
+      "balls_lost": 264,
+      "points": 12
+    },
+    {
+      "pool_id": "4127",
+      "rank": 4,
       "team_name": "VK Raptus",
       "games_played": 5,
       "games_won": 4,
@@ -47,7 +73,7 @@
     },
     {
       "pool_id": "4127",
-      "rank": 3,
+      "rank": 5,
       "team_name": "VK Vendsyssel",
       "games_played": 5,
       "games_won": 3,
@@ -57,32 +83,6 @@
       "balls_won": 400,
       "balls_lost": 346,
       "points": 10
-    },
-    {
-      "pool_id": "4127",
-      "rank": 4,
-      "team_name": "Aabyhøj IF",
-      "games_played": 5,
-      "games_won": 3,
-      "games_lost": 2,
-      "sets_won": 12,
-      "sets_lost": 8,
-      "balls_won": 445,
-      "balls_lost": 420,
-      "points": 10
-    },
-    {
-      "pool_id": "4127",
-      "rank": 5,
-      "team_name": "Randers VK",
-      "games_played": 4,
-      "games_won": 3,
-      "games_lost": 1,
-      "sets_won": 9,
-      "sets_lost": 3,
-      "balls_won": 292,
-      "balls_lost": 225,
-      "points": 9
     },
     {
       "pool_id": "4127",
@@ -113,19 +113,6 @@
     {
       "pool_id": "4127",
       "rank": 8,
-      "team_name": "VK Raptus.2",
-      "games_played": 5,
-      "games_won": 1,
-      "games_lost": 4,
-      "sets_won": 7,
-      "sets_lost": 12,
-      "balls_won": 377,
-      "balls_lost": 430,
-      "points": 4
-    },
-    {
-      "pool_id": "4127",
-      "rank": 9,
       "team_name": "Hjerm FIF",
       "games_played": 5,
       "games_won": 1,
@@ -138,15 +125,28 @@
     },
     {
       "pool_id": "4127",
+      "rank": 9,
+      "team_name": "VK Raptus.2",
+      "games_played": 6,
+      "games_won": 1,
+      "games_lost": 5,
+      "sets_won": 7,
+      "sets_lost": 15,
+      "balls_won": 416,
+      "balls_lost": 505,
+      "points": 4
+    },
+    {
+      "pool_id": "4127",
       "rank": 10,
       "team_name": "Aalborg Volleyball.3",
-      "games_played": 5,
+      "games_played": 6,
       "games_won": 1,
-      "games_lost": 4,
+      "games_lost": 5,
       "sets_won": 5,
-      "sets_lost": 14,
-      "balls_won": 337,
-      "balls_lost": 434,
+      "sets_lost": 17,
+      "balls_won": 376,
+      "balls_lost": 509,
       "points": 4
     }
   ],
@@ -889,16 +889,16 @@
       "address": "Fyensgade 1 8900 Randers C Danmark",
       "referee1": "Søren Madsen",
       "referee2": "Morten Møller Nielsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 11,
+      "home_balls2": 25,
+      "away_balls2": 17,
+      "home_balls3": 25,
+      "away_balls3": 11,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -918,16 +918,16 @@
       "address": "Aabyvej 80 8230 Åbyhøj Danmark",
       "referee1": "Jim Holm Hansen",
       "referee2": "Birger Jensen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 13,
+      "home_balls2": 25,
+      "away_balls2": 7,
+      "home_balls3": 25,
+      "away_balls3": 19,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2864,16 +2864,16 @@
     },
     {
       "date": "2026-10-03T12:00:00",
-      "team": "VK Vendsyssel",
-      "points": 3,
-      "cumulative_points": 3,
+      "team": "Hjerm FIF",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 1
     },
     {
       "date": "2026-10-03T12:00:00",
-      "team": "Hjerm FIF",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "VK Vendsyssel",
+      "points": 3,
+      "cumulative_points": 3,
       "game_number": 1
     },
     {
@@ -2906,16 +2906,16 @@
     },
     {
       "date": "2026-10-07T18:30:00",
-      "team": "Holstebro KFUM",
-      "points": 0,
-      "cumulative_points": 3,
+      "team": "Randers VK",
+      "points": 3,
+      "cumulative_points": 6,
       "game_number": 2
     },
     {
       "date": "2026-10-07T18:30:00",
-      "team": "Randers VK",
-      "points": 3,
-      "cumulative_points": 6,
+      "team": "Holstebro KFUM",
+      "points": 0,
+      "cumulative_points": 3,
       "game_number": 2
     },
     {
@@ -2930,13 +2930,6 @@
       "team": "Skovbakken",
       "points": 3,
       "cumulative_points": 6,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-10T14:00:00",
-      "team": "Aabyhøj IF",
-      "points": 3,
-      "cumulative_points": 3,
       "game_number": 2
     },
     {
@@ -2947,6 +2940,20 @@
       "game_number": 2
     },
     {
+      "date": "2026-10-10T14:00:00",
+      "team": "Aabyhøj IF",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 2
+    },
+    {
+      "date": "2026-10-10T18:30:00",
+      "team": "Aalborg Volleyball.3",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 2
+    },
+    {
       "date": "2026-10-10T18:30:00",
       "team": "VK Raptus",
       "points": 3,
@@ -2954,8 +2961,8 @@
       "game_number": 2
     },
     {
-      "date": "2026-10-10T18:30:00",
-      "team": "Aalborg Volleyball.3",
+      "date": "2026-10-18T10:00:00",
+      "team": "ASV Aarhus.3",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 2
@@ -2968,24 +2975,17 @@
       "game_number": 2
     },
     {
-      "date": "2026-10-18T10:00:00",
-      "team": "ASV Aarhus.3",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-21T19:30:00",
-      "team": "ASV Aarhus.3",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 3
-    },
-    {
       "date": "2026-10-21T19:30:00",
       "team": "Randers VK",
       "points": 3,
       "cumulative_points": 9,
+      "game_number": 3
+    },
+    {
+      "date": "2026-10-21T19:30:00",
+      "team": "ASV Aarhus.3",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 3
     },
     {
@@ -3018,30 +3018,30 @@
     },
     {
       "date": "2026-10-25T11:00:00",
-      "team": "Holstebro KFUM",
-      "points": 0,
-      "cumulative_points": 3,
-      "game_number": 3
-    },
-    {
-      "date": "2026-10-25T11:00:00",
       "team": "Skovbakken",
       "points": 3,
       "cumulative_points": 9,
       "game_number": 3
     },
     {
-      "date": "2026-10-31T16:00:00",
-      "team": "Aabyhøj IF",
-      "points": 1,
-      "cumulative_points": 7,
-      "game_number": 4
+      "date": "2026-10-25T11:00:00",
+      "team": "Holstebro KFUM",
+      "points": 0,
+      "cumulative_points": 3,
+      "game_number": 3
     },
     {
       "date": "2026-10-31T16:00:00",
       "team": "ASV Aarhus.3",
       "points": 3,
       "cumulative_points": 3,
+      "game_number": 4
+    },
+    {
+      "date": "2026-10-31T16:00:00",
+      "team": "Aabyhøj IF",
+      "points": 1,
+      "cumulative_points": 7,
       "game_number": 4
     },
     {
@@ -3057,13 +3057,6 @@
       "points": 3,
       "cumulative_points": 10,
       "game_number": 4
-    },
-    {
-      "date": "2026-11-07T10:00:00",
-      "team": "VK Raptus.2",
-      "points": 0,
-      "cumulative_points": 3,
-      "game_number": 3
     },
     {
       "date": "2026-11-07T10:00:00",
@@ -3073,18 +3066,18 @@
       "game_number": 4
     },
     {
+      "date": "2026-11-07T10:00:00",
+      "team": "VK Raptus.2",
+      "points": 0,
+      "cumulative_points": 3,
+      "game_number": 3
+    },
+    {
       "date": "2026-11-07T12:00:00",
       "team": "Aabyhøj IF",
       "points": 3,
       "cumulative_points": 10,
       "game_number": 5
-    },
-    {
-      "date": "2026-11-07T12:00:00",
-      "team": "Skovbakken",
-      "points": 1,
-      "cumulative_points": 10,
-      "game_number": 4
     },
     {
       "date": "2026-11-07T12:00:00",
@@ -3101,11 +3094,11 @@
       "game_number": 4
     },
     {
-      "date": "2026-11-08T14:30:00",
-      "team": "ASV Aarhus.3",
-      "points": 3,
-      "cumulative_points": 6,
-      "game_number": 5
+      "date": "2026-11-07T12:00:00",
+      "team": "Skovbakken",
+      "points": 1,
+      "cumulative_points": 10,
+      "game_number": 4
     },
     {
       "date": "2026-11-08T14:30:00",
@@ -3113,6 +3106,13 @@
       "points": 0,
       "cumulative_points": 1,
       "game_number": 3
+    },
+    {
+      "date": "2026-11-08T14:30:00",
+      "team": "ASV Aarhus.3",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 5
     },
     {
       "date": "2026-11-13T19:00:00",
@@ -3154,6 +3154,13 @@
       "team": "Aalborg Volleyball.3",
       "points": 3,
       "cumulative_points": 4,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-21T10:00:00",
+      "team": "Skovbakken",
+      "points": 3,
+      "cumulative_points": 13,
       "game_number": 5
     },
     {
@@ -3164,10 +3171,10 @@
       "game_number": 6
     },
     {
-      "date": "2026-11-21T10:00:00",
-      "team": "Skovbakken",
+      "date": "2026-11-21T14:00:00",
+      "team": "VK Raptus",
       "points": 3,
-      "cumulative_points": 13,
+      "cumulative_points": 12,
       "game_number": 5
     },
     {
@@ -3178,11 +3185,32 @@
       "game_number": 5
     },
     {
-      "date": "2026-11-21T14:00:00",
-      "team": "VK Raptus",
+      "date": "2026-11-22T14:00:00",
+      "team": "Aabyhøj IF",
+      "points": 3,
+      "cumulative_points": 13,
+      "game_number": 6
+    },
+    {
+      "date": "2026-11-22T14:00:00",
+      "team": "Randers VK",
       "points": 3,
       "cumulative_points": 12,
       "game_number": 5
+    },
+    {
+      "date": "2026-11-22T14:00:00",
+      "team": "VK Raptus.2",
+      "points": 0,
+      "cumulative_points": 4,
+      "game_number": 6
+    },
+    {
+      "date": "2026-11-22T14:00:00",
+      "team": "Aalborg Volleyball.3",
+      "points": 0,
+      "cumulative_points": 4,
+      "game_number": 6
     }
   ],
   "result_matrix": {
@@ -3201,7 +3229,7 @@
     "Aabyhøj IF": {
       "ASV Aarhus.3": "2-3",
       "Aabyhøj IF": "",
-      "Aalborg Volleyball.3": "",
+      "Aalborg Volleyball.3": "3-0",
       "Hjerm FIF": "",
       "Holstebro KFUM": "",
       "Randers VK": "",
@@ -3255,7 +3283,7 @@
       "Randers VK": "",
       "Skovbakken": "",
       "VK Raptus": "",
-      "VK Raptus.2": "",
+      "VK Raptus.2": "3-0",
       "VK Vendsyssel": ""
     },
     "Skovbakken": {
