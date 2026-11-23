@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "exported_at": "2026-11-22T16:51:28+00:00",
+    "exported_at": "2026-11-23T06:53:54+00:00",
     "scraper_version": "2.1.0",
-    "validation": false
+    "validation": true
   },
   "pool": {
     "id": "4140",
@@ -22,6 +22,19 @@
     {
       "pool_id": "4140",
       "rank": 1,
+      "team_name": "Holte IF",
+      "games_played": 6,
+      "games_won": 6,
+      "games_lost": 0,
+      "sets_won": 18,
+      "sets_lost": 0,
+      "balls_won": 450,
+      "balls_lost": 264,
+      "points": 18
+    },
+    {
+      "pool_id": "4140",
+      "rank": 2,
       "team_name": "ASV Elite",
       "games_played": 6,
       "games_won": 6,
@@ -31,19 +44,6 @@
       "balls_won": 469,
       "balls_lost": 289,
       "points": 18
-    },
-    {
-      "pool_id": "4140",
-      "rank": 2,
-      "team_name": "Holte IF",
-      "games_played": 5,
-      "games_won": 5,
-      "games_lost": 0,
-      "sets_won": 15,
-      "sets_lost": 0,
-      "balls_won": 375,
-      "balls_lost": 209,
-      "points": 15
     },
     {
       "pool_id": "4140",
@@ -75,13 +75,13 @@
       "pool_id": "4140",
       "rank": 5,
       "team_name": "Gentofte Volley",
-      "games_played": 5,
+      "games_played": 6,
       "games_won": 2,
-      "games_lost": 3,
+      "games_lost": 4,
       "sets_won": 10,
-      "sets_lost": 9,
-      "balls_won": 408,
-      "balls_lost": 389,
+      "sets_lost": 12,
+      "balls_won": 463,
+      "balls_lost": 464,
       "points": 7
     },
     {
@@ -860,8 +860,8 @@
       "address": "Kongevejen 464 2840 Holte Danmark",
       "referee1": "Andreas Bak-Georgsen",
       "referee2": "Andreas Hovard Hansen",
-      "result_home_sets": null,
-      "result_away_sets": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
       "home_points": 3,
       "away_points": 0,
       "home_balls1": 25,
@@ -3264,7 +3264,7 @@
       "Brøndby VK": "3-0",
       "DHV Odense": "",
       "Farum VK": "",
-      "Gentofte Volley": "",
+      "Gentofte Volley": "3-0",
       "Holte IF": "",
       "Hvidovre VK": "3-0",
       "Ikast KFUM": "",

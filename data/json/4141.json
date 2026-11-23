@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-22T16:51:28+00:00",
+    "exported_at": "2026-11-23T06:53:54+00:00",
     "scraper_version": "2.1.0",
     "validation": true
   },
@@ -74,6 +74,19 @@
     {
       "pool_id": "4141",
       "rank": 5,
+      "team_name": "Gentofte Volley",
+      "games_played": 6,
+      "games_won": 2,
+      "games_lost": 4,
+      "sets_won": 7,
+      "sets_lost": 13,
+      "balls_won": 419,
+      "balls_lost": 459,
+      "points": 6
+    },
+    {
+      "pool_id": "4141",
+      "rank": 6,
       "team_name": "Odense Volleyball",
       "games_played": 2,
       "games_won": 2,
@@ -86,7 +99,7 @@
     },
     {
       "pool_id": "4141",
-      "rank": 6,
+      "rank": 7,
       "team_name": "Nordenskov UIF",
       "games_played": 2,
       "games_won": 2,
@@ -99,7 +112,7 @@
     },
     {
       "pool_id": "4141",
-      "rank": 7,
+      "rank": 8,
       "team_name": "Amager Volley",
       "games_played": 4,
       "games_won": 1,
@@ -109,19 +122,6 @@
       "balls_won": 312,
       "balls_lost": 336,
       "points": 4
-    },
-    {
-      "pool_id": "4141",
-      "rank": 8,
-      "team_name": "Gentofte Volley",
-      "games_played": 5,
-      "games_won": 1,
-      "games_lost": 4,
-      "sets_won": 4,
-      "sets_lost": 12,
-      "balls_won": 321,
-      "balls_lost": 383,
-      "points": 3
     },
     {
       "pool_id": "4141",
@@ -140,13 +140,13 @@
       "pool_id": "4141",
       "rank": 10,
       "team_name": "Holte IF",
-      "games_played": 4,
+      "games_played": 5,
       "games_won": 0,
-      "games_lost": 4,
-      "sets_won": 0,
-      "sets_lost": 12,
-      "balls_won": 215,
-      "balls_lost": 300,
+      "games_lost": 5,
+      "sets_won": 1,
+      "sets_lost": 15,
+      "balls_won": 291,
+      "balls_lost": 398,
       "points": 0
     }
   ],
@@ -686,18 +686,18 @@
       "address": "Kongevejen 464 2840 Holte Danmark",
       "referee1": "Olaf Jørs",
       "referee2": "Tim Poulsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
+      "result_home_sets": 1,
+      "result_away_sets": 3,
+      "home_points": 0,
+      "away_points": 3,
+      "home_balls1": 25,
+      "away_balls1": 23,
+      "home_balls2": 22,
+      "away_balls2": 25,
+      "home_balls3": 13,
+      "away_balls3": 25,
+      "home_balls4": 16,
+      "away_balls4": 25,
       "home_balls5": null,
       "away_balls5": null,
       "result_note": "",
@@ -2850,16 +2850,16 @@
     },
     {
       "date": "2026-10-17T16:45:00",
-      "team": "Amager Volley",
-      "points": 0,
-      "cumulative_points": 0,
+      "team": "Gentofte Volley",
+      "points": 3,
+      "cumulative_points": 3,
       "game_number": 1
     },
     {
       "date": "2026-10-17T16:45:00",
-      "team": "Gentofte Volley",
-      "points": 3,
-      "cumulative_points": 3,
+      "team": "Amager Volley",
+      "points": 0,
+      "cumulative_points": 0,
       "game_number": 1
     },
     {
@@ -2892,31 +2892,17 @@
     },
     {
       "date": "2026-10-30T19:30:00",
-      "team": "VK Vestsjælland",
-      "points": 3,
-      "cumulative_points": 5,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-30T19:30:00",
       "team": "Gentofte Volley",
       "points": 0,
       "cumulative_points": 3,
       "game_number": 3
     },
     {
-      "date": "2026-11-01T13:30:00",
-      "team": "Ikast KFUM",
+      "date": "2026-10-30T19:30:00",
+      "team": "VK Vestsjælland",
       "points": 3,
-      "cumulative_points": 3,
-      "game_number": 1
-    },
-    {
-      "date": "2026-11-01T13:30:00",
-      "team": "Nordenskov UIF",
-      "points": 2,
-      "cumulative_points": 2,
-      "game_number": 1
+      "cumulative_points": 5,
+      "game_number": 2
     },
     {
       "date": "2026-11-01T13:30:00",
@@ -2931,6 +2917,20 @@
       "points": 0,
       "cumulative_points": 3,
       "game_number": 4
+    },
+    {
+      "date": "2026-11-01T13:30:00",
+      "team": "Nordenskov UIF",
+      "points": 2,
+      "cumulative_points": 2,
+      "game_number": 1
+    },
+    {
+      "date": "2026-11-01T13:30:00",
+      "team": "Ikast KFUM",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 1
     },
     {
       "date": "2026-11-01T14:30:00",
@@ -2962,9 +2962,9 @@
     },
     {
       "date": "2026-11-06T19:30:00",
-      "team": "Amager Volley",
-      "points": 0,
-      "cumulative_points": 1,
+      "team": "VK Vestsjælland",
+      "points": 3,
+      "cumulative_points": 8,
       "game_number": 3
     },
     {
@@ -2976,17 +2976,17 @@
     },
     {
       "date": "2026-11-06T19:30:00",
-      "team": "VK Vestsjælland",
-      "points": 3,
-      "cumulative_points": 8,
-      "game_number": 3
-    },
-    {
-      "date": "2026-11-06T19:30:00",
       "team": "ASV Elite",
       "points": 0,
       "cumulative_points": 9,
       "game_number": 4
+    },
+    {
+      "date": "2026-11-06T19:30:00",
+      "team": "Amager Volley",
+      "points": 0,
+      "cumulative_points": 1,
+      "game_number": 3
     },
     {
       "date": "2026-11-07T16:45:00",
@@ -3018,17 +3018,17 @@
     },
     {
       "date": "2026-11-07T18:00:00",
-      "team": "Middelfart VK",
-      "points": 2,
-      "cumulative_points": 5,
-      "game_number": 2
-    },
-    {
-      "date": "2026-11-07T18:00:00",
       "team": "Hvidovre VK",
       "points": 1,
       "cumulative_points": 2,
       "game_number": 3
+    },
+    {
+      "date": "2026-11-07T18:00:00",
+      "team": "Middelfart VK",
+      "points": 2,
+      "cumulative_points": 5,
+      "game_number": 2
     },
     {
       "date": "2026-11-19T19:30:00",
@@ -3043,13 +3043,6 @@
       "points": 0,
       "cumulative_points": 0,
       "game_number": 4
-    },
-    {
-      "date": "2026-11-19T19:30:00",
-      "team": "Middelfart VK",
-      "points": 3,
-      "cumulative_points": 8,
-      "game_number": 3
     },
     {
       "date": "2026-11-19T19:30:00",
@@ -3059,6 +3052,13 @@
       "game_number": 4
     },
     {
+      "date": "2026-11-19T19:30:00",
+      "team": "Middelfart VK",
+      "points": 3,
+      "cumulative_points": 8,
+      "game_number": 3
+    },
+    {
       "date": "2026-11-19T20:30:00",
       "team": "Odense Volleyball",
       "points": 2,
@@ -3074,17 +3074,31 @@
     },
     {
       "date": "2026-11-20T19:30:00",
+      "team": "Ikast KFUM",
+      "points": 0,
+      "cumulative_points": 6,
+      "game_number": 3
+    },
+    {
+      "date": "2026-11-20T19:30:00",
       "team": "VK Vestsjælland",
       "points": 3,
       "cumulative_points": 11,
       "game_number": 4
     },
     {
-      "date": "2026-11-20T19:30:00",
-      "team": "Ikast KFUM",
+      "date": "2026-11-22T17:30:00",
+      "team": "Holte IF",
       "points": 0,
+      "cumulative_points": 0,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-22T17:30:00",
+      "team": "Gentofte Volley",
+      "points": 3,
       "cumulative_points": 6,
-      "game_number": 3
+      "game_number": 6
     }
   ],
   "result_matrix": {
@@ -3127,7 +3141,7 @@
     "Holte IF": {
       "ASV Elite": "0-3",
       "Amager Volley": "",
-      "Gentofte Volley": "",
+      "Gentofte Volley": "1-3",
       "Holte IF": "",
       "Hvidovre VK": "",
       "Ikast KFUM": "",
