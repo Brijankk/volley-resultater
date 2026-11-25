@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-23T06:53:54+00:00",
+    "exported_at": "2026-11-25T05:12:27+00:00",
     "scraper_version": "2.1.0",
     "validation": true
   },
@@ -87,19 +87,32 @@
     {
       "pool_id": "4140",
       "rank": 6,
-      "team_name": "Farum VK",
+      "team_name": "Team Køge",
       "games_played": 5,
       "games_won": 2,
       "games_lost": 3,
       "sets_won": 8,
       "sets_lost": 10,
-      "balls_won": 384,
-      "balls_lost": 415,
+      "balls_won": 372,
+      "balls_lost": 397,
       "points": 7
     },
     {
       "pool_id": "4140",
       "rank": 7,
+      "team_name": "Farum VK",
+      "games_played": 6,
+      "games_won": 2,
+      "games_lost": 4,
+      "sets_won": 8,
+      "sets_lost": 13,
+      "balls_won": 445,
+      "balls_lost": 490,
+      "points": 7
+    },
+    {
+      "pool_id": "4140",
+      "rank": 8,
       "team_name": "Ikast KFUM",
       "games_played": 4,
       "games_won": 2,
@@ -109,19 +122,6 @@
       "balls_won": 302,
       "balls_lost": 341,
       "points": 5
-    },
-    {
-      "pool_id": "4140",
-      "rank": 8,
-      "team_name": "Team Køge",
-      "games_played": 4,
-      "games_won": 1,
-      "games_lost": 3,
-      "sets_won": 5,
-      "sets_lost": 10,
-      "balls_won": 297,
-      "balls_lost": 336,
-      "points": 4
     },
     {
       "pool_id": "4140",
@@ -889,16 +889,16 @@
       "address": "Ved Stadion 2 B 4600 Køge Danmark",
       "referee1": "Morten Engborg Klein",
       "referee2": "Jan Herneth",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
+      "result_home_sets": 3,
+      "result_away_sets": 0,
+      "home_points": 3,
+      "away_points": 0,
+      "home_balls1": 25,
+      "away_balls1": 20,
+      "home_balls2": 25,
+      "away_balls2": 21,
+      "home_balls3": 25,
+      "away_balls3": 20,
       "home_balls4": null,
       "away_balls4": null,
       "home_balls5": null,
@@ -2948,17 +2948,17 @@
     },
     {
       "date": "2026-10-31T11:00:00",
-      "team": "Farum VK",
-      "points": 3,
-      "cumulative_points": 3,
-      "game_number": 2
-    },
-    {
-      "date": "2026-10-31T11:00:00",
       "team": "Hvidovre VK",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 3
+    },
+    {
+      "date": "2026-10-31T11:00:00",
+      "team": "Farum VK",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 2
     },
     {
       "date": "2026-10-31T15:00:00",
@@ -3032,15 +3032,15 @@
     },
     {
       "date": "2026-11-07T14:00:00",
-      "team": "Brøndby VK",
-      "points": 3,
+      "team": "Farum VK",
+      "points": 0,
       "cumulative_points": 6,
       "game_number": 4
     },
     {
       "date": "2026-11-07T14:00:00",
-      "team": "Farum VK",
-      "points": 0,
+      "team": "Brøndby VK",
+      "points": 3,
       "cumulative_points": 6,
       "game_number": 4
     },
@@ -3102,16 +3102,23 @@
     },
     {
       "date": "2026-11-19T18:30:00",
+      "team": "Brøndby VK",
+      "points": 3,
+      "cumulative_points": 9,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-19T18:30:00",
       "team": "Hvidovre VK",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 5
     },
     {
-      "date": "2026-11-19T18:30:00",
-      "team": "Brøndby VK",
+      "date": "2026-11-19T20:00:00",
+      "team": "ASV Elite",
       "points": 3,
-      "cumulative_points": 9,
+      "cumulative_points": 15,
       "game_number": 5
     },
     {
@@ -3120,13 +3127,6 @@
       "points": 0,
       "cumulative_points": 5,
       "game_number": 3
-    },
-    {
-      "date": "2026-11-19T20:00:00",
-      "team": "ASV Elite",
-      "points": 3,
-      "cumulative_points": 15,
-      "game_number": 5
     },
     {
       "date": "2026-11-21T13:30:00",
@@ -3172,14 +3172,28 @@
     },
     {
       "date": "2026-11-22T15:30:00",
+      "team": "Gentofte Volley",
+      "points": 0,
+      "cumulative_points": 7,
+      "game_number": 6
+    },
+    {
+      "date": "2026-11-22T15:30:00",
       "team": "Holte IF",
       "points": 3,
       "cumulative_points": 18,
       "game_number": 6
     },
     {
-      "date": "2026-11-22T15:30:00",
-      "team": "Gentofte Volley",
+      "date": "2026-11-24T19:00:00",
+      "team": "Team Køge",
+      "points": 3,
+      "cumulative_points": 7,
+      "game_number": 5
+    },
+    {
+      "date": "2026-11-24T19:00:00",
+      "team": "Farum VK",
       "points": 0,
       "cumulative_points": 7,
       "game_number": 6
@@ -3299,7 +3313,7 @@
       "Aalborg Volleyball": "3-1",
       "Brøndby VK": "",
       "DHV Odense": "2-3",
-      "Farum VK": "",
+      "Farum VK": "3-0",
       "Gentofte Volley": "0-3",
       "Holte IF": "",
       "Hvidovre VK": "",

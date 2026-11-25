@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-23T06:53:54+00:00",
+    "exported_at": "2026-11-25T05:12:27+00:00",
     "scraper_version": "2.1.0",
     "validation": true
   },
@@ -61,6 +61,19 @@
     {
       "pool_id": "4141",
       "rank": 4,
+      "team_name": "Gentofte Volley",
+      "games_played": 7,
+      "games_won": 2,
+      "games_lost": 5,
+      "sets_won": 9,
+      "sets_lost": 16,
+      "balls_won": 521,
+      "balls_lost": 560,
+      "points": 7
+    },
+    {
+      "pool_id": "4141",
+      "rank": 5,
       "team_name": "Ikast KFUM",
       "games_played": 3,
       "games_won": 2,
@@ -69,19 +82,6 @@
       "sets_lost": 4,
       "balls_won": 231,
       "balls_lost": 231,
-      "points": 6
-    },
-    {
-      "pool_id": "4141",
-      "rank": 5,
-      "team_name": "Gentofte Volley",
-      "games_played": 6,
-      "games_won": 2,
-      "games_lost": 4,
-      "sets_won": 7,
-      "sets_lost": 13,
-      "balls_won": 419,
-      "balls_lost": 459,
       "points": 6
     },
     {
@@ -113,6 +113,19 @@
     {
       "pool_id": "4141",
       "rank": 8,
+      "team_name": "Hvidovre VK",
+      "games_played": 5,
+      "games_won": 1,
+      "games_lost": 4,
+      "sets_won": 9,
+      "sets_lost": 14,
+      "balls_won": 465,
+      "balls_lost": 505,
+      "points": 5
+    },
+    {
+      "pool_id": "4141",
+      "rank": 9,
       "team_name": "Amager Volley",
       "games_played": 4,
       "games_won": 1,
@@ -122,19 +135,6 @@
       "balls_won": 312,
       "balls_lost": 336,
       "points": 4
-    },
-    {
-      "pool_id": "4141",
-      "rank": 9,
-      "team_name": "Hvidovre VK",
-      "games_played": 4,
-      "games_won": 0,
-      "games_lost": 4,
-      "sets_won": 6,
-      "sets_lost": 12,
-      "balls_won": 364,
-      "balls_lost": 403,
-      "points": 3
     },
     {
       "pool_id": "4141",
@@ -715,20 +715,20 @@
       "address": "Adolphsvej 25 2820 Gentofte Danmark",
       "referee1": "Michael Andersen",
       "referee2": "Sten Storgaard",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
-      "home_balls5": null,
-      "away_balls5": null,
+      "result_home_sets": 2,
+      "result_away_sets": 3,
+      "home_points": 1,
+      "away_points": 2,
+      "home_balls1": 25,
+      "away_balls1": 19,
+      "home_balls2": 25,
+      "away_balls2": 17,
+      "home_balls3": 17,
+      "away_balls3": 25,
+      "home_balls4": 23,
+      "away_balls4": 25,
+      "home_balls5": 12,
+      "away_balls5": 15,
       "result_note": "",
       "starts_at_time_known": true
     },
@@ -850,35 +850,6 @@
     },
     {
       "pool_id": "4141",
-      "kamp_id": 76584,
-      "match_number": 149346,
-      "starts_at": "2026-12-03T19:30:00",
-      "home_team": "Amager Volley",
-      "away_team": "Odense Volleyball",
-      "venue": "Sundbyhal 1",
-      "court": "1",
-      "address": "Englandsvej 61 2300 København S Danmark",
-      "referee1": "Michael Andersen",
-      "referee2": "Jan Herneth",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
-      "home_balls5": null,
-      "away_balls5": null,
-      "result_note": "",
-      "starts_at_time_known": true
-    },
-    {
-      "pool_id": "4141",
       "kamp_id": 76532,
       "match_number": 149294,
       "starts_at": "2026-12-03T20:00:00",
@@ -908,14 +879,14 @@
     },
     {
       "pool_id": "4141",
-      "kamp_id": 76562,
-      "match_number": 149324,
-      "starts_at": "2026-12-03T20:30:00",
-      "home_team": "Hvidovre VK",
-      "away_team": "Ikast KFUM",
-      "venue": "Frihedens Idrætscenter",
+      "kamp_id": 76541,
+      "match_number": 149303,
+      "starts_at": "2026-12-03T20:00:00",
+      "home_team": "Amager Volley",
+      "away_team": "Hvidovre VK",
+      "venue": "Sundbyhal 1",
       "court": "1",
-      "address": "Hvidovrevej 446 2650 Hvidovre Danmark",
+      "address": "Englandsvej 61 2300 København S Danmark",
       "referee1": "Olaf Jørs",
       "referee2": "Sten Storgaard",
       "result_home_sets": null,
@@ -975,7 +946,7 @@
       "court": "1",
       "address": "Vrenderupvej 40 C Vrenderup 6818 Årre Danmark",
       "referee1": "Tim Poulsen",
-      "referee2": "Olaf Jørs",
+      "referee2": "Flemming Kjerulff Munk",
       "result_home_sets": null,
       "result_away_sets": null,
       "home_points": null,
@@ -2735,16 +2706,16 @@
     },
     {
       "pool_id": "4141",
-      "kamp_id": 76541,
-      "match_number": 149303,
+      "kamp_id": 76562,
+      "match_number": 149324,
       "starts_at": null,
-      "home_team": "Amager Volley",
-      "away_team": "Hvidovre VK",
-      "venue": "Sundbyhal 1",
+      "home_team": "Hvidovre VK",
+      "away_team": "Ikast KFUM",
+      "venue": "Frihedens Idrætscenter",
       "court": "1",
-      "address": "Englandsvej 61 2300 København S Danmark",
-      "referee1": "Olaf Jørs",
-      "referee2": "Sten Storgaard",
+      "address": "Hvidovrevej 446 2650 Hvidovre Danmark",
+      "referee1": null,
+      "referee2": null,
       "result_home_sets": null,
       "result_away_sets": null,
       "home_points": null,
@@ -2759,7 +2730,36 @@
       "away_balls4": null,
       "home_balls5": null,
       "away_balls5": null,
-      "result_note": "",
+      "result_note": "KU",
+      "starts_at_time_known": false
+    },
+    {
+      "pool_id": "4141",
+      "kamp_id": 76584,
+      "match_number": 149346,
+      "starts_at": null,
+      "home_team": "Amager Volley",
+      "away_team": "Odense Volleyball",
+      "venue": "Sundbyhal 1",
+      "court": "1",
+      "address": "Englandsvej 61 2300 København S Danmark",
+      "referee1": null,
+      "referee2": null,
+      "result_home_sets": null,
+      "result_away_sets": null,
+      "home_points": null,
+      "away_points": null,
+      "home_balls1": null,
+      "away_balls1": null,
+      "home_balls2": null,
+      "away_balls2": null,
+      "home_balls3": null,
+      "away_balls3": null,
+      "home_balls4": null,
+      "away_balls4": null,
+      "home_balls5": null,
+      "away_balls5": null,
+      "result_note": "KU",
       "starts_at_time_known": false
     }
   ],
@@ -2892,17 +2892,17 @@
     },
     {
       "date": "2026-10-30T19:30:00",
-      "team": "Gentofte Volley",
-      "points": 0,
-      "cumulative_points": 3,
-      "game_number": 3
-    },
-    {
-      "date": "2026-10-30T19:30:00",
       "team": "VK Vestsjælland",
       "points": 3,
       "cumulative_points": 5,
       "game_number": 2
+    },
+    {
+      "date": "2026-10-30T19:30:00",
+      "team": "Gentofte Volley",
+      "points": 0,
+      "cumulative_points": 3,
+      "game_number": 3
     },
     {
       "date": "2026-11-01T13:30:00",
@@ -2934,17 +2934,17 @@
     },
     {
       "date": "2026-11-01T14:30:00",
-      "team": "ASV Elite",
-      "points": 3,
-      "cumulative_points": 9,
-      "game_number": 3
-    },
-    {
-      "date": "2026-11-01T14:30:00",
       "team": "Hvidovre VK",
       "points": 0,
       "cumulative_points": 1,
       "game_number": 2
+    },
+    {
+      "date": "2026-11-01T14:30:00",
+      "team": "ASV Elite",
+      "points": 3,
+      "cumulative_points": 9,
+      "game_number": 3
     },
     {
       "date": "2026-11-01T19:00:00",
@@ -2959,13 +2959,6 @@
       "points": 3,
       "cumulative_points": 3,
       "game_number": 1
-    },
-    {
-      "date": "2026-11-06T19:30:00",
-      "team": "VK Vestsjælland",
-      "points": 3,
-      "cumulative_points": 8,
-      "game_number": 3
     },
     {
       "date": "2026-11-06T19:30:00",
@@ -2986,6 +2979,13 @@
       "team": "Amager Volley",
       "points": 0,
       "cumulative_points": 1,
+      "game_number": 3
+    },
+    {
+      "date": "2026-11-06T19:30:00",
+      "team": "VK Vestsjælland",
+      "points": 3,
+      "cumulative_points": 8,
       "game_number": 3
     },
     {
@@ -3018,17 +3018,17 @@
     },
     {
       "date": "2026-11-07T18:00:00",
-      "team": "Hvidovre VK",
-      "points": 1,
-      "cumulative_points": 2,
-      "game_number": 3
-    },
-    {
-      "date": "2026-11-07T18:00:00",
       "team": "Middelfart VK",
       "points": 2,
       "cumulative_points": 5,
       "game_number": 2
+    },
+    {
+      "date": "2026-11-07T18:00:00",
+      "team": "Hvidovre VK",
+      "points": 1,
+      "cumulative_points": 2,
+      "game_number": 3
     },
     {
       "date": "2026-11-19T19:30:00",
@@ -3039,10 +3039,10 @@
     },
     {
       "date": "2026-11-19T19:30:00",
-      "team": "Holte IF",
-      "points": 0,
-      "cumulative_points": 0,
-      "game_number": 4
+      "team": "Middelfart VK",
+      "points": 3,
+      "cumulative_points": 8,
+      "game_number": 3
     },
     {
       "date": "2026-11-19T19:30:00",
@@ -3053,10 +3053,10 @@
     },
     {
       "date": "2026-11-19T19:30:00",
-      "team": "Middelfart VK",
-      "points": 3,
-      "cumulative_points": 8,
-      "game_number": 3
+      "team": "Holte IF",
+      "points": 0,
+      "cumulative_points": 0,
+      "game_number": 4
     },
     {
       "date": "2026-11-19T20:30:00",
@@ -3088,17 +3088,31 @@
     },
     {
       "date": "2026-11-22T17:30:00",
+      "team": "Gentofte Volley",
+      "points": 3,
+      "cumulative_points": 6,
+      "game_number": 6
+    },
+    {
+      "date": "2026-11-22T17:30:00",
       "team": "Holte IF",
       "points": 0,
       "cumulative_points": 0,
       "game_number": 5
     },
     {
-      "date": "2026-11-22T17:30:00",
+      "date": "2026-11-24T20:30:00",
       "team": "Gentofte Volley",
-      "points": 3,
-      "cumulative_points": 6,
-      "game_number": 6
+      "points": 1,
+      "cumulative_points": 7,
+      "game_number": 7
+    },
+    {
+      "date": "2026-11-24T20:30:00",
+      "team": "Hvidovre VK",
+      "points": 2,
+      "cumulative_points": 5,
+      "game_number": 5
     }
   ],
   "result_matrix": {
@@ -3131,7 +3145,7 @@
       "Amager Volley": "3-0",
       "Gentofte Volley": "",
       "Holte IF": "",
-      "Hvidovre VK": "",
+      "Hvidovre VK": "2-3",
       "Ikast KFUM": "",
       "Middelfart VK": "",
       "Nordenskov UIF": "1-3",
