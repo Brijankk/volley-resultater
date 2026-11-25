@@ -1,85 +1,63 @@
 from __future__ import annotations
 
-import sqlite3
 import tempfile
 from pathlib import Path
 import unittest
 
+import pandas as pd
+
 from volleyball_resultater.storage import Repository
 
 
-class StorageSchemaTests(unittest.TestCase):
-    def test_legacy_identifier_columns_are_renamed_and_data_is_preserved(self) -> None:
+class RepositoryTests(unittest.TestCase):
+    def test_upserts_keep_current_schema_and_update_existing_rows(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
-            database = Path(directory) / "legacy.sqlite"
-            connection = sqlite3.connect(database)
-            connection.executescript(
-                """
-                PRAGMA foreign_keys = ON;
-                CREATE TABLE leagues (
-                    id INTEGER PRIMARY KEY, name TEXT NOT NULL, district TEXT NOT NULL,
-                    gender TEXT NOT NULL, age_group TEXT NOT NULL, season INTEGER NOT NULL
-                );
-                CREATE TABLE pools (
-                    id INTEGER PRIMARY KEY, name TEXT NOT NULL,
-                    league_id INTEGER NOT NULL REFERENCES leagues(id)
-                );
-                CREATE TABLE rankings (
-                    pool_id INTEGER NOT NULL REFERENCES pools(id), team_name TEXT NOT NULL,
-                    PRIMARY KEY (pool_id, team_name)
-                );
-                CREATE TABLE matches (
-                    pool_id INTEGER NOT NULL REFERENCES pools(id), id INTEGER PRIMARY KEY,
-                    home_team TEXT NOT NULL, away_team TEXT NOT NULL
-                );
-                INSERT INTO leagues VALUES (7, 'Volleyligaen Herrer', 'Volleyball Danmark', 'Mand', 'Senior', 2025);
-                INSERT INTO pools VALUES (42, 'Øst', 7);
-                INSERT INTO rankings VALUES (42, 'Hold A');
-                INSERT INTO matches VALUES (42, 1234, 'Hold A', 'Hold B');
-                """
-            )
-            connection.close()
+            database = Path(directory) / "volleyball.sqlite"
+            with Repository(database) as repository:
+                league = pd.DataFrame({
+                    "league_id": [7],
+                    "league_name": ["Volleyligaen Herrer"],
+                    "district": ["Volleyball Danmark"],
+                    "gender": ["Mand"],
+                    "age_group": ["Senior"],
+                    "season": [2025],
+                })
+                repository.upsert_leagues(league)
 
-            repository = Repository(database)
-            try:
-                self.assertEqual(
-                    [row[1] for row in repository.connection.execute("PRAGMA table_info(leagues)")],
-                    ["league_id", "league_name", "district", "gender", "age_group", "season"],
-                )
-                self.assertEqual(
-                    [row[1] for row in repository.connection.execute("PRAGMA table_info(pools)")],
-                    ["pool_id", "pool_name", "league_id"],
-                )
-                self.assertIn(
-                    "match_id",
-                    [row[1] for row in repository.connection.execute("PRAGMA table_info(matches)")],
-                )
-                self.assertEqual(
-                    tuple(repository.connection.execute(
-                        "SELECT league_id, league_name FROM leagues"
-                    ).fetchone()),
-                    (7, "Volleyligaen Herrer"),
-                )
-                self.assertEqual(
-                    tuple(repository.connection.execute(
-                        "SELECT pool_id, pool_name, league_id FROM pools"
-                    ).fetchone()),
-                    (42, "Øst", 7),
-                )
-                self.assertEqual(
-                    tuple(repository.connection.execute(
-                        "SELECT pool_id, match_id FROM matches"
-                    ).fetchone()),
-                    (42, 1234),
-                )
+                pool = pd.DataFrame({
+                    "pool_id": [42],
+                    "pool_name": ["Øst"],
+                    "league_id": [7],
+                })
+                repository.upsert_pools(pool)
+
+                ranking = pd.DataFrame({
+                    "pool_id": [42],
+                    "rank": [1],
+                    "team_name": ["Hold A"],
+                    "games_played": [4],
+                    "games_won": [3],
+                    "games_lost": [1],
+                    "sets_won": [11],
+                    "sets_lost": [6],
+                    "balls_won": [390],
+                    "balls_lost": [345],
+                    "points": [9],
+                })
+                repository.upsert_rankings(ranking)
+
+                league.loc[0, "league_name"] = "Volleyligaen"
+                repository.upsert_leagues(league)
+                repository.commit()
+
+                leagues = repository.get_leagues()
+                pools = repository.get_pools_with_leagues()
+                rankings = repository.get_rankings()
+
+                self.assertEqual(leagues.loc[0, "league_name"], "Volleyligaen")
+                self.assertEqual((pools.loc[0, "pool_id"], pools.loc[0, "league_name"]), (42, "Volleyligaen"))
+                self.assertEqual((rankings.loc[0, "team_name"], rankings.loc[0, "points"]), ("Hold A", 9))
                 self.assertEqual(repository.connection.execute("PRAGMA foreign_key_check").fetchall(), [])
-                self.assertEqual(repository.get_leagues().columns[0:2].tolist(), ["league_id", "league_name"])
-            finally:
-                repository.close()
-
-            # Opening an already migrated database is safe and idempotent.
-            repository = Repository(database)
-            repository.close()
 
 
 if __name__ == "__main__":

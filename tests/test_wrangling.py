@@ -4,92 +4,116 @@ import unittest
 
 import pandas as pd
 
-from volleyball_resultater.scraper import VolleyballScraper
-from volleyball_resultater.client import ResultaterClient
-from volleyball_resultater.paths import PROJECT_ROOT, DEFAULT_CACHE_DIR, DEFAULT_DB_PATH
-from volleyball_resultater.wrangling import calculate_running_points, result_matrix, order_tournament, deduct_bracket, pokal_filter, slutspil_filter
-from volleyball_resultater.storage import Repository
+from volleyball_resultater.wrangling import (
+    calculate_running_points,
+    deduct_bracket,
+    frame_filter,
+    order_tournament,
+    result_matrix,
+)
+
 
 class WranglingTests(unittest.TestCase):
-    def __init__(self, methodName = "runTest"):
-        self.client = ResultaterClient(cache_dir=DEFAULT_CACHE_DIR, throttle_seconds=0, refresh_cache=False)
-        self.scraper = VolleyballScraper(self.client)
-        self.repo = Repository(DEFAULT_DB_PATH)
+    def test_running_points_starts_at_zero_and_accumulates_scraped_points(self) -> None:
+        matches = pd.DataFrame({
+            "match_time": pd.to_datetime(["2025-10-01", "2025-10-08"]),
+            "home_team": ["A", "A"],
+            "away_team": ["B", "C"],
+            "home_points": [2, 3],
+            "away_points": [1, 0],
+        })
 
-        super().__init__(methodName)
+        events = calculate_running_points(matches)
+        team_a = events.loc[events["team"].eq("A")].sort_values("game_number")
 
-    def test_running_ranking(self):
+        self.assertEqual(team_a["game_number"].tolist(), [0, 1, 2])
+        self.assertEqual(team_a["cumulative_points"].tolist(), [0, 2, 5])
+        self.assertTrue(pd.isna(team_a["match_time"].iloc[0]))
 
-        pass
+    def test_result_matrix_lists_played_results_and_omits_unplayed_fixtures(self) -> None:
+        matches = pd.DataFrame({
+            "home_team": ["A", "A", "B"],
+            "away_team": ["B", "B", "A"],
+            "home_sets": pd.array([3, 2, None], dtype="Int64"),
+            "away_sets": pd.array([1, 3, None], dtype="Int64"),
+        })
 
-    def test_result_matrix(self):
-        sch1 = self.scraper.scrape_pool_schedule(4124) # No matches played
-        sch2 = self.scraper.scrape_pool_schedule(4151) # Incomplete matches (tournament so will always be like that)
-        sch3 = self.scraper.scrape_pool_schedule(3934) # One match-up is at one location
-        sch4 = self.scraper.scrape_pool_schedule(3486) # Each match-up has three games
+        matrix = result_matrix(matches)
 
-        mtx1 = result_matrix(sch1)
-        mtx2 = result_matrix(sch2)
-        mtx3 = result_matrix(sch3)
-        mtx4 = result_matrix(sch4)
+        self.assertEqual(matrix.loc[("A", "B")], "3-1, 2-3")
+        self.assertEqual(matrix.loc[("B", "A")], "")
+        self.assertEqual(matrix.loc[("A", "A")], "")
 
-        pass
+    def test_tournament_rounds_are_ordered_from_opening_round_to_final(self) -> None:
+        names = pd.Series([
+            "1. Runde",
+            "2. Runde",
+            "Kvartfinale",
+            "Semifinale",
+            "Finale",
+        ])
 
-    def test_pokalturnering_order(self):
-        leagues = self.repo.get_leagues()
-        bracket_leagues = pokal_filter(leagues)
+        rounds = order_tournament(names)
 
-        bracket_leagues['round'] = bracket_leagues.groupby(
-            by=['gender', 'season']
-        )['league_name'].apply(order_tournament).droplevel(['gender', 'season'])
+        self.assertLess(rounds.iloc[0], rounds.iloc[1])
+        self.assertLess(rounds.iloc[1], rounds.iloc[2])
+        self.assertLess(rounds.iloc[2], rounds.iloc[3])
+        self.assertLess(rounds.iloc[3], rounds.iloc[4])
 
-        bracket_leagues = bracket_leagues.sort_values(['season', 'gender', 'round'])
+    def test_bracket_links_a_returning_team_to_its_previous_match(self) -> None:
+        schedule = pd.DataFrame([
+            {
+                "round": 0,
+                "league_name": "Pokalturneringen",
+                "match_number": 11,
+                "home_team": "A",
+                "away_team": "B",
+                "home_sets": 3,
+                "away_sets": 0,
+                "note": "",
+            },
+            {
+                "round": 1,
+                "league_name": "Pokalturneringen",
+                "match_number": 12,
+                "home_team": "A",
+                "away_team": "C",
+                "home_sets": 1,
+                "away_sets": 3,
+                "note": "",
+            },
+        ])
 
-        pass
+        bouts = deduct_bracket(schedule)
 
-    def test_slutspil_order(self):
-        leagues = self.repo.get_leagues()
-        bracket_leagues = slutspil_filter(leagues)
+        self.assertEqual(len(bouts), 2)
+        opening = bouts.loc[bouts["round"].eq(0)].iloc[0]
+        final = bouts.loc[bouts["round"].eq(1)].iloc[0]
+        self.assertEqual(opening["winner"], "A")
+        self.assertEqual(final["winner"], "C")
+        links = [value for value in (final["leg1"], final["leg2"]) if not pd.isna(value)]
+        self.assertEqual(links, [0])
 
-        bracket_leagues['round']= bracket_leagues.groupby(
-            by=['gender', 'season']
-        )['league_name'].apply(order_tournament).droplevel(['gender', 'season'])
+    def test_frame_filter_applies_union_and_intersection_conditions(self) -> None:
+        leagues = pd.DataFrame({
+            "district": ["Volleyball Danmark", "Midtjysk Volleyball", "Volleyball Danmark"],
+            "season": [2025, 2025, 2020],
+            "league_name": ["Volleyligaen", "1. Division", "Volleyligaen"],
+        })
+        config = {
+            "union": [
+                [{"column": "district", "type": "equal", "value": "volleyball danmark", "invert": False}],
+                [{"column": "district", "type": "equal", "value": "midtjysk volleyball", "invert": False}],
+            ],
+            "intersect": [
+                [{"column": "season", "type": ">=", "value": 2021, "invert": False}],
+            ],
+        }
 
-        bracket_leagues = bracket_leagues.sort_values(['season', 'gender', 'round'])
+        selected = frame_filter(leagues, config)
 
-        pass
-
-    def test_deduct_tournament(self):
-        district = 'Volleyball Danmark'
-        season = 2025
-        gender = 'Kvinde'
-        bracket = pokal_filter
-
-        leagues = self.repo.get_leagues()
-        leagues = leagues.loc[leagues['season'].eq(season) & leagues['gender'].eq(gender) & leagues['district'].eq(district)]
-
-        bracket_leagues = bracket(leagues)
-        bracket_leagues['round'] = order_tournament(bracket_leagues['league_name'])
-
-        matches = pd.read_sql(
-            sql=f"""
-                SELECT x.*, z.league_id, z.league_name
-                FROM matches x
-                JOIN pools y
-                JOIN leagues z
-                ON x.pool_id=y.pool_id and y.league_id=z.league_id
-                WHERE z.league_id in ({', '.join(map(str,bracket_leagues['league_id'].to_list()))})
-            """,
-            con=self.repo.connection
-        )
-
-        df = matches.join(
-            other=bracket_leagues.set_index('league_id')[['round']],
-            on='league_id'
-        )[['round', 'league_name', 'match_number', 'home_team', 'away_team', 'home_sets', 'away_sets']]
-
-        tournament = deduct_bracket(df)
-        pass
+        self.assertEqual(set(selected["league_name"]), {"Volleyligaen", "1. Division"})
+        self.assertNotIn(2020, selected["season"].tolist())
 
 
 if __name__ == "__main__":
