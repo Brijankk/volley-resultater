@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "exported_at": "2026-11-25T05:12:27+00:00",
+    "exported_at": "2026-11-26T04:17:27+00:00",
     "scraper_version": "2.1.0",
     "validation": true
   },
@@ -23,14 +23,14 @@
       "pool_id": "4202",
       "rank": 1,
       "team_name": "Talenthold Danmark",
-      "games_played": 2,
+      "games_played": 3,
       "games_won": 1,
-      "games_lost": 1,
-      "sets_won": 5,
-      "sets_lost": 5,
-      "balls_won": 208,
-      "balls_lost": 210,
-      "points": 4
+      "games_lost": 2,
+      "sets_won": 7,
+      "sets_lost": 8,
+      "balls_won": 320,
+      "balls_lost": 318,
+      "points": 5
     },
     {
       "pool_id": "4202",
@@ -48,6 +48,19 @@
     {
       "pool_id": "4202",
       "rank": 3,
+      "team_name": "Holstebro KFUM (T)",
+      "games_played": 1,
+      "games_won": 1,
+      "games_lost": 0,
+      "sets_won": 3,
+      "sets_lost": 2,
+      "balls_won": 108,
+      "balls_lost": 112,
+      "points": 3
+    },
+    {
+      "pool_id": "4202",
+      "rank": 4,
       "team_name": "Aabyhøj IF (T)",
       "games_played": 1,
       "games_won": 0,
@@ -60,7 +73,7 @@
     },
     {
       "pool_id": "4202",
-      "rank": 4,
+      "rank": 5,
       "team_name": "ASV Aarhus.3 (T)",
       "games_played": 0,
       "games_won": 0,
@@ -73,7 +86,7 @@
     },
     {
       "pool_id": "4202",
-      "rank": 5,
+      "rank": 6,
       "team_name": "Hjerm FIF (T)",
       "games_played": 0,
       "games_won": 0,
@@ -86,7 +99,7 @@
     },
     {
       "pool_id": "4202",
-      "rank": 6,
+      "rank": 7,
       "team_name": "VK Raptus (T)",
       "games_played": 0,
       "games_won": 0,
@@ -99,7 +112,7 @@
     },
     {
       "pool_id": "4202",
-      "rank": 7,
+      "rank": 8,
       "team_name": "VK Vendsyssel (T)",
       "games_played": 0,
       "games_won": 0,
@@ -112,7 +125,7 @@
     },
     {
       "pool_id": "4202",
-      "rank": 8,
+      "rank": 9,
       "team_name": "VK Raptus.2 (T)",
       "games_played": 0,
       "games_won": 0,
@@ -125,7 +138,7 @@
     },
     {
       "pool_id": "4202",
-      "rank": 9,
+      "rank": 10,
       "team_name": "Aalborg Volleyball.3 (T)",
       "games_played": 0,
       "games_won": 0,
@@ -138,21 +151,8 @@
     },
     {
       "pool_id": "4202",
-      "rank": 10,
-      "team_name": "Skovbakken (T)",
-      "games_played": 0,
-      "games_won": 0,
-      "games_lost": 0,
-      "sets_won": 0,
-      "sets_lost": 0,
-      "balls_won": 0,
-      "balls_lost": 0,
-      "points": 0
-    },
-    {
-      "pool_id": "4202",
       "rank": 11,
-      "team_name": "Holstebro KFUM (T)",
+      "team_name": "Skovbakken (T)",
       "games_played": 0,
       "games_won": 0,
       "games_lost": 0,
@@ -235,20 +235,20 @@
       "address": "Hyldgårds Alle 9 7430 Ikast Danmark",
       "referee1": "Per Vind Petersen",
       "referee2": "Søren Madsen",
-      "result_home_sets": null,
-      "result_away_sets": null,
-      "home_points": null,
-      "away_points": null,
-      "home_balls1": null,
-      "away_balls1": null,
-      "home_balls2": null,
-      "away_balls2": null,
-      "home_balls3": null,
-      "away_balls3": null,
-      "home_balls4": null,
-      "away_balls4": null,
-      "home_balls5": null,
-      "away_balls5": null,
+      "result_home_sets": 2,
+      "result_away_sets": 3,
+      "home_points": 1,
+      "away_points": 3,
+      "home_balls1": 25,
+      "away_balls1": 17,
+      "home_balls2": 27,
+      "away_balls2": 29,
+      "home_balls3": 27,
+      "away_balls3": 29,
+      "home_balls4": 25,
+      "away_balls4": 18,
+      "home_balls5": 8,
+      "away_balls5": 15,
       "result_note": "",
       "starts_at_time_known": true
     },
@@ -561,6 +561,20 @@
       "points": 1,
       "cumulative_points": 1,
       "game_number": 1
+    },
+    {
+      "date": "2026-11-25T18:30:00",
+      "team": "Talenthold Danmark",
+      "points": 1,
+      "cumulative_points": 5,
+      "game_number": 3
+    },
+    {
+      "date": "2026-11-25T18:30:00",
+      "team": "Holstebro KFUM (T)",
+      "points": 3,
+      "cumulative_points": 3,
+      "game_number": 1
     }
   ],
   "result_matrix": {
@@ -660,7 +674,7 @@
       "Aabyhøj IF (T)": "3-2",
       "Aalborg Volleyball.3 (T)": "",
       "Hjerm FIF (T)": "",
-      "Holstebro KFUM (T)": "",
+      "Holstebro KFUM (T)": "2-3",
       "Randers VK (T)": "2-3",
       "Skovbakken (T)": "",
       "Talenthold Danmark": "",
